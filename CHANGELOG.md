@@ -5,6 +5,7 @@
 - Fixed dungeon overview upgrade counts so they match eligible item rows in each dungeon.
 - Show upgrade percentages consistently for scorable loot, including low positive upgrades.
 - Make Best in Slot armor and source filters apply immediately to recommendations and prevent excluded armor types from appearing as upgrades.
+- Set ordered default stat priorities for every class spec, using the author's configured Druid order and researched starting orders for the other specs.
 ## 1.2.0.8 — 2026-11-14
 
 - Fixed filtered-out armor appearing as a `0.0%` Journal upgrade when legacy saved scoring data was present.
