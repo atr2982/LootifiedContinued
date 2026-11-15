@@ -1,6 +1,6 @@
-## Unreleased
+## 1.2.0.10 — 2026-11-15
 
-- Fixed Lootified startup errors caused by using the unavailable os.date library in Forever; data dates now use the client's supported date() function.
+- Fixed startup errors in Forever by using the client-supported date function for Lootified data timestamps.
 
 # Lootified
 
