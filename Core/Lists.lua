@@ -82,16 +82,13 @@ function Lists.BuildGroups(inst)
     return groups
 end
 
--- The upgrades of an instance for the character (the items of its Best in Slot list), counted like its boss and trash
--- loot without filters. Quest rewards are shown only on the Quests tab.
+-- The upgrades of an instance for the character, counted once per boss/trash drop row just like the badges in the
+-- instance sidebar. Quest rewards are shown only on the Quests tab.
 function Lists.CountFor(inst)
-    local seen, upgrades = {}, 0
+    local upgrades = 0
     for _, g in ipairs(Lists.BuildGroups(inst)) do
         for _, e in ipairs(g.entries) do
-            if not seen[e.id] then
-                seen[e.id] = true
-                if BiS.Upgrade(e.id) then upgrades = upgrades + 1 end
-            end
+            if BiS.Upgrade(e.id) then upgrades = upgrades + 1 end
         end
     end
     return upgrades

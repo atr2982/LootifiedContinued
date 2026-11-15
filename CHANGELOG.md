@@ -1,5 +1,10 @@
 # Lootified
 
+## 1.2.0.9 — 2026-11-14
+
+- Fixed dungeon overview upgrade counts so they match eligible item rows in each dungeon.
+- Show upgrade percentages consistently for scorable loot, including low positive upgrades.
+- Make Best in Slot armor and source filters apply immediately to recommendations and prevent excluded armor types from appearing as upgrades.
 ## 1.2.0.8 — 2026-11-14
 
 - Fixed filtered-out armor appearing as a `0.0%` Journal upgrade when legacy saved scoring data was present.

@@ -55,6 +55,61 @@ StatPrio.STATS = {
 local WEAPON = { WeaponDPS = true, OffHandWeaponDPS = true, RangedWeaponDPS = true }
 local STEP = 1.15
 
+-- Curated starting orders, based on current WoW: Forever class guides and the author's saved Druid order.
+-- These are rankings only: they do not change any spec's scoring weights. A curated key is used only when
+-- that stat already exists for the spec; remaining supported stats keep their normal fallback order.
+local CURATED_ORDER = {
+    WARRIOR = {
+        ARMS = { "Hit", "Expertise", "Crit", "Strength", "Agility", "AttackPower", "Haste", "Stamina" },
+        FURY = { "Hit", "Expertise", "Crit", "Strength", "Agility", "AttackPower", "Haste", "Stamina" },
+        PROT = { "Stamina", "Defense", "Armor", "Expertise", "Hit", "Dodge", "Parry", "Block", "BlockValue", "Strength", "AttackPower", "Agility", "Crit" },
+    },
+    PALADIN = {
+        HOLY = { "Healing", "Intellect", "Crit", "Spirit", "MP5", "Haste", "SpellPower", "HolyPower", "Stamina", "Armor", "Agility" },
+        PROT = { "Stamina", "Defense", "Armor", "Hit", "Expertise", "Dodge", "Parry", "Block", "BlockValue", "Strength", "AttackPower", "SpellPower", "HolyPower", "Intellect", "Crit", "Haste" },
+        RET = { "Hit", "Expertise", "Strength", "AttackPower", "SpellPower", "HolyPower", "Crit", "Agility", "Intellect", "Stamina", "Spirit", "MP5" },
+        HOLY_DMG = { "Hit", "Expertise", "Strength", "AttackPower", "SpellPower", "HolyPower", "Crit", "Agility", "Intellect", "Stamina", "Spirit", "MP5" },
+    },
+    HUNTER = {
+        BM = { "Hit", "Crit", "Agility", "RangedAttackPower", "AttackPower", "Intellect", "Spirit", "Stamina", "MP5" },
+        MM = { "Hit", "Crit", "Agility", "RangedAttackPower", "AttackPower", "Intellect", "Spirit", "Stamina", "MP5" },
+        SV = { "Hit", "Crit", "Agility", "Strength", "AttackPower", "RangedAttackPower", "Intellect", "Spirit", "Stamina", "MP5" },
+    },
+    ROGUE = {
+        ASSA = { "Hit", "Expertise", "Agility", "Crit", "Haste", "Strength", "AttackPower", "Stamina" },
+        COMBAT = { "Hit", "Expertise", "Agility", "Crit", "Haste", "Strength", "AttackPower", "Stamina" },
+        SUB = { "Hit", "Expertise", "Agility", "Crit", "Haste", "Strength", "AttackPower", "Stamina" },
+    },
+    PRIEST = {
+        DISC = { "Healing", "Intellect", "MP5", "Spirit", "Crit", "SpellPower", "Stamina" },
+        HOLY = { "Healing", "Intellect", "MP5", "Spirit", "Crit", "SpellPower", "Stamina" },
+        SHADOW = { "Hit", "Crit", "SpellPower", "ShadowPower", "Intellect", "Spirit", "MP5", "Stamina", "Haste" },
+        DISC_DMG = { "Hit", "Crit", "SpellPower", "ShadowPower", "Intellect", "Spirit", "MP5", "Stamina", "Haste" },
+        HOLY_DMG = { "Hit", "Crit", "SpellPower", "ShadowPower", "Intellect", "Spirit", "MP5", "Stamina", "Haste" },
+    },
+    SHAMAN = {
+        ELE = { "Hit", "Haste", "SpellPower", "NaturePower", "FirePower", "FrostPower", "Crit", "Intellect", "Spirit", "MP5", "Stamina" },
+        ENH = { "Hit", "Expertise", "Strength", "AttackPower", "SpellPower", "Intellect", "Crit", "Agility", "Spirit", "Stamina", "MP5" },
+        RESTO = { "Healing", "Intellect", "Spirit", "MP5", "Crit", "Haste", "SpellPower", "Stamina" },
+    },
+    MAGE = {
+        ARCANE = { "Hit", "SpellPower", "ArcanePower", "Crit", "Haste", "Intellect", "Spirit", "MP5", "Stamina" },
+        FIRE = { "Hit", "SpellPower", "FirePower", "Crit", "Haste", "Intellect", "Spirit", "MP5", "Stamina" },
+        FROST = { "Hit", "Crit", "SpellPower", "FrostPower", "ArcanePower", "Intellect", "Spirit", "Haste", "MP5", "Stamina" },
+    },
+    WARLOCK = {
+        AFFLI = { "SpellPower", "ShadowPower", "Crit", "Hit", "Haste", "Intellect", "Spirit", "Stamina" },
+        DEMO = { "SpellPower", "ShadowPower", "Hit", "Crit", "Haste", "Intellect", "Spirit", "Stamina" },
+        DESTRO = { "SpellPower", "FirePower", "Crit", "Hit", "Haste", "Intellect", "Spirit", "Stamina" },
+    },
+    DRUID = {
+        CAT = { "Hit", "Expertise", "Crit", "Strength", "Agility", "AttackPower", "Stamina", "Armor", "Spirit", "Intellect", "SpellPower", "MP5" },
+        RESTO = { "Healing", "Intellect", "Spirit", "MP5", "Crit", "Haste", "Stamina", "Armor", "Agility" },
+        BALANCE = { "Hit", "Crit", "SpellPower", "ArcanePower", "NaturePower", "Intellect", "Haste", "Spirit", "MP5", "Stamina", "Armor", "Agility" },
+        BEAR = { "Stamina", "Defense", "Armor", "Agility", "Dodge", "Hit", "Expertise", "Strength", "AttackPower", "Crit", "Spirit", "Intellect", "MP5" },
+    },
+}
+
 local BY_KEY, OF_WEIGHT = {}, {}   -- stat key -> stat; weight key -> the stat that stands for it
 for i, stat in ipairs(StatPrio.STATS) do
     stat.index = i
@@ -91,7 +146,20 @@ function StatPrio.DefaultOrder(spec)
         if values[a] ~= values[b] then return values[a] > values[b] end
         return BY_KEY[a].index < BY_KEY[b].index
     end)
-    return order
+
+    local preferred = CURATED_ORDER[spec.class] and CURATED_ORDER[spec.class][spec.key]
+    if not preferred then return order end
+    local available, curated, seen = {}, {}, {}
+    for _, key in ipairs(order) do available[key] = true end
+    for _, key in ipairs(preferred) do
+        if available[key] and not seen[key] then
+            curated[#curated + 1], seen[key] = key, true
+        end
+    end
+    for _, key in ipairs(order) do
+        if not seen[key] then curated[#curated + 1] = key end
+    end
+    return curated
 end
 
 -- The player's priority counts for a spec: one of the character's class while its items are rated in Percent (with

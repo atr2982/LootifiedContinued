@@ -81,45 +81,15 @@ local function RankingAt(spec, level)
     return Scoring.RankAll(spec, level < BiS.MAX_LEVEL and { maxLevel = level, current = true } or {})
 end
 
--- The armor a tank's list takes in an armor slot at a level: the heaviest kind of the slot's ranked items (the list's,
--- its armor kinds too: paladins and warriors mail, from level 40 plate, druids leather), so a slot without a piece of it
--- takes the next lighter kind (quest leather shoulders before any mail ones); none: the heaviest its class wears. Kept
--- with the ranking.
-local function TankKind(spec, equipLoc, level)
-    local ranking = RankingAt(spec, level)
-    local dataSlot = Scoring.EQUIPLOC_SLOTS[equipLoc]
-    ranking.tankKind = ranking.tankKind or {}
-    local kind = ranking.tankKind[dataSlot]
-    if kind then return kind end
-    kind = 0
-    for _, e in ipairs(ranking.bySlot[dataSlot] or {}) do
-        local sub = select(7, C_Item.GetItemInfoInstant(e.id))
-        if sub > kind and sub <= 4 then kind = sub end
-    end
-    if kind == 0 then
-        for k = 1, 4 do
-            local from = Player.ARMOR[spec.class][k]
-            if from and from <= level then kind = k end
-        end
-    end
-    ranking.tankKind[dataSlot] = kind
-    return kind
-end
-
--- A tank wears the heaviest armor its list takes in the slot (TankKind): a lighter piece with more Stamina is no
--- upgrade for it (the upgrade check: Sim/ItemCheck.lua; the slot's list marks it as lighter armor). Every other item
--- and spec fits.
+-- Armor choices are controlled only by the player's selected armor filters. Keep this helper for callers that use the
+-- public BiS API, but do not silently impose a tank-only heavier-armor rule after those filters have been applied.
 function BiS.ArmorFits(spec, itemID, level)
-    if spec.role ~= "TANK" then return true end
-    local _, _, _, equipLoc, _, classID, subclassID = C_Item.GetItemInfoInstant(itemID)
-    if classID ~= 4 or not Items.ARMOR_SLOTS[equipLoc] or subclassID < 1 or subclassID > 4 then return true end
-    return subclassID >= TankKind(spec, equipLoc, level)
+    return true
 end
 
--- An item the Best in Slot list takes for a spec at a level: one of its sources (Items.InList), for a tank in the
--- heaviest armor it gets there (BiS.ArmorFits).
+-- An item the Best in Slot list takes for a spec at a level: one of its sources and armor types (Items.InList).
 function BiS.OnSheet(spec, itemID, level)
-    return Items.InList(itemID, spec.class, level) and BiS.ArmorFits(spec, itemID, level)
+    return Items.InList(itemID, spec.class, level)
 end
 
 -- The part of a data slot's ranked list the sheet picks from (BiS.OnSheet; none: the slot stays empty). Kept with the
@@ -282,8 +252,6 @@ end
 -- did not sim the item), pct (Percent: what it adds to the whole gear by the stat weights, as the upgrade check says
 -- it) }. The items: the sim's (Sim/SimBiS.lua: the items of each slot whose gain shows), else (Percent, before a spec's
 -- first sim) the best of the list's own items (BiS.OnSheet) that beat what is worn. Items the character owns are none.
-BiS.RANKED = 5         -- ranked items per slot (like the sim's exact ones: SimBiS.BEST)
-
 local targets          -- [itemID] = entry, for targetsSpec; nil: made again when asked
 local targetsSpec
 local wornUnknown      -- an item worn was not known when they were made: made again when item data comes
@@ -312,13 +280,11 @@ local function AddRanked(list, spec)
             if worn == nil then
                 wornUnknown = true
             else
-                local taken = 0
                 for _, e in ipairs(SheetList(spec, ranking, dataSlot)) do
                     local gain = e.score - worn
                     local pct = total and gain / total * 100
-                    if taken >= BiS.RANKED or gain <= 0 or (pct and pct < 0.05) then break end
+                    if gain <= 0 then break end
                     if not C_Item.IsEquippedItem(e.id) then
-                        taken = taken + 1
                         AddTarget(list, e.id, slot, gain, nil, nil, pct)
                     end
                 end

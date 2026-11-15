@@ -802,8 +802,8 @@ function Page:RefreshLoot()
     local cells, upgrades = {}, 0
     for _, e in ipairs(g.entries) do
         local d = Kit.ItemData(e.id, spec)
-        if d.upgrade then upgrades = upgrades + 1 end
         if Lists.PassesClass(Items.Get(e.id), db.spec, d.upgrade) then
+            if g.kind ~= "quests" and d.upgrade then upgrades = upgrades + 1 end
             if g.kind == "quests" then
                 d.sub = e.questName
                 d.tag = e.isChoice and "CHOICE" or "REWARD"
