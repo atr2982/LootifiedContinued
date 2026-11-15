@@ -94,7 +94,7 @@ if input and input.web then
     if type(web.instances) == "table" and #web.instances > 0 then LJ.Data.Instances = web.instances end
     if type(web.bis_weights) == "table" and next(web.bis_weights) then LJ.Data.BiS = web.bis_weights end
     LJ.DATA_BUILD = web.build
-    LJ.DATA_CHECKED = os.date("!%Y-%m-%d")
+    LJ.DATA_CHECKED = date("%Y-%m-%d")
     LJ.DATA_STATUS = "client collection verified; reviewed Forever overrides installed"
     LJ.DATA_SOURCES = "Forever client collection; reviewed Wowhead and Bind on Forever records"
 end
