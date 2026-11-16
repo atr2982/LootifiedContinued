@@ -20,7 +20,7 @@ jobs:
         run: |
           mkdir -p staging/LootifiedContinued
           cp -R Core Data Media Sim UI staging/LootifiedContinued/
-          cp Bindings.xml LootifiedContinued.toc icon.png staging/LootifiedContinued/
+          cp Bindings.xml LootifiedContinued.toc staging/LootifiedContinued/
           cd staging
           zip -r ../LootifiedContinued.zip LootifiedContinued
 
@@ -28,4 +28,5 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: LootifiedContinued.zip
-          generate_release_notes: true
+          body_path: CHANGELOG.md
+          generate_release_notes: false

@@ -1,12 +1,13 @@
 package-as: LootifiedContinued
 
-manual-changelog: CHANGELOG.md
-
 ignore:
   - .github
   - .gitignore
+  - icon.png
   - refresh-tool
   - README.md
+  - CHANGELOG.md
   - pkgmeta.yaml
   - THIRD_PARTY_NOTICES.md
 
+manual-changelog: CHANGELOG.md

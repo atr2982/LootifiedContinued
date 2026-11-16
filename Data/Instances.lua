@@ -2,7 +2,7 @@
 -- Sources: the Forever game client (its tables: group finder levels and group sizes, the bosses of its
 -- achievements, the crafting recipes; /lf collect: the creatures' looks), foreverchanges.pro,
 -- wowforevertalents.com, Wowhead (Forever + Classic), 60.tools, CMaNGOS classic-db (GPL-3.0) creature facts and
--- drop chances, Icy Veins / Warcraft Tavern BiS guides. Checked: 2026-09-26 (Forever beta build 1.60.1.70009);
+-- drop chances, Icy Veins / Warcraft Tavern BiS guides. Checked: 2026-11-15 (Forever client build 1.60.1.70938);
 -- Excavation Site: Wetlands, Gnomeregan, Razorfen Kraul, Scarlet Monastery, Razorfen Downs, Uldaman 2026-10-06 (1.60.1.70235);
 -- City of Dalaran 2026-10-09 (1.60.1.70291).
 
@@ -302,16 +302,20 @@ LJ.Data.Instances = {
     {
         key = "DROWNED", name = "The Drowned City", kind = "dungeon", era = "forever",
         minLevel = 35, maxLevel = 40, size = 5, zone = "Stranglethorn Vale",
-        status = "pending", statusText = "Boss names from the BlizzCon demo. Loot revealed at launch.",
+        status = "live",
         desc = "Sunken troll ruins have risen from the sea off Stranglethorn Vale, and trolls, naga and pirates fight over what lies within.",
         art = { loading = "camelot160\\main\\loadscreen_camelot_easternkingdom" },
         instanceIDs = {  },
         slash = { "drowned" },
         bosses = {
-            { name = "Zul'Alai", loot = {  } },
-            { name = "Zin'aka", loot = {  } },
-            { name = "Deathless Marrow", loot = {  } },
-            { name = "Min'loth the Serpent", loot = {  } },
+            { name = "Zul'Alai", loot = { 274600, 274599, 274598 } },
+            { name = "Var'Taka", loot = { 274601, 274602, 274613 } },
+            { name = "Primeval Elemental", loot = { 274615, 274611, 274612 } },
+            { name = "Captain Dreadrise", loot = { 274605, 274603, 274604 } },
+            { name = "Deathless Marrow", loot = { 274606, 274614, 274607 } },
+            { name = "Min'loth the Serpent", loot = { 274610, 274609, 274608 } },
+            { name = "Umbra", rare = true, loot = { 286662, 286658 } },
+            { name = "Gill", rare = true, loot = { 286649, 286646 } },
         },
     },
     {
@@ -372,12 +376,18 @@ LJ.Data.Instances = {
     {
         key = "KROLDOK", name = "Krol'dok Stronghold", kind = "dungeon", era = "forever",
         minLevel = 40, maxLevel = 45, size = 5, zone = "Riverglades",
-        status = "announced", statusText = "Announced for launch. Bosses and loot not revealed yet.",
+        status = "live",
         desc = "An enormous ogre stronghold whose raiders take prisoners, and whose night-time chanting hints at the Twilight's Hammer.",
         art = { loading = "camelot160\\main\\loadscreen_camelot_easternkingdom" },
         instanceIDs = {  },
         slash = { "kroldok", "krol" },
         bosses = {
+            { name = "Slavecrusher Grox", loot = { 274997, 274995, 274996, 273101 } },
+            { name = "Twilight Commander Zarmok", loot = { 274999, 274998, 275000 } },
+            { name = "War Handler Ashka", loot = { 275001, 275002, 275003 } },
+            { name = "Nar'gurk", loot = { 275004, 275006, 275005, 267104 } },
+            { name = "Bossman Toof", loot = { 286428, 286429, 286430 } },
+            { name = "Overlord Mugg", loot = { 275010, 275008, 275009, 275007, 267086, 271721 } },
         },
     },
     {
@@ -460,14 +470,19 @@ LJ.Data.Instances = {
     {
         key = "ALCAZ", name = "Alcaz Prison", kind = "dungeon", era = "forever",
         minLevel = 48, maxLevel = 53, size = 5, zone = "Dustwallow Marsh",
-        status = "announced", statusText = "Announced for launch. Bosses from the game; loot not revealed yet.",
+        status = "live",
         desc = "A Defias prison on Alcaz Island that once held nobles for ransom, now besieged by the naga.",
         art = { loading = "LoadScreenKalimdor" },
         instanceIDs = {  },
         slash = { "alcaz", "prison" },
         bosses = {
-            { name = "Blazeroar", loot = {  } },
+            { name = "Overseer Wrex", level = "50", loot = { 263992, 276733, 276734, 276732 } },
+            { name = "The Questioner", level = "51", loot = { 276742, 276743, 276741, 274029 } },
+            { name = "Tidemistress Ca'zass", level = "50", loot = { 276735, 276736, 276737, 273883 } },
+            { name = "Katerina the Cleaner", level = "52", loot = { 276739, 276738, 276740 } },
+            { name = "Blazeroar", level = "53", loot = { 276744, 276745, 276746, 276890 } },
         },
+        trash = { 287021, 287019 },
     },
     {
         key = "ST", name = "Sunken Temple", kind = "dungeon", era = "classic",
@@ -591,13 +606,23 @@ LJ.Data.Instances = {
     {
         key = "BLACKMAW", name = "Blackmaw Hold", kind = "dungeon", era = "forever",
         minLevel = 55, maxLevel = 60, size = 5, zone = "Azshara",
-        status = "announced", statusText = "Announced for launch. Bosses and loot not revealed yet.",
+        status = "live",
         desc = "A great furbolg city in northern Azshara fighting its own corruption. Its tunnels reach deep toward the Barrow Deeps.",
         art = { loading = "LoadScreenKalimdor" },
         instanceIDs = {  },
         slash = { "blackmaw" },
         bosses = {
+            { name = "Withermaw", level = "58", loot = { 280063, 280062, 280064, 249697 } },
+            { name = "Impaan the Imprisoner", level = "57", loot = { 280057, 280056, 280058 } },
+            { name = "Elder Shaman Bloodmane", loot = { 280070, 280069, 280068, 276893, 286415 } },
+            { name = "Bonesnout the Unbroken", level = "58", loot = { 280059, 280060, 280061, 249696 } },
+            { name = "Varrox Bleakhoof", level = "60", loot = { 280076, 280075, 280074, 249692, 272027 } },
+            { name = "Blackmaw Behemoth", loot = { 280065, 280066, 280067 } },
+            { name = "Unbound Spirit", loot = { 280072, 280073, 280071 } },
+            { name = "Moontouched Wanderer", level = "55", rare = true, loot = { 280080, 280079 } },
+            { name = "Gortek the Apprentice", rare = true, loot = { 280078 } },
         },
+        trash = { 287032, 251453, 287034, 287036 },
     },
     {
         key = "DMW", name = "Dire Maul: West", kind = "dungeon", era = "classic",
@@ -728,17 +753,24 @@ LJ.Data.Instances = {
     {
         key = "SHAPER", name = "Shaper's Terrace", kind = "dungeon", era = "forever",
         minLevel = 58, maxLevel = 60, size = 5, zone = "Un'Goro Crater",
-        status = "announced", statusText = "Announced for launch. Bosses from the game; loot not revealed yet.",
+        status = "live",
         desc = "An untouched Titan facility in the hills of Un'Goro Crater, humming with power crystals and an energy no one can explain.",
         art = { loading = "LoadScreenKalimdor" },
         instanceIDs = {  },
         slash = { "shaper", "terrace" },
         bosses = {
-            { name = "Nanaya", loot = {  } },
-            { name = "Cinder", loot = {  } },
-            { name = "Bolt", loot = {  } },
-            { name = "Snowtalon", loot = {  } },
+            { name = "Titanosaur", level = "61", loot = { 280009, 280011, 280010 } },
+            { name = "Venomridge", level = "61", loot = { 280015, 280017, 280016 } },
+            { name = "Thunderhoof", level = "61", loot = { 280018, 280020, 280019 } },
+            { name = "Direhorn Matriarch", level = "61", loot = { 280045, 280022, 280021 } },
+            { name = "Izha'Rel and Tor'Rel", level = "61", loot = { 280014, 280012 } },
+            { name = "Cinder", loot = { 280028 } },
+            { name = "Bolt", level = "62", loot = { 280031, 280032 } },
+            { name = "Vitrix", level = "62", loot = { 280031, 280028 } },
+            { name = "Snowtalon", loot = { 280027 } },
+            { name = "Nanaya", level = "62", loot = { 280023, 280025, 280024 } },
         },
+        trash = { 287037 },
     },
     {
         key = "UBRS", name = "Upper Blackrock Spire", kind = "dungeon", era = "classic",
@@ -780,7 +812,7 @@ LJ.Data.Instances = {
     {
         key = "BARROW", name = "Barrow Deeps", kind = "raid", era = "forever",
         minLevel = 60, maxLevel = 60, size = 10, zone = "Mount Hyjal",
-        status = "pending", statusText = "Forever raid (10 players). Bosses from the game; loot not revealed yet.",
+        status = "pending", statusText = "Opens December 9, 2026.",
         desc = "A vast network of night elven barrow dens that holds the world's most dangerous prisoners, and corruption is spreading.",
         art = { loading = "LoadScreenKalimdor" },
         instanceIDs = {  },
@@ -799,7 +831,7 @@ LJ.Data.Instances = {
     {
         key = "HYJAL", name = "Hyjal Summit", kind = "raid", era = "forever",
         minLevel = 60, maxLevel = 60, size = 20, zone = "Mount Hyjal",
-        status = "pending", statusText = "Forever raid (20 players). Bosses from the game; loot not revealed yet.",
+        status = "pending", statusText = "Opens December 9, 2026.",
         desc = "Something is draining power from the land around Mount Hyjal, where ghosts of the Third War still walk.",
         art = { lfg = "HyjalPast", loading = "LoadScreenHyjal" },
         instanceIDs = {  },

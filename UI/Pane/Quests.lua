@@ -422,13 +422,13 @@ local function WhereData(label, glyph, loc, fallbackText, fallbackInside, q, rol
     if loc and loc.kind == "item" then
         name = loc.id and Theme.ItemName(loc.id) or L("An item")
         zone = loc.text or L("starts from an item")
-    elseif loc and loc.name then
-        name, zone = loc.name, LocationLine(loc, fallbackText)
     elseif fallbackText then
         local n, rest = fallbackText:match("^([^,]+),%s*(.+)$")
         name, zone = n or fallbackText, rest or ""
+    elseif loc and loc.name then
+        name, zone = loc.name, LocationLine(loc)
     else
-        name, zone = L("Unknown"), ""
+        return nil
     end
     local spot, mapLabel = WhereSpot(loc, fallbackText, fallbackInside, q.name, role, inst)
     return { label = label, glyph = glyph, name = name, zone = zone, spot = spot, mapLabel = mapLabel }
@@ -661,15 +661,23 @@ function PQ.FillDetail(sheet, qid, inst, onStep)
     -- where it starts and ends (an open world quest: its giver; the data has no turn-in for those)
     sheet:Add("rule", {})
     if q.world then
-        sheet:Add("where", WhereData("START", "flag", q.loc or { name = q.giver }, nil, nil, q, "Quest giver", inst))
+        if q.loc or q.giver then
+            sheet:Add("where", WhereData("START", "flag", q.loc or { name = q.giver }, nil, nil, q, "Quest giver", inst))
+        end
     else
         LJ.MapPin.Resolve(q.start)
         LJ.MapPin.Resolve(q.finish)
-        sheet:Add("where", WhereData("START", "flag", q.start, q.startText, q.startInside, q, "Quest giver", inst))
-        if SameSpot(q.start, q.finish) then
+        local hasStart = q.start ~= nil or (q.startText and q.startText ~= "")
+        local hasFinish = q.finish ~= nil or (q.finishText and q.finishText ~= "")
+        if hasStart then
+            local startRow = WhereData("START", "flag", q.start, q.startText, q.startInside, q, "Quest giver", inst)
+            if startRow then sheet:Add("where", startRow) end
+        end
+        if hasFinish and hasStart and SameSpot(q.start, q.finish) then
             sheet:Add("where", { label = "TURN IN", glyph = "seal", name = L("back at the quest giver") })
-        else
-            sheet:Add("where", WhereData("TURN IN", "seal", q.finish, q.finishText, q.finishInside, q, "Turn in", inst))
+        elseif hasFinish then
+            local finishRow = WhereData("TURN IN", "seal", q.finish, q.finishText, q.finishInside, q, "Turn in", inst)
+            if finishRow then sheet:Add("where", finishRow) end
         end
     end
 

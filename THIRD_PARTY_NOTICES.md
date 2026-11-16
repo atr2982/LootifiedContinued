@@ -114,4 +114,7 @@ transparent background and scaled down; nothing else was changed.
 - **Sbed** (http://opengameart.org/content/95-game-icons): Death skull, Lava
 - **Carl Olsen** (https://twitter.com/unstoppableCarl): Spider face
 - **Kier Heyl**: Dwarf helmet
+## Forever launch dungeon and raid updates (2026-11-15)
+
+The launch-era dungeon names, encounter lists, observed boss loot and quest references for The Drowned City and Krol'dok Stronghold were cross-checked against Method's WoW: Forever dungeon guides (https://www.method.gg/wow-forever/dungeons/the-drowned-city and https://www.method.gg/wow-forever/dungeons/kroldok-stronghold). Alcaz Prison, Blackmaw Hold and Shaper's Terrace boss loot were cross-checked against the Forever-specific ConquestCapped guides (https://conquestcapped.com/guides/wow-forever/wow-forever-alcaz-prison-guide/, https://conquestcapped.com/guides/wow-forever/wow-forever-blackmaw-hold-guide/, and https://conquestcapped.com/guides/wow-forever/wow-forever-shapers-terrace-guide/). Quest IDs and item IDs were matched to the locally collected WoW: Forever client data. Only loot explicitly listed as confirmed or seen dropping was added; no drop chances were inferred. Barrow Deeps and Hyjal Summit remain pending until their announced opening date, December 9, 2026 (https://foreverwow.com/raids/).
 
