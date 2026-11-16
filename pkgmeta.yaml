@@ -9,5 +9,6 @@ ignore:
   - CHANGELOG.md
   - pkgmeta.yaml
   - THIRD_PARTY_NOTICES.md
+  - STAT_PRIORITY_SOURCES.md
 
 manual-changelog: CHANGELOG.md

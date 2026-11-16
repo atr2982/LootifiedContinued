@@ -17,7 +17,7 @@ LJ.BiS = BiS
 local Items = LJ.Items
 local Player = LJ.Player
 local Scoring = LJ.Scoring
-local potentialCache, potentialDeltaCache = {}, {}
+local potentialCache, potentialDeltaCache, journalUpgradeCache = {}, {}, {}
 
 BiS.LEFT_SLOTS = { "HEAD", "NECK", "SHOULDER", "BACK", "CHEST", "WRIST", "HANDS" }
 BiS.RIGHT_SLOTS = { "WAIST", "LEGS", "FEET", "FINGER1", "FINGER2", "TRINKET1", "TRINKET2" }
@@ -88,8 +88,8 @@ function BiS.ArmorFits(spec, itemID, level)
 end
 
 -- An item the Best in Slot list takes for a spec at a level: one of its sources and armor types (Items.InList).
-function BiS.OnSheet(spec, itemID, level)
-    return Items.InList(itemID, spec.class, level)
+function BiS.OnSheet(spec, itemID, level, ignoreSources)
+    return Items.InList(itemID, spec.class, level, ignoreSources)
 end
 
 -- The part of a data slot's ranked list the sheet picks from (BiS.OnSheet; none: the slot stays empty). Kept with the
@@ -101,7 +101,7 @@ local function SheetList(spec, ranking, dataSlot)
     kept = {}
     local level = BiS.ListLevel(spec)
     for _, x in ipairs(ranking.bySlot[dataSlot] or {}) do
-        if BiS.OnSheet(spec, x.id, level) then kept[#kept + 1] = x end
+        if BiS.OnSheet(spec, x.id, level, x.fallback) then kept[#kept + 1] = x end
     end
     ranking.sheet[dataSlot] = kept
     return kept
@@ -256,10 +256,10 @@ local targets          -- [itemID] = entry, for targetsSpec; nil: made again whe
 local targetsSpec
 local wornUnknown      -- an item worn was not known when they were made: made again when item data comes
 
-local function AddTarget(list, id, slot, value, delta, err, pct)
+local function AddTarget(list, id, slot, value, delta, err, pct, fallback)
     local old = list[id]
     if old and old.value >= value then return end
-    list[id] = { id = id, slot = slot, value = value, delta = delta, err = err, pct = pct }
+    list[id] = { id = id, slot = slot, value = value, delta = delta, err = err, pct = pct, fallback = fallback }
 end
 
 -- The best items of the list's own items (SheetList) of every slot that beat what is worn there (its scores:
@@ -285,7 +285,7 @@ local function AddRanked(list, spec)
                     local pct = total and gain / total * 100
                     if gain <= 0 then break end
                     if not C_Item.IsEquippedItem(e.id) then
-                        AddTarget(list, e.id, slot, gain, nil, nil, pct)
+                        AddTarget(list, e.id, slot, gain, nil, nil, pct, e.fallback)
                     end
                 end
             end
@@ -322,7 +322,7 @@ function BiS.Target(itemID)
         local spec = Player:GetActiveSpec()
         -- A saved legacy target can outlive the current Percent list. Re-check the
         -- live Forever armor/source/class rules before any page calls it an upgrade.
-        if Items.IsOwned(itemID) or not spec or not BiS.OnSheet(spec, itemID, BiS.ListLevel(spec)) then
+        if Items.IsOwned(itemID) or not spec or not BiS.OnSheet(spec, itemID, BiS.ListLevel(spec), t.fallback) then
             return nil
         end
     end
@@ -335,6 +335,49 @@ end
 function BiS.Upgrade(itemID)
     local t = BiS.Target(itemID)
     return t and t.value
+end
+
+-- Journal loot rows and their dungeon/boss counts use the same live stat-weight comparison as item tooltips. Unlike
+-- the current-level Best in Slot sheet, this allows a useful dungeon drop to count before the character reaches its
+-- required level. Keep the source and armor filters, class/profession eligibility, ownership, and faction rules.
+function BiS.JournalUpgrade(itemID)
+    local cached = journalUpgradeCache[itemID]
+    if cached ~= nil then return cached ~= false and cached or nil end
+    local spec = Player:GetActiveSpec()
+    if not spec or not LJ.Modules.On("bis") or Items.IsOwned(itemID) or Items.IsOtherFaction(itemID)
+        or not Items.InList(itemID, spec.class, BiS.MAX_LEVEL) then
+        journalUpgradeCache[itemID] = false
+        return nil
+    end
+    local _, _, _, equipLoc, _, classID, subclassID = C_Item.GetItemInfoInstant(itemID)
+    if not equipLoc or equipLoc == "" then return nil end
+    local facts = { id = itemID, equipLoc = equipLoc, classID = classID, subclassID = subclassID }
+    if not Player:CanClassUse(facts, spec.class, BiS.MAX_LEVEL) or Scoring.MissingSkill(itemID) then
+        journalUpgradeCache[itemID] = false
+        return nil
+    end
+    local share = LJ.ItemCheck.Share(spec, Items.GetLink(itemID))
+    if not share then
+        -- The tooltip can score from the live link, while an unopened dungeon's item may only have shipped Forever
+        -- stats. Use the same weighted score against current gear when the client link has not resolved yet.
+        local gain = BiS.PotentialDelta(itemID)
+        if gain ~= nil then
+            local total = LJ.ItemCheck.WornTotal(spec)
+            share = { better = gain > 0, pct = total and total > 0 and gain / total * 100 or nil }
+        end
+    end
+    if not share then return nil end
+    local result
+    if LJ.ItemCheck.StatsDirection(share) == "up" then result = { pct = share.pct } end
+    journalUpgradeCache[itemID] = result or false
+    return result
+end
+
+function BiS.FormatJournalUpgrade(itemID)
+    local result = BiS.JournalUpgrade(itemID)
+    if not result then return nil end
+    local text = result.pct and string.format("+%.1f%%", result.pct) or L("Upgrade")
+    return "|cff55ee55" .. text .. "|r"
 end
 
 -- Open-world rows need a live answer even when the cached target sheet was built before
@@ -463,9 +506,10 @@ local function Forget()
     targets = nil
     wipe(potentialCache)
     wipe(potentialDeltaCache)
+    wipe(journalUpgradeCache)
 end
 for _, message in ipairs({ "DB_READY", "SIM_BIS_CHANGED", "EQUIPMENT_CHANGED", "SPEC_CHANGED", "PLAYER_CHANGED",
-    "MODULES_CHANGED", "LIST_CHANGED" }) do
+    "MODULES_CHANGED", "LIST_CHANGED", "BAGS_CHANGED", "ITEMS_UPDATED" }) do
     LJ:Listen(message, Forget)
 end
 LJ:Listen("ITEMS_UPDATED", function()

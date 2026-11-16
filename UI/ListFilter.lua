@@ -253,8 +253,6 @@ function Filter.CreateButton(parent, onClick)
         GameTooltip:AddLine(Filter.ListText(), 1, 1, 1, true)
         GameTooltip:AddLine(L("Your spec, the armor and the sources your Best in Slot list and For you take. Click to change them."),
             0.8, 0.8, 0.8, true)
-        local spec = Player:GetActiveSpec()
-        if spec and LJ.StatPrio.IsCustom(spec) then GameTooltip:AddLine(L("Your own stat priority counts."), 1, 0.82, 0, true) end
         GameTooltip:Show()
     end)
     b:SetScript("OnLeave", function(self)
@@ -269,7 +267,7 @@ end
 
 ---------------------------------------------------------------------------
 -- The panel: two tabs. Filter: the spec as cards, the list's box, Back to realistic and Done; Stat priority: the spec's
--- stats to drag (UI/StatPrioView.lua)
+-- recommended per-spec stat priorities (UI/StatPrioView.lua)
 ---------------------------------------------------------------------------
 Filter.PANEL_WIDTH = 430
 local PAD, CARD_GAP, CARD_HEIGHT = 16, 8, 46
@@ -449,7 +447,7 @@ local function TourSteps(panel)
     local spec = Player:GetActiveSpec()
     if not seen.stats and spec and LJ.StatPrio.Counts(spec) then
         steps[#steps + 1] = { key = "stats", title = "Stat priority",
-            text = "Your spec's stats, the one that counts most on top. Drag a stat up or down: your list and the percent numbers follow at once; Default order gives back your spec's own order.",
+            text = "Your spec's recommended stat order. The bars and gear rankings use these priorities; each specialization has its own order.",
             enter = Tab("stats"),
             target = function() return panel.tabs.stats, panel.stats end }
     end

@@ -692,7 +692,7 @@ Kit.KINDS.item = {
         f.chance:SetPoint("RIGHT", -right, dy)
         local chanceW = (f.chance:GetText() ~= "") and math.max(Widgets.TextWidth(f.chance), 34) + 8 or 0
         local marks = {}
-        local upText = d.upgrade and BiS.FormatUpgrade(id)
+        local upText = d.upgrade and (d.upgradeText or BiS.FormatUpgrade(id))
         if upText then marks[#marks + 1] = Theme.GlyphString("upgrade", 11, C.okText) .. " " .. upText end
         f.marks:SetText(table.concat(marks, "  "))
         f.marks:ClearAllPoints()

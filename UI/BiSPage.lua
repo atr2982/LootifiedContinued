@@ -317,6 +317,22 @@ function Page:CreateWell(doll)
     model:SetPoint("BOTTOMRIGHT", -4, 4)
     -- the look stays while the page is hidden; it is dressed again only when the sheet's items change
     model:SetKeepModelOnHide(true)
+    -- In Forever, the player model and item records load asynchronously. Wait for both before applying the outfit;
+    -- otherwise TryOn can run against an unfinished model and leave the preview undressed.
+    model:SetScript("OnModelLoaded", function()
+        self.modelReady = true
+        self:ApplyDressModel()
+    end)
+    self.dressLoader = CreateFrame("Frame")
+    self.dressLoader:RegisterEvent("ITEM_DATA_LOAD_RESULT")
+    self.dressLoader:SetScript("OnEvent", function(_, _, itemID)
+        local pending = self.pendingDress
+        if not pending or not pending.waiting[itemID] then return end
+        if C_Item.IsItemDataCachedByID(itemID) then
+            pending.waiting[itemID] = nil
+            self:ApplyDressModel()
+        end
+    end)
     model.rotation, model.zoom = 0, 1
     model:EnableMouse(true)
     model:EnableMouseWheel(true)
@@ -881,9 +897,10 @@ function Page:Refresh()
     self.ranking = BiS.Ranking(spec)
     local view = self.view
     local function ListOf(slot) return BiS.ResolveSlot(spec, slot, self.ranking) end
+    local function WornOf(slot) return GetInventoryItemID("player", LJ.SimBiS.INV_SLOT[slot]) end
     local function ItemOf(slot)
-        if view == "bis" then return ListOf(slot) end
-        if view == "worn" then return GetInventoryItemID("player", LJ.SimBiS.INV_SLOT[slot]) end
+        if view == "bis" then return ListOf(slot) or WornOf(slot) end
+        if view == "worn" then return WornOf(slot) end
     end
 
     -- header
@@ -986,14 +1003,44 @@ function Page:DressModel()
         local id = self.slots[slot].itemID
         if id then ids[#ids + 1] = id end
     end
-    local signature = table.concat(ids, ",")
-    if signature == self.dressed then return end
-    self.dressed = signature
+    local spec = self:GetViewSpec()
+    if not spec then return end
+    -- The same item IDs can be selected for two specs, but the Dressing Room model may have been reset while the
+    -- filter/model was hidden or refreshed. Include the selected spec so switching specs always reapplies the set.
+    local signature = spec.key .. ":" .. table.concat(ids, ",")
+    if signature == self.dressed or (self.pendingDress and self.pendingDress.signature == signature) then return end
     local model = self.model
-    model:SetUnit("player")
+    local pending = { signature = signature, ids = ids, waiting = {} }
+    self.pendingDress = pending
+    for _, id in ipairs(ids) do
+        if not C_Item.IsItemDataCachedByID(id) then
+            pending.waiting[id] = true
+            C_Item.RequestLoadItemDataByID(id)
+        end
+    end
+    if self.modelReady then
+        -- A spec change does not require rebuilding the player model. Reuse the loaded model and
+        -- apply the new outfit after its item records are ready; SetUnit can otherwise reset the
+        -- model asynchronously while the outfit is being applied.
+        self:ApplyDressModel()
+    else
+        model:SetUnit("player")
+    end
+end
+
+function Page:ApplyDressModel()
+    local pending = self.pendingDress
+    if not pending or not self.modelReady then return end
+    for id in pairs(pending.waiting) do
+        if not C_Item.IsItemDataCachedByID(id) then return end
+        pending.waiting[id] = nil
+    end
+    local model = self.model
     model:SetSheathed(false)
     model:Undress()
-    for _, id in ipairs(ids) do model:TryOn("item:" .. id) end
+    for _, id in ipairs(pending.ids) do model:TryOn("item:" .. id) end
+    self.dressed = pending.signature
+    self.pendingDress = nil
 end
 
 function Page:Show()
@@ -1002,6 +1049,7 @@ function Page:Show()
 end
 
 function Page:OnHide()
+    self.dressed = nil
     if self.flyout then self.flyout:Hide() end
     if self.filterPanel then self:CloseFilter() end
 end

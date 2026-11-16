@@ -1,7 +1,7 @@
--- Generated from a completed Forever client collect, build 1.60.1.70862.
+-- Generated from a completed Forever client collect, build 1.60.1.70938.
 local _, LJ = ...
 local c = {
-    build = "1.60.1.70862",
+    build = "1.60.1.70938",
     items = {
         [25] = "Worn Shortsword|1|2|1|0|0|DPS=1.0526",
         [35] = "Bent Staff|1|2|1|0|0|DPS=1.3793",
@@ -241,6 +241,7 @@ local c = {
         [858] = "Lesser Healing Potion|1|13|3|0|0|",
         [859] = "Fine Cloth Shirt|1|17|0|1|0|",
         [860] = "Cavalier's Boots|1|13|0|1|0|Armor=16",
+        [862] = "Runed Ring|3|50|45|2|0|Healing=7,SpellPowerAll=7",
         [863] = "Gloom Reaper|2|37|32|2|0|DPS=19.6296",
         [864] = "Knightly Longsword|2|38|33|2|0|DPS=20.3333",
         [865] = "Leaden Mace|2|31|26|2|0|DPS=16.0345",
@@ -376,7 +377,7 @@ local c = {
         [1036] = "Tablet of Nullify Disease|1|16|16|0|0|",
         [1037] = "Tablet of Lightning Bolt II|1|10|10|0|0|",
         [1038] = "Tablet of Restoration II|1|8|8|0|0|",
-        [1041] = "Horn of the Black Wolf|3|40|40|3|0|",
+        [1041] = "Horn of the Black Wolf|3|40|40|1|0|",
         [1042] = "Deprecated Summon Winter Wolf (Mount)|1|1|1|0|0|",
         [1043] = "Deprecated Summon Redwolf (Mount)|1|1|1|0|0|",
         [1044] = "Deprecated Summon Brown Wolf (Mount)|1|1|1|0|0|",
@@ -437,7 +438,7 @@ local c = {
         [1129] = "Ghoul Fang|1|1|0|4|0|",
         [1130] = "Vial of Spider Venom|1|1|0|4|0|",
         [1131] = "Totem of Infliction|2|25|0|1|0|",
-        [1132] = "Horn of the Timber Wolf|3|40|40|3|0|",
+        [1132] = "Horn of the Timber Wolf|3|40|40|1|0|",
         [1133] = "Horn of the Winter Wolf|1|40|40|3|0|",
         [1134] = "Horn of the Gray Wolf|1|40|40|3|0|",
         [1136] = "Libram: Divine Favor II|1|18|18|0|0|",
@@ -537,6 +538,7 @@ local c = {
         [1260] = "Tharil'zun's Head|1|1|0|4|0|",
         [1261] = "Midnight Orb|1|1|0|4|0|",
         [1262] = "Keg of Thunderbrew|1|15|0|1|0|",
+        [1263] = "Brain Hacker|4|60|55|2|0|CritRating=14,Stamina=16,DPS=56.5714",
         [1264] = "Headbasher|3|29|0|1|0|Intellect=10,Stamina=5,Strength=9,DPS=23.6957",
         [1265] = "Scorpion Sting|3|39|34|2|0|DPS=26.4583",
         [1266] = "Deprecated Orcslayer|0|20|0|2|0|DPS=7.963",
@@ -676,6 +678,7 @@ local c = {
         [1436] = "Frontier Britches|2|17|0|1|0|Armor=64,Agility=3,Strength=3",
         [1438] = "Warrior's Shield|1|9|4|0|0|Armor=135",
         [1440] = "Gnoll Skull Basher|2|19|14|2|0|Stamina=2,Strength=2,DPS=9.6296",
+        [1443] = "Jeweled Amulet of Cainwyn|4|60|55|2|0|Intellect=18,Healing=18,Spirit=10,SpellDamage=6",
         [1444] = "Deprecated Inferno Stone|3|40|35|1|0|",
         [1445] = "Blackrock Pauldrons|1|23|18|0|0|Armor=126",
         [1446] = "Blackrock Boots|2|19|14|2|0|Armor=113,Strength=3,Stamina=3",
@@ -814,6 +817,7 @@ local c = {
         [1677] = "Drake-scale Vest|2|46|41|2|0|Armor=254,Strength=15,Spirit=8",
         [1678] = "Black Ogre Kickers|3|41|36|2|0|Armor=177,Strength=6,Stamina=14",
         [1679] = "Korg Bat|2|36|31|2|0|Stamina=5,Strength=12,DPS=24.7222",
+        [1680] = "Headchopper|2|46|41|2|0|CritRating=15,Strength=10,DPS=35.7353",
         [1681] = "Grimoire of Cripple|1|16|16|0|0|",
         [1684] = "Deprecated Totemic Headpiece|0|44|39|2|0|Armor=87",
         [1685] = "Troll-hide Bag|1|45|0|0|0|",
@@ -857,6 +861,7 @@ local c = {
         [1725] = "Large Knapsack|1|35|0|0|0|",
         [1726] = "Poison-tipped Bone Spear|3|36|31|2|0|DPS=31.3043",
         [1727] = "Sword of Decay|3|28|23|2|0|DPS=17.5926",
+        [1728] = "Teebu's Blazing Longsword|4|65|60|2|0|DPS=47.2414",
         [1729] = "Gunnysack of the Night Watch|1|25|0|1|0|",
         [1730] = "Worn Mail Belt|0|12|7|0|0|Armor=62",
         [1731] = "Worn Mail Boots|0|13|8|0|0|Armor=80",
@@ -1144,6 +1149,7 @@ local c = {
         [2091] = "Magic Dust|1|20|10|0|0|",
         [2092] = "Worn Dagger|1|2|1|0|0|DPS=0.9375",
         [2098] = "Double-barreled Shotgun|3|27|22|2|0|Agility=3,Strength=3,DPS=13.2609",
+        [2099] = "Dwarven Hand Cannon|4|58|53|2|0|DPS=32.7586",
         [2100] = "Precisely Calibrated Boomstick|4|48|43|2|0|CritRating=7,Agility=7,DPS=27.7778",
         [2101] = "Light Quiver|1|1|1|0|0|",
         [2102] = "Small Ammo Pouch|1|1|1|0|0|",
@@ -1389,10 +1395,10 @@ local c = {
         [2408] = "Pattern: Fine Leather Gloves|2|15|0|0|0|SpellPowerAll=2",
         [2409] = "Pattern: Dark Leather Tunic|2|20|0|0|0|",
         [2410] = "Smoky Torch|1|1|0|0|0|",
-        [2411] = "Black Stallion Bridle|3|40|40|3|0|",
+        [2411] = "Black Stallion Bridle|3|40|40|1|0|",
         [2412] = "Deprecated Nightmare Bridle|1|40|40|0|0|",
         [2413] = "Palomino|1|40|40|3|0|",
-        [2414] = "Pinto Bridle|3|40|40|3|0|",
+        [2414] = "Pinto Bridle|3|40|40|1|0|",
         [2415] = "White Stallion|1|40|40|3|0|",
         [2417] = "Augmented Chain Vest|1|37|32|0|0|Armor=208",
         [2418] = "Augmented Chain Leggings|1|37|32|0|0|Armor=182",
@@ -1842,7 +1848,7 @@ local c = {
         [2911] = "Keller's Girdle|3|23|18|2|0|Armor=23,Stamina=3,Intellect=8",
         [2912] = "Claw of the Shadowmancer|3|32|27|2|0|Intellect=2,DPS=20.5263",
         [2913] = "Silk Mantle of Gamn|2|28|0|1|0|Armor=31,Spirit=4,Intellect=6",
-        [2915] = "Taran Icebreaker|4|52|47|2|0|WeaponSkill=1,Stamina=14,DPS=49.7368",
+        [2915] = "Taran Icebreaker|4|52|47|2|0|Stamina=14,DPS=49.7368",
         [2916] = "Gold Lion Shield|2|34|0|1|0|Armor=645,Spirit=3,Strength=2,Stamina=5",
         [2917] = "Tranquil Ring|2|34|0|1|0|Intellect=1,Spirit=7",
         [2918] = "Deprecated Coif of Inner Strength|0|26|0|2|0|Armor=136",
@@ -2386,6 +2392,7 @@ local c = {
         [3472] = "Runed Copper Gauntlets|2|12|7|2|0|Armor=77,Strength=1,Stamina=1",
         [3473] = "Runed Copper Pants|2|13|8|2|0|Armor=113,Strength=2,Stamina=2",
         [3474] = "Gemmed Copper Gauntlets|2|15|10|2|0|Armor=90",
+        [3475] = "Cloak of Flames|4|65|60|2|0|HitRating=10,Armor=50",
         [3476] = "Gray Bear Tongue|1|1|0|4|0|",
         [3477] = "Creeper Ichor|1|1|0|4|0|",
         [3478] = "Coarse Grinding Stone|1|20|0|0|0|",
@@ -4299,6 +4306,7 @@ local c = {
         [5423] = "Boahn's Fang|3|22|17|2|0|Spirit=4,Strength=10,DPS=19",
         [5424] = "Ancient Statuette|1|1|0|4|0|",
         [5425] = "Runescale Girdle|2|21|16|2|0|Armor=96,Strength=5",
+        [5426] = "Serpent's Kiss|3|21|16|2|0|DPS=14",
         [5427] = "Crude Pocket Watch|0|1|0|0|0|",
         [5428] = "An Exotic Cookbook|0|1|0|0|0|",
         [5429] = "A Pretty Rock|0|1|0|0|0|",
@@ -4518,8 +4526,8 @@ local c = {
         [5652] = "Deprecated Cracked Razormane Wand|1|1|0|4|0|",
         [5653] = "Deprecated Broken Razormane War Shield|1|1|0|4|0|",
         [5654] = "Instant Toxin|1|24|24|0|0|",
-        [5655] = "Chestnut Mare Bridle|3|40|40|3|0|",
-        [5656] = "Brown Horse Bridle|3|40|40|3|0|",
+        [5655] = "Chestnut Mare Bridle|3|40|40|1|0|",
+        [5656] = "Brown Horse Bridle|3|40|40|1|0|",
         [5657] = "Recipe: Instant Toxin|1|24|0|0|0|",
         [5658] = "Libram: Seal of Might|1|8|8|0|0|",
         [5659] = "Smoldering Embers|1|1|0|4|0|",
@@ -4528,10 +4536,10 @@ local c = {
         [5662] = "Libram: Seal of Righteousness III|1|36|36|0|0|",
         [5663] = "Horn of the Red Wolf|1|40|40|3|0|",
         [5664] = "Corroded Shrapnel|1|1|0|4|0|",
-        [5665] = "Horn of the Dire Wolf|3|40|40|3|0|",
+        [5665] = "Horn of the Dire Wolf|3|40|40|1|0|",
         [5666] = "Libram: Seal of Wrath II|1|40|40|0|0|",
         [5667] = "Libram: Seal of Wisdom II|1|24|24|0|0|",
-        [5668] = "Horn of the Brown Wolf|3|40|40|3|0|",
+        [5668] = "Horn of the Brown Wolf|3|40|40|1|0|",
         [5669] = "Dust Devil Debris|1|1|0|4|0|",
         [5670] = "Libram: Seal of Wrath IV|1|60|60|0|0|",
         [5671] = "Libram: Seal of Might III|1|32|32|0|0|",
@@ -4725,7 +4733,7 @@ local c = {
         [5861] = "Beginnings of the Undead Threat|1|1|0|4|0|",
         [5862] = "Seaforium Booster|1|1|0|4|0|",
         [5863] = "Guild Charter|1|1|0|1|0|",
-        [5864] = "Gray Ram|3|40|40|3|0|",
+        [5864] = "Gray Ram|3|40|40|1|0|",
         [5865] = "Modified Seaforium Booster|1|1|0|4|0|",
         [5866] = "Sample of Indurium Ore|1|1|0|4|0|",
         [5867] = "Etched Phial|1|1|0|4|0|",
@@ -4733,8 +4741,8 @@ local c = {
         [5869] = "Cloven Hoof|1|1|0|4|0|",
         [5870] = "Monster - Throwing Spear|0|1|1|0|0|DPS=0.75",
         [5871] = "Large Hoof|0|1|0|0|0|",
-        [5872] = "Brown Ram|3|40|40|3|0|",
-        [5873] = "White Ram|3|40|40|3|0|",
+        [5872] = "Brown Ram|3|40|40|1|0|",
+        [5873] = "White Ram|3|40|40|1|0|",
         [5874] = "Harness: Black Ram|1|40|40|3|0|",
         [5875] = "Harness: Blue Ram|1|40|40|3|0|",
         [5876] = "Blueleaf Tuber|1|1|0|4|0|",
@@ -6512,21 +6520,21 @@ local c = {
         [8546] = "Powerful Smelling Salts|1|50|0|0|0|",
         [8547] = "Formula: Powerful Smelling Salts |2|50|0|0|0|",
         [8548] = "Divino-matic Rod|1|1|0|4|0|",
-        [8563] = "Red Mechanostrider|3|40|40|3|0|",
+        [8563] = "Red Mechanostrider|3|40|40|1|0|",
         [8564] = "Hippogryph Egg|1|1|0|1|0|",
         [8583] = "Horn of the Skeletal Mount|1|40|40|3|0|",
         [8584] = "Untapped Dowsing Widget|1|1|0|4|0|",
         [8585] = "Tapped Dowsing Widget|1|1|0|4|0|",
-        [8586] = "Whistle of the Mottled Red Raptor|4|60|60|3|0|",
+        [8586] = "Whistle of the Mottled Red Raptor|4|60|60|1|0|",
         [8587] = "Centipaar Insect Parts|1|1|0|4|0|",
-        [8588] = "Whistle of the Emerald Raptor|3|40|40|3|0|",
+        [8588] = "Whistle of the Emerald Raptor|3|40|40|1|0|",
         [8589] = "Old Whistle of the Ivory Raptor|1|40|40|3|0|",
         [8590] = "Old Whistle of the Obsidian Raptor|1|40|40|3|0|",
-        [8591] = "Whistle of the Turquoise Raptor|3|40|40|3|0|",
-        [8592] = "Whistle of the Violet Raptor|3|40|40|3|0|",
+        [8591] = "Whistle of the Turquoise Raptor|3|40|40|1|0|",
+        [8592] = "Whistle of the Violet Raptor|3|40|40|1|0|",
         [8593] = "Scrimshank's Surveying Gear|1|1|0|4|0|",
         [8594] = "Insect Analysis Report|1|1|0|4|0|",
-        [8595] = "Blue Mechanostrider|3|40|40|3|0|",
+        [8595] = "Blue Mechanostrider|3|40|40|1|0|",
         [8603] = "Thistleshrub Dew|1|1|0|4|0|",
         [8623] = "OOX-17/TN Distress Beacon|2|43|43|1|0|",
         [8624] = "Red Sparkler|1|10|0|0|0|",
@@ -6534,10 +6542,10 @@ local c = {
         [8626] = "Blue Sparkler|1|10|0|0|0|",
         [8627] = "Reins of the Night saber|1|40|40|3|0|",
         [8628] = "Reins of the Spotted Nightsaber|1|40|40|3|0|",
-        [8629] = "Reins of the Striped Nightsaber|3|40|40|3|0|",
+        [8629] = "Reins of the Striped Nightsaber|3|40|40|1|0|",
         [8630] = "Reins of the Bengal Tiger|1|40|40|3|0|",
-        [8631] = "Reins of the Striped Frostsaber|3|40|40|3|0|",
-        [8632] = "Reins of the Spotted Frostsaber|3|40|40|3|0|",
+        [8631] = "Reins of the Striped Frostsaber|3|40|40|1|0|",
+        [8632] = "Reins of the Spotted Frostsaber|3|40|40|1|0|",
         [8633] = "Reins of the Leopard|1|40|40|3|0|",
         [8643] = "Extraordinary Egg|1|1|0|1|0|",
         [8644] = "Fine Egg|1|1|0|1|0|",
@@ -7128,6 +7136,7 @@ local c = {
         [9370] = "Gordunni Scroll|1|38|38|1|0|",
         [9371] = "Gordunni Orb|1|1|0|4|0|",
         [9372] = "Sul'thraze the Lasher|4|55|50|1|0|DPS=52.1154",
+        [9375] = "Expert Goldminer's Helmet|3|40|35|2|0|Agility=7,ExpertiseRating=11,Stamina=8,WeaponSkill=1,Armor=99",
         [9378] = "Shovelphlange's Mining Axe|3|40|35|2|0|AttackPower=11,Strength=7,DPS=27.3214",
         [9379] = "Sang'thraze the Deflector|3|50|45|1|0|DPS=33.2353",
         [9380] = "Jang'thraze the Protector|3|50|45|1|0|DPS=33.4211",
@@ -7230,9 +7239,11 @@ local c = {
         [9477] = "The Chief's Enforcer|3|50|45|1|0|DPS=43.5294",
         [9478] = "Ripsaw|3|50|45|1|0|AttackPower=10,DPS=33.3333",
         [9479] = "Embrace of the Lycan|3|49|44|1|0|AttackPower=32,Stamina=16,Armor=117,Spirit=5,Strength=8",
+        [9480] = "Eyegouger|3|48|43|2|0|Agility=23,Strength=10,DPS=41.8333",
         [9481] = "The Minotaur|3|49|44|2|0|Armor=50,Stamina=24,Strength=8,DPS=42.6563",
         [9482] = "Witch Doctor's Cane|3|47|42|2|0|NaturePower=66,Spirit=18,DPS=30.6522",
         [9483] = "Flaming Incinerator|3|49|44|2|0|DPS=47.2222",
+        [9484] = "Spellshock Leggings|3|50|45|2|0|Intellect=10,SpellPowerAll=23,Armor=63,Healing=23,Stamina=9",
         [9485] = "Vibroblade|3|30|25|2|0|DPS=19.0625",
         [9486] = "Supercharger Battle Axe|3|28|23|2|0|DPS=23.0357",
         [9487] = "Hi-Tech Supergun|3|29|24|2|0|Defense=3,DPS=14.3478",
@@ -7246,6 +7257,7 @@ local c = {
         [9509] = "Petrolspill Leggings|3|30|25|2|0|Stamina=6,Agility=14,Armor=90",
         [9510] = "Caverndeep Trudgers|3|32|27|2|0|Armor=194,Strength=4,Stamina=10",
         [9511] = "Bloodletter Scalpel|3|46|41|2|0|DPS=31.1111",
+        [9512] = "Blackmetal Cape|3|46|41|2|0|Stamina=5,Agility=12,Armor=33",
         [9513] = "Ley Staff|2|10|0|1|0|Intellect=1,SpellPowerAll=2,Healing=2,Spirit=1,DPS=5.3448",
         [9514] = "Arcane Staff|2|10|0|1|0|Intellect=1,SpellPowerAll=2,Healing=2,Spirit=1,DPS=5.3448",
         [9515] = "Nether-lace Tunic|2|31|0|1|0|Armor=44,Stamina=6,Intellect=9",
@@ -8144,7 +8156,10 @@ local c = {
         [10622] = "Kadrak's Flag|1|1|0|4|0|",
         [10623] = "Winter's Bite|3|48|43|2|0|DPS=32.1429",
         [10624] = "Stinging Bow|3|47|42|2|0|AttackPower=14,Strength=3,DPS=24.5238",
+        [10625] = "Stealthblade|3|49|44|2|0|DPS=32.8571",
+        [10626] = "Ragehammer|3|50|45|2|0|DPS=43.3784",
         [10627] = "Bludgeon of the Grinning Dog|3|47|42|2|0|DPS=41.1765",
+        [10628] = "Deathblow|3|48|43|2|0|DPS=41.9643",
         [10629] = "Mistwalker Boots|3|50|45|2|0|Armor=49,Healing=9,Spirit=18,SpellPowerAll=9",
         [10630] = "Soulcatcher Halo|3|51|46|2|0|Intellect=25,Healing=18,SpellDamage=6,Armor=59",
         [10631] = "Murkwater Gauntlets|3|46|41|2|0|Intellect=5,Stamina=12,Strength=13,Armor=174",
@@ -8689,6 +8704,7 @@ local c = {
         [11679] = "Rubicund Armguards|3|55|50|1|0|Armor=143,Agility=8,Stamina=14,Intellect=3",
         [11682] = "Eridan's Vial|1|1|0|4|0|",
         [11683] = "[PH] Legendary Arcane Amalgamation (Caster)|4|50|0|4|0|",
+        [11684] = "Ironfoe|4|60|55|1|0|DPS=43.5417",
         [11685] = "Splinthide Shoulders|3|55|50|1|0|Intellect=10,SpellPowerAll=9,Stamina=10,Healing=9,Strength=11,Armor=118",
         [11686] = "Girdle of Beastial Fury|3|55|50|1|0|AttackPower=30,Defense=6,Armor=89,Strength=8,Stamina=10",
         [11702] = "Grizzle's Skinner|3|55|50|1|0|Stamina=6,Agility=6,Strength=8,DPS=36.4583",
@@ -8966,6 +8982,7 @@ local c = {
         [12056] = "Ring of the Heavens|2|56|51|2|0|Stamina=13,Spirit=3",
         [12057] = "Dragonscale Band|2|60|55|2|0|Stamina=13,Spirit=4",
         [12058] = "Demonic Bone Ring|2|64|59|2|0|Stamina=5,Strength=8,Spirit=5",
+        [12059] = "Conqueror's Medallion|3|58|0|1|0|Stamina=11,Agility=5,Strength=10,Spirit=6",
         [12060] = "Shindrell's Note|1|1|0|4|0|",
         [12061] = "Blade of Reckoning|2|60|0|1|0|AttackPower=15,Stamina=6,DPS=35.8333",
         [12062] = "Skilled Fighting Blade|2|60|0|1|0|WeaponSkill=1,DPS=35.7143",
@@ -9086,18 +9103,18 @@ local c = {
         [12299] = "Netted Gloves|1|8|0|1|0|Armor=9",
         [12300] = "Orb of Draconic Energy|1|1|0|4|0|",
         [12301] = "Bamboo Cage Key|1|1|0|4|0|",
-        [12302] = "Reins of the Frostsaber|4|60|60|3|0|",
-        [12303] = "Reins of the Nightsaber|4|60|60|3|0|",
+        [12302] = "Reins of the Frostsaber|4|60|60|1|0|",
+        [12303] = "Reins of the Nightsaber|4|60|60|1|0|",
         [12304] = "Monster - Sword, Horde Broad Pointed|0|1|1|0|0|DPS=0.75",
         [12322] = "Monster - Staff, Green Feathered|0|1|0|1|0|DPS=0.8824",
         [12323] = "Unforged Seal of Ascension|1|1|0|4|0|",
         [12324] = "Forged Seal of Ascension|1|1|0|4|0|",
-        [12325] = "Reins of the Primal Leopard|3|40|40|3|0|",
-        [12326] = "Reins of the Tawny Sabercat|3|40|40|3|0|",
-        [12327] = "Reins of the Golden Sabercat|3|40|40|3|0|",
+        [12325] = "Reins of the Primal Leopard|3|40|40|1|0|",
+        [12326] = "Reins of the Tawny Sabercat|3|40|40|1|0|",
+        [12327] = "Reins of the Golden Sabercat|3|40|40|1|0|",
         [12328] = "Monster - Staff, 3 Piece Taped Staff Green|0|1|1|0|0|DPS=0.8621",
         [12329] = "Monster - Staff, Crooked Green|0|1|1|0|0|DPS=0.75",
-        [12330] = "Horn of the Red Wolf|4|60|60|3|0|",
+        [12330] = "Horn of the Red Wolf|4|60|60|1|0|",
         [12331] = "Monster - Sword2H, Horde Massive Green|0|1|1|0|0|DPS=0.75",
         [12332] = "Monster - Dagger, Green Pronged|0|1|1|0|0|DPS=0.8333",
         [12334] = "Frostmaul Shards|1|1|0|4|0|",
@@ -9116,10 +9133,10 @@ local c = {
         [12348] = "Monster - Axe, Horde Badass Copper 01 (Special1H)|0|1|1|0|0|DPS=0.75",
         [12349] = "Cliffspring River Sample|1|1|0|4|0|",
         [12350] = "Empty Sampling Tube|1|1|0|4|0|",
-        [12351] = "Horn of the Arctic Wolf|4|60|60|3|0|",
+        [12351] = "Horn of the Arctic Wolf|4|60|60|1|0|",
         [12352] = "Doomrigger's Clasp|1|1|0|4|0|",
-        [12353] = "White Stallion Bridle|4|60|60|3|0|",
-        [12354] = "Palomino Bridle|4|60|60|3|0|",
+        [12353] = "White Stallion Bridle|4|60|60|1|0|",
+        [12354] = "Palomino Bridle|4|60|60|1|0|",
         [12355] = "Talisman of Corruption|1|1|0|4|0|",
         [12356] = "Highperch Wyvern Egg|1|1|0|4|0|",
         [12358] = "Darkstone Tablet|1|1|0|4|0|",
@@ -9192,6 +9209,7 @@ local c = {
         [12459] = "Juju Escape|1|60|0|1|0|",
         [12460] = "Juju Might|1|60|0|1|0|",
         [12461] = "Monster - Axe, 2H Horde Brown Tombstone|0|1|1|0|0|DPS=0.9091",
+        [12462] = "Embrace of the Wind Serpent|4|55|50|1|0|Intellect=10,SpellDamage=11,Armor=86,Healing=33,Spirit=30",
         [12463] = "Drakefang Butcher|3|53|48|1|0|Strength=15,DPS=45.9259",
         [12464] = "Bloodfire Talons|3|53|48|1|0|Intellect=5,SpellPowerAll=12,Armor=96,Healing=12,Spirit=9",
         [12465] = "Nightfall Drape|3|53|48|1|0|Armor=38,Healing=9,Stamina=14,SpellPowerAll=9",
@@ -9209,10 +9227,12 @@ local c = {
         [12524] = "Blue-feathered Amulet|1|1|0|4|0|",
         [12525] = "Jaron's Supplies|1|1|0|4|0|",
         [12526] = "TEST Challenge to Urok|1|1|0|0|0|",
+        [12527] = "Ribsplitter|3|53|48|2|0|AttackPower=10,DPS=35.1852",
         [12528] = "The Judge's Gavel|3|52|47|2|0|DPS=45",
         [12529] = "Smolderweb Carrier|1|59|0|0|0|",
         [12530] = "Spire Spider Egg|1|1|0|4|0|",
         [12531] = "Searing Needle|3|51|46|2|0|DPS=33.8889",
+        [12532] = "Spire of the Stoneshaper|3|56|51|2|0|Intellect=17,SpellPowerAll=64,Stamina=20,Healing=64,DPS=35.7353",
         [12533] = "Roughshod Pike|1|1|0|1|0|",
         [12534] = "Omokk's Head|1|1|0|1|0|",
         [12535] = "Doomforged Straightedge|3|54|49|2|0|AttackPower=14,Strength=10,DPS=35.7895",
@@ -9220,12 +9240,16 @@ local c = {
         [12543] = "Songstone of Ironforge|3|60|0|1|0|Intellect=7,Healing=18,SpellPowerAll=18",
         [12544] = "Thrall's Resolve|3|60|0|1|0|Armor=150,Strength=6,Stamina=7",
         [12545] = "Eye of Orgrimmar|3|60|0|1|0|Intellect=7,Healing=18,SpellPowerAll=18",
+        [12546] = "Aristocratic Cuffs|3|54|49|2|0|Armor=34,Healing=11,SpellDamage=4,Intellect=15",
+        [12547] = "Mar Alom's Grip|3|56|51|2|0|Intellect=10,SpellDamage=7,Armor=100,Healing=22,Spirit=8,Stamina=12",
         [12548] = "Magni's Will|3|60|0|1|0|CritRating=14,Strength=7,Stamina=8",
         [12549] = "Braincage|3|52|47|2|0|Intellect=20,HitRating=10,Stamina=5,Spirit=9,Armor=253",
         [12550] = "Runed Golem Shackles|3|53|48|2|0|Armor=244,Defense=5,Strength=14",
+        [12551] = "Stoneshield Cloak|3|56|51|2|0|Armor=190,Stamina=6",
         [12552] = "Blisterbane Wrap|3|55|50|2|0|Armor=39,Agility=15,Stamina=3",
         [12553] = "Swiftwalker Boots|3|59|54|1|0|Armor=115,Agility=21,Strength=5,Stamina=8",
         [12554] = "Hands of the Exalted Herald|3|59|54|1|0|Intellect=13,SpellDamage=10,Armor=52,Healing=31,Spirit=12",
+        [12555] = "Battlechaser's Greaves|3|55|50|2|0|Armor=397,Agility=13,Strength=14,Stamina=8",
         [12556] = "High Priestess Boots|3|59|54|1|0|Stamina=10,Spirit=7,Armor=58",
         [12557] = "Ebonsteel Spaulders|3|59|54|1|0|Armor=553,Agility=9,Strength=8,Stamina=16",
         [12558] = "Blue-feathered Necklace|1|52|52|1|0|",
@@ -9236,13 +9260,24 @@ local c = {
         [12566] = "Hardened Flasket|1|1|0|4|0|",
         [12567] = "Filled Flasket|1|1|0|4|0|",
         [12582] = "Keris of Zul'Serak|3|60|55|1|0|DPS=39.4444",
+        [12583] = "Blackhand Doomsaw|3|63|58|1|0|DPS=54",
         [12584] = "Grand Marshal's Longsword|4|78|60|1|0|AttackPower=28,Stamina=7,CritRating=14,DPS=59.4828",
         [12585] = "Stormwind Medallion|1|65|0|1|0|",
         [12586] = "Immature Venom Sac|1|50|0|0|0|",
+        [12587] = "Eye of Rend|3|63|58|1|0|HitRating=5,CritRating=21,Armor=143,Strength=15,Stamina=17",
+        [12589] = "Dustfeather Sash|3|61|56|1|0|Intellect=17,SpellPowerAll=9,Armor=49,Healing=9,Stamina=10",
+        [12590] = "Felstriker|4|63|58|1|0|DPS=45.5882",
         [12591] = "Monster - Staff, Holy Staff|0|1|1|0|0|DPS=0.75",
+        [12592] = "Blackblade of Shahram|4|63|58|1|0|DPS=59.4286",
         [12593] = "Monster - Sword, Horde Sword Bronze|0|1|1|0|0|DPS=0.75",
+        [12602] = "Draconian Deflector|3|63|58|1|0|Armor=2153,Defense=10,Stamina=7",
+        [12603] = "Nightbrace Tunic|3|61|56|1|0|Stamina=10,Agility=6,Armor=172,AttackPower=50",
+        [12604] = "Starfire Tiara|3|60|55|1|0|Intellect=10,ArcanePower=37,Spirit=10,Armor=69",
+        [12605] = "Serpentine Skuller|3|60|51|1|0|DPS=59.6429",
+        [12606] = "Crystallized Girdle|3|61|56|1|0|Intellect=19,SpellPowerAll=13,Stamina=6,Healing=13,Spirit=6,Armor=97",
         [12607] = "Brilliant Chromatic Scale|3|1|0|0|0|",
         [12608] = "Butcher's Apron|3|58|53|1|0|SpellDamage=3,Stamina=7,Healing=9,Spirit=15,Armor=41",
+        [12609] = "Polychromatic Visionwrap|3|61|56|1|0|Armor=87,Stamina=14",
         [12610] = "Runic Plate Shoulders|2|60|55|2|0|Stamina=14,Armor=427",
         [12611] = "Runic Plate Boots|2|60|55|2|0|Stamina=14,Armor=392",
         [12612] = "Runic Plate Helm|2|61|56|2|0|Stamina=19,Armor=471",
@@ -9254,6 +9289,7 @@ local c = {
         [12618] = "Enchanted Thorium Breastplate|3|63|58|2|0|Armor=657,Defense=9,Strength=12,Stamina=26",
         [12619] = "Enchanted Thorium Leggings|3|63|58|2|0|Armor=575,Defense=8,Strength=20,Stamina=21",
         [12620] = "Enchanted Thorium Helm|3|62|57|2|0|Armor=526,Defense=9,Strength=12,Stamina=25",
+        [12621] = "Demonfork|3|59|54|1|0|DPS=38.9286",
         [12622] = "Shardtooth Meat|1|1|0|4|0|",
         [12623] = "Chillwind Meat|1|1|0|4|0|",
         [12624] = "Wildthorn Mail|3|54|49|2|0|HitRating=10,SpellPowerAll=11,Stamina=5,Healing=11,Armor=322",
@@ -9316,6 +9352,7 @@ local c = {
         [12706] = "Plans: Runic Plate Shoulders|2|60|0|1|0|",
         [12707] = "Plans: Runic Plate Boots|2|60|0|1|0|",
         [12708] = "Crossroads' Supply Crates|1|1|0|4|0|",
+        [12709] = "Pip's Skinner|3|63|58|1|0|AttackPower=20,DPS=41.1538",
         [12710] = "Glowing Hunk of the Beast's Flesh|1|1|0|4|0|",
         [12711] = "Plans: Whitesoul Helm|3|60|0|0|0|",
         [12712] = "Warosh's Mojo|1|1|0|4|0|",
@@ -9460,6 +9497,7 @@ local c = {
         [12868] = "Monster - Item, Book - B02 Blue Glowing|0|1|1|0|0|DPS=0.75",
         [12869] = "Monster - Item, Book - B02 Blue Glowing Offhand|0|1|1|0|0|",
         [12870] = "Monster - Item, Potion Red Offhand|0|1|1|0|0|",
+        [12871] = "Chromatic Carapace|4|1|0|1|0|",
         [12882] = "Monster - Sword2H, Horde Curved Silver|0|1|1|0|0|DPS=0.75",
         [12883] = "Monster - Mace, Thaurissan Silver|0|1|1|0|0|DPS=0.75",
         [12884] = "Arnak's Hoof|1|1|0|4|0|",
@@ -9473,6 +9511,7 @@ local c = {
         [12892] = "Monster - Sword1H, Dark Short Sword|0|1|1|0|0|DPS=0.75",
         [12893] = "Monster - Shield, Black Skull|0|1|1|0|0|Armor=5",
         [12894] = "Joseph's Wedding Ring|1|1|0|4|0|",
+        [12895] = "Breastplate of the Chromatic Flight|4|62|0|1|0|Defense=6,Armor=706,Agility=15,Strength=20,Stamina=27",
         [12896] = "First Relic Fragment|1|1|0|4|0|",
         [12897] = "Second Relic Fragment|1|1|0|4|0|",
         [12898] = "Third Relic Fragment|1|1|0|4|0|",
@@ -9480,37 +9519,58 @@ local c = {
         [12900] = "Annals of Darrowshire|1|1|0|4|0|",
         [12901] = "Monster - Mace2H, Golden Stone Hammer|0|1|1|0|0|DPS=0.8108",
         [12902] = "Monster - Sword2H, Luminous Evil Blade|0|1|1|0|0|DPS=0.75",
+        [12903] = "Legguards of the Chromatic Defier|4|62|0|1|0|Intellect=7,Agility=31,Armor=349,Strength=9,Stamina=15",
         [12904] = "Shawn's Super Special Swami Hat|2|61|61|2|0|Armor=64",
+        [12905] = "Wildfire Cape|3|61|56|1|0|Armor=43",
         [12906] = "Purified Moonwell Water|1|1|0|4|0|",
         [12907] = "Corrupt Moonwell Water|1|1|0|4|0|",
         [12922] = "Empty Canteen|1|1|0|1|0|",
         [12923] = "Awbee's Scale|1|1|0|4|0|",
         [12924] = "Ritual Candle|1|1|0|1|0|",
         [12925] = "Arikara Serpent Skin|1|1|0|4|0|",
+        [12926] = "Flaming Band|3|61|56|1|0|FirePower=24",
+        [12927] = "Truestrike Shoulders|3|61|56|1|0|AttackPower=24,Stamina=10,HitRating=15,Armor=129",
         [12928] = "Umi's Mechanical Yeti|1|1|0|4|0|",
+        [12929] = "Emberfury Talisman|3|61|56|1|0|Stamina=8,Healing=6,CritRating=14,SpellPowerAll=6",
+        [12930] = "Briarwood Reed|3|60|55|1|0|Healing=15,SpellPowerAll=15",
         [12931] = "Monster - Shield, Scarlet Crusade A01/A02 Model|0|1|1|0|0|Armor=5",
         [12932] = "Monster - Shield, Scarlet Crusade A02|0|1|1|0|0|Armor=5",
         [12933] = "Monster - Shield, Scarlet Crusade B03|0|1|1|0|0|Armor=5",
         [12934] = "Monster - Mace, Maul B03 Red|0|1|1|0|0|DPS=0.75",
+        [12935] = "Warmaster Legguards|3|63|58|1|0|DodgeRating=24,Stamina=16,Armor=575,Strength=13,ParryRating=6",
+        [12936] = "Battleborn Armbraces|3|63|58|1|0|CritRating=14,Spirit=7,HitRating=10,Armor=287",
         [12937] = "Monster - Staff, Basic Red|0|1|1|0|0|DPS=0.75",
         [12938] = "Blood of Heroes|1|60|0|1|0|",
+        [12939] = "Dal'Rend's Tribal Guardian|3|63|58|1|41|Armor=100,Defense=7,DPS=41.3889",
+        [12940] = "Dal'Rend's Sacred Charge|3|63|58|1|41|CritRating=14,Strength=4,DPS=41.4286",
         [12941] = "Monster - Wand, Jeweled - B02 Red|0|1|1|0|0|DPS=1",
         [12942] = "Panther Cage Key|1|1|0|4|0|",
         [12943] = "Monster - Staff, 3 Piece Taped Staff Red|0|1|1|0|0|DPS=0.8621",
         [12944] = "Monster - Sword, Golden Long|0|1|1|0|0|DPS=0.75",
+        [12945] = "Legplates of the Chromatic Defier|4|62|0|1|0|Intellect=16,SpellDamage=15,Armor=349,Healing=44,Spirit=19,Stamina=14",
         [12946] = "Hypercapacitor Gizmo|1|1|0|4|0|",
         [12947] = "Alex's Ring of Audacity|6|60|0|0|0|Defense=1000",
         [12949] = "Monster - Sword2H, Red White Broad|0|1|1|0|0|DPS=0.75",
         [12950] = "Monster - Mace2H, Warhammer Ebony|0|1|1|0|0|DPS=0.8108",
         [12951] = "Monster - Axe, 2H War - Red|0|1|1|0|0|DPS=1.0256",
+        [12952] = "Gyth's Skull|3|60|55|1|0|Stamina=20,Defense=9,Armor=509",
+        [12953] = "Dragoneye Coif|3|60|55|1|0|Armor=288,Stamina=17,AttackPower=38",
         [12954] = "Davil's Libram|1|1|0|4|0|",
         [12955] = "Redpath's Shield|1|1|0|4|0|",
         [12956] = "Skull of Horgus|1|1|0|4|0|",
         [12957] = "Shattered Sword of Marduk|1|1|0|4|0|",
         [12958] = "Recipe: Transmute Arcanite|1|55|0|0|0|",
         [12959] = "Monster - Staff, Demon Skull Staff|0|1|1|0|0|DPS=0.75",
+        [12960] = "Tribal War Feathers|3|60|55|1|0|Intellect=15,SpellDamage=11,Stamina=12,Healing=33,Armor=137",
         [12961] = "JEFF TEST SHIELD|1|1|0|0|0|Armor=15",
         [12962] = "JEFF TEST GLOVES|1|1|0|0|0|Armor=15",
+        [12963] = "Blademaster Leggings|3|63|58|1|0|AttackPower=24,DodgeRating=24,CritRating=14,Armor=154,HitRating=10",
+        [12964] = "Tristam Legguards|3|63|58|1|0|AttackPower=38,Stamina=18,DodgeRating=18,Armor=324",
+        [12965] = "Spiritshroud Leggings|3|63|58|1|0|Intellect=16,SpellPowerAll=19,Stamina=13,Healing=19,Spirit=16,Armor=78",
+        [12966] = "Blackmist Armguards|3|63|58|1|0|Stamina=13,Armor=77,HitRating=10,Strength=5",
+        [12967] = "Bloodmoon Cloak|3|63|58|1|0|Armor=45,Defense=3,Stamina=17",
+        [12968] = "Frostweaver Cape|3|63|58|1|0|Intellect=13,FrostPower=13,Armor=45",
+        [12969] = "Seeping Willow|3|63|58|1|0|DPS=53.8889",
         [12970] = "General's Ceremonial Plate|3|63|58|1|0|Armor=797,Stamina=30",
         [12971] = "JEFF TEST SWORD|1|50|0|0|0|DPS=29",
         [12972] = "JEFF TEST SWORD II|1|50|0|0|0|DPS=34",
@@ -9547,6 +9607,7 @@ local c = {
         [13003] = "Lord Alexander's Battle Axe|3|56|51|2|0|Stamina=16,Agility=17,Strength=16,DPS=48.125",
         [13004] = "Torch of Austen|3|58|53|2|0|DPS=56.7857",
         [13005] = "Amy's Blanket|3|28|23|2|0|Stamina=3,Spirit=7,Armor=23",
+        [13006] = "Mass of McGowan|3|62|57|2|0|Stamina=10,Strength=10,DPS=40.8929",
         [13007] = "Mageflame Cloak|3|58|53|2|0|FirePower=21,Armor=41",
         [13008] = "Dalewind Trousers|3|52|47|2|0|Armor=65,Stamina=5,Spirit=25,Intellect=9",
         [13009] = "Cow King's Hide|3|51|46|2|0|Stamina=10,Armor=148",
@@ -9555,6 +9616,7 @@ local c = {
         [13012] = "Yorgen Bracers|3|27|22|2|0|Armor=91,Agility=3,Strength=6,Stamina=3",
         [13013] = "Elder Wizard's Mantle|3|56|51|2|0|Intellect=20,Healing=11,Armor=60,SpellPowerAll=11",
         [13014] = "Axe of Rin'ji|3|53|48|2|0|Stamina=11,Agility=5,DPS=35",
+        [13015] = "Serathil|3|61|56|2|0|Armor=100,Strength=9,DPS=40",
         [13016] = "Killmaim|3|26|21|2|0|DPS=21.7188",
         [13017] = "Hellslayer Battle Axe|3|40|35|2|0|AttackPower=34,DPS=35.5172",
         [13018] = "Executioner's Cleaver|3|48|43|2|0|HitRating=10,Strength=23,DPS=41.8421",
@@ -9637,6 +9699,7 @@ local c = {
         [13095] = "Assault Band|3|44|39|2|0|Stamina=7,Spirit=5,AttackPower=20",
         [13096] = "Band of the Hierophant|3|60|55|2|0|Stamina=7,Spirit=11,Intellect=10",
         [13097] = "Thunderbrow Ring|3|29|24|2|0|Strength=8,Agility=3",
+        [13098] = "Painweaver Band|3|63|58|1|0|CritRating=14,Stamina=9,AttackPower=12",
         [13099] = "Moccasins of the White Hare|3|29|24|2|0|Armor=32,Agility=3,Spirit=8",
         [13100] = "Furen's Boots|3|44|39|2|0|Armor=44,Spirit=16,Intellect=7",
         [13101] = "Wolfrunner Shoes|3|59|54|2|0|Intellect=11,SpellPowerAll=13,Stamina=11,Healing=13,Spirit=11,Armor=58",
@@ -9679,6 +9742,9 @@ local c = {
         [13138] = "The Silencer|3|42|37|2|0|AttackPower=14,DPS=22.3214",
         [13139] = "Guttbuster|3|50|45|2|0|Agility=8,Strength=3,DPS=26.1111",
         [13140] = "Blood Red Key|1|49|49|1|0|",
+        [13141] = "Tooth of Gnarr|3|63|58|1|0|Intellect=11,SpellDamage=5,Stamina=7,Healing=15,MP5=3",
+        [13142] = "Brigam Girdle|3|63|58|1|0|Armor=369,Stamina=18,Strength=14,HitRating=10",
+        [13143] = "Mark of the Dragon Lord|4|61|56|1|0|",
         [13144] = "Serenity Belt|3|53|48|2|0|Armor=43,Stamina=7,Intellect=17",
         [13145] = "Enormous Ogre Belt|3|40|40|2|0|Armor=164,Spirit=5,Strength=12,Stamina=5",
         [13146] = "Shell Launcher Shotgun|3|58|53|2|0|DPS=29.7826",
@@ -9714,6 +9780,7 @@ local c = {
         [13178] = "Rosewine Circle|3|60|55|1|0|Healing=24,MP5=6,SpellDamage=8",
         [13179] = "Brazecore Armguards|3|60|55|1|0|Intellect=8,SpellPowerAll=8,Stamina=10,Healing=8,MP5=4,Armor=155",
         [13180] = "Stratholme Holy Water|1|1|0|1|0|",
+        [13181] = "Demonskin Gloves|3|57|52|1|0|Intellect=9,ShadowPower=13,Stamina=8,Spirit=15,Armor=51",
         [13182] = "Phase Blade|3|57|52|1|0|Stamina=12,Strength=7,DPS=37.619",
         [13183] = "Venomspitter|3|60|55|1|65|DPS=39.4737",
         [13184] = "Fallbrush Handgrips|3|61|56|1|0|Intellect=12,SpellDamage=7,Armor=107,Healing=20,Spirit=11,Stamina=11",
@@ -9730,6 +9797,7 @@ local c = {
         [13195] = "Dalson's Tears Cauldron Key|1|1|0|4|0|",
         [13196] = "Gahrron's Withering Cauldron Key|1|1|0|4|0|",
         [13197] = "Writhing Haunt Cauldron Key|1|1|0|4|0|",
+        [13198] = "Hurd Smasher|3|60|55|1|0|DPS=39.4444",
         [13199] = "Crushridge Bindings|3|41|36|2|0|Armor=113,Strength=5,Stamina=11",
         [13202] = "Extended Annals of Darrowshire|1|1|0|4|0|",
         [13203] = "Armswake Cloak|3|60|55|1|0|Armor=43,Stamina=15,AttackPower=16",
@@ -9762,10 +9830,13 @@ local c = {
         [13250] = "Head of Balnazzar|1|1|55|1|0|",
         [13251] = "Head of Baron Rivendare|1|1|0|4|0|",
         [13252] = "Cloudrunner Girdle|3|60|55|1|0|Armor=215,Agility=14,Strength=13",
+        [13253] = "Hands of Power|3|60|55|1|0|Intellect=9,SpellPowerAll=23,Armor=53,Healing=23,Spirit=8",
         [13255] = "Trueaim Gauntlets|3|59|54|1|0|Armor=218",
         [13257] = "Demonic Runed Spaulders|3|59|54|1|0|Intellect=14,Stamina=12,Strength=12,Armor=126",
         [13258] = "Slaghide Gauntlets|3|61|56|1|0|Armor=207",
         [13259] = "Ribsteel Footguards|3|61|56|1|0|Armor=438,Agility=10,Strength=10,Stamina=19",
+        [13260] = "Wind Dancer Boots|3|61|56|2|0|Armor=247,Agility=12,Spirit=16,DodgeRating=12",
+        [13261] = "Globe of D'sak|3|59|54|1|0|Intellect=11,ShadowPower=14,Stamina=5",
         [13262] = "Ashbringer|5|76|60|1|0|DPS=74.6667",
         [13282] = "Ogreseer Tower Boots|3|59|54|1|0|Intellect=13,SpellDamage=9,Armor=58,Healing=26,Spirit=13",
         [13283] = "Magus Ring|3|59|54|1|0|Stamina=8,Spirit=7,HitRating=5,Intellect=12",
@@ -9791,26 +9862,27 @@ local c = {
         [13311] = "Schematic: Mechanical Dragonling|1|40|0|0|0|",
         [13312] = "Monster - Mace, Hammer Gold Orange|0|1|1|0|0|DPS=0.75",
         [13313] = "Sacred Highborne Writings|1|1|0|4|0|",
+        [13314] = "Alanna's Embrace|4|62|57|1|0|Intellect=20,SpellPowerAll=23,Armor=96,Healing=23,Stamina=20",
         [13315] = "Testament of Hope|2|61|0|1|0|Healing=17,Spirit=5,SpellDamage=6",
         [13316] = "Monster - Sword2H, Claymore Silver Yellow Glow|0|1|1|0|0|DPS=0.75",
-        [13317] = "Whistle of the Ivory Raptor|4|60|60|3|0|",
+        [13317] = "Whistle of the Ivory Raptor|4|60|60|1|0|",
         [13318] = "Monster - Shield, Horde A01 Red|0|1|1|0|0|Armor=5",
         [13319] = "Monster - Shield, Horde B03|0|1|1|0|0|Armor=5",
         [13320] = "Arcane Quickener|1|1|0|4|0|",
-        [13321] = "Green Mechanostrider|3|40|40|3|0|",
-        [13322] = "Unpainted Mechanostrider|3|40|40|3|0|",
+        [13321] = "Green Mechanostrider|3|40|40|1|0|",
+        [13322] = "Unpainted Mechanostrider|3|40|40|1|0|",
         [13323] = "Purple Mechanostrider|3|40|40|3|0|",
         [13324] = "Red & Blue Mechanostrider|3|40|40|3|0|",
         [13325] = "Fluorescent Green Mechanostrider|3|40|40|1|0|",
-        [13326] = "White Mechanostrider Mod A|4|60|60|3|0|",
-        [13327] = "Icy Blue Mechanostrider Mod A|4|60|60|3|0|",
-        [13328] = "Black Ram|4|60|60|3|0|",
-        [13329] = "Frost Ram|4|60|60|3|0|",
+        [13326] = "White Mechanostrider Mod A|4|60|60|1|0|",
+        [13327] = "Icy Blue Mechanostrider Mod A|4|60|60|1|0|",
+        [13328] = "Black Ram|4|60|60|1|0|",
+        [13329] = "Frost Ram|4|60|60|1|0|",
         [13330] = "Dereks Radish Bag|1|1|1|0|0|",
-        [13331] = "Red Skeletal Horse|3|40|40|3|0|",
-        [13332] = "Blue Skeletal Horse|3|40|40|3|0|",
-        [13333] = "Brown Skeletal Horse|3|40|40|3|0|",
-        [13334] = "Green Skeletal Warhorse|4|60|60|3|0|",
+        [13331] = "Red Skeletal Horse|3|40|40|1|0|",
+        [13332] = "Blue Skeletal Horse|3|40|40|1|0|",
+        [13333] = "Brown Skeletal Horse|3|40|40|1|0|",
+        [13334] = "Green Skeletal Warhorse|4|60|60|1|0|",
         [13335] = "Deathcharger's Reins|3|60|60|1|0|",
         [13336] = "Monster - Staff, Feathered Black|0|1|0|1|0|DPS=0.8824",
         [13337] = "Monster - Staff, Feathered Gold|0|1|0|1|0|DPS=0.8824",
@@ -9825,27 +9897,32 @@ local c = {
         [13346] = "Robes of the Exalted|3|63|58|1|0|Intellect=8,SpellDamage=13,Armor=89,Healing=40,Spirit=25",
         [13347] = "Crystal of Zin-Malor|2|1|0|4|0|",
         [13348] = "Demonshear|3|63|58|1|0|DPS=53.8158",
+        [13349] = "Scepter of the Unholy|3|63|58|1|0|Stamina=5,ShadowPower=88,DPS=27.5",
         [13350] = "Insignia of the Black Guard|1|1|0|4|0|",
         [13351] = "Crimson Hammersmith's Apron|1|1|0|4|0|",
         [13352] = "Vosh'gajin's Snakestone|1|1|0|4|0|",
+        [13353] = "Book of the Dead|4|63|58|1|0|Stamina=8,ShadowPower=16,Spirit=10,Intellect=15",
         [13354] = "Ectoplasmic Resonator|1|1|0|1|0|",
         [13356] = "Somatic Intensifier|1|1|0|1|0|",
         [13357] = "Osseous Agitator|1|1|0|1|0|",
         [13358] = "Wyrmtongue Shoulders|3|63|58|1|0|Stamina=10,Agility=23,Armor=132",
         [13359] = "Crown of Tyranny|3|63|58|1|0|AttackPower=40,Stamina=25,Armor=301,Spirit=-10,CritRating=14",
         [13360] = "Gift of the Elven Magi|3|63|58|1|0|Intellect=10,SpellDamage=45,DPS=27.6667,Stamina=6,Healing=135,Spirit=7",
+        [13361] = "Skullforge Reaver|3|63|58|1|0|DPS=41.4",
         [13362] = "Letter from the Front|0|1|0|0|0|",
         [13363] = "Municipal Proclamation|0|1|0|0|0|",
         [13364] = "Ezra Grimm's Advertisement|0|1|0|0|0|",
         [13365] = "Town Meeting Notice|0|1|0|0|0|",
         [13366] = "Ingenious Toy|0|1|0|0|0|",
         [13367] = "Wrapped Gift|0|1|0|0|0|",
+        [13368] = "Bonescraper|3|62|57|1|0|AttackPower=30,DPS=40.7143",
         [13369] = "Fire Striders|3|63|58|1|0|FirePower=29,Spirit=5,Armor=61",
         [13370] = "Vitreous Focuser|1|1|0|4|0|",
         [13371] = "Father Flame|2|58|0|1|0|",
         [13372] = "Slavedriver's Cane|3|60|55|1|0|Stamina=12,Strength=29,DPS=51.4103",
         [13373] = "Band of Flesh|3|60|55|1|0|Armor=40,Agility=3,Strength=6,Stamina=16",
         [13374] = "Soulstealer Mantle|3|60|55|1|0|Intellect=22,HitRating=10,Armor=64",
+        [13375] = "Crest of Retribution|3|60|55|1|0|BlockRating=6,Strength=14,Armor=2057",
         [13376] = "Royal Tribunal Cloak|3|59|54|1|0|Intellect=16,SpellPowerAll=5,Armor=42,Healing=5,Stamina=5",
         [13377] = "Miniature Cannon Balls|3|61|56|1|0|DPS=6.8333",
         [13378] = "Songbird Blouse|3|58|53|1|0|Defense=7,Armor=165,Agility=10,Strength=14,Stamina=22",
@@ -9856,6 +9933,7 @@ local c = {
         [13383] = "Woollies of the Prancing Minstrel|3|58|53|1|0|Intellect=10,SpellDamage=5,Stamina=12,Healing=15,MP5=10,Armor=301",
         [13384] = "Rainbow Girdle|3|58|53|1|0|Agility=8,Stamina=10,SpellPowerAll=12,Armor=341,Healing=12,Spirit=8,Strength=10",
         [13385] = "Tome of Knowledge|3|61|56|1|0|Intellect=8,Agility=8,Strength=8,Stamina=8",
+        [13386] = "Archivist Cape|3|61|56|1|0|MP5=4,Armor=43",
         [13387] = "Foresight Girdle|3|61|56|1|0|Armor=202",
         [13388] = "The Postmaster's Tunic|3|61|56|1|81|Intellect=20,SpellPowerAll=18,Stamina=13,Healing=18,Spirit=10,Armor=87",
         [13389] = "The Postmaster's Trousers|3|61|56|1|81|Intellect=20,SpellPowerAll=13,Stamina=12,Healing=13,Spirit=15,Armor=76",
@@ -9863,11 +9941,17 @@ local c = {
         [13391] = "The Postmaster's Treads|3|61|56|1|81|Intellect=15,SpellPowerAll=9,Stamina=14,Healing=9,Spirit=6,Armor=60",
         [13392] = "The Postmaster's Seal|3|61|56|1|81|Intellect=3,SpellPowerAll=13,Stamina=6,Healing=13,Spirit=12",
         [13393] = "Malown's Slam|3|61|56|1|0|DPS=52.1053",
+        [13394] = "Skul's Cold Embrace|3|60|55|1|0|Stamina=20,Defense=6,Strength=19,Armor=627",
         [13395] = "Skul's Fingerbone Claws|3|60|55|1|0|AttackPower=42,Stamina=10,Armor=106,Intellect=5",
+        [13396] = "Skul's Ghastly Touch|3|60|55|1|0|ShadowPower=14,DPS=59.7222",
+        [13397] = "Stoneskin Gargoyle Cape|3|62|57|1|0|Armor=94,Agility=8,Strength=7,Stamina=14",
+        [13398] = "Boots of the Shrieker|3|62|57|1|0|Intellect=10,SpellPowerAll=12,Armor=120,Healing=12,Stamina=10",
+        [13399] = "Gargoyle Shredder Talons|3|62|57|1|0|DPS=40.8333",
         [13400] = "Vambraces of the Sadist|3|60|55|1|0|Armor=274,Stamina=8,Strength=7,CritRating=14",
         [13401] = "The Cruel Hand of Timmy|3|60|55|1|0|DPS=39.4444",
         [13402] = "Timmy's Galoshes|3|60|55|1|0|Armor=244,Agility=18,Stamina=11,Intellect=10",
         [13403] = "Grimgore Noose|3|60|55|1|0|Intellect=18,SpellDamage=4,Armor=48,Healing=11,Spirit=10,Stamina=9",
+        [13404] = "Mask of the Unforgiven|3|57|52|1|0|Defense=6,HitRating=20,CritRating=14,Stamina=13,Armor=132",
         [13405] = "Wailing Nightbane Pauldrons|3|57|52|1|0|Stamina=14,Defense=3,Strength=14,Armor=448",
         [13406] = "Monster - Item, Mutton Offhand|0|1|1|0|0|",
         [13407] = "Monster - Item, Mutton with Bite Offhand|0|1|1|0|0|",
@@ -9928,19 +10012,24 @@ local c = {
         [13495] = "Recipe: Greater Frost Protection Potion|2|58|0|0|0|",
         [13496] = "Recipe: Greater Nature Protection Potion|2|58|0|0|0|",
         [13497] = "Recipe: Greater Arcane Protection Potion|2|58|0|0|0|",
+        [13498] = "Handcrafted Mastersmith Leggings|3|60|55|1|0|Armor=548,ExpertiseRating=10,Strength=25,Stamina=12",
         [13499] = "Recipe: Greater Shadow Protection Potion|2|58|0|0|0|",
         [13500] = "Recipe: Greater Holy Protection Potion|2|58|0|0|0|",
         [13501] = "Recipe: Major Mana Potion|2|59|0|1|0|",
+        [13502] = "Handcrafted Mastersmith Girdle|3|63|58|1|0|Armor=519,Agility=10,Strength=11,Stamina=10",
         [13503] = "Alchemist's Stone|2|50|45|1|0|Spirit=4",
         [13504] = "Monster - Sword, Doomguard|0|1|1|0|0|DPS=0.75",
+        [13505] = "Runeblade of Baron Rivendare|4|63|58|1|0|DPS=59.4444",
         [13506] = "Flask of Petrification|1|60|50|0|0|",
         [13507] = "Cliffwatcher Longhorn Report|1|1|1|4|0|",
+        [13508] = "Eye of Arachnida|2|60|55|1|0|",
         [13509] = "Clutch of Foresight|2|60|55|1|0|",
         [13510] = "Flask of the Titans|1|60|50|0|0|",
         [13511] = "Flask of Distilled Wisdom|1|60|50|0|0|",
         [13512] = "Flask of Supreme Power|1|60|50|0|0|",
         [13513] = "Flask of Chromatic Resistance|1|60|50|0|0|",
         [13514] = "Wail of the Banshee|2|60|55|1|0|",
+        [13515] = "Ramstein's Lightning Bolts|3|60|55|1|0|",
         [13517] = "Recipe: Alchemist's Stone|1|50|0|1|0|",
         [13518] = "Recipe: Flask of Petrification|2|60|0|0|0|",
         [13519] = "Recipe: Flask of the Titans|2|60|0|0|0|",
@@ -9951,14 +10040,19 @@ local c = {
         [13524] = "Skull of Burning Shadows|3|62|57|1|0|HitRating=10",
         [13525] = "Darkbind Fingers|3|62|57|1|0|Intellect=12,Healing=18,SpellDamage=6,Armor=55",
         [13526] = "Flamescarred Girdle|3|62|57|1|0|Armor=98,Defense=5,Stamina=12",
+        [13527] = "Lavawalker Greaves|3|62|57|1|0|Armor=445,HitRating=5,Strength=12",
         [13528] = "Twilight Void Bracers|3|62|57|1|0|NaturePower=11,Armor=160,Intellect=7",
         [13529] = "Husk of Nerub'enkan|3|61|56|1|0|Armor=2089,Defense=2,Stamina=10",
+        [13530] = "Fangdrip Runners|3|61|56|1|0|NaturePower=13,Armor=60",
         [13531] = "Crypt Stalker Leggings|3|61|56|1|0|Armor=150,Defense=6,Stamina=14",
         [13532] = "Darkspinner Claws|3|61|56|1|0|Stamina=10,HitRating=9,Armor=225",
         [13533] = "Acid-etched Pauldrons|3|61|56|1|0|Armor=478,Defense=5,Stamina=10",
         [13534] = "Banshee Finger|3|60|55|1|0|MP5=1,DPS=59.7368",
+        [13535] = "Coldtouch Phantom Wraps|3|60|55|1|0|Armor=85,HitRating=10,FrostPower=20",
         [13536] = "Horn of Awakening|1|1|0|4|0|",
         [13537] = "Chillhide Bracers|3|60|55|1|0|Armor=74,Defense=4,Stamina=7",
+        [13538] = "Windshrieker Pauldrons|3|60|55|1|0|AttackPower=22,Armor=266,Intellect=7",
+        [13539] = "Banshee's Touch|3|60|55|1|0|Stamina=9,Strength=10,Armor=392",
         [13542] = "Demon Box|1|1|0|4|0|",
         [13543] = "Krastinov's Bag of Horrors UNUSED|1|1|0|1|0|",
         [13544] = "Spectral Essence|2|60|0|1|0|",
@@ -10269,6 +10363,8 @@ local c = {
         [13934] = "Mightfish Steak|1|55|45|0|0|",
         [13935] = "Baked Salmon|1|55|45|0|0|",
         [13936] = "Deprecated Dreadmaster's Shroud|3|62|57|1|0|Intellect=20,SpellPowerAll=23,Armor=71,Healing=23,Spirit=13",
+        [13937] = "Headmaster's Charge|4|62|57|1|0|DPS=43.2759,Stamina=30,Healing=90,Spirit=20,SpellPowerAll=90",
+        [13938] = "Bonecreeper Stylus|3|62|57|1|0|Intellect=5,Healing=11,DPS=62.6316,SpellPowerAll=11",
         [13939] = "Recipe: Spotted Yellowtail|1|45|0|0|0|",
         [13940] = "Recipe: Cooked Glossy Mightfish|1|45|0|0|0|",
         [13941] = "Recipe: Filet of Redgill|1|45|0|0|0|",
@@ -10281,6 +10377,8 @@ local c = {
         [13948] = "Recipe: Mightfish Steak|1|55|0|0|0|",
         [13949] = "Recipe: Baked Salmon|1|55|0|0|0|",
         [13951] = "Vigorsteel Vambraces|3|62|57|1|0|Stamina=17,Agility=7,HitRating=3,Armor=283",
+        [13952] = "Iceblade Hacker|3|62|57|1|0|DPS=20.4",
+        [13953] = "Silent Fang|3|62|57|1|0|DPS=40.625",
         [13954] = "Verdant Footpads|3|62|57|1|0|Armor=120,Healing=38,MP5=5,SpellDamage=12",
         [13955] = "Stoneform Shoulders|3|61|56|1|0|Armor=658,Defense=7",
         [13956] = "Clutch of Andros|3|61|56|1|0|Armor=49,Stamina=10,HitRating=10,Intellect=19",
@@ -10291,12 +10389,18 @@ local c = {
         [13961] = "Halycon's Muzzle|3|60|0|1|0|Intellect=19,Healing=15,Armor=127,SpellPowerAll=15",
         [13962] = "Vosh'gajin's Strand|3|60|0|1|0|Defense=6,DodgeRating=12,CritRating=14,Stamina=6,Armor=95",
         [13963] = "Voone's Vice Grips|3|60|0|1|0|Stamina=15,Agility=9,HitRating=15,Armor=221",
+        [13964] = "Witchblade|3|62|57|1|0|Intellect=8,Healing=72,DPS=27.1875,SpellPowerAll=72",
         [13965] = "Blackhand's Breadth|3|63|0|1|0|",
         [13966] = "Mark of Tyranny|3|63|0|1|0|DodgeRating=12",
         [13967] = "Windreaver Greaves|3|61|56|1|0|Armor=247,Agility=20,HitRating=10,Intellect=4",
         [13968] = "Eye of the Beast|3|63|0|1|0|",
         [13969] = "Loomguard Armbraces|3|61|56|1|0|Intellect=7,SpellDamage=10,Stamina=6,Healing=29,MP5=3,Armor=157",
+        [13982] = "Warblade of Caer Darrow|3|63|0|1|0|DPS=53.9394",
         [13983] = "Gravestone War Axe|3|62|57|1|0|DPS=53.0882",
+        [13984] = "Darrowspike|3|63|0|1|0|DPS=41.3333",
+        [13986] = "Crown of Caer Darrow|3|63|0|1|0|Intellect=15,SpellDamage=5,Armor=73,Healing=15,Spirit=20,Stamina=8",
+        [14002] = "Darrowshire Strongguard|3|63|0|1|0|Stamina=8,Defense=5,Armor=2153",
+        [14022] = "Barov Peasant Caller|3|62|0|1|0|",
         [14023] = "Barov Peasant Caller|3|62|0|1|0|",
         [14024] = "Frightalon|3|61|56|1|0|AttackPower=20,DPS=40",
         [14025] = "Mystic's Belt|2|17|12|2|0|Armor=17,Agility=2,Spirit=2",
@@ -10709,6 +10813,7 @@ local c = {
         [14499] = "Pattern: Mooncloth Bag|2|60|0|0|0|",
         [14500] = "Pattern: Wizardweave Robe|2|60|0|0|0|SpellPowerAll=20",
         [14501] = "Pattern: Mooncloth Vest|3|60|0|0|0|",
+        [14502] = "Frostbite Girdle|3|62|57|1|0|Stamina=15,Agility=15,Strength=3,Armor=98",
         [14503] = "Death's Clutch|3|62|57|1|0|Intellect=10,Agility=10,HitRating=6,Stamina=10,Strength=10,Armor=131",
         [14504] = "Pattern: Runecloth Shoulders|2|61|0|0|0|SpellPowerAll=12",
         [14505] = "Pattern: Wizardweave Turban|2|61|0|0|0|SpellPowerAll=21",
@@ -10730,22 +10835,31 @@ local c = {
         [14528] = "Rattlecage Buckler|3|62|57|1|0|Intellect=12,SpellDamage=5,Stamina=7,Healing=15,Armor=2121",
         [14529] = "Runecloth Bandage|1|52|0|0|0|",
         [14530] = "Heavy Runecloth Bandage|1|58|0|0|0|",
+        [14531] = "Frightskull Shaft|3|59|54|1|0|DPS=50.4412",
         [14532] = "Monster - Mace2H, Warhammer Jade|0|1|1|0|0|DPS=0.8108",
         [14533] = "Monster - Mace, Hammer Blue Mighty|0|1|1|0|0|DPS=0.75",
         [14534] = "Monster - Axe, Metal Blue Badass|0|1|1|0|0|DPS=0.75",
         [14535] = "Monster - Spear, Cool Blue|0|1|1|0|0|DPS=0.75",
+        [14536] = "Bonebrace Hauberk|3|61|56|2|0|AttackPower=56,Armor=360,Spirit=4,Intellect=15",
+        [14537] = "Corpselight Greaves|3|62|57|1|0|Stamina=20,Armor=445,AttackPower=14",
         [14538] = "Deadwalker Mantle|3|62|57|1|0|Armor=66,ShadowPower=17,Stamina=19,Intellect=11",
         [14539] = "Bone Ring Helm|3|62|57|1|0|Intellect=6,Defense=4,Stamina=30,Agility=5,Strength=6,Armor=141",
         [14540] = "Taragaman the Hungerer's Heart|1|1|0|4|0|",
+        [14541] = "Barovian Family Sword|3|61|56|1|0|DPS=52.1429",
         [14542] = "Kravel's Crate|1|1|0|4|0|",
         [14544] = "Lieutenant's Insignia|1|1|0|4|0|",
         [14545] = "Ghostloom Leggings|3|62|57|1|0|Intellect=18,SpellPowerAll=15,Stamina=10,Healing=15,MP5=8,Armor=152",
         [14546] = "Roon's Kodo Horn|1|1|0|4|0|",
         [14547] = "Hand of Iruxos|1|1|0|4|0|",
+        [14548] = "Royal Cap Spaulders|3|62|57|1|0|SpellDamage=9,Stamina=15,Healing=26,Spirit=13,Armor=274",
         [14549] = "Boots of Avoidance|4|45|40|2|0|Armor=360,Stamina=11,Strength=6,DodgeRating=18",
         [14550] = "Bladebane Armguards|4|49|44|2|0|Agility=10,Stamina=10,Armor=69,Strength=6,Spirit=8",
         [14551] = "Edgemaster's Handguards|4|49|44|2|0|WeaponSkill=3,ExpertiseRating=10,Armor=201",
         [14552] = "Stockade Pauldrons|4|55|50|2|0|Defense=10,SpellPowerAll=12,Stamina=20,Healing=12,Armor=472",
+        [14553] = "Sash of Mercy|4|61|56|2|0|SpellDamage=18,Stamina=14,Healing=53,Spirit=12,Armor=105",
+        [14554] = "Cloudkeeper Legplates|4|62|57|2|0|Armor=617,Agility=20,Strength=20,Stamina=20",
+        [14555] = "Alcor's Sunrazor|4|63|58|2|0|DPS=45.3846",
+        [14557] = "The Lion Horn of Stormwind|4|63|58|2|0|Defense=8",
         [14558] = "Lady Maye's Pendant|4|64|59|2|0|Intellect=19,Healing=11,Stamina=10,SpellPowerAll=11",
         [14559] = "Prospector's Sash|2|18|13|2|0|Stamina=3,Spirit=2,Armor=42",
         [14560] = "Prospector's Boots|2|19|14|2|0|Stamina=2,Spirit=3,Armor=52",
@@ -10764,6 +10878,8 @@ local c = {
         [14573] = "Bristlebark Amice|2|27|22|2|0|Armor=67,Agility=6,Strength=3",
         [14574] = "Bristlebark Britches|2|26|21|2|0|Armor=76,Agility=8,Spirit=3",
         [14575] = "Monster - Mace, Bashguud's Hammer|0|1|1|0|0|DPS=0.75",
+        [14576] = "Ebon Hilt of Marduk|3|59|54|1|0|DPS=38.8889",
+        [14577] = "Skullsmoke Pants|3|61|56|1|0|CritRating=14,Armor=76,Stamina=20,Intellect=15",
         [14578] = "Dokebi Cord|2|29|24|2|0|Intellect=4,Spirit=6,Strength=1,Armor=52",
         [14579] = "Dokebi Boots|2|31|26|2|0|Stamina=7,Spirit=4,Armor=65",
         [14580] = "Dokebi Bracers|2|27|22|2|0|Armor=39,Spirit=4,Intellect=3",
@@ -11374,7 +11490,7 @@ local c = {
         [15274] = "Diviner Long Staff|2|52|47|2|0|DPS=40.3846",
         [15275] = "Thaumaturgist Staff|2|54|49|2|0|DPS=41.8056",
         [15276] = "Magus Long Staff|2|58|53|2|0|DPS=45",
-        [15277] = "Gray Kodo|3|40|40|3|0|",
+        [15277] = "Gray Kodo|3|40|40|1|0|",
         [15278] = "Solstice Staff|2|60|55|2|0|DPS=46.7308",
         [15279] = "Ivory Wand|2|51|46|2|0|DPS=42.1429",
         [15280] = "Wizard's Hand|2|53|48|2|0|DPS=44.4444",
@@ -11387,10 +11503,10 @@ local c = {
         [15287] = "Crusader Bow|2|45|40|2|0|DPS=20.9091",
         [15288] = "Blasthorn Bow|2|61|56|2|0|DPS=28.2692",
         [15289] = "Archstrike Bow|2|65|60|2|0|DPS=30.2174",
-        [15290] = "Brown Kodo|3|40|40|3|0|",
+        [15290] = "Brown Kodo|3|40|40|1|0|",
         [15291] = "Harpy Needler|2|51|46|2|0|DPS=23.7037",
-        [15292] = "Green Kodo|4|60|60|3|0|",
-        [15293] = "Teal Kodo|4|60|60|3|0|",
+        [15292] = "Green Kodo|4|60|60|1|0|",
+        [15293] = "Teal Kodo|4|60|60|1|0|",
         [15294] = "Siege Bow|2|53|48|2|0|DPS=24.6429",
         [15295] = "Quillfire Bow|2|55|50|2|0|DPS=25.6522",
         [15296] = "Hawkeye Bow|2|63|58|2|0|DPS=29.4118",
@@ -11501,13 +11617,17 @@ local c = {
         [15408] = "Heavy Scorpid Scale|1|55|0|0|0|",
         [15409] = "Refined Deeprock Salt|1|50|0|0|0|",
         [15410] = "Scale of Onyxia|3|60|0|0|0|",
+        [15411] = "Mark of Fordring|3|63|0|1|0|CritRating=14,AttackPower=26",
         [15412] = "Green Dragonscale|1|50|0|0|0|",
+        [15413] = "Ornate Adamantium Breastplate|3|63|0|1|0|Armor=807,Defense=10,Strength=9,Stamina=22",
         [15414] = "Red Dragonscale|1|60|0|0|0|",
         [15415] = "Blue Dragonscale|1|50|0|0|0|",
         [15416] = "Black Dragonscale|1|55|0|0|0|",
         [15417] = "Devilsaur Leather|1|50|0|0|0|",
+        [15418] = "Shimmering Platinum Warhammer|3|63|0|1|0|DPS=53.871",
         [15419] = "Warbear Leather|1|50|0|0|0|",
         [15420] = "Ironfeather|1|50|0|0|0|",
+        [15421] = "Shroud of the Exile|3|63|0|1|0|Intellect=10,SpellPowerAll=12,Stamina=7,Healing=12,Spirit=7,Armor=45",
         [15422] = "Frostsaber Leather|1|50|0|0|0|",
         [15423] = "Chimera Leather|1|50|0|0|0|",
         [15424] = "Axe of Orgrimmar|3|18|0|1|0|Stamina=6,Spirit=6,DPS=16.0606",
@@ -11903,6 +12023,8 @@ local c = {
         [15850] = "Patch of Duskwing's Fur|1|1|0|4|0|",
         [15851] = "Lunar Fungus|1|1|0|4|0|",
         [15852] = "Kodo Horn|1|1|0|4|0|",
+        [15853] = "Windreaper|3|60|0|1|0|DPS=39.3478",
+        [15854] = "Dancing Sliver|3|60|0|1|0|Intellect=12,SpellPowerAll=68,Healing=68,Spirit=29,DPS=38.125",
         [15855] = "Ring of Protection|3|60|0|1|0|Armor=150,Stamina=9",
         [15856] = "Archlight Talisman|3|60|0|1|0|Intellect=10,Healing=12,Stamina=8,SpellPowerAll=12",
         [15857] = "Magebane Scion|3|60|0|1|0|",
@@ -12072,6 +12194,7 @@ local c = {
         [16055] = "Schematic: Arcane Bomb|2|60|0|0|0|",
         [16056] = "Schematic: Flawless Arcanite Rifle|2|61|0|0|0|",
         [16057] = "Explorer's Knapsack|1|35|0|1|0|",
+        [16058] = "Fordring's Seal|3|63|0|1|0|Stamina=5,Healing=37,SpellDamage=12,Intellect=6",
         [16059] = "Common Brown Shirt|1|20|0|0|0|",
         [16060] = "Common White Shirt|1|20|0|0|0|",
         [16067] = "Test Fire Res Ring|3|61|0|1|0|",
@@ -12705,6 +12828,7 @@ local c = {
         [17058] = "Fish Oil|1|1|0|0|0|",
         [17059] = "Plans: Dark Iron Reaver|3|65|0|1|0|",
         [17060] = "Plans: Dark Iron Destroyer|3|65|0|1|0|",
+        [17061] = "Juno's Shadow|3|58|53|2|0|Stamina=8,Armor=41,Intellect=5",
         [17062] = "Recipe: Mithril Head Trout|1|30|0|0|0|",
         [17073] = "Earthshaker|4|66|60|1|0|AttackPower=22,DPS=62.5714",
         [17111] = "Blazefury Medallion|4|68|60|1|0|Stamina=14,Agility=13",
@@ -13049,10 +13173,15 @@ local c = {
         [18044] = "Hurley's Tankard|3|57|52|1|0|Stamina=12,Agility=5,Spirit=3,DPS=37.5926",
         [18045] = "Tender Wolf Steak|1|45|35|0|0|",
         [18046] = "Recipe: Tender Wolf Steak|1|45|0|0|0|",
+        [18047] = "Flame Walkers|3|62|57|1|0|Stamina=10,DodgeRating=12,Armor=251",
+        [18048] = "Mastersmith's Hammer|3|60|55|1|0|HitRating=10,DPS=26.25,Stamina=10,Healing=68,SpellPowerAll=68",
         [18062] = "Monster - Mace2H, Horde Hammer A03/C01Black|0|1|1|0|0|DPS=0.75",
         [18063] = "Test Epic Mount|3|60|60|1|0|",
         [18082] = "Zum'rah's Vexing Cane|3|48|43|1|0|Intellect=10,SpellPowerAll=54,Stamina=10,Healing=54,DPS=31.1111",
         [18083] = "Jumanza Grips|3|48|43|1|0|Intellect=7,SpellDamage=6,Stamina=10,Healing=18,MP5=4,Armor=43",
+        [18102] = "Dragonrider Boots|3|63|58|1|0|Intellect=16,SpellPowerAll=18,Armor=61,Healing=18,Stamina=5",
+        [18103] = "Band of Rumination|3|63|58|1|0|CritRating=14,MP5=5",
+        [18104] = "Feralsurge Girdle|3|63|58|1|0|Intellect=11,Armor=208,Strength=9,MP5=8",
         [18105] = "PVP TEST Alliance Ear|1|1|0|0|0|",
         [18106] = "PVP TEST Horde Ear|1|1|0|0|0|",
         [18122] = "Monster - Staff, Ornate Jeweled Staff - Blue High Blue Glow|0|1|1|0|0|DPS=0.75",
@@ -13102,6 +13231,7 @@ local c = {
         [18228] = "Autographed Picture of Tigule|0|1|0|0|0|",
         [18229] = "Nat Pagle's Guide to Extreme Anglin'|0|1|0|0|0|",
         [18230] = "Broken I.W.I.N. Button|0|1|0|0|0|",
+        [18231] = "Sleeveless T-Shirt|0|1|0|0|0|",
         [18232] = "Field Repair Bot 74A|1|60|0|0|0|",
         [18233] = "Tear Stained Handkerchief|0|1|0|0|0|",
         [18234] = "Document from Boomstick Imports|0|1|0|0|0|",
@@ -13154,7 +13284,9 @@ local c = {
         [18293] = "Monster - Glaive - 2 Blade B03 Green|0|1|1|0|0|DPS=0.75",
         [18294] = "Draught of Greater Water Breathing|1|45|35|0|0|",
         [18295] = "Phasing Boots|3|55|50|2|0|Armor=54,Stamina=6,Intellect=6",
+        [18296] = "Marksman Bands|3|56|51|2|0|Stamina=8,Agility=12,Armor=146",
         [18297] = "Thornling Seed|1|60|55|1|0|",
+        [18298] = "Unbridled Leggings|3|56|51|2|0|Stamina=18,Defense=9,Strength=11,Armor=140",
         [18299] = "Hydrospawn Essence|1|1|0|4|0|",
         [18300] = "Hyjal Nectar|1|65|55|0|0|",
         [18301] = "Lethtendris's Wand|3|58|53|1|0|Healing=9,SpellPowerAll=9,DPS=56.7647",
@@ -13169,6 +13301,7 @@ local c = {
         [18310] = "Fiendish Machete|3|59|54|1|0|AttackPower=18,Agility=5,DPS=38.75",
         [18311] = "Quel'dorai Channeling Rod|3|58|53|1|0|Intellect=18,SpellDamage=41,DPS=36.7857,Stamina=8,Healing=124,MP5=8,Spirit=8",
         [18312] = "Energized Chestplate|3|59|54|1|0|Intellect=12,SpellPowerAll=15,Stamina=20,Healing=15,Strength=13,Armor=617",
+        [18313] = "Helm of Awareness|3|58|53|1|0|Armor=493,DodgeRating=24,Stamina=17",
         [18314] = "Ring of Demonic Guile|3|59|54|1|0|Intellect=10,HitRating=10,MP5=4",
         [18315] = "Ring of Demonic Potency|3|59|54|1|0|Stamina=10,Defense=7",
         [18316] = "Obsidian Bauble|3|58|53|1|0|Intellect=9,Healing=15,CritRating=7,SpellPowerAll=15",
@@ -13181,7 +13314,9 @@ local c = {
         [18323] = "Satyr's Bow|3|58|53|1|0|AttackPower=4,HitRating=10,DPS=29.7917",
         [18324] = "Waveslicer|3|58|53|1|0|CritRating=14,Strength=23,DPS=49.6774",
         [18325] = "Felhide Cap|3|58|53|1|0|Armor=134,Agility=21,Stamina=14",
+        [18326] = "Razor Gauntlets|3|59|54|1|0|Armor=386,Strength=9",
         [18327] = "Whipvine Cord|3|59|54|1|0|Intellect=9,SpellDamage=10,Armor=47,Healing=29,MP5=6",
+        [18328] = "Shadewood Cloak|3|59|54|1|0|Stamina=8,Strength=13,Armor=42",
         [18329] = "Arcanum of Rapidity|2|50|0|1|0|",
         [18330] = "Arcanum of Focus|2|50|0|1|0|",
         [18331] = "Arcanum of Protection|2|50|0|1|0|",
@@ -13191,9 +13326,15 @@ local c = {
         [18335] = "Pristine Black Diamond|3|1|0|0|0|",
         [18336] = "Gauntlet of Gordok Might|1|1|0|4|0|",
         [18337] = "Orphic Bracers|2|59|54|2|0|Armor=33,ArcanePower=11,Spirit=7,Intellect=7",
+        [18338] = "Wand of Arcane Potency|3|59|54|2|0|ArcanePower=16,DPS=58.4375",
+        [18339] = "Eidolon Cloak|2|59|54|2|0|Stamina=5,Armor=38",
         [18340] = "Eidolon Talisman|3|59|54|2|0|",
         [18343] = "Petrified Band|2|59|59|2|0|Stamina=9",
+        [18344] = "Stonebark Gauntlets|3|59|54|2|0|Armor=105,Agility=14,Stamina=10",
+        [18345] = "Murmuring Ring|3|60|55|1|0|Intellect=13",
+        [18346] = "Threadbare Trousers|3|60|55|1|0|Armor=75,Healing=23,Stamina=18,SpellPowerAll=23",
         [18347] = "Well Balanced Axe|3|61|56|1|0|Stamina=9,Agility=11,DPS=40",
+        [18348] = "Quel'Serrar|4|65|60|1|0|Stamina=11,DPS=47.25",
         [18349] = "Gauntlets of Accuracy|3|61|56|1|0|Armor=225,Agility=15,Spirit=13,HitRating=10",
         [18350] = "Amplifying Cloak|3|61|56|1|0|Armor=43,Healing=15,Spirit=14,SpellPowerAll=15",
         [18351] = "Magically Sealed Bracers|3|61|56|1|0|Armor=359,Defense=5",
@@ -13220,20 +13361,29 @@ local c = {
         [18372] = "Blade of the New Moon|3|62|57|1|0|Stamina=15,ShadowPower=88,DPS=27.1429",
         [18373] = "Chestplate of Tranquility|3|62|57|1|0|Intellect=20,SpellPowerAll=23,Stamina=10,Healing=23,Spirit=6,Armor=174",
         [18374] = "Flamescarred Shoulders|3|62|57|1|0|Stamina=10,Agility=12,Strength=11,Armor=131",
+        [18375] = "Bracers of the Eclipse|3|62|57|1|0|AttackPower=24,Agility=10,Stamina=9,Armor=76",
+        [18376] = "Timeworn Mace|3|62|57|1|0|Armor=50,Stamina=11,Strength=7,DPS=40.6818",
         [18377] = "Quickdraw Gloves|3|62|57|1|0|Intellect=9,Defense=7,DodgeRating=6,Stamina=10,Agility=8,Strength=7,Armor=109",
+        [18378] = "Silvermoon Leggings|3|62|57|1|0|Intellect=16,Agility=6,SpellPowerAll=18,Armor=320,Healing=18,Spirit=10,Stamina=16",
         [18379] = "Odious Greaves|3|62|57|1|0|AttackPower=22,Stamina=18,Armor=251,Intellect=9",
         [18380] = "Eldritch Reinforced Legplates|3|62|57|1|0|Intellect=9,CritRating=14,Armor=566,Strength=15,Stamina=20",
         [18381] = "Evil Eye Pendant|3|62|57|1|0|Agility=15,Defense=7",
         [18382] = "Fluctuating Cloak|3|62|57|1|0|Armor=44",
         [18383] = "Force Imbued Gauntlets|3|61|56|1|0|Stamina=14,Defense=7,Armor=478",
         [18384] = "Bile-etched Spaulders|3|62|57|1|0|Intellect=9,Defense=7,Stamina=10,Strength=17,Armor=485",
+        [18385] = "Robe of Everlasting Night|3|62|57|1|0|Intellect=13,SpellPowerAll=27,Armor=88,Healing=27,Spirit=5,Stamina=11",
         [18386] = "Padre's Trousers|3|61|56|1|0|Intellect=20,SpellDamage=12,Armor=76,Healing=37,MP5=7",
+        [18387] = "Brightspark Gloves|3|60|55|1|0|Armor=53,Stamina=9,CritRating=14,Intellect=16",
         [18388] = "Stoneshatter|3|62|57|1|0|DPS=31.7241",
         [18389] = "Cloak of the Cosmos|3|62|57|1|0|Intellect=14,SpellDamage=7,Stamina=7,Healing=20,Armor=44",
         [18390] = "Tanglemoss Leggings|3|61|57|1|0|SpellDamage=10,CritRating=14,Armor=150,Healing=29,Spirit=19,Stamina=12",
+        [18391] = "Eyestalk Cord|3|62|57|1|0|Intellect=18,SpellDamage=10,Stamina=9,Healing=31,Armor=98",
         [18392] = "Distracting Dagger|3|62|57|1|0|WeaponSkill=1,Agility=3,ExpertiseRating=5,DPS=40.7692",
+        [18393] = "Warpwood Binding|3|61|56|1|0|Intellect=6,Agility=13,Stamina=9,CritRating=14,Armor=202",
+        [18394] = "Demon Howl Wristguards|3|62|57|1|0|AttackPower=10,Stamina=17,Armor=160",
         [18395] = "Emerald Flame Ring|3|62|57|1|0|Intellect=12,SpellDamage=5,Stamina=7,Healing=15,Spirit=8",
         [18396] = "Mind Carver|3|62|57|1|0|Healing=72,SpellPowerAll=72,DPS=27.25",
+        [18397] = "Elder Magus Pendant|3|61|56|1|0|Intellect=10,Healing=7,Spirit=7,SpellPowerAll=7",
         [18398] = "Tidal Loop|3|63|0|1|0|Stamina=4,Spirit=4,Intellect=7",
         [18399] = "Ocean's Breeze|3|63|0|1|0|Stamina=4,Agility=7,Strength=4",
         [18400] = "Ring of Living Stone|2|57|0|1|0|Strength=10,Stamina=9",
@@ -13261,6 +13411,7 @@ local c = {
         [18422] = "Head of Onyxia|4|60|60|1|0|",
         [18423] = "Head of Onyxia|4|60|60|1|0|",
         [18424] = "Sedge Boots|3|63|0|1|0|Intellect=11,SpellDamage=7,Stamina=18,Healing=20,Armor=121",
+        [18425] = "Kreeg's Mug|3|60|55|1|0|Stamina=10,Spirit=6,Intellect=-20",
         [18426] = "Lethtendris's Web|1|1|0|4|0|",
         [18427] = "Sergeant's Cloak|3|35|30|1|0|Armor=66,Stamina=9",
         [18428] = "Senior Sergeant's Insignia|3|50|45|1|0|Stamina=14,Spirit=6",
@@ -13289,13 +13440,21 @@ local c = {
         [18456] = "Sergeant Major's Silk Cuffs|3|63|58|1|0|Armor=39,Stamina=17,Intellect=7",
         [18457] = "Sergeant Major's Silk Cuffs|3|50|45|1|0|Armor=31,Stamina=14,Intellect=6",
         [18458] = "Modest Armguards|2|60|55|1|0|Intellect=10,Healing=12,Armor=141,SpellPowerAll=12",
+        [18459] = "Gallant's Wristguards|2|60|55|1|0|Armor=249,Healing=22,SpellDamage=7,Intellect=10",
         [18460] = "Unsophisticated Hand Cannon|2|60|55|1|0|Strength=8,DPS=27.8",
         [18461] = "Sergeant's Cloak|3|63|58|1|0|Armor=115,Stamina=17",
         [18462] = "Jagged Bone Fist|2|60|55|1|0|Stamina=7,Strength=8,DPS=35.8333",
         [18463] = "Ogre Pocket Knife|2|60|55|1|0|AttackPower=16,Stamina=5,DPS=35.8333",
         [18464] = "Gordok Nose Ring|2|60|55|1|0|Strength=8,Stamina=12",
+        [18465] = "Royal Seal of Eldre'Thalas|3|62|0|1|0|HitRating=10,AttackPower=45",
         [18466] = "Royal Seal of Eldre'Thalas|3|62|0|1|0|BlockValue=30",
         [18467] = "Royal Seal of Eldre'Thalas|3|62|0|1|0|SpellPowerAll=18",
+        [18468] = "Royal Seal of Eldre'Thalas|3|62|0|1|0|MP5=4,ArcanePower=21",
+        [18469] = "Royal Seal of Eldre'Thalas|3|62|0|1|0|Healing=22,SpellDamage=7",
+        [18470] = "Royal Seal of Eldre'Thalas|3|62|0|1|0|Healing=22,SpellDamage=7",
+        [18471] = "Royal Seal of Eldre'Thalas|3|62|0|1|0|SpellPowerAll=18",
+        [18472] = "Royal Seal of Eldre'Thalas|3|62|0|1|0|Healing=22,SpellDamage=7",
+        [18473] = "Royal Seal of Eldre'Thalas|3|62|0|1|0|AttackPower=45,Agility=10",
         [18475] = "Oddly Magical Belt|2|60|55|1|0|Armor=44,Healing=16,Stamina=13,SpellPowerAll=16",
         [18476] = "Mud Stained Boots|2|60|55|1|0|Armor=106,Defense=4,Strength=7,Stamina=15",
         [18477] = "Shaggy Leggings|2|60|55|1|0|Intellect=19,SpellPowerAll=13,Armor=135,Healing=13,MP5=4",
@@ -13304,6 +13463,8 @@ local c = {
         [18480] = "Scarab Plate Helm|2|60|55|1|0|Intellect=17,SpellDamage=7,Stamina=10,Healing=22,Armor=463",
         [18481] = "Skullcracking Mace|2|60|55|1|0|AttackPower=18,Agility=7,Strength=22,DPS=46.5625",
         [18482] = "Ogre Toothpick Shooter|2|60|55|1|0|Stamina=5,Agility=6,DPS=27.9545",
+        [18483] = "Mana Channeling Wand|3|61|56|1|0|MP5=2,DPS=60.9375",
+        [18484] = "Cho'Rush's Blade|3|61|56|1|0|AttackPower=20,DPS=40",
         [18485] = "Observer's Shield|3|61|56|1|0|Armor=2089,Stamina=7,HitRating=10,Intellect=14",
         [18486] = "Mooncloth Robe|3|61|56|2|0|Intellect=25,SpellDamage=9,Stamina=12,Healing=26,Armor=87",
         [18487] = "Pattern: Mooncloth Robe|1|61|0|0|0|",
@@ -13312,7 +13473,12 @@ local c = {
         [18490] = "Insightful Hood|3|61|56|1|0|Intellect=15,SpellDamage=8,Stamina=12,Armor=139,Healing=24,Spirit=9,CritRating=14",
         [18491] = "Lorespinner|3|57|0|1|0|Intellect=6,SpellDamage=41,DPS=25,Stamina=5,Healing=124,MP5=3,Spirit=5",
         [18492] = "Treated Ancient Blade|4|1|0|4|0|",
+        [18493] = "Bulky Iron Spaulders|3|60|55|1|0|Defense=7,Stamina=12,Armor=470,Strength=15,Spirit=5",
+        [18494] = "Denwatcher's Shoulders|3|60|55|1|0|Intellect=10,SpellPowerAll=18,Stamina=10,Healing=18,Spirit=10,Armor=266",
         [18495] = "Redoubt Cloak|3|63|58|1|0|Stamina=15,Defense=7,Armor=45",
+        [18496] = "Heliotrope Cloak|3|60|55|1|0|CritRating=14,Armor=43,Intellect=10",
+        [18497] = "Sublime Wristguards|3|60|55|1|0|Intellect=10,SpellPowerAll=12,Stamina=6,Healing=12,Spirit=6,Armor=37",
+        [18498] = "Hedgecutter|3|60|55|1|0|Stamina=11,Strength=5,DPS=39.4737",
         [18499] = "Barrier Shield|3|62|57|1|0|BlockRating=10,Armor=2121,BlockValue=23",
         [18500] = "Tarnished Elven Ring|3|61|56|1|0|HitRating=10,Agility=10",
         [18501] = "Felvine Shard|1|1|0|1|0|",
@@ -13321,6 +13487,7 @@ local c = {
         [18504] = "Girdle of Insight|3|62|57|2|0|Intellect=23,SpellPowerAll=15,Armor=98,Healing=15,Stamina=9",
         [18505] = "Mugger's Belt|3|62|57|1|0|Stamina=15,WeaponSkill=1,CritRating=14,Armor=98",
         [18506] = "Mongoose Boots|3|62|57|2|0|Stamina=9,Agility=23,Armor=120",
+        [18507] = "Boots of the Full Moon|3|62|57|1|0|Intellect=12,SpellDamage=9,Armor=60,Healing=26,Spirit=11,Stamina=12",
         [18508] = "Swift Flight Bracers|3|62|57|2|0|Armor=160,Stamina=7,RangedAttackPower=41",
         [18509] = "Chromatic Cloak|4|62|57|2|0|Stamina=10,Armor=48,CritRating=14",
         [18510] = "Hide of the Wild|4|62|57|2|0|Intellect=10,SpellDamage=14,Stamina=8,Healing=42,Armor=48",
@@ -13333,6 +13500,7 @@ local c = {
         [18517] = "Pattern: Chromatic Cloak|4|62|0|0|0|",
         [18518] = "Pattern: Hide of the Wild|4|62|0|0|0|",
         [18519] = "Pattern: Shifting Cloak|4|62|0|0|0|",
+        [18520] = "Barbarous Blade|3|63|58|1|0|CritRating=14,AttackPower=50,DPS=53.9063",
         [18521] = "Grimy Metal Boots|3|63|58|1|0|Armor=552,Stamina=7,Strength=17,DodgeRating=12",
         [18522] = "Band of the Ogre King|3|63|58|1|0|Strength=14,Stamina=13",
         [18523] = "Brightly Glowing Stone|3|63|58|1|0|Stamina=14,Healing=29,SpellDamage=10",
@@ -13350,6 +13518,7 @@ local c = {
         [18535] = "Milli's Shield|3|59|0|1|0|Stamina=7,Healing=15,SpellDamage=5,Armor=2116",
         [18536] = "Milli's Lexicon|3|59|0|1|0|Healing=11,MP5=6,SpellPowerAll=11",
         [18537] = "Counterattack Lodestone|3|63|58|1|0|AttackPower=30",
+        [18538] = "Treant's Bane|4|63|58|1|0|CritRating=28,Stamina=9,Strength=10,DPS=59.4444",
         [18539] = "Reliquary of Purity|1|1|0|4|0|",
         [18540] = "Sealed Reliquary of Purity|1|1|0|4|0|",
         [18543] = "Ring of Entropy|4|66|60|1|0|Stamina=11,CritRating=14,Spirit=8,Intellect=13",
@@ -13434,7 +13603,16 @@ local c = {
         [18664] = "A Treatise on Military Ranks|1|1|0|0|0|",
         [18665] = "The Eye of Shadow|4|71|60|2|0|",
         [18670] = "Xorothian Glyphs|1|1|0|1|0|",
+        [18671] = "Baron Charr's Sceptre|3|60|55|2|0|Strength=5,DPS=39.4231",
+        [18672] = "Elemental Ember|2|60|55|2|0|FirePower=14,Stamina=11",
+        [18673] = "Avalanchion's Stony Hide|3|60|55|2|0|Armor=2057,Stamina=16,BlockValue=12",
         [18675] = "Military Ranks of the Horde & Alliance|1|1|0|0|0|",
+        [18676] = "Sash of the Windreaver|3|62|57|2|0|Intellect=7,NaturePower=30,Armor=205,Spirit=7,Stamina=6",
+        [18677] = "Zephyr Cloak|2|62|57|2|0|Armor=40",
+        [18678] = "Tempestria's Frozen Necklace|3|62|57|2|0|Intellect=5,Stamina=8",
+        [18679] = "Frigid Ring|2|62|57|2|0|Intellect=10,FrostPower=14",
+        [18680] = "Ancient Bone Bow|3|61|56|1|0|Agility=11,DPS=31.25",
+        [18681] = "Burial Shawl|3|61|56|1|0|Intellect=16,SpellPowerAll=20,Armor=65,Healing=20,Stamina=4",
         [18682] = "Ghoul Skin Leggings|3|61|56|1|0|Intellect=8,SpellDamage=15,Armor=150,Healing=44,Spirit=9,Stamina=20",
         [18683] = "Hammer of the Vesper|3|61|56|1|0|Stamina=12,Strength=8,DPS=40.2",
         [18684] = "Dimly Opalescent Ring|3|61|56|1|0|Intellect=7",
@@ -13443,10 +13621,19 @@ local c = {
         [18687] = "Xorothian Stardust|1|1|0|4|0|",
         [18688] = "Imp in a Jar|1|1|0|0|0|",
         [18689] = "Phantasmal Cloak|3|62|57|1|0|Armor=114,Strength=12,Stamina=11",
+        [18690] = "Wraithplate Leggings|3|62|57|1|0|Armor=746,Stamina=20,ParryRating=18",
+        [18691] = "Dark Advisor's Pendant|3|61|56|1|0|Stamina=9,ShadowPower=20,Intellect=8",
+        [18692] = "Death Knight Sabatons|3|59|54|1|0|Intellect=11,SpellPowerAll=11,Stamina=11,Healing=11,Strength=11,Armor=424",
         [18693] = "Shivery Handwraps|3|62|57|1|0|Intellect=12,Stamina=12,Armor=55,Spirit=9,FrostPower=17",
         [18694] = "Shadowy Mail Greaves|3|62|57|1|0|Stamina=20,Armor=251,AttackPower=14",
         [18695] = "Spellbound Tome|3|62|57|1|0|Intellect=16,Stamina=6",
+        [18696] = "Intricately Runed Shield|3|62|57|1|0|SpellPowerAll=6,Stamina=8,Healing=6,Armor=2121,BlockValue=23",
+        [18697] = "Coldstone Slippers|3|55|50|2|0|Intellect=14,Stamina=9,Armor=54,MP5=4,FrostPower=11",
+        [18698] = "Tattered Leather Hood|3|56|51|2|0|Stamina=25,Agility=10,HitRating=10,Armor=130",
+        [18699] = "Icy Tomb Spaulders|3|57|52|2|0|Stamina=10,Agility=11,Armor=122",
         [18700] = "Malefic Bracers|3|58|53|2|0|Stamina=16,Defense=2,Agility=6,Armor=72",
+        [18701] = "Innervating Band|3|59|54|2|0|Stamina=9,Agility=15",
+        [18702] = "Belt of the Ordained|3|60|55|2|0|Intellect=14,SpellDamage=11,Stamina=11,Healing=33,Armor=353",
         [18703] = "Ancient Petrified Leaf|4|71|60|1|0|",
         [18704] = "Mature Blue Dragon Sinew|4|71|60|0|0|",
         [18705] = "Mature Black Dragon Sinew|4|71|60|1|0|",
@@ -13464,6 +13651,8 @@ local c = {
         [18717] = "Hammer of the Grand Crusader|3|63|58|1|0|Intellect=26,SpellDamage=45,DPS=40,Stamina=10,Healing=135,Spirit=17",
         [18718] = "Grand Crusader's Helm|3|63|58|1|0|Stamina=16,Armor=534,HolyPower=17,Spirit=10,Strength=16",
         [18719] = "The Traitor's Heart|1|1|0|4|0|",
+        [18720] = "Shroud of the Nathrezim|3|63|58|1|0|Intellect=16,SpellPowerAll=7,CritRating=14,Healing=7,Spirit=8,Armor=67",
+        [18721] = "Barrage Girdle|3|61|56|1|0|Intellect=8,SpellPowerAll=23,Stamina=8,Healing=23,Spirit=6,Armor=202",
         [18722] = "Death Grips|3|62|57|1|0|Armor=404,HitRating=5,Strength=22",
         [18723] = "Animated Chain Necklace|3|62|57|1|0|Stamina=8,Healing=33,Spirit=7,SpellDamage=11",
         [18724] = "Enchanted Black Dragon Sinew|4|71|60|1|0|",
@@ -13474,54 +13663,68 @@ local c = {
         [18729] = "Screeching Bow|3|60|55|1|0|Stamina=4,DPS=30.6522",
         [18730] = "Shadowy Laced Handwraps|3|60|55|1|0|Intellect=15,SpellPowerAll=11,Armor=53,Healing=11,MP5=3",
         [18731] = "Pattern: Heavy Leather Ball|1|30|0|0|0|",
+        [18734] = "Pale Moon Cloak|3|62|57|1|0|Stamina=12,Armor=44,HitRating=3,Strength=9",
         [18735] = "Maleki's Footwraps|3|62|57|1|0|Armor=60,ShadowPower=17,Stamina=19,Intellect=11",
+        [18736] = "Plaguehound Leggings|3|62|57|2|0|Stamina=9,Agility=30,HitRating=10,Armor=152",
         [18737] = "Bone Slicing Hatchet|3|62|57|1|0|Stamina=5,Agility=13,AttackPower=9,DPS=40.5882",
         [18738] = "Carapace Spine Crossbow|3|61|56|1|0|Stamina=9,Agility=5,DPS=31.2121",
         [18739] = "Chitinous Plate Legguards|3|61|56|1|0|Intellect=20,Stamina=20,Armor=557,MP5=5,HolyPower=7",
         [18740] = "Thuzadin Sash|3|61|56|1|0|Intellect=12,SpellPowerAll=12,Stamina=11,Healing=12,Spirit=11,Armor=49",
+        [18741] = "Morlune's Bracer|3|61|56|2|0|Intellect=12,SpellDamage=5,Armor=279,Healing=15,Spirit=11",
+        [18742] = "Stratholme Militia Shoulderguard|3|60|55|2|0|Armor=266,Agility=22,Stamina=9,Intellect=6",
+        [18743] = "Gracious Cape|3|59|54|2|0|Intellect=7,SpellDamage=3,Armor=42,Healing=7,MP5=6",
+        [18744] = "Plaguebat Fur Gloves|3|58|53|2|0|Armor=103,Defense=4,Agility=13,Stamina=14",
+        [18745] = "Sacred Cloth Leggings|3|57|52|2|0|Intellect=19,SpellPowerAll=14,Stamina=12,Healing=14,Spirit=12,Armor=71",
         [18746] = "Divination Scryer|1|1|0|4|0|",
         [18747] = "Item Properties Test|3|63|58|1|0|AttackPower=40,SpellPowerAll=12,CritRating=70,Healing=12,Armor=67",
         [18749] = "Charger's Lost Soul|1|1|0|4|0|",
         [18752] = "Exorcism Censer|1|1|0|4|0|",
         [18753] = "Arcanite Barding|1|1|0|4|0|",
+        [18754] = "Fel Hardened Bracers|3|62|57|1|0|Armor=283,Defense=3,Strength=12,Stamina=12",
+        [18755] = "Xorothian Firestick|3|62|57|1|0|Stamina=4,Agility=4,DPS=31.7308",
+        [18756] = "Dreadguard's Protector|3|62|57|1|0|Armor=2121,Strength=18,Stamina=5",
+        [18757] = "Diabolic Mantle|3|62|57|1|0|Armor=66,Stamina=16,MP5=5,FirePower=17",
+        [18758] = "Specter's Blade|3|62|57|1|0|AttackPower=24,DPS=40.8333",
+        [18759] = "Malicious Axe|3|62|57|1|0|AttackPower=28,Stamina=30,DPS=52.9032",
         [18760] = "Necromantic Band|3|62|57|1|0|",
+        [18761] = "Oblivion's Touch|3|62|57|1|0|Intellect=7,Healing=9,DPS=62.5,SpellPowerAll=9",
         [18762] = "Shard of the Green Flame|3|54|0|1|0|FirePower=16,Stamina=12",
         [18763] = "TEST GUN Alliance20 |2|52|47|2|0|RangedAttackPower=17,DPS=24.2",
         [18764] = "TEST GUN Raid|2|52|47|2|0|RangedAttackPower=17,DPS=24.2",
         [18765] = "TEST GUN Horde50|2|52|47|2|0|RangedAttackPower=17,DPS=24.2",
-        [18766] = "Reins of the Swift Frostsaber|4|60|60|3|0|",
-        [18767] = "Reins of the Swift Mistsaber|4|60|60|3|0|",
-        [18768] = "Reins of the Swift Dawnsaber|4|60|60|3|0|",
+        [18766] = "Reins of the Swift Frostsaber|4|60|60|1|0|",
+        [18767] = "Reins of the Swift Mistsaber|4|60|60|1|0|",
+        [18768] = "Reins of the Swift Dawnsaber|4|60|60|1|0|",
         [18769] = "Enchanted Thorium Platemail|3|60|50|0|0|",
         [18770] = "Enchanted Thorium Platemail|3|60|50|0|0|",
         [18771] = "Enchanted Thorium Platemail|3|60|50|0|0|",
-        [18772] = "Swift Green Mechanostrider|4|60|60|3|0|",
-        [18773] = "Swift White Mechanostrider|4|60|60|3|0|",
-        [18774] = "Swift Yellow Mechanostrider|4|60|60|3|0|",
+        [18772] = "Swift Green Mechanostrider|4|60|60|1|0|",
+        [18773] = "Swift White Mechanostrider|4|60|60|1|0|",
+        [18774] = "Swift Yellow Mechanostrider|4|60|60|1|0|",
         [18775] = "Manna-Enriched Horse Feed|1|1|0|4|0|",
         [18776] = "Swift Palomino|4|60|60|1|0|",
-        [18777] = "Swift Brown Steed|4|60|60|3|0|",
-        [18778] = "Swift White Steed|4|60|60|3|0|",
+        [18777] = "Swift Brown Steed|4|60|60|1|0|",
+        [18778] = "Swift White Steed|4|60|60|1|0|",
         [18779] = "Bottom Half of Advanced Armorsmithing: Volume I|3|60|50|0|0|",
         [18780] = "Top Half of Advanced Armorsmithing: Volume I|3|60|50|0|0|",
         [18781] = "Bottom Half of Advanced Armorsmithing: Volume II|3|60|50|0|0|",
         [18782] = "Top Half of Advanced Armorsmithing: Volume II|3|60|50|0|0|",
         [18783] = "Bottom Half of Advanced Armorsmithing: Volume III|3|60|50|0|0|",
         [18784] = "Top Half of Advanced Armorsmithing: Volume III|3|60|50|0|0|",
-        [18785] = "Swift White Ram|4|60|60|3|0|",
-        [18786] = "Swift Brown Ram|4|60|60|3|0|",
-        [18787] = "Swift Gray Ram|4|60|60|3|0|",
-        [18788] = "Swift Blue Raptor|4|60|60|3|0|",
-        [18789] = "Swift Olive Raptor|4|60|60|3|0|",
-        [18790] = "Swift Orange Raptor|4|60|60|3|0|",
-        [18791] = "Purple Skeletal Warhorse|4|60|60|3|0|",
+        [18785] = "Swift White Ram|4|60|60|1|0|",
+        [18786] = "Swift Brown Ram|4|60|60|1|0|",
+        [18787] = "Swift Gray Ram|4|60|60|1|0|",
+        [18788] = "Swift Blue Raptor|4|60|60|1|0|",
+        [18789] = "Swift Olive Raptor|4|60|60|1|0|",
+        [18790] = "Swift Orange Raptor|4|60|60|1|0|",
+        [18791] = "Purple Skeletal Warhorse|4|60|60|1|0|",
         [18792] = "Blessed Arcanite Barding|1|1|0|4|0|",
-        [18793] = "Great White Kodo|4|60|60|3|0|",
-        [18794] = "Great Brown Kodo|4|60|60|3|0|",
-        [18795] = "Great Gray Kodo|4|60|60|3|0|",
-        [18796] = "Horn of the Swift Brown Wolf|4|60|60|3|0|",
-        [18797] = "Horn of the Swift Timber Wolf|4|60|60|3|0|",
-        [18798] = "Horn of the Swift Gray Wolf|4|60|60|3|0|",
+        [18793] = "Great White Kodo|4|60|60|1|0|",
+        [18794] = "Great Brown Kodo|4|60|60|1|0|",
+        [18795] = "Great Gray Kodo|4|60|60|1|0|",
+        [18796] = "Horn of the Swift Brown Wolf|4|60|60|1|0|",
+        [18797] = "Horn of the Swift Timber Wolf|4|60|60|1|0|",
+        [18798] = "Horn of the Swift Gray Wolf|4|60|60|1|0|",
         [18799] = "Charger's Redeemed Soul|1|1|0|1|0|",
         [18800] = "TEST 1H Amberseal Keeper|4|67|60|1|0|Intellect=20,SpellPowerAll=57,Healing=57,MP5=12,DPS=38.8",
         [18801] = "TEST 1H Benediction|4|75|60|1|0|Intellect=31,Stamina=10,Spirit=12,DPS=56.3333",
@@ -13584,7 +13787,7 @@ local c = {
         [18880] = "Darkreaver's Head|1|1|0|4|0|",
         [18881] = "TEST Ragnaros Hammer|5|80|60|1|0|Stamina=12,Strength=12,DPS=70.1667",
         [18882] = "TEST Level 80 Epic|4|80|60|1|0|CritRating=14,DPS=80.2941",
-        [18902] = "Reins of the Swift Stormsaber|4|60|60|3|0|",
+        [18902] = "Reins of the Swift Stormsaber|4|60|60|1|0|",
         [18904] = "Zorbin's Ultra-Shrinker|1|1|0|4|0|",
         [18922] = "Secret Plans: Fiery Flux|1|1|0|4|0|",
         [18942] = "Fiery Flux|1|1|0|0|0|",
@@ -14423,6 +14626,8 @@ local c = {
         [20130] = "Diamond Flask|3|52|0|1|0|",
         [20131] = "Battle Tabard of the Defilers|1|20|0|1|0|",
         [20132] = "Arathor Battle Tabard|1|20|0|1|0|",
+        [20133] = "Skyfury Gauntlets|4|62|0|1|0|HitRating=10,SpellPowerAll=14,CritRating=14,Healing=14,Armor=249,Stamina=12",
+        [20134] = "Skyfury Helm|4|62|0|1|0|Intellect=12,Armor=324,CritRating=21,Stamina=18,Strength=18,Spirit=12",
         [20135] = "90 Epic Warrior Bracelets|4|90|60|1|0|HitRating=10,CritRating=14,Armor=440,Strength=18,Stamina=17",
         [20136] = "90 Epic Warrior Breastplate|4|90|60|1|0|Stamina=31,Armor=1006,HitRating=20,Strength=32",
         [20137] = "90 Epic Warrior Gauntlets|4|90|60|1|0|Armor=829,Stamina=23,Strength=24,CritRating=14",
@@ -15428,7 +15633,7 @@ local c = {
         [21544] = "Festive Blue Pant Suit|1|1|0|1|0|",
         [21545] = "Smokywood Supplies|1|1|0|4|0|",
         [21546] = "Elixir of Holy Power|1|50|40|0|0|",
-        [21547] = "Recipe: Elixir of Greater Firepower|2|50|0|0|0|",
+        [21547] = "Recipe: Elixir of Holy Power|2|50|0|0|0|",
         [21548] = "Pattern: Stormshroud Gloves|3|62|0|0|0|",
         [21549] = "Monster - Shield, Shieldguard|0|1|1|0|0|Armor=5",
         [21550] = "Monster - Bow, Kaldorei|0|1|1|0|0|DPS=0.75",
@@ -15811,6 +16016,7 @@ local c = {
         [22222] = "Plans: Thick Obsidian Breastplate|3|72|0|0|0|",
         [22223] = "Foreman's Head Protector|3|55|50|1|0|Intellect=11,SpellPowerAll=14,Stamina=14,Healing=14,Strength=15,Armor=469",
         [22224] = "Jeering Spectre's Essence|1|1|1|4|0|",
+        [22225] = "Dragonskin Cowl|3|60|55|1|0|Intellect=15,SpellPowerAll=18,Armor=69,Healing=18,Stamina=12",
         [22226] = "Druidical Remains|1|1|0|4|0|",
         [22227] = "Starbreeze Village Relic|1|1|0|4|0|",
         [22228] = "Brilliant Sword of Zealotry|1|1|0|4|0|",
@@ -15832,11 +16038,13 @@ local c = {
         [22244] = "Box of Souls|2|30|0|1|0|",
         [22245] = "Soot Encrusted Footwear|3|56|51|1|0|Intellect=9,SpellDamage=7,Armor=55,Healing=20,Spirit=14,Stamina=8",
         [22246] = "Enchanted Mageweave Pouch|2|45|0|2|0|",
+        [22247] = "Faith Healer's Boots|3|63|58|1|0|Intellect=12,SpellDamage=8,Armor=61,Healing=24,Spirit=12,Stamina=10",
         [22248] = "Enchanted Runecloth Bag|2|55|0|2|0|",
         [22249] = "Big Bag of Enchantment|2|65|0|2|0|",
         [22250] = "Herb Pouch|2|20|0|2|0|",
         [22251] = "Cenarion Herb Bag|2|55|0|2|0|",
         [22252] = "Satchel of Cenarius|2|65|0|2|0|",
+        [22253] = "Tome of the Lost|3|63|58|1|0|Intellect=7,Healing=18,Stamina=8,SpellPowerAll=18",
         [22254] = "Wand of Eternal Light|3|57|52|1|0|Intellect=6,SpellDamage=3,DPS=55.6667,Healing=9,MP5=2",
         [22255] = "Magma Forged Band|3|57|52|1|0|Stamina=7,Agility=12,Strength=7",
         [22256] = "Mana Shaping Handwraps|3|57|52|1|0|Intellect=11,SpellPowerAll=16,Stamina=9,Healing=16,Spirit=7,Armor=51",
@@ -15849,6 +16057,9 @@ local c = {
         [22264] = "Carefully Written Letter|1|1|1|4|0|",
         [22265] = "Lovingly Composed Letter|1|1|1|4|0|",
         [22266] = "Flarethorn|3|57|52|1|0|Intellect=5,FirePower=81,DPS=25",
+        [22267] = "Spellweaver's Turban|3|63|60|1|0|HitRating=10,SpellPowerAll=33,Armor=73,Healing=33,Spirit=13",
+        [22268] = "Draconic Infused Emblem|3|63|58|1|0|",
+        [22269] = "Shadow Prowler's Cloak|3|63|58|1|0|Stamina=9,Agility=16,Armor=45",
         [22270] = "Entrenching Boots|3|55|50|1|0|Intellect=10,Defense=3,SpellPowerAll=7,Stamina=10,Healing=7,Strength=11,Armor=397",
         [22271] = "Leggings of Frenzied Magic|3|57|52|1|0|Intellect=15,SpellPowerAll=16,Stamina=15,Healing=16,MP5=4,Armor=142",
         [22272] = "Forest's Embrace|3|52|0|1|0|Intellect=9,SpellDamage=15,Armor=151,Healing=44,Spirit=8,MP5=6",
@@ -15893,12 +16104,31 @@ local c = {
         [22311] = "Ironweave Boots|3|61|56|1|520|Armor=150,Stamina=17,HitRating=10,Intellect=11",
         [22312] = "Pattern: Satchel of Cenarius|1|65|0|1|0|",
         [22313] = "Ironweave Bracers|3|61|56|1|520|Armor=108,Stamina=14,HitRating=5,Intellect=8",
+        [22315] = "Hammer of Revitalization|3|61|56|1|0|SpellDamage=43,DPS=26.6667,Stamina=5,Healing=131,MP5=5",
         [22316] = "Test Relic|3|20|10|0|0|Intellect=3",
+        [22317] = "Lefty's Brass Knuckle|3|61|56|1|0|Agility=12,Strength=8,DPS=40",
+        [22318] = "Malgen's Long Bow|3|61|56|1|0|AttackPower=18,Stamina=4,DPS=31.2069",
+        [22319] = "Tome of Divine Right|3|61|56|1|0|Intellect=6,SpellDamage=9,Stamina=6,Healing=26,MP5=4",
         [22320] = "Mux's Quality Goods|1|1|0|1|0|",
         [22321] = "Heart of Wyrmthalak|3|61|56|1|0|",
+        [22322] = "The Jaw Breaker|3|61|56|1|0|CritRating=14,AttackPower=6,DPS=40.3125",
         [22324] = "Winter Kimchi|1|55|45|0|0|",
+        [22326] = "Amalgam's Band|3|63|58|1|0|Intellect=6,Stamina=5,MP5=3,CritRating=14",
+        [22327] = "Amulet of the Redeemed|3|63|58|1|0|Intellect=10,SpellDamage=5,Stamina=9,Healing=15,Spirit=8",
+        [22328] = "Legplates of Vigilance|3|63|58|1|0|Stamina=22,Defense=15,HitRating=10,Armor=575",
+        [22329] = "Scepter of Interminable Focus|3|63|58|1|0|CritRating=14,Spirit=8,HitRating=5,Intellect=8",
+        [22330] = "Shroud of Arcane Mastery|3|61|56|1|0|Armor=43,Stamina=10,Intellect=10",
+        [22331] = "Band of the Steadfast Hero|3|62|57|1|0|Stamina=12,Defense=7,Strength=7",
+        [22332] = "Blade of Necromancy|3|62|57|1|0|Healing=72,SpellPowerAll=72,DPS=27",
+        [22333] = "Hammer of Divine Might|3|62|57|1|0|Intellect=26,SpellDamage=45,DPS=39.2857,Stamina=21,Healing=135",
+        [22334] = "Band of Mending|3|62|57|1|0|Intellect=7,SpellDamage=10,Stamina=7,Healing=31,Spirit=6",
+        [22335] = "Lord Valthalak's Staff of Command|3|63|58|1|0|Intellect=21,HitRating=10,DPS=40,Stamina=21,Healing=72,SpellPowerAll=72",
+        [22336] = "Draconian Aegis of the Legion|3|63|58|1|0|Armor=2153,Healing=18,Stamina=7,SpellPowerAll=18",
+        [22337] = "Shroud of Domination|3|63|58|1|0|Armor=45,Strength=17,Stamina=8",
         [22338] = "Volcanic Ash|1|1|0|4|0|",
         [22341] = "Monster - Mace, Horde A04 Pale - Bone Wrench|0|1|1|0|0|DPS=0.75",
+        [22342] = "Leggings of Torment|3|63|58|1|0|Armor=78,ShadowPower=34,Stamina=16,Intellect=16",
+        [22343] = "Handguards of Savagery|3|63|58|1|0|AttackPower=36,Stamina=13,Armor=231,Intellect=10",
         [22344] = "Brazier of Invocation: User's Manual|1|1|0|1|0|",
         [22346] = "Monster - Mace2H, Unstoppable Force|0|1|1|0|0|DPS=0.8621",
         [22347] = "Fahrad's Reloading Repeater|3|65|0|1|0|Agility=4,HitRating=10,DPS=33.2813",
@@ -15952,11 +16182,14 @@ local c = {
         [22395] = "Totem of Rage|3|57|52|1|0|",
         [22396] = "Totem of Life|4|78|60|1|0|",
         [22397] = "Idol of Ferocity|3|57|52|1|0|",
+        [22398] = "Idol of Rejuvenation|3|62|57|1|0|",
         [22399] = "Idol of Health|4|78|60|1|0|",
         [22400] = "Libram of Truth|3|57|52|1|0|",
         [22402] = "Libram of Grace|4|78|60|1|0|",
         [22403] = "Nacreous Shell Necklace|3|61|56|1|0|Intellect=8,HitRating=10,SpellPowerAll=9,Stamina=7,Healing=9",
+        [22404] = "Willey's Back Scratcher|3|61|56|1|0|AttackPower=16,Stamina=12,DPS=40.1923",
         [22405] = "Mantle of the Scarlet Crusade|3|61|56|1|0|Intellect=12,SpellDamage=7,Armor=65,Healing=20,Spirit=12,Stamina=11",
+        [22406] = "Redemption|3|61|56|1|0|SpellDamage=43,DPS=38.8095,Healing=131,MP5=12,Spirit=12",
         [22407] = "Helm of the New Moon|3|61|56|1|0|Intellect=14,SpellPowerAll=23,Stamina=14,Healing=23,Spirit=12,Armor=139",
         [22408] = "Ritssyn's Wand of Bad Mojo|3|63|58|1|0|Stamina=5,Healing=11,SpellPowerAll=11,DPS=63.8462",
         [22409] = "Tunic of the Crescent Moon|3|63|58|1|0|Intellect=12,Armor=176,SpellPowerAll=15,CritRating=14,Healing=15,Spirit=11,Stamina=14",
@@ -16521,7 +16754,6 @@ local c = {
         [190307] = "Unlit Torch|1|1|0|4|0|",
         [190308] = "Burning Torch|1|1|0|4|0|",
         [190309] = "Wooden Figurine|1|1|0|4|0|",
-        [190325] = "Monster - Incubus Whip Mace1H|0|1|1|0|0|DPS=0.5769",
         [191204] = "Lesser Deathstone|2|1|1|1|0|",
         [191249] = "Greater Deathstone|2|1|1|1|0|",
         [191267] = "Rune of Teleportation: Antechamber|2|1|1|1|0|",
@@ -16720,6 +16952,7 @@ local c = {
         [208223] = "Acolyte's Knapsack|1|1|0|1|0|",
         [208224] = "Acolyte's Note|1|1|1|1|0|",
         [208414] = "Lunar Idol|2|5|1|1|0|",
+        [208424] = "Sun Shades|2|100|0|1|0|Armor=101",
         [208601] = "Top-Right Map Piece|1|1|1|1|0|",
         [208602] = "Top-Left Map Piece|1|1|1|1|0|",
         [208603] = "Bottom-Right Map Piece|1|1|1|1|0|",
@@ -17272,7 +17505,6 @@ local c = {
         [217308] = "Enchanted Sigil: Innovation|2|40|40|1|0|",
         [217314] = "Moonsight Rifle|2|27|23|1|0|AttackPower=9,DPS=10.8824",
         [217315] = "Precision Bow|2|27|23|1|0|HitRating=3,DPS=10.9615",
-        [217336] = "Monster - Incubus Whip Mace1H|0|1|1|0|0|DPS=0.5769",
         [217337] = "Supply Shipment|2|40|1|1|0|",
         [217338] = "Supply Shipment|2|40|1|1|0|",
         [217339] = "Supply Shipment|2|40|1|1|0|",
@@ -17286,11 +17518,13 @@ local c = {
         [217497] = "Narpas Sword|3|42|34|1|0|SpellPowerAll=48,Healing=48,HitRating=10,DPS=19",
         [217609] = "Talisman of Kazdor|1|45|1|4|0|",
         [217693] = "Invisibility Potion|1|30|0|4|0|",
+        [217716] = "Vile Concoction|1|1|1|0|0|",
         [217717] = "Hollow Emblem|1|1|0|1|0|",
         [217718] = "Emblem of Blood Magic|1|1|0|1|0|",
         [217719] = "Blood Magic Essence|1|1|0|1|0|",
         [217720] = "Offering of Flesh|1|1|0|1|0|",
         [217721] = "Offering of Bone|1|1|0|1|0|",
+        [217727] = "Ward of the Dead|1|1|0|1|0|",
         [217736] = "Rune of the Coterie|2|50|1|1|0|",
         [217737] = "Modified Talisman|1|45|1|4|0|",
         [219147] = "Rune of Grace|2|50|1|1|0|",
@@ -17780,27 +18014,139 @@ local c = {
         [226679] = "Timeless Wanderer's Insights|3|60|1|1|0|",
         [226680] = "Rune of the First Warrior|3|60|1|1|0|",
         [226694] = "Rune of Defense Specialization|2|50|0|1|0|",
+        [226697] = "Red Bag|1|60|0|4|0|",
         [226698] = "Vertically Composited Patch Hampler|1|60|0|4|0|",
         [226699] = "Brass-fitted Flam-Tamp Flange|1|60|0|4|0|",
+        [226772] = "Feralheart Sash|3|65|0|1|1667|Intellect=14,SpellPowerAll=11,Stamina=10,Healing=11,Armor=102,CritRating=14",
+        [226774] = "Feralheart Galoshes|4|60|0|1|1667|Intellect=16,SpellPowerAll=22,Stamina=11,Healing=22,Spirit=10,Armor=127",
         [226775] = "Feralheart Wraps|3|65|0|1|1667|Intellect=11,SpellPowerAll=8,Stamina=8,Healing=8,Spirit=10,Armor=79",
+        [226777] = "Feralheart Hands|4|55|0|1|1667|Intellect=13,SpellPowerAll=19,Stamina=11,Healing=19,Spirit=12,Armor=108",
+        [226778] = "Feralheart Spaulders|3|65|0|1|1667|Intellect=12,HitRating=10,SpellPowerAll=19,Stamina=11,Healing=19,Armor=136",
+        [226779] = "Feralheart Kilt|3|66|0|1|1667|Intellect=16,SpellPowerAll=25,Stamina=13,Healing=25,Spirit=11,Armor=160",
+        [226780] = "Feralheart Cord|3|65|0|1|1667|Intellect=13,SpellDamage=7,MP5=2,Armor=102,Healing=20,Spirit=12,Stamina=12",
+        [226781] = "Feralheart Sandals|4|60|0|1|1667|Intellect=13,SpellDamage=7,MP5=2,Armor=127,Healing=20,Spirit=20,Stamina=11",
         [226782] = "Feralheart Bindings|3|65|0|1|1667|Intellect=9,SpellDamage=6,Armor=79,Healing=18,Spirit=11,Stamina=8",
+        [226784] = "Feralheart Gauntlets|4|55|0|1|1667|Intellect=11,SpellDamage=8,Armor=108,Healing=24,Spirit=18,Stamina=10",
+        [226785] = "Feralheart Mantle|3|65|0|1|1667|Intellect=13,SpellDamage=7,Armor=136,Healing=22,Spirit=12,Stamina=12",
+        [226787] = "Feralheart Pants|3|66|0|1|1667|Intellect=16,SpellDamage=10,Armor=160,Healing=31,Spirit=18,Stamina=15",
         [226788] = "Feralheart Bands|3|65|0|1|1667|Intellect=9,Agility=8,Stamina=9,Strength=10,Armor=79",
+        [226789] = "Feralheart Girdle|3|65|0|1|1667|Intellect=11,Agility=10,HitRating=7,Stamina=11,Strength=10,Armor=102",
+        [226790] = "Feralheart Epaulets|3|65|0|1|1667|Intellect=11,Agility=10,CritRating=7,Armor=136,Strength=10,Stamina=11",
+        [226791] = "Feralheart Trousers|3|66|0|1|1667|Intellect=12,Agility=10,Armor=160,Stamina=17,Spirit=9,Strength=16",
+        [226793] = "Feralheart Fists|4|55|0|1|1667|Intellect=10,Agility=12,Armor=108,Stamina=10,Spirit=8,Strength=12",
+        [226794] = "Feralheart Walkers|4|60|0|1|1667|Intellect=12,Agility=11,Armor=127,Stamina=13,Spirit=10,Strength=12",
         [226796] = "Feralheart Wristguards|3|65|0|1|1667|Defense=3,Armor=79,Agility=5,Strength=8,Stamina=16",
+        [226797] = "Feralheart Waistguard|3|65|0|1|1667|Defense=7,Armor=102,Agility=9,Strength=11,Stamina=18",
+        [226798] = "Feralheart Pauldrons|3|65|0|1|1667|Defense=5,Armor=186,Agility=8,Strength=12,Stamina=18",
+        [226799] = "Feralheart Legguards|3|66|0|1|1667|Defense=9,Armor=160,Agility=9,Strength=16,Stamina=31",
+        [226802] = "Feralheart Grips|4|55|0|1|1667|Defense=7,DodgeRating=12,Armor=108,Agility=7,Strength=11,Stamina=15",
+        [226803] = "Feralheart Treads|4|60|0|1|1667|Defense=3,Armor=127,Agility=7,Strength=12,Stamina=26",
+        [226825] = "Darkmantle Tunic|4|60|0|1|1676|Agility=31,HitRating=15,Stamina=15,Spirit=10,Armor=185",
+        [226826] = "Darkmantle Spaulders|3|65|0|1|1676|Stamina=10,Agility=23,HitRating=6,Armor=136",
+        [226827] = "Darkmantle Pants|3|66|0|1|1676|Agility=26,HitRating=5,Stamina=14,Spirit=15,Armor=160",
+        [226828] = "Darkmantle Grips|4|55|0|1|1676|Agility=22,Stamina=9,Armor=108,Strength=9,Spirit=8",
+        [226829] = "Darkmantle Cap|4|60|0|1|1676|Agility=25,Armor=150,CritRating=14,Spirit=10,Stamina=21",
         [226830] = "Darkmantle Bracers|3|65|0|1|1676|Armor=79,Agility=15,Spirit=4,Stamina=10",
+        [226831] = "Darkmantle Footpads|4|60|0|1|1676|Stamina=15,Agility=24,HitRating=7,Armor=127",
+        [226832] = "Darkmantle Belt|3|65|0|1|1676|Agility=17,Stamina=13,Armor=102,Strength=10,Spirit=7",
         [226856] = "Guided Buoyancy Accelerant|1|53|53|1|0|",
+        [226857] = "Battleboots of Heroism|4|60|0|1|1778|Armor=470,Stamina=20,Strength=20,HitRating=10",
+        [226858] = "Spaulders of Heroism|3|65|0|1|1778|Armor=507,Agility=12,Strength=12,Stamina=19",
+        [226859] = "Legplates of Heroism|3|66|0|1|1778|Armor=601,Agility=12,Strength=27,Stamina=15",
+        [226860] = "Crown of Heroism|4|60|0|1|1778|Armor=556,Stamina=30,Strength=19,CritRating=14",
+        [226861] = "Gauntlets of Heroism|4|55|0|1|1778|Armor=393,Stamina=14,Strength=18,CritRating=14",
+        [226862] = "Breastplate of Heroism|4|60|0|1|1778|Agility=13,HitRating=10,Armor=684,Strength=21,Stamina=26",
         [226863] = "Bracers of Heroism|3|65|0|1|1778|Stamina=14,Agility=5,Strength=11,Armor=296",
+        [226864] = "Belt of Heroism|3|65|0|1|1778|Stamina=14,Agility=10,Strength=15,Armor=380",
         [226865] = "Wristguards of Heroism|3|65|0|1|1778|Defense=3,Armor=296,Agility=3,Strength=8,Stamina=16",
+        [226866] = "Waistguard of Heroism|3|65|0|1|1778|Defense=7,Armor=380,Agility=5,Strength=13,Stamina=18",
+        [226867] = "Pauldrons of Heroism|3|65|0|1|1778|Defense=5,Armor=507,Agility=10,Strength=12,Stamina=18",
+        [226868] = "Legguards of Heroism|3|66|0|1|1778|Defense=7,Stamina=24,Armor=601,Strength=16,Spirit=10,BlockValue=21",
+        [226869] = "Faceguard of Heroism|4|60|0|1|1778|Armor=556,Defense=9,Strength=18,Stamina=33",
+        [226870] = "Handguards of Heroism|4|55|0|1|1778|Defense=5,DodgeRating=12,Armor=393,Strength=11,Stamina=20",
+        [226871] = "Sabatons of Heroism|4|60|0|1|1778|Defense=3,HitRating=7,Armor=470,Strength=12,Stamina=26",
+        [226872] = "Chestguard of Heroism|4|60|0|1|1778|Defense=9,Armor=684,Agility=12,Strength=18,Stamina=29",
+        [226881] = "Beastmaster's Treads|4|60|0|1|1669|Armor=266,Agility=24,Stamina=13,Intellect=7",
+        [226882] = "Beastmaster's Pants|3|66|0|1|1669|Armor=339,Agility=28,Stamina=14,Intellect=11",
+        [226883] = "Beastmaster's Gauntlets|4|55|0|1|1669|Armor=223,Agility=14,Stamina=12,Intellect=10",
+        [226884] = "Beastmaster's Mantle|3|65|0|1|1669|Armor=286,Agility=13,Stamina=18,Intellect=12",
         [226885] = "Beastmaster's Bindings|3|65|0|1|1669|Intellect=7,Agility=16,Armor=167,Spirit=5,Stamina=6",
+        [226886] = "Beastmaster's Tunic|4|60|0|1|1669|Intellect=13,Agility=25,Stamina=16,CritRating=14,Armor=387",
+        [226887] = "Beastmaster's Cap|4|60|0|1|1669|Intellect=14,Agility=23,HitRating=10,Stamina=23,Armor=314",
+        [226888] = "Beastmaster's Belt|3|65|0|1|1669|Armor=214,Agility=16,Stamina=16,Intellect=10",
+        [226905] = "Deathmist Belt|3|65|0|1|1681|Intellect=13,SpellPowerAll=12,Stamina=13,Healing=12,Spirit=8,Armor=52",
+        [226906] = "Deathmist Robe|4|60|0|1|1681|Intellect=22,SpellPowerAll=11,Stamina=23,Healing=11,Spirit=14,Armor=93",
         [226907] = "Deathmist Bracers|3|65|0|1|1681|Intellect=12,SpellPowerAll=7,Armor=40,Healing=7,Stamina=12",
+        [226908] = "Deathmist Sandals|4|60|0|1|1681|Intellect=14,SpellPowerAll=12,Stamina=22,Healing=12,Spirit=10,Armor=64",
+        [226909] = "Deathmist Mask|4|60|0|1|1681|Intellect=24,HitRating=10,SpellPowerAll=18,Stamina=24,Healing=18,Armor=75",
+        [226910] = "Deathmist Leggings|3|66|0|1|1681|Intellect=18,HitRating=10,SpellPowerAll=15,Stamina=21,Healing=15,Armor=81",
+        [226911] = "Deathmist Wraps|4|55|0|1|1681|Intellect=13,HitRating=10,SpellPowerAll=13,Stamina=16,Healing=13,Armor=54",
+        [226912] = "Deathmist Mantle|3|65|0|1|1681|Intellect=16,SpellPowerAll=12,Armor=69,Healing=12,Stamina=13",
         [226929] = "Sorcerer's Bindings|3|65|0|1|1671|Intellect=10,SpellPowerAll=7,Armor=40,Healing=7,Stamina=7",
+        [226930] = "Sorcerer's Gauntlets|4|55|0|1|1671|Intellect=14,HitRating=10,SpellPowerAll=12,Stamina=12,Healing=12,Spirit=9,Armor=54",
+        [226931] = "Sorcerer's Sandals|4|60|0|1|1671|Intellect=16,SpellPowerAll=21,Stamina=12,Healing=21,Spirit=11,Armor=64",
+        [226932] = "Sorcerer's Robes|4|60|0|1|1671|Intellect=25,SpellPowerAll=16,Stamina=14,Healing=16,Spirit=11,Armor=93",
+        [226933] = "Sorcerer's Leggings|3|66|0|1|1671|Intellect=16,HitRating=10,SpellPowerAll=19,Stamina=13,Healing=19,Spirit=11,Armor=81",
+        [226934] = "Sorcerer's Belt|3|65|0|1|1671|Intellect=14,SpellPowerAll=11,Armor=52,Healing=11,Stamina=14",
+        [226935] = "Sorcerer's Crown|4|60|0|1|1671|Intellect=25,SpellPowerAll=21,CritRating=14,Healing=21,Armor=75,Stamina=12",
+        [226936] = "Sorcerer's Mantle|3|65|0|1|1671|Intellect=16,SpellPowerAll=7,Stamina=11,Healing=7,Armor=69,CritRating=14",
+        [226946] = "Virtuous Skirt|3|66|0|1|1675|Intellect=16,SpellDamage=10,Armor=81,Healing=31,Spirit=18,Stamina=15",
+        [226948] = "Virtuous Belt|3|65|0|1|1675|Intellect=13,SpellDamage=7,MP5=2,Armor=52,Healing=20,Spirit=12,Stamina=12",
         [226949] = "Virtuous Bracers|3|65|0|1|1675|Intellect=9,SpellDamage=6,Armor=40,Healing=18,Spirit=11,Stamina=8",
+        [226950] = "Virtuous Mitts|4|55|0|1|1675|Intellect=11,SpellDamage=8,Armor=54,Healing=24,Spirit=18,Stamina=10",
+        [226951] = "Virtuous Mantle|3|65|0|1|1675|Intellect=13,SpellDamage=7,Armor=69,Healing=22,Spirit=12,Stamina=12",
+        [226952] = "Virtuous Sandals|4|60|0|1|1675|Intellect=13,SpellDamage=7,MP5=2,Armor=64,Healing=20,Spirit=20,Stamina=11",
         [226953] = "Virtuous Wraps|3|65|0|1|1675|Intellect=11,SpellPowerAll=8,Stamina=8,Healing=8,Spirit=10,Armor=40",
+        [226954] = "Virtuous Cord|3|65|0|1|1675|Intellect=14,SpellPowerAll=11,Stamina=10,Healing=11,Spirit=14,Armor=52",
+        [226958] = "Virtuous Hands|4|55|0|1|1675|Intellect=13,SpellPowerAll=19,Stamina=11,Healing=19,Spirit=12,Armor=54",
+        [226969] = "Soulforge Spaulders|3|65|0|1|1673|Intellect=11,ExpertiseRating=10,SpellPowerAll=8,Stamina=11,Healing=8,Strength=10,Armor=507",
         [226970] = "Soulforge Bracers|3|65|0|1|1673|Intellect=9,SpellPowerAll=9,Stamina=10,Healing=9,Strength=9,Armor=296",
+        [226971] = "Soulforge Belt|3|65|0|1|1673|Intellect=11,HitRating=10,SpellPowerAll=8,Stamina=11,Healing=8,Strength=10,Armor=380",
+        [226972] = "Soulforge Legplates|3|66|0|1|1673|Intellect=19,SpellPowerAll=11,Stamina=17,Healing=11,Strength=17,Armor=601",
+        [226973] = "Soulforge Breastplate|4|60|0|1|1673|Intellect=17,Armor=684,SpellPowerAll=18,CritRating=14,Healing=18,Strength=16,Stamina=17",
+        [226974] = "Soulforge Warboots|4|60|0|1|1673|Intellect=12,Armor=470,SpellPowerAll=13,Stamina=13,Healing=13,Strength=12,MP5=4",
+        [226975] = "Soulforge Gauntlets|4|55|0|1|1673|Intellect=10,Armor=393,SpellPowerAll=9,CritRating=14,Healing=9,Strength=9,Stamina=10",
+        [226976] = "Soulforge Greathelm|4|60|0|1|1673|Intellect=17,CritRating=14,Armor=556,SpellPowerAll=14,Stamina=17,Healing=14,MP5=2,Strength=16",
         [226977] = "Soulforge Bindings|3|65|0|1|1673|Intellect=9,SpellDamage=6,Armor=296,Healing=18,Spirit=11,Stamina=8",
+        [226978] = "Soulforge Cord|3|65|0|1|1673|Intellect=13,SpellDamage=6,Stamina=12,Armor=380,Healing=18,Spirit=12,CritRating=7",
+        [226979] = "Soulforge Epaulets|3|65|0|1|1673|Intellect=13,SpellDamage=7,Armor=507,Healing=22,Spirit=12,Stamina=12",
+        [226980] = "Soulforge Leggings|3|66|0|1|1673|Intellect=16,SpellDamage=10,Armor=601,Healing=31,Spirit=18,Stamina=15",
+        [226981] = "Soulforge Crown|4|60|0|1|1673|Intellect=17,SpellDamage=11,Stamina=16,Armor=556,Healing=33,Spirit=16,CritRating=14",
+        [226982] = "Soulforge Fists|4|55|0|1|1673|Intellect=11,SpellDamage=8,Armor=393,Healing=24,Spirit=18,Stamina=10",
+        [226983] = "Soulforge Treads|4|60|0|1|1673|Intellect=13,SpellDamage=7,MP5=2,Armor=470,Healing=20,Spirit=20,Stamina=11",
+        [226984] = "Soulforge Embrace|4|60|0|1|1673|Intellect=16,SpellDamage=12,Armor=684,Healing=37,Spirit=15,Stamina=23",
         [226985] = "Soulforge Wristguards|3|65|0|1|1673|Intellect=5,Defense=3,Stamina=16,Strength=8,Armor=296",
+        [226986] = "Soulforge Waistguard|3|65|0|1|1673|Intellect=10,Defense=3,Stamina=18,Strength=13,Armor=380",
+        [226987] = "Soulforge Pauldrons|3|65|0|1|1673|Intellect=8,Defense=5,Stamina=18,BlockRating=5,Strength=12,Armor=507",
+        [226988] = "Soulforge Legguards|3|66|0|1|1673|Intellect=14,Defense=9,Stamina=24,Armor=601,Strength=16,BlockValue=14",
+        [226989] = "Soulforge Faceguard|4|60|0|1|1673|Intellect=11,Defense=4,Stamina=33,Strength=18,Armor=556",
+        [226990] = "Soulforge Handguards|4|55|0|1|1673|Intellect=10,Defense=5,Stamina=15,Armor=393,Strength=11,ParryRating=12",
+        [226991] = "Soulforge Sabatons|4|60|0|1|1673|Intellect=7,Defense=3,Stamina=26,Strength=12,Armor=470",
+        [226992] = "Soulforge Chestguards|4|60|0|1|1673|Intellect=12,Defense=5,ExpertiseRating=12,Stamina=29,Strength=18,Armor=684",
         [227001] = "Bindings of The Five Thunders|3|65|0|1|1679|Intellect=11,SpellPowerAll=8,Armor=167,Healing=8,Stamina=8",
+        [227002] = "Coif of The Five Thunders|4|60|0|1|1679|Intellect=25,SpellPowerAll=21,CritRating=14,Healing=21,Armor=314,Stamina=12",
+        [227003] = "Pauldrons of The Five Thunders|3|65|0|1|1679|Intellect=12,HitRating=10,SpellPowerAll=19,Stamina=11,Healing=19,Armor=286",
+        [227004] = "Vest of The Five Thunders|4|60|0|1|1679|Intellect=25,SpellPowerAll=16,Stamina=14,Healing=16,Spirit=11,Armor=387",
+        [227005] = "Kilt of The Five Thunders|3|66|0|1|1679|Intellect=16,HitRating=10,SpellPowerAll=19,Stamina=13,Healing=19,Spirit=11,Armor=339",
+        [227006] = "Gauntlets of The Five Thunders|4|55|0|1|1679|Intellect=14,HitRating=10,SpellPowerAll=12,Stamina=12,Healing=12,Spirit=9,Armor=223",
+        [227007] = "Slippers of The Five Thunders|4|60|0|1|1679|Intellect=16,SpellPowerAll=21,Stamina=12,Healing=21,Spirit=11,Armor=266",
+        [227008] = "Cord of The Five Thunders|3|65|0|1|1679|Intellect=14,SpellPowerAll=11,Stamina=10,Healing=11,Armor=214,CritRating=14",
         [227009] = "Bracers of The Five Thunders|3|65|0|1|1679|Intellect=9,SpellDamage=6,Armor=167,Healing=18,Spirit=11,Stamina=8",
+        [227010] = "Sash of The Five Thunders|3|65|0|1|1679|Intellect=13,SpellDamage=6,Stamina=12,Armor=214,Healing=18,Spirit=12,CritRating=7",
+        [227011] = "Mantle of The Five Thunders|3|65|0|1|1679|Intellect=13,SpellDamage=7,Armor=286,Healing=22,Spirit=12,Stamina=12",
+        [227012] = "Leggings of The Five Thunders|3|66|0|1|1679|Intellect=16,SpellDamage=10,Armor=339,Healing=31,Spirit=18,Stamina=15",
+        [227013] = "Crown of The Five Thunders|4|60|0|1|1679|Intellect=17,SpellDamage=11,Stamina=16,Armor=314,Healing=33,Spirit=16,CritRating=14",
+        [227014] = "Grasp of The Five Thunders|4|55|0|1|1679|Intellect=11,SpellDamage=8,Armor=223,Healing=24,Spirit=18,Stamina=10",
+        [227015] = "Greaves of The Five Thunders|4|60|0|1|1679|Intellect=13,SpellDamage=7,MP5=2,Armor=266,Healing=20,Spirit=20,Stamina=11",
+        [227016] = "Tunic of The Five Thunders|4|60|0|1|1679|Intellect=16,SpellDamage=12,Stamina=16,Armor=387,Healing=37,Spirit=15,CritRating=14",
         [227017] = "Bands of The Five Thunders|3|65|0|1|1679|Intellect=9,SpellPowerAll=9,Stamina=10,Healing=9,Strength=9,Armor=167",
+        [227018] = "Girdle of The Five Thunders|3|65|0|1|1679|Intellect=11,HitRating=10,SpellPowerAll=8,Stamina=11,Healing=8,Strength=10,Armor=214",
+        [227019] = "Spaulders of The Five Thunders|3|65|0|1|1679|Intellect=11,ExpertiseRating=10,SpellPowerAll=8,Stamina=11,Healing=8,Strength=10,Armor=286",
+        [227020] = "Legplates of The Five Thunders|3|66|0|1|1679|Intellect=19,SpellPowerAll=11,Stamina=17,Healing=11,Strength=17,Armor=339",
+        [227021] = "Face of The Five Thunders|4|60|0|1|1679|Intellect=17,CritRating=14,Armor=314,SpellPowerAll=14,Stamina=17,Healing=14,MP5=2,Strength=16",
+        [227022] = "Fists of The Five Thunders|4|55|0|1|1679|Intellect=10,Armor=223,SpellPowerAll=9,CritRating=14,Healing=9,Strength=9,Stamina=10",
+        [227023] = "Treads of The Five Thunders|4|60|0|1|1679|Intellect=12,Armor=266,SpellPowerAll=13,Stamina=13,Healing=13,Strength=12,MP5=4",
+        [227024] = "Chain of The Five Thunders|4|60|0|1|1679|Intellect=17,Armor=387,SpellPowerAll=18,CritRating=14,Healing=18,Strength=16,Stamina=17",
         [227041] = "Scourge Shadow Scalpel|1|1|0|4|0|",
         [227285] = "Fantastic Inventions|1|60|0|4|0|",
         [227286] = "Warmed Rumsey Rum with Cream|1|1|0|1|0|",
@@ -17907,6 +18253,7 @@ local c = {
         [227930] = "Safe Box Key|1|1|1|1|0|",
         [227931] = "Hidden Bundle|1|1|1|1|0|",
         [227932] = "Rusty Crowbar|1|1|0|1|0|",
+        [227935] = "Hammer of the Fallen Thane|3|59|0|1|0|Intellect=10,DPS=25.6818,Stamina=5,Healing=68,MP5=2,SpellPowerAll=68",
         [227937] = "Puzzle Box|1|50|0|4|0|",
         [227938] = "Shard of Light|1|50|0|4|0|",
         [227939] = "Shard of Light|1|50|0|4|0|",
@@ -19208,7 +19555,7 @@ local c = {
         [252603] = "Red Dragonscale Leggings|4|61|56|2|0|Intellect=32,Healing=20,Armor=344,SpellPowerAll=20",
         [252604] = "Blue Dragonscale Helm|4|61|56|2|0|Intellect=18,HitRating=10,SpellPowerAll=25,Armor=319,Healing=25",
         [252605] = "Black Dragonscale Helm|4|61|56|2|0|Armor=319,Agility=21,CritRating=14,Intellect=38",
-        [252606] = "Pristine Scorpid Leggings|4|61|56|2|0|SpellPowerAll=33,Armor=344,Healing=33,Strength=18,CritRating=14",
+        [252606] = "Pristine Scorpid Leggings|4|61|56|2|0|SpellPowerAll=38,Armor=344,Healing=38,Strength=18,CritRating=14",
         [252661] = "Commander Cyclas's Head|1|1|0|4|0|",
         [252665] = "Head of Urs'anah|1|1|0|4|0|",
         [252670] = "Prideclaw Pelt|1|1|0|4|0|",
@@ -19392,7 +19739,7 @@ local c = {
         [252937] = "Pattern: Red Dragonscale Leggings|4|60|0|0|0|SpellPowerAll=20",
         [252938] = "Pattern: Blue Dragonscale Helm|4|60|0|0|0|SpellPowerAll=25",
         [252939] = "Pattern: Black Dragonscale Helm|4|60|0|0|0|",
-        [252940] = "Pattern: Pristine Scorpid Leggings|4|60|0|0|0|SpellPowerAll=33",
+        [252940] = "Pattern: Pristine Scorpid Leggings|4|60|0|0|0|SpellPowerAll=38",
         [252941] = "Pattern: Mystic Rugged Armor Kit|2|50|0|1|0|",
         [252942] = "Pattern: Forceful Rugged Armor Kit|2|50|0|0|0|",
         [252948] = "Cleansed Felbloom|1|60|50|1|0|",
@@ -19417,7 +19764,7 @@ local c = {
         [253667] = "Woolen Reagent Bag|1|15|0|2|0|",
         [253668] = "Pattern: Woolen Reagent Bag|2|10|1|0|0|",
         [253710] = "Bruuz's Dorsal Fin|1|1|0|4|0|",
-        [253711] = "Goliath's Wristguards|1|1|30|4|0|",
+        [253711] = "Goliath's Wristguards|1|1|30|1|0|",
         [253884] = "Template Item|2|55|50|2|0|Armor=71",
         [253885] = "Novice Arcanist's Sash|3|15|10|1|0|Intellect=3,SpellPowerAll=4,Armor=17,Healing=4,Stamina=3",
         [253886] = "Pattern: Novice Arcanist's Sash|3|15|1|0|0|SpellPowerAll=4",
@@ -19547,7 +19894,7 @@ local c = {
         [254010] = "Pattern: Golden Slippers|3|35|1|0|0|ArcanePower=13",
         [254011] = "Radiant Slippers|3|35|30|1|0|Intellect=7,Stamina=6,Armor=35,Spirit=4,HolyPower=13",
         [254012] = "Pattern: Radiant Slippers|3|35|1|0|0|HolyPower=13",
-        [254013] = "Earthen Silk Slippers|2|36|31|2|0|Armor=33,Healing=18,Spirit=7,SpellDamage=24",
+        [254013] = "Earthen Silk Slippers|2|36|31|2|0|Armor=33,Healing=17,Spirit=7,SpellDamage=6",
         [254014] = "Pattern: Earthen Silk Slippers|2|36|1|0|0|",
         [254015] = "Earthen Silk Hood|2|37|32|2|0|Armor=40,Healing=22,Spirit=10,SpellDamage=8",
         [254016] = "Pattern: Earthen Silk Hood|2|37|1|0|0|",
@@ -19860,7 +20207,7 @@ local c = {
         [260209] = "Truesong's Hammer|2|55|0|1|0|Strength=10,DPS=32.8571",
         [260210] = "A Bigger Shield|3|56|0|1|0|Stamina=7,Defense=4,Agility=7,Armor=1930",
         [260211] = "Panic Hands|3|56|0|1|0|Armor=100,Agility=13,Strength=13,Stamina=13",
-        [260212] = "Bad Hat|3|56|0|1|0|Intellect=17,ShadowPower=23,Armor=65,Healing=37,Spirit=17,SpellDamage=12",
+        [260212] = "Bad Hat|3|56|0|1|0|Intellect=17,SpellDamage=12,Armor=65,Healing=37,Spirit=17",
         [260213] = "Great Bear Claw|2|60|0|1|0|Stamina=5,Agility=4,Strength=8,DPS=35.8333",
         [260214] = "Staff of Wild Beasts|2|60|0|1|0|DPS=34.6,CritRating=14,Healing=52,Spirit=19,SpellPowerAll=52",
         [260215] = "Wild Malleus|2|60|0|1|0|Agility=11,DPS=46.4706,Stamina=12,Spirit=8,Strength=13",
@@ -20267,9 +20614,9 @@ local c = {
         [265810] = "Treat for Snufflesnout|1|1|1|4|0|",
         [265821] = "Twilight Key|1|1|0|4|0|",
         [265837] = "Kilgar's Head|1|1|1|4|0|",
-        [265838] = "Green Skeletal Horse|4|60|60|3|0|",
-        [265839] = "Dark Skeletal Horse|4|60|60|3|0|",
-        [265840] = "Purple Skeletal Horse|4|60|60|3|0|",
+        [265838] = "Green Skeletal Horse|4|60|60|1|0|",
+        [265839] = "Dark Skeletal Horse|4|60|60|1|0|",
+        [265840] = "Purple Skeletal Horse|4|60|60|1|0|",
         [265932] = "A Bloodsoaked Note|1|50|35|1|0|",
         [266148] = "Farmers' Mementos|1|1|0|4|0|",
         [266154] = "Lumber Tree Seed|1|1|0|4|0|",
@@ -20431,12 +20778,12 @@ local c = {
         [269502] = "Dwarven Plate|2|58|53|2|0|Armor=612,Agility=6,Strength=7,Stamina=13",
         [269503] = "Poacher Boots|2|60|56|2|0|Armor=106,Agility=15,Strength=3,Stamina=7",
         [269504] = "Smoking Satchel|1|52|0|0|0|",
-        [269671] = "Swift Empyrean Galestrider|4|60|60|3|0|",
-        [269673] = "Swift Regal Galestrider|4|60|60|3|0|",
-        [269678] = "Swift Stormy Galestrider|4|60|60|3|0|",
-        [269681] = "Empyrean Galestrider|3|40|40|3|0|",
-        [269682] = "Regal Galestrider|3|40|40|3|0|",
-        [269683] = "Stormy Galestrider|3|40|40|3|0|",
+        [269671] = "Swift Empyrean Galestrider|4|60|60|1|0|",
+        [269673] = "Swift Regal Galestrider|4|60|60|1|0|",
+        [269678] = "Swift Stormy Galestrider|4|60|60|1|0|",
+        [269681] = "Empyrean Galestrider|3|40|40|1|0|",
+        [269682] = "Regal Galestrider|3|40|40|1|0|",
+        [269683] = "Stormy Galestrider|3|40|40|1|0|",
         [269715] = "Savannah Lion Hide|1|1|0|4|0|",
         [269716] = "Keen Skinning Knife|2|18|0|1|0|Intellect=2,Healing=10,DPS=6,SpellPowerAll=10",
         [269717] = "Wildgore Greatsword|2|18|0|1|0|Strength=5,DPS=11.7742",
@@ -20580,6 +20927,7 @@ local c = {
         [270123] = "Ragnar's Favorite Hat|2|55|0|1|0|HitRating=5,SpellPowerAll=20,Stamina=11,Healing=20,Armor=117",
         [270124] = "Warpwood Bracers|3|57|0|1|0|Armor=71,Agility=10,Strength=10",
         [270125] = "Satyrhide Armbands|3|57|0|1|0|Armor=148,Agility=14,Intellect=9",
+        [270126] = "Conqueror's Pendant|3|58|0|1|0|Intellect=7,SpellPowerAll=13,Stamina=7,Healing=13,Spirit=5",
         [270127] = "Incanter's Pantaloons|2|57|0|1|0|Intellect=13,SpellPowerAll=14,Armor=65,Healing=14,MP5=5",
         [270151] = "Benedict's Orders|1|1|0|4|0|",
         [270180] = "Horrible Rootcore|1|25|0|4|0|",
@@ -20809,9 +21157,9 @@ local c = {
         [271910] = "Theramore Signet|3|43|38|1|0|Stamina=11,AttackPower=12",
         [271911] = "Theramore Signet|3|33|28|1|0|Stamina=8,AttackPower=9",
         [271912] = "Moist Crystal|1|1|0|4|0|",
-        [271913] = "Militant's Band|3|63|58|1|0|MP5=3,Stamina=16",
+        [271913] = "Militant's Band|3|63|58|1|0|MP5=4,Stamina=16",
         [271914] = "Militant's Band|3|53|48|1|0|MP5=3,Stamina=14",
-        [271915] = "Militant's Band|3|43|38|1|0|MP5=2,Stamina=11",
+        [271915] = "Militant's Band|3|43|38|1|0|MP5=3,Stamina=11",
         [271916] = "Militant's Band|3|33|28|1|0|MP5=2,Stamina=8",
         [271917] = "Seal of the Expedition|3|63|58|1|0|Intellect=10,Stamina=15",
         [271918] = "Seal of the Expedition|3|53|48|1|0|Intellect=9,Stamina=13",
@@ -20884,10 +21232,10 @@ local c = {
         [272065] = "Insurgent's Band|3|53|48|1|0|Stamina=14,AttackPower=15",
         [272066] = "Insurgent's Band|3|43|38|1|0|Stamina=11,AttackPower=12",
         [272067] = "Insurgent's Band|3|33|28|1|0|Stamina=8,AttackPower=9",
-        [272068] = "Darkspear Signet|3|63|58|1|0|MP5=9,Stamina=16",
-        [272069] = "Darkspear Signet|3|53|48|1|0|MP5=7,Stamina=14",
-        [272070] = "Darkspear Signet|3|43|38|1|0|MP5=6,Stamina=11",
-        [272071] = "Darkspear Signet|3|33|28|1|0|MP5=4,Stamina=8",
+        [272068] = "Darkspear Signet|3|63|58|1|0|MP5=4,Stamina=16",
+        [272069] = "Darkspear Signet|3|53|48|1|0|MP5=3,Stamina=14",
+        [272070] = "Darkspear Signet|3|43|38|1|0|MP5=3,Stamina=11",
+        [272071] = "Darkspear Signet|3|33|28|1|0|MP5=2,Stamina=8",
         [272072] = "Darkspear Warding Pendant|3|63|58|1|0|Intellect=10,Stamina=15",
         [272073] = "Darkspear Warding Pendant|3|53|48|1|0|Intellect=9,Stamina=13",
         [272074] = "Darkspear Warding Pendant|3|43|38|1|0|Intellect=7,Stamina=11",
@@ -20964,8 +21312,8 @@ local c = {
         [272403] = "Valiant's Waistguard|4|60|60|1|0|Armor=385,Agility=24,Strength=14,Stamina=11",
         [272404] = "Vindicator's Belt|4|60|60|1|0|SpellPowerAll=16,Stamina=11,Healing=16,Strength=24,Armor=385",
         [272405] = "Redeemer's Waistcord|4|60|60|1|0|SpellDamage=8,CritRating=14,Healing=23,Stamina=24,Armor=385",
-        [272406] = "Channeler's Ring|3|65|60|1|0|Intellect=14,HitRating=10,Spirit=8",
-        [272407] = "Blessed Band of Light|3|65|60|1|0|SpellDamage=10,HitRating=10,Stamina=10,Healing=31,Spirit=8",
+        [272406] = "Channeler's Ring|3|65|60|1|0|Intellect=14,Healing=9,HitRating=10,SpellPowerAll=9",
+        [272407] = "Blessed Band of Light|3|65|60|1|0|Stamina=10,Healing=31,Spirit=8,SpellDamage=10",
         [272408] = "Cutthroat's Signet|3|65|60|1|0|Stamina=8,Agility=14,HitRating=10",
         [272409] = "Ring of Awareness|3|65|60|1|0|Stamina=10,Defense=9,Strength=8",
         [272410] = "Windseeker's Belt|4|60|60|1|0|SpellPowerAll=16,Stamina=11,Healing=16,Strength=24,Armor=217",
@@ -21020,13 +21368,14 @@ local c = {
         [272480] = "Premier Mortarplate Headguard|3|60|55|1|281|Armor=509,Stamina=25,Strength=16,CritRating=7",
         [272481] = "Premier Mortarplate Legguards|3|60|55|1|281|Armor=548,Agility=9,Strength=15,Stamina=25",
         [272483] = "Premier Chain Bracers|3|60|55|1|0|AttackPower=8,Stamina=15,Armor=155,Intellect=7",
-        [272484] = "Premier Mail Walkers|3|60|55|1|2094|Intellect=10,SpellPowerAll=7,Stamina=19,Healing=7,Armor=244,CritRating=7",
+        [272484] = "Premier Mail Walkers|3|60|55|1|2094|Intellect=7,SpellPowerAll=7,Stamina=16,Healing=7,Armor=244,CritRating=7",
         [272485] = "Premier Linked Grips|3|60|55|1|301|Intellect=8,SpellPowerAll=8,Stamina=19,Healing=8,Strength=8,Armor=221",
         [272486] = "Premier Mail Helm|3|60|55|1|2094|Intellect=10,SpellPowerAll=14,Stamina=25,Healing=14,Armor=288,CritRating=7",
         [272487] = "Premier Mail Chestpiece|3|60|55|1|2094|Intellect=11,SpellPowerAll=12,Stamina=25,Healing=12,Armor=354,CritRating=7",
         [272488] = "Premier Linked Leggings|3|60|55|1|301|Intellect=8,DodgeRating=6,Stamina=25,Strength=14,Armor=310",
         [272489] = "Premier Linked Shoulders|3|60|55|1|301|Intellect=6,SpellPowerAll=7,Stamina=19,Healing=7,Strength=10,Armor=266",
         [272490] = "Premier Chain Breastplate|3|60|55|1|361|Intellect=8,Agility=14,Stamina=19,AttackPower=14,Armor=354",
+        [272491] = "Premier Chain Headguard|3|60|55|1|361|Intellect=7,Agility=10,Stamina=19,AttackPower=12,Armor=288",
         [272492] = "Premier Chain Leggings|3|60|55|1|361|Intellect=9,Agility=13,DodgeRating=6,Stamina=19,Armor=310",
         [272494] = "Premier Chain Girdle|3|60|55|1|0|Armor=199,Agility=12,Stamina=19,Intellect=7",
         [272495] = "Premier Chain Gauntlets|3|60|55|1|361|Intellect=6,Agility=8,Stamina=20,AttackPower=12,Armor=221",
@@ -21072,7 +21421,7 @@ local c = {
         [272535] = "Premier Legionnaire's Chain Wristguards|4|65|60|1|0|AttackPower=12,Stamina=21,Armor=182,Intellect=10",
         [272536] = "Premier Champion's Chain Gloves|4|65|60|1|396|Intellect=10,Agility=10,Stamina=27,AttackPower=18,Armor=260",
         [272537] = "Premier Legionnaire's Chain Girdle|4|65|60|1|0|Armor=234,Agility=17,Stamina=26,Intellect=10",
-        [272538] = "Premier Centurion's Linked Boots|4|65|60|1|386|Intellect=7,SpellPowerAll=11,Stamina=27,Healing=11,Strength=12,Armor=286",
+        [272538] = "Premier Centurion's Linked Boots|4|65|60|1|386|Intellect=10,SpellPowerAll=12,Stamina=21,Healing=12,Strength=13,Armor=286",
         [272539] = "Premier Champion's Linked Gauntlets|4|65|60|1|386|Intellect=10,SpellPowerAll=14,Stamina=26,Healing=14,Strength=11,Armor=260",
         [272540] = "Premier Legionnaire's Linked Waistband|4|65|60|1|0|Intellect=12,Stamina=26,Strength=15,Armor=234",
         [272541] = "Premier Legionnaire's Linked Bracers|4|65|60|1|0|Intellect=7,Stamina=20,Strength=12,Armor=182",
@@ -21132,23 +21481,23 @@ local c = {
         [272604] = "Premier High Warlord's Greatsword|4|65|60|1|0|CritRating=14,Stamina=35,Strength=23,DPS=61.5789",
         [272606] = "Premier Kodohide Treads|3|60|55|1|539|Intellect=12,SpellDamage=4,Armor=116,Healing=11,Spirit=4,Stamina=19",
         [272608] = "Premier Shadowhide Walkers|3|60|55|1|522|Stamina=19,Agility=14,Armor=146",
-        [272609] = "Premier Linked Greaves|3|60|55|1|301|Intellect=5,SpellPowerAll=7,Stamina=20,Healing=7,Strength=8,Armor=244",
+        [272609] = "Premier Linked Greaves|3|60|55|1|301|Intellect=5,SpellPowerAll=7,Stamina=17,Healing=7,Strength=8,Armor=244",
         [272611] = "Premier Silken Walkers|3|60|55|1|2072|Intellect=10,SpellDamage=5,Armor=59,Healing=15,Spirit=10,Stamina=19",
         [272614] = "Premier Dragonhide Grips|3|60|55|1|382|Armor=106,Agility=6,Strength=10,Stamina=20",
         [272617] = "Premier Mail Vices|3|60|55|1|2094|Intellect=10,SpellPowerAll=12,Armor=221,Healing=12,Stamina=19",
         [272619] = "Premier Silken Handwraps|3|60|55|1|2072|Intellect=9,SpellDamage=6,Stamina=20,Healing=18,Armor=53",
-        [272625] = "Premier Linked Hauberk|3|60|55|1|301|Intellect=6,CritRating=7,Armor=354,Strength=11,Stamina=25",
+        [272625] = "Premier Linked Hauberk|3|60|55|1|301|Intellect=10,CritRating=7,Armor=354,Strength=11,Stamina=25",
         [272626] = "Premier Kodohide Chestpiece|3|60|55|1|539|Intellect=9,SpellDamage=11,Armor=169,Healing=33,Spirit=7,Stamina=26",
         [272627] = "Premier Kodohide Leggings|3|60|55|1|539|Intellect=12,SpellDamage=7,Armor=148,Healing=20,Spirit=4,Stamina=26",
         [272630] = "Premier Felweave Legguards|3|60|55|1|345|Intellect=14,SpellPowerAll=12,Armor=75,Healing=12,Stamina=25",
         [272634] = "Premier Silken Tunic|3|60|55|1|2072|Intellect=10,SpellDamage=9,Armor=85,Healing=26,Spirit=6,Stamina=25",
-        [272636] = "Premier Mail Legguards|3|60|55|1|2094|Intellect=8,SpellPowerAll=14,Stamina=25,Healing=14,Armor=310,CritRating=7",
+        [272636] = "Premier Mail Legguards|3|60|55|1|2094|Intellect=8,SpellPowerAll=14,Stamina=26,Healing=14,Armor=310,CritRating=7",
         [272637] = "Premier Mortarplate Shoulders|3|60|55|1|281|Armor=470,Stamina=19,Strength=12,CritRating=7",
         [272640] = "Premier Chain Shoulders|3|60|55|1|361|AttackPower=12,Agility=13,Stamina=19,Armor=266",
         [272641] = "Premier Kodohide Headguard|3|60|55|1|539|Intellect=9,SpellDamage=8,Armor=137,Healing=24,Spirit=6,Stamina=26",
         [272642] = "Premier Kodohide Shoulders|3|60|55|1|539|Intellect=8,SpellDamage=5,Armor=127,Healing=15,Spirit=4,Stamina=20",
         [272643] = "Premier Felweave Cowl|3|60|55|1|345|Intellect=13,SpellPowerAll=11,Armor=69,Healing=11,Stamina=26",
-        [272647] = "Premier Linked Headguard|3|60|55|1|301|Intellect=6,CritRating=7,Armor=288,Strength=11,Stamina=26",
+        [272647] = "Premier Linked Headguard|3|60|55|1|301|Intellect=10,CritRating=7,Armor=288,Strength=12,Stamina=25",
         [272648] = "Premier Mail Pauldrons|3|60|55|1|2094|Intellect=9,SpellPowerAll=9,Armor=266,Healing=9,Stamina=20",
         [272649] = "Premier Silken Hood|3|60|55|1|2072|Intellect=10,SpellDamage=7,Armor=69,Healing=20,Spirit=10,Stamina=25",
         [272650] = "Premier Silken Mantle|3|60|55|1|2072|Intellect=8,SpellDamage=5,Armor=64,Healing=15,Spirit=8,Stamina=19",
@@ -21447,7 +21796,7 @@ local c = {
         [273332] = "Premier Field Marshal's Luminous Faceguard|4|65|60|1|402|Intellect=15,SpellDamage=10,Stamina=34,Healing=29,MP5=5,Armor=599",
         [273333] = "Premier Marshal's Luminous Legplates|4|65|60|1|402|Intellect=18,SpellDamage=11,Stamina=34,Healing=33,CritRating=7,Armor=646",
         [273334] = "Premier Marshal's Luminous Pauldrons|4|65|60|1|402|Intellect=12,SpellDamage=8,Stamina=26,Healing=24,MP5=4,Armor=553",
-        [273336] = "Premier Centurion's Mail Boots|4|65|60|1|2095|Intellect=10,SpellPowerAll=11,Stamina=26,Healing=11,Armor=286,CritRating=14",
+        [273336] = "Premier Centurion's Mail Boots|4|65|60|1|2095|Intellect=10,SpellPowerAll=10,Stamina=21,Healing=10,Armor=286,CritRating=14",
         [273337] = "Premier Champion's Mail Gauntlets|4|65|60|1|2095|Intellect=14,SpellPowerAll=16,Armor=260,Healing=16,Stamina=26",
         [273338] = "Premier Legionnaire's Mail Waistband|4|65|60|1|0|Intellect=18,SpellPowerAll=14,Armor=234,Healing=14,Stamina=28",
         [273339] = "Premier Legionnaire's Mail Bracers|4|65|60|1|0|Intellect=10,SpellPowerAll=12,Armor=182,Healing=12,Stamina=20",
@@ -21455,7 +21804,7 @@ local c = {
         [273341] = "Premier Warlord's Mail Helm|4|65|60|1|2095|Intellect=14,SpellPowerAll=16,Stamina=34,Healing=16,Armor=338,CritRating=14",
         [273342] = "Premier General's Mail Leggings|4|65|60|1|2095|Intellect=14,SpellPowerAll=16,Stamina=34,Healing=16,Armor=364,CritRating=14",
         [273343] = "Premier General's Mail Spaulders|4|65|60|1|2095|Intellect=12,SpellPowerAll=14,Armor=312,Healing=14,Stamina=28",
-        [273344] = "Premier Centurion's Ringmail Boots|4|65|60|1|2091|Intellect=14,SpellDamage=10,Stamina=26,Healing=31,Armor=286",
+        [273344] = "Premier Centurion's Ringmail Boots|4|65|60|1|2091|Intellect=14,SpellDamage=10,Stamina=21,Healing=31,Armor=286",
         [273345] = "Premier Champion's Ringmail Gauntlets|4|65|60|1|2091|Intellect=10,SpellDamage=8,Armor=260,Healing=26,Spirit=11,Stamina=26",
         [273346] = "Premier Legionnaire's Ringmail Waistband|4|65|60|1|0|Intellect=12,SpellDamage=7,Armor=234,Healing=22,Spirit=11,Stamina=26",
         [273347] = "Premier Legionnaire's Ringmail Bracers|4|65|60|1|0|Intellect=12,SpellDamage=6,Stamina=20,Healing=18,Armor=182",
@@ -21465,7 +21814,7 @@ local c = {
         [273351] = "Premier General's Ringmail Spaulders|4|65|60|1|2091|Intellect=13,SpellDamage=7,Armor=312,Healing=22,Spirit=9,Stamina=26",
         [273352] = "Premier Linked Girdle|3|60|55|1|0|Intellect=8,Stamina=19,Strength=12,Armor=199",
         [273353] = "Premier Mail Wristguards|3|60|55|1|0|Intellect=6,SpellPowerAll=7,Armor=155,Healing=7,Stamina=15",
-        [273355] = "Premier Ringmail Walkers|3|60|55|1|2090|Intellect=10,SpellDamage=7,Stamina=19,Healing=22,Armor=244",
+        [273355] = "Premier Ringmail Walkers|3|60|55|1|2090|Intellect=10,SpellDamage=5,Stamina=17,Healing=15,Armor=244",
         [273356] = "Premier Ringmail Helm|3|60|55|1|2090|Intellect=8,SpellDamage=7,Armor=288,Healing=22,Spirit=8,Stamina=26",
         [273357] = "Premier Ringmail Chestpiece|3|60|55|1|2090|Intellect=11,SpellDamage=7,Stamina=25,Healing=22,CritRating=7,Armor=354",
         [273358] = "Premier Ringmail Vices|3|60|55|1|2090|Intellect=7,SpellDamage=5,Armor=221,Healing=15,Spirit=6,Stamina=19",
@@ -21962,14 +22311,14 @@ local c = {
         [274162] = "Venom-dripping Heart|1|1|0|4|0|",
         [274163] = "Vacant Heart|1|1|0|4|0|",
         [274165] = "Eternity Cloth|1|60|0|1|0|",
-        [274176] = "Premier Scalemail Walkers|3|60|55|1|2096|Intellect=10,SpellPowerAll=7,Stamina=19,Healing=7,Armor=244,CritRating=7",
+        [274176] = "Premier Scalemail Walkers|3|60|55|1|2096|Intellect=7,SpellPowerAll=7,Stamina=16,Healing=7,Armor=244,CritRating=7",
         [274177] = "Premier Flatmail Grips|3|60|55|1|2088|Intellect=8,SpellPowerAll=8,Stamina=19,Healing=8,Strength=8,Armor=221",
         [274178] = "Premier Scalemail Helm|3|60|55|1|2096|Intellect=10,SpellPowerAll=14,Stamina=25,Healing=14,Armor=288,CritRating=7",
-        [274179] = "Premier Scalemail Chestpiece|3|60|55|1|2096|Intellect=11,SpellPowerAll=12,Stamina=24,Healing=12,Armor=354,CritRating=7",
+        [274179] = "Premier Scalemail Chestpiece|3|60|55|1|2096|Intellect=11,SpellPowerAll=12,Stamina=25,Healing=12,Armor=354,CritRating=7",
         [274180] = "Premier Flatmail Leggings|3|60|55|1|2088|Intellect=8,DodgeRating=6,Stamina=25,Strength=14,Armor=310",
         [274181] = "Premier Flatmail Shoulders|3|60|55|1|2088|Intellect=6,SpellPowerAll=7,Stamina=19,Healing=7,Strength=10,Armor=266",
         [274182] = "Premier Flatmail Wristguards|3|60|55|1|0|Intellect=5,Stamina=14,Strength=9,Armor=155",
-        [274183] = "Premier Knight-Champion's Flatmail Boots|4|65|60|1|2089|Intellect=7,SpellPowerAll=11,Stamina=27,Healing=11,Strength=12,Armor=286",
+        [274183] = "Premier Knight-Champion's Flatmail Boots|4|65|60|1|2089|Intellect=10,SpellPowerAll=12,Stamina=21,Healing=12,Strength=13,Armor=286",
         [274184] = "Premier Lieutenant Commander's Flatmail Gauntlets|4|65|60|1|2089|Intellect=10,SpellPowerAll=14,Stamina=26,Healing=14,Strength=11,Armor=260",
         [274185] = "Premier Knight-Captain's Flatmail Waistband|4|65|60|1|0|Intellect=12,Stamina=26,Strength=15,Armor=234",
         [274186] = "Premier Knight-Captain's Flatmail Bracers|4|65|60|1|0|Intellect=7,Stamina=20,Strength=12,Armor=182",
@@ -21977,13 +22326,13 @@ local c = {
         [274188] = "Premier Field Marshal's Flatmail Helm|4|65|60|1|2089|Intellect=11,CritRating=14,Armor=338,Strength=16,Stamina=34",
         [274189] = "Premier Marshal's Flatmail Leggings|4|65|60|1|2089|Intellect=10,DodgeRating=12,Stamina=34,Strength=18,Armor=364",
         [274190] = "Premier Marshal's Flatmail Spaulders|4|65|60|1|2089|Intellect=8,SpellPowerAll=14,Stamina=26,Healing=14,Strength=12,Armor=312",
-        [274192] = "Premier Flatmail Greaves|3|60|55|1|2088|Intellect=5,SpellPowerAll=7,Stamina=20,Healing=7,Strength=8,Armor=244",
+        [274192] = "Premier Flatmail Greaves|3|60|55|1|2088|Intellect=5,SpellPowerAll=7,Stamina=17,Healing=7,Strength=8,Armor=244",
         [274193] = "Premier Scalemail Vices|3|60|55|1|2096|Intellect=10,SpellPowerAll=12,Armor=221,Healing=12,Stamina=19",
-        [274194] = "Premier Flatmail Hauberk|3|60|55|1|2088|Intellect=6,CritRating=7,Armor=354,Strength=11,Stamina=25",
-        [274195] = "Premier Scalemail Legguards|3|60|55|1|2096|Intellect=8,SpellPowerAll=14,Stamina=25,Healing=14,Armor=310,CritRating=7",
-        [274196] = "Premier Flatmail Headguard|3|60|55|1|2088|Intellect=6,CritRating=7,Armor=288,Strength=11,Stamina=26",
+        [274194] = "Premier Flatmail Hauberk|3|60|55|1|2088|Intellect=10,CritRating=7,Armor=354,Strength=11,Stamina=25",
+        [274195] = "Premier Scalemail Legguards|3|60|55|1|2096|Intellect=8,SpellPowerAll=14,Stamina=26,Healing=14,Armor=310,CritRating=7",
+        [274196] = "Premier Flatmail Headguard|3|60|55|1|2088|Intellect=10,CritRating=7,Armor=288,Strength=12,Stamina=25",
         [274197] = "Premier Scalemail Pauldrons|3|60|55|1|2096|Intellect=9,SpellPowerAll=9,Armor=266,Healing=9,Stamina=20",
-        [274198] = "Premier Knight-Champion's Scalemail Boots|4|65|60|1|2097|Intellect=10,SpellPowerAll=11,Stamina=26,Healing=11,Armor=286,CritRating=14",
+        [274198] = "Premier Knight-Champion's Scalemail Boots|4|65|60|1|2097|Intellect=10,SpellPowerAll=10,Stamina=21,Healing=10,Armor=286,CritRating=14",
         [274199] = "Premier Lieutenant Commander's Scalemail Gauntlets|4|65|60|1|2097|Intellect=14,SpellPowerAll=16,Armor=260,Healing=16,Stamina=26",
         [274200] = "Premier Knight-Captain's Scalemail Waistband|4|65|60|1|0|Intellect=18,SpellPowerAll=14,Armor=234,Healing=14,Stamina=28",
         [274201] = "Premier Knight-Captain's Scalemail Bracers|4|65|60|1|0|Intellect=10,SpellPowerAll=12,Armor=182,Healing=12,Stamina=20",
@@ -21991,7 +22340,7 @@ local c = {
         [274203] = "Premier Field Marshal's Scalemail Helm|4|65|60|1|2097|Intellect=14,SpellPowerAll=16,Stamina=34,Healing=16,Armor=338,CritRating=14",
         [274204] = "Premier Marshal's Scalemail Leggings|4|65|60|1|2097|Intellect=14,SpellPowerAll=16,Stamina=34,Healing=16,Armor=364,CritRating=14",
         [274205] = "Premier Marshal's Scalemail Spaulders|4|65|60|1|2097|Intellect=12,SpellPowerAll=14,Armor=312,Healing=14,Stamina=28",
-        [274206] = "Premier Knight-Champion's Linkmail Boots|4|65|60|1|2093|Intellect=14,SpellDamage=10,Stamina=26,Healing=31,Armor=286",
+        [274206] = "Premier Knight-Champion's Linkmail Boots|4|65|60|1|2093|Intellect=14,SpellDamage=10,Stamina=21,Healing=31,Armor=286",
         [274207] = "Premier Lieutenant Commander's Linkmail Gauntlets|4|65|60|1|2093|Intellect=10,SpellDamage=8,Armor=260,Healing=26,Spirit=11,Stamina=26",
         [274208] = "Premier Knight-Captain's Linkmail Waistband|4|65|60|1|0|Intellect=12,SpellDamage=7,Armor=234,Healing=22,Spirit=11,Stamina=26",
         [274209] = "Premier Knight-Captain's Linkmail Bracers|4|65|60|1|0|Intellect=12,SpellDamage=6,Stamina=20,Healing=18,Armor=182",
@@ -22001,7 +22350,7 @@ local c = {
         [274213] = "Premier Marshal's Linkmail Spaulders|4|65|60|1|2093|Intellect=13,SpellDamage=7,Armor=312,Healing=22,Spirit=9,Stamina=26",
         [274214] = "Premier Flatmail Girdle|3|60|55|1|0|Intellect=8,Stamina=19,Strength=12,Armor=199",
         [274215] = "Premier Scalemail Wristguards|3|60|55|1|0|Intellect=6,SpellPowerAll=7,Armor=155,Healing=7,Stamina=15",
-        [274217] = "Premier Linkmail Walkers|3|60|55|1|2092|Intellect=10,SpellDamage=7,Stamina=19,Healing=22,Armor=244",
+        [274217] = "Premier Linkmail Walkers|3|60|55|1|2092|Intellect=10,SpellDamage=5,Stamina=17,Healing=15,Armor=244",
         [274218] = "Premier Linkmail Helm|3|60|55|1|2092|Intellect=8,SpellDamage=7,Armor=288,Healing=22,Spirit=8,Stamina=26",
         [274219] = "Premier Linkmail Chestpiece|3|60|55|1|2092|Intellect=11,SpellDamage=7,Stamina=25,Healing=22,CritRating=7,Armor=354",
         [274220] = "Premier Linkmail Vices|3|60|55|1|2092|Intellect=7,SpellDamage=5,Armor=221,Healing=15,Spirit=6,Stamina=19",
@@ -22072,8 +22421,8 @@ local c = {
         [274384] = "Illegible Dogtags|2|58|0|1|0|Intellect=4,Healing=13,Stamina=5,SpellPowerAll=13",
         [274385] = "Abomination Chain|3|42|37|1|0|Stamina=10,Defense=3,AttackPower=6",
         [274386] = "Toy Soldier|2|58|0|1|0|",
-        [274387] = "Swiftfeather Arrow|4|65|60|1|0|DPS=8.1667",
-        [274388] = "Swiftstrike Shot|4|65|60|1|0|DPS=8.1667",
+        [274387] = "Swiftfeather Arrow|4|65|60|0|0|DPS=8.1667",
+        [274388] = "Swiftstrike Shot|4|65|60|0|0|DPS=8.1667",
         [274389] = "Schematic: Swiftfeather Arrow|4|1|1|1|0|",
         [274390] = "Schematic: Swiftstrike Shot|4|1|1|1|0|",
         [274391] = "Formula: Enchant Off Hand - Superior Intellect|3|1|1|1|0|",
@@ -22194,7 +22543,7 @@ local c = {
         [274702] = "Level 38 Enchanting Supplies|3|1|0|0|0|",
         [274703] = "Level 57 Enchanting Supplies|3|1|0|0|0|",
         [274704] = "Level 60 Enchanting Supplies|3|1|0|0|0|",
-        [274706] = "Reins of the Striped Dawnsaber|3|40|40|3|0|",
+        [274706] = "Reins of the Striped Dawnsaber|3|40|40|1|0|",
         [274709] = "Potion of Experience - Level 23|1|23|1|0|0|",
         [274710] = "Potion of Experience - Level 38|1|38|1|0|0|",
         [274711] = "Potion of Experience - Level 57|1|57|1|0|0|",
@@ -22213,7 +22562,7 @@ local c = {
         [274746] = "Sea Giant's Toe Ring|2|35|30|1|0|SpellDamage=6,Healing=18",
         [274747] = "Soggy Boots|2|35|30|1|0|Armor=32,Spirit=8,Intellect=4",
         [274748] = "Booty Bay Bruiser's Buckshot|3|35|30|1|0|AttackPower=9,Stamina=3,DPS=18.0357",
-        [274749] = "Souvenir Sea Shell|3|35|30|1|0|Stamina=13",
+        [274749] = "Souvenir Sea Shell|3|35|30|1|0|Stamina=10",
         [274750] = "Reflective Wristguards|2|45|40|1|0|Armor=191,Healing=9,SpellDamage=3,Intellect=8",
         [274751] = "Sunburn Spaulders|2|45|40|1|0|Armor=91,Agility=11,AttackPower=12",
         [274752] = "Sandstorm Cover|2|45|40|1|0|Armor=30,Healing=4,Spirit=8,SpellPowerAll=4",
@@ -22228,7 +22577,7 @@ local c = {
         [274761] = "Parachute-Priest Pager|3|55|50|1|0|",
         [274776] = "Uninfected Root Sample|1|1|55|1|0|",
         [274795] = "Embroidered Scabbard|1|55|0|4|0|",
-        [274799] = "Ochre Skeletal Warhorse|4|60|60|3|0|",
+        [274799] = "Ochre Skeletal Warhorse|4|60|60|1|0|",
         [274800] = "Fishing Trip|1|55|55|1|0|",
         [274895] = "Darkspear Islands Mark of Honor|2|1|0|1|0|",
         [274915] = "Sacristan Band|2|38|0|1|0|Stamina=7,Healing=6,SpellDamage=2",
@@ -22241,10 +22590,10 @@ local c = {
         [274926] = "Matriarch Quiver|2|40|35|1|0|",
         [274928] = "Curly's Chopper|2|39|0|1|0|Stamina=6,Defense=2,DPS=21.5",
         [274929] = "Hurley's Felling Axe|2|39|0|1|0|Strength=7,DPS=27.7273",
-        [274930] = "Umber Galestrider|3|40|40|3|0|",
+        [274930] = "Umber Galestrider|3|40|40|1|0|",
         [274931] = "Fur-Lined Bracers|2|38|0|1|0|Armor=47,Agility=5,Spirit=5",
         [274932] = "Coyote Hide Wraps|2|38|0|1|0|Armor=47,Healing=6,Stamina=5,SpellPowerAll=6",
-        [274933] = "Swift Umber Galestrider|4|60|60|3|0|",
+        [274933] = "Swift Umber Galestrider|4|60|60|1|0|",
         [274935] = "Tessa's Tonic|1|45|35|1|0|",
         [274938] = "Gnollhide Tunic|2|40|0|1|0|Armor=110,Agility=11,Spirit=11",
         [274939] = "Southern Watch Leggings|2|40|0|1|0|Armor=202,Strength=13,Stamina=8",
@@ -22340,25 +22689,25 @@ local c = {
         [275521] = "Crest of Lordaeron|1|1|0|1|0|",
         [275580] = "Pattern: Venomspew Gloves|3|1|1|1|0|",
         [275581] = "Pattern: Venomspew Cord|3|1|1|1|0|",
-        [275582] = "Pattern: Venomspew Footpads|3|1|1|1|0|SpellPowerAll=22",
+        [275582] = "Pattern: Venomspew Footpads|3|1|1|1|0|",
         [275583] = "Pattern: Swarmtender's Gloves|3|1|1|1|0|",
         [275584] = "Pattern: Swarmtender's Cord|3|1|1|1|0|",
         [275585] = "Pattern: Swarmtender's Footpads|3|1|1|1|0|",
         [275586] = "Pattern: Bileblister Claws|3|1|1|1|0|",
         [275587] = "Pattern: Bileblister Girdle|3|1|1|1|0|",
-        [275588] = "Pattern: Bileblister Boots|3|1|1|1|0|SpellPowerAll=22",
+        [275588] = "Pattern: Bileblister Boots|3|1|1|1|0|",
         [275589] = "Pattern: Hivethrasher's Claws|3|1|1|1|0|",
         [275590] = "Pattern: Hivethrasher's Girdle|3|1|1|1|0|",
         [275591] = "Pattern: Hivethrasher's Boots|3|1|1|1|0|",
         [275592] = "Pattern: Scalegut Clenchers|3|1|1|1|0|",
         [275593] = "Pattern: Scalegut Belt|3|1|1|1|0|",
-        [275594] = "Pattern: Scalegut Treaders|3|1|1|1|0|AttackPower=38",
+        [275594] = "Pattern: Scalegut Treaders|3|1|1|1|0|",
         [275595] = "Pattern: Broodwatcher's Clenchers|3|1|1|1|0|",
         [275596] = "Pattern: Broodwatcher's Belt|3|1|1|1|0|",
         [275597] = "Pattern: Broodwatcher's Treaders|3|1|1|1|0|",
         [275598] = "Plans: Goregasher Grips|3|1|1|1|0|",
         [275599] = "Plans: Goregasher Support|3|1|1|1|0|",
-        [275600] = "Plans: Goregasher Stompers|3|1|1|1|0|AttackPower=38",
+        [275600] = "Plans: Goregasher Stompers|3|1|1|1|0|",
         [275601] = "Plans: Clutchlord's Grips|3|1|1|1|0|",
         [275602] = "Plans: Clutchlord's Support|3|1|1|1|0|",
         [275603] = "Plans: Clutchlord's Stompers|3|1|1|1|0|",
@@ -22475,18 +22824,22 @@ local c = {
         [275985] = "Unsullied Owl Statuette|3|60|60|1|0|",
         [275989] = "Tome of Dalaran|2|1|0|1|0|",
         [275991] = "Galvinquam's Drinking Gourd|1|60|0|4|0|",
-        [275993] = "White Kodo|3|40|40|3|0|",
+        [275993] = "White Kodo|3|40|40|1|0|",
         [275994] = "Captain Nials' Correspondence|1|1|1|4|0|",
         [275996] = "The Founding of Dalaran|1|1|1|4|0|",
         [275997] = "Cracked Sentry Core|1|1|1|4|0|",
         [275998] = "Galvinquam's Belongings|1|60|0|4|0|",
-        [276063] = "Black Skeletal Horse|3|40|40|3|0|",
+        [276063] = "Black Skeletal Horse|3|40|40|1|0|",
         [276064] = "War Paint Wrap|1|60|0|4|0|",
         [276065] = "Fizzgrimble's Mysterious Crate|1|1|1|4|0|",
         [276066] = "Frazzlespark's Crate|1|1|1|4|0|",
         [276067] = "Lost Shipping Crate|1|1|1|4|0|",
         [276068] = "Cask of Powderfuse Port|1|1|1|4|0|",
+        [276069] = "Gravetoll Gavel|3|59|54|1|0|Intellect=21,SpellDamage=42,DPS=37.5758,Stamina=16,Healing=127,Spirit=13",
         [276070] = "Chol'aruk's Head|1|1|0|4|0|",
+        [276071] = "The Black Helm|3|59|54|1|0|Armor=501,Defense=8,Strength=13,Stamina=25",
+        [276072] = "Soulwoven Drape|3|61|56|1|0|SpellDamage=7,Stamina=8,Healing=20,Spirit=12,Armor=43",
+        [276073] = "Band of the Damned|3|61|56|1|0|Intellect=11,Healing=15,Spirit=6,SpellPowerAll=15",
         [276087] = "Nail|1|60|0|4|0|",
         [276088] = "Metal Bracket|1|60|0|4|0|",
         [276099] = "Sawyer Family Ledger|1|60|0|4|0|",
@@ -22558,6 +22911,7 @@ local c = {
         [276561] = "Black Tome|1|1|0|1|0|",
         [276614] = "Zayus's Exorcism Censer|1|1|0|4|0|",
         [276631] = "Coldflame Saber|3|29|21|1|0|Intellect=7,Healing=32,DPS=12.25,SpellPowerAll=32",
+        [276632] = "Wit's Edge|3|65|57|1|0|Intellect=4,Healing=74,DPS=28.25,SpellPowerAll=74",
         [276637] = "Currency Wallet|1|1|1|1|0|",
         [276685] = "Militia Bow|2|14|0|1|0|Agility=1,DPS=5.7143",
         [276686] = "Junior's Hunting Bow|1|10|0|1|0|DPS=3.5294",
@@ -22958,7 +23312,7 @@ local c = {
         [277957] = "Primitive Key|1|1|0|4|0|",
         [277958] = "Putrescent Bear Organs|1|1|0|4|0|",
         [277959] = "Putrescent Wolf Organs|1|1|0|4|0|",
-        [277960] = "Lavender Kodo|3|40|40|3|0|",
+        [277960] = "Lavender Kodo|3|40|40|1|0|",
         [277972] = "Mirrorscale's Wing|1|1|0|4|0|",
         [277973] = "Stag Lord's Bauble|1|1|0|4|0|",
         [277974] = "Twice Reordered Package|1|1|0|4|0|",
@@ -23020,6 +23374,7 @@ local c = {
         [278543] = "Pouch of Tomb Dust|1|32|0|4|0|",
         [278567] = "Stromgarde Hood|2|39|0|1|0|Armor=152,HitRating=5,Stamina=8",
         [278569] = "Yesterday's Leftovers|1|5|1|0|0|",
+        [278570] = "Mardenholde Armbands|3|63|58|1|0|HolyPower=15,Stamina=10,Armor=39,Intellect=10",
         [278744] = "Mirage Mirror|2|40|35|1|0|",
         [278796] = "Condensed Elemental Fragment|0|1|0|0|0|",
         [278797] = "Crystallized Elemental Shard|0|1|0|0|0|",
@@ -23151,6 +23506,7 @@ local c = {
         [279468] = "Monster Feet (DNT)|0|1|1|1|0|Armor=11",
         [279469] = "Grimy Key|1|1|0|4|0|",
         [279470] = "Monster Hand (DNT)|0|1|1|1|0|Armor=10",
+        [279471] = "Alcaz Operative Insignia|3|1|1|1|0|",
         [279472] = "Pristine Pesterhide Pelt|1|30|0|4|0|",
         [279473] = "Makeshift Belt|2|55|1|1|0|Intellect=12,SpellPowerAll=6,Armor=40,Healing=6,Spirit=10",
         [279474] = "Dustwallow Dirk|3|55|1|1|0|Stamina=10,Agility=6,DPS=36.4706",
@@ -23294,6 +23650,7 @@ local c = {
         [280010] = "Gargantuan Wristguards|3|63|58|1|0|AttackPower=20,HitRating=8,Stamina=11,Spirit=5,Armor=287",
         [280011] = "Deeproar Cord|3|63|58|1|0|Armor=50,CritRating=14,Spirit=14,Intellect=12",
         [280012] = "Talon of Tor'Rel|3|63|58|1|0|AttackPower=16,Stamina=5,DPS=41.3889",
+        [280013] = "Frostfang Mail Vest|3|63|58|1|0|SpellDamage=13,Armor=370,Healing=40,MP5=8,Stamina=17",
         [280014] = "Raptorscale Bulwark|3|63|58|1|0|Armor=2153,Strength=12,ParryRating=9",
         [280015] = "Venomvessel Ring|3|63|58|1|0|Stamina=11,HitRating=11,Spirit=9",
         [280016] = "Spiderchitin Wrap|3|63|58|1|0|Armor=176,Strength=18,Stamina=24",
@@ -23302,12 +23659,14 @@ local c = {
         [280019] = "Dinofrill Casque|3|63|58|1|0|Stamina=24,Agility=17,CritRating=14,Armor=301",
         [280020] = "Deep Jungle Rifle|3|63|58|1|0|AttackPower=14,Stamina=5,HitRating=5,DPS=32.2581",
         [280021] = "Tooth of the Matriarch|3|63|58|1|0|CritRating=7,Agility=10,DPS=41.4706",
+        [280022] = "Scaleguard Scimitar|3|63|58|1|0|AttackPower=14,Stamina=8,DPS=41.3636,BlockValue=12",
         [280023] = "Nanaya's Control Spire|3|63|58|1|0|Intellect=19,DPS=40,Healing=72,MP5=7,SpellPowerAll=72",
         [280024] = "Legplates of Reinforced Crystal|3|63|58|1|0|Armor=575,Stamina=22,Strength=18,CritRating=14",
         [280025] = "Leggings of Curation|3|63|58|1|0|SpellPowerAll=22,Stamina=19,Healing=22,MP5=7,Armor=78",
         [280026] = "Albinofur Grips|3|63|58|1|0|WeaponSkill=1,Agility=12,Stamina=18,Armor=231",
         [280027] = "Crownroar Chestplate|3|63|58|1|0|SpellDamage=13,Armor=657,Healing=40,Spirit=21,CritRating=14",
         [280028] = "Heartflame Gauntlets|3|63|58|1|0|HolyPower=18,Armor=410,CritRating=14,Intellect=14",
+        [280029] = "Cinderedge Crescent|3|63|58|1|0|AttackPower=14,Stamina=10,CritRating=7,DPS=41.25",
         [280031] = "Sparklance Wand|3|63|58|1|0|CritRating=7,ArcanePower=7,Spirit=4,DPS=64.1176",
         [280032] = "Bolt's Charged Eyeball|3|63|58|1|0|",
         [280042] = "Tattered Spellbook|1|1|1|4|0|",
@@ -23324,7 +23683,7 @@ local c = {
         [280065] = "Behemoth Bones|3|61|56|1|0|AttackPower=34",
         [280066] = "Trousers of the Ebon Giant|3|61|56|1|0|SpellPowerAll=21,Stamina=20,Healing=21,Spirit=16,Armor=76",
         [280067] = "Blackmaw Chain Belt|3|61|56|1|0|Stamina=12,Agility=17,DodgeRating=12,Armor=202",
-        [280068] = "Bloody Claws of Attack|3|61|56|1|0|AttackPower=8,WeaponSkill=1,CritRating=7,DPS=40.1923",
+        [280068] = "Bloody Claws of Attack|3|61|56|1|0|AttackPower=8,CritRating=7,DPS=40.1923",
         [280069] = "Shamanic Wristguards|3|61|56|1|0|Armor=157,Stamina=13,MP5=3,Intellect=10",
         [280070] = "Veilpiercer Girdle|3|61|56|1|0|Defense=9,Stamina=13,Agility=8,Spirit=8,Armor=97",
         [280071] = "Flamebreak Talisman|3|61|56|1|0|",
@@ -23337,6 +23696,9 @@ local c = {
         [280078] = "Apprentice's Protective Treads|3|57|52|1|0|Stamina=12,Agility=11,CritRating=14,Armor=112",
         [280079] = "Lunarlight Robe|3|57|52|1|0|Stamina=17,Spirit=14,Armor=163",
         [280080] = "Claymore of Two Moons|3|57|52|1|0|Stamina=17,DPS=48.871",
+        [280081] = "Sad-Sack Sandals|3|57|52|1|0|CritRating=7,Stamina=13,Armor=56",
+        [280082] = "Staff of Sorrow|3|57|52|1|0|Intellect=15,HitRating=15,DPS=36.25,Healing=66,Spirit=21,SpellPowerAll=66",
+        [280083] = "Truesight Rifle|3|57|52|1|0|AttackPower=8,Stamina=4,CritRating=7,DPS=29.2857",
         [280084] = "Furbolg Rib Protector|3|57|52|1|0|Stamina=15,Agility=20,HitRating=15,Armor=338",
         [280085] = "Tunnelweb Pincer|3|57|52|1|0|Stamina=8,Agility=7,CritRating=6,DPS=37.5",
         [280086] = "Octofinger Gauntlets|3|57|52|1|0|Armor=373,Stamina=16,DodgeRating=12,HitRating=8",
@@ -23402,7 +23764,7 @@ local c = {
         [280505] = "Old Leather Jacket|2|39|0|1|0|Armor=109,Agility=2,Strength=15,Stamina=2",
         [280544] = "Cerulean Prideclaw|4|60|60|1|0|",
         [280567] = "Small Sack of Gems|1|1|1|1|0|",
-        [280604] = "Rage of the Storm|3|40|1|1|0|Intellect=12,Stamina=15,DPS=35.625",
+        [280604] = "Rage of the Storm|3|40|1|1|0|Stamina=15,Strength=16,DPS=35.5556",
         [280605] = "Tidebringer's Claw|3|40|1|1|0|Stamina=5,Healing=86,SpellDamage=28,DPS=18.125",
         [280607] = "Lightning's Grasp|3|40|1|1|0|Intellect=6,Healing=46,DPS=18.1818,SpellPowerAll=46",
         [280608] = "Eldarath Relic|1|1|1|4|0|",
@@ -23571,6 +23933,8 @@ local c = {
         [281586] = "Elderwild Construction Hammer|3|60|1|1|0|Intellect=10,DPS=26.25,Stamina=8,Healing=68,Spirit=4,SpellPowerAll=68",
         [281587] = "Greatflank Flayer|3|60|1|1|0|Stamina=11,Defense=3,Strength=5,DPS=39.3478",
         [281588] = "Nature's Cull|3|60|1|1|0|AttackPower=23,Stamina=26,Armor=115,DPS=51.3636",
+        [281598] = "Rusthowl's Worn Collar|2|57|52|2|0|Stamina=12",
+        [281599] = "Ragged Colors|2|60|55|2|0|Armor=39,Spirit=5,AttackPower=25",
         [281600] = "Wail of Death|2|61|56|2|0|Stamina=6,Spirit=4,DPS=54.1667",
         [281628] = "Blade of Bandarion|3|52|0|1|0|Stamina=11,Strength=5,DPS=34.5",
         [281629] = "Patrol Orders|1|1|1|1|0|",
@@ -23668,6 +24032,7 @@ local c = {
         [282021] = "Dreadscorn's Spaulders|2|59|54|2|0|Stamina=13,Strength=7,Armor=421",
         [282023] = "Clack's Claw|2|55|50|2|0|Spirit=4,Strength=8,DPS=32.8",
         [282026] = "Unyielding Battle Signet|2|58|53|2|0|Stamina=12,Strength=3,Spirit=3",
+        [282027] = "Scales of the Devourer|3|62|57|1|0|Agility=14,SpellPowerAll=16,Armor=365,Healing=16,Strength=15,Stamina=18",
         [282028] = "Broken Frond of Celastrus|1|1|0|4|0|",
         [282029] = "Reaver's Repeater|2|58|53|2|0|RangedAttackPower=13,Stamina=5,DPS=27.037",
         [282046] = "Gnome Skull|0|1|0|0|0|",
@@ -23680,6 +24045,7 @@ local c = {
         [282071] = "Shin Slicers|2|56|51|2|0|Stamina=5,Agility=7,CritRating=14,Armor=367",
         [282074] = "Ogre Sorcerer Belt|2|56|51|2|0|Intellect=13,SpellPowerAll=9,Armor=41,Healing=9,Strength=5",
         [282080] = "Flame Seared Signet|2|57|52|2|0|Stamina=8,Healing=6,SpellPowerAll=6",
+        [282085] = "Dragonblood Greatsword|3|62|57|1|0|Stamina=26,AttackPower=42,Strength=14,DPS=53",
         [282088] = "Heart of Smoldar|2|52|47|2|0|Stamina=8,Healing=16,SpellDamage=5",
         [282094] = "Blackheart's Vest|2|52|47|2|0|Armor=137,Agility=15,Strength=16,Spirit=-5",
         [282097] = "Unbreakable Golem Grips|2|48|43|2|0|Armor=389,Stamina=10",
@@ -23729,11 +24095,13 @@ local c = {
         [282655] = "Bog Pickers|2|27|22|2|0|Armor=25,Stamina=5",
         [282658] = "Dragonmaw Battle Shroud|2|32|27|2|0|Armor=22,Strength=7,Spirit=1",
         [282699] = "Cleansed Water Globe|2|1|1|1|0|",
+        [282700] = "Shadow Scalper|2|42|37|2|0|DPS=24.0385",
         [282702] = "Molok's Masher|2|41|36|2|0|Stamina=17,DPS=30.1351",
         [282703] = "Needletooth's Needletooth|2|37|32|2|0|DPS=19.7059",
         [282704] = "Shadow Council Apprentice's Mantle|3|41|36|1|0|Intellect=12,HitRating=10,Armor=44",
         [282705] = "Ruul's Secondstone|3|41|36|1|0|Spirit=9,SpellDamage=9",
         [282706] = "Rotting Meat|3|44|39|1|0|Stamina=12,SpellDamage=8",
+        [282707] = "Arcanum of Binding|2|50|0|1|0|",
         [282710] = "Dun Garok Rifle|3|30|25|1|0|Agility=3,Spirit=3,DPS=14.8077",
         [282711] = "Naga Maiden's Gown|2|35|30|2|0|Armor=46,Stamina=9,Intellect=9",
         [282712] = "Libram of Binding|2|50|50|0|0|",
@@ -23749,6 +24117,7 @@ local c = {
         [283255] = "Syndicate Executioner's Slicer|2|38|33|2|0|Agility=4,Strength=4,DPS=20.5769",
         [283259] = "Bearhide Vicegrips|2|16|11|2|0|Armor=44,Strength=3",
         [283361] = "Gorefang's Runners|2|16|11|2|0|Stamina=1,Agility=3,Armor=49",
+        [283387] = "Scrawled Note|1|1|1|1|0|",
         [283389] = "Skonk's List|1|1|0|0|0|",
         [283460] = "Decaying Flesh Belt|2|12|7|2|0|Intellect=2,Armor=35",
         [283462] = "Bayne's Bite|2|12|7|2|0|Strength=1,DPS=6.5625",
@@ -23768,14 +24137,17 @@ local c = {
         [284066] = "Husk of the Husk|2|64|59|2|0|Armor=1946,Healing=18,Spirit=12,SpellDamage=6",
         [284067] = "Rusted Family Memento|2|54|49|2|0|CritRating=7,Spirit=10",
         [284070] = "Dreadwhisper's Touch|2|60|55|2|0|Stamina=11,DPS=53.125",
+        [284072] = "Scarlet Judge's Mace|0|62|57|0|0|Intellect=8,DPS=22.25",
         [284079] = "High Clerist's Seal|3|65|60|1|0|Stamina=11,Healing=16,Spirit=14,SpellDamage=5",
         [284086] = "Scarlet Executioner's Guise|3|62|57|1|0|Armor=141,Spirit=17,Strength=24,HitRating=15",
+        [284091] = "Scarlet Forgemaster's Bindings|3|64|59|1|0|Stamina=11,Agility=11,AttackPower=33,Armor=292",
         [284092] = "Keystone Fragment|3|1|0|1|0|",
         [284093] = "Keystone Fragment|4|1|0|1|0|",
-        [284097] = "Everstaring Abomination Eye|3|60|55|1|0|Stamina=13,HitRating=10,Spirit=14",
+        [284097] = "Everstaring Abomination Eye|3|60|55|1|0|Stamina=13,HitRating=10,Spirit=6",
         [284100] = "Horseman's Unyielding Shroud|3|62|57|1|2130|Armor=44,Stamina=13,AttackPower=27",
         [284101] = "Blade of Senseless Slaughter|3|62|57|1|2130|Stamina=5,Agility=4,Strength=11,DPS=40.7407",
         [284102] = "Signet of the Soulless Rider|3|62|57|1|2130|Spirit=9,HitRating=5,Strength=14",
+        [284104] = "Cultist's Cuffs|2|58|53|2|0|Armor=33,Healing=12,Spirit=8,SpellPowerAll=12",
         [284105] = "Wildhammer Soldier's Spaulders|2|57|52|2|0|Armor=111,Agility=11,Strength=13",
         [284146] = "Essene's Waterskin|1|1|0|4|0|",
         [284150] = "Essene's Spellbook|1|1|0|4|0|",
@@ -23785,6 +24157,8 @@ local c = {
         [284158] = "Mossflayer Warlord's Girdle|2|60|55|2|0|Agility=9,SpellPowerAll=6,Armor=181,Healing=6,Strength=14",
         [284161] = "Treads of Rotting Flesh|2|59|54|2|0|Stamina=7,Armor=52,Intellect=14",
         [284162] = "Mossflayer Witchdoctor's Robe|2|61|56|2|0|Intellect=8,MP5=5,Armor=79",
+        [284163] = "Scarlet Hearthstone|1|1|0|1|0|",
+        [284164] = "Scarlet Hearthstone|3|35|0|1|0|",
         [284165] = "Duskstalker's Hide|2|11|6|2|0|Armor=58,Agility=2",
         [284166] = "Gnarlpine War Staff|2|13|8|2|0|Strength=3,DPS=8.9394",
         [284167] = "Blackmoss Robes|2|15|10|2|0|Armor=28,Stamina=3,Intellect=3",
@@ -23808,7 +24182,9 @@ local c = {
         [284257] = "Icesworn Decapitator|3|59|54|1|0|DPS=50.5556,Stamina=18,Healing=13,Strength=17,SpellPowerAll=13",
         [284261] = "Magically Fortified Legguards|3|61|56|1|0|Defense=6,SpellPowerAll=16,Stamina=27,Healing=16,Armor=557",
         [284262] = "Howling Hide|2|57|52|2|0|Armor=37,Strength=12",
+        [284266] = "Wintersaber Hide Lined Gloves|2|59|54|2|0|Armor=48,Stamina=7",
         [284268] = "Furbolg Shaman's Girdle|2|61|56|2|0|Armor=88,Strength=14,MP5=5",
+        [284270] = "Ancient Giant's Gaze|3|56|51|1|0|Armor=585,Strength=21,Stamina=16",
         [284271] = "Emergency Cache|1|1|0|1|0|",
         [284272] = "Chimaera Hide Legs|2|50|45|2|0|Armor=116",
         [284282] = "Queen Guard's Royal Seal|3|50|45|2|0|Stamina=6,Agility=8,Strength=11",
@@ -23835,9 +24211,11 @@ local c = {
         [284584] = "Coin Pouch|1|1|1|1|0|",
         [284585] = "Coin Pouch|1|1|1|1|0|",
         [284586] = "Coin Pouch|1|1|1|1|0|",
+        [284587] = "Ankle Slicers|4|63|58|2|0|AttackPower=12,Stamina=9,DPS=40.8333",
         [284597] = "Monster - Mace, Thaurissan Hammer|0|1|1|0|0|DPS=0.75",
         [284664] = "Packmule Treat|2|30|0|1|0|",
         [284666] = "Wolf Whistle|2|24|19|1|0|",
+        [284667] = "Flame Seared Sword|3|28|23|2|0|DPS=17.6923",
         [284668] = "Apothecary's Concoction|2|24|19|2|0|MP5=2,Stamina=-5",
         [284696] = "Carved Furbolg Tooth|2|29|24|2|0|Agility=2,Strength=2,DPS=13.6842",
         [284697] = "Arcane Charged Robes|2|34|29|2|0|Armor=46,ArcanePower=12,Intellect=9",
@@ -23857,6 +24235,7 @@ local c = {
         [284844] = "Dragonmaw Dispatch|1|1|0|4|0|",
         [284845] = "Thicket Raptor Hide|1|1|0|4|0|",
         [284847] = "Hippogryph Down Leggings|2|50|45|2|0|Armor=57,Healing=23,SpellDamage=7,Intellect=16",
+        [284848] = "Diamond Studded Belt|2|47|42|2|0|Armor=255,Defense=4,Strength=5,Stamina=11",
         [284850] = "Naga Caster's Staff|2|48|43|2|0|Intellect=10,SpellPowerAll=40,Stamina=15,Healing=40,DPS=27.5806",
         [284859] = "Silithid Sinew Crossbow|2|49|44|2|0|Stamina=5,Agility=3,DPS=22.7778",
         [284866] = "Windserpent Scaled Cloak|2|51|46|2|0|Armor=33,Agility=10,HitRating=5",
@@ -23867,6 +24246,7 @@ local c = {
         [285043] = "Snarling Fang|2|47|42|2|0|AttackPower=9,Stamina=6,DPS=28.0556",
         [285047] = "Yeti Hide Stompers|2|50|45|2|0|Armor=91,Strength=15,Stamina=4",
         [285063] = "Black Brood Battleguards|3|47|42|1|0|Armor=343,Defense=6,Strength=9,Stamina=13",
+        [285066] = "Ooze Rummagers|3|59|54|1|0|Stamina=17,Spirit=17,Armor=52",
         [285088] = "Ooze Dripping Robes|2|44|39|2|0|Stamina=9,Armor=58,Intellect=12",
         [285089] = "Swamp Roamer's Band|2|39|34|2|0|Stamina=6",
         [285093] = "Ripscaled Cuffs|2|41|36|2|0|Stamina=6,Agility=6,Armor=49",
@@ -24068,13 +24448,21 @@ local c = {
         [286570] = "Silithid Flesh Bindings|2|52|47|2|0|Armor=60,Strength=8,Stamina=8",
         [286571] = "Silithid Hauberk|2|52|47|2|0|Armor=283,Agility=16,Intellect=12",
         [286572] = "Ogre Casting Cloak|2|51|46|2|0|Armor=33,Healing=5,Strength=10,SpellPowerAll=5",
+        [286573] = "Unleashed Swarm|3|1|1|1|0|",
+        [286590] = "Silithid Queen's Husk|3|61|56|1|0|CritRating=14,Armor=637,Stamina=23,AttackPower=24",
+        [286597] = "Calm Air Band|2|60|55|2|0|Healing=19,Spirit=11,SpellDamage=6",
         [286604] = "Spawn of Grubthor|2|60|50|1|0|",
+        [286609] = "Krellack's Carapace|2|58|53|2|0|Armor=1776,Defense=7,Spirit=6",
+        [286612] = "Sand-Covered Silk Sash|2|59|54|2|0|Armor=43,Stamina=16",
         [286613] = "King Mosh's Tooth|3|62|57|1|0|AttackPower=13,Agility=11,DPS=40.625",
         [286614] = "Gruff's Tough Tongue|3|59|54|1|0|Intellect=7,Spirit=13,NaturePower=12",
         [286616] = "Matriarch's Prowlers|2|52|47|2|0|Armor=94,Agility=11",
         [286618] = "Clutchmother's Guards|2|56|51|2|0|Armor=334,HitRating=10,Stamina=13",
         [286619] = "Big Basher's Belt|2|54|49|2|0|WeaponSkill=1,Strength=9,Armor=80",
         [286639] = "Ambassador's Bloodrobes|3|38|33|1|0|Stamina=12,Spirit=6,Armor=55",
+        [286641] = "Cannibal's Cleaver|3|50|45|1|0|Stamina=19,AttackPower=17,WeaponSkill=1,DPS=43.4722",
+        [286644] = "Shattered Atal'ai Spear|3|50|45|1|0|",
+        [286645] = "Reforged Atal'ai Spear|3|50|45|1|0|CritRating=14,Stamina=14,Strength=19,DPS=43.4211",
         [286646] = "Gill's Gills|3|40|35|1|0|AttackPower=12",
         [286647] = "Depleted Crystal Heart|1|1|1|4|0|",
         [286648] = "Depleted Crystal Heart|1|1|1|4|0|",
@@ -24158,6 +24546,7 @@ local c = {
         [287025] = "Enchantresses' Spire|3|54|49|2|0|Intellect=21,SpellPowerAll=62,Stamina=21,Healing=62,DPS=34.5833",
         [287026] = "Escape Plan|3|54|49|2|0|Agility=11,DPS=27.8571",
         [287028] = "Tormented Cuffs|3|58|53|2|0|Armor=36,Healing=9,Stamina=13,SpellPowerAll=9",
+        [287029] = "Nature Guardian's Legguards|3|57|52|2|0|Intellect=22,Armor=142,MP5=7,NaturePower=24",
         [287030] = "Blackmaw Bindings|3|59|54|2|0|Agility=14,SpellPowerAll=10,Armor=153,Healing=10,Spirit=6",
         [287031] = "Spearfisher's Waders|3|58|53|2|0|Intellect=19,Agility=17,DodgeRating=10,Armor=301",
         [287032] = "Den Champion's Binding|3|57|52|2|0|SpellPowerAll=14,Armor=336,Healing=14,Strength=16,Spirit=8",
@@ -24165,6 +24554,16 @@ local c = {
         [287034] = "Grove Subjugator's Blade|3|60|55|2|0|Stamina=6,DPS=26.3889,CritRating=14,Healing=68,Spirit=-10,SpellPowerAll=68",
         [287035] = "Demon Worshipper's Necklace|3|59|54|2|0|Intellect=13,Healing=11,SpellPowerAll=11",
         [287036] = "Satyr's Touch|3|59|54|2|0|Stamina=9,HitRating=5,DPS=58.4211",
+        [287037] = "Shaper's Robe|3|60|55|2|0|Intellect=15,SpellPowerAll=18,Armor=85,Healing=18,Spirit=15",
+        [287038] = "Naturopathy Footpads|3|59|54|2|0|Armor=58,Healing=22,Spirit=17,SpellDamage=7",
+        [287039] = "Tattered Explorer's Cuffs|3|60|55|2|0|SpellDamage=5,Armor=74,Healing=15,Strength=8,Stamina=13",
+        [287040] = "Dinosaur Hide Belt|3|61|56|2|0|Stamina=18,Agility=12,Armor=197",
+        [287041] = "Time-Forgotten Bindings|3|60|55|2|0|Stamina=13,Spirit=5,HitRating=10,Armor=155",
+        [287042] = "Pauldrons of the Stone Guardian|3|61|56|2|0|AttackPower=24,Defense=6,Armor=478,Spirit=11,Stamina=12",
+        [287043] = "Predaceous Band|3|60|55|2|0|Stamina=14,AttackPower=18",
+        [287044] = "Predator's Shroud|3|60|55|2|0|AttackPower=11,Agility=9,Stamina=14,Armor=43",
+        [287045] = "Ancient Mattock|3|61|56|2|0|Stamina=8,Spirit=8,DPS=40.1923",
+        [287046] = "Pylon Poker|3|61|56|2|0|Spirit=16,HitRating=10,Strength=25,DPS=52.2059",
         [287059] = "Footman's Pocketknife|2|10|1|1|0|Strength=1,DPS=4.75",
         [287060] = "Rezlak's Spare Knife|2|11|1|1|0|AttackPower=3,DPS=5.2778",
         [287061] = "Cheese Knife|2|12|1|1|0|Stamina=1,DPS=5.5263",
@@ -24205,6 +24604,7 @@ local c = {
         [287979] = "Lesser Wizard Oil|1|40|1|1|0|",
         [287980] = "Elemental Sharpening Stone|2|60|1|1|0|",
         [287992] = "Old Key|1|1|35|4|0|",
+        [288206] = "Recipe: Draught of Water Walking|2|1|1|0|0|",
         [288336] = "Blue Firework|1|20|0|0|0|",
         [288337] = "Green Firework|1|20|0|0|0|",
         [288338] = "Red Firework|1|20|0|0|0|",
@@ -24330,6 +24730,7 @@ local c = {
         [1218] = "40|61|3.7",
         [1219] = "13|25|2.3",
         [1220] = "24|36|2.3",
+        [1263] = "158|238|3.5",
         [1264] = "43|66|2.3",
         [1265] = "44|83|2.4",
         [1266] = "17|26|2.7",
@@ -24401,12 +24802,14 @@ local c = {
         [1640] = "92|139|3.7",
         [1664] = "77|116|3.2",
         [1679] = "71|107|3.6",
+        [1680] = "97|146|3.4",
         [1719] = "1|2|2",
         [1720] = "109|165|3.4",
         [1721] = "60|112|2.4",
         [1722] = "95|143|3.2",
         [1726] = "57|87|2.3",
         [1727] = "33|62|2.7",
+        [1728] = "96|178|2.9",
         [1811] = "16|25|3.1",
         [1812] = "16|25|3.1",
         [1813] = "17|27|3.1",
@@ -24512,6 +24915,7 @@ local c = {
         [2089] = "12|23|1.8",
         [2092] = "1|2|1.6",
         [2098] = "21|40|2.3",
+        [2099] = "66|124|2.9",
         [2100] = "52|98|2.7",
         [2128] = "4|7|2.8",
         [2130] = "1|3|1.9",
@@ -25035,6 +25439,7 @@ local c = {
         [5392] = "2|5|1.7",
         [5393] = "6|10|3.1",
         [5423] = "38|57|2.5",
+        [5426] = "24|46|2.5",
         [5459] = "11|21|2.3",
         [5491] = "1|2|2",
         [5495] = "1|2|2",
@@ -25304,6 +25709,7 @@ local c = {
         [9475] = "99|149|2.9",
         [9477] = "118|178|3.4",
         [9478] = "63|117|2.7",
+        [9480] = "100|151|3",
         [9481] = "109|164|3.2",
         [9482] = "56|85|2.3",
         [9483] = "59|111|1.8",
@@ -25358,7 +25764,10 @@ local c = {
         [10617] = "1|2|1.8",
         [10623] = "47|88|2.1",
         [10624] = "36|67|2.1",
+        [10625] = "32|60|1.4",
+        [10626] = "128|193|3.7",
         [10627] = "112|168|3.4",
+        [10628] = "94|141|2.8",
         [10652] = "88|133|2.8",
         [10685] = "2|4|3",
         [10696] = "50|93|2",
@@ -25431,6 +25840,7 @@ local c = {
         [11628] = "34|64|1.8",
         [11629] = "44|82|2.3",
         [11635] = "35|65|1.4",
+        [11684] = "73|136|2.4",
         [11702] = "61|114|2.4",
         [11744] = "38|72|1.5",
         [11748] = "66|123|1.8",
@@ -25509,16 +25919,24 @@ local c = {
         [12469] = "82|124|2.5",
         [12482] = "1|2|2",
         [12523] = "1|2|2",
+        [12527] = "66|124|2.7",
         [12528] = "122|184|3.4",
         [12531] = "42|80|1.8",
+        [12532] = "97|146|3.4",
         [12535] = "47|89|1.9",
         [12582] = "49|93|1.8",
+        [12583] = "151|227|3.5",
         [12584] = "138|207|2.9",
+        [12590] = "54|101|1.7",
         [12591] = "1|2|2",
+        [12592] = "166|250|3.5",
         [12593] = "1|2|2",
+        [12605] = "58|109|1.4",
+        [12621] = "76|142|2.8",
         [12629] = "1|2|2",
         [12651] = "77|117|3.2",
         [12653] = "46|87|2.2",
+        [12709] = "37|70|1.3",
         [12742] = "1|2|2",
         [12744] = "1|2|2",
         [12746] = "1|2|2",
@@ -25585,6 +26003,8 @@ local c = {
         [12902] = "1|2|2",
         [12934] = "1|2|2",
         [12937] = "1|2|2",
+        [12939] = "52|97|1.8",
+        [12940] = "81|151|2.8",
         [12941] = "1|3|2",
         [12943] = "2|3|2.9",
         [12944] = "1|2|2",
@@ -25592,6 +26012,7 @@ local c = {
         [12950] = "2|4|3.7",
         [12951] = "3|5|3.9",
         [12959] = "1|2|2",
+        [12969] = "155|233|3.6",
         [12971] = "10|19|0.5",
         [12972] = "12|22|0.5",
         [12974] = "26|49|1.9",
@@ -25607,7 +26028,9 @@ local c = {
         [13000] = "140|210|3.3",
         [13003] = "123|185|3.2",
         [13004] = "55|104|1.4",
+        [13006] = "80|149|2.8",
         [13014] = "46|87|1.9",
+        [13015] = "53|99|1.9",
         [13016] = "55|84|3.2",
         [13017] = "82|124|2.9",
         [13018] = "127|191|3.8",
@@ -25673,6 +26096,7 @@ local c = {
         [13173] = "54|102|2.2",
         [13182] = "55|103|2.1",
         [13183] = "52|98|1.9",
+        [13198] = "49|93|1.8",
         [13204] = "49|93|1.8",
         [13218] = "45|84|1.6",
         [13220] = "1|2|2",
@@ -25694,14 +26118,20 @@ local c = {
         [13338] = "2|4|3.4",
         [13339] = "2|4|3.4",
         [13348] = "163|246|3.8",
+        [13349] = "46|86|2.4",
         [13360] = "29|54|1.5",
+        [13361] = "72|135|2.5",
+        [13368] = "40|74|1.4",
         [13372] = "160|241|3.9",
         [13380] = "63|118|2.9",
         [13393] = "158|238|3.8",
+        [13396] = "75|140|1.8",
+        [13399] = "51|96|1.8",
         [13401] = "49|93|1.8",
         [13408] = "42|78|1.6",
         [13474] = "34|64|1.9",
         [13504] = "1|2|2",
+        [13505] = "171|257|3.6",
         [13534] = "79|148|1.9",
         [13612] = "1|2|2",
         [13622] = "1|2|2",
@@ -25740,7 +26170,14 @@ local c = {
         [13923] = "1|2|2",
         [13924] = "1|2|2",
         [13925] = "2|4|3.7",
+        [13937] = "100|151|2.9",
+        [13938] = "83|155|1.9",
+        [13952] = "16|66|2",
+        [13953] = "45|85|1.6",
+        [13964] = "30|57|1.6",
+        [13982] = "142|214|3.3",
         [13983] = "144|217|3.4",
+        [13984] = "43|81|1.5",
         [14024] = "39|73|1.4",
         [14082] = "2|4|3.7",
         [14083] = "4|6|2.4",
@@ -25758,11 +26195,15 @@ local c = {
         [14487] = "68|127|2.4",
         [14524] = "1|2|2",
         [14527] = "1|2|2",
+        [14531] = "137|206|3.4",
         [14532] = "2|4|3.7",
         [14533] = "1|2|2",
         [14534] = "1|2|2",
         [14535] = "1|2|2",
+        [14541] = "87|132|2.1",
+        [14555] = "41|77|1.3",
         [14575] = "1|2|2",
+        [14576] = "73|137|2.7",
         [14586] = "1|2|2",
         [14618] = "1|2|2",
         [14642] = "1|2|2",
@@ -25897,6 +26338,7 @@ local c = {
         [15335] = "12|24|2.5",
         [15396] = "7|14|1.5",
         [15397] = "16|24|2.8",
+        [15418] = "133|201|3.1",
         [15424] = "42|64|3.3",
         [15443] = "8|16|1.5",
         [15444] = "31|47|3.3",
@@ -25919,6 +26361,8 @@ local c = {
         [15810] = "40|60|3.3",
         [15811] = "68|102|3.8",
         [15814] = "50|93|2",
+        [15853] = "63|118|2.3",
+        [15854] = "73|110|2.4",
         [15862] = "49|92|2.2",
         [15863] = "24|45|1.6",
         [15903] = "12|23|1.5",
@@ -25997,6 +26441,7 @@ local c = {
         [17943] = "44|83|1.8",
         [18002] = "2|4|3.3",
         [18044] = "71|132|2.7",
+        [18048] = "44|82|2.4",
         [18062] = "1|2|2",
         [18082] = "67|101|2.7",
         [18122] = "1|2|2",
@@ -26011,9 +26456,12 @@ local c = {
         [18321] = "41|78|2.3",
         [18323] = "50|93|2.4",
         [18324] = "123|185|3.1",
+        [18338] = "65|122|1.6",
         [18347] = "53|99|1.9",
+        [18348] = "75|114|2",
         [18353] = "93|140|3",
         [18372] = "26|50|1.4",
+        [18376] = "62|117|2.2",
         [18388] = "73|111|2.9",
         [18392] = "37|69|1.3",
         [18396] = "38|71|2",
@@ -26025,10 +26473,15 @@ local c = {
         [18463] = "60|112|2.4",
         [18481] = "119|179|3.2",
         [18482] = "61|62|2.2",
+        [18483] = "68|127|1.6",
+        [18484] = "67|125|2.4",
         [18491] = "26|49|1.5",
+        [18498] = "52|98|1.9",
         [18502] = "123|185|2.9",
+        [18520] = "138|207|3.2",
         [18531] = "135|204|3.2",
         [18534] = "86|130|2.7",
+        [18538] = "128|193|2.7",
         [18582] = "162|169|1.5",
         [18583] = "85|95|1",
         [18584] = "85|95|1",
@@ -26038,6 +26491,8 @@ local c = {
         [18609] = "134|222|3",
         [18610] = "6|13|1.8",
         [18644] = "1|2|2",
+        [18671] = "71|134|2.6",
+        [18680] = "61|114|2.8",
         [18683] = "70|131|2.5",
         [18713] = "89|166|2.9",
         [18715] = "187|282|3.2",
@@ -26046,6 +26501,10 @@ local c = {
         [18729] = "70|71|2.3",
         [18737] = "48|90|1.7",
         [18738] = "82|124|3.3",
+        [18755] = "57|108|2.6",
+        [18758] = "51|96|1.8",
+        [18759] = "131|197|3.1",
+        [18761] = "78|147|1.8",
         [18763] = "42|79|2.5",
         [18764] = "42|79|2.5",
         [18765] = "42|79|2.5",
@@ -26307,6 +26766,13 @@ local c = {
         [22213] = "1|2|2",
         [22254] = "58|109|1.5",
         [22266] = "31|59|1.8",
+        [22315] = "50|94|2.7",
+        [22317] = "42|78|1.5",
+        [22318] = "63|118|2.9",
+        [22322] = "45|84|1.6",
+        [22332] = "28|53|1.5",
+        [22333] = "66|99|2.1",
+        [22335] = "67|101|2.1",
         [22341] = "1|2|2",
         [22346] = "2|3|2.9",
         [22347] = "85|128|3.2",
@@ -26321,6 +26787,8 @@ local c = {
         [22390] = "89|167|2.8",
         [22391] = "67|101|2.1",
         [22394] = "66|99|2.1",
+        [22404] = "73|136|2.6",
+        [22406] = "65|98|2.1",
         [22408] = "58|108|1.3",
         [22458] = "99|149|3.7",
         [22589] = "130|244|2.9",
@@ -26351,7 +26819,6 @@ local c = {
         [23743] = "1|2|2",
         [24222] = "47|88|1.8",
         [49311] = "2|4|3.6",
-        [190325] = "1|2|2.6",
         [202256] = "6|13|1.9",
         [204910] = "2|4|3",
         [208222] = "131|197|3.7",
@@ -26366,10 +26833,10 @@ local c = {
         [217287] = "40|76|2",
         [217314] = "13|24|1.7",
         [217315] = "20|37|2.6",
-        [217336] = "1|2|2.6",
         [217497] = "26|50|2",
         [221518] = "124|187|3.4",
         [227802] = "1|2|2",
+        [227935] = "39|74|2.2",
         [231887] = "51|95|2",
         [236759] = "115|173|3.7",
         [236760] = "62|115|2.6",
@@ -26726,6 +27193,7 @@ local c = {
         [275824] = "117|176|3.5",
         [275836] = "28|53|1.8",
         [275837] = "86|160|2.4",
+        [276069] = "99|149|3.3",
         [276102] = "75|113|3",
         [276188] = "13|26|2.5",
         [276203] = "104|157|3.3",
@@ -26740,6 +27208,7 @@ local c = {
         [276419] = "66|123|2.4",
         [276469] = "2|4|3.3",
         [276631] = "17|32|2",
+        [276632] = "39|74|2",
         [276685] = "8|16|2.1",
         [276686] = "4|8|1.7",
         [276694] = "9|18|2.3",
@@ -26818,19 +27287,23 @@ local c = {
         [280018] = "142|214|3.3",
         [280020] = "70|130|3.1",
         [280021] = "49|92|1.7",
+        [280022] = "63|119|2.2",
         [280023] = "102|154|3.2",
+        [280029] = "69|129|2.4",
         [280031] = "76|142|1.7",
         [280056] = "145|219|3.6",
         [280059] = "148|222|3.6",
         [280068] = "73|136|2.6",
         [280077] = "38|72|2.2",
         [280080] = "121|182|3.1",
+        [280082] = "104|157|3.6",
+        [280083] = "57|107|2.8",
         [280085] = "42|78|1.6",
         [280304] = "9|18|2",
         [280399] = "1|3|1.9",
         [280400] = "1|3|1.9",
         [280402] = "1|2|1.6",
-        [280604] = "91|137|3.2",
+        [280604] = "102|154|3.6",
         [280605] = "30|57|2.4",
         [280607] = "28|52|2.2",
         [280805] = "19|36|1.6",
@@ -26879,12 +27352,14 @@ local c = {
         [282029] = "51|95|2.7",
         [282064] = "7|14|1.7",
         [282070] = "136|205|3.6",
+        [282085] = "148|223|3.5",
         [282284] = "6|12|1.7",
         [282550] = "40|75|2.3",
         [282551] = "34|64|2.4",
         [282561] = "40|76|2.6",
         [282632] = "114|171|3.6",
         [282639] = "25|48|2.6",
+        [282700] = "43|82|2.6",
         [282702] = "89|134|3.7",
         [282703] = "23|44|1.7",
         [282710] = "27|50|2.6",
@@ -26896,6 +27371,7 @@ local c = {
         [284050] = "41|77|2.5",
         [284063] = "102|154|3.7",
         [284070] = "59|111|1.6",
+        [284072] = "31|58|2",
         [284101] = "77|143|2.7",
         [284157] = "64|121|2.5",
         [284166] = "23|36|3.3",
@@ -26912,7 +27388,9 @@ local c = {
         [284386] = "18|35|1.7",
         [284459] = "67|102|3.3",
         [284574] = "25|47|1.7",
+        [284587] = "51|96|1.8",
         [284597] = "1|2|2",
+        [284667] = "32|60|2.6",
         [284696] = "18|34|1.9",
         [284700] = "42|64|2.9",
         [284702] = "14|27|1.6",
@@ -26961,6 +27439,8 @@ local c = {
         [286537] = "19|37|2.1",
         [286540] = "56|105|3.6",
         [286613] = "45|85|1.6",
+        [286641] = "125|188|3.6",
+        [286645] = "132|198|3.8",
         [286649] = "21|40|1.7",
         [286650] = "46|86|2.4",
         [286728] = "5|11|2.4",
@@ -26980,12 +27460,15 @@ local c = {
         [286977] = "55|83|3.5",
         [286983] = "80|120|3.6",
         [286996] = "39|73|2.5",
-        [287004] = "70|71|1.9",
+        [287004] = "49|92|1.9",
         [287005] = "110|166|3.7",
         [287006] = "49|93|2.6",
         [287015] = "125|188|3.8",
         [287025] = "66|100|2.4",
         [287034] = "33|62|1.8",
+        [287036] = "77|145|1.9",
+        [287045] = "73|136|2.6",
+        [287046] = "142|213|3.4",
         [287059] = "6|13|2",
         [287060] = "6|13|1.8",
         [287061] = "7|14|1.9",
@@ -27253,6 +27736,7 @@ local c = {
         [858] = "Lesser Healing Potion",
         [859] = "Fine Cloth Shirt",
         [860] = "Cavalier's Boots",
+        [862] = "Runed Ring",
         [863] = "Gloom Reaper",
         [864] = "Knightly Longsword",
         [865] = "Leaden Mace",
@@ -27549,6 +28033,7 @@ local c = {
         [1260] = "Tharil'zun's Head",
         [1261] = "Midnight Orb",
         [1262] = "Keg of Thunderbrew",
+        [1263] = "Brain Hacker",
         [1264] = "Headbasher",
         [1265] = "Scorpion Sting",
         [1266] = "Deprecated Orcslayer",
@@ -27688,6 +28173,7 @@ local c = {
         [1436] = "Frontier Britches",
         [1438] = "Warrior's Shield",
         [1440] = "Gnoll Skull Basher",
+        [1443] = "Jeweled Amulet of Cainwyn",
         [1444] = "Deprecated Inferno Stone",
         [1445] = "Blackrock Pauldrons",
         [1446] = "Blackrock Boots",
@@ -27826,6 +28312,7 @@ local c = {
         [1677] = "Drake-scale Vest",
         [1678] = "Black Ogre Kickers",
         [1679] = "Korg Bat",
+        [1680] = "Headchopper",
         [1681] = "Grimoire of Cripple",
         [1684] = "Deprecated Totemic Headpiece",
         [1685] = "Troll-hide Bag",
@@ -27869,6 +28356,7 @@ local c = {
         [1725] = "Large Knapsack",
         [1726] = "Poison-tipped Bone Spear",
         [1727] = "Sword of Decay",
+        [1728] = "Teebu's Blazing Longsword",
         [1729] = "Gunnysack of the Night Watch",
         [1730] = "Worn Mail Belt",
         [1731] = "Worn Mail Boots",
@@ -28156,6 +28644,7 @@ local c = {
         [2091] = "Magic Dust",
         [2092] = "Worn Dagger",
         [2098] = "Double-barreled Shotgun",
+        [2099] = "Dwarven Hand Cannon",
         [2100] = "Precisely Calibrated Boomstick",
         [2101] = "Light Quiver",
         [2102] = "Small Ammo Pouch",
@@ -29398,6 +29887,7 @@ local c = {
         [3472] = "Runed Copper Gauntlets",
         [3473] = "Runed Copper Pants",
         [3474] = "Gemmed Copper Gauntlets",
+        [3475] = "Cloak of Flames",
         [3476] = "Gray Bear Tongue",
         [3477] = "Creeper Ichor",
         [3478] = "Coarse Grinding Stone",
@@ -31311,6 +31801,7 @@ local c = {
         [5423] = "Boahn's Fang",
         [5424] = "Ancient Statuette",
         [5425] = "Runescale Girdle",
+        [5426] = "Serpent's Kiss",
         [5427] = "Crude Pocket Watch",
         [5428] = "An Exotic Cookbook",
         [5429] = "A Pretty Rock",
@@ -34140,6 +34631,7 @@ local c = {
         [9370] = "Gordunni Scroll",
         [9371] = "Gordunni Orb",
         [9372] = "Sul'thraze the Lasher",
+        [9375] = "Expert Goldminer's Helmet",
         [9378] = "Shovelphlange's Mining Axe",
         [9379] = "Sang'thraze the Deflector",
         [9380] = "Jang'thraze the Protector",
@@ -34242,9 +34734,11 @@ local c = {
         [9477] = "The Chief's Enforcer",
         [9478] = "Ripsaw",
         [9479] = "Embrace of the Lycan",
+        [9480] = "Eyegouger",
         [9481] = "The Minotaur",
         [9482] = "Witch Doctor's Cane",
         [9483] = "Flaming Incinerator",
+        [9484] = "Spellshock Leggings",
         [9485] = "Vibroblade",
         [9486] = "Supercharger Battle Axe",
         [9487] = "Hi-Tech Supergun",
@@ -34258,6 +34752,7 @@ local c = {
         [9509] = "Petrolspill Leggings",
         [9510] = "Caverndeep Trudgers",
         [9511] = "Bloodletter Scalpel",
+        [9512] = "Blackmetal Cape",
         [9513] = "Ley Staff",
         [9514] = "Arcane Staff",
         [9515] = "Nether-lace Tunic",
@@ -35156,7 +35651,10 @@ local c = {
         [10622] = "Kadrak's Flag",
         [10623] = "Winter's Bite",
         [10624] = "Stinging Bow",
+        [10625] = "Stealthblade",
+        [10626] = "Ragehammer",
         [10627] = "Bludgeon of the Grinning Dog",
+        [10628] = "Deathblow",
         [10629] = "Mistwalker Boots",
         [10630] = "Soulcatcher Halo",
         [10631] = "Murkwater Gauntlets",
@@ -35701,6 +36199,7 @@ local c = {
         [11679] = "Rubicund Armguards",
         [11682] = "Eridan's Vial",
         [11683] = "[PH] Legendary Arcane Amalgamation (Caster)",
+        [11684] = "Ironfoe",
         [11685] = "Splinthide Shoulders",
         [11686] = "Girdle of Beastial Fury",
         [11702] = "Grizzle's Skinner",
@@ -35978,6 +36477,7 @@ local c = {
         [12056] = "Ring of the Heavens",
         [12057] = "Dragonscale Band",
         [12058] = "Demonic Bone Ring",
+        [12059] = "Conqueror's Medallion",
         [12060] = "Shindrell's Note",
         [12061] = "Blade of Reckoning",
         [12062] = "Skilled Fighting Blade",
@@ -36204,6 +36704,7 @@ local c = {
         [12459] = "Juju Escape",
         [12460] = "Juju Might",
         [12461] = "Monster - Axe, 2H Horde Brown Tombstone",
+        [12462] = "Embrace of the Wind Serpent",
         [12463] = "Drakefang Butcher",
         [12464] = "Bloodfire Talons",
         [12465] = "Nightfall Drape",
@@ -36221,10 +36722,12 @@ local c = {
         [12524] = "Blue-feathered Amulet",
         [12525] = "Jaron's Supplies",
         [12526] = "TEST Challenge to Urok",
+        [12527] = "Ribsplitter",
         [12528] = "The Judge's Gavel",
         [12529] = "Smolderweb Carrier",
         [12530] = "Spire Spider Egg",
         [12531] = "Searing Needle",
+        [12532] = "Spire of the Stoneshaper",
         [12533] = "Roughshod Pike",
         [12534] = "Omokk's Head",
         [12535] = "Doomforged Straightedge",
@@ -36232,12 +36735,16 @@ local c = {
         [12543] = "Songstone of Ironforge",
         [12544] = "Thrall's Resolve",
         [12545] = "Eye of Orgrimmar",
+        [12546] = "Aristocratic Cuffs",
+        [12547] = "Mar Alom's Grip",
         [12548] = "Magni's Will",
         [12549] = "Braincage",
         [12550] = "Runed Golem Shackles",
+        [12551] = "Stoneshield Cloak",
         [12552] = "Blisterbane Wrap",
         [12553] = "Swiftwalker Boots",
         [12554] = "Hands of the Exalted Herald",
+        [12555] = "Battlechaser's Greaves",
         [12556] = "High Priestess Boots",
         [12557] = "Ebonsteel Spaulders",
         [12558] = "Blue-feathered Necklace",
@@ -36248,13 +36755,24 @@ local c = {
         [12566] = "Hardened Flasket",
         [12567] = "Filled Flasket",
         [12582] = "Keris of Zul'Serak",
+        [12583] = "Blackhand Doomsaw",
         [12584] = "Grand Marshal's Longsword",
         [12585] = "Stormwind Medallion",
         [12586] = "Immature Venom Sac",
+        [12587] = "Eye of Rend",
+        [12589] = "Dustfeather Sash",
+        [12590] = "Felstriker",
         [12591] = "Monster - Staff, Holy Staff",
+        [12592] = "Blackblade of Shahram",
         [12593] = "Monster - Sword, Horde Sword Bronze",
+        [12602] = "Draconian Deflector",
+        [12603] = "Nightbrace Tunic",
+        [12604] = "Starfire Tiara",
+        [12605] = "Serpentine Skuller",
+        [12606] = "Crystallized Girdle",
         [12607] = "Brilliant Chromatic Scale",
         [12608] = "Butcher's Apron",
+        [12609] = "Polychromatic Visionwrap",
         [12610] = "Runic Plate Shoulders",
         [12611] = "Runic Plate Boots",
         [12612] = "Runic Plate Helm",
@@ -36266,6 +36784,7 @@ local c = {
         [12618] = "Enchanted Thorium Breastplate",
         [12619] = "Enchanted Thorium Leggings",
         [12620] = "Enchanted Thorium Helm",
+        [12621] = "Demonfork",
         [12622] = "Shardtooth Meat",
         [12623] = "Chillwind Meat",
         [12624] = "Wildthorn Mail",
@@ -36328,6 +36847,7 @@ local c = {
         [12706] = "Plans: Runic Plate Shoulders",
         [12707] = "Plans: Runic Plate Boots",
         [12708] = "Crossroads' Supply Crates",
+        [12709] = "Pip's Skinner",
         [12710] = "Glowing Hunk of the Beast's Flesh",
         [12711] = "Plans: Whitesoul Helm",
         [12712] = "Warosh's Mojo",
@@ -36472,6 +36992,7 @@ local c = {
         [12868] = "Monster - Item, Book - B02 Blue Glowing",
         [12869] = "Monster - Item, Book - B02 Blue Glowing Offhand",
         [12870] = "Monster - Item, Potion Red Offhand",
+        [12871] = "Chromatic Carapace",
         [12882] = "Monster - Sword2H, Horde Curved Silver",
         [12883] = "Monster - Mace, Thaurissan Silver",
         [12884] = "Arnak's Hoof",
@@ -36485,6 +37006,7 @@ local c = {
         [12892] = "Monster - Sword1H, Dark Short Sword",
         [12893] = "Monster - Shield, Black Skull",
         [12894] = "Joseph's Wedding Ring",
+        [12895] = "Breastplate of the Chromatic Flight",
         [12896] = "First Relic Fragment",
         [12897] = "Second Relic Fragment",
         [12898] = "Third Relic Fragment",
@@ -36492,37 +37014,58 @@ local c = {
         [12900] = "Annals of Darrowshire",
         [12901] = "Monster - Mace2H, Golden Stone Hammer",
         [12902] = "Monster - Sword2H, Luminous Evil Blade",
+        [12903] = "Legguards of the Chromatic Defier",
         [12904] = "Shawn's Super Special Swami Hat",
+        [12905] = "Wildfire Cape",
         [12906] = "Purified Moonwell Water",
         [12907] = "Corrupt Moonwell Water",
         [12922] = "Empty Canteen",
         [12923] = "Awbee's Scale",
         [12924] = "Ritual Candle",
         [12925] = "Arikara Serpent Skin",
+        [12926] = "Flaming Band",
+        [12927] = "Truestrike Shoulders",
         [12928] = "Umi's Mechanical Yeti",
+        [12929] = "Emberfury Talisman",
+        [12930] = "Briarwood Reed",
         [12931] = "Monster - Shield, Scarlet Crusade A01/A02 Model",
         [12932] = "Monster - Shield, Scarlet Crusade A02",
         [12933] = "Monster - Shield, Scarlet Crusade B03",
         [12934] = "Monster - Mace, Maul B03 Red",
+        [12935] = "Warmaster Legguards",
+        [12936] = "Battleborn Armbraces",
         [12937] = "Monster - Staff, Basic Red",
         [12938] = "Blood of Heroes",
+        [12939] = "Dal'Rend's Tribal Guardian",
+        [12940] = "Dal'Rend's Sacred Charge",
         [12941] = "Monster - Wand, Jeweled - B02 Red",
         [12942] = "Panther Cage Key",
         [12943] = "Monster - Staff, 3 Piece Taped Staff Red",
         [12944] = "Monster - Sword, Golden Long",
+        [12945] = "Legplates of the Chromatic Defier",
         [12946] = "Hypercapacitor Gizmo",
         [12947] = "Alex's Ring of Audacity",
         [12949] = "Monster - Sword2H, Red White Broad",
         [12950] = "Monster - Mace2H, Warhammer Ebony",
         [12951] = "Monster - Axe, 2H War - Red",
+        [12952] = "Gyth's Skull",
+        [12953] = "Dragoneye Coif",
         [12954] = "Davil's Libram",
         [12955] = "Redpath's Shield",
         [12956] = "Skull of Horgus",
         [12957] = "Shattered Sword of Marduk",
         [12958] = "Recipe: Transmute Arcanite",
         [12959] = "Monster - Staff, Demon Skull Staff",
+        [12960] = "Tribal War Feathers",
         [12961] = "JEFF TEST SHIELD",
         [12962] = "JEFF TEST GLOVES",
+        [12963] = "Blademaster Leggings",
+        [12964] = "Tristam Legguards",
+        [12965] = "Spiritshroud Leggings",
+        [12966] = "Blackmist Armguards",
+        [12967] = "Bloodmoon Cloak",
+        [12968] = "Frostweaver Cape",
+        [12969] = "Seeping Willow",
         [12970] = "General's Ceremonial Plate",
         [12971] = "JEFF TEST SWORD",
         [12972] = "JEFF TEST SWORD II",
@@ -36559,6 +37102,7 @@ local c = {
         [13003] = "Lord Alexander's Battle Axe",
         [13004] = "Torch of Austen",
         [13005] = "Amy's Blanket",
+        [13006] = "Mass of McGowan",
         [13007] = "Mageflame Cloak",
         [13008] = "Dalewind Trousers",
         [13009] = "Cow King's Hide",
@@ -36567,6 +37111,7 @@ local c = {
         [13012] = "Yorgen Bracers",
         [13013] = "Elder Wizard's Mantle",
         [13014] = "Axe of Rin'ji",
+        [13015] = "Serathil",
         [13016] = "Killmaim",
         [13017] = "Hellslayer Battle Axe",
         [13018] = "Executioner's Cleaver",
@@ -36649,6 +37194,7 @@ local c = {
         [13095] = "Assault Band",
         [13096] = "Band of the Hierophant",
         [13097] = "Thunderbrow Ring",
+        [13098] = "Painweaver Band",
         [13099] = "Moccasins of the White Hare",
         [13100] = "Furen's Boots",
         [13101] = "Wolfrunner Shoes",
@@ -36691,6 +37237,9 @@ local c = {
         [13138] = "The Silencer",
         [13139] = "Guttbuster",
         [13140] = "Blood Red Key",
+        [13141] = "Tooth of Gnarr",
+        [13142] = "Brigam Girdle",
+        [13143] = "Mark of the Dragon Lord",
         [13144] = "Serenity Belt",
         [13145] = "Enormous Ogre Belt",
         [13146] = "Shell Launcher Shotgun",
@@ -36726,6 +37275,7 @@ local c = {
         [13178] = "Rosewine Circle",
         [13179] = "Brazecore Armguards",
         [13180] = "Stratholme Holy Water",
+        [13181] = "Demonskin Gloves",
         [13182] = "Phase Blade",
         [13183] = "Venomspitter",
         [13184] = "Fallbrush Handgrips",
@@ -36742,6 +37292,7 @@ local c = {
         [13195] = "Dalson's Tears Cauldron Key",
         [13196] = "Gahrron's Withering Cauldron Key",
         [13197] = "Writhing Haunt Cauldron Key",
+        [13198] = "Hurd Smasher",
         [13199] = "Crushridge Bindings",
         [13202] = "Extended Annals of Darrowshire",
         [13203] = "Armswake Cloak",
@@ -36774,10 +37325,13 @@ local c = {
         [13250] = "Head of Balnazzar",
         [13251] = "Head of Baron Rivendare",
         [13252] = "Cloudrunner Girdle",
+        [13253] = "Hands of Power",
         [13255] = "Trueaim Gauntlets",
         [13257] = "Demonic Runed Spaulders",
         [13258] = "Slaghide Gauntlets",
         [13259] = "Ribsteel Footguards",
+        [13260] = "Wind Dancer Boots",
+        [13261] = "Globe of D'sak",
         [13262] = "Ashbringer",
         [13282] = "Ogreseer Tower Boots",
         [13283] = "Magus Ring",
@@ -36803,6 +37357,7 @@ local c = {
         [13311] = "Schematic: Mechanical Dragonling",
         [13312] = "Monster - Mace, Hammer Gold Orange",
         [13313] = "Sacred Highborne Writings",
+        [13314] = "Alanna's Embrace",
         [13315] = "Testament of Hope",
         [13316] = "Monster - Sword2H, Claymore Silver Yellow Glow",
         [13317] = "Whistle of the Ivory Raptor",
@@ -36837,27 +37392,32 @@ local c = {
         [13346] = "Robes of the Exalted",
         [13347] = "Crystal of Zin-Malor",
         [13348] = "Demonshear",
+        [13349] = "Scepter of the Unholy",
         [13350] = "Insignia of the Black Guard",
         [13351] = "Crimson Hammersmith's Apron",
         [13352] = "Vosh'gajin's Snakestone",
+        [13353] = "Book of the Dead",
         [13354] = "Ectoplasmic Resonator",
         [13356] = "Somatic Intensifier",
         [13357] = "Osseous Agitator",
         [13358] = "Wyrmtongue Shoulders",
         [13359] = "Crown of Tyranny",
         [13360] = "Gift of the Elven Magi",
+        [13361] = "Skullforge Reaver",
         [13362] = "Letter from the Front",
         [13363] = "Municipal Proclamation",
         [13364] = "Ezra Grimm's Advertisement",
         [13365] = "Town Meeting Notice",
         [13366] = "Ingenious Toy",
         [13367] = "Wrapped Gift",
+        [13368] = "Bonescraper",
         [13369] = "Fire Striders",
         [13370] = "Vitreous Focuser",
         [13371] = "Father Flame",
         [13372] = "Slavedriver's Cane",
         [13373] = "Band of Flesh",
         [13374] = "Soulstealer Mantle",
+        [13375] = "Crest of Retribution",
         [13376] = "Royal Tribunal Cloak",
         [13377] = "Miniature Cannon Balls",
         [13378] = "Songbird Blouse",
@@ -36868,6 +37428,7 @@ local c = {
         [13383] = "Woollies of the Prancing Minstrel",
         [13384] = "Rainbow Girdle",
         [13385] = "Tome of Knowledge",
+        [13386] = "Archivist Cape",
         [13387] = "Foresight Girdle",
         [13388] = "The Postmaster's Tunic",
         [13389] = "The Postmaster's Trousers",
@@ -36875,11 +37436,17 @@ local c = {
         [13391] = "The Postmaster's Treads",
         [13392] = "The Postmaster's Seal",
         [13393] = "Malown's Slam",
+        [13394] = "Skul's Cold Embrace",
         [13395] = "Skul's Fingerbone Claws",
+        [13396] = "Skul's Ghastly Touch",
+        [13397] = "Stoneskin Gargoyle Cape",
+        [13398] = "Boots of the Shrieker",
+        [13399] = "Gargoyle Shredder Talons",
         [13400] = "Vambraces of the Sadist",
         [13401] = "The Cruel Hand of Timmy",
         [13402] = "Timmy's Galoshes",
         [13403] = "Grimgore Noose",
+        [13404] = "Mask of the Unforgiven",
         [13405] = "Wailing Nightbane Pauldrons",
         [13406] = "Monster - Item, Mutton Offhand",
         [13407] = "Monster - Item, Mutton with Bite Offhand",
@@ -36940,19 +37507,24 @@ local c = {
         [13495] = "Recipe: Greater Frost Protection Potion",
         [13496] = "Recipe: Greater Nature Protection Potion",
         [13497] = "Recipe: Greater Arcane Protection Potion",
+        [13498] = "Handcrafted Mastersmith Leggings",
         [13499] = "Recipe: Greater Shadow Protection Potion",
         [13500] = "Recipe: Greater Holy Protection Potion",
         [13501] = "Recipe: Major Mana Potion",
+        [13502] = "Handcrafted Mastersmith Girdle",
         [13503] = "Alchemist's Stone",
         [13504] = "Monster - Sword, Doomguard",
+        [13505] = "Runeblade of Baron Rivendare",
         [13506] = "Flask of Petrification",
         [13507] = "Cliffwatcher Longhorn Report",
+        [13508] = "Eye of Arachnida",
         [13509] = "Clutch of Foresight",
         [13510] = "Flask of the Titans",
         [13511] = "Flask of Distilled Wisdom",
         [13512] = "Flask of Supreme Power",
         [13513] = "Flask of Chromatic Resistance",
         [13514] = "Wail of the Banshee",
+        [13515] = "Ramstein's Lightning Bolts",
         [13517] = "Recipe: Alchemist's Stone",
         [13518] = "Recipe: Flask of Petrification",
         [13519] = "Recipe: Flask of the Titans",
@@ -36963,14 +37535,19 @@ local c = {
         [13524] = "Skull of Burning Shadows",
         [13525] = "Darkbind Fingers",
         [13526] = "Flamescarred Girdle",
+        [13527] = "Lavawalker Greaves",
         [13528] = "Twilight Void Bracers",
         [13529] = "Husk of Nerub'enkan",
+        [13530] = "Fangdrip Runners",
         [13531] = "Crypt Stalker Leggings",
         [13532] = "Darkspinner Claws",
         [13533] = "Acid-etched Pauldrons",
         [13534] = "Banshee Finger",
+        [13535] = "Coldtouch Phantom Wraps",
         [13536] = "Horn of Awakening",
         [13537] = "Chillhide Bracers",
+        [13538] = "Windshrieker Pauldrons",
+        [13539] = "Banshee's Touch",
         [13542] = "Demon Box",
         [13543] = "Krastinov's Bag of Horrors UNUSED",
         [13544] = "Spectral Essence",
@@ -37281,6 +37858,8 @@ local c = {
         [13934] = "Mightfish Steak",
         [13935] = "Baked Salmon",
         [13936] = "Deprecated Dreadmaster's Shroud",
+        [13937] = "Headmaster's Charge",
+        [13938] = "Bonecreeper Stylus",
         [13939] = "Recipe: Spotted Yellowtail",
         [13940] = "Recipe: Cooked Glossy Mightfish",
         [13941] = "Recipe: Filet of Redgill",
@@ -37293,6 +37872,8 @@ local c = {
         [13948] = "Recipe: Mightfish Steak",
         [13949] = "Recipe: Baked Salmon",
         [13951] = "Vigorsteel Vambraces",
+        [13952] = "Iceblade Hacker",
+        [13953] = "Silent Fang",
         [13954] = "Verdant Footpads",
         [13955] = "Stoneform Shoulders",
         [13956] = "Clutch of Andros",
@@ -37303,12 +37884,18 @@ local c = {
         [13961] = "Halycon's Muzzle",
         [13962] = "Vosh'gajin's Strand",
         [13963] = "Voone's Vice Grips",
+        [13964] = "Witchblade",
         [13965] = "Blackhand's Breadth",
         [13966] = "Mark of Tyranny",
         [13967] = "Windreaver Greaves",
         [13968] = "Eye of the Beast",
         [13969] = "Loomguard Armbraces",
+        [13982] = "Warblade of Caer Darrow",
         [13983] = "Gravestone War Axe",
+        [13984] = "Darrowspike",
+        [13986] = "Crown of Caer Darrow",
+        [14002] = "Darrowshire Strongguard",
+        [14022] = "Barov Peasant Caller",
         [14023] = "Barov Peasant Caller",
         [14024] = "Frightalon",
         [14025] = "Mystic's Belt",
@@ -37721,6 +38308,7 @@ local c = {
         [14499] = "Pattern: Mooncloth Bag",
         [14500] = "Pattern: Wizardweave Robe",
         [14501] = "Pattern: Mooncloth Vest",
+        [14502] = "Frostbite Girdle",
         [14503] = "Death's Clutch",
         [14504] = "Pattern: Runecloth Shoulders",
         [14505] = "Pattern: Wizardweave Turban",
@@ -37742,22 +38330,31 @@ local c = {
         [14528] = "Rattlecage Buckler",
         [14529] = "Runecloth Bandage",
         [14530] = "Heavy Runecloth Bandage",
+        [14531] = "Frightskull Shaft",
         [14532] = "Monster - Mace2H, Warhammer Jade",
         [14533] = "Monster - Mace, Hammer Blue Mighty",
         [14534] = "Monster - Axe, Metal Blue Badass",
         [14535] = "Monster - Spear, Cool Blue",
+        [14536] = "Bonebrace Hauberk",
+        [14537] = "Corpselight Greaves",
         [14538] = "Deadwalker Mantle",
         [14539] = "Bone Ring Helm",
         [14540] = "Taragaman the Hungerer's Heart",
+        [14541] = "Barovian Family Sword",
         [14542] = "Kravel's Crate",
         [14544] = "Lieutenant's Insignia",
         [14545] = "Ghostloom Leggings",
         [14546] = "Roon's Kodo Horn",
         [14547] = "Hand of Iruxos",
+        [14548] = "Royal Cap Spaulders",
         [14549] = "Boots of Avoidance",
         [14550] = "Bladebane Armguards",
         [14551] = "Edgemaster's Handguards",
         [14552] = "Stockade Pauldrons",
+        [14553] = "Sash of Mercy",
+        [14554] = "Cloudkeeper Legplates",
+        [14555] = "Alcor's Sunrazor",
+        [14557] = "The Lion Horn of Stormwind",
         [14558] = "Lady Maye's Pendant",
         [14559] = "Prospector's Sash",
         [14560] = "Prospector's Boots",
@@ -37776,6 +38373,8 @@ local c = {
         [14573] = "Bristlebark Amice",
         [14574] = "Bristlebark Britches",
         [14575] = "Monster - Mace, Bashguud's Hammer",
+        [14576] = "Ebon Hilt of Marduk",
+        [14577] = "Skullsmoke Pants",
         [14578] = "Dokebi Cord",
         [14579] = "Dokebi Boots",
         [14580] = "Dokebi Bracers",
@@ -38513,13 +39112,17 @@ local c = {
         [15408] = "Heavy Scorpid Scale",
         [15409] = "Refined Deeprock Salt",
         [15410] = "Scale of Onyxia",
+        [15411] = "Mark of Fordring",
         [15412] = "Green Dragonscale",
+        [15413] = "Ornate Adamantium Breastplate",
         [15414] = "Red Dragonscale",
         [15415] = "Blue Dragonscale",
         [15416] = "Black Dragonscale",
         [15417] = "Devilsaur Leather",
+        [15418] = "Shimmering Platinum Warhammer",
         [15419] = "Warbear Leather",
         [15420] = "Ironfeather",
+        [15421] = "Shroud of the Exile",
         [15422] = "Frostsaber Leather",
         [15423] = "Chimera Leather",
         [15424] = "Axe of Orgrimmar",
@@ -38915,6 +39518,8 @@ local c = {
         [15850] = "Patch of Duskwing's Fur",
         [15851] = "Lunar Fungus",
         [15852] = "Kodo Horn",
+        [15853] = "Windreaper",
+        [15854] = "Dancing Sliver",
         [15855] = "Ring of Protection",
         [15856] = "Archlight Talisman",
         [15857] = "Magebane Scion",
@@ -39084,6 +39689,7 @@ local c = {
         [16055] = "Schematic: Arcane Bomb",
         [16056] = "Schematic: Flawless Arcanite Rifle",
         [16057] = "Explorer's Knapsack",
+        [16058] = "Fordring's Seal",
         [16059] = "Common Brown Shirt",
         [16060] = "Common White Shirt",
         [16067] = "Test Fire Res Ring",
@@ -39717,6 +40323,7 @@ local c = {
         [17058] = "Fish Oil",
         [17059] = "Plans: Dark Iron Reaver",
         [17060] = "Plans: Dark Iron Destroyer",
+        [17061] = "Juno's Shadow",
         [17062] = "Recipe: Mithril Head Trout",
         [17073] = "Earthshaker",
         [17111] = "Blazefury Medallion",
@@ -40061,10 +40668,15 @@ local c = {
         [18044] = "Hurley's Tankard",
         [18045] = "Tender Wolf Steak",
         [18046] = "Recipe: Tender Wolf Steak",
+        [18047] = "Flame Walkers",
+        [18048] = "Mastersmith's Hammer",
         [18062] = "Monster - Mace2H, Horde Hammer A03/C01Black",
         [18063] = "Test Epic Mount",
         [18082] = "Zum'rah's Vexing Cane",
         [18083] = "Jumanza Grips",
+        [18102] = "Dragonrider Boots",
+        [18103] = "Band of Rumination",
+        [18104] = "Feralsurge Girdle",
         [18105] = "PVP TEST Alliance Ear",
         [18106] = "PVP TEST Horde Ear",
         [18122] = "Monster - Staff, Ornate Jeweled Staff - Blue High Blue Glow",
@@ -40114,6 +40726,7 @@ local c = {
         [18228] = "Autographed Picture of Tigule",
         [18229] = "Nat Pagle's Guide to Extreme Anglin'",
         [18230] = "Broken I.W.I.N. Button",
+        [18231] = "Sleeveless T-Shirt",
         [18232] = "Field Repair Bot 74A",
         [18233] = "Tear Stained Handkerchief",
         [18234] = "Document from Boomstick Imports",
@@ -40166,7 +40779,9 @@ local c = {
         [18293] = "Monster - Glaive - 2 Blade B03 Green",
         [18294] = "Draught of Greater Water Breathing",
         [18295] = "Phasing Boots",
+        [18296] = "Marksman Bands",
         [18297] = "Thornling Seed",
+        [18298] = "Unbridled Leggings",
         [18299] = "Hydrospawn Essence",
         [18300] = "Hyjal Nectar",
         [18301] = "Lethtendris's Wand",
@@ -40181,6 +40796,7 @@ local c = {
         [18310] = "Fiendish Machete",
         [18311] = "Quel'dorai Channeling Rod",
         [18312] = "Energized Chestplate",
+        [18313] = "Helm of Awareness",
         [18314] = "Ring of Demonic Guile",
         [18315] = "Ring of Demonic Potency",
         [18316] = "Obsidian Bauble",
@@ -40193,7 +40809,9 @@ local c = {
         [18323] = "Satyr's Bow",
         [18324] = "Waveslicer",
         [18325] = "Felhide Cap",
+        [18326] = "Razor Gauntlets",
         [18327] = "Whipvine Cord",
+        [18328] = "Shadewood Cloak",
         [18329] = "Arcanum of Rapidity",
         [18330] = "Arcanum of Focus",
         [18331] = "Arcanum of Protection",
@@ -40203,9 +40821,15 @@ local c = {
         [18335] = "Pristine Black Diamond",
         [18336] = "Gauntlet of Gordok Might",
         [18337] = "Orphic Bracers",
+        [18338] = "Wand of Arcane Potency",
+        [18339] = "Eidolon Cloak",
         [18340] = "Eidolon Talisman",
         [18343] = "Petrified Band",
+        [18344] = "Stonebark Gauntlets",
+        [18345] = "Murmuring Ring",
+        [18346] = "Threadbare Trousers",
         [18347] = "Well Balanced Axe",
+        [18348] = "Quel'Serrar",
         [18349] = "Gauntlets of Accuracy",
         [18350] = "Amplifying Cloak",
         [18351] = "Magically Sealed Bracers",
@@ -40232,20 +40856,29 @@ local c = {
         [18372] = "Blade of the New Moon",
         [18373] = "Chestplate of Tranquility",
         [18374] = "Flamescarred Shoulders",
+        [18375] = "Bracers of the Eclipse",
+        [18376] = "Timeworn Mace",
         [18377] = "Quickdraw Gloves",
+        [18378] = "Silvermoon Leggings",
         [18379] = "Odious Greaves",
         [18380] = "Eldritch Reinforced Legplates",
         [18381] = "Evil Eye Pendant",
         [18382] = "Fluctuating Cloak",
         [18383] = "Force Imbued Gauntlets",
         [18384] = "Bile-etched Spaulders",
+        [18385] = "Robe of Everlasting Night",
         [18386] = "Padre's Trousers",
+        [18387] = "Brightspark Gloves",
         [18388] = "Stoneshatter",
         [18389] = "Cloak of the Cosmos",
         [18390] = "Tanglemoss Leggings",
+        [18391] = "Eyestalk Cord",
         [18392] = "Distracting Dagger",
+        [18393] = "Warpwood Binding",
+        [18394] = "Demon Howl Wristguards",
         [18395] = "Emerald Flame Ring",
         [18396] = "Mind Carver",
+        [18397] = "Elder Magus Pendant",
         [18398] = "Tidal Loop",
         [18399] = "Ocean's Breeze",
         [18400] = "Ring of Living Stone",
@@ -40273,6 +40906,7 @@ local c = {
         [18422] = "Head of Onyxia",
         [18423] = "Head of Onyxia",
         [18424] = "Sedge Boots",
+        [18425] = "Kreeg's Mug",
         [18426] = "Lethtendris's Web",
         [18427] = "Sergeant's Cloak",
         [18428] = "Senior Sergeant's Insignia",
@@ -40301,13 +40935,21 @@ local c = {
         [18456] = "Sergeant Major's Silk Cuffs",
         [18457] = "Sergeant Major's Silk Cuffs",
         [18458] = "Modest Armguards",
+        [18459] = "Gallant's Wristguards",
         [18460] = "Unsophisticated Hand Cannon",
         [18461] = "Sergeant's Cloak",
         [18462] = "Jagged Bone Fist",
         [18463] = "Ogre Pocket Knife",
         [18464] = "Gordok Nose Ring",
+        [18465] = "Royal Seal of Eldre'Thalas",
         [18466] = "Royal Seal of Eldre'Thalas",
         [18467] = "Royal Seal of Eldre'Thalas",
+        [18468] = "Royal Seal of Eldre'Thalas",
+        [18469] = "Royal Seal of Eldre'Thalas",
+        [18470] = "Royal Seal of Eldre'Thalas",
+        [18471] = "Royal Seal of Eldre'Thalas",
+        [18472] = "Royal Seal of Eldre'Thalas",
+        [18473] = "Royal Seal of Eldre'Thalas",
         [18475] = "Oddly Magical Belt",
         [18476] = "Mud Stained Boots",
         [18477] = "Shaggy Leggings",
@@ -40316,6 +40958,8 @@ local c = {
         [18480] = "Scarab Plate Helm",
         [18481] = "Skullcracking Mace",
         [18482] = "Ogre Toothpick Shooter",
+        [18483] = "Mana Channeling Wand",
+        [18484] = "Cho'Rush's Blade",
         [18485] = "Observer's Shield",
         [18486] = "Mooncloth Robe",
         [18487] = "Pattern: Mooncloth Robe",
@@ -40324,7 +40968,12 @@ local c = {
         [18490] = "Insightful Hood",
         [18491] = "Lorespinner",
         [18492] = "Treated Ancient Blade",
+        [18493] = "Bulky Iron Spaulders",
+        [18494] = "Denwatcher's Shoulders",
         [18495] = "Redoubt Cloak",
+        [18496] = "Heliotrope Cloak",
+        [18497] = "Sublime Wristguards",
+        [18498] = "Hedgecutter",
         [18499] = "Barrier Shield",
         [18500] = "Tarnished Elven Ring",
         [18501] = "Felvine Shard",
@@ -40333,6 +40982,7 @@ local c = {
         [18504] = "Girdle of Insight",
         [18505] = "Mugger's Belt",
         [18506] = "Mongoose Boots",
+        [18507] = "Boots of the Full Moon",
         [18508] = "Swift Flight Bracers",
         [18509] = "Chromatic Cloak",
         [18510] = "Hide of the Wild",
@@ -40345,6 +40995,7 @@ local c = {
         [18517] = "Pattern: Chromatic Cloak",
         [18518] = "Pattern: Hide of the Wild",
         [18519] = "Pattern: Shifting Cloak",
+        [18520] = "Barbarous Blade",
         [18521] = "Grimy Metal Boots",
         [18522] = "Band of the Ogre King",
         [18523] = "Brightly Glowing Stone",
@@ -40362,6 +41013,7 @@ local c = {
         [18535] = "Milli's Shield",
         [18536] = "Milli's Lexicon",
         [18537] = "Counterattack Lodestone",
+        [18538] = "Treant's Bane",
         [18539] = "Reliquary of Purity",
         [18540] = "Sealed Reliquary of Purity",
         [18543] = "Ring of Entropy",
@@ -40446,7 +41098,16 @@ local c = {
         [18664] = "A Treatise on Military Ranks",
         [18665] = "The Eye of Shadow",
         [18670] = "Xorothian Glyphs",
+        [18671] = "Baron Charr's Sceptre",
+        [18672] = "Elemental Ember",
+        [18673] = "Avalanchion's Stony Hide",
         [18675] = "Military Ranks of the Horde & Alliance",
+        [18676] = "Sash of the Windreaver",
+        [18677] = "Zephyr Cloak",
+        [18678] = "Tempestria's Frozen Necklace",
+        [18679] = "Frigid Ring",
+        [18680] = "Ancient Bone Bow",
+        [18681] = "Burial Shawl",
         [18682] = "Ghoul Skin Leggings",
         [18683] = "Hammer of the Vesper",
         [18684] = "Dimly Opalescent Ring",
@@ -40455,10 +41116,19 @@ local c = {
         [18687] = "Xorothian Stardust",
         [18688] = "Imp in a Jar",
         [18689] = "Phantasmal Cloak",
+        [18690] = "Wraithplate Leggings",
+        [18691] = "Dark Advisor's Pendant",
+        [18692] = "Death Knight Sabatons",
         [18693] = "Shivery Handwraps",
         [18694] = "Shadowy Mail Greaves",
         [18695] = "Spellbound Tome",
+        [18696] = "Intricately Runed Shield",
+        [18697] = "Coldstone Slippers",
+        [18698] = "Tattered Leather Hood",
+        [18699] = "Icy Tomb Spaulders",
         [18700] = "Malefic Bracers",
+        [18701] = "Innervating Band",
+        [18702] = "Belt of the Ordained",
         [18703] = "Ancient Petrified Leaf",
         [18704] = "Mature Blue Dragon Sinew",
         [18705] = "Mature Black Dragon Sinew",
@@ -40476,6 +41146,8 @@ local c = {
         [18717] = "Hammer of the Grand Crusader",
         [18718] = "Grand Crusader's Helm",
         [18719] = "The Traitor's Heart",
+        [18720] = "Shroud of the Nathrezim",
+        [18721] = "Barrage Girdle",
         [18722] = "Death Grips",
         [18723] = "Animated Chain Necklace",
         [18724] = "Enchanted Black Dragon Sinew",
@@ -40486,17 +41158,31 @@ local c = {
         [18729] = "Screeching Bow",
         [18730] = "Shadowy Laced Handwraps",
         [18731] = "Pattern: Heavy Leather Ball",
+        [18734] = "Pale Moon Cloak",
         [18735] = "Maleki's Footwraps",
+        [18736] = "Plaguehound Leggings",
         [18737] = "Bone Slicing Hatchet",
         [18738] = "Carapace Spine Crossbow",
         [18739] = "Chitinous Plate Legguards",
         [18740] = "Thuzadin Sash",
+        [18741] = "Morlune's Bracer",
+        [18742] = "Stratholme Militia Shoulderguard",
+        [18743] = "Gracious Cape",
+        [18744] = "Plaguebat Fur Gloves",
+        [18745] = "Sacred Cloth Leggings",
         [18746] = "Divination Scryer",
         [18747] = "Item Properties Test",
         [18749] = "Charger's Lost Soul",
         [18752] = "Exorcism Censer",
         [18753] = "Arcanite Barding",
+        [18754] = "Fel Hardened Bracers",
+        [18755] = "Xorothian Firestick",
+        [18756] = "Dreadguard's Protector",
+        [18757] = "Diabolic Mantle",
+        [18758] = "Specter's Blade",
+        [18759] = "Malicious Axe",
         [18760] = "Necromantic Band",
+        [18761] = "Oblivion's Touch",
         [18762] = "Shard of the Green Flame",
         [18763] = "TEST GUN Alliance20 ",
         [18764] = "TEST GUN Raid",
@@ -41435,6 +42121,8 @@ local c = {
         [20130] = "Diamond Flask",
         [20131] = "Battle Tabard of the Defilers",
         [20132] = "Arathor Battle Tabard",
+        [20133] = "Skyfury Gauntlets",
+        [20134] = "Skyfury Helm",
         [20135] = "90 Epic Warrior Bracelets",
         [20136] = "90 Epic Warrior Breastplate",
         [20137] = "90 Epic Warrior Gauntlets",
@@ -42440,7 +43128,7 @@ local c = {
         [21544] = "Festive Blue Pant Suit",
         [21545] = "Smokywood Supplies",
         [21546] = "Elixir of Holy Power",
-        [21547] = "Recipe: Elixir of Greater Firepower",
+        [21547] = "Recipe: Elixir of Holy Power",
         [21548] = "Pattern: Stormshroud Gloves",
         [21549] = "Monster - Shield, Shieldguard",
         [21550] = "Monster - Bow, Kaldorei",
@@ -42823,6 +43511,7 @@ local c = {
         [22222] = "Plans: Thick Obsidian Breastplate",
         [22223] = "Foreman's Head Protector",
         [22224] = "Jeering Spectre's Essence",
+        [22225] = "Dragonskin Cowl",
         [22226] = "Druidical Remains",
         [22227] = "Starbreeze Village Relic",
         [22228] = "Brilliant Sword of Zealotry",
@@ -42844,11 +43533,13 @@ local c = {
         [22244] = "Box of Souls",
         [22245] = "Soot Encrusted Footwear",
         [22246] = "Enchanted Mageweave Pouch",
+        [22247] = "Faith Healer's Boots",
         [22248] = "Enchanted Runecloth Bag",
         [22249] = "Big Bag of Enchantment",
         [22250] = "Herb Pouch",
         [22251] = "Cenarion Herb Bag",
         [22252] = "Satchel of Cenarius",
+        [22253] = "Tome of the Lost",
         [22254] = "Wand of Eternal Light",
         [22255] = "Magma Forged Band",
         [22256] = "Mana Shaping Handwraps",
@@ -42861,6 +43552,9 @@ local c = {
         [22264] = "Carefully Written Letter",
         [22265] = "Lovingly Composed Letter",
         [22266] = "Flarethorn",
+        [22267] = "Spellweaver's Turban",
+        [22268] = "Draconic Infused Emblem",
+        [22269] = "Shadow Prowler's Cloak",
         [22270] = "Entrenching Boots",
         [22271] = "Leggings of Frenzied Magic",
         [22272] = "Forest's Embrace",
@@ -42905,12 +43599,31 @@ local c = {
         [22311] = "Ironweave Boots",
         [22312] = "Pattern: Satchel of Cenarius",
         [22313] = "Ironweave Bracers",
+        [22315] = "Hammer of Revitalization",
         [22316] = "Test Relic",
+        [22317] = "Lefty's Brass Knuckle",
+        [22318] = "Malgen's Long Bow",
+        [22319] = "Tome of Divine Right",
         [22320] = "Mux's Quality Goods",
         [22321] = "Heart of Wyrmthalak",
+        [22322] = "The Jaw Breaker",
         [22324] = "Winter Kimchi",
+        [22326] = "Amalgam's Band",
+        [22327] = "Amulet of the Redeemed",
+        [22328] = "Legplates of Vigilance",
+        [22329] = "Scepter of Interminable Focus",
+        [22330] = "Shroud of Arcane Mastery",
+        [22331] = "Band of the Steadfast Hero",
+        [22332] = "Blade of Necromancy",
+        [22333] = "Hammer of Divine Might",
+        [22334] = "Band of Mending",
+        [22335] = "Lord Valthalak's Staff of Command",
+        [22336] = "Draconian Aegis of the Legion",
+        [22337] = "Shroud of Domination",
         [22338] = "Volcanic Ash",
         [22341] = "Monster - Mace, Horde A04 Pale - Bone Wrench",
+        [22342] = "Leggings of Torment",
+        [22343] = "Handguards of Savagery",
         [22344] = "Brazier of Invocation: User's Manual",
         [22346] = "Monster - Mace2H, Unstoppable Force",
         [22347] = "Fahrad's Reloading Repeater",
@@ -42964,11 +43677,14 @@ local c = {
         [22395] = "Totem of Rage",
         [22396] = "Totem of Life",
         [22397] = "Idol of Ferocity",
+        [22398] = "Idol of Rejuvenation",
         [22399] = "Idol of Health",
         [22400] = "Libram of Truth",
         [22402] = "Libram of Grace",
         [22403] = "Nacreous Shell Necklace",
+        [22404] = "Willey's Back Scratcher",
         [22405] = "Mantle of the Scarlet Crusade",
+        [22406] = "Redemption",
         [22407] = "Helm of the New Moon",
         [22408] = "Ritssyn's Wand of Bad Mojo",
         [22409] = "Tunic of the Crescent Moon",
@@ -43533,7 +44249,6 @@ local c = {
         [190307] = "Unlit Torch",
         [190308] = "Burning Torch",
         [190309] = "Wooden Figurine",
-        [190325] = "Monster - Incubus Whip Mace1H",
         [191204] = "Lesser Deathstone",
         [191249] = "Greater Deathstone",
         [191267] = "Rune of Teleportation: Antechamber",
@@ -43732,6 +44447,7 @@ local c = {
         [208223] = "Acolyte's Knapsack",
         [208224] = "Acolyte's Note",
         [208414] = "Lunar Idol",
+        [208424] = "Sun Shades",
         [208601] = "Top-Right Map Piece",
         [208602] = "Top-Left Map Piece",
         [208603] = "Bottom-Right Map Piece",
@@ -44284,7 +45000,6 @@ local c = {
         [217308] = "Enchanted Sigil: Innovation",
         [217314] = "Moonsight Rifle",
         [217315] = "Precision Bow",
-        [217336] = "Monster - Incubus Whip Mace1H",
         [217337] = "Supply Shipment",
         [217338] = "Supply Shipment",
         [217339] = "Supply Shipment",
@@ -44298,11 +45013,13 @@ local c = {
         [217497] = "Narpas Sword",
         [217609] = "Talisman of Kazdor",
         [217693] = "Invisibility Potion",
+        [217716] = "Vile Concoction",
         [217717] = "Hollow Emblem",
         [217718] = "Emblem of Blood Magic",
         [217719] = "Blood Magic Essence",
         [217720] = "Offering of Flesh",
         [217721] = "Offering of Bone",
+        [217727] = "Ward of the Dead",
         [217736] = "Rune of the Coterie",
         [217737] = "Modified Talisman",
         [219147] = "Rune of Grace",
@@ -44792,27 +45509,139 @@ local c = {
         [226679] = "Timeless Wanderer's Insights",
         [226680] = "Rune of the First Warrior",
         [226694] = "Rune of Defense Specialization",
+        [226697] = "Red Bag",
         [226698] = "Vertically Composited Patch Hampler",
         [226699] = "Brass-fitted Flam-Tamp Flange",
+        [226772] = "Feralheart Sash",
+        [226774] = "Feralheart Galoshes",
         [226775] = "Feralheart Wraps",
+        [226777] = "Feralheart Hands",
+        [226778] = "Feralheart Spaulders",
+        [226779] = "Feralheart Kilt",
+        [226780] = "Feralheart Cord",
+        [226781] = "Feralheart Sandals",
         [226782] = "Feralheart Bindings",
+        [226784] = "Feralheart Gauntlets",
+        [226785] = "Feralheart Mantle",
+        [226787] = "Feralheart Pants",
         [226788] = "Feralheart Bands",
+        [226789] = "Feralheart Girdle",
+        [226790] = "Feralheart Epaulets",
+        [226791] = "Feralheart Trousers",
+        [226793] = "Feralheart Fists",
+        [226794] = "Feralheart Walkers",
         [226796] = "Feralheart Wristguards",
+        [226797] = "Feralheart Waistguard",
+        [226798] = "Feralheart Pauldrons",
+        [226799] = "Feralheart Legguards",
+        [226802] = "Feralheart Grips",
+        [226803] = "Feralheart Treads",
+        [226825] = "Darkmantle Tunic",
+        [226826] = "Darkmantle Spaulders",
+        [226827] = "Darkmantle Pants",
+        [226828] = "Darkmantle Grips",
+        [226829] = "Darkmantle Cap",
         [226830] = "Darkmantle Bracers",
+        [226831] = "Darkmantle Footpads",
+        [226832] = "Darkmantle Belt",
         [226856] = "Guided Buoyancy Accelerant",
+        [226857] = "Battleboots of Heroism",
+        [226858] = "Spaulders of Heroism",
+        [226859] = "Legplates of Heroism",
+        [226860] = "Crown of Heroism",
+        [226861] = "Gauntlets of Heroism",
+        [226862] = "Breastplate of Heroism",
         [226863] = "Bracers of Heroism",
+        [226864] = "Belt of Heroism",
         [226865] = "Wristguards of Heroism",
+        [226866] = "Waistguard of Heroism",
+        [226867] = "Pauldrons of Heroism",
+        [226868] = "Legguards of Heroism",
+        [226869] = "Faceguard of Heroism",
+        [226870] = "Handguards of Heroism",
+        [226871] = "Sabatons of Heroism",
+        [226872] = "Chestguard of Heroism",
+        [226881] = "Beastmaster's Treads",
+        [226882] = "Beastmaster's Pants",
+        [226883] = "Beastmaster's Gauntlets",
+        [226884] = "Beastmaster's Mantle",
         [226885] = "Beastmaster's Bindings",
+        [226886] = "Beastmaster's Tunic",
+        [226887] = "Beastmaster's Cap",
+        [226888] = "Beastmaster's Belt",
+        [226905] = "Deathmist Belt",
+        [226906] = "Deathmist Robe",
         [226907] = "Deathmist Bracers",
+        [226908] = "Deathmist Sandals",
+        [226909] = "Deathmist Mask",
+        [226910] = "Deathmist Leggings",
+        [226911] = "Deathmist Wraps",
+        [226912] = "Deathmist Mantle",
         [226929] = "Sorcerer's Bindings",
+        [226930] = "Sorcerer's Gauntlets",
+        [226931] = "Sorcerer's Sandals",
+        [226932] = "Sorcerer's Robes",
+        [226933] = "Sorcerer's Leggings",
+        [226934] = "Sorcerer's Belt",
+        [226935] = "Sorcerer's Crown",
+        [226936] = "Sorcerer's Mantle",
+        [226946] = "Virtuous Skirt",
+        [226948] = "Virtuous Belt",
         [226949] = "Virtuous Bracers",
+        [226950] = "Virtuous Mitts",
+        [226951] = "Virtuous Mantle",
+        [226952] = "Virtuous Sandals",
         [226953] = "Virtuous Wraps",
+        [226954] = "Virtuous Cord",
+        [226958] = "Virtuous Hands",
+        [226969] = "Soulforge Spaulders",
         [226970] = "Soulforge Bracers",
+        [226971] = "Soulforge Belt",
+        [226972] = "Soulforge Legplates",
+        [226973] = "Soulforge Breastplate",
+        [226974] = "Soulforge Warboots",
+        [226975] = "Soulforge Gauntlets",
+        [226976] = "Soulforge Greathelm",
         [226977] = "Soulforge Bindings",
+        [226978] = "Soulforge Cord",
+        [226979] = "Soulforge Epaulets",
+        [226980] = "Soulforge Leggings",
+        [226981] = "Soulforge Crown",
+        [226982] = "Soulforge Fists",
+        [226983] = "Soulforge Treads",
+        [226984] = "Soulforge Embrace",
         [226985] = "Soulforge Wristguards",
+        [226986] = "Soulforge Waistguard",
+        [226987] = "Soulforge Pauldrons",
+        [226988] = "Soulforge Legguards",
+        [226989] = "Soulforge Faceguard",
+        [226990] = "Soulforge Handguards",
+        [226991] = "Soulforge Sabatons",
+        [226992] = "Soulforge Chestguards",
         [227001] = "Bindings of The Five Thunders",
+        [227002] = "Coif of The Five Thunders",
+        [227003] = "Pauldrons of The Five Thunders",
+        [227004] = "Vest of The Five Thunders",
+        [227005] = "Kilt of The Five Thunders",
+        [227006] = "Gauntlets of The Five Thunders",
+        [227007] = "Slippers of The Five Thunders",
+        [227008] = "Cord of The Five Thunders",
         [227009] = "Bracers of The Five Thunders",
+        [227010] = "Sash of The Five Thunders",
+        [227011] = "Mantle of The Five Thunders",
+        [227012] = "Leggings of The Five Thunders",
+        [227013] = "Crown of The Five Thunders",
+        [227014] = "Grasp of The Five Thunders",
+        [227015] = "Greaves of The Five Thunders",
+        [227016] = "Tunic of The Five Thunders",
         [227017] = "Bands of The Five Thunders",
+        [227018] = "Girdle of The Five Thunders",
+        [227019] = "Spaulders of The Five Thunders",
+        [227020] = "Legplates of The Five Thunders",
+        [227021] = "Face of The Five Thunders",
+        [227022] = "Fists of The Five Thunders",
+        [227023] = "Treads of The Five Thunders",
+        [227024] = "Chain of The Five Thunders",
         [227041] = "Scourge Shadow Scalpel",
         [227285] = "Fantastic Inventions",
         [227286] = "Warmed Rumsey Rum with Cream",
@@ -44919,6 +45748,7 @@ local c = {
         [227930] = "Safe Box Key",
         [227931] = "Hidden Bundle",
         [227932] = "Rusty Crowbar",
+        [227935] = "Hammer of the Fallen Thane",
         [227937] = "Puzzle Box",
         [227938] = "Shard of Light",
         [227939] = "Shard of Light",
@@ -47592,6 +48422,7 @@ local c = {
         [270123] = "Ragnar's Favorite Hat",
         [270124] = "Warpwood Bracers",
         [270125] = "Satyrhide Armbands",
+        [270126] = "Conqueror's Pendant",
         [270127] = "Incanter's Pantaloons",
         [270151] = "Benedict's Orders",
         [270180] = "Horrible Rootcore",
@@ -48039,6 +48870,7 @@ local c = {
         [272488] = "Premier Linked Leggings",
         [272489] = "Premier Linked Shoulders",
         [272490] = "Premier Chain Breastplate",
+        [272491] = "Premier Chain Headguard",
         [272492] = "Premier Chain Leggings",
         [272494] = "Premier Chain Girdle",
         [272495] = "Premier Chain Gauntlets",
@@ -49498,7 +50330,11 @@ local c = {
         [276066] = "Frazzlespark's Crate",
         [276067] = "Lost Shipping Crate",
         [276068] = "Cask of Powderfuse Port",
+        [276069] = "Gravetoll Gavel",
         [276070] = "Chol'aruk's Head",
+        [276071] = "The Black Helm",
+        [276072] = "Soulwoven Drape",
+        [276073] = "Band of the Damned",
         [276087] = "Nail",
         [276088] = "Metal Bracket",
         [276099] = "Sawyer Family Ledger",
@@ -49570,6 +50406,7 @@ local c = {
         [276561] = "Black Tome",
         [276614] = "Zayus's Exorcism Censer",
         [276631] = "Coldflame Saber",
+        [276632] = "Wit's Edge",
         [276637] = "Currency Wallet",
         [276685] = "Militia Bow",
         [276686] = "Junior's Hunting Bow",
@@ -50032,6 +50869,7 @@ local c = {
         [278543] = "Pouch of Tomb Dust",
         [278567] = "Stromgarde Hood",
         [278569] = "Yesterday's Leftovers",
+        [278570] = "Mardenholde Armbands",
         [278744] = "Mirage Mirror",
         [278796] = "Condensed Elemental Fragment",
         [278797] = "Crystallized Elemental Shard",
@@ -50163,6 +51001,7 @@ local c = {
         [279468] = "Monster Feet (DNT)",
         [279469] = "Grimy Key",
         [279470] = "Monster Hand (DNT)",
+        [279471] = "Alcaz Operative Insignia",
         [279472] = "Pristine Pesterhide Pelt",
         [279473] = "Makeshift Belt",
         [279474] = "Dustwallow Dirk",
@@ -50306,6 +51145,7 @@ local c = {
         [280010] = "Gargantuan Wristguards",
         [280011] = "Deeproar Cord",
         [280012] = "Talon of Tor'Rel",
+        [280013] = "Frostfang Mail Vest",
         [280014] = "Raptorscale Bulwark",
         [280015] = "Venomvessel Ring",
         [280016] = "Spiderchitin Wrap",
@@ -50314,12 +51154,14 @@ local c = {
         [280019] = "Dinofrill Casque",
         [280020] = "Deep Jungle Rifle",
         [280021] = "Tooth of the Matriarch",
+        [280022] = "Scaleguard Scimitar",
         [280023] = "Nanaya's Control Spire",
         [280024] = "Legplates of Reinforced Crystal",
         [280025] = "Leggings of Curation",
         [280026] = "Albinofur Grips",
         [280027] = "Crownroar Chestplate",
         [280028] = "Heartflame Gauntlets",
+        [280029] = "Cinderedge Crescent",
         [280031] = "Sparklance Wand",
         [280032] = "Bolt's Charged Eyeball",
         [280042] = "Tattered Spellbook",
@@ -50349,6 +51191,9 @@ local c = {
         [280078] = "Apprentice's Protective Treads",
         [280079] = "Lunarlight Robe",
         [280080] = "Claymore of Two Moons",
+        [280081] = "Sad-Sack Sandals",
+        [280082] = "Staff of Sorrow",
+        [280083] = "Truesight Rifle",
         [280084] = "Furbolg Rib Protector",
         [280085] = "Tunnelweb Pincer",
         [280086] = "Octofinger Gauntlets",
@@ -50583,6 +51428,8 @@ local c = {
         [281586] = "Elderwild Construction Hammer",
         [281587] = "Greatflank Flayer",
         [281588] = "Nature's Cull",
+        [281598] = "Rusthowl's Worn Collar",
+        [281599] = "Ragged Colors",
         [281600] = "Wail of Death",
         [281628] = "Blade of Bandarion",
         [281629] = "Patrol Orders",
@@ -50680,6 +51527,7 @@ local c = {
         [282021] = "Dreadscorn's Spaulders",
         [282023] = "Clack's Claw",
         [282026] = "Unyielding Battle Signet",
+        [282027] = "Scales of the Devourer",
         [282028] = "Broken Frond of Celastrus",
         [282029] = "Reaver's Repeater",
         [282046] = "Gnome Skull",
@@ -50692,6 +51540,7 @@ local c = {
         [282071] = "Shin Slicers",
         [282074] = "Ogre Sorcerer Belt",
         [282080] = "Flame Seared Signet",
+        [282085] = "Dragonblood Greatsword",
         [282088] = "Heart of Smoldar",
         [282094] = "Blackheart's Vest",
         [282097] = "Unbreakable Golem Grips",
@@ -50741,11 +51590,13 @@ local c = {
         [282655] = "Bog Pickers",
         [282658] = "Dragonmaw Battle Shroud",
         [282699] = "Cleansed Water Globe",
+        [282700] = "Shadow Scalper",
         [282702] = "Molok's Masher",
         [282703] = "Needletooth's Needletooth",
         [282704] = "Shadow Council Apprentice's Mantle",
         [282705] = "Ruul's Secondstone",
         [282706] = "Rotting Meat",
+        [282707] = "Arcanum of Binding",
         [282710] = "Dun Garok Rifle",
         [282711] = "Naga Maiden's Gown",
         [282712] = "Libram of Binding",
@@ -50761,6 +51612,7 @@ local c = {
         [283255] = "Syndicate Executioner's Slicer",
         [283259] = "Bearhide Vicegrips",
         [283361] = "Gorefang's Runners",
+        [283387] = "Scrawled Note",
         [283389] = "Skonk's List",
         [283460] = "Decaying Flesh Belt",
         [283462] = "Bayne's Bite",
@@ -50780,14 +51632,17 @@ local c = {
         [284066] = "Husk of the Husk",
         [284067] = "Rusted Family Memento",
         [284070] = "Dreadwhisper's Touch",
+        [284072] = "Scarlet Judge's Mace",
         [284079] = "High Clerist's Seal",
         [284086] = "Scarlet Executioner's Guise",
+        [284091] = "Scarlet Forgemaster's Bindings",
         [284092] = "Keystone Fragment",
         [284093] = "Keystone Fragment",
         [284097] = "Everstaring Abomination Eye",
         [284100] = "Horseman's Unyielding Shroud",
         [284101] = "Blade of Senseless Slaughter",
         [284102] = "Signet of the Soulless Rider",
+        [284104] = "Cultist's Cuffs",
         [284105] = "Wildhammer Soldier's Spaulders",
         [284146] = "Essene's Waterskin",
         [284150] = "Essene's Spellbook",
@@ -50797,6 +51652,8 @@ local c = {
         [284158] = "Mossflayer Warlord's Girdle",
         [284161] = "Treads of Rotting Flesh",
         [284162] = "Mossflayer Witchdoctor's Robe",
+        [284163] = "Scarlet Hearthstone",
+        [284164] = "Scarlet Hearthstone",
         [284165] = "Duskstalker's Hide",
         [284166] = "Gnarlpine War Staff",
         [284167] = "Blackmoss Robes",
@@ -50820,7 +51677,9 @@ local c = {
         [284257] = "Icesworn Decapitator",
         [284261] = "Magically Fortified Legguards",
         [284262] = "Howling Hide",
+        [284266] = "Wintersaber Hide Lined Gloves",
         [284268] = "Furbolg Shaman's Girdle",
+        [284270] = "Ancient Giant's Gaze",
         [284271] = "Emergency Cache",
         [284272] = "Chimaera Hide Legs",
         [284282] = "Queen Guard's Royal Seal",
@@ -50847,9 +51706,11 @@ local c = {
         [284584] = "Coin Pouch",
         [284585] = "Coin Pouch",
         [284586] = "Coin Pouch",
+        [284587] = "Ankle Slicers",
         [284597] = "Monster - Mace, Thaurissan Hammer",
         [284664] = "Packmule Treat",
         [284666] = "Wolf Whistle",
+        [284667] = "Flame Seared Sword",
         [284668] = "Apothecary's Concoction",
         [284696] = "Carved Furbolg Tooth",
         [284697] = "Arcane Charged Robes",
@@ -50869,6 +51730,7 @@ local c = {
         [284844] = "Dragonmaw Dispatch",
         [284845] = "Thicket Raptor Hide",
         [284847] = "Hippogryph Down Leggings",
+        [284848] = "Diamond Studded Belt",
         [284850] = "Naga Caster's Staff",
         [284859] = "Silithid Sinew Crossbow",
         [284866] = "Windserpent Scaled Cloak",
@@ -50879,6 +51741,7 @@ local c = {
         [285043] = "Snarling Fang",
         [285047] = "Yeti Hide Stompers",
         [285063] = "Black Brood Battleguards",
+        [285066] = "Ooze Rummagers",
         [285088] = "Ooze Dripping Robes",
         [285089] = "Swamp Roamer's Band",
         [285093] = "Ripscaled Cuffs",
@@ -51080,13 +51943,21 @@ local c = {
         [286570] = "Silithid Flesh Bindings",
         [286571] = "Silithid Hauberk",
         [286572] = "Ogre Casting Cloak",
+        [286573] = "Unleashed Swarm",
+        [286590] = "Silithid Queen's Husk",
+        [286597] = "Calm Air Band",
         [286604] = "Spawn of Grubthor",
+        [286609] = "Krellack's Carapace",
+        [286612] = "Sand-Covered Silk Sash",
         [286613] = "King Mosh's Tooth",
         [286614] = "Gruff's Tough Tongue",
         [286616] = "Matriarch's Prowlers",
         [286618] = "Clutchmother's Guards",
         [286619] = "Big Basher's Belt",
         [286639] = "Ambassador's Bloodrobes",
+        [286641] = "Cannibal's Cleaver",
+        [286644] = "Shattered Atal'ai Spear",
+        [286645] = "Reforged Atal'ai Spear",
         [286646] = "Gill's Gills",
         [286647] = "Depleted Crystal Heart",
         [286648] = "Depleted Crystal Heart",
@@ -51170,6 +52041,7 @@ local c = {
         [287025] = "Enchantresses' Spire",
         [287026] = "Escape Plan",
         [287028] = "Tormented Cuffs",
+        [287029] = "Nature Guardian's Legguards",
         [287030] = "Blackmaw Bindings",
         [287031] = "Spearfisher's Waders",
         [287032] = "Den Champion's Binding",
@@ -51177,6 +52049,16 @@ local c = {
         [287034] = "Grove Subjugator's Blade",
         [287035] = "Demon Worshipper's Necklace",
         [287036] = "Satyr's Touch",
+        [287037] = "Shaper's Robe",
+        [287038] = "Naturopathy Footpads",
+        [287039] = "Tattered Explorer's Cuffs",
+        [287040] = "Dinosaur Hide Belt",
+        [287041] = "Time-Forgotten Bindings",
+        [287042] = "Pauldrons of the Stone Guardian",
+        [287043] = "Predaceous Band",
+        [287044] = "Predator's Shroud",
+        [287045] = "Ancient Mattock",
+        [287046] = "Pylon Poker",
         [287059] = "Footman's Pocketknife",
         [287060] = "Rezlak's Spare Knife",
         [287061] = "Cheese Knife",
@@ -51217,6 +52099,7 @@ local c = {
         [287979] = "Lesser Wizard Oil",
         [287980] = "Elemental Sharpening Stone",
         [287992] = "Old Key",
+        [288206] = "Recipe: Draught of Water Walking",
         [288336] = "Blue Firework",
         [288337] = "Green Firework",
         [288338] = "Red Firework",
@@ -51314,7 +52197,7 @@ local c = {
         [10] = {
             name = "The Scrimshank Redemption",
             level = 48,
-            money = 0,
+            money = 6600,
             obj = "Discover the fate of Junior Surveyor Scrimshank, and bring either him or his surveying equipment to Senior Surveyor Fizzledowser in Gadgetzan."
         },
         [11] = {
@@ -51478,7 +52361,7 @@ local c = {
         [32] = {
             name = "Rise of the Silithid",
             level = 48,
-            money = 0,
+            money = 8175,
             obj = "Take the report to Zilzibin Drumlore in Orgrimmar."
         },
         [33] = {
@@ -51783,7 +52666,7 @@ local c = {
         [77] = {
             name = "A Sticky Situation",
             level = 48,
-            money = 0,
+            money = 6600,
             obj = "Recover 10 bottles of Hinterlands Honey Ripple from the crates located around the abandoned Horde base in Skulk Rock."
         },
         [78] = {
@@ -51810,7 +52693,7 @@ local c = {
         [81] = {
             name = "Ripple Delivery",
             level = 48,
-            money = 14000,
+            money = 10100,
             obj = "Deliver the barrel to Dran Droffers in Orgrimmar."
         },
         [82] = {
@@ -51955,12 +52838,7 @@ local c = {
             name = "Arugal's Folly",
             level = 15,
             money = 0,
-            obj = "Bring 6 Pyrewood Shackles to Dalar Dawnweaver at the Sepulcher.",
-            choice = {
-                3586,
-                3570,
-                5242
-            }
+            obj = "Bring 6 Pyrewood Shackles to Dalar Dawnweaver at the Sepulcher."
         },
         [100] = {
             name = "Call of Water",
@@ -52396,7 +53274,7 @@ local c = {
         [162] = {
             name = "Rise of the Silithid",
             level = 49,
-            money = 0,
+            money = 9263,
             obj = "Take the Insect Analysis Report to Gracina Spiritmight in Darnassus."
         },
         [163] = {
@@ -52748,7 +53626,13 @@ local c = {
             name = "Big Game Hunter",
             level = 43,
             money = 0,
-            obj = "Hemet Nesingwary wants you to bring him the head of King Bangalash, the great white tiger."
+            obj = "Hemet Nesingwary wants you to bring him the head of King Bangalash, the great white tiger.",
+            choice = {
+                17686,
+                17687,
+                270084,
+                270085
+            }
         },
         [209] = {
             name = "Skullsplitter Tusks",
@@ -53756,7 +54640,7 @@ local c = {
         [351] = {
             name = "Find OOX-17/TN!",
             level = 48,
-            money = 0,
+            money = 6600,
             obj = "Bring the distress beacon to Oglethorpe's homing robot."
         },
         [352] = {
@@ -54402,13 +55286,7 @@ local c = {
             name = "Assault on Fenris Isle",
             level = 24,
             money = 0,
-            obj = "Bring Thule's Head to High Executor Hadrec at the Sepulcher.",
-            choice = {
-                3461,
-                3462,
-                270020,
-                276722
-            }
+            obj = "Bring Thule's Head to High Executor Hadrec at the Sepulcher."
         },
         [443] = {
             name = "Rot Hide Ichor",
@@ -54476,6 +55354,11 @@ local c = {
             level = 18,
             money = 0,
             obj = "Bring 6 samples of Lake Creeper Moss, 6 samples of Lake Skulker Moss and a Hardened Tumor to Master Apothecary Faranell in the Undercity.",
+            choice = {
+                3451,
+                3582,
+                276723
+            },
             reward = {
                 2458,
                 2459
@@ -54729,7 +55612,7 @@ local c = {
         [485] = {
             name = "Find OOX-09/HL!",
             level = 48,
-            money = 0,
+            money = 6600,
             obj = "Take the distress beacon to Oglethorpe's homing robot at the head of the river in the Hinterlands, near Skulk Rock."
         },
         [486] = {
@@ -54846,12 +55729,6 @@ local c = {
             level = 24,
             money = 0,
             obj = "Bring 10 vials of Mountain Lion Blood to Apothecary Lydon in Tarren Mill.",
-            choice = {
-                2230,
-                3741,
-                6482,
-                276724
-            },
             reward = {
                 3735
             }
@@ -54955,12 +55832,7 @@ local c = {
             name = "Elixir of Agony",
             level = 30,
             money = 0,
-            obj = "Bring the Mudsnout Mixture, a Strong Troll's Blood Elixir, 5 Daggerspine Scales and 5 Torn Fin Eyes to Apothecary Lydon in Tarren Mill.",
-            choice = {
-                3749,
-                3747,
-                276727
-            }
+            obj = "Bring the Mudsnout Mixture, a Strong Troll's Blood Elixir, 5 Daggerspine Scales and 5 Torn Fin Eyes to Apothecary Lydon in Tarren Mill."
         },
         [516] = {
             name = "Beren's Peril",
@@ -55168,12 +56040,7 @@ local c = {
             name = "Humbert's Sword",
             level = 30,
             money = 0,
-            obj = "Retrieve Deathguard Humbert's sword from Dun Garok and return it to him in Tarren Mill.",
-            choice = {
-                3750,
-                3751,
-                270046
-            }
+            obj = "Retrieve Deathguard Humbert's sword from Dun Garok and return it to him in Tarren Mill."
         },
         [548] = {
             name = "<NYI> <TXT> Bloodstone Pendant",
@@ -55194,11 +56061,6 @@ local c = {
             level = 32,
             money = 0,
             obj = "Take Darthalia's Sealed Commendation to Varimathras in the Undercity.",
-            choice = {
-                6282,
-                3761,
-                3822
-            },
             reward = {
                 3760
             }
@@ -55320,11 +56182,6 @@ local c = {
             level = 28,
             money = 0,
             obj = "High Executor Darthalia of Tarren Mill is offering a bounty on Clerk Horrace Whitesteed, Citizen Wilkes, Miner Hackett and Farmer Kalaba.",
-            choice = {
-                3742,
-                3743,
-                5250
-            },
             reward = {
                 3732
             }
@@ -55423,11 +56280,7 @@ local c = {
             name = "Headhunting",
             level = 37,
             money = 0,
-            obj = "Bring 20 Shrunken Heads to Nimboya at the Grom'gol Base Camp.",
-            choice = {
-                4133,
-                4132
-            }
+            obj = "Bring 20 Shrunken Heads to Nimboya at the Grom'gol Base Camp."
         },
         [583] = {
             name = "Welcome to the Jungle",
@@ -55540,12 +56393,7 @@ local c = {
             name = "Venture Company Mining",
             level = 41,
             money = 0,
-            obj = "Bring 10 Singing Blue Crystals to Crank Fizzlebub in Booty Bay.",
-            choice = {
-                5253,
-                4128,
-                287071
-            }
+            obj = "Bring 10 Singing Blue Crystals to Crank Fizzlebub in Booty Bay."
         },
         [601] = {
             name = "Water Elementals",
@@ -55593,12 +56441,7 @@ local c = {
             name = "The Bloodsail Buccaneers",
             level = 45,
             money = 0,
-            obj = "Fleet-Master Seahorn in Booty Bay wants you to kill Captain Stillwater, Captain Keelhaul and Fleet Master Firallon.",
-            choice = {
-                4138,
-                270092,
-                270093
-            }
+            obj = "Fleet-Master Seahorn in Booty Bay wants you to kill Captain Stillwater, Captain Keelhaul and Fleet Master Firallon."
         },
         [609] = {
             name = "Voodoo Dues",
@@ -55644,6 +56487,12 @@ local c = {
                 270100
             }
         },
+        [615] = {
+            name = "The Captain's Cutlass",
+            level = 50,
+            money = 0,
+            obj = "Speak with Sprogger."
+        },
         [616] = {
             name = "The Haunted Isle",
             level = 37,
@@ -55657,6 +56506,17 @@ local c = {
             obj = "Bring 10 Bundles of Akiris Reed to Privateer Bloads in Booty Bay.",
             reward = {
                 4117
+            }
+        },
+        [618] = {
+            name = "Facing Negolash",
+            level = 50,
+            money = 0,
+            obj = "Bring 10 Barbecued Buzzard Wings and 5 bottles of Junglevine Wine to Captain Smotts' Lifeboat.\n\nKill Negolash, and bring Smotts' Cutlass to Captain Smotts in Stranglethorn.",
+            choice = {
+                4130,
+                270109,
+                270110
             }
         },
         [620] = {
@@ -55875,7 +56735,7 @@ local c = {
         [650] = {
             name = "Ripple Recovery",
             level = 48,
-            money = 0,
+            money = 6600,
             obj = "Talk to Gilveradin Sunchaser; his camp is located in the Hinterlands."
         },
         [651] = {
@@ -56035,12 +56895,7 @@ local c = {
             name = "Foul Magics",
             level = 40,
             money = 0,
-            obj = "Retrieve Marez Cowl's Bloodstone Orb and bring it to Tor'gan in Hammerfall.",
-            choice = {
-                4543,
-                4545,
-                270073
-            }
+            obj = "Retrieve Marez Cowl's Bloodstone Orb and bring it to Tor'gan in Hammerfall."
         },
         [674] = {
             name = "Raising Spirits",
@@ -56540,7 +57395,8 @@ local c = {
         [742] = {
             name = "The Ashenvale Hunt",
             level = 20,
-            money = 0
+            money = 0,
+            obj = "Speak with Senani Thunderheart at Splintertree Post, Ashenvale."
         },
         [743] = {
             name = "Dangers of the Windfury",
@@ -57335,6 +58191,7 @@ local c = {
             name = "Dig Rat Stew",
             level = 23,
             money = 0,
+            obj = "Bring 8 Dig Rats to Grub east of the Crossroads.",
             reward = {
                 5487,
                 5478,
@@ -57345,7 +58202,11 @@ local c = {
             name = "The Escape",
             level = 18,
             money = 2000,
-            obj = "Protect Wizzlecrank and the stolen goblin shredder on the way to Sputtervalve in Ratchet."
+            obj = "Protect Wizzlecrank and the stolen goblin shredder on the way to Sputtervalve in Ratchet.",
+            choice = {
+                5326,
+                5327
+            }
         },
         [864] = {
             name = "Return to Apothecary Zinge",
@@ -57387,6 +58248,7 @@ local c = {
             name = "Egg Hunt",
             level = 22,
             money = 0,
+            obj = "Bring 12 Silithid Eggs and the Digging Claw to Korran at the Crossroads.",
             choice = {
                 6503,
                 6502
@@ -57414,13 +58276,21 @@ local c = {
             name = "The Disruption Ends",
             level = 15,
             money = 0,
-            obj = "Kill 8 Razormane Geomancers, 8 Razormane Defenders, and Kreenig Snarlsnout.\n\nThen bring Kreenig Snarlsnout's Tusk to Thork at the Crossroads."
+            obj = "Kill 8 Razormane Geomancers, 8 Razormane Defenders, and Kreenig Snarlsnout.\n\nThen bring Kreenig Snarlsnout's Tusk to Thork at the Crossroads.",
+            choice = {
+                5275,
+                5328
+            }
         },
         [873] = {
             name = "Isha Awak",
             level = 27,
             money = 0,
             obj = "Bring the Heart of Isha Awak to Mahren Skyseer.",
+            choice = {
+                5356,
+                5357
+            },
             reward = {
                 5355
             }
@@ -57434,7 +58304,8 @@ local c = {
         [875] = {
             name = "Harpy Lieutenants",
             level = 16,
-            money = 800
+            money = 800,
+            obj = "Collect 6 Harpy Lieutenant Rings from Witchwing Slayers and return them to Darsok Swiftdagger at the Crossroads."
         },
         [876] = {
             name = "Serena Bloodfeather",
@@ -57451,7 +58322,8 @@ local c = {
         [878] = {
             name = "Tribes at War",
             level = 21,
-            money = 0
+            money = 0,
+            obj = "Kill 6 Bristleback Water Seekers, 12 Bristleback Thornweavers and 12 Bristleback Geomancers and return to Mangletooth at Camp Taurajo in the Barrens."
         },
         [879] = {
             name = "Betrayal from Within",
@@ -57511,7 +58383,11 @@ local c = {
             name = "Stolen Booty",
             level = 16,
             money = 800,
-            obj = "Retrieve the Shipment of Boots and Telescopic Lens for Gazlowe in Ratchet."
+            obj = "Retrieve the Shipment of Boots and Telescopic Lens for Gazlowe in Ratchet.",
+            choice = {
+                5337,
+                5320
+            }
         },
         [890] = {
             name = "The Missing Shipment",
@@ -57535,10 +58411,7 @@ local c = {
             name = "Weapons of Choice",
             level = 24,
             money = 0,
-            choice = {
-                5322,
-                5323
-            }
+            obj = "Bring a Razormane Backstabber, a Charred Razormane Wand and a Razormane War Shield to Tatternack Steelforge at Camp Taurajo in the Barrens."
         },
         [894] = {
             name = "Samophlange",
@@ -57582,6 +58455,7 @@ local c = {
             name = "Consumed by Hatred",
             level = 20,
             money = 0,
+            obj = "Bring 60 Bristleback Quilboar Tusks to Mankrik at the Crossroads.",
             choice = {
                 5314,
                 6477
@@ -57618,7 +58492,8 @@ local c = {
         [905] = {
             name = "The Angry Scytheclaws",
             level = 17,
-            money = 900
+            money = 900,
+            obj = "Kill Sunscale raptors and collect their feathers. Use the feathers on the 3 Scytheclaw nests. Return to Sergra Darkthorn in the Crossroads."
         },
         [906] = {
             name = "Betrayal from Within",
@@ -57669,11 +58544,7 @@ local c = {
             name = "Leaders of the Fang",
             level = 22,
             money = 0,
-            choice = {
-                6505,
-                6504,
-                270018
-            }
+            obj = "Bring the Gems of Cobrahn, Anacondra, Pythas and Serpentis to Nara Wildmane in Thunder Bluff."
         },
         [916] = {
             name = "Webwood Venom",
@@ -57845,7 +58716,7 @@ local c = {
         [939] = {
             name = "Flute of Xavaric",
             level = 54,
-            money = 0,
+            money = 12263,
             obj = "Bring the Flute of Xavaric and 5 Jadefire Felbind samples to Eridan Bluewind in southern Felwood."
         },
         [940] = {
@@ -57997,7 +58868,12 @@ local c = {
             name = "Serpentbloom",
             level = 18,
             money = 2000,
-            obj = "Apothecary Zamah in Thunder Bluff wants you to collect 10 Serpentbloom."
+            obj = "Apothecary Zamah in Thunder Bluff wants you to collect 10 Serpentbloom.",
+            choice = {
+                10919,
+                270008,
+                270009
+            }
         },
         [963] = {
             name = "For Love Eternal",
@@ -58011,7 +58887,7 @@ local c = {
         [964] = {
             name = "Skeletal Fragments",
             level = 57,
-            money = 0,
+            money = 11813,
             obj = "Bring 15 Skeletal Fragments to Apothecary Dithers at the Bulwark, Western Plaguelands."
         },
         [965] = {
@@ -58041,7 +58917,7 @@ local c = {
         [969] = {
             name = "Luck Be With You",
             level = 60,
-            money = 9000,
+            money = 24300,
             obj = "Collect 10 Frostmaul Shards for Witch Doctor Mau'ari in Everlook."
         },
         [970] = {
@@ -58072,7 +58948,7 @@ local c = {
         [974] = {
             name = "Finding the Source",
             level = 55,
-            money = 0,
+            money = 13419,
             obj = "Krakle in Un'Goro Crater wants you to find the hottest area of Fire Plume Ridge.\n\nWhenever you find a hot spot, right click the thermometer to check the temperature. Keep looking until you find the hottest one."
         },
         [975] = {
@@ -58097,13 +58973,13 @@ local c = {
         [977] = {
             name = "Are We There, Yeti?",
             level = 58,
-            money = 9000,
+            money = 16913,
             obj = "Collect 2 Pristine Yeti Horns for Umi Rumplesnicker in Everlook."
         },
         [978] = {
             name = "Moontouched Wildkin",
             level = 55,
-            money = 8500,
+            money = 16783,
             obj = "Collect 10 Moontouched Feathers from Winterspring, then return to Erelas Ambersky in Rut'theran Village."
         },
         [979] = {
@@ -58162,6 +59038,12 @@ local c = {
             level = 20,
             money = 0,
             obj = "Find 5 Fine Moonstalker Pelts and return them to Terenthis in Auberdine."
+        },
+        [989] = {
+            name = "<UNUSED>",
+            level = 22,
+            money = 0,
+            obj = "Speak to Volcor."
         },
         [990] = {
             name = "Trek to Ashenvale",
@@ -58293,11 +59175,7 @@ local c = {
             name = "The Book of Ur",
             level = 26,
             money = 0,
-            choice = {
-                6335,
-                4534,
-                270030
-            }
+            obj = "Bring the Book of Ur to Keeper Bel'dugur at the Apothecarium in the Undercity."
         },
         [1014] = {
             name = "Arugal Must Die",
@@ -58453,6 +59331,12 @@ local c = {
                 17047
             }
         },
+        [1036] = {
+            name = "Avast Ye, Scallywag",
+            level = 60,
+            money = 0,
+            obj = "Speak with Fleet Master Firallon aboard the Crimson Vale off the coast of Stranglethorn Vale."
+        },
         [1037] = {
             name = "Velinde Starsong",
             level = 30,
@@ -58535,7 +59419,6 @@ local c = {
             name = "Into The Scarlet Monastery",
             level = 42,
             money = 0,
-            obj = "Kill High Inquisitor Whitemane, Scarlet Commander Mograine, Herod, the Scarlet Champion and Houndmaster Loksey and then report back to Varimathras in the Undercity.",
             choice = {
                 6802,
                 6803,
@@ -58546,7 +59429,6 @@ local c = {
             name = "Compendium of the Fallen",
             level = 38,
             money = 0,
-            obj = "Retrieve the Compendium of the Fallen from the Monastery in Tirisfal Glades and return to Sage Truthseeker in Thunder Bluff.",
             choice = {
                 7747,
                 17508,
@@ -58567,10 +59449,6 @@ local c = {
             level = 33,
             money = 0,
             obj = "Return Vorrel Sengutz's wedding ring to Monika Sengutz in Tarren Mill.",
-            choice = {
-                7750,
-                4643
-            },
             reward = {
                 7751
             }
@@ -58694,7 +59572,8 @@ local c = {
         [1069] = {
             name = "Deepmoss Spider Eggs",
             level = 20,
-            money = 2500
+            money = 2500,
+            obj = "Bring 15 Deepmoss Eggs to Mebok Mizzyrix in Ratchet."
         },
         [1070] = {
             name = "On Guard in Stonetalon",
@@ -58975,8 +59854,7 @@ local c = {
         [1113] = {
             name = "Hearts of Zeal",
             level = 33,
-            money = 0,
-            obj = "Master Apothecary Faranell in the Undercity wants 20 Hearts of Zeal."
+            money = 0
         },
         [1114] = {
             name = "Delivery to the Gnomes",
@@ -58987,8 +59865,7 @@ local c = {
         [1115] = {
             name = "The Rumormonger",
             level = 36,
-            money = 0,
-            obj = "Talk to Krazek in Booty Bay."
+            money = 0
         },
         [1116] = {
             name = "Dream Dust in the Swamp",
@@ -59047,13 +59924,13 @@ local c = {
         [1125] = {
             name = "The Spirits of Southwind",
             level = 55,
-            money = 0,
+            money = 13419,
             obj = "Free the spirits of 8 Tortured Druids and 8 Tortured Sentinels in Southwind Village, and then return to Layo Starstrike at the Valor's Rest graveyard of Silithus."
         },
         [1126] = {
             name = "Hive in the Tower",
             level = 57,
-            money = 0,
+            money = 15750,
             obj = "Scale the tower of Southwind Village and locate a means to stir the silithid hive into activity.  Bring back anything unusual you may uncover when doing so to Layo Starstrike at the Valor's Rest graveyard of Silithus."
         },
         [1130] = {
@@ -59065,7 +59942,8 @@ local c = {
         [1131] = {
             name = "Steelsnap",
             level = 30,
-            money = 0
+            money = 0,
+            obj = "Bring Steelsnap's Rib to Melor Stonehoof in Thunder Bluff."
         },
         [1132] = {
             name = "Fiora Longears",
@@ -59169,13 +60047,7 @@ local c = {
             name = "Willix the Importer",
             level = 30,
             money = 0,
-            obj = "Escort Willix the Importer out of Razorfen Kraul.",
-            choice = {
-                6748,
-                6750,
-                6749,
-                274078
-            }
+            obj = "Escort Willix the Importer out of Razorfen Kraul."
         },
         [1145] = {
             name = "The Swarm Grows",
@@ -59249,8 +60121,7 @@ local c = {
         [1159] = {
             name = "Test of Lore",
             level = 30,
-            money = 0,
-            obj = "Find Parqual Fintallas in Undercity."
+            money = 0
         },
         [1160] = {
             name = "Test of Lore",
@@ -59262,11 +60133,7 @@ local c = {
             name = "To Steal From Thieves",
             level = 36,
             money = 0,
-            obj = "Bring Kenata, Fardel, and Marcel Dabyrie's Heads to Genavie Callow in Undercity.",
-            choice = {
-                4443,
-                2032
-            }
+            obj = "Bring Kenata, Fardel, and Marcel Dabyrie's Heads to Genavie Callow in Undercity."
         },
         [1166] = {
             name = "Overlord Mok'Morokk's Concern",
@@ -59400,11 +60267,7 @@ local c = {
             name = "Parts of the Swarm",
             level = 35,
             money = 1800,
-            obj = "Return to Belgrom Rockmaul in Orgrimmar.",
-            choice = {
-                6737,
-                6738
-            }
+            obj = "Return to Belgrom Rockmaul in Orgrimmar."
         },
         [1185] = {
             name = "Under the Chitin Was...",
@@ -59467,11 +60330,7 @@ local c = {
             name = "The Sacred Flame",
             level = 29,
             money = 0,
-            obj = "Retrieve the Cloven Hoof for Rau Cliffrunner at the Freewind Post.",
-            choice = {
-                6739,
-                6740
-            }
+            obj = "Retrieve the Cloven Hoof for Rau Cliffrunner at the Freewind Post."
         },
         [1198] = {
             name = "In Search of Thaelrid",
@@ -59570,6 +60429,7 @@ local c = {
             name = "Blueleaf Tubers",
             level = 26,
             money = 0,
+            obj = "Grab a Crate with Holes.\nGrab a Snufflenose Command Stick.\nGrab and read the Snufflenose Owner's Manual.\n\nIn Razorfen Kraul, use the Crate with Holes to summon a Snufflenose Gopher, and use the Command Stick on the gopher to make it search for Tubers.\n\nBring 6 Blueleaf Tubers, the Snufflenose Command Stick and the Crate with Holes to Mebok Mizzyrix in Ratchet.",
             reward = {
                 6755
             }
@@ -59902,6 +60762,18 @@ local c = {
             money = 0,
             obj = "Speak with Clerk Lendry in Theramore."
         },
+        [1318] = {
+            name = "Unfinished Gordok Business",
+            level = 60,
+            money = 0,
+            obj = "Find the Gauntlet of Gordok Might and return it to Captain Kromcrush in Dire Maul.\n\nAccording to Kromcrush, the \"old timey story\" says that Tortheldrin - a \"creepy\" elf who called himself a prince - stole it from one of the Gordok kings.",
+            choice = {
+                18366,
+                18367,
+                18368,
+                18369
+            }
+        },
         [1319] = {
             name = "The Black Shield",
             level = 35,
@@ -60010,11 +60882,7 @@ local c = {
             name = "Centaur Bounty",
             level = 31,
             money = 0,
-            obj = "Bring 15 Centaur Ears to Felgur Twocuts in Desolace.",
-            choice = {
-                6780,
-                6784
-            }
+            obj = "Bring 15 Centaur Ears to Felgur Twocuts in Desolace."
         },
         [1367] = {
             name = "Magram Alliance",
@@ -60038,12 +60906,7 @@ local c = {
             name = "Stealing Supplies",
             level = 35,
             money = 0,
-            obj = "Bring 6 bags of Crudely Dried Meat to Uthek the Wise in the Gelkis Village.",
-            choice = {
-                3463,
-                3464,
-                3465
-            }
+            obj = "Bring 6 bags of Crudely Dried Meat to Uthek the Wise in the Gelkis Village."
         },
         [1371] = {
             name = "Gizmo for Warug",
@@ -60322,6 +61185,11 @@ local c = {
                 11884
             }
         },
+        [1441] = {
+            name = "<UNUSED>",
+            level = 33,
+            money = 0
+        },
         [1444] = {
             name = "Return to Fel'Zerul",
             level = 44,
@@ -60555,7 +61423,8 @@ local c = {
         [1483] = {
             name = "Ziz Fizziks",
             level = 21,
-            money = 0
+            money = 0,
+            obj = "Speak with Ziz Fizziks in Windshear Crag."
         },
         [1484] = {
             name = "The Corrupter",
@@ -60573,6 +61442,7 @@ local c = {
             name = "Deviate Hides",
             level = 17,
             money = 1800,
+            obj = "Nalpak in the Wailing Caverns wants 20 Deviate Hides.",
             reward = {
                 918,
                 6480
@@ -60582,6 +61452,7 @@ local c = {
             name = "Deviate Eradication",
             level = 21,
             money = 2500,
+            obj = "Ebru in the Wailing Caverns wants you to kill 7 Deviate Ravagers, 7 Deviate Vipers, 7 Deviate Shamblers and 7 Deviate Dreadfangs.",
             choice = {
                 6476,
                 8071,
@@ -60613,7 +61484,8 @@ local c = {
         [1491] = {
             name = "Smart Drinks",
             level = 18,
-            money = 1000
+            money = 1000,
+            obj = "Bring 6 portions of Wailing Essence to Mebok Mizzyrix in Ratchet."
         },
         [1492] = {
             name = "Wharfmaster Dizzywig",
@@ -61091,6 +61963,21 @@ local c = {
             money = 0,
             obj = "Speak to Duthorian Rall in Stormwind."
         },
+        [1662] = {
+            name = "<UNUSED>",
+            level = 40,
+            money = 0
+        },
+        [1663] = {
+            name = "<UNUSED>",
+            level = 40,
+            money = 0
+        },
+        [1664] = {
+            name = "<UNUSED>",
+            level = 40,
+            money = 0
+        },
         [1665] = {
             name = "Bartleby's Mug",
             level = 10,
@@ -61372,11 +62259,7 @@ local c = {
             name = "The Orb of Soran'ruk",
             level = 25,
             money = 0,
-            obj = "Find 3 Soran'ruk Fragments and 1 Large Soran'ruk Fragment and return them to Doan Karhan in the Barrens.",
-            choice = {
-                6898,
-                15109
-            }
+            obj = "Find 3 Soran'ruk Fragments and 1 Large Soran'ruk Fragment and return them to Doan Karhan in the Barrens."
         },
         [1758] = {
             name = "Tome of the Cabal",
@@ -62461,10 +63344,6 @@ local c = {
             level = 47,
             money = 0,
             obj = "Take the reward voucher to Bena Winterhoof in Thunder Bluff.",
-            choice = {
-                3928,
-                6149
-            },
             reward = {
                 9587
             }
@@ -62628,7 +63507,7 @@ local c = {
         [2605] = {
             name = "The Thirsty Goblin",
             level = 49,
-            money = 7000,
+            money = 9290,
             obj = "Collect a Laden Dew Gland and bring it to Marin Noggenfogger in Gadgetzan."
         },
         [2606] = {
@@ -62673,13 +63552,13 @@ local c = {
         [2623] = {
             name = "The Swamp Talker",
             level = 55,
-            money = 0,
+            money = 13419,
             obj = "Retrieve the Warchief's Orders and return them to the Fallen Hero of the Horde."
         },
         [2641] = {
             name = "Sprinkle's Secret Ingredient",
             level = 49,
-            money = 0,
+            money = 7394,
             obj = "Sprinkle in Gadgetzan wants you to collect a Violet Tragan and return it to her."
         },
         [2661] = {
@@ -62700,7 +63579,7 @@ local c = {
         [2681] = {
             name = "The Stones That Bind Us",
             level = 57,
-            money = 0,
+            money = 19819,
             obj = "Free nine Servants of Razelikh, three Servants of Sevine, three Servants of Allistarj, and three Servants of Grol. Return to the Fallen Hero when your task is complete. You must remain within close proximity of the stones or the process will fail."
         },
         [2701] = {
@@ -62721,7 +63600,7 @@ local c = {
         [2721] = {
             name = "Kirith",
             level = 58,
-            money = 0,
+            money = 17050,
             obj = "Find out what became of Lieutenant Kirith."
         },
         [2741] = {
@@ -62748,7 +63627,7 @@ local c = {
         [2744] = {
             name = "The Demon Hunter",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Speak with Loramus Thalipedes in Azshara."
         },
         [2745] = {
@@ -62958,7 +63837,7 @@ local c = {
         [2783] = {
             name = "Petty Squabbles",
             level = 57,
-            money = 0,
+            money = 11813,
             obj = "Speak with the Fallen Hero of the Horde at the border of the Blasted Lands and the swamp."
         },
         [2784] = {
@@ -62997,12 +63876,7 @@ local c = {
             name = "Rig Wars",
             level = 35,
             money = 0,
-            obj = "Retrieve the Rig Blueprints and Thermaplugg's Safe Combination from Gnomeregan and bring them to Nogg in Orgrimmar.\r\n",
-            choice = {
-                9623,
-                9624,
-                9625
-            }
+            obj = "Retrieve the Rig Blueprints and Thermaplugg's Safe Combination from Gnomeregan and bring them to Nogg in Orgrimmar.\r\n"
         },
         [2842] = {
             name = "Chief Engineer Scooty",
@@ -63022,7 +63896,7 @@ local c = {
         [2844] = {
             name = "The Giant Guardian",
             level = 49,
-            money = 0,
+            money = 5525,
             obj = "Locate the lost night elf girl."
         },
         [2845] = {
@@ -63210,6 +64084,11 @@ local c = {
             money = 4500,
             obj = "Return to Shandris Feathermoon in the Feathermoon Stronghold and report your findings."
         },
+        [2868] = {
+            name = "<TXT> The Shriveled Heart",
+            level = 50,
+            money = 0
+        },
         [2869] = {
             name = "Against the Hatecrest",
             level = 43,
@@ -63269,7 +64148,7 @@ local c = {
         [2877] = {
             name = "Skulk Rock Clean-up",
             level = 48,
-            money = 5000,
+            money = 7850,
             obj = "Kill 10 Green Sludges and 10 Jade Oozes, and then report back to Fraggar Thundermantle in Aerie Peak."
         },
         [2879] = {
@@ -63307,12 +64186,7 @@ local c = {
             name = "A Fine Mess",
             level = 30,
             money = 0,
-            obj = "Escort Kernobee to the Clockwerk Run exit and then report to Scooty in Booty Bay.",
-            choice = {
-                9535,
-                9536,
-                270042
-            }
+            obj = "Escort Kernobee to the Clockwerk Run exit and then report to Scooty in Booty Bay."
         },
         [2922] = {
             name = "Save Techbot's Brain!",
@@ -63421,7 +64295,7 @@ local c = {
         [2937] = {
             name = "Summoning Shadra",
             level = 55,
-            money = 0,
+            money = 20069,
             obj = "Defeat Shadra at the altar of Shadra'Alor, then bring her venom to Apothecary Lydon in Tarren Mill."
         },
         [2938] = {
@@ -63466,13 +64340,13 @@ local c = {
         [2943] = {
             name = "Return to Troyas",
             level = 48,
-            money = 0,
+            money = 4950,
             obj = "Deliver the book to Troyas Moonbreeze in Feathermoon Stronghold."
         },
         [2944] = {
             name = "The Super Snapper FX",
             level = 48,
-            money = 0,
+            money = 6600,
             obj = "Use the Super Snapper FX to take a snapshot of Gammerita, then return to Daryn Lightwind in Rut'theran Village."
         },
         [2945] = {
@@ -63484,7 +64358,7 @@ local c = {
         [2946] = {
             name = "Seeing What Happens",
             level = 50,
-            money = 0,
+            money = 8225,
             obj = "Bring the miniature platinum discs to the gates of Uldum in Tanaris and look for clues as to the connection between the two."
         },
         [2947] = {
@@ -63543,7 +64417,7 @@ local c = {
         [2954] = {
             name = "The Stone Watcher",
             level = 50,
-            money = 0,
+            money = 8225,
             obj = "Learn the purpose of the Stone Watcher of Norgannon, and then interact with the Uldum Pedestal in the Tanaris desert."
         },
         [2962] = {
@@ -63561,7 +64435,7 @@ local c = {
         [2964] = {
             name = "A Future Task",
             level = 50,
-            money = 22000,
+            money = 14642,
             obj = "Speak with High Explorer Magellas in Ironforge."
         },
         [2965] = {
@@ -63573,7 +64447,7 @@ local c = {
         [2966] = {
             name = "Seeing What Happens",
             level = 50,
-            money = 0,
+            money = 8225,
             obj = "Bring the miniature platinum discs to the gates of Uldum in Tanaris and look for clues as to the connection between the two."
         },
         [2967] = {
@@ -63585,7 +64459,7 @@ local c = {
         [2968] = {
             name = "A Future Task",
             level = 50,
-            money = 22000,
+            money = 14642,
             obj = "Speak with Sage Truthseeker in Thunder Bluff."
         },
         [2969] = {
@@ -63724,7 +64598,7 @@ local c = {
         [2989] = {
             name = "The Altar of Zul",
             level = 48,
-            money = 0,
+            money = 6600,
             obj = "Check the top of the Altar of Zul, then return to Gryphon Master Talonaxe."
         },
         [2990] = {
@@ -63820,6 +64694,11 @@ local c = {
             money = 5000,
             obj = "Bring the Carefully-packed Crate to Erelas Ambersky in Rut'theran Village."
         },
+        [3023] = {
+            name = "<UNUSED>",
+            level = 30,
+            money = 0
+        },
         [3042] = {
             name = "Troll Temper",
             level = 45,
@@ -63841,8 +64720,14 @@ local c = {
         [3063] = {
             name = "Vengeance on the Northspring",
             level = 50,
-            money = 5500,
+            money = 7817,
             obj = "Talo Thornhoof wants you to kill 4 Northspring Harpies, 4 Northspring Roguefeathers, 4 Northspring Windcallers, and 4 Northspring Slayers."
+        },
+        [3064] = {
+            name = "<NYI> <TXT> Pirate Hats",
+            level = 45,
+            money = 0,
+            obj = "Bring 20 Untorn Pirate Hats to Yorba Screwspigot."
         },
         [3065] = {
             name = "Simple Tablet",
@@ -64111,19 +64996,19 @@ local c = {
         [3126] = {
             name = "Treant Muisek",
             level = 50,
-            money = 0,
+            money = 8225,
             obj = "Kill 3 Wandering Forest Walkers. Use the Muisek Vessel to shrink and capture the fallen Treants."
         },
         [3127] = {
             name = "Mountain Giant Muisek",
             level = 50,
-            money = 0,
+            money = 8225,
             obj = "Kill 7 Land Walkers or Cliff Giants. Use the Muisek Vessel to shrink and capture the fallen Mountain Giants."
         },
         [3128] = {
             name = "Natural Materials",
             level = 50,
-            money = 5500,
+            money = 9829,
             obj = "Bring 2 Splintered Logs, 6 Encrusted Minerals, 20 pieces of Resilient Sinew, and 40 Metallic Fragments to Witch Doctor Uzer'i in Camp Mojache."
         },
         [3129] = {
@@ -64163,13 +65048,13 @@ local c = {
         [3181] = {
             name = "The Horn of the Beast",
             level = 48,
-            money = 0,
+            money = 8175,
             obj = "Take Margol's Gigantic Horn to Mountaineer Pebblebitty.\r\n"
         },
         [3182] = {
             name = "Proof of Deed",
             level = 48,
-            money = 14000,
+            money = 10100,
             obj = "Take Margol's Gigantic Horn to Curator Thorius in Ironforge."
         },
         [3201] = {
@@ -64203,13 +65088,21 @@ local c = {
             name = "Stolen Silver",
             level = 18,
             money = 1000,
-            obj = "Bring the Stolen Silver to Gazrog in the Crossroads."
+            obj = "Bring the Stolen Silver to Gazrog in the Crossroads.",
+            choice = {
+                11853,
+                2694
+            }
         },
         [3301] = {
             name = "Mura Runetotem",
             level = 15,
             money = 0,
-            obj = "Speak with Mura Runetotem in the Sepulcher."
+            obj = "Speak with Mura Runetotem in the Sepulcher.",
+            choice = {
+                10820,
+                10821
+            }
         },
         [3321] = {
             name = "Did You Lose This?",
@@ -64242,7 +65135,7 @@ local c = {
         [3362] = {
             name = "Thistleshrub Valley",
             level = 50,
-            money = 7500,
+            money = 10413,
             obj = "Tran'rek in Gadgetzan wants you to kill 8 Gnarled Thistleshrubs and 8 Thistleshrub Rootshapers."
         },
         [3364] = {
@@ -64266,20 +65159,24 @@ local c = {
         [3367] = {
             name = "Suntara Stones",
             level = 48,
-            money = 0,
+            money = 6600,
             obj = "Help Dorius get back to Ironforge.\r\n"
         },
         [3368] = {
             name = "Suntara Stones",
             level = 48,
-            money = 14000,
+            money = 10100,
             obj = "Take the Singed Letter to Thorius in Ironforge. He is in the Hall of Explorers."
         },
         [3369] = {
             name = "In Nightmares",
             level = 25,
             money = 0,
-            obj = "Bring the Nightmare Shard to Hamuul Runetotem on Elder Rise."
+            obj = "Bring the Nightmare Shard to Hamuul Runetotem on Elder Rise.",
+            choice = {
+                10657,
+                10658
+            }
         },
         [3370] = {
             name = "In Nightmares",
@@ -64294,13 +65191,13 @@ local c = {
         [3371] = {
             name = "Dwarven Justice",
             level = 55,
-            money = 0,
+            money = 13419,
             obj = "Return to the Searing Gorge and find Dorius's archaeology unit. "
         },
         [3372] = {
             name = "Release Them",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Find the Mysterious Artifact being guarded by the Twilight's Hammer Idolaters in the northwest quadrant of the Searing Gorge.\r\n"
         },
         [3373] = {
@@ -64356,13 +65253,19 @@ local c = {
         [3380] = {
             name = "The Sunken Temple",
             level = 51,
-            money = 0,
+            money = 6844,
             obj = "Find Marvon Rivetseeker in Tanaris."
+        },
+        [3381] = {
+            name = "A Meeting with the Master",
+            level = 48,
+            money = 0,
+            obj = "Bring 2 Undamaged Hippogryph Feathers to Sanath Lim-yo in Azshara if you wish to speak to his master."
         },
         [3382] = {
             name = "A Crew Under Fire",
             level = 57,
-            money = 0,
+            money = 15750,
             obj = "Defend Captain Vanessa Beltis, her crew and the Horizon Scout's passengers against the naga attack. Captain Vanessa Beltis must survive."
         },
         [3385] = {
@@ -64384,6 +65287,21 @@ local c = {
                 10463
             }
         },
+        [3422] = {
+            name = "<UNUSED>",
+            level = 45,
+            money = 0
+        },
+        [3423] = {
+            name = "<UNUSED>",
+            level = 45,
+            money = 0
+        },
+        [3424] = {
+            name = "<UNUSED>",
+            level = 45,
+            money = 0
+        },
         [3441] = {
             name = "Divine Retribution",
             level = 48,
@@ -64393,31 +65311,31 @@ local c = {
         [3442] = {
             name = "The Flawless Flame",
             level = 48,
-            money = 14000,
+            money = 10100,
             obj = "Collect 4 Hearts of Flame and 4 globes of Golem Oil and return the items to Velarok Windblade."
         },
         [3443] = {
             name = "Forging the Shaft",
             level = 48,
-            money = 14000,
+            money = 10100,
             obj = "Bring 8 Thorium Plated Daggers to Velarok Windblade."
         },
         [3444] = {
             name = "The Stone Circle",
             level = 51,
-            money = 0,
+            money = 9188,
             obj = "Retrieve the Stone Circle from Marvon Rivetseeker's workshop in Ratchet."
         },
         [3445] = {
             name = "The Sunken Temple",
             level = 51,
-            money = 0,
+            money = 6844,
             obj = "Find Marvon Rivetseeker in Tanaris."
         },
         [3446] = {
             name = "Into the Depths",
             level = 51,
-            money = 0,
+            money = 9188,
             obj = "Find the Altar of Hakkar in the Sunken Temple in Swamp of Sorrows."
         },
         [3447] = {
@@ -64459,7 +65377,7 @@ local c = {
         [3452] = {
             name = "The Flame's Casing",
             level = 50,
-            money = 7500,
+            money = 10413,
             obj = "Find and return a Symbol of Ragnaros to Velarok Windblade."
         },
         [3453] = {
@@ -64514,6 +65432,12 @@ local c = {
                 10569
             }
         },
+        [3482] = {
+            name = "<NYI> <TXT> The Pocked Black Box",
+            level = 35,
+            money = 0,
+            obj = "Take this box to Kravel."
+        },
         [3501] = {
             name = "Everything Counts In Large Amounts",
             level = 55,
@@ -64526,7 +65450,7 @@ local c = {
         [3505] = {
             name = "Betrayed",
             level = 53,
-            money = 0,
+            money = 8394,
             obj = "Kill 6 Blood Elf Reclaimers and 6 Blood Elf Surveyors, then find the source of Rimtori's power."
         },
         [3508] = {
@@ -64538,13 +65462,13 @@ local c = {
         [3509] = {
             name = "The Name of the Beast",
             level = 58,
-            money = 0,
+            money = 17050,
             obj = "Speak with Lord Arkkoroc in Azshara. Begin your search at the waters edge to find the Temple of Arkkoran."
         },
         [3510] = {
             name = "The Name of the Beast",
             level = 58,
-            money = 26500,
+            money = 29196,
             obj = "Slay Hetaera and bring back Hetaera's Bloodied Head, Hetaera's Beaten Head, and Hetaera's Bruised Head to Lord Arkkoroc."
         },
         [3511] = {
@@ -64556,7 +65480,7 @@ local c = {
         [3512] = {
             name = "In Eranikus' Own Words",
             level = 55,
-            money = 0,
+            money = 9975,
             obj = "Travel to the eastern part of Winterspring and speak with Umbranse the Spiritspeaker."
         },
         [3513] = {
@@ -64569,17 +65493,17 @@ local c = {
             name = "Horde Presence",
             level = 29,
             money = 0,
-            obj = "Kill the leader of the Talon Den, Rynthariel the Keymaster.",
-            choice = {
-                10653,
-                10654,
-                270038
-            }
+            obj = "Kill the leader of the Talon Den, Rynthariel the Keymaster."
+        },
+        [3515] = {
+            name = "<UNUSED>",
+            level = 42,
+            money = 0
         },
         [3517] = {
             name = "Stealing Knowledge",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Find the Tablet of Beth'Amara, the Tablet of Jin'yael, the Tablet of Markri, and the Tablet of Sael'hai for Jediga in Valormok."
         },
         [3518] = {
@@ -64661,6 +65585,11 @@ local c = {
                 270117
             }
         },
+        [3529] = {
+            name = "<UNUSED>",
+            level = 52,
+            money = 0
+        },
         [3541] = {
             name = "Delivery to Jes'rimon",
             level = 52,
@@ -64682,25 +65611,25 @@ local c = {
         [3562] = {
             name = "Magatha's Payment to Jediga",
             level = 52,
-            money = 6000,
+            money = 14700,
             obj = "Deliver Magatha's Note to Jediga in Azshara."
         },
         [3563] = {
             name = "Jes'rimon's Payment to Jediga",
             level = 52,
-            money = 6000,
+            money = 14700,
             obj = "Deliver Jes'rimon's Note to Jediga in Azshara."
         },
         [3564] = {
             name = "Andron's Payment to Jediga",
             level = 52,
-            money = 7500,
+            money = 15200,
             obj = "Deliver Andron's Note to Jediga in Azshara."
         },
         [3565] = {
             name = "Xylem's Payment to Jediga",
             level = 52,
-            money = 6000,
+            money = 9600,
             obj = "Deliver Xylem's Note to Jediga in Azshara."
         },
         [3566] = {
@@ -64729,7 +65658,7 @@ local c = {
         [3570] = {
             name = "Seeping Corruption",
             level = 52,
-            money = 7500
+            money = 12700
         },
         [3601] = {
             name = "Kim'jael Indeed!",
@@ -64743,14 +65672,53 @@ local c = {
         [3602] = {
             name = "Azsharite",
             level = 58,
-            money = 26500,
+            money = 33458,
             obj = "Recover twenty Crystallized Azsharite from southern Azshara. You may use the Felhound to assist you in 'sniffing' out the location of cleverly hidden deposits.\n\nReturn to Loramus when the task is complete.\r\n"
         },
         [3621] = {
             name = "The Formation of Felbane",
             level = 58,
-            money = 0,
+            money = 12788,
             obj = "Take the Shipment to Galvan the Ancient in Stranglethorn Vale."
+        },
+        [3622] = {
+            name = "<UNUSED>",
+            level = 41,
+            money = 0
+        },
+        [3625] = {
+            name = "Enchanted Azsharite Fel Weaponry",
+            level = 58,
+            money = 0,
+            obj = "Wait for Galvan to finish forging the weaponry.",
+            choice = {
+                10697,
+                10698,
+                10696
+            }
+        },
+        [3626] = {
+            name = "Return to the Blasted Lands",
+            level = 58,
+            money = 0,
+            obj = "Return to the Fallen Hero of the Horde."
+        },
+        [3627] = {
+            name = "Uniting the Shattered Amulet",
+            level = 60,
+            money = 24900,
+            obj = "Slay Grol the Destroyer, Lady Sevine, and Archmage Allistarj. From their corpses take the Amulet of Grol, the Amulet of Sevine, and the Amulet of Allistarj.\n\nRemember to USE your Enchanted Azsharite Fel Weaponry to weaken the triad. They cannot be killed otherwise - but use them wisely...\r\n"
+        },
+        [3628] = {
+            name = "You Are Rakh'likh, Demon",
+            level = 60,
+            money = 27000,
+            obj = "Destroy Razelikh the Defiler and return the Severed Horn of the Defiler to the Fallen Hero of the Horde. You will also need to return the Ward of the Defiler so that the Fallen Hero can destroy it, preventing it from ever falling into the wrong hands.\r\n",
+            reward = {
+                10778,
+                10779,
+                10959
+            }
         },
         [3629] = {
             name = "Goblin Engineering",
@@ -64885,6 +65853,14 @@ local c = {
             money = 0,
             obj = "Listen to Royal Historian Archesonus recant the history of Thaurissan."
         },
+        [3721] = {
+            name = "An OOX of Your Own",
+            level = 50,
+            money = 0,
+            reward = {
+                10398
+            }
+        },
         [3741] = {
             name = "Hilary's Necklace",
             level = 15,
@@ -64894,7 +65870,7 @@ local c = {
         [3761] = {
             name = "Un'Goro Soil",
             level = 50,
-            money = 14500,
+            money = 12454,
             obj = "Bring 20 Un'Goro Soil samples to Ghede on the Elder Rise of Thunder Bluff."
         },
         [3762] = {
@@ -64912,7 +65888,7 @@ local c = {
         [3764] = {
             name = "Un'Goro Soil",
             level = 50,
-            money = 14500,
+            money = 12454,
             obj = "Bring 20 Un'Goro Soil samples to Jenal at the Cenarion Enclave in Darnassus."
         },
         [3765] = {
@@ -64942,7 +65918,7 @@ local c = {
         [3783] = {
             name = "Are We There, Yeti?",
             level = 56,
-            money = 8500,
+            money = 14417,
             obj = "Collect 10 Thick Yeti Furs for Umi Rumplesnicker in Everlook."
         },
         [3784] = {
@@ -65021,7 +65997,7 @@ local c = {
         [3821] = {
             name = "Dreadmaul Rock",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Venture forth to the Burning Steppes and find out what became of Sha'ni Proudtusk."
         },
         [3822] = {
@@ -65036,13 +66012,13 @@ local c = {
         [3823] = {
             name = "Extinguish the Firegut",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Slay 15 Firegut Ogre-Mages, 7 Firegut Ogres, and 7 Firegut Ogre Brutes, and return to Oralius when you are finished."
         },
         [3824] = {
             name = "Gor'tesh the Brute Lord",
             level = 53,
-            money = 0,
+            money = 11156,
             obj = "Find Gor'tesh, somewhere to the west of Dreadmaul Rock. Kill Gor'tesh and then take Gor'tesh's Lopped Off Head back to Oralius in Burning Steppes.\r\n"
         },
         [3825] = {
@@ -65082,13 +66058,13 @@ local c = {
         [3845] = {
             name = "It's a Secret to Everybody",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Examine the items inside the pack and bring them to their owner."
         },
         [3881] = {
             name = "Expedition Salvation",
             level = 53,
-            money = 4000,
+            money = 12573,
             obj = "Bring a Crate of Foodstuffs and Research Equipment to Williden Marshal in Un'Goro Crater."
         },
         [3882] = {
@@ -65104,13 +66080,13 @@ local c = {
         [3883] = {
             name = "Alien Ecology",
             level = 52,
-            money = 4000,
+            money = 11533,
             obj = "Use the Scraping Vial to collect a Hive Wall Sample from one of the Gorishi hive hatcheries in Un'Goro Crater.  Look for the chambers with the hanging larval spawns.\n\nBring the Hive Wall Sample to Hol'anyee Marshal in Un'Goro Crater."
         },
         [3884] = {
             name = "Williden's Journal",
             level = 50,
-            money = 0,
+            money = 6213,
             obj = "Return the journal to Williden Marshal somewhere in Un'Goro Crater."
         },
         [3901] = {
@@ -65160,7 +66136,7 @@ local c = {
         [3906] = {
             name = "Disharmony of Flame",
             level = 52,
-            money = 15500,
+            money = 15367,
             obj = "Travel to the quarry in Blackrock Mountain and slay Overmaster Pyron. Return to Thunderheart when you have completed this assignment.\r\n"
         },
         [3907] = {
@@ -65178,13 +66154,13 @@ local c = {
         [3908] = {
             name = "It's a Secret to Everybody",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Take Linken's Sword to Donova Snowden in Winterspring."
         },
         [3909] = {
             name = "The Videre Elixir",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Seek out Gregan Brewspewer in northern Feralas. From him, learn how you may acquire the Videre Elixir, then return to Donova Snowden in Winterspring."
         },
         [3911] = {
@@ -65199,7 +66175,7 @@ local c = {
         [3912] = {
             name = "Meet at the Grave",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Go to the graveyard outside Gadgetzan, and use the Videre Elixir. Follow the rest of Donova's instructions to find Gaeriyan."
         },
         [3913] = {
@@ -65211,7 +66187,7 @@ local c = {
         [3914] = {
             name = "Linken's Sword",
             level = 52,
-            money = 7500,
+            money = 12700,
             obj = "Deliver Linken's Superior Sword to Linken in Un'Goro Crater."
         },
         [3921] = {
@@ -65229,13 +66205,18 @@ local c = {
         [3923] = {
             name = "Rilli Greasygob",
             level = 18,
-            money = 0
+            money = 0,
+            obj = "Bring the Broken and Battered Samophlange to Rilli Greasygob in Orgrimmar."
         },
         [3924] = {
             name = "Samophlange Manual",
             level = 19,
             money = 0,
-            obj = "Bring the Samophlange Manual to Rilli Greasygob in Orgrimmar."
+            obj = "Bring the Samophlange Manual to Rilli Greasygob in Orgrimmar.",
+            choice = {
+                11855,
+                11854
+            }
         },
         [3941] = {
             name = "A Gnome's Assistance",
@@ -65246,7 +66227,7 @@ local c = {
         [3942] = {
             name = "Linken's Memory",
             level = 54,
-            money = 0,
+            money = 12263,
             obj = "Find Eridan Bluewind in southern Felwood."
         },
         [3961] = {
@@ -65271,19 +66252,19 @@ local c = {
         [3981] = {
             name = "Commander Gor'shak",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Find Commander Gor'shak in Blackrock Depths.\n\nYou recall that the crudely drawn picture of the orc included bars drawn over the portrait. Perhaps you should search for a prison of some sort."
         },
         [3982] = {
             name = "What Is Going On?",
             level = 54,
-            money = 0,
+            money = 12263,
             obj = "Defend Gor'shak."
         },
         [4001] = {
             name = "What Is Going On?",
             level = 54,
-            money = 0,
+            money = 15300,
             obj = "Speak with Kharan Mighthammer and gather information about Princess Moira Bronzebeard's kidnapping. Take that information to Thrall in Orgrimmar.\n\nYou recall Gor'shak mentioning that Kharan is being held in a cell nearby.\r\n"
         },
         [4002] = {
@@ -65295,7 +66276,7 @@ local c = {
         [4003] = {
             name = "The Royal Rescue",
             level = 59,
-            money = 0,
+            money = 23144,
             obj = "Slay Emperor Dagran Thaurissan and free Princess Moira Bronzebeard from his evil spell. \r\n"
         },
         [4004] = {
@@ -65311,7 +66292,7 @@ local c = {
         [4005] = {
             name = "Aquementas",
             level = 54,
-            money = 0,
+            money = 12263,
             obj = "Take the Book of Aquor, the Silvery Claws, and the Irontree Heart to Tanaris.\n\nUse the Book of Aquor to summon Aquementas.\n\nAfter you have the completed totem, take it to J.D. Collie in Marshal's Refuge."
         },
         [4021] = {
@@ -65323,13 +66304,13 @@ local c = {
         [4022] = {
             name = "A Taste of Flame",
             level = 54,
-            money = 0,
+            money = 12263,
             obj = "Show Cyrus Therepentous the Black Dragonflight Molt you received from Velarok Windblade."
         },
         [4023] = {
             name = "A Taste of Flame",
             level = 54,
-            money = 0,
+            money = 12263,
             obj = "Show Cyrus Therepentous proof of your worth.\n\nYou have a feeling that Cyrus already knows that you are unworthy."
         },
         [4024] = {
@@ -65346,7 +66327,7 @@ local c = {
         [4061] = {
             name = "The Rise of the Machines",
             level = 54,
-            money = 16500,
+            money = 18450,
             obj = "Venture to the Burning Steppes and recover 10 Fractured Elemental Shards for Hierophant Theodora Mulvadania.\n\nYou recall Theodora mentioning the golems and elementals of that region as being a source for these shards."
         },
         [4062] = {
@@ -65370,61 +66351,61 @@ local c = {
         [4081] = {
             name = "KILL ON SIGHT: Dark Iron Dwarves",
             level = 52,
-            money = 15500,
+            money = 15367,
             obj = "Venture to Blackrock Depths and destroy the vile aggressors!\n\nWarlord Goretooth wants you to kill 15 Anvilrage Guardsmen, 10 Anvilrage Wardens and 5 Anvilrage Footmen. Return to him once your task is complete.\r\n"
         },
         [4082] = {
             name = "KILL ON SIGHT: High Ranking Dark Iron Officials",
             level = 54,
-            money = 16500,
+            money = 18450,
             obj = "Venture to Blackrock Depths and destroy the vile aggressors!\n\nWarlord Goretooth wants you to kill 10 Anvilrage Medics, 10 Anvilrage Soldiers and 10 Anvilrage Officers. Return to him once your task is complete."
         },
         [4083] = {
             name = "The Spectral Chalice",
             level = 55,
-            money = 0,
+            money = 13419,
             obj = "Requirements:"
         },
         [4084] = {
             name = "Silver Heart",
             level = 54,
-            money = 0,
+            money = 12263,
             obj = "Collect 11 Silvery Claws and 1 Irontree Heart for Eridan Bluewind in Felwood."
         },
         [4101] = {
             name = "Cleansing Felwood",
             level = 55,
-            money = 0,
+            money = 13419,
             obj = "Bring 15 Blood Amber to Arathandris Silversky in Felwood."
         },
         [4102] = {
             name = "Cleansing Felwood",
             level = 55,
-            money = 0,
+            money = 13419,
             obj = "Bring 15 Blood Amber to Maybess Riverbreeze in Felwood."
         },
         [4120] = {
             name = "The Strength of Corruption",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Talo Thornhoof at Camp Mojache in Feralas wants you to kill 12 Angerclaw Grizzlies and 12 Felpaw Ravagers in Felwood."
         },
         [4121] = {
             name = "Precarious Predicament",
             level = 58,
-            money = 26500,
+            money = 33458,
             obj = "Escort your prisoner, Grark Lorkrub, through Burning Steppes and through Blackrock Mountain to the Searing Gorge.\n\nYou recall Lexlort mentioning that he would have his men waiting on the other side to take Grark into custody.\n\nYou will also be required to hand over your Thorium Shackles to Lexlort."
         },
         [4122] = {
             name = "Grark Lorkrub",
             level = 58,
-            money = 0,
+            money = 17050,
             obj = "Travel to the Burning Steppes and find Grark Lorkrub. You recall Lexlort mentioning that he was last seen in a massive Blackrock fortress.\n\nWhen you find Grark Lorkrub, use the Thorium Shackles to bind him and then lead him back through Blackrock Mountain to the Searing Gorge. Lexlort will have his men waiting on the other side to take Grark into custody.\r\n"
         },
         [4123] = {
             name = "The Heart of the Mountain",
             level = 55,
-            money = 8500,
+            money = 16783,
             obj = "Bring the Heart of the Mountain to Maxwort Uberglint in the Burning Steppes."
         },
         [4124] = {
@@ -65483,6 +66464,16 @@ local c = {
             money = 0,
             obj = "Search the Woodpaw Gnoll camps of southern Feralas for evidence of the courier's belongings or the courier himself."
         },
+        [4132] = {
+            name = "Operation: Death to Angerforge",
+            level = 58,
+            money = 26500,
+            obj = "Travel to Blackrock Depths and slay General Angerforge! Return to Warlord Goretooth when the task is complete.",
+            choice = {
+                12059,
+                270126
+            }
+        },
         [4133] = {
             name = "Vivian Lagrave",
             level = 55,
@@ -65524,37 +66515,37 @@ local c = {
         [4141] = {
             name = "Muigin and Larion",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Collect 15 Bloodpetals and return to Muigin."
         },
         [4142] = {
             name = "A Visit to Gregan",
             level = 52,
-            money = 0,
+            money = 7600,
             obj = "Take a Bloodpetal to Gregan Brewspewer in Feralas."
         },
         [4143] = {
             name = "Haze of Evil",
             level = 52,
-            money = 7500,
+            money = 12700,
             obj = "Collect 5 samples of Atal'ai Haze, then return to Muigin in Un'Goro Crater."
         },
         [4144] = {
             name = "Bloodpetal Sprouts",
             level = 53,
-            money = 0,
+            money = 8394,
             obj = "Requirements:"
         },
         [4145] = {
             name = "Larion and Muigin",
             level = 52,
-            money = 7500,
+            money = 12700,
             obj = "Hunt 5 Bloodpetal Lashers, 5 Bloodpetal Threshers, 5 Bloodpetal Flayers and 5 Bloodpetal Trappers for Larion at Marshal's Refuge."
         },
         [4146] = {
             name = "Zapper Fuel",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Deliver the Unloaded Zapper and 5 samples of Atal'ai Haze to Larion in Marshal's Refuge."
         },
         [4147] = {
@@ -65591,19 +66582,19 @@ local c = {
         [4182] = {
             name = "Dragonkin Menace",
             level = 54,
-            money = 16500,
+            money = 18450,
             obj = "Slay 15 Black Broodlings, 10 Black Dragonspawn, 4 Black Wyrmkin and 1 Black Drake. Return to Helendis Riverhorn when the task is complete."
         },
         [4183] = {
             name = "The True Masters",
             level = 54,
-            money = 0,
+            money = 9225,
             obj = "Travel to Lakeshire and deliver Helendis Riverhorn's Letter to Magistrate Solomon. "
         },
         [4184] = {
             name = "The True Masters",
             level = 54,
-            money = 0,
+            money = 9225,
             obj = "Travel to Stormwind and deliver Solomon's Plea to Highlord Bolvar Fordragon.\n\nBolvar resides in Stormwind Keep. "
         },
         [4185] = {
@@ -65615,7 +66606,7 @@ local c = {
         [4186] = {
             name = "The True Masters",
             level = 54,
-            money = 0,
+            money = 12263,
             obj = "Take Bolvar's Decree to Magistrate Solomon in Lakeshire.\r\n"
         },
         [4201] = {
@@ -65645,7 +66636,7 @@ local c = {
         [4241] = {
             name = "Marshal Windsor",
             level = 54,
-            money = 0,
+            money = 12263,
             obj = "Travel to Blackrock Mountain in the northwest and enter Blackrock Depths. Find out what became of Marshal Windsor.\n\nYou recall Ragged John talking about Windsor being dragged off to a prison."
         },
         [4242] = {
@@ -65669,13 +66660,13 @@ local c = {
         [4244] = {
             name = "Chasing A-Me 01",
             level = 53,
-            money = 0,
+            money = 8394,
             obj = "Find a Mithril Casing and return to A-Me 01 in Un'Goro Crater."
         },
         [4245] = {
             name = "Chasing A-Me 01",
             level = 53,
-            money = 16000,
+            money = 19585,
             obj = "Escort A-Me 01 back to Karna Remtravel in Un'Goro Crater."
         },
         [4261] = {
@@ -65691,7 +66682,7 @@ local c = {
         [4262] = {
             name = "Overmaster Pyron",
             level = 52,
-            money = 15500,
+            money = 15367,
             obj = "Slay Overmaster Pyron and return to Jalinda Sprig.\n\nYou recall Jalinda talking about Pyron guarding the quarry. Perhaps you should search there?"
         },
         [4263] = {
@@ -65709,7 +66700,7 @@ local c = {
         [4264] = {
             name = "A Crumpled Up Note",
             level = 58,
-            money = 0,
+            money = 17050,
             obj = "You may have just stumbled on to something that Marshal Windsor would be interested in seeing. There may be hope, after all."
         },
         [4265] = {
@@ -65743,25 +66734,25 @@ local c = {
         [4282] = {
             name = "A Shred of Hope",
             level = 58,
-            money = 9000,
+            money = 21175,
             obj = "Return Marshal Windsor's Lost Information.\n\nMarshal Windsor believes that the information is being held by Golem Lord Argelmach and General Angerforge."
         },
         [4283] = {
             name = "FIFTY! YEP!",
             level = 56,
-            money = 8500,
+            money = 18042,
             obj = "Oralius wants 50 Blackrock Medallions. Chances are high that these medallions can be found on the orcs in the Burning Steppes."
         },
         [4284] = {
             name = "Crystals of Power",
             level = 53,
-            money = 8000,
+            money = 13990,
             obj = "Collect 7 Power Crystals of each color: red, blue, yellow, and green. Bring them to J.D. Collie at Marshal's Refuge."
         },
         [4285] = {
             name = "The Northern Pylon",
             level = 53,
-            money = 0,
+            money = 8394,
             obj = "Discover the location of the Northern Crystal Pylon in Un'Goro Crater."
         },
         [4286] = {
@@ -65776,31 +66767,31 @@ local c = {
         [4287] = {
             name = "The Eastern Pylon",
             level = 53,
-            money = 0,
+            money = 8394,
             obj = "Discover the location of the Eastern Crystal Pylon in Un'Goro Crater."
         },
         [4288] = {
             name = "The Western Pylon",
             level = 53,
-            money = 0,
+            money = 8394,
             obj = "Discover the location of the Western Crystal Pylon."
         },
         [4289] = {
             name = "The Apes of Un'Goro",
             level = 55,
-            money = 8500,
+            money = 16783,
             obj = "Bring 2 Un'Goro Gorilla Pelts, 2 Un'Goro Stomper Pelts, and 2 Un'Goro Thunderer Pelts to Torwa Pathfinder at the entrance of Un'Goro Crater."
         },
         [4290] = {
             name = "The Fare of Lar'korwi",
             level = 53,
-            money = 0,
+            money = 11156,
             obj = "Find the carcass of Lar'korwi's freshest kill and steal a Piece of Threshadon Carcass before returning to Torwa Pathfinder in Un'Goro Crater."
         },
         [4291] = {
             name = "The Scent of Lar'korwi",
             level = 53,
-            money = 0,
+            money = 11156,
             obj = "Bring 2 Ravasaur Pheromone Glands to Torwa Pathfinder near the entrance to Un'Goro Crater."
         },
         [4292] = {
@@ -65816,13 +66807,13 @@ local c = {
         [4293] = {
             name = "A Sample of Slime...",
             level = 52,
-            money = 6000,
+            money = 12200,
             obj = "Gather Felwood Slime Samples from any of the slimes in Felwood. Then, using the Testing Equipment next to Chemist Fuely in Undercity, see which of your samples are the most corrupt. Bring 5 of the Corrupted Felwood Samples you find to Chemist Fuely."
         },
         [4294] = {
             name = "... and a Batch of Ooze",
             level = 56,
-            money = 6500,
+            money = 17208,
             obj = "Gather Un'Goro Slime Samples from any of the slimes in Un'Goro Crater. Then, using the Testing Equipment next to Chemist Fuely in Undercity, see which of your samples are the most pure. Bring 5 of the Pure Un'Goro Samples you find to Chemist Fuely."
         },
         [4296] = {
@@ -65904,7 +66895,7 @@ local c = {
         [4341] = {
             name = "Kharan Mighthammer",
             level = 59,
-            money = 0,
+            money = 18400,
             obj = "Travel to Blackrock Depths and find Kharan Mighthammer.\n\nThe King mentioned that Kharan was being held prisoner there - perhaps you should try looking for a prison."
         },
         [4342] = {
@@ -65916,13 +66907,13 @@ local c = {
         [4361] = {
             name = "The Bearer of Bad News",
             level = 59,
-            money = 0,
+            money = 18400,
             obj = "Return to Ironforge and deliver the bad news to King Magni Bronzebeard."
         },
         [4362] = {
             name = "The Fate of the Kingdom",
             level = 59,
-            money = 0,
+            money = 23144,
             obj = "Return to Blackrock Depths and rescue Princess Moira Bronzebeard from the evil clutches of Emperor Dagran Thaurissan.\r\n"
         },
         [4363] = {
@@ -65952,13 +66943,13 @@ local c = {
         [4421] = {
             name = "The Corruption of the Jadefire",
             level = 54,
-            money = 0,
+            money = 12263,
             obj = "Kill 11 Jadefire Felsworns, 9 Jadefire Shadowstalkers, 9 Jadefire Rogues, and Xavathras. Return to Eridan Bluewind in Felwood when the task has been completed."
         },
         [4441] = {
             name = "Felbound Ancients",
             level = 54,
-            money = 0,
+            money = 12263,
             obj = "Travel to Darnassus and use Eridan's Vial to collect a Vial of Blessed Water from the Temple of the Moon. Return to Eridan with the filled vial."
         },
         [4442] = {
@@ -66067,7 +67058,7 @@ local c = {
         [4496] = {
             name = "Bungle in the Jungle",
             level = 53,
-            money = 0,
+            money = 11156,
             obj = "Bring a Gorishi Scent Gland and 5 Un'Goro Soil samples to Alchemist Pestlezugg in Gadgetzan."
         },
         [4501] = {
@@ -66083,7 +67074,7 @@ local c = {
         [4502] = {
             name = "Volcanic Activity",
             level = 55,
-            money = 8500,
+            money = 16783,
             obj = "Collect 9 samples of Un'Goro Ash from the fire elementals around the volcano in Un'Goro Crater, and return them to Liv Rizzlefix in Ratchet."
         },
         [4503] = {
@@ -66100,25 +67091,25 @@ local c = {
         [4504] = {
             name = "Super Sticky",
             level = 54,
-            money = 16500,
+            money = 18450,
             obj = "Collect 12 samples of Super Sticky Tar for Tran'rek in Gadgetzan."
         },
         [4505] = {
             name = "Well of Corruption",
             level = 54,
-            money = 0,
+            money = 12263,
             obj = "Collect a sample of corrupted water from the Jadefire Satyrs' moonwell and bring it to Winna Hazzard at Bloodvenom Post."
         },
         [4506] = {
             name = "Corrupted Sabers",
             level = 54,
-            money = 6000,
+            money = 14513,
             obj = "Take Winna's kitten to the corrupted moon well, release it, then bring it back to Winna.\n\nOnce you have returned to Winna, click on the cat to release it to Winna."
         },
         [4507] = {
             name = "Pawn Captures Queen",
             level = 54,
-            money = 0,
+            money = 12263,
             obj = "Defeat the Gorishi Hive Queen once she is summoned.\n\nBring the Gorishi Queen's Brain to Alchemist Pestlezugg in Gadgetzan."
         },
         [4508] = {
@@ -66153,7 +67144,7 @@ local c = {
         [4512] = {
             name = "A Little Slime Goes a Long Way",
             level = 52,
-            money = 7500,
+            money = 15200,
             obj = "Bring 6 Filled Cursed Ooze Jars and 6 Filled Tainted Ooze Jars to Laris Geardawdle in Ironforge."
         },
         [4513] = {
@@ -66169,7 +67160,7 @@ local c = {
         [4521] = {
             name = "Wild Guardians",
             level = 56,
-            money = 8500,
+            money = 18042,
             obj = "Trull Failbane in Felwood wants you to kill 15 Raging Owlbeasts and 15 Ragged Owlbeasts."
         },
         [4541] = {
@@ -66234,6 +67225,15 @@ local c = {
                 9363
             }
         },
+        [4621] = {
+            name = "Avast Ye, Admiral!",
+            level = 60,
+            money = 0,
+            obj = "Slay Fleet Master Seahorn and Baron Revilgaz of Booty Bay, and then return to Fleet Master Firallon aboard the Crimson Veil off the coast of Stranglethorn Vale.",
+            reward = {
+                12185
+            }
+        },
         [4641] = {
             name = "Your Place in the World",
             level = 1,
@@ -66275,7 +67275,7 @@ local c = {
         [4721] = {
             name = "Wild Guardians",
             level = 59,
-            money = 18000,
+            money = 27025,
             obj = "Trull Failbane in Felwood wants you to hunt 10 Berserk Owlbeasts in Winterspring."
         },
         [4722] = {
@@ -66310,7 +67310,7 @@ local c = {
         [4726] = {
             name = "Broodling Essence",
             level = 52,
-            money = 7500,
+            money = 12700,
             obj = "Bring 8 Broodling Essence and the Draco-Incarcinatrix 900 to Tinkee Steamboil at the Flame Crest in the Burning Steppes."
         },
         [4727] = {
@@ -66367,6 +67367,12 @@ local c = {
                 12144
             }
         },
+        [4735] = {
+            name = "Egg Collection",
+            level = 60,
+            money = 43350,
+            obj = "Bring 8 Collected Dragon Eggs and the Collectronic Module to Tinkee Steamboil at Flame Crest in the Burning Steppes."
+        },
         [4736] = {
             name = "In Search of Menara Voidrender",
             level = 31,
@@ -66405,13 +67411,13 @@ local c = {
         [4741] = {
             name = "Wild Guardians",
             level = 58,
-            money = 9000,
+            money = 21175,
             obj = "Trull Failbane in Felwood wants you to hunt 13 Moontouched Owlbeasts."
         },
         [4742] = {
             name = "Seal of Ascension",
             level = 60,
-            money = 0,
+            money = 24900,
             obj = "Find the three gemstones of command: The Gemstone of Smolderthorn, Gemstone of Spirestone, and Gemstone of Bloodaxe. Return them, along with the Unadorned Seal of Ascension, to Vaelan.\n\nThe Generals, as told to you by Vaelan, are: War Master Voone of the Smolderthorn; Highlord Omokk of the Spirestone; and Overlord Wyrmthalak  of the Bloodaxe."
         },
         [4743] = {
@@ -66452,6 +67458,16 @@ local c = {
             money = 0,
             obj = "Bring Doomrigger's Clasp to Mayara Brightwing in the Burning Steppes."
         },
+        [4765] = {
+            name = "Delivery to Ridgewell",
+            level = 60,
+            money = 27000,
+            obj = "Bring Ridgewell's Crate to Remington Ridgewell in Stormwind.",
+            choice = {
+                15861,
+                15860
+            }
+        },
         [4766] = {
             name = "Mayara Brightwing",
             level = 60,
@@ -66489,6 +67505,16 @@ local c = {
             money = 1900,
             obj = "Escort Pao'ka Swiftmountain from Highperch, and then talk to Motega Firemane in Whitereach Post."
         },
+        [4771] = {
+            name = "Dawn's Gambit",
+            level = 60,
+            money = 27000,
+            obj = "Place Dawn's Gambit in the Viewing Room of the Scholomance.  Defeat Vectus, then return to Betina Bigglezink.",
+            choice = {
+                15853,
+                15854
+            }
+        },
         [4781] = {
             name = "Components for the Enchanted Gold Bloodrobe",
             level = 34,
@@ -66525,13 +67551,13 @@ local c = {
         [4787] = {
             name = "The Ancient Egg",
             level = 50,
-            money = 0,
+            money = 10325,
             obj = "Bring the Ancient Egg to Yeh'kinya in Tanaris."
         },
         [4788] = {
             name = "The Final Tablets",
             level = 58,
-            money = 0,
+            money = 21313,
             obj = "Bring the Fifth and Sixth Mosh'aru Tablets to Prospector Ironboot in Tanaris."
         },
         [4808] = {
@@ -66543,7 +67569,7 @@ local c = {
         [4809] = {
             name = "Chillwind Horns",
             level = 54,
-            money = 0,
+            money = 12263,
             obj = "Bring 8 Uncracked Chillwind Horns to Felnok Steelspring."
         },
         [4810] = {
@@ -66624,7 +67650,7 @@ local c = {
         [4864] = {
             name = "Enraged Wildkin",
             level = 59,
-            money = 9000,
+            money = 22713,
             obj = "Pick up Jaron's Supplies from the snow, then find the wildkin that stole the amulet Jaron spoke of.\n\nBring Jaron's Supplies and the Blue-feathered Amulet to Jaron Stoneshaper at the lodge in Winterspring."
         },
         [4865] = {
@@ -66676,7 +67702,7 @@ local c = {
         [4901] = {
             name = "Guardians of the Altar",
             level = 59,
-            money = 0,
+            money = 13800,
             obj = "Protect Ranshalla while she attempts to reactivate the Altar of Elune. Report your findings to Erelas Ambersky in Rut'theran Village."
         },
         [4902] = {
@@ -66706,11 +67732,7 @@ local c = {
             name = "Free at Last",
             level = 29,
             money = 0,
-            obj = "Escort Lakota Windsong from the Darkcloud Pinnacle, and then talk to Thalia Amberhide at Freewind Post.",
-            choice = {
-                15469,
-                15468
-            }
+            obj = "Escort Lakota Windsong from the Darkcloud Pinnacle, and then talk to Thalia Amberhide at Freewind Post."
         },
         [4905] = {
             name = "<UNUSED>",
@@ -66726,15 +67748,22 @@ local c = {
                 11875
             }
         },
+        [4907] = {
+            name = "Tinkee Steamboil",
+            level = 60,
+            money = 0,
+            obj = "Speak with Tinkee Steamboil."
+        },
         [4921] = {
             name = "Lost in Battle",
             level = 20,
-            money = 900
+            money = 900,
+            obj = "Find Mankrik's wife and then return to him in the Crossroads."
         },
         [4941] = {
             name = "Eitrigg's Wisdom",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Speak with Eitrigg in Orgrimmar. When you have discussed matters with Eitrigg, seek council from Thrall.\n\nYou recall having seen Eitrigg in Thrall's chamber."
         },
         [4961] = {
@@ -66852,8 +67881,14 @@ local c = {
         [4981] = {
             name = "Operative Bijou",
             level = 59,
-            money = 0,
+            money = 18400,
             obj = "Travel to Blackrock Spire and find out what happened to Bijou."
+        },
+        [4982] = {
+            name = "Bijou's Belongings",
+            level = 59,
+            money = 18400,
+            obj = "Find Bijou's Belongings and return them to her. You recall her mentioning that she stashed them on the bottom floor of the city.\r\n"
         },
         [4983] = {
             name = "Bijou's Reconnaissance Report",
@@ -66868,13 +67903,13 @@ local c = {
         [4984] = {
             name = "The Wildlife Suffers Too",
             level = 54,
-            money = 0,
+            money = 9225,
             obj = "Destroy 8 Diseased Wolves, and then return to Mulgris Deepriver at the Writhing Haunt, Western Plaguelands.\r\n\r\n"
         },
         [4985] = {
             name = "The Wildlife Suffers Too",
             level = 56,
-            money = 0,
+            money = 10875,
             obj = "Destroy 8 Diseased Grizzlies, and then return to Mulgris Deepriver at the Writhing Haunt, Western Plaguelands."
         },
         [4986] = {
@@ -66898,13 +67933,13 @@ local c = {
         [5001] = {
             name = "Bijou's Belongings",
             level = 59,
-            money = 0,
+            money = 18400,
             obj = "Find Bijou's Belongings and return them to her. Good luck!\r\n"
         },
         [5002] = {
             name = "Message to Maxwell",
             level = 59,
-            money = 18000,
+            money = 27025,
             obj = "Travel to the Burning Steppes and give Bijou's Information to Marshal Maxwell."
         },
         [5021] = {
@@ -66934,19 +67969,19 @@ local c = {
         [5047] = {
             name = "Pip Quickwit, At Your Service!",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Talk to Malyfous Darkhammer in Everlook."
         },
         [5048] = {
             name = "Good Natured Emma",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Find Ol' Emma in Stormwind and see if she is in fact Emma Felstone.  If she is, then perhaps she'd like the package Janice Felstone made for her."
         },
         [5049] = {
             name = "The Jeremiah Blues",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Find Jeremiah Payson in the Undercity and see if he is in fact Jeremiah Felstone.  If he is, then perhaps he'd like the package Janice Felstone made for him."
         },
         [5050] = {
@@ -66973,13 +68008,13 @@ local c = {
         [5054] = {
             name = "Ursius of the Shardtooth",
             level = 56,
-            money = 0,
+            money = 14500,
             obj = "Storm Shadowhoof at Everlook in Winterspring wants you to kill Ursius."
         },
         [5055] = {
             name = "Brumeran of the Chillwind",
             level = 58,
-            money = 0,
+            money = 17050,
             obj = "Storm Shadowhoof at Everlook in Winterspring wants you to kill Brumeran."
         },
         [5056] = {
@@ -67036,17 +68071,12 @@ local c = {
             name = "Grimtotem Spying",
             level = 28,
             money = 0,
-            obj = "Locate and retrieve the three Secret Notes in Darkcloud Pinnacle.",
-            choice = {
-                15457,
-                15458,
-                15459
-            }
+            obj = "Locate and retrieve the three Secret Notes in Darkcloud Pinnacle."
         },
         [5065] = {
             name = "The Lost Tablets of Mosh'aru",
             level = 58,
-            money = 0,
+            money = 21313,
             obj = "Bring the Third and Fourth Mosh'aru Tablets to Prospector Ironboot in Tanaris."
         },
         [5066] = {
@@ -67071,7 +68101,7 @@ local c = {
         [5082] = {
             name = "Threat of the Winterfall",
             level = 56,
-            money = 8500,
+            money = 18042,
             obj = "Donova Snowden in Winterspring wants you to kill 8 Winterfall Pathfinders, 8 Winterfall Den Watchers, and 8 Winterfall Totemics."
         },
         [5083] = {
@@ -67083,43 +68113,37 @@ local c = {
         [5084] = {
             name = "Falling to Corruption",
             level = 56,
-            money = 0,
+            money = 10875,
             obj = "Search the Deadwood furbolg camp in northern Felwood for a clue."
         },
         [5085] = {
             name = "Mystery Goo",
             level = 56,
-            money = 0,
+            money = 10875,
             obj = "Report back to Donova Snowden with your findings."
         },
         [5086] = {
             name = "Toxic Horrors",
             level = 56,
-            money = 0,
+            money = 14500,
             obj = "Collect 3 Toxic Horror Droplets for Donova Snowden in Winterspring."
         },
         [5087] = {
             name = "Winterfall Runners",
             level = 57,
-            money = 0,
+            money = 15750,
             obj = "Find the Winterfall Runners and stop them from delivering their shipment to Winterfall Village."
         },
         [5088] = {
             name = "Arikara",
             level = 28,
             money = 2500,
-            obj = "Slay Arikara. Bring her remains and the Incendia Powder to Motega Firemane in Whitereach Post as proof of your deed.",
-            choice = {
-                15464,
-                15465,
-                15466,
-                270037
-            }
+            obj = "Slay Arikara. Bring her remains and the Incendia Powder to Motega Firemane in Whitereach Post as proof of your deed."
         },
         [5089] = {
             name = "General Drakkisath's Command",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Take General Drakkisath's Command to Marshal Maxwell in Burning Steppes."
         },
         [5090] = {
@@ -67137,7 +68161,7 @@ local c = {
         [5092] = {
             name = "Clear the Way",
             level = 52,
-            money = 7500,
+            money = 12700,
             obj = "Kill 10 Skeletal Flayers and 10 Slavering Ghouls in Sorrow Hill.\n\nReturn to Commander Ashlam Valorfist at Chillwind Camp, Western Plaguelands."
         },
         [5093] = {
@@ -67161,19 +68185,19 @@ local c = {
         [5096] = {
             name = "Scarlet Diversions",
             level = 53,
-            money = 8000,
+            money = 13990,
             obj = "Proceed to the Scarlet Crusade's base camp between Felstone Field and Dalson's Tears and destroy their command tent.\n\nPlace the Scourge banner at the camp, and then return to High Executor Derrington at the Bulwark, Western Plaguelands."
         },
         [5097] = {
             name = "All Along the Watchtowers",
             level = 56,
-            money = 8500,
+            money = 18042,
             obj = "Using the Beacon Torch, mark each tower in Andorhal; you will need to stand in the doorway of the tower to successfully mark it.\n\nOnce all four towers are marked, return the Beacon Torch to Commander Ashlam Valorfist in Chillwind Camp, Western Plaguelands."
         },
         [5098] = {
             name = "All Along the Watchtowers",
             level = 56,
-            money = 8500,
+            money = 18042,
             obj = "Using the Beacon Torch, mark each tower in Andorhal; you will need to stand in the doorway of the tower to successfully mark it.\n\nOnce all four towers are marked, return the Beacon Torch to High Executor Derrington at the Bulwark, Western Plaguelands."
         },
         [5101] = {
@@ -67195,6 +68219,12 @@ local c = {
                 13968,
                 13965
             }
+        },
+        [5103] = {
+            name = "Hot Fiery Death",
+            level = 60,
+            money = 19800,
+            obj = "Someone in this world must know what to do with these gauntlets. Good luck!"
         },
         [5121] = {
             name = "High Chief Winterfall",
@@ -67219,6 +68249,16 @@ local c = {
             money = 0,
             obj = "Bring the Crudely-written Log to Donova Snowden in Winterspring."
         },
+        [5124] = {
+            name = "Fiery Plate Gauntlets",
+            level = 60,
+            money = 0,
+            obj = "Bring Malyfous Darkhammer 6 Enchanted Thorium Bars, 2 Essence of Fire, and 4 Star Rubies. You will also need to turn in your Unfired Plate Gauntlets.",
+            reward = {
+                12699,
+                12631
+            }
+        },
         [5125] = {
             name = "Aurius' Reckoning",
             level = 60,
@@ -67228,16 +68268,33 @@ local c = {
                 17045
             }
         },
+        [5126] = {
+            name = "Lorax's Tale",
+            level = 60,
+            money = 0,
+            obj = "Speak with Lorax. Listen to what he has to say.\r\n"
+        },
+        [5127] = {
+            name = "The Demon Forge",
+            level = 60,
+            money = 0,
+            obj = "Travel to Blackrock Spire and find Goraluk Anvilcrack. Slay him and then use the Blood Stained Pike upon his corpse. After his soul has been siphoned, the pike will be Soul Stained.\n\nYou must also find the Unforged Rune Covered Breastplate.\n\nReturn both the Soul Stained Pike and the Unforged Rune Covered Breastplate to Lorax in Winterspring.",
+            reward = {
+                12696,
+                9224,
+                12849
+            }
+        },
         [5128] = {
             name = "Words of the High Chief",
             level = 59,
-            money = 0,
+            money = 18400,
             obj = "Take the Crudely-written Log to Kelek Skykeeper in southern Felwood."
         },
         [5141] = {
             name = "Dragonscale Leatherworking",
             level = 55,
-            money = 0,
+            money = 9975,
             obj = "Bring 2 Tough Scorpid Breastplates, 2 Tough Scorpid Gloves, and 10 Worn Dragonscales to Peter Galen in Azshara.\n\nCompleting this quest will give you access to the Dragonscale Leatherworking arts.\n\nThe completion of this quest will prevent you from learning Elemental Leatherworking and Tribal Leatherworking; be sure this is the path you wish to follow before doing so."
         },
         [5142] = {
@@ -67249,41 +68306,37 @@ local c = {
         [5143] = {
             name = "Tribal Leatherworking",
             level = 55,
-            money = 0,
+            money = 9975,
             obj = "Bring a Wild Leather Vest and a Wild Leather Helmet to Caryssia Moonhunter in Feralas.\n\nCompleting this quest will give you access to the Tribal Leatherworking arts.\n\nThe completion of this quest will prevent you from learning Dragonscale Leatherworking and Elemental Leatherworking; be sure this is the path you wish to follow before doing so."
         },
         [5144] = {
             name = "Elemental Leatherworking",
             level = 55,
-            money = 0,
+            money = 9975,
             obj = "Bring 2 Heart of Fire, 2 Globe of Water, 2 Core of Earth, and 2 Breath of Wind to Sarah Tanner in Searing Gorge.\n\nCompleting this quest will give you access to the Elemental Leatherworking arts.\n\nThe completion of this quest will prevent you from learning Dragonscale Leatherworking and Tribal Leatherworking; be sure this is the path you wish to follow before doing so."
         },
         [5145] = {
             name = "Dragonscale Leatherworking",
             level = 55,
-            money = 0,
+            money = 9975,
             obj = "Bring 2 Tough Scorpid Breastplates, 2 Tough Scorpid Gloves, and 10 Worn Dragonscales to Thorkaf Dragoneye in the Badlands.\n\nCompleting this quest will give you access to the Dragonscale Leatherworking arts.\n\nThe completion of this quest will prevent you from learning Elemental Leatherworking and Tribal Leatherworking; be sure this is the path you wish to follow before doing so."
         },
         [5146] = {
             name = "Elemental Leatherworking",
             level = 55,
-            money = 0,
+            money = 9975,
             obj = "Bring 2 Heart of Fire, 2 Globe of Water, 2 Core of Earth, and 2 Breath of Wind to Brumn Winterhoof in the Arathi Mountains.\n\nCompleting this quest will give you access to the Elemental Leatherworking arts.\n\nThe completion of this quest will prevent you from learning Dragonscale Leatherworking and Tribal Leatherworking; be sure this is the path you wish to follow before doing so."
         },
         [5147] = {
             name = "WANTED: Arnak Grimtotem",
             level = 29,
             money = 0,
-            obj = "Slay Arnak Grimtotem and bring proof of your deed to Cliffwatcher Longhorn in Freewind Post.",
-            choice = {
-                15471,
-                15470
-            }
+            obj = "Slay Arnak Grimtotem and bring proof of your deed to Cliffwatcher Longhorn in Freewind Post."
         },
         [5148] = {
             name = "Tribal Leatherworking",
             level = 55,
-            money = 0,
+            money = 9975,
             obj = "Bring a Wild Leather Vest and a Wild Leather Helmet to Se'Jib in Stranglethorn Vale.\n\nCompleting this quest will give you access to the Tribal Leatherworking arts.\n\nThe completion of this quest will prevent you from learning Dragonscale Leatherworking and Elemental Leatherworking; be sure this is the path you wish to follow before doing so."
         },
         [5149] = {
@@ -67296,11 +68349,7 @@ local c = {
             name = "Hypercapacitor Gizmo",
             level = 30,
             money = 0,
-            obj = "Slay the beast and bring back the Hypercapacitor Gizmo and Panther Cage Key to Wizlo Bearingshiner.",
-            choice = {
-                15467,
-                287066
-            }
+            obj = "Slay the beast and bring back the Hypercapacitor Gizmo and Panther Cage Key to Wizlo Bearingshiner."
         },
         [5152] = {
             name = "Auntie Marlene",
@@ -67311,31 +68360,31 @@ local c = {
         [5153] = {
             name = "A Strange Historian",
             level = 56,
-            money = 0,
+            money = 10875,
             obj = "Bring Joseph's Wedding Ring to Chromie."
         },
         [5154] = {
             name = "The Annals of Darrowshire",
             level = 56,
-            money = 0,
+            money = 14500,
             obj = "Bring the Annals of Darrowshire to Chromie in Andorhal."
         },
         [5155] = {
             name = "Forces of Jaedenar",
             level = 51,
-            money = 0,
+            money = 9188,
             obj = "Enter Jaedenar and slay 4 Jaedenar Hounds, 4 Jaedenar Guardsmen, 6 Jaedenar Adepts, and 6 Jaedenar Cultists before returning to Greta Mosshoof in Felwood."
         },
         [5156] = {
             name = "Verifying the Corruption",
             level = 54,
-            money = 16500,
+            money = 21488,
             obj = "Seek out and destroy 2 Entropic Beasts and 2 Entropic Horrors while exploring Shatter Scar Vale. After checking to see if the craters there are still filled with corrupt fel water, return to Taronn Redfeather in Felwood."
         },
         [5157] = {
             name = "Collection of the Corrupt Water",
             level = 52,
-            money = 0,
+            money = 7600,
             obj = "Take the Empty Canteen to the Moon Well in the center of Jaedenar and fill it before returning to Greta Mosshoof in Felwood."
         },
         [5158] = {
@@ -67353,8 +68402,20 @@ local c = {
         [5160] = {
             name = "The Matron Protectorate",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Travel to Winterspring and find Haleh. Give her Awbee's scale."
+        },
+        [5161] = {
+            name = "Wrath of the Blue Flight",
+            level = 60,
+            money = 0,
+            obj = "Speak with Haleh if you wish to continue."
+        },
+        [5162] = {
+            name = "Wrath of the Blue Flight",
+            level = 60,
+            money = 19800,
+            obj = "Speak with Jeziba in the Plaguelands. He resides in Andorhal."
         },
         [5163] = {
             name = "Are We There, Yeti?",
@@ -67365,34 +68426,59 @@ local c = {
                 15778
             }
         },
+        [5164] = {
+            name = "Catalogue of the Wayward",
+            level = 60,
+            money = 0,
+            obj = "Read from the Catalogue of the Wayward.\r\n"
+        },
         [5165] = {
             name = "Dousing the Flames of Protection",
             level = 55,
-            money = 0,
+            money = 13419,
             obj = "Using the Purified Moon Well Water, douse the flames of the four braziers of protection within Shadow Hold in Felwood, then return to Greta Mosshoof in the Emerald Sanctuary."
+        },
+        [5166] = {
+            name = "Breastplate of the Chromatic Flight",
+            level = 60,
+            money = 0,
+            obj = "To forge the Breastplate of the Chromatic Flight, you will be required to bring the following items to Jeziba the 'Sculptor':\n\n1 Chromatic Carapace.\n\n10 Brilliant Chromatic Scales.\n\n10 Blood of Heroes.\n\n10 Frayed Abomination Stitchings.",
+            reward = {
+                12895
+            }
+        },
+        [5167] = {
+            name = "Legplates of the Chromatic Defier",
+            level = 60,
+            money = 0,
+            obj = "To forge the Legplates of the Chromatic Defier, you will be required to bring the following items to Jeziba the 'Sculptor':\n\n1 Chromatic Carapace.\n\n10 Brilliant Chromatic Scales.\n\n10 Blood of Heroes.\n\n5 Skin of Shadow.",
+            choice = {
+                12903,
+                12945
+            }
         },
         [5168] = {
             name = "Heroes of Darrowshire",
             level = 56,
-            money = 0,
+            money = 14500,
             obj = "Bring Davil's Libram and Redpath's Shield to Carlin Redpath."
         },
         [5181] = {
             name = "Villains of Darrowshire",
             level = 57,
-            money = 0,
+            money = 15750,
             obj = "Bring the Skull of Horgus and the Shattered Sword of Marduk to Carlin Redpath at Light's Hope Chapel."
         },
         [5202] = {
             name = "A Strange Red Key",
             level = 55,
-            money = 0,
+            money = 13419,
             obj = "Search through Jaedenar to discover what the Blood Red Key is used for."
         },
         [5203] = {
             name = "Rescue From Jaedenar",
             level = 55,
-            money = 0,
+            money = 13419,
             obj = "Escort Arko'narin to where Lightforge and her equipment are being held, and then protect her as you escape Shadow Hold. Afterwards, seek out Jessir Moonbow in Felwood to let her know what's happened to her friends."
         },
         [5204] = {
@@ -67407,7 +68493,7 @@ local c = {
         [5206] = {
             name = "Marauders of Darrowshire",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Bring 5 Resonating Skulls and the Mystic Crystal to Carlin Redpath in Eastern Plaguelands."
         },
         [5210] = {
@@ -67419,13 +68505,13 @@ local c = {
         [5211] = {
             name = "Defenders of Darrowshire",
             level = 55,
-            money = 0,
+            money = 13419,
             obj = "Free 15 Darrowshire Spirits and return to Carlin Redpath."
         },
         [5212] = {
             name = "The Flesh Does Not Lie",
             level = 60,
-            money = 18000,
+            money = 28800,
             obj = "Recover 20 Plagued Flesh Samples from Stratholme and return them to Betina Bigglezink. You suspect that any creature in Stratholme would have said flesh sample."
         },
         [5213] = {
@@ -67456,7 +68542,7 @@ local c = {
         [5216] = {
             name = "Target: Felstone Field",
             level = 53,
-            money = 0,
+            money = 11156,
             obj = "Go to Felstone Field in Western Plaguelands to locate and defeat the Cauldron Lord present there.  It may have a key that will allow access to the cauldron.  You must have the Empty Felstone Field Bottle with you to secure a sample of the poisons used inside the cauldron."
         },
         [5217] = {
@@ -67468,7 +68554,7 @@ local c = {
         [5219] = {
             name = "Target: Dalson's Tears",
             level = 55,
-            money = 0,
+            money = 13419,
             obj = "Go to Dalson's Tears in Western Plaguelands to locate and defeat the Cauldron Lord present there, and use its key to gain access to the cauldron.  You must have the Empty Dalson's Tears Bottle with you to secure a sample of the poisons used inside the cauldron."
         },
         [5220] = {
@@ -67480,7 +68566,7 @@ local c = {
         [5222] = {
             name = "Target: Writhing Haunt",
             level = 55,
-            money = 0,
+            money = 13419,
             obj = "Go to the Writhing Haunt in Western Plaguelands to locate and defeat the Cauldron Lord present there, and use its key to gain access to the cauldron.  You must have the Empty Writhing Haunt Bottle with you to secure a sample of the poisons used inside the cauldron."
         },
         [5223] = {
@@ -67492,7 +68578,7 @@ local c = {
         [5225] = {
             name = "Target: Gahrron's Withering",
             level = 58,
-            money = 0,
+            money = 17050,
             obj = "Go to Gahrron's Withering in Western Plaguelands to locate and defeat the Cauldron Lord present there, and use its key to gain access to the cauldron.  You must have the Empty Gahrron's Withering Bottle with you to secure a sample of the poisons used inside the cauldron."
         },
         [5226] = {
@@ -67510,7 +68596,7 @@ local c = {
         [5229] = {
             name = "Target: Felstone Field",
             level = 53,
-            money = 0,
+            money = 11156,
             obj = "Go to Felstone Field in Western Plaguelands to locate and defeat the Cauldron Lord present there.  It may have a key that will allow access to the cauldron.  You must have the Empty Felstone Field Bottle with you to secure a sample of the poisons used inside the cauldron."
         },
         [5230] = {
@@ -67522,7 +68608,7 @@ local c = {
         [5231] = {
             name = "Target: Dalson's Tears",
             level = 55,
-            money = 0,
+            money = 13419,
             obj = "Go to Dalson's Tears in Western Plaguelands to locate and defeat the Cauldron Lord present there, and use its key to gain access to the cauldron.  You must have the Empty Dalson's Tears Bottle with you to secure a sample of the poisons used inside the cauldron."
         },
         [5232] = {
@@ -67534,7 +68620,7 @@ local c = {
         [5233] = {
             name = "Target: Writhing Haunt",
             level = 55,
-            money = 0,
+            money = 13419,
             obj = "Go to the Writhing Haunt in Western Plaguelands to locate and defeat the Cauldron Lord present there, and use its key to gain access to the cauldron.  You must have the Empty Writhing Haunt Bottle with you to secure a sample of the poisons used inside the cauldron."
         },
         [5234] = {
@@ -67546,7 +68632,7 @@ local c = {
         [5235] = {
             name = "Target: Gahrron's Withering",
             level = 58,
-            money = 0,
+            money = 17050,
             obj = "Go to Gahrron's Withering in Western Plaguelands to locate and defeat the Cauldron Lord present there, and use its key to gain access to the cauldron.  You must have the Empty Gahrron's Withering Bottle with you to secure a sample of the poisons used inside the cauldron."
         },
         [5236] = {
@@ -67571,6 +68657,10 @@ local c = {
             name = "Mission Accomplished!",
             level = 58,
             money = 0,
+            choice = {
+                15801,
+                15800
+            },
             reward = {
                 15799
             }
@@ -67615,14 +68705,26 @@ local c = {
         [5245] = {
             name = "Troubled Spirits of Kel'Theril",
             level = 56,
-            money = 0,
+            money = 14500,
             obj = "Use Jaron's Pick to find the four Highborne Relic Fragments. Bring them to Aurora Skycaller in Eastern Plaguelands."
         },
         [5246] = {
             name = "Fragments of the Past",
             level = 56,
-            money = 0,
+            money = 14500,
             obj = "Find the Sacred Highborne Writings in the Temple of Zin-Malor in Azshara, and bring them to Aurora Skycaller near the Northpass Tower in Eastern Plaguelands."
+        },
+        [5247] = {
+            name = "Fragments of the Past",
+            level = 57,
+            money = 15750,
+            obj = "Bring an Enchanted Thorium Bar, 5 Crystal Restore, and a Vial of Dire Water to Aurora Skycaller near the Northpass Tower in Eastern Plaguelands."
+        },
+        [5248] = {
+            name = "Tormented By the Past",
+            level = 58,
+            money = 12788,
+            obj = "Take the Crystal of Zin-Malor to Lake Kel'Theril in Winterspring and find a highborne spirit that will speak to you."
         },
         [5249] = {
             name = "To Winterspring!",
@@ -67639,8 +68741,25 @@ local c = {
         [5251] = {
             name = "The Archivist",
             level = 60,
-            money = 18000,
+            money = 33900,
             obj = "Travel to Stratholme and find Archivist Galford of the Scarlet Crusade. Destroy him and burn down the Scarlet Archive."
+        },
+        [5252] = {
+            name = "Remorseful Highborne",
+            level = 58,
+            money = 12788,
+            obj = "Speak with Wynd Nightchaser in Starfall Village, and ask about the proper place for the Crystal of Zin-Malor."
+        },
+        [5253] = {
+            name = "The Crystal of Zin-Malor",
+            level = 58,
+            money = 0,
+            obj = "Deliver the Crystal of Zin-Malor to Arch Druid Fandral Staghelm in Darnassus.",
+            choice = {
+                15791,
+                15792,
+                15795
+            }
         },
         [5261] = {
             name = "Eagan Peltskinner",
@@ -67651,19 +68770,36 @@ local c = {
         [5262] = {
             name = "The Truth Comes Crashing Down",
             level = 60,
-            money = 0,
+            money = 24900,
             obj = "Take the Head of Balnazzar to Duke Nicholas Zverenhoff in the Eastern Plaguelands."
         },
         [5263] = {
             name = "Above and Beyond",
             level = 60,
-            money = 0,
+            money = 24900,
             obj = "Venture to Stratholme and destroy Baron Rivendare. Take his head and return to Duke Nicholas Zverenhoff.\r\n"
+        },
+        [5264] = {
+            name = "Lord Maxwell Tyrosus",
+            level = 60,
+            money = 19800,
+            obj = "Speak with Lord Maxwell Tyrosus. He is inside the church."
+        },
+        [5265] = {
+            name = "The Argent Hold",
+            level = 60,
+            money = 27000,
+            obj = "Open the Argent Hold and claim your reward.",
+            choice = {
+                13246,
+                13243,
+                13249
+            }
         },
         [5281] = {
             name = "The Restless Souls",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Find Egan. You only know that he was last seen around Stratholme."
         },
         [5282] = {
@@ -67699,6 +68835,33 @@ local c = {
             money = 0,
             obj = "To become a Weaponsmith, you must make the following items and return them to Borgosh: 4 Moonsteel Broadswords, 4 Massive Iron Axes, 2 Heavy Mithril Axes, and 2 Big Black Maces.\r\n"
         },
+        [5305] = {
+            name = "Sweet Serenity",
+            level = 60,
+            money = 0,
+            obj = "Travel to Stratholme and kill the Crimson Hammersmith. Recover the Crimson Hammersmith's Apron and return to Lilith.\r\n",
+            reward = {
+                12824
+            }
+        },
+        [5306] = {
+            name = "Snakestone of the Shadow Huntress",
+            level = 60,
+            money = 0,
+            obj = "Travel to Blackrock Spire and slay Shadow Hunter Vosh'gajin. Recover Vosh'gajin's Snakestone and return to Kilram.",
+            reward = {
+                12821
+            }
+        },
+        [5307] = {
+            name = "Corruption",
+            level = 60,
+            money = 0,
+            obj = "Find the Black Guard Swordsmith in Stratholme and destroy him. Recover the Insignia of the Black Guard and return to Seril Scourgebane.",
+            reward = {
+                12825
+            }
+        },
         [5321] = {
             name = "The Sleeper Has Awakened",
             level = 20,
@@ -67714,13 +68877,22 @@ local c = {
         [5341] = {
             name = "Barov Family Fortune",
             level = 60,
-            money = 18000,
+            money = 28800,
             obj = "Venture to the Scholomance and recover the Barov family fortune. Four deeds make up this fortune: The Deed to Caer Darrow; The Deed to Brill; The Deed to Tarren Mill; and The Deed to Southshore. Return to Alexi Barov when you have completed this task."
+        },
+        [5342] = {
+            name = "The Last Barov",
+            level = 60,
+            money = 18000,
+            obj = "Travel to Chillwind Camp - Alliance territory - and assassinate Weldon Barov. Take his head and return to Alexi Barov.\n\nBe warned, Weldon will probably be well protected by Alliance scum.",
+            reward = {
+                14022
+            }
         },
         [5343] = {
             name = "Barov Family Fortune",
             level = 60,
-            money = 18000,
+            money = 28800,
             obj = "Venture to the Scholomance and recover the Barov family fortune. Four deeds make up this fortune: The Deed to Caer Darrow; The Deed to Brill; The Deed to Tarren Mill; and The Deed to Southshore. Return to Weldon Barov when you have completed this task."
         },
         [5344] = {
@@ -67747,7 +68919,7 @@ local c = {
         [5382] = {
             name = "Doctor Theolen Krastinov, the Butcher",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Find Doctor Theolen Krastinov inside the Scholomance. Destroy him, then burn the Remains of Eva Sarkhoff and the Remains of Lucien Sarkhoff. Return to Eva Sarkhoff when the task is complete.\r\n"
         },
         [5384] = {
@@ -67777,12 +68949,7 @@ local c = {
             name = "Catch of the Day",
             level = 37,
             money = 0,
-            obj = "Talk to Jinar'Zillen at Shadowprey Village, and then bring Nataka Longhorn 2 Bloodbelly fish.",
-            choice = {
-                3858,
-                4304,
-                4338
-            }
+            obj = "Talk to Jinar'Zillen at Shadowprey Village, and then bring Nataka Longhorn 2 Bloodbelly fish."
         },
         [5401] = {
             name = "Argent Dawn Commission",
@@ -67809,26 +68976,46 @@ local c = {
         [5461] = {
             name = "The Human, Ras Frostwhisper",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Travel to the Arathi Highlands, to the ruins of Stromgarde. Search Stromgarde for a Keepsake of Remembrance. If you find such an item, return with it to Magistrate Marduke."
         },
         [5462] = {
             name = "The Dying, Ras Frostwhisper",
             level = 60,
-            money = 0,
+            money = 14850,
             obj = "Travel to Light's Hope in Eastern Plaguelands and seek out Leonid Barthalomew the Revered. Show him the Keepsake of Remembrance and tell him all that you have discovered."
         },
         [5463] = {
             name = "Menethil's Gift",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Travel to Stratholme and find Menethil's Gift. Place the Keepsake of Remembrance upon the unholy ground. "
+        },
+        [5464] = {
+            name = "Menethil's Gift",
+            level = 60,
+            money = 24900,
+            obj = "Take the Soulbound Keepsake to Leonid Barthalomew in Eastern Plaguelands."
         },
         [5465] = {
             name = "Soulbound Keepsake",
             level = 60,
-            money = 0,
+            money = 14850,
             obj = "Return to Magistrate Marduke in Caer Darrow. Show him the Soulbound Keepsake."
+        },
+        [5466] = {
+            name = "The Lich, Ras Frostwhisper",
+            level = 60,
+            money = 0,
+            obj = "Find Ras Frostwhisper in the Scholomance. When you have found him, use the Soulbound Keepsake on his undead visage. Should you succeed in reverting him to a mortal, strike him down and recover the Human Head of Ras Frostwhisper. Take the head back to Magistrate Marduke.",
+            choice = {
+                13982,
+                13986,
+                13984
+            },
+            reward = {
+                14002
+            }
         },
         [5481] = {
             name = "Gordo's Task",
@@ -67859,6 +69046,12 @@ local c = {
                 12846
             }
         },
+        [5504] = {
+            name = "Mantles of the Dawn",
+            level = 60,
+            money = 19800,
+            obj = "Bring 10 Argent Dawn Valor Tokens to Quartermaster Hasana at the Bulwark, Western Plaguelands."
+        },
         [5505] = {
             name = "The Key to Scholomance",
             level = 60,
@@ -67866,6 +69059,26 @@ local c = {
             reward = {
                 13704
             }
+        },
+        [5507] = {
+            name = "Mantles of the Dawn",
+            level = 60,
+            money = 19800,
+            obj = "Bring 10 Argent Dawn Valor Tokens to Quartermaster Lightspark at Chillwind Camp, Western Plaguelands."
+        },
+        [5511] = {
+            name = "The Key to Scholomance",
+            level = 60,
+            money = 0,
+            reward = {
+                13704
+            }
+        },
+        [5513] = {
+            name = "Mantles of the Dawn",
+            level = 60,
+            money = 19800,
+            obj = "Bring 10 Argent Dawn Valor Tokens to Quartermaster Breechlock at Light's Hope Chapel, Eastern Plaguelands."
         },
         [5514] = {
             name = "Mold Rhymes With...",
@@ -67876,7 +69089,7 @@ local c = {
         [5515] = {
             name = "Krastinov's Bag of Horrors",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Locate Jandice Barov in the Scholomance and destroy her. From her corpse recover Krastinov's Bag of Horrors. Return the bag to Eva Sarkhoff."
         },
         [5518] = {
@@ -67887,6 +69100,18 @@ local c = {
             reward = {
                 18258
             }
+        },
+        [5522] = {
+            name = "Leonid Barthalomew",
+            level = 60,
+            money = 14850,
+            obj = "Bring the Frozen Eggs to Leonid Barthalomew in the Eastern Plaguelands."
+        },
+        [5525] = {
+            name = "Free Knot!",
+            level = 60,
+            money = 19800,
+            obj = "Requirements:"
         },
         [5526] = {
             name = "Shards of the Felvine",
@@ -67901,14 +69126,29 @@ local c = {
         [5527] = {
             name = "A Reliquary of Purity",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Travel to Silithus and search for a Reliquary of Purity within the ruins of Southwind Village.  If you are able to find it, return with it to Rabine Saturna in Nighthaven, Moonglade."
+        },
+        [5528] = {
+            name = "The Gordok Taste Test",
+            level = 60,
+            money = 0,
+            reward = {
+                18269,
+                18284
+            }
         },
         [5529] = {
             name = "Plagued Hatchlings",
             level = 58,
-            money = 9000,
+            money = 21175,
             obj = "Kill 20 Plagued Hatchlings, then return to Betina Bigglezink at the Light's Hope Chapel."
+        },
+        [5531] = {
+            name = "Betina Bigglezink",
+            level = 60,
+            money = 0,
+            obj = "Bring the Frozen Eggs to Betina Bigglezink."
         },
         [5533] = {
             name = "Scholomance",
@@ -67919,7 +69159,7 @@ local c = {
         [5534] = {
             name = "Kim'jael's \"Missing\" Equipment",
             level = 53,
-            money = 16000,
+            money = 19585,
             obj = "Find Some Rune that the naga have in their possession in the Ruins of Eldarath and return it to Kim'jael in Azshara."
         },
         [5535] = {
@@ -67937,7 +69177,7 @@ local c = {
         [5537] = {
             name = "Skeletal Fragments",
             level = 57,
-            money = 0,
+            money = 11813,
             obj = "Bring 15 Skeletal Fragments to Alchemist Arbington at Chillwind Point, Western Plaguelands."
         },
         [5538] = {
@@ -67955,19 +69195,19 @@ local c = {
         [5542] = {
             name = "Demon Dogs",
             level = 56,
-            money = 0,
+            money = 14500,
             obj = "Slay 20 Plaguehound Runts, 5 Plaguehounds and 5 Frenzied Plaguehounds. Return to Tirion Fordring when the task is complete."
         },
         [5543] = {
             name = "Blood Tinged Skies",
             level = 56,
-            money = 0,
+            money = 14500,
             obj = "Slay 30 Plaguebats and return to Tirion Fordring."
         },
         [5544] = {
             name = "Carrion Grubbage",
             level = 56,
-            money = 0,
+            money = 14500,
             obj = "Seek out the Carrion Grubs and Devourers of the region. Slay them and harvest their meat. Return to Tirion Fordring when you have gathered 15 Slabs of Carrion Worm Meat.\r\n"
         },
         [5545] = {
@@ -67980,21 +69220,13 @@ local c = {
             name = "Kodo Roundup",
             level = 34,
             money = 0,
-            obj = "Bring five Tamed Kodos and the Kodo Kombobulator back to Smeed Scrabblescrew at Scrabblescrew's Camp.",
-            choice = {
-                15697,
-                15698
-            }
+            obj = "Bring five Tamed Kodos and the Kodo Kombobulator back to Smeed Scrabblescrew at Scrabblescrew's Camp."
         },
         [5581] = {
             name = "Portals of the Legion",
             level = 38,
             money = 4500,
-            obj = "Banish 6 Portals at Mannoroc Coven and return to Taiga Wisemane at Shadowprey Village.\r\n",
-            choice = {
-                16794,
-                16873
-            }
+            obj = "Banish 6 Portals at Mannoroc Coven and return to Taiga Wisemane at Shadowprey Village.\r\n"
         },
         [5582] = {
             name = "Healthy Dragon Scale",
@@ -68211,7 +69443,19 @@ local c = {
             level = 10,
             money = 0
         },
+        [5653] = {
+            name = "<NYI> Hex of Weakness",
+            level = 10,
+            money = 0,
+            obj = "Speak to Ur'kyo in Orgrimmar."
+        },
         [5654] = {
+            name = "Hex of Weakness",
+            level = 10,
+            money = 0,
+            obj = "Speak to Ur'kyo in Orgrimmar."
+        },
+        [5655] = {
             name = "Hex of Weakness",
             level = 10,
             money = 0,
@@ -68313,23 +69557,6 @@ local c = {
             name = "Shadowguard",
             level = 20,
             money = 0
-        },
-        [5691] = {
-            name = "<NYI> <TXT> In the Dark it was Created",
-            level = 15,
-            money = 0
-        },
-        [5692] = {
-            name = "<NYI> In the Dark It was Created",
-            level = 15,
-            money = 0,
-            obj = "Speak to Aelthalyste in the Undercity."
-        },
-        [5693] = {
-            name = "<NYI> In the Dark It was Created",
-            level = 15,
-            money = 0,
-            obj = "Speak to Aelthalyste in the Undercity."
         },
         [5704] = {
             name = "<NYI> <TXT> Undead Priest Robe",
@@ -68466,31 +69693,31 @@ local c = {
         [5781] = {
             name = "Of Forgotten Memories",
             level = 57,
-            money = 0,
+            money = 15750,
             obj = "Travel to the Undercroft - at the southernmost section of the Eastern Plaguelands - and recover Taelan's Hammer. Return to Tirion Fordring upon completion of your objective."
         },
         [5801] = {
             name = "Fire Plume Forged",
             level = 57,
-            money = 0,
+            money = 11813,
             obj = "Take the Skeleton Key Mold and 2 Thorium Bars to the top of Fire Plume Ridge in Un'Goro Crater.  Use the Skeleton Key Mold by the lava lake to forge the Unfinished Skeleton Key.\n\nBring the Unfinished Skeleton Key to Alchemist Arbington at Chillwind Point, Western Plaguelands."
         },
         [5802] = {
             name = "Fire Plume Forged",
             level = 57,
-            money = 0,
+            money = 11813,
             obj = "Take the Skeleton Key Mold and 2 Thorium Bars to the top of Fire Plume Ridge in Un'Goro Crater.  Use the Skeleton Key Mold by the lava lake to forge the Unfinished Skeleton Key.\n\nBring the Unfinished Skeleton Key to Apothecary Dithers at the Bulwark, Western Plaguelands."
         },
         [5803] = {
             name = "Araj's Scarab",
             level = 60,
-            money = 0,
+            money = 14850,
             obj = "Destroy Araj the Summoner and bring Araj's Scarab to Alchemist Arbington at Chillwind Point, Western Plaguelands."
         },
         [5804] = {
             name = "Araj's Scarab",
             level = 60,
-            money = 0,
+            money = 14850,
             obj = "Destroy Araj the Summoner and bring Araj's Scarab to Apothecary Dithers at the Bulwark, Western Plaguelands."
         },
         [5805] = {
@@ -68560,13 +69787,13 @@ local c = {
         [5845] = {
             name = "Of Lost Honor",
             level = 58,
-            money = 0,
+            money = 17050,
             obj = "Travel to Northdale, in the northeastern region of the Eastern Plaguelands, and recover the Symbol of Lost Honor. Return to Tirion Fordring upon completion of your objective."
         },
         [5846] = {
             name = "Of Love and Family",
             level = 58,
-            money = 0,
+            money = 17050,
             obj = "Travel to island of Caer Darrow, in the south-central region of the Plaguelands, and look for any clues as to the whereabouts of the painting."
         },
         [5847] = {
@@ -68583,8 +69810,20 @@ local c = {
         [5848] = {
             name = "Of Love and Family",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Travel to Stratholme, in the northern part of the Plaguelands. It is in the Scarlet Bastion that you will find the painting 'Of Love and Family,' hidden behind another painting depicting the twin moons of our world.\n\nReturn the painting to Tirion Fordring."
+        },
+        [5861] = {
+            name = "Find Myranda",
+            level = 60,
+            money = 14850,
+            obj = "Travel to Uther's Tomb, located in the southern Plaguelands. Show Myranda the Hag Tirion's Gift."
+        },
+        [5862] = {
+            name = "Scarlet Subterfuge",
+            level = 60,
+            money = 19800,
+            obj = "Speak to Myranda to gain the Scarlet Illusion. Travel to Hearthglen while under the Scarlet Illusion and deliver Tirion's Gift to Highlord Taelan Fordring.\n\nHearthglen is to the north, Taelan should be inside of Mardenholde Keep."
         },
         [5863] = {
             name = "The Dunemaul Compound",
@@ -68695,7 +69934,7 @@ local c = {
         [5901] = {
             name = "A Plague Upon Thee",
             level = 55,
-            money = 8500,
+            money = 16783,
             obj = "Use the Empty Termite Jar on the Termite Mounds in Eastern Plaguelands. After you've gathered 100 Plagueland Termites, return to Mickey Levine at the Bulwark in Tirisfal Glades."
         },
         [5902] = {
@@ -68707,7 +69946,7 @@ local c = {
         [5903] = {
             name = "A Plague Upon Thee",
             level = 55,
-            money = 8500,
+            money = 16783,
             obj = "Use the Empty Termite Jar on the Termite Mounds in Eastern Plaguelands. After you've gathered 100 Plagueland Termites, return to Nathaniel Dumah at Chillwind Camp in Western Plaguelands."
         },
         [5904] = {
@@ -68794,6 +70033,17 @@ local c = {
             money = 0,
             obj = "Take the Bundle of Relics to Chromie in Andorhal."
         },
+        [5942] = {
+            name = "Hidden Treasures",
+            level = 60,
+            money = 0,
+            obj = "Bring Joseph's Key to Joseph's Chest.",
+            reward = {
+                15855,
+                15856,
+                15857
+            }
+        },
         [5943] = {
             name = "Gizelton Caravan",
             level = 38,
@@ -68804,6 +70054,19 @@ local c = {
                 15692,
                 15695,
                 270065
+            }
+        },
+        [5944] = {
+            name = "In Dreams",
+            level = 60,
+            money = 0,
+            obj = "Escort Taelan Fordring out of Hearthglen.",
+            choice = {
+                15411,
+                15413,
+                15418,
+                15421,
+                16058
             }
         },
         [5961] = {
@@ -68827,25 +70090,25 @@ local c = {
         [6004] = {
             name = "Unfinished Business",
             level = 56,
-            money = 6500,
+            money = 17208,
             obj = "Kill 2 Scarlet Medics, 2 Scarlet Hunters, 2 Scarlet Magi and 2 Scarlet Knights before returning to Kirsta Deepshadow in Western Plaguelands."
         },
         [6021] = {
             name = "Zaeldarr the Outcast",
             level = 55,
-            money = 8500,
+            money = 13340,
             obj = "Bring Zaeldarr's Head to Caretaker Alen at Light's Hope Chapel."
         },
         [6022] = {
             name = "To Kill With Purpose",
             level = 58,
-            money = 9000,
+            money = 21175,
             obj = "Travel to Corin's Crossing to the east and slaughter the Scourge that inhabit the town. Collect 7 pieces of Living Rot in under 10 minutes. Use the Mortar and Pestle to grind the Living Rot into Coagulated Rot."
         },
         [6023] = {
             name = "Unfinished Business",
             level = 57,
-            money = 6500,
+            money = 18594,
             obj = "Kill Huntsman Radley and Cavalier Durgen before returning to Kirsta Deepshadow in Western Plaguelands."
         },
         [6024] = {
@@ -68861,24 +70124,20 @@ local c = {
         [6025] = {
             name = "Unfinished Business",
             level = 58,
-            money = 17500,
+            money = 25071,
             obj = "Enter Hearthglen and find a high vantage point from which you can see the town and gauge the Scarlet Crusade's forces, then return to Kirsta Deepshadow in Western Plaguelands."
         },
         [6026] = {
             name = "That's Asking A Lot",
             level = 58,
-            money = 17500,
+            money = 25071,
             obj = "Smokey LaRue wants you to get 2 Thorium Bars, 1 Golden Rod, 8 Hi-Explosive Bombs, and 8 Unstable Triggers.\n\nYou will have to find a blacksmith and an engineer for these items."
         },
         [6027] = {
             name = "Book of the Ancients",
             level = 38,
             money = 4500,
-            obj = "Get the Book of the Ancients and return it to Azore Aldamort at the tower in Ethel Rethor.\r\n",
-            choice = {
-                16791,
-                16793
-            }
+            obj = "Get the Book of the Ancients and return it to Azore Aldamort at the tower in Ethel Rethor.\r\n"
         },
         [6028] = {
             name = "The Everlook Report",
@@ -68908,6 +70167,12 @@ local c = {
                 15823
             }
         },
+        [6032] = {
+            name = "Sacred Cloth",
+            level = 55,
+            money = 13419,
+            obj = "Bring 2 Mooncloth to Meilosh in Timbermaw Hold."
+        },
         [6041] = {
             name = "When Smokey Sings, I Get Violent",
             level = 58,
@@ -68925,7 +70190,7 @@ local c = {
         [6042] = {
             name = "Un-Life's Little Annoyances",
             level = 58,
-            money = 9000,
+            money = 21175,
             obj = "Slay 20 Noxious Plaguebats and 10 Monstrous Plaguebats. Return to Nathanos Blightcaller when you are finished."
         },
         [6061] = {
@@ -69171,18 +70436,14 @@ local c = {
         [6133] = {
             name = "The Ranger Lord's Behest",
             level = 60,
-            money = 9000,
+            money = 24300,
             obj = "Travel to the northern borders of the Eastern Plaguelands and recover the Quel'Thalas Registry. The item is somewhere in the Quel'Lithien lodge.\n\nYou must also slay 8 Rangers, 8 Pathstriders, and 8 Woodsmen."
         },
         [6134] = {
             name = "Ghost-o-plasm Round Up",
             level = 39,
             money = 4500,
-            obj = "Bring 8 Ghost-o-plasms and the Crate of Ghost Magnets to Hornizz Brimbuzzle in Desolace.",
-            choice = {
-                15864,
-                15865
-            }
+            obj = "Bring 8 Ghost-o-plasms and the Crate of Ghost Magnets to Hornizz Brimbuzzle in Desolace."
         },
         [6135] = {
             name = "Duskwing, Oh How I Hate Thee...",
@@ -69215,12 +70476,7 @@ local c = {
             name = "Clam Bait",
             level = 35,
             money = 0,
-            obj = "Find 10 pieces of Soft-shelled Clam Meat and bring it back to Mai'Lahii at Shadowprey Village.",
-            choice = {
-                15585,
-                15587,
-                15588
-            }
+            obj = "Find 10 pieces of Soft-shelled Clam Meat and bring it back to Mai'Lahii at Shadowprey Village."
         },
         [6143] = {
             name = "Other Fish to Fry",
@@ -69237,8 +70493,31 @@ local c = {
         [6145] = {
             name = "The Crimson Courier",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Return to Eastern Plaguelands and track down the Crimson Courier. Kill the Courier and recover the Grand Crusader's Command.\n\nTake the command to Nathanos Blightcaller for further instruction."
+        },
+        [6146] = {
+            name = "Nathanos' Ruse",
+            level = 60,
+            money = 19800,
+            obj = "Travel to Tyr's Hand, southeast of the Marris Stead. Once there, take a bite of the Rotten Apple. While under the guise of the Scarlet Crusade, deliver the Grand Crusader's Command to Crusader Lord Valdelmar."
+        },
+        [6147] = {
+            name = "Return to Nathanos",
+            level = 60,
+            money = 0,
+            obj = "Return to Nathanos Blightcaller with the new information.\r\n"
+        },
+        [6148] = {
+            name = "The Scarlet Oracle, Demetria",
+            level = 60,
+            money = 18000,
+            obj = "The Scarlet Crusade is on the move. Somewhere along the road from Tyr's Hand to Stratholme you will find the Oracle, Demetria, and her entourage. Hunt her down and slay her. Return to Nathanos Blightcaller should you succeed.",
+            choice = {
+                16996,
+                16997,
+                16998
+            }
         },
         [6161] = {
             name = "Claim Rackmore's Treasure!",
@@ -69253,7 +70532,7 @@ local c = {
         [6162] = {
             name = "A Husband's Last Battle",
             level = 51,
-            money = 7500,
+            money = 11531,
             obj = "Kill Overlord Ror and return his claw to Dreka'Sur at Bloodvenom Post in Felwood."
         },
         [6163] = {
@@ -69293,19 +70572,19 @@ local c = {
         [6184] = {
             name = "Flint Shadowmore",
             level = 60,
-            money = 0,
+            money = 14850,
             obj = "Travel to Chillwind Camp in the Western Plaguelands and meet up with your contact, Flint Shadowmore.\r\n"
         },
         [6185] = {
             name = "The Eastern Plagues",
             level = 60,
-            money = 0,
+            money = 24900,
             obj = "Scour the Eastern Plaguelands for clues as to the \"Blightcaller\" and the missing SI:7 agents. If you find any SI:7 Insignias, return them to Flint Shadowmore at Chillwind Camp."
         },
         [6186] = {
             name = "The Blightcaller Cometh",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Return to Stormwind and inform Highlord Bolvar Fordragon of the fate of Nathanos Marris."
         },
         [6187] = {
@@ -69341,18 +70620,17 @@ local c = {
             name = "Bloodfury Bloodline",
             level = 26,
             money = 0,
-            obj = "Maggran at Sun Rock Retreat wishes you to slay Bloodfury Ripper and bring her remains as proof of your deed.",
-            choice = {
-                16990,
-                16987,
-                270028
-            }
+            obj = "Maggran at Sun Rock Retreat wishes you to slay Bloodfury Ripper and bring her remains as proof of your deed."
         },
         [6284] = {
             name = "Arachnophobia",
             level = 21,
             money = 0,
-            obj = "Kill Besseleth and bring Besseleth's Fang to Maggran at Sun Rock Retreat."
+            obj = "Kill Besseleth and bring Besseleth's Fang to Maggran at Sun Rock Retreat.",
+            choice = {
+                16891,
+                16894
+            }
         },
         [6285] = {
             name = "Return to Lewis",
@@ -69448,11 +70726,7 @@ local c = {
             name = "New Life",
             level = 25,
             money = 0,
-            obj = "Plant 10 Gaea Seeds in Gaea Dirt Mounds, and then return the remaining Enchanted Gaea Seeds to Tammra at Sun Rock Retreat.",
-            choice = {
-                16985,
-                16986
-            }
+            obj = "Plant 10 Gaea Seeds in Gaea Dirt Mounds, and then return the remaining Enchanted Gaea Seeds to Tammra at Sun Rock Retreat."
         },
         [6382] = {
             name = "The Ashenvale Hunt",
@@ -69498,13 +70772,13 @@ local c = {
         [6389] = {
             name = "A Plague Upon Thee",
             level = 55,
-            money = 8500,
+            money = 16783,
             obj = "Release the Plagueland Termites in the Northridge Lumber Mill, then return with the Barrel of Plagueland Termites to Nathaniel Dumah at Chillwind Camp in Western Plaguelands."
         },
         [6390] = {
             name = "A Plague Upon Thee",
             level = 55,
-            money = 8500,
+            money = 16783,
             obj = "Release the Plagueland Termites in the Northridge Lumber Mill, then return with the Barrel of Plagueland Termites to Mickey Levine at the Bulwark in Tirisfal Glades."
         },
         [6391] = {
@@ -69552,7 +70826,7 @@ local c = {
         [6403] = {
             name = "The Great Masquerade",
             level = 60,
-            money = 0,
+            money = 29850,
             obj = "Follow Reginald Windsor through Stormwind. Protect him from harm!\r\n\r\nSpeak to Squire Rowe if you need to contact Reginald Windsor again."
         },
         [6421] = {
@@ -69605,7 +70879,7 @@ local c = {
         [6501] = {
             name = "The Dragon's Eye",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "You must search the world for a being capable of restoring the power to the Fragment of the Dragon's Eye. The only information you possess about such a being is that they exist."
         },
         [6502] = {
@@ -69627,17 +70901,12 @@ local c = {
             name = "The Lost Pages",
             level = 30,
             money = 0,
-            obj = "Find the 12 missing pages of the Shredder Operating Manual, and put them together to form Chapters 1, 2, and 3. Return the pages to Gurda Ragescar near Splintertree Post.\r\n",
-            choice = {
-                16740,
-                16741
-            }
+            obj = "Find the 12 missing pages of the Shredder Operating Manual, and put them together to form Chapters 1, 2, and 3. Return the pages to Gurda Ragescar near Splintertree Post.\r\n"
         },
         [6521] = {
             name = "An Unholy Alliance",
             level = 36,
             money = 2000,
-            obj = "Bring Ambassador Malcin's Head to Varimathras in the Undercity.",
             choice = {
                 17039,
                 17042,
@@ -69660,7 +70929,8 @@ local c = {
         [6541] = {
             name = "Report to Kadrak",
             level = 19,
-            money = 0
+            money = 0,
+            obj = "Report to Kadrak at the watch tower in northern Barrens."
         },
         [6542] = {
             name = "Report to Kadrak",
@@ -69726,15 +70996,79 @@ local c = {
                 17695
             }
         },
+        [6566] = {
+            name = "What the Wind Carries",
+            level = 60,
+            money = 0,
+            obj = "Listen to Thrall."
+        },
+        [6567] = {
+            name = "The Champion of the Horde",
+            level = 60,
+            money = 0,
+            obj = "Seek out Rexxar. The Warchief has instructed you as to his whereabouts. Search the paths of Desolace, between the Stonetalon Mountains and Feralas.\r\n"
+        },
+        [6568] = {
+            name = "The Testament of Rexxar",
+            level = 60,
+            money = 14850,
+            obj = "Deliver Rexxar's Testament to Myranda the Hag in the Western Plaguelands."
+        },
+        [6569] = {
+            name = "Oculus Illusions",
+            level = 60,
+            money = 19800,
+            obj = "Travel to Blackrock Spire and collect 20 Black Dragonspawn Eyes. Return to Myranda the Hag when the task is complete."
+        },
+        [6570] = {
+            name = "Emberstrife",
+            level = 60,
+            money = 14850,
+            obj = "Travel to the Wyrmbog in Dustwallow Marsh and seek out Emberstrife's Den. Once inside, wear the Amulet of Draconic Subversion and speak with Emberstrife.\r\n"
+        },
         [6571] = {
             name = "Warsong Supplies",
             level = 27,
             money = 0,
-            obj = "Collect the Warsong Supplies: Warsong Saw Blades, Logging Rope, Warsong Oil, and the Warsong Axe Shipment for Locke Okarr in Splintertree Post.",
-            choice = {
-                16975,
-                16977,
-                16978
+            obj = "Collect the Warsong Supplies: Warsong Saw Blades, Logging Rope, Warsong Oil, and the Warsong Axe Shipment for Locke Okarr in Splintertree Post."
+        },
+        [6582] = {
+            name = "The Test of Skulls, Scryer",
+            level = 60,
+            money = 19800,
+            obj = "You must find the blue dragonflight drake champion, Scryer, and slay him. Pry his skull from his corpse and return it to Emberstrife.\n\nYou know that Scryer can be found in Winterspring."
+        },
+        [6583] = {
+            name = "The Test of Skulls, Somnus",
+            level = 60,
+            money = 19800,
+            obj = "Destroy the drake champion of the Green Flight, Somnus. Take his skull and return it to Emberstrife."
+        },
+        [6584] = {
+            name = "The Test of Skulls, Chronalis",
+            level = 60,
+            money = 19800,
+            obj = "Guarding the Caverns of Time in the Tanaris Desert is Chronalis, child of Nozdormu. Destroy him and return his skull to Emberstrife."
+        },
+        [6585] = {
+            name = "The Test of Skulls, Axtroz",
+            level = 60,
+            money = 19800,
+            obj = "Travel to Grim Batol and track down Axtroz, drake champion of the Red Flight. Destroy him and take his skull. Return the skull to Emberstrife."
+        },
+        [6601] = {
+            name = "Ascension...",
+            level = 60,
+            money = 14850,
+            obj = "It would appear as if the charade is over. You know that the Amulet of Draconic Subversion that Myranda the Hag created for you will not function inside Blackrock Spire. Perhaps you should find Rexxar and explain your predicament. Show him the Dull Drakefire Amulet. Hopefully he will know what to do next."
+        },
+        [6602] = {
+            name = "Blood of the Black Dragon Champion",
+            level = 60,
+            money = 0,
+            obj = "Travel to Blackrock Spire and slay General Drakkisath. Gather his blood and return it to Rexxar.",
+            reward = {
+                16309
             }
         },
         [6603] = {
@@ -69754,6 +71088,12 @@ local c = {
             level = 54,
             money = 0,
             obj = "Speak with Winna Hazzard in Felwood."
+        },
+        [6606] = {
+            name = "A Little Luck",
+            level = 60,
+            money = 0,
+            obj = "Speak with Witch Doctor Mau'ari in Everlook."
         },
         [6607] = {
             name = "Nat Pagle, Angler Extreme",
@@ -69798,11 +71138,7 @@ local c = {
             name = "King of the Foulweald",
             level = 26,
             money = 2000,
-            obj = "Place Karang's Banner on the Foulweald Totem Mound.  Do not let the furbolgs destroy the banner.  Defeat Chief Murgut and bring Murgut's Totem to Karang Amakkar at Zoram'gar.",
-            choice = {
-                17005,
-                17006
-            }
+            obj = "Place Karang's Banner on the Foulweald Totem Mound.  Do not let the furbolgs destroy the banner.  Defeat Chief Murgut and bring Murgut's Totem to Karang Amakkar at Zoram'gar."
         },
         [6622] = {
             name = "Triage",
@@ -70045,12 +71381,7 @@ local c = {
             name = "Vyletongue Corruption",
             level = 47,
             money = 0,
-            obj = "Fill the Coated Cerulean Vial at the orange crystal pool in Maraudon.\n\nUse the Filled Cerulean Vial on the Vylestem Vines to force the corrupted Noxxious Scion to emerge.\n\nHeal 8 plants by killing these Noxxious Scion, then return to Talendria in Nijel's Point.",
-            choice = {
-                17768,
-                17778,
-                17770
-            }
+            obj = "Fill the Coated Cerulean Vial at the orange crystal pool in Maraudon.\n\nUse the Filled Cerulean Vial on the Vylestem Vines to force the corrupted Noxxious Scion to emerge.\n\nHeal 8 plants by killing these Noxxious Scion, then return to Talendria in Nijel's Point."
         },
         [7042] = {
             name = "Stolen Winter Veil Treats",
@@ -70061,7 +71392,7 @@ local c = {
         [7044] = {
             name = "Legends of Maraudon",
             level = 49,
-            money = 0,
+            money = 5525,
             obj = "Recover the two parts of the Scepter of Celebras: the Celebrian Rod and the Celebrian Diamond.\n\nFind a way to speak with Celebras."
         },
         [7046] = {
@@ -70099,7 +71430,7 @@ local c = {
         [7066] = {
             name = "Seed of Life",
             level = 51,
-            money = 15000,
+            money = 16125,
             obj = "Seek out Remulos in Moonglade and give him the Seed of Life."
         },
         [7067] = {
@@ -70138,49 +71469,61 @@ local c = {
         [7081] = {
             name = "Alterac Valley Graveyards",
             level = 60,
-            money = 9000,
+            money = 24300,
             obj = "Assault a graveyard, then return to Sergeant Durgen Stormpike in the Alterac Mountains."
         },
         [7082] = {
             name = "The Graveyards of Alterac",
             level = 60,
-            money = 9000,
+            money = 24300,
             obj = "Assault a graveyard, then return to Corporal Teeka Bloodsnarl in the Alterac Mountains."
         },
         [7101] = {
             name = "Towers and Bunkers",
             level = 60,
-            money = 9000,
+            money = 24300,
             obj = "Capture an enemy tower, then return to Corporal Teeka Bloodsnarl in the Alterac Mountains."
         },
         [7102] = {
             name = "Towers and Bunkers",
             level = 60,
-            money = 9000,
+            money = 24300,
             obj = "Destroy the banner at an enemy tower or bunker, then return to Sergeant Durgen Stormpike in the Alterac Mountains."
+        },
+        [7121] = {
+            name = "The Quartermaster",
+            level = 60,
+            money = 0,
+            obj = "Speak with the Stormpike Quartermaster."
         },
         [7122] = {
             name = "Capture a Mine",
             level = 60,
-            money = 9000,
+            money = 24300,
             obj = "Capture a mine that the Stormpike does not control, then return to Sergeant Durgen Stormpike in the Alterac Mountains."
+        },
+        [7123] = {
+            name = "Speak with our Quartermaster",
+            level = 60,
+            money = 0,
+            obj = "Speak with the Frostwolf Quartermaster."
         },
         [7124] = {
             name = "Capture a Mine",
             level = 60,
-            money = 18000,
+            money = 28800,
             obj = "Capture a mine, then return to Corporal Teeka Bloodsnarl in the Alterac Mountains."
         },
         [7141] = {
             name = "The Battle of Alterac",
             level = 60,
-            money = 27000,
+            money = 43350,
             obj = "Enter Alterac Valley, defeat the Horde general Drek'thar, and then return to Prospector Stonehewer in the Alterac Mountains."
         },
         [7142] = {
             name = "The Battle for Alterac",
             level = 60,
-            money = 27000,
+            money = 43350,
             obj = "Enter Alterac Valley and defeat the dwarven general, Vanndar Stormpike.  Then, return to Voggah Deathgrip in the Alterac Mountains."
         },
         [7161] = {
@@ -70203,6 +71546,69 @@ local c = {
                 19484
             }
         },
+        [7163] = {
+            name = "Rise and Be Recognized",
+            level = 60,
+            money = 0,
+            obj = "Requirements:",
+            reward = {
+                17905
+            }
+        },
+        [7164] = {
+            name = "Honored Amongst the Clan",
+            level = 60,
+            money = 0,
+            obj = "Requirements:",
+            reward = {
+                17906
+            }
+        },
+        [7165] = {
+            name = "Earned Reverence",
+            level = 60,
+            money = 0,
+            obj = "Requirements:",
+            reward = {
+                17907
+            }
+        },
+        [7168] = {
+            name = "Rise and Be Recognized",
+            level = 60,
+            money = 0,
+            obj = "Requirements:",
+            reward = {
+                17900
+            }
+        },
+        [7169] = {
+            name = "Honored Amongst the Guard",
+            level = 60,
+            money = 0,
+            obj = "Requirements:",
+            reward = {
+                17901
+            }
+        },
+        [7170] = {
+            name = "Earned Reverence",
+            level = 60,
+            money = 0,
+            obj = "Requirements:",
+            reward = {
+                17902
+            }
+        },
+        [7171] = {
+            name = "Legendary Heroes",
+            level = 60,
+            money = 0,
+            obj = "Requirements:",
+            reward = {
+                17903
+            }
+        },
         [7201] = {
             name = "The Last Element",
             level = 54,
@@ -70213,17 +71619,67 @@ local c = {
                 270119
             }
         },
+        [7202] = {
+            name = "Korrak the Bloodrager",
+            level = 60,
+            money = 0,
+            obj = "According to legend, the leader of the mighty Winterax trolls appears at will to wreak havoc on the denizens of Alterac Valley.\n\nShould Korrak make himself known, destroy him and return to Lieutenant Haggerdin in the Alterac Mountains.",
+            choice = {
+                19107,
+                19106,
+                19108
+            },
+            reward = {
+                18150
+            }
+        },
+        [7223] = {
+            name = "Armor Scraps",
+            level = 60,
+            money = 19800,
+            obj = "Bring 20 Armor Scraps to Murgot Deepforge in Dun Baldar."
+        },
+        [7224] = {
+            name = "Enemy Booty",
+            level = 60,
+            money = 19800,
+            obj = "Bring 20 Armor Scraps to Smith Regzar in Frostwolf Village."
+        },
         [7241] = {
             name = "In Defense of Frostwolf",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Venture to Alterac Valley, located in the Alterac Mountains. Find and speak with Warmaster Laggrond - who stands outside the tunnel entrance - to begin your career as a soldier of Frostwolf. You will find Alterac Valley north of Tarren Mill at the base of the Alterac Mountains."
         },
         [7261] = {
             name = "The Sovereign Imperative",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Travel to Alterac Valley in the Hillsbrad Foothills. Outside of the entrance tunnel, find and speak with Lieutenant Haggerdin.\n\nFor the glory of Bronzebeard!"
+        },
+        [7281] = {
+            name = "Brotherly Love",
+            level = 60,
+            money = 19800,
+            obj = "Travel into Stormpike territory and slay Commander Karl Philips. Return to Commander Louis Philips when the task is complete.\r\n"
+        },
+        [7282] = {
+            name = "Brotherly Love",
+            level = 60,
+            money = 19800,
+            obj = "Travel into Frostwolf territory and slay Commander Louis Philips. Return to Commander Karl Philips when the task is complete.\r\n"
+        },
+        [7301] = {
+            name = "Fallen Sky Lords",
+            level = 60,
+            money = 19800,
+            obj = "Travel to Frostwolf territory and search for Wing Commander Slidore, Wing Commander Vipore, and Wing Commander Ichman. Return to Commander Duffy should you complete your mission."
+        },
+        [7302] = {
+            name = "Fallen Sky Lords",
+            level = 60,
+            money = 19800,
+            obj = "Find out what became of Wing Commander Guse, Wing Commander Jeztor, and Wing Commander Mulverick. Return to Commander Mulfort should you complete your mission."
         },
         [7321] = {
             name = "Soothing Turtle Bisque",
@@ -70235,11 +71691,29 @@ local c = {
                 3729
             }
         },
+        [7367] = {
+            name = "Defusing the Threat",
+            level = 60,
+            money = 19800,
+            obj = "Find the Frostwolf Explosives Expert and kill him. Return to the Stormpike Explosives Expert when the task is complete."
+        },
+        [7368] = {
+            name = "Defusing the Threat",
+            level = 60,
+            money = 19800,
+            obj = "Find the Stormpike Explosives Expert and kill him. Return to the Frostwolf Explosives Expert when the task is complete."
+        },
         [7383] = {
             name = "Crown of the Earth",
             level = 11,
             money = 0,
             obj = "Fill the Amethyst Phial and bring it back to Corithras Moonrage in Dolanaar."
+        },
+        [7429] = {
+            name = "Free Knot!",
+            level = 60,
+            money = 0,
+            obj = "Requirements:"
         },
         [7441] = {
             name = "Pusillin and the Elder Azj'Tordin",
@@ -70255,20 +71729,43 @@ local c = {
         [7461] = {
             name = "The Madness Within",
             level = 60,
-            money = 0,
+            money = 29850,
             obj = "You must destroy the guardians surrounding the 5 Pylons that power the Prison of Immol'thar. Once the Pylons have powered down, the force field surrounding Immol'thar will have dissipated.\n\nEnter the Prison of Immol'thar and eradicate the foul demon that stands at its heart. Finally, confront Prince Tortheldrin in Athenaeum.\n\nReturn to the Shen'dralar Ancient in the courtyard should you complete this quest."
+        },
+        [7462] = {
+            name = "The Treasure of the Shen'dralar",
+            level = 60,
+            money = 27000,
+            obj = "Return to the Athenaeum and find the Treasure of the Shen'dralar. Claim your reward!",
+            choice = {
+                18420,
+                18421,
+                18424
+            }
+        },
+        [7463] = {
+            name = "Arcane Refreshment",
+            level = 60,
+            money = 19800,
+            obj = "Travel to the Warpwood Quarter of Dire Maul and slay the water elemental, Hydrospawn. Return to Lorekeeper Lydros in the Athenaeum with the Hydrospawn Essence."
         },
         [7481] = {
             name = "Elven Legends",
             level = 60,
-            money = 18000,
+            money = 33900,
             obj = "Search Dire Maul for Telmius Dreamseeker. Report back to Sage Korolusk at Camp Mojache with whatever information that you may find."
         },
         [7482] = {
             name = "Elven Legends",
             level = 60,
-            money = 18000,
+            money = 33900,
             obj = "Search Dire Maul for Telmius Dreamseeker. Report back to Scholar Runethorn at Feathermoon with whatever information that you may find."
+        },
+        [7487] = {
+            name = "Attunement to the Core",
+            level = 60,
+            money = 19800,
+            obj = "Venture to the Molten Core entry portal in Blackrock Depths and recover a Core Fragment. Return to Lothos Riftwaker in Blackrock Mountain when you have recovered the Core Fragment."
         },
         [7488] = {
             name = "Lethtendris's Web",
@@ -70285,7 +71782,12 @@ local c = {
             name = "Lethtendris's Web",
             level = 57,
             money = 17000,
-            obj = "Bring Lethtendris's Web to Talo Thornhoof at Camp Mojache in Feralas."
+            obj = "Bring Lethtendris's Web to Talo Thornhoof at Camp Mojache in Feralas.",
+            choice = {
+                18491,
+                270124,
+                270125
+            }
         },
         [7492] = {
             name = "Camp Mojache",
@@ -70298,6 +71800,114 @@ local c = {
             level = 57,
             money = 0,
             obj = "Speak with Latronicus Moonspear at the Feathermoon Stronghold in Feralas."
+        },
+        [7495] = {
+            name = "Victory for the Alliance",
+            level = 60,
+            money = 29850,
+            obj = "Take the Head of Onyxia to Highlord Bolvar Fordragon in Stormwind."
+        },
+        [7498] = {
+            name = "Garona: A Study on Stealth and Treachery",
+            level = 60,
+            money = 0,
+            obj = "Return the book to its rightful owners.",
+            reward = {
+                18465
+            }
+        },
+        [7499] = {
+            name = "Codex of Defense",
+            level = 60,
+            money = 0,
+            obj = "Return the book to its rightful owners.",
+            reward = {
+                18466
+            }
+        },
+        [7500] = {
+            name = "The Arcanist's Cookbook",
+            level = 60,
+            money = 0,
+            obj = "Return the book to its rightful owners.",
+            reward = {
+                18468
+            }
+        },
+        [7501] = {
+            name = "The Light and How To Swing It",
+            level = 60,
+            money = 0,
+            obj = "Return the book to its rightful owners.",
+            reward = {
+                18472
+            }
+        },
+        [7502] = {
+            name = "Harnessing Shadows",
+            level = 60,
+            money = 0,
+            obj = "Return the book to its rightful owners.",
+            reward = {
+                18467
+            }
+        },
+        [7503] = {
+            name = "The Greatest Race of Hunters",
+            level = 60,
+            money = 0,
+            obj = "Return the book to its rightful owners.",
+            reward = {
+                18473
+            }
+        },
+        [7504] = {
+            name = "Holy Bologna: What the Light Won't Tell You",
+            level = 60,
+            money = 0,
+            obj = "Return the book to its rightful owners.",
+            reward = {
+                18469
+            }
+        },
+        [7505] = {
+            name = "Frost Shock and You",
+            level = 60,
+            money = 0,
+            obj = "Return the book to its rightful owners.",
+            reward = {
+                18471
+            }
+        },
+        [7506] = {
+            name = "The Emerald Dream...",
+            level = 60,
+            money = 0,
+            obj = "Return the book to its rightful owners.",
+            reward = {
+                18470
+            }
+        },
+        [7507] = {
+            name = "Nostro's Compendium",
+            level = 60,
+            money = 29850,
+            obj = "Return Nostro's Compendium of Dragon Slaying to the Athenaeum."
+        },
+        [7508] = {
+            name = "The Forging of Quel'Serrar",
+            level = 60,
+            money = 0,
+            obj = "Give the Dull and Flat Elven Blade to Lorekeeper Lydros."
+        },
+        [7509] = {
+            name = "The Forging of Quel'Serrar",
+            level = 60,
+            money = 0,
+            obj = "You must get Onyxia to breathe fire on the Unfired Ancient Blade. Once this is done, pick up the now Heated Ancient Blade. Be warned, a Heated Ancient Blade will not remain heated forever - time is of the essence.\n\nThe last step before returning to me is to slay the beast and drive the Heated Ancient Blade into her corpse.\n\nDo this and Quel'Serrar will be yours.",
+            reward = {
+                18348
+            }
         },
         [7541] = {
             name = "Service to the Horde",
@@ -70314,6 +71924,39 @@ local c = {
             money = 0,
             obj = "Speak with Mor'zul Bloodbringer in the Burning Steppes."
         },
+        [7563] = {
+            name = "Rage of Blood",
+            level = 58,
+            money = 21313,
+            obj = "Bring 30 bottles of Raging Beast's Blood to Mor'zul Bloodbringer in the Burning Steppes."
+        },
+        [7564] = {
+            name = "Wildeyes",
+            level = 58,
+            money = 0,
+            obj = "Bring the Case of Blood to Gorzeeki Wildeyes in the Burning Steppes."
+        },
+        [7581] = {
+            name = "The Prison's Bindings",
+            level = 60,
+            money = 19800,
+            obj = "Travel to Dire Maul in Feralas and recover 15 Satyr Blood from the Wildspawn Satyr that inhabit the Warpwood Quarter. Return to Daio in the Tainted Scar when this is done.\r\n"
+        },
+        [7582] = {
+            name = "The Prison's Casing",
+            level = 60,
+            money = 19800,
+            obj = "Travel to Darkwhisper Gorge in Winterspring and recover 5 Tears of the Hederine from the Hederine demons that occupy the gorge. Return to Daio in the Tainted Scar when you have completed this task."
+        },
+        [7583] = {
+            name = "Suppression",
+            level = 60,
+            money = 0,
+            obj = "Venture forth into the Tainted Scar and locate a Doomguard Commander.\n\nUse the Glowing Crystal Prison on the Doomguard Commander. Be prepared for a ferocious onslaught of attacks, as the demon attempts to escape capture.\n\nShould you succeed, return the Imprisoned Doomguard to Daio in the Tainted Scar.",
+            reward = {
+                18602
+            }
+        },
         [7601] = {
             name = "What Niby Commands",
             level = 50,
@@ -70323,7 +71966,7 @@ local c = {
         [7602] = {
             name = "Flawless Fel Essence",
             level = 55,
-            money = 0,
+            money = 13419,
             obj = "Impsy in Felwood has asked that you bring him three Flawless Fel Essences originating from three distinct locations.\n\nThe Legashi Satyrs of Azshara hold the Flawless Fel Essence of their region. The Jaedenar Legionnaires of Jaedenar hold the Flawless Fel Essence of their region. The Felguard Sentries of the Blasted Lands hold the Flawless Fel Essence of their region.\n\nRecover the Flawless Fel Essences and return  to Impsy in Felwood."
         },
         [7603] = {
@@ -70344,6 +71987,71 @@ local c = {
                 18592
             }
         },
+        [7621] = {
+            name = "A Warning",
+            level = 60,
+            money = 0
+        },
+        [7623] = {
+            name = "Lord Banehollow",
+            level = 58,
+            money = 17050,
+            obj = "Purchase Shadowy Potions from Gorzeeki in the Burning Steppes.\n\nUse the potions to travel through Jaedenar, and speak with Lord Banehollow."
+        },
+        [7624] = {
+            name = "Ulathek the Traitor",
+            level = 58,
+            money = 17050,
+            obj = "Confront Ulathek, then bring The Traitor's Heart to Lord Banehollow in Jaedenar."
+        },
+        [7625] = {
+            name = "Xorothian Stardust",
+            level = 60,
+            money = 19800,
+            obj = "Purchase Xorothian Stardust from Ur'dan.  Bring it to Gorzeeki Wildeyes in the Burning Steppes."
+        },
+        [7626] = {
+            name = "Bell of Dethmoora",
+            level = 60,
+            money = 19800,
+            obj = "Bring 10 Elixirs of Shadow Power to Gorzeeki Wildeyes in the Burning Steppes."
+        },
+        [7627] = {
+            name = "Wheel of the Black March",
+            level = 60,
+            money = 19800,
+            obj = "Bring 6 Large Brilliant Shards and 25 Dark Iron Ore to Gorzeeki in the Burning Steppes."
+        },
+        [7628] = {
+            name = "Doomsday Candle",
+            level = 60,
+            money = 19800,
+            obj = "Bring 35 Black Dragonscales to Gorzeeki Wildeyes in the Burning Steppes."
+        },
+        [7629] = {
+            name = "Imp Delivery",
+            level = 60,
+            money = 19800,
+            obj = "Bring the Imp in a Jar to the alchemy lab in the Scholomance.  After the parchment is created, return the jar to Gorzeeki Wildeyes."
+        },
+        [7630] = {
+            name = "Arcanite",
+            level = 60,
+            money = 19800,
+            obj = "Bring 3 Arcanite Bars to Gorzeeki in the Burning Steppes."
+        },
+        [7631] = {
+            name = "Dreadsteed of Xoroth",
+            level = 60,
+            money = 19800,
+            obj = "Read Mor'zul's Instructions.  Summon a Xorothian Dreadsteed, defeat it, then bind its spirit to you."
+        },
+        [7632] = {
+            name = "The Ancient Leaf",
+            level = 60,
+            money = 29850,
+            obj = "Find the owner of the Ancient Petrified Leaf. Good luck, Fresh; It's a big world."
+        },
         [7637] = {
             name = "Emphasis on Sacrifice",
             level = 60,
@@ -70356,6 +72064,18 @@ local c = {
             money = 0,
             obj = "Speak with Lord Grayson Shadowbreaker in Stormwind's Cathedral District."
         },
+        [7639] = {
+            name = "To Show Due Judgment",
+            level = 60,
+            money = 0,
+            obj = "Return the Exorcism Censer to Lord Grayson Shadowbreaker in the Cathedral District of Stormwind."
+        },
+        [7640] = {
+            name = "Exorcising Terrordale",
+            level = 60,
+            money = 19800,
+            obj = "Use the Exorcism Censer to drive out the spirits that torment Terrordale.  When you have slain 25 Terrordale Spirits, return to Lord Grayson Shadowbreaker in the Cathedral District of Stormwind."
+        },
         [7641] = {
             name = "The Work of Grimand Elmore",
             level = 60,
@@ -70367,6 +72087,72 @@ local c = {
             level = 60,
             money = 0,
             obj = "Bring 40 Runecloth, 6 Arcanite Bars, 10 Arthas' Tears, 5 Stratholme Holy Water vials, and 150 gold to Grimand Elmore in the Dwarven District of Stormwind."
+        },
+        [7643] = {
+            name = "Ancient Equine Spirit",
+            level = 60,
+            money = 14850,
+            obj = "Acquire special horse feed used for feeding a spirit horse.  Merideth Carlson in Southshore apparently is the source for such food.\n\nTravel to the Dire Maul dungeon in Feralas and slay Tendris Warpwood.  Doing so will free the Ancient Equine Spirit.  Feed it the special horse feed, thereby soothing the spirit.  Finally, give it the Arcanite Barding so it may bless it."
+        },
+        [7644] = {
+            name = "Blessed Arcanite Barding",
+            level = 60,
+            money = 24900,
+            obj = "Return with the Blessed Arcanite Barding to Lord Grayson Shadowbreaker in the Cathedral District of Stormwind."
+        },
+        [7645] = {
+            name = "Manna-Enriched Horse Feed",
+            level = 60,
+            money = 0,
+            obj = "Retrieve 20 Enriched Manna Biscuits - the key ingredient in making Manna-Enriched Horse Feed - for Merideth Carlson at Southshore in the Hillsbrad Foothills.  The Argent Dawn is known as the sole purveyor of the biscuits.\n\nYou also need to give her 50 gold to soothe her ruffled sensibilities.",
+            reward = {
+                18775
+            }
+        },
+        [7646] = {
+            name = "The Divination Scryer",
+            level = 60,
+            money = 0,
+            obj = "Bring an Azerothian Diamond and a Pristine Black Diamond to Lord Grayson Shadowbreaker in the Cathedral District of Stormwind."
+        },
+        [7647] = {
+            name = "Judgment and Redemption",
+            level = 60,
+            money = 29850,
+            obj = "Use the Divination Scryer in the heart of the Great Ossuary's basement in the Scholomance.  Doing so will bring forth the spirits you must judge.  Defeating these spirits will summon forth Death Knight Darkreaver.  Defeat him and reclaim the lost soul of the fallen charger.\n\nGive the Charger's Redeemed Soul and the Blessed Enchanted Barding to Darkreaver's Fallen Charger."
+        },
+        [7648] = {
+            name = "Grimand's Finest Work",
+            level = 60,
+            money = 19800,
+            obj = "Take the Arcanite Barding to Lord Grayson Shadowbreaker in Stormwind's Cathedral District for his inspection."
+        },
+        [7649] = {
+            name = "Enchanted Thorium Platemail: Volume I",
+            level = 60,
+            money = 0,
+            obj = "Return the book to its rightful owners.",
+            reward = {
+                12727
+            }
+        },
+        [7650] = {
+            name = "Enchanted Thorium Platemail: Volume II",
+            level = 60,
+            money = 0,
+            obj = "Return the book to its rightful owners.",
+            reward = {
+                12726
+            }
+        },
+        [7651] = {
+            name = "Enchanted Thorium Platemail: Volume III",
+            level = 60,
+            money = 0,
+            obj = "Return the book to its rightful owners.",
+            reward = {
+                12725
+            }
         },
         [7652] = {
             name = "A Blue Light Bargain",
@@ -70409,6 +72195,15 @@ local c = {
                 12705
             }
         },
+        [7657] = {
+            name = "Imperial Plate Helm",
+            level = 60,
+            money = 0,
+            obj = "Requirements:",
+            reward = {
+                12701
+            }
+        },
         [7658] = {
             name = "Imperial Plate Leggings",
             level = 60,
@@ -70430,8 +72225,17 @@ local c = {
         [7667] = {
             name = "Material Assistance",
             level = 60,
-            money = 0,
+            money = 14850,
             obj = "If you are interested in helping Sagorne Crestrider in Orgrimmar's Valley of Wisdom, bring him an Azerothian Diamond and a Pristine Black Diamond."
+        },
+        [7668] = {
+            name = "The Darkreaver Menace",
+            level = 60,
+            money = 0,
+            obj = "Use the Divination Scryer in the heart of the Great Ossuary's basement in the Scholomance.  Doing so will bring forth spirits you must fight.  Defeating these spirits will summon forth Death Knight Darkreaver; defeat him.\n\nBring Darkreaver's Head to Sagorne Creststrider in the Valley of Wisdom, Orgrimmar.",
+            reward = {
+                18807
+            }
         },
         [7670] = {
             name = "Lord Grayson Shadowbreaker",
@@ -70474,6 +72278,15 @@ local c = {
                 18369
             }
         },
+        [7704] = {
+            name = "Look at the Size of It!",
+            level = 50,
+            money = 0,
+            obj = "Take Chambermaid Pillaclencher's Pillow to Evonice Sootsmoker in the Searing Gorge.",
+            reward = {
+                18951
+            }
+        },
         [7721] = {
             name = "Fuel for the Zapping",
             level = 48,
@@ -70486,7 +72299,7 @@ local c = {
         [7722] = {
             name = "What the Flux?",
             level = 50,
-            money = 7500,
+            money = 10413,
             obj = "Somewhere in the Slag Pit of the Cauldron you will find the Secret Plans: Fiery Flux that Overseer Maltorius stole. Find those plans and return them to Master Smith Burninate in the Searing Gorge.\r\n"
         },
         [7723] = {
@@ -70529,7 +72342,7 @@ local c = {
         [7729] = {
             name = "JOB OPPORTUNITY: Culling the Competition",
             level = 48,
-            money = 21000,
+            money = 11850,
             obj = "Slay 15 Dark Iron Taskmasters and 15 Dark Iron Slavers. Return to Taskmaster Scrange in the Searing Gorge once you have accomplished this task."
         },
         [7730] = {
@@ -70583,8 +72396,26 @@ local c = {
         [7761] = {
             name = "Blackhand's Command",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "That is one stupid orc. It would appear as if you need to find this brand and gain the Mark of Drakkisath in order to access the Orb of Command.\n\nThe letter indicates that General Drakkisath guards the brand. Perhaps you should investigate."
+        },
+        [7781] = {
+            name = "The Lord of Blackrock",
+            level = 60,
+            money = 29850,
+            obj = "Return the Head of Nefarian to Highlord Bolvar Fordragon in Stormwind."
+        },
+        [7783] = {
+            name = "The Lord of Blackrock",
+            level = 60,
+            money = 29850,
+            obj = "Return the Head of Nefarian to Thrall in Orgrimmar."
+        },
+        [7785] = {
+            name = "Examine the Vessel",
+            level = 60,
+            money = 0,
+            obj = "Examine the Vessel of Rebirth and return it to Highlord Demitrian."
         },
         [7788] = {
             name = "Vanquish the Invaders!",
@@ -70631,7 +72462,7 @@ local c = {
         [7795] = {
             name = "A Donation of Runecloth",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Requirements:"
         },
         [7798] = {
@@ -70649,7 +72480,7 @@ local c = {
         [7800] = {
             name = "A Donation of Runecloth",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Requirements:"
         },
         [7802] = {
@@ -70673,7 +72504,7 @@ local c = {
         [7805] = {
             name = "A Donation of Runecloth",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Requirements:"
         },
         [7807] = {
@@ -70703,7 +72534,7 @@ local c = {
         [7811] = {
             name = "A Donation of Runecloth",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Requirements:"
         },
         [7813] = {
@@ -70730,7 +72561,7 @@ local c = {
         [7816] = {
             name = "Gammerita, Mon!",
             level = 48,
-            money = 14000,
+            money = 10100,
             obj = "Katoom the Angler at Revantusk Village in the Hinterlands wants you to kill Gammerita and retrieve Katoom's Best Lure from her corpse.\n\nKatoom mentioned that Gammerita hangs out on the coast with the other turtles."
         },
         [7817] = {
@@ -70742,7 +72573,7 @@ local c = {
         [7818] = {
             name = "A Donation of Runecloth",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Requirements:"
         },
         [7820] = {
@@ -70766,13 +72597,13 @@ local c = {
         [7823] = {
             name = "A Donation of Runecloth",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Requirements:"
         },
         [7824] = {
             name = "A Donation of Runecloth",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Requirements:"
         },
         [7826] = {
@@ -70790,19 +72621,19 @@ local c = {
         [7828] = {
             name = "Stalking the Stalkers",
             level = 48,
-            money = 14000,
+            money = 10100,
             obj = "Huntsman Markhor at Revantusk Village in the Hinterlands wants you to kill 15 Silvermane Stalkers and 15 Silvermane Howlers. Return to him once the task is complete.\n\nMarkhor mentioned that the wolves hide in the wilds of the Hinterlands."
         },
         [7829] = {
             name = "Hunt the Savages",
             level = 48,
-            money = 14000,
+            money = 10100,
             obj = "Huntsman Markhor at Revantusk Village in the Hinterlands wants you to kill 20 Savage Owlbeasts. Return to him once the task is complete.\n\nMarkhor mentioned that the Savage Owlbeasts occupy the wilds of the Hinterlands."
         },
         [7830] = {
             name = "Avenging the Fallen",
             level = 48,
-            money = 14000,
+            money = 10100,
             obj = "Huntsman Markhor at Revantusk Village in the Hinterlands wants you to kill a Razorbeak Skylord and retrieve its Skylord Plume. Return to him once the task is complete.\n\nMarkhor mentioned that the Razorbeak Skylord are a rare breed that tend to occupy the wilds of the Hinterlands."
         },
         [7831] = {
@@ -70832,7 +72663,7 @@ local c = {
         [7836] = {
             name = "A Donation of Runecloth",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Requirements:"
         },
         [7838] = {
@@ -70847,7 +72678,7 @@ local c = {
         [7839] = {
             name = "Vilebranch Hooligans",
             level = 48,
-            money = 14000,
+            money = 10100,
             obj = "Smith Slagtree at Revantusk Village in the Hinterlands wants you to find Slagtree's Lost Tools. Return to him once this task is complete.\n\nYou recall Smith Slagtree mentioning that the tools might be at one of the Vilebranch temples in the northeastern region of the Hinterlands. You should also check Skulk Rock."
         },
         [7840] = {
@@ -70863,13 +72694,13 @@ local c = {
         [7841] = {
             name = "Message to the Wildhammer",
             level = 48,
-            money = 0,
+            money = 6600,
             obj = "Otho Moji'ko at Revantusk Village in the Hinterlands wants you to slaughter 15 Highvale Outrunners, 15 Highvale Scouts, 15 Highvale Marksman and 15 Highvale Rangers. Return to him when this task is complete.\n\nYou can find the Highvale high elves at the Quel'Danil Lodge in the northwestern region of the Hinterlands."
         },
         [7842] = {
             name = "Another Message to the Wildhammer",
             level = 48,
-            money = 0,
+            money = 8175,
             obj = "Otho Moji'ko at Revantusk Village in the Hinterlands wants you to bring him 10 Long Elegant Feathers from the gryphons that inhabit the Hinterlands. Return to him once this task is complete.\n\nGryphons are known to inhabit every region of the Hinterlands."
         },
         [7843] = {
@@ -70884,19 +72715,19 @@ local c = {
         [7844] = {
             name = "Cannibalistic Cousins",
             level = 48,
-            money = 14000,
+            money = 10100,
             obj = "Mystic Yayo'jin at Revantusk Village in the Hinterlands wants you to kill 30 Vilebranch Scalpers and 15 Vilebranch Soothsayers. Return to her when this task is complete.\n\nYayo'jin indicated that these trolls could be found near the Shaol'watha and Agol'watha temples in the north by northeastern region of the Hinterlands."
         },
         [7845] = {
             name = "Kidnapped Elder Torntusk!",
             level = 51,
-            money = 0,
+            money = 9188,
             obj = "Primal Torntusk at Raventusk Village in the Hinterlands wants you to rescue her mate, Elder Torntusk, from Jintha'alor.\n\nYou have been told that he is being held prisoner atop Jintha'alor, the Vilebranch capital city located in the southern region of the Hinterlands."
         },
         [7846] = {
             name = "Recover the Key!",
             level = 51,
-            money = 0,
+            money = 11438,
             obj = "Elder Torntusk at Jintha'alor wants you to kill Hitah'ya the Keeper to get the Shackle Key to his bindings. Return to Elder Torn'tusk when you have recovered the key."
         },
         [7847] = {
@@ -70968,12 +72799,36 @@ local c = {
                 19151
             }
         },
+        [7865] = {
+            name = "Sentinel Advanced Care Package",
+            level = 60,
+            money = 0,
+            reward = {
+                19152
+            }
+        },
         [7866] = {
             name = "Outrider Basic Care Package",
             level = 34,
             money = 0,
             reward = {
                 19154
+            }
+        },
+        [7867] = {
+            name = "Outrider Standard Care Package",
+            level = 44,
+            money = 0,
+            reward = {
+                19155
+            }
+        },
+        [7868] = {
+            name = "Outrider Advanced Care Package",
+            level = 60,
+            money = 0,
+            reward = {
+                19153
             }
         },
         [7869] = {
@@ -70989,6 +72844,35 @@ local c = {
             level = 35,
             money = 11000,
             obj = "Enter Warsong Gulch and defeat the Horde, obtain a Warsong Gulch Mark of Honor, and return to Sentinel Farsong at the Silverwing Grove."
+        },
+        [7872] = {
+            name = "Vanquish the Invaders!",
+            level = 45,
+            money = 19500,
+            obj = "Enter Warsong Gulch and defeat the Horde, obtain a Warsong Gulch Mark of Honor, and return to Sentinel Farsong at the Silverwing Grove."
+        },
+        [7874] = {
+            name = "Quell the Silverwing Usurpers",
+            level = 35,
+            money = 11000,
+            obj = "Enter Warsong Gulch and defeat the Alliance, gain a Warsong Gulch Mark of Honor, and bring it to Captain Shatterskull at the Mor'shan Base Camp."
+        },
+        [7875] = {
+            name = "Quell the Silverwing Usurpers",
+            level = 45,
+            money = 19500,
+            obj = "Enter Warsong Gulch and defeat the Alliance, gain a Warsong Gulch Mark of Honor, and bring it to Captain Shatterskull at the Mor'shan Base Camp."
+        },
+        [7877] = {
+            name = "The Treasure of the Shen'dralar",
+            level = 60,
+            money = 27000,
+            obj = "Return to the Athenaeum and find the Treasure of the Shen'dralar. Claim your reward!",
+            choice = {
+                18420,
+                18421,
+                18424
+            }
         },
         [7904] = {
             name = "<UNUSED>",
@@ -71033,11 +72917,245 @@ local c = {
                 13913
             }
         },
+        [8053] = {
+            name = "Paragons of Power: The Freethinker's Armguards",
+            level = 60,
+            money = 0,
+            obj = "Bring Jin'rokh the Breaker Primal Hakkari Bindings.  You must also have a reputation equal to or greater than Friendly with the Zandalar Tribe.\n\nJin'rokh the Breaker is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19827
+            }
+        },
+        [8054] = {
+            name = "Paragons of Power: The Freethinker's Belt",
+            level = 60,
+            money = 0,
+            obj = "Bring Jin'rokh the Breaker a Primal Hakkari Shawl.  You must also have a reputation equal to or greater than Honored with the Zandalar Tribe.\n\nJin'rokh the Breaker is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19826
+            }
+        },
+        [8055] = {
+            name = "Paragons of Power: The Freethinker's Breastplate",
+            level = 60,
+            money = 0,
+            obj = "Bring Jin'rokh the Breaker a Primal Hakkari Tabard.  You must also have a reputation equal to or greater than Revered with the Zandalar Tribe.\n\nJin'rokh the Breaker is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19825
+            }
+        },
+        [8056] = {
+            name = "Paragons of Power: The Augur's Bracers",
+            level = 60,
+            money = 0,
+            obj = "Bring Maywiki of Zuldazar a Primal Hakkari Armsplint.  You must also have a reputation equal to or greater than Friendly with the Zandalar Tribe.\n\nMaywiki of Zuldazar is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19830
+            }
+        },
+        [8058] = {
+            name = "Paragons of Power: The Vindicator's Armguards",
+            level = 60,
+            money = 0,
+            obj = "Bring Jin'rokh the Breaker a Primal Hakkari Armsplint.  You must also have a reputation equal to or greater than Friendly with the Zandalar Tribe.\n\nJin'rokh the Breaker is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19824
+            }
+        },
+        [8059] = {
+            name = "Paragons of Power: The Demoniac's Wraps",
+            level = 60,
+            money = 0,
+            obj = "Bring Al'tabim the All-Seeing a Primal Hakkari Stanchion.  You must also have a reputation equal to or greater than Friendly with the Zandalar Tribe.\n\nAl'tabim the All-Seeing is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19848
+            }
+        },
+        [8060] = {
+            name = "Paragons of Power: The Illusionist's Wraps",
+            level = 60,
+            money = 0,
+            obj = "Bring Al'tabim the All-Seeing Primal Hakkari Bindings.  You must also have a reputation equal to or greater than Friendly with the Zandalar Tribe.\n\nAl'tabim the All-Seeing is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19846
+            }
+        },
+        [8061] = {
+            name = "Paragons of Power: The Confessor's Wraps",
+            level = 60,
+            money = 0,
+            obj = "Bring Al'tabim the All-Seeing a Primal Hakkari Stanchion.  You must also have a reputation equal to or greater than Friendly with the Zandalar Tribe.\n\nAl'tabim the All-Seeing is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19843
+            }
+        },
+        [8062] = {
+            name = "Paragons of Power: The Predator's Bracers",
+            level = 60,
+            money = 0,
+            obj = "Bring the following Paragons of Power from Zul'Gurub to Falthir the Sightless: A Primal Hakkari Bindings.  You must also have a reputation equal to or greater than Friendly with the Zandalar Tribe.\n\nFalthir the Sightless is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19833
+            }
+        },
+        [8063] = {
+            name = "Paragons of Power: The Madcap's Bracers",
+            level = 60,
+            money = 0,
+            obj = "Bring Falthir the Sightless a Primal Hakkari Armsplint.  You must also have a reputation equal to or greater than Friendly with the Zandalar Tribe.\n\nFalthir the Sightless is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19836
+            }
+        },
+        [8066] = {
+            name = "Paragons of Power: The Predator's Belt",
+            level = 60,
+            money = 0,
+            obj = "Bring the following Paragons of Power from Zul'Gurub to Falthir the Sightless: A Primal Hakkari Shawl.  You must also have a reputation equal to or greater than Honored with the Zandalar Tribe.\n\nFalthir the Sightless is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19832
+            }
+        },
+        [8067] = {
+            name = "Paragons of Power: The Predator's Mantle",
+            level = 60,
+            money = 0,
+            obj = "Bring the following Paragons of Power from Zul'Gurub to Falthir the Sightless: A Primal Hakkari Aegis.  You must also have a reputation equal to or greater than Revered with the Zandalar Tribe.\n\nFalthir the Sightless is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19831
+            }
+        },
+        [8068] = {
+            name = "Paragons of Power: The Illusionist's Mantle",
+            level = 60,
+            money = 0,
+            obj = "Bring Al'tabim the All-Seeing a Primal Hakkari Shawl.  You must also have a reputation equal to or greater than Honored with the Zandalar Tribe.\n\nAl'tabim the All-Seeing is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19845
+            }
+        },
+        [8069] = {
+            name = "Paragons of Power: The Illusionist's Robes",
+            level = 60,
+            money = 0,
+            obj = "Bring Al'tabim the All-Seeing a Primal Hakkari Kossack.  You must also have a reputation equal to or greater than Revered with the Zandalar Tribe.\n\nAl'tabim the All-Seeing is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                20034
+            }
+        },
+        [8070] = {
+            name = "Paragons of Power: The Confessor's Bindings",
+            level = 60,
+            money = 0,
+            obj = "Bring Al'tabim the All-Seeing a Primal Hakkari Sash.  You must also have a reputation equal to or greater than Honored with the Zandalar Tribe.\n\nAl'tabim the All-Seeing is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19842
+            }
+        },
+        [8071] = {
+            name = "Paragons of Power: The Confessor's Mantle",
+            level = 60,
+            money = 0,
+            obj = "Bring Al'tabim the All-Seeing a Primal Hakkari Aegis.  You must also have a reputation equal to or greater than Revered with the Zandalar Tribe.\n\nAl'tabim the All-Seeing is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19841
+            }
+        },
+        [8072] = {
+            name = "Paragons of Power: The Madcap's Mantle",
+            level = 60,
+            money = 0,
+            obj = "Bring Falthir the Sightless a Primal Hakkari Girdle.  You must also have a reputation equal to or greater than Honored with the Zandalar Tribe.\n\nFalthir the Sightless is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19835
+            }
+        },
+        [8073] = {
+            name = "Paragons of Power: The Madcap's Tunic",
+            level = 60,
+            money = 0,
+            obj = "Bring Falthir the Sightless a Primal Hakkari Aegis.  You must also have a reputation equal to or greater than Revered with the Zandalar Tribe.\n\nFalthir the Sightless is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19834
+            }
+        },
+        [8074] = {
+            name = "Paragons of Power: The Augur's Belt",
+            level = 60,
+            money = 0,
+            obj = "Bring Maywiki of Zuldazar a Primal Hakkari Girdle.  You must also have a reputation equal to or greater than Honored with the Zandalar Tribe.\n\nMaywiki of Zuldazar is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19829
+            }
+        },
+        [8075] = {
+            name = "Paragons of Power: The Augur's Hauberk",
+            level = 60,
+            money = 0,
+            obj = "Bring Maywiki of Zuldazar a Primal Hakkari Tabard.  You must also have a reputation equal to or greater than Revered with the Zandalar Tribe.\n\nMaywiki of Zuldazar is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19828
+            }
+        },
+        [8076] = {
+            name = "Paragons of Power: The Demoniac's Mantle",
+            level = 60,
+            money = 0,
+            obj = "Bring Al'tabim the All-Seeing a Primal Hakkari Sash.  You must also have a reputation equal to or greater than Honored with the Zandalar Tribe.\n\nAl'tabim the All-Seeing is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19849
+            }
+        },
+        [8077] = {
+            name = "Paragons of Power: The Demoniac's Robes",
+            level = 60,
+            money = 0,
+            obj = "Bring Al'tabim the All-Seeing a Primal Hakkari Kossack.  You must also have a reputation equal to or greater than Revered with the Zandalar Tribe.\n\nAl'tabim the All-Seeing is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                20033
+            }
+        },
+        [8078] = {
+            name = "Paragons of Power: The Vindicator's Belt",
+            level = 60,
+            money = 0,
+            obj = "Bring Jin'rokh the Breaker a Primal Hakkari Girdle.  You must also have a reputation equal to or greater than Honored with the Zandalar Tribe.\n\nJin'rokh the Breaker is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19823
+            }
+        },
+        [8079] = {
+            name = "Paragons of Power: The Vindicator's Breastplate",
+            level = 60,
+            money = 0,
+            obj = "Bring Jin'rokh the Breaker a Primal Hakkari Kossack.  You must also have a reputation equal to or greater than Revered with the Zandalar Tribe.\n\nJin'rokh the Breaker is located on Yojamba Isle, Stranglethorn Vale.",
+            reward = {
+                19822
+            }
+        },
         [8105] = {
             name = "The Battle for Arathi Basin!",
             level = 55,
-            money = 16500,
+            money = 19950,
             obj = "Assault the mine, the lumber mill, the blacksmith and the farm, then return to Field Marshal Oslight in Refuge Pointe."
+        },
+        [8114] = {
+            name = "Control Four Bases",
+            level = 60,
+            money = 43350,
+            obj = "Enter Arathi Basin, capture and control four bases at the same time, and then return to Field Marshal Oslight at Refuge Pointe."
+        },
+        [8120] = {
+            name = "The Battle for Arathi Basin!",
+            level = 55,
+            money = 19950,
+            obj = "Assault the Arathi Basin mine, lumber mill, blacksmith and stable, and then return to Deathmaster Dwire in Hammerfall."
+        },
+        [8121] = {
+            name = "Take Four Bases",
+            level = 60,
+            money = 43350,
+            obj = "Hold four bases at the same time in Arathi Basin, and then return to Deathmaster Dwire in Hammerfall."
         },
         [8149] = {
             name = "Honoring a Hero",
@@ -71072,8 +73190,14 @@ local c = {
         [8153] = {
             name = "Courser Antlers",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Bring a pair of Perfect Courser Antlers to Ogtinc in Azshara.  Ogtinc resides atop the cliffs northeast of the Ruins of Eldarath."
+        },
+        [8154] = {
+            name = "Arathi Basin Resources!",
+            level = 45,
+            money = 19500,
+            obj = "Win the battle for Arathi Basin, get an Arathi Resource Crate, and return it to Sergeant Maclear at Refuge Pointe."
         },
         [8155] = {
             name = "Arathi Basin Resources!",
@@ -71087,11 +73211,29 @@ local c = {
             money = 11000,
             obj = "Win the battle for Arathi Basin, get an Arathi Resource Crate, and return it to Sergeant Maclear at Refuge Pointe."
         },
+        [8160] = {
+            name = "Cut Arathor Supply Lines",
+            level = 45,
+            money = 19500,
+            obj = "Win the battle for Arathi Basin, get an Arathi Resource Crate, and return it to Deathstalker Mortis at Hammerfall."
+        },
+        [8161] = {
+            name = "Cut Arathor Supply Lines",
+            level = 35,
+            money = 11000,
+            obj = "Win the battle for Arathi Basin, get an Arathi Resource Crate, and return it to Deathstalker Mortis at Hammerfall."
+        },
         [8162] = {
             name = "Cut Arathor Supply Lines",
             level = 25,
             money = 5500,
             obj = "Win the battle for Arathi Basin, get an Arathi Resource Crate, and return it to Deathstalker Mortis at Hammerfall."
+        },
+        [8166] = {
+            name = "The Battle for Arathi Basin!",
+            level = 45,
+            money = 13000,
+            obj = "Assault the mine, the lumber mill, the blacksmith and the farm, then return to Field Marshal Oslight in Refuge Pointe."
         },
         [8167] = {
             name = "The Battle for Arathi Basin!",
@@ -71136,8 +73278,19 @@ local c = {
         [8182] = {
             name = "The Hand of Rastakhan",
             level = 58,
-            money = 0,
+            money = 25575,
             obj = "Speak with Molthor in Stranglethorn."
+        },
+        [8183] = {
+            name = "The Heart of Hakkar",
+            level = 60,
+            money = 0,
+            obj = "Bring the Heart of Hakkar to Molthor on Yojamba Isle.",
+            choice = {
+                19948,
+                19950,
+                19949
+            }
         },
         [8193] = {
             name = "Master Angler",
@@ -71167,6 +73320,12 @@ local c = {
                 19969
             }
         },
+        [8227] = {
+            name = "Nat's Measuring Tape",
+            level = 60,
+            money = 0,
+            obj = "Return Nat's Measuring Tape to Nat Pagle in Dustwallow Marsh."
+        },
         [8230] = {
             name = "Collin's Test Quest",
             money = 0
@@ -71174,7 +73333,7 @@ local c = {
         [8231] = {
             name = "Wavethrashing",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Bring 6 Wavethrasher Scales to Ogtinc in Azshara.  Ogtinc resides atop the cliffs northeast the Ruins of Eldarath."
         },
         [8232] = {
@@ -71197,13 +73356,13 @@ local c = {
         [8234] = {
             name = "Sealed Azure Bag",
             level = 52,
-            money = 6000,
+            money = 12200,
             obj = "Retrieve the Sealed Azure Bag from the Timbermaw Shaman in Azshara.  Then take the bag to Archmage Xylem, also found in Azshara."
         },
         [8235] = {
             name = "Encoded Fragments",
             level = 52,
-            money = 7500,
+            money = 12700,
             obj = "Bring 10 Encoded Fragments to Archmage Xylem in Azshara."
         },
         [8236] = {
@@ -71215,6 +73374,15 @@ local c = {
                 19984,
                 20255,
                 19982
+            }
+        },
+        [8240] = {
+            name = "A Bijou for Zanza",
+            level = 60,
+            money = 18000,
+            obj = "Destroy any one of the Hakkari Bijous found in Zul'Gurub at the Altar of Zanza on Yojamba Isle.  When done, speak with Vinchaxa nearby.",
+            reward = {
+                19858
             }
         },
         [8247] = {
@@ -71243,13 +73411,13 @@ local c = {
         [8251] = {
             name = "Magic Dust",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Bring 10 Glittering Dust to Archmage Xylem."
         },
         [8252] = {
             name = "The Siren's Coral",
             level = 52,
-            money = 7500,
+            money = 12700,
             obj = "Collect 6 Enchanted Coral and return them to Archmage Xylem."
         },
         [8253] = {
@@ -71272,13 +73440,13 @@ local c = {
         [8255] = {
             name = "Of Coursers We Know",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Acquire 4 Healthy Courser Glands and bring them to Ogtinc in Azshara.  Ogtinc resides atop the cliffs northeast the Ruins of Eldarath."
         },
         [8256] = {
             name = "The Ichor of Undeath",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Acquire an Ichor of Undeath for Ogtinc in Azshara.  Ogtinc resides atop the cliffs northeast the Ruins of Eldarath."
         },
         [8257] = {
@@ -71290,6 +73458,24 @@ local c = {
                 19990,
                 20082,
                 20006
+            }
+        },
+        [8258] = {
+            name = "The Darkreaver Menace",
+            level = 60,
+            money = 0,
+            obj = "Use the Divination Scryer in the heart of the Great Ossuary's basement in the Scholomance.  Doing so will bring forth spirits you must fight.  Defeating these spirits will summon forth Death Knight Darkreaver; defeat him.\n\nBring Darkreaver's Head to Sagorne Creststrider in the Valley of Wisdom, Orgrimmar.",
+            choice = {
+                20134,
+                20133
+            }
+        },
+        [8259] = {
+            name = "A More Fitting Reward",
+            level = 60,
+            money = 0,
+            reward = {
+                20134
             }
         },
         [8260] = {
@@ -71310,6 +73496,14 @@ local c = {
                 20236
             }
         },
+        [8262] = {
+            name = "Arathor Advanced Care Package",
+            level = 60,
+            money = 0,
+            reward = {
+                20231
+            }
+        },
         [8263] = {
             name = "Defiler's Basic Care Package",
             level = 34,
@@ -71328,6 +73522,15 @@ local c = {
                 20230
             }
         },
+        [8265] = {
+            name = "Defiler's Advanced Care Package",
+            level = 60,
+            money = 0,
+            obj = "Requirements:",
+            reward = {
+                20228
+            }
+        },
         [8266] = {
             name = "Ribbons of Sacrifice",
             level = 60,
@@ -71339,6 +73542,28 @@ local c = {
             level = 60,
             money = 0,
             obj = "Requirements:"
+        },
+        [8271] = {
+            name = "Hero of the Stormpike",
+            level = 60,
+            money = 0,
+            choice = {
+                19107,
+                19106,
+                19108,
+                20648
+            }
+        },
+        [8272] = {
+            name = "Hero of the Frostwolf",
+            level = 60,
+            money = 0,
+            choice = {
+                19107,
+                19106,
+                19108,
+                20648
+            }
         },
         [8273] = {
             name = "Oran's Gratitude",
@@ -71370,7 +73595,7 @@ local c = {
         [8277] = {
             name = "Deadly Desert Venom",
             level = 55,
-            money = 8500,
+            money = 16783,
             obj = "Beetix Ficklespragg at Cenarion Hold in Silithus wants you to gather 8 Stonelash Scorpid Stingers and 8 Sand Skitterer Fangs. Return to her when you have completed the task."
         },
         [8278] = {
@@ -71383,17 +73608,36 @@ local c = {
                 13444
             }
         },
+        [8279] = {
+            name = "The Twilight Lexicon",
+            level = 60,
+            money = 29400,
+            obj = "Bring the three chapters of the Twilight Lexicon to Hermit Ortell in Silithus.  "
+        },
         [8280] = {
             name = "Securing the Supply Lines",
             level = 55,
-            money = 8500,
+            money = 16783,
             obj = "Windcaller Proudhorn at Cenarion Hold in Silithus wants you to kill 15 Dredge Strikers."
         },
         [8281] = {
             name = "Stepping Up Security",
             level = 57,
-            money = 17000,
+            money = 23188,
             obj = "Windcaller Proudhorn at Cenarion Hold in Silithus wants you to slay 20 Dredge Crushers."
+        },
+        [8282] = {
+            name = "Noggle's Lost Satchel",
+            level = 58,
+            money = 0,
+            obj = "Retrieve Noggle's Satchel from the mountains in the south of Silithus and return it to him at Cenarion Hold.",
+            choice = {
+                13452,
+                13447
+            },
+            reward = {
+                287076
+            }
         },
         [8283] = {
             name = "WANTED: Deathclasp, Terror of the Sands",
@@ -71408,14 +73652,20 @@ local c = {
         [8284] = {
             name = "The Twilight Mystery",
             level = 58,
-            money = 9000,
+            money = 21175,
             obj = "Geologist Larksbane at Cenarion Hold in Silithus wants you to collect 8 Twilight Tablet Fragments."
         },
         [8285] = {
             name = "The Deserter",
             level = 59,
-            money = 0,
+            money = 13800,
             obj = "Take the restored tablet to Hermit Ortell in Silithus.\r\n"
+        },
+        [8287] = {
+            name = "A Terrible Purpose",
+            level = 60,
+            money = 28800,
+            obj = "Take the Decoded Tablet Parchment to Commander Mar'alith."
         },
         [8290] = {
             name = "Vanquish the Invaders",
@@ -71432,7 +73682,7 @@ local c = {
         [8304] = {
             name = "Dearest Natalia",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Commander Mar'alith at Cenarion Hold in Silithus wants you to question the inhabitants of Bronzebeard's Encampment. You will find Bronzebeard's Encampment south of Cenarion Hold.\n\nOnce you have gathered the requested information, return to Commander Mar'alith."
         },
         [8306] = {
@@ -71444,6 +73694,12 @@ local c = {
                 20724
             }
         },
+        [8307] = {
+            name = "Desert Recipe",
+            level = 57,
+            money = 0,
+            obj = "Look for information about cooking Sandworm Meat at the Twilight's Hammer camp west of Cenarion Hold."
+        },
         [8308] = {
             name = "Brann Bronzebeard's Lost Letter",
             level = 60,
@@ -71452,6 +73708,18 @@ local c = {
             reward = {
                 20723
             }
+        },
+        [8309] = {
+            name = "Glyph Chasing",
+            level = 60,
+            money = 38400,
+            obj = "Rutgar Glyphshaper at Bronzebeard's Encampment in Silithus wants you to venture to Hive'Ashi, Hive'Zora, and Hive'Regal and recover Glyphed Rubbings from the Glyphed Crystals of each hive.\n\nUse the Geologist's Transcription Kit to make a reasonable facsimile of the ancient glyphs. Return to Rutgar Glyphshaper when you complete this task."
+        },
+        [8310] = {
+            name = "Breaking the Code",
+            level = 60,
+            money = 38400,
+            obj = "Frankal Stonebridge at Bronzebeard's Encampment in Silithus wants you to recover a Hive'Zora Silithid Brain, Hive'Ashi Silithid Brain, and a Hive'Regal Silithid Brain. Return to Frankal when you have completed this task."
         },
         [8311] = {
             name = "Hallow's End Treats for Jesper!",
@@ -71471,11 +73739,51 @@ local c = {
                 20557
             }
         },
+        [8313] = {
+            name = "Sharing the Knowledge",
+            level = 57,
+            money = 19469,
+            obj = "Bring the Torn Recipe Page to Calandrath at the inn in Cenarion Hold."
+        },
+        [8314] = {
+            name = "Unraveling the Mystery",
+            level = 60,
+            money = 14850,
+            obj = "Rutgar Glyphshaper at Bronzebeard's Encampment wants you to deliver the Glyphed Crystal Prism to Geologist Larksbane at the Cenarion Hold in Silithus."
+        },
+        [8315] = {
+            name = "The Calling",
+            level = 60,
+            money = 29850,
+            obj = "Geologist Larksbane at Cenarion Hold in Silithus wants you to recover the Crystal Unlocking Mechanism from the Qiraji Emissary.\n\nYou have been instructed to take the Glyphs of Calling to the Bones of Grakkarond, south of Cenarion Hold, and draw them in the sand. Should the Qiraji Emissary appear, slay it and recover the Crystal Unlocking Mechanism. Return to Geologist Larksbane if you succeed.\n\nAssemble an army for this task, Fresh!"
+        },
+        [8317] = {
+            name = "Kitchen Assistance",
+            level = 57,
+            money = 17000,
+            obj = "Calandrath at Cenarion Hold needs a batch of 10 Smoked Desert Dumplings."
+        },
         [8318] = {
             name = "Secret Communication",
             level = 60,
-            money = 18000,
+            money = 28800,
             obj = "Bring 10 Encrypted Twilight Texts to Bor Wildmane in Cenarion Hold."
+        },
+        [8320] = {
+            name = "Twilight Geolords",
+            level = 60,
+            money = 24300,
+            obj = "Kill 10 Twilight Geolords, then return to Huum Wildmane in Cenarion Hold."
+        },
+        [8321] = {
+            name = "Vyral the Vile",
+            level = 60,
+            money = 9000,
+            obj = "Bring Vyral's Signet Ring to Huum Wildmane in Cenarion Hold.",
+            choice = {
+                20650,
+                20649
+            }
         },
         [8322] = {
             name = "Rotten Eggs",
@@ -71486,8 +73794,23 @@ local c = {
         [8323] = {
             name = "True Believers",
             level = 59,
-            money = 9000,
+            money = 22713,
             obj = "Hermit Ortell wants you to bring him 10 Encrypted Twilight Texts"
+        },
+        [8331] = {
+            name = "Aurel Goldleaf",
+            level = 60,
+            money = 0,
+            obj = "Speak with Aurel Goldleaf in Cenarion Hold."
+        },
+        [8332] = {
+            name = "Dukes of the Council",
+            level = 60,
+            money = 0,
+            obj = "Bring 1 Large Brilliant Shard and 3 Abyssal Crests to Aurel Goldleaf in Cenarion Hold.",
+            reward = {
+                20422
+            }
         },
         [8365] = {
             name = "Pirate Hats Ahoy!",
@@ -71508,29 +73831,31 @@ local c = {
         [8367] = {
             name = "For Great Honor",
             level = 60,
-            money = 27000,
+            money = 38400,
             obj = "Bring 3 Alterac Valley Marks of Honor, 3 Arathi Basin Marks of Honor, 3 Warsong Gulch Marks of Honor, and 3 Darkspear Islands Marks of Honor to a Horde Warbringer outside the battlegrounds."
         },
         [8368] = {
             name = "Battle of Warsong Gulch",
             level = 19,
-            money = 1100
+            money = 1100,
+            obj = "Bring 3 Warsong Marks of Honor to a Horde Warbringer outside the battlegrounds."
         },
         [8369] = {
             name = "Invaders of Alterac Valley",
             level = 60,
-            money = 18000,
+            money = 33900,
             obj = "Bring 3 Alterac Valley Marks of Honor to a Horde Warbringer outside the battlegrounds."
         },
         [8370] = {
             name = "Conquering Arathi Basin",
             level = 29,
-            money = 2500
+            money = 2500,
+            obj = "Bring 3 Arathi Basin Mark of Honor to a Horde Warbringer outside the battlegrounds."
         },
         [8371] = {
             name = "Concerted Efforts",
             level = 60,
-            money = 27000,
+            money = 38400,
             obj = "Bring 3 Alterac Valley Marks of Honor, 3 Arathi Basin Marks of Honor, 3 Warsong Gulch Marks of Honor, and 3 Darkspear Islands Marks of Honor to an Alliance Brigadier General outside the battlegrounds."
         },
         [8372] = {
@@ -71557,7 +73882,7 @@ local c = {
         [8375] = {
             name = "Remember Alterac Valley!",
             level = 60,
-            money = 18000,
+            money = 33900,
             obj = "Bring 3 Alterac Valley Marks of Honor to an Alliance Brigadier General outside the battlegrounds."
         },
         [8393] = {
@@ -71575,13 +73900,13 @@ local c = {
         [8395] = {
             name = "Claiming Arathi Basin",
             level = 59,
-            money = 9000,
+            money = 22713,
             obj = "Bring 3 Arathi Basin Marks of Honor to an Alliance Brigadier General outside the battlegrounds."
         },
         [8396] = {
             name = "Claiming Arathi Basin",
             level = 60,
-            money = 9000,
+            money = 24300,
             obj = "Bring 3 Arathi Basin Marks of Honor to an Alliance Brigadier General outside the battlegrounds."
         },
         [8399] = {
@@ -71605,31 +73930,31 @@ local c = {
         [8402] = {
             name = "Fight for Warsong Gulch",
             level = 59,
-            money = 9000,
+            money = 22713,
             obj = "Bring 3 Warsong Gulch Marks of Honor to an Alliance Brigadier General outside the battlegrounds."
         },
         [8403] = {
             name = "Fight for Warsong Gulch",
             level = 60,
-            money = 9000,
+            money = 24300,
             obj = "Bring 3 Warsong Gulch Marks of Honor to an Alliance Brigadier General outside the battlegrounds."
         },
         [8410] = {
             name = "Elemental Mastery",
             level = 52,
-            money = 0,
+            money = 7600,
             obj = "Collect a sample of air, fire, earth and water for Bath'rah the Windwatcher."
         },
         [8411] = {
             name = "Mastering the Elements",
             level = 52,
-            money = 0,
+            money = 7600,
             obj = "Bring the elements earth, air, fire and water to Bath'rah the Windwatcher."
         },
         [8412] = {
             name = "Spirit Totem",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Bring the pieces for the spirit totem to Bath'rah the Windwatcher."
         },
         [8413] = {
@@ -71646,7 +73971,7 @@ local c = {
         [8414] = {
             name = "Dispelling Evil",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Collect 20 Minion's Scourgestones and bring them to High Priest Thel'danis in the Western Plaguelands."
         },
         [8415] = {
@@ -71682,19 +74007,19 @@ local c = {
         [8419] = {
             name = "An Imp's Request",
             level = 52,
-            money = 0,
+            money = 7600,
             obj = "Bring a piece of felcloth to Impsy in Felwood."
         },
         [8420] = {
             name = "Hot and Itchy",
             level = 52,
-            money = 0,
+            money = 7600,
             obj = "Bring a piece of felcloth to Impsy in Felwood."
         },
         [8421] = {
             name = "The Wrong Stuff",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Bring 10 Rotting Wood and 4 Bloodvenom Essence to Impsy in Felwood."
         },
         [8422] = {
@@ -71711,13 +74036,13 @@ local c = {
         [8423] = {
             name = "Warrior Kinship",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Kill 7 Helboar in the Blasted Lands and return to the Fallen Hero of the Horde."
         },
         [8424] = {
             name = "War on the Shadowsworn",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Slaughter the Shadowsworn in the Blasted Lands and return to the Fallen Hero of the Horde."
         },
         [8425] = {
@@ -71752,13 +74077,13 @@ local c = {
         [8429] = {
             name = "Battle of Warsong Gulch",
             level = 59,
-            money = 9000,
+            money = 22713,
             obj = "Bring 3 Warsong Gulch Marks of Honor to a Horde Warbringer outside the battlegrounds."
         },
         [8430] = {
             name = "Battle of Warsong Gulch",
             level = 60,
-            money = 9000,
+            money = 24300,
             obj = "Bring 3 Warsong Gulch Marks of Honor to a Horde Warbringer outside the battlegrounds."
         },
         [8436] = {
@@ -71776,14 +74101,20 @@ local c = {
         [8438] = {
             name = "Conquering Arathi Basin",
             level = 59,
-            money = 9000,
+            money = 22713,
             obj = "Bring 3 Arathi Basin Mark of Honor to a Horde Warbringer outside the battlegrounds."
         },
         [8439] = {
             name = "Conquering Arathi Basin",
             level = 60,
-            money = 9000,
+            money = 24300,
             obj = "Bring 3 Arathi Basin Mark of Honor to a Horde Warbringer outside the battlegrounds."
+        },
+        [8446] = {
+            name = "Shrouded in Nightmare",
+            level = 60,
+            money = 29850,
+            obj = "Find someone capable of deciphering the meaning behind the Nightmare Engulfed Object.\n\nPerhaps a druid of great power could assist you."
         },
         [8458] = {
             name = "<UNUSED>",
@@ -72079,12 +74410,13 @@ local c = {
             name = "Facing Negolash",
             level = 50,
             money = 0,
-            obj = "Bring 10 Barbecued Buzzard Wings and 5 bottles of Junglevine Wine to Captain Smotts' Lifeboat.\n\nKill Negolash, and bring Smotts' Cutlass to Captain Smotts in Stranglethorn.",
-            choice = {
-                4130,
-                270109,
-                270110
-            }
+            obj = "Bring 10 Barbecued Buzzard Wings and 5 bottles of Junglevine Wine to Captain Smotts' Lifeboat.\n\nKill Negolash, and bring Smotts' Cutlass to Captain Smotts in Stranglethorn."
+        },
+        [8579] = {
+            name = "Mortal Champions",
+            level = 60,
+            money = 19800,
+            obj = "Requirements:"
         },
         [8580] = {
             name = "The Horde Needs Firebloom!",
@@ -72611,6 +74943,15 @@ local c = {
                 21213
             }
         },
+        [8762] = {
+            name = "Metzen the Reindeer",
+            level = 60,
+            money = 0,
+            obj = "Find Metzen the Reindeer.  Use the notes provided to you for clues as to where he is being held.\n\nWhen you find Metzen, have the Pouch of Reindeer Dust in your possession so you can sprinkle some of the dust on him; this should free Metzen from his bonds of captivity.\n\nReturn the Pouch of Reindeer Dust to Wulmort Jinglepocket in Ironforge once Metzen is freed.",
+            reward = {
+                21213
+            }
+        },
         [8767] = {
             name = "A Gently Shaken Gift",
             level = 1,
@@ -72625,6 +74966,26 @@ local c = {
             money = 0,
             reward = {
                 21310
+            }
+        },
+        [8769] = {
+            name = "A Ticking Present",
+            level = 40,
+            money = 0,
+            reward = {
+                21327
+            }
+        },
+        [8791] = {
+            name = "The Fall of Ossirian",
+            level = 60,
+            money = 0,
+            obj = "Deliver the Head of Ossirian the Unscarred to Commander Mar'alith at Cenarion Hold in Silithus.\r\n",
+            choice = {
+                21504,
+                21507,
+                21505,
+                21506
             }
         },
         [8792] = {
@@ -72663,6 +75024,23 @@ local c = {
             money = 0,
             obj = "Speak with Field Marshal Snowfall in Ironforge's Military Ward."
         },
+        [8798] = {
+            name = "A Yeti of Your Own",
+            level = 60,
+            money = 0
+        },
+        [8800] = {
+            name = "Cenarion Battlegear",
+            level = 60,
+            money = 0,
+            obj = "Talk to Vargus at Cenarion Hold in Silithus."
+        },
+        [8801] = {
+            name = "C'Thun's Legacy",
+            level = 60,
+            money = 29850,
+            obj = "Take the Eye of C'Thun to Caelestrasz in the Temple of Ahn'Qiraj."
+        },
         [8803] = {
             name = "A Festive Gift",
             level = 10,
@@ -72688,6 +75066,15 @@ local c = {
             level = 60,
             money = 27000,
             obj = "Take the Colossus of Ashi's Husk to Oglethorpe Obnoticus in Booty Bay.\r\n",
+            reward = {
+                21528
+            }
+        },
+        [8858] = {
+            name = "Secrets of the Colossus - Regal",
+            level = 60,
+            money = 27000,
+            obj = "Take the Colossus of Regal's Husk to Overseer Oilfist in Searing Gorge.\r\n",
             reward = {
                 21528
             }
@@ -72738,6 +75125,17 @@ local c = {
             obj = "Launch 8 Lunar Fireworks and 2 Cluster Fireworks and return to a Lunar Festival Harbinger at any capital city.",
             reward = {
                 21711
+            }
+        },
+        [8868] = {
+            name = "Elune's Blessing",
+            level = 60,
+            money = 9000,
+            obj = "Summon Omen, defeat him and gain Elune's Blessing.  Return to Valadar Starsong in Nighthaven",
+            reward = {
+                21540,
+                21640,
+                7912
             }
         },
         [8870] = {
@@ -72824,11 +75222,246 @@ local c = {
             money = 0,
             obj = "Get a Guardian's Moldy Card and bring it to Fenstad Argyle in the Undercity."
         },
+        [8905] = {
+            name = "An Earnest Proposition",
+            level = 60,
+            money = 0,
+            obj = "Acquire 15 Winterspring Blood Samples and 20 gold and bring them along with a set of Wildheart Bracers to Deliana in Ironforge.",
+            reward = {
+                22108
+            }
+        },
+        [8906] = {
+            name = "An Earnest Proposition",
+            level = 60,
+            money = 0,
+            obj = "Acquire 15 Winterspring Blood Samples and 20 gold and bring them along with a set of Beaststalker's Bindings to Deliana in Ironforge.",
+            reward = {
+                22011
+            }
+        },
+        [8907] = {
+            name = "An Earnest Proposition",
+            level = 60,
+            money = 0,
+            obj = "Acquire 15 Winterspring Blood Samples and 20 gold and bring them along with a set of Magister's Bindings to Deliana in Ironforge.",
+            reward = {
+                22063
+            }
+        },
+        [8908] = {
+            name = "An Earnest Proposition",
+            level = 60,
+            money = 0,
+            obj = "Acquire 15 Winterspring Blood Samples and 20 gold and bring them along with a set of Lightforge Bracers to Deliana in Ironforge.",
+            reward = {
+                22088
+            }
+        },
+        [8909] = {
+            name = "An Earnest Proposition",
+            level = 60,
+            money = 0,
+            obj = "Acquire 15 Winterspring Blood Samples and 20 gold and bring them along with 1 set of Devout Bracers to Deliana in Ironforge.",
+            reward = {
+                22079
+            }
+        },
+        [8910] = {
+            name = "An Earnest Proposition",
+            level = 60,
+            money = 0,
+            obj = "Acquire 15 Winterspring Blood Samples and 20 gold and bring them along with a set of Shadowcraft Bracers to Deliana in Ironforge.\r\n",
+            reward = {
+                22004
+            }
+        },
+        [8911] = {
+            name = "An Earnest Proposition",
+            level = 60,
+            money = 0,
+            obj = "Acquire 15 Winterspring Blood Samples and 20 gold and bring them along with a set of Dreadmist Bracers to Deliana in Ironforge.\r\n",
+            reward = {
+                22071
+            }
+        },
+        [8912] = {
+            name = "An Earnest Proposition",
+            level = 60,
+            money = 0,
+            obj = "Acquire 15 Winterspring Blood Samples and 20 gold and bring them along with a set of Bracers of Valor to Deliana in Ironforge.",
+            reward = {
+                21996
+            }
+        },
+        [8915] = {
+            name = "An Earnest Proposition",
+            level = 60,
+            money = 0,
+            obj = "Acquire 15 Silithus Venom Samples and 20 gold and bring them along with a set of Magister's Bindings to Mokvar in Orgrimmar.\r\n",
+            reward = {
+                22063
+            }
+        },
+        [8921] = {
+            name = "The Ectoplasmic Distiller",
+            level = 60,
+            money = 0,
+            obj = "Return to Mux Manascrambler in Gadgetzan with 1 Delicate Arcanite Converter, 4 Greater Eternal Essence, 10 Stonescale Oil, 25 Volcanic Ash and 40 gold.",
+            reward = {
+                22320
+            }
+        },
         [8922] = {
             name = "A Supernatural Device",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Bring the Sealed Blood Container to Mux Manascrambler inside Gadgetzan in Tanaris."
+        },
+        [8923] = {
+            name = "A Supernatural Device",
+            level = 60,
+            money = 19800,
+            obj = "Take the Sealed Venom Container to Mux Manascrambler in Gadgetzan."
+        },
+        [8924] = {
+            name = "Hunting for Ectoplasm",
+            level = 60,
+            money = 24300,
+            obj = "Use the Ectoplasmic Distiller near incorporeal undead to collect 12 Scorched Ectoplasms in Silithus, 12 Frozen Ectoplasms in Winterspring and 12 Stable Ectoplasms in the Eastern Plaguelands.  Bring them along with the Ectoplasmic Distiller back to Mux Manascrambler in Gadgetzan."
+        },
+        [8925] = {
+            name = "A Portable Power Source",
+            level = 60,
+            money = 24300,
+            obj = "Find Magma Lord Bokk in the Burning Steppes, obtain his Magma Core and bring it to Mux Manascrambler in Gadgetzan."
+        },
+        [8928] = {
+            name = "A Shifty Merchant",
+            level = 60,
+            money = 0,
+            obj = "Search for an imp inside a cave at the entrance of Darkwhisper Gorge in southern Winterspring, purchase a Fel Elemental Rod and return to Mux Manascrambler in Gadgetzan."
+        },
+        [8929] = {
+            name = "In Search of Anthion",
+            level = 60,
+            money = 19800,
+            obj = "Use the Extra-Dimensional Ghost Revealer at the entrance to Stratholme and speak with the ghost of Anthion Harmon."
+        },
+        [8930] = {
+            name = "In Search of Anthion",
+            level = 60,
+            money = 19800,
+            obj = "Use the Extra-Dimensional Ghost Revealer at the entrance to Stratholme and speak with the ghost of Anthion Harmon."
+        },
+        [8945] = {
+            name = "Dead Man's Plea",
+            level = 60,
+            money = 0,
+            obj = "Go into Stratholme and rescue Ysida Harmon from Baron Rivendare.",
+            reward = {
+                22137
+            }
+        },
+        [8946] = {
+            name = "Proof of Life",
+            level = 60,
+            money = 19800,
+            obj = "Bring Ysida's Locket to Anthion Harmon in Eastern Plaguelands."
+        },
+        [8947] = {
+            name = "Anthion's Strange Request",
+            level = 60,
+            money = 19800,
+            obj = "Bring 3 Dark Iron Bars, 20 Enchanted Leather, 3 Mooncloth and 4 Cured Rugged Hides to Anthion Harmon in the Eastern Plaguelands."
+        },
+        [8948] = {
+            name = "Anthion's Old Friend",
+            level = 60,
+            money = 19800,
+            obj = "Take the incomplete Banner of Provocation to Falrin Treeshaper at the library in Dire Maul."
+        },
+        [8949] = {
+            name = "Falrin's Vendetta",
+            level = 60,
+            money = 0,
+            obj = "Collect 25 Ogre Warbeads from Ogres inside Dire Maul or Blackrock Spire and return to Falrin Treeshaper inside the Athenaeum in Dire Maul.",
+            choice = {
+                22150,
+                22149
+            }
+        },
+        [8950] = {
+            name = "The Instigator's Enchantment",
+            level = 60,
+            money = 19800,
+            obj = "Bring the following to Falrin Treeshaper inside Dire Maul: 1 Jeering Spectre's Essence, 4 Dark Runes and 8 Large Brilliant Shards."
+        },
+        [8960] = {
+            name = "Bodley's Unfortunate Fate",
+            level = 60,
+            money = 0,
+            obj = "Travel to Blackrock Mountain and use the Extra-Dimensional Ghost Revealer to find Bodley near Blackrock Spire."
+        },
+        [8961] = {
+            name = "Three Kings of Flame",
+            level = 60,
+            money = 19800,
+            obj = "Gather the Incendicite of Incendius, the Ember of Emberseer and the Ash of Asharell, along with a Hallowed Brazier, and return them to Bodley inside Blackrock Mountain."
+        },
+        [8962] = {
+            name = "Components of Importance",
+            level = 60,
+            money = 19800,
+            obj = "Acquire Druidical Remains and return them to Bodley inside Blackrock Mountain."
+        },
+        [8963] = {
+            name = "Components of Importance",
+            level = 60,
+            money = 19800,
+            obj = "Acquire a Starbreeze Village Relic and return it to Bodley inside Blackrock Mountain."
+        },
+        [8964] = {
+            name = "Components of Importance",
+            level = 60,
+            money = 19800,
+            obj = "Retrieve a Brilliant Sword of Zealotry and return it to Bodley inside Blackrock Mountain."
+        },
+        [8965] = {
+            name = "Components of Importance",
+            level = 60,
+            money = 19800,
+            obj = "Obtain Soul Ashes of the Banished and return them to Bodley inside Blackrock Mountain."
+        },
+        [8966] = {
+            name = "The Left Piece of Lord Valthalak's Amulet",
+            level = 60,
+            money = 24900,
+            obj = "Use the Brazier of Beckoning to summon forth the spirit of Mor Grayhoof and slay him. Return to Bodley inside Blackrock Mountain with the Left Piece of Lord Valthalak's Amulet and the Brazier of Beckoning."
+        },
+        [8967] = {
+            name = "The Left Piece of Lord Valthalak's Amulet",
+            level = 60,
+            money = 24900,
+            obj = "Use the Brazier of Beckoning to summon forth the spirit of Isalien and slay her. Return to Bodley inside Blackrock Mountain with the Left Piece of Lord Valthalak's Amulet and the Brazier of Beckoning."
+        },
+        [8968] = {
+            name = "The Left Piece of Lord Valthalak's Amulet",
+            level = 60,
+            money = 24900,
+            obj = "Use the Brazier of Beckoning to summon forth Jarien and Sothos and slay them. Return to Bodley inside Blackrock Mountain with the Left Piece of Lord Valthalak's Amulet and the Brazier of Beckoning."
+        },
+        [8969] = {
+            name = "The Left Piece of Lord Valthalak's Amulet",
+            level = 60,
+            money = 24900,
+            obj = "Use the Brazier of Beckoning to summon forth the spirit of Kormok and slay him. Return to Bodley inside Blackrock Mountain with the Left Piece of Lord Valthalak's Amulet and the Brazier of Beckoning."
+        },
+        [8970] = {
+            name = "I See Alcaz Island In Your Future...",
+            level = 60,
+            money = 19800,
+            obj = "Gather 20 Bloodkelp from the Strashaz naga and then return to Bodley inside Blackrock Mountain."
         },
         [8973] = {
             name = "REUSE",
@@ -72839,10 +75472,120 @@ local c = {
                 22133
             }
         },
+        [8977] = {
+            name = "Return to Deliana",
+            level = 60,
+            money = 19800,
+            obj = "Bring the Extra-Dimensional Ghost Revealer  to Deliana in Ironforge."
+        },
+        [8978] = {
+            name = "Return to Mokvar",
+            level = 60,
+            money = 19800,
+            obj = "Return to Mokvar in Orgrimmar with the Extra-Dimensional Ghost Revealer."
+        },
+        [8985] = {
+            name = "More Components of Importance",
+            level = 60,
+            money = 0,
+            obj = "Acquire a Starbreeze Village Relic and return it to Bodley inside Blackrock Mountain.",
+            choice = {
+                22192,
+                22193
+            }
+        },
+        [8986] = {
+            name = "More Components of Importance",
+            level = 60,
+            money = 0,
+            obj = "Acquire Druidical Remains and return them to Bodley inside Blackrock Mountain."
+        },
+        [8988] = {
+            name = "More Components of Importance",
+            level = 60,
+            money = 0,
+            obj = "Obtain Soul Ashes of the Banished and return them to Bodley inside Blackrock Mountain.",
+            choice = {
+                22192,
+                22193
+            }
+        },
+        [8989] = {
+            name = "The Right Piece of Lord Valthalak's Amulet",
+            level = 60,
+            money = 24900,
+            obj = "Use the Brazier of Beckoning to summon forth the spirit of Mor Grayhoof and slay him. Return to Bodley inside Blackrock Mountain with the recombined Lord Valthalak's Amulet and the Brazier of Beckoning."
+        },
+        [8990] = {
+            name = "The Right Piece of Lord Valthalak's Amulet",
+            level = 60,
+            money = 24900,
+            obj = "Use the Brazier of Beckoning to summon forth the spirit of Isalien and slay her. Return to Bodley inside Blackrock Mountain with the recombined Lord Valthalak's Amulet and the Brazier of Beckoning."
+        },
+        [8992] = {
+            name = "The Right Piece of Lord Valthalak's Amulet",
+            level = 60,
+            money = 24900,
+            obj = "Use the Brazier of Beckoning to summon forth the spirit of Kormok and slay him. Return to Bodley inside Blackrock Mountain with the recombined Lord Valthalak's Amulet and the Brazier of Beckoning."
+        },
+        [8994] = {
+            name = "Final Preparations",
+            level = 60,
+            money = 19800,
+            obj = "Gather 40 Blackrock Bracers and acquire a Flask of Supreme Power. Return them to Bodley inside Blackrock Mountain."
+        },
+        [8995] = {
+            name = "Mea Culpa, Lord Valthalak",
+            level = 60,
+            money = 29850,
+            obj = "Use the Brazier of Beckoning to summon Lord Valthalak. Dispatch him, and use Lord Valthalak's Amulet on the corpse. Then, return Lord Valthalak's Amulet to the Spirit of Lord Valthalak."
+        },
+        [8996] = {
+            name = "Return to Bodley",
+            level = 60,
+            money = 0,
+            obj = "Return to Bodley inside Blackrock Mountain and give him the Brazier of Beckoning.",
+            reward = {
+                22057,
+                22344
+            }
+        },
+        [8997] = {
+            name = "Back to the Beginning",
+            level = 60,
+            money = 0,
+            obj = "Speak with Deliana at The High Seat in Ironforge."
+        },
+        [8998] = {
+            name = "Back to the Beginning",
+            level = 60,
+            money = 0,
+            obj = "Speak with Mokvar at Grommash Hold in Orgrimmar's Valley of Wisdom."
+        },
+        [9015] = {
+            name = "The Challenge",
+            level = 60,
+            money = 19800,
+            obj = "Travel to the Ring of the Law in Blackrock Depths and place the Banner of Provocation in its center as you are sentenced by High Justice Grimstone.  Slay Theldren and his gladiators and return to Anthion Harmon in the Eastern Plaguelands with the first piece of Lord Valthalak's amulet."
+        },
+        [9023] = {
+            name = "The Perfect Poison",
+            level = 60,
+            money = 0,
+            obj = "Dirk Thunderwood at Cenarion Hold wants you to bring him Venoxis's Venom Sac and Kurinnaxx's Venom Sac.",
+            choice = {
+                22378,
+                22379,
+                22377,
+                22348,
+                22347,
+                22380
+            }
+        },
         [9051] = {
             name = "Toxic Test",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Stab a Devilsaur with the Devilsaur Barb. Return to Torwa Pathfinder in Un'Goro Crater when you have completed this task."
         },
         [9052] = {
@@ -72880,6 +75623,103 @@ local c = {
                 159,
                 118
             }
+        },
+        [9085] = {
+            name = "Shadows of Doom",
+            level = 60,
+            money = 0,
+            obj = "Go to a summoning circle and kill a Shadow of Doom, then return to Commander Thomas Helleran at Light's Hope Chapel in Eastern Plaguelands.",
+            choice = {
+                23123,
+                23122
+            }
+        },
+        [9120] = {
+            name = "The Fall of Kel'Thuzad",
+            level = 60,
+            money = 0,
+            obj = "Take the Phylactery of Kel'Thuzad to Light's Hope Chapel in the Eastern Plaguelands.",
+            choice = {
+                23206,
+                23207
+            }
+        },
+        [9121] = {
+            name = "The Dread Citadel - Naxxramas",
+            level = 60,
+            money = 0,
+            obj = "Archmage Angela Dosantos at Light's Hope Chapel in the Eastern Plaguelands wants 5 Arcane Crystals, 2 Nexus Crystals, 1 Righteous Orb and 60 gold pieces. You must also be Honored with the Argent Dawn.\r\n"
+        },
+        [9124] = {
+            name = "Cryptstalker Armor Doesn't Make Itself...",
+            level = 60,
+            money = 0,
+            obj = "Huntsman Leopold at Light's Hope Chapel in the Eastern Plaguelands wants 30 Crypt Fiend Parts.",
+            reward = {
+                22524
+            }
+        },
+        [9126] = {
+            name = "Bonescythe Digs",
+            level = 60,
+            money = 0,
+            obj = "Rohan the Assassin at Light's Hope Chapel in the Eastern Plaguelands wants 30 Bone Fragments.\r\n",
+            reward = {
+                22524
+            }
+        },
+        [9128] = {
+            name = "The Elemental Equation",
+            level = 60,
+            money = 0,
+            obj = "Archmage Angela Dosantos at Light's Hope Chapel in the Eastern Plaguelands wants 30 Core of Elements.\r\n",
+            reward = {
+                22523
+            }
+        },
+        [9131] = {
+            name = "Binding the Dreadnaught",
+            level = 60,
+            money = 0,
+            obj = "Korfax at Light's Hope Chapel in the Eastern Plaguelands wants 30 Dark Iron Scraps.",
+            reward = {
+                22523
+            }
+        },
+        [9136] = {
+            name = "Savage Flora",
+            level = 60,
+            money = 0,
+            obj = "Rayne at Light's Hope Chapel in the Eastern Plaguelands wants 30 Savage Fronds.",
+            choice = {
+                22524,
+                22523
+            }
+        },
+        [9141] = {
+            name = "They Call Me \"The Rooster\"",
+            level = 60,
+            money = 0,
+            obj = "Dispatch Commander Metz at Light's Hope Chapel in the Eastern Plaguelands wants an Argent Dawn Valor Token.\r\n",
+            reward = {
+                22568
+            }
+        },
+        [9153] = {
+            name = "Under the Shadow",
+            level = 60,
+            money = 0,
+            obj = "Check your map to find an area under Scourge attack. Go there and damage a necropolis by defeating the Scourge around them. Return 10 of their Necrotic Runes to Commander Thomas Helleran at Light's Hope Chapel in the Eastern Plaguelands.",
+            choice = {
+                23123,
+                23122
+            }
+        },
+        [9154] = {
+            name = "Light's Hope Chapel",
+            level = 60,
+            money = 0,
+            obj = "Deliver the Call to Arms Announcement to the Keeper of the Rolls at Light's Hope Chapel in the Eastern Plaguelands."
         },
         [9247] = {
             name = "The Keeper's Call",
@@ -72927,6 +75767,14 @@ local c = {
             money = 175,
             obj = "Collect three Dim Necrotic Stones from the Scourge outside the Undercity and investigate the glowing runic circles nearby their encampment."
         },
+        [9272] = {
+            name = "Dressing the Part",
+            level = 55,
+            money = 0,
+            reward = {
+                22746
+            }
+        },
         [9292] = {
             name = "Cracked Necrotic Crystal",
             level = 60,
@@ -72936,6 +75784,42 @@ local c = {
                 23123,
                 23122
             }
+        },
+        [9295] = {
+            name = "Letter from the Front",
+            level = 60,
+            money = 0,
+            obj = "Take the Torn Letter to the Keeper of the Rolls at Light's Hope Chapel in the Eastern Plaguelands."
+        },
+        [9299] = {
+            name = "Note from the Front",
+            level = 60,
+            money = 0,
+            obj = "Take the Careworn Note to the Keeper of the Rolls at Light's Hope Chapel in the Eastern Plaguelands."
+        },
+        [9300] = {
+            name = "Page from the Front",
+            level = 60,
+            money = 0,
+            obj = "Take the Ragged Page to the Keeper of the Rolls at Light's Hope Chapel in the Eastern Plaguelands."
+        },
+        [9301] = {
+            name = "Envelope from the Front",
+            level = 60,
+            money = 0,
+            obj = "Take the Bloodstained Envelope to the Keeper of the Rolls at Light's Hope Chapel in the Eastern Plaguelands."
+        },
+        [9302] = {
+            name = "Missive from the Front",
+            level = 60,
+            money = 0,
+            obj = "Take the Crumpled Missive to the Keeper of the Rolls at Light's Hope Chapel in the Eastern Plaguelands."
+        },
+        [9304] = {
+            name = "Document from the Front",
+            level = 60,
+            money = 0,
+            obj = "Take the Smudged Document to the Keeper of the Rolls at Light's Hope Chapel in the Eastern Plaguelands."
         },
         [9310] = {
             name = "Faint Necrotic Crystal",
@@ -72970,7 +75854,7 @@ local c = {
         [9364] = {
             name = "Fragmented Magic",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Polymorph the Spitelash of Azshara and kill the clones that appear several seconds later.  When you have slain 50 Polymorph Clones, return to Archmage Xylem in Azshara."
         },
         [9367] = {
@@ -73085,10 +75969,16 @@ local c = {
                 13444
             }
         },
+        [9664] = {
+            name = "Establishing New Outposts",
+            level = 60,
+            money = 24300,
+            obj = "Capture Crown Guard Tower, Eastwall Tower, Northpass Tower and Plaguewood Tower in the Eastern Plaguelands, then return to Emmisary Whitebeard at Light's Hope Chapel."
+        },
         [9665] = {
             name = "Bolstering Our Defenses",
             level = 60,
-            money = 9000,
+            money = 24300,
             obj = "Capture Crown Guard Tower, Eastwall Tower, Northpass Tower and Plaguewood Tower in the Eastern Plaguelands, then return to Emmisary Gormok at Light's Hope Chapel."
         },
         [60863] = {
@@ -73307,7 +76197,11 @@ local c = {
         [78150] = {
             name = "Friend of the Library",
             level = 20,
-            money = 125
+            money = 125,
+            choice = {
+                277203,
+                277204
+            }
         },
         [78261] = {
             name = "The Horn of Xelthos",
@@ -73715,17 +76609,69 @@ local c = {
             money = 3500,
             obj = "Find what awaits you."
         },
+        [80241] = {
+            name = "The Origins of Smithing",
+            level = 40,
+            money = 0,
+            obj = "Bring six Golden Scale Bracers to Hank the Hammer in Stormwind.",
+            reward = {
+                217274
+            }
+        },
+        [80324] = {
+            name = "The Mad King",
+            level = 40,
+            money = 0,
+            obj = "Bring Thermaplugg's Engineering Notes to High Tinker Mekkatorque at Tinker Town in Ironforge."
+        },
+        [80325] = {
+            name = "The Mad King",
+            level = 40,
+            money = 0,
+            obj = "Bring Thermaplugg's Engineering Notes to Nogg at the Valley of Honor in Orgrimmar."
+        },
         [80411] = {
             name = "The Talisman of Kazdor",
             level = 50,
-            money = 7500,
+            money = 10413,
             obj = "Find The Talisman of Kazdor inside of Zul'Farrak. Then, bring it to Fahrad at Ravenholdt Manor. You must complete the job alone."
+        },
+        [80453] = {
+            name = "Best Laid Plans",
+            level = 50,
+            money = 0,
+            obj = "Bring the Talisman of Kazdor to Zan Shivsprocket in the basement of Ravenholdt Manor."
+        },
+        [80454] = {
+            name = "One Last Drop",
+            level = 50,
+            money = 8225,
+            obj = "Take the Modified Talisman to Caius' dead drop near Pyrewood Village."
+        },
+        [80455] = {
+            name = "Biding Our Time",
+            level = 50,
+            money = 14500,
+            obj = "Report back to Fahrad at Ravenholdt Manor.",
+            reward = {
+                219343
+            }
         },
         [80526] = {
             name = "Fool Me Twice",
             level = 50,
             money = 0,
             obj = "Speak to Fahrad when you're ready to hear his plan."
+        },
+        [81570] = {
+            name = "Jarl Needs a Blade",
+            level = 35,
+            money = 3500,
+            obj = "Bring a Moonsteel Broadsword to Jarl in Dustwallow Marsh.",
+            reward = {
+                9622,
+                5016
+            }
         },
         [81730] = {
             name = "Duskwood Mission I: Defeat Worgen",
@@ -73844,20 +76790,140 @@ local c = {
         [81764] = {
             name = "The Mysterious Merchant",
             level = 50,
-            money = 0,
+            money = 8225,
             obj = "Travel to Theramore and find the mysterious merchant."
+        },
+        [81765] = {
+            name = "Elrick, Paladin of the Silver Hand",
+            level = 50,
+            money = 10325,
+            obj = "Speak with Elrick to learn more."
         },
         [81766] = {
             name = "The Bloody Missive",
             level = 50,
-            money = 7500,
+            money = 10413,
             obj = "Bring the missive to Katherine the Pure at the Cathedral of Light in Stormwind."
+        },
+        [81768] = {
+            name = "Ashenvale Mission I: Defeat Satyrs",
+            level = 42,
+            money = 4400,
+            obj = "Defeat 10 Dreamfire Betrayers and 10 Dreamfire Hellcallers in the Ashenvale Nightmare Incursion in Satyrnaar and return to Field Captain Hannalah."
+        },
+        [81769] = {
+            name = "Ashenvale Mission II: Defeat Treants",
+            level = 42,
+            money = 4400,
+            obj = "Defeat 7 Vengeful Ancients in the Ashenvale Nightmare Incursion at the Warsong Lumber Camp and return to Field Captain Hannalah."
+        },
+        [81770] = {
+            name = "Ashenvale Mission III: Defeat Dragonkin",
+            level = 42,
+            money = 4400,
+            obj = "Defeat 3 Wyrmkin Nightstalkers and 10 Terror Whelps in the Ashenvale Nightmare Incursion in Forest Song and return to Field Captain Hannalah."
+        },
+        [81771] = {
+            name = "Ashenvale Mission IV: Dragon Intelligence",
+            level = 42,
+            money = 4400,
+            obj = "Gather intelligence from Dreamwarden Ellodar in the Ashenvale Nightmare Incursion in Forest Song on the bridge to the ancient tower and return to Field Captain Hannalah."
+        },
+        [81772] = {
+            name = "Ashenvale Mission V: Satyr Intelligence",
+            level = 42,
+            money = 4400,
+            obj = "Gather intelligence from Dreamwarden Mandoran in the Ashenvale Nightmare Incursion at the ritual circle in Satyrnaar and return to Field Captain Hannalah."
+        },
+        [81773] = {
+            name = "Ashenvale Mission VI: Treant Intelligence",
+            level = 42,
+            money = 4400,
+            obj = "Gather intelligence from Dreamwarden Lanaria in the Ashenvale Nightmare Incursion inside Kargathia Keep at the Warsong Lumber Camp and return to Field Captain Hannalah."
+        },
+        [81774] = {
+            name = "Ashenvale Mission VII: Recover Dreamengine",
+            level = 42,
+            money = 4400,
+            obj = "Recover the Dreamengine in the Ashenvale Nightmare Incursion from the forge at Warsong Lumber Camp and return to Field Captain Hannalah."
+        },
+        [81775] = {
+            name = "Ashenvale Mission VIII: Recover Azsharan Prophecy",
+            level = 42,
+            money = 4400,
+            obj = "Recover the Azsharan Prophecy in the Ashenvale Nightmare Incursion from the small tent in Satyrnaar and return to Field Captain Hannalah."
+        },
+        [81776] = {
+            name = "Ashenvale Mission IX: Recover Dream-Touched Dragonegg",
+            level = 42,
+            money = 4400,
+            obj = "Recover a Dream-Touched Dragonegg in the Ashenvale Nightmare Incursion from the central ruin in Forest Song and return to Field Captain Hannalah."
+        },
+        [81777] = {
+            name = "Ashenvale Mission X: Dreamroot",
+            level = 42,
+            money = 4400,
+            obj = "Gather 10 Dreamroot in the Ashenvale Nightmare Incursions and return to Field Captain Hannalah."
+        },
+        [81778] = {
+            name = "Ashenvale Mission XI: Fool's Gold Dust",
+            level = 42,
+            money = 4400,
+            obj = "Gather 10 Fool's Gold Dust in the Ashenvale Nightmare Incursions and return to Field Captain Hannalah."
+        },
+        [81779] = {
+            name = "Ashenvale Mission XII: Dream-Infused Dragonscale",
+            level = 42,
+            money = 4400,
+            obj = "Gather 10 Dream-Infused Dragonscale in the Ashenvale Nightmare Incursions and return to Field Captain Hannalah."
+        },
+        [81780] = {
+            name = "Ashenvale Mission XIII: Defeat Larsera",
+            level = 42,
+            money = 6600,
+            obj = "Defeat Larsera in the Ashenvale Nightmare Incursion outside the central ruin in Forest Song and return to Field Captain Hannalah."
+        },
+        [81781] = {
+            name = "Ashenvale Mission XIV: Defeat Zalius",
+            level = 42,
+            money = 4400,
+            obj = "Defeat Zalius in the Ashenvale Nightmare Incursion at the base of the ziggurat in Satyrnaar and return to Field Captain Hannalah."
+        },
+        [81782] = {
+            name = "Ashenvale Mission XV: Defeat Shredder 9000",
+            level = 42,
+            money = 4400,
+            obj = "Defeat Shredder 9000 in the Ashenvale Nightmare Incursion near the lumber cranes in Warsong Lumber Camp and return to Field Captain Hannalah."
+        },
+        [81783] = {
+            name = "Ashenvale Mission XVI: Rescue Alyssian Windcaller",
+            level = 42,
+            money = 4400,
+            obj = "Rescue Alyssian Windcaller from the Ashenvale Nightmare Incursion at the base of the watch tower in the Warsong Lumber Camp and return to Field Captain Hannalah."
+        },
+        [81784] = {
+            name = "Ashenvale Mission XVII: Rescue Doran Dreambough",
+            level = 42,
+            money = 4400,
+            obj = "Rescue Doran Dreambough from the Ashenvale Nightmare Incursion at the moonlit gazebo in Forest Song and return to Field Captain Hannalah."
+        },
+        [81785] = {
+            name = "Ashenvale Mission XVIII: Rescue Maseara Autumnmoon",
+            level = 42,
+            money = 4400,
+            obj = "Rescue Maseara Autumnmoon from the Ashenvale Nightmare Incursion at the southeast tent cluster in Satyrnaar and return to Field Captain Hannalah."
         },
         [81790] = {
             name = "Materials of Significance",
             level = 53,
-            money = 16000,
+            money = 16752,
             obj = "Use the hints in Gregory's Note to determine where to find the magical components needed for the ritual. You will need help from allies for this."
+        },
+        [81885] = {
+            name = "The Ritual",
+            level = 53,
+            money = 13919,
+            obj = "Speak with Gregory to begin the ritual."
         },
         [81900] = {
             name = "The Burning Beast",
@@ -73868,7 +76934,7 @@ local c = {
         [81917] = {
             name = "Chains That Bind",
             level = 54,
-            money = 8000,
+            money = 15263,
             obj = "Bring 5 infernal chain links to Bloodmage Lynnore in the Blasted Lands"
         },
         [81919] = {
@@ -73959,6 +77025,12 @@ local c = {
                 221344
             }
         },
+        [82135] = {
+            name = "The Price of Hope",
+            level = 53,
+            money = 16000,
+            obj = "Bring the Mannoroc Echoing Orb to Katherine the Pure in Stormwind."
+        },
         [82208] = {
             name = "Greater Friend of the Library",
             level = 45,
@@ -73969,11 +77041,44 @@ local c = {
                 277260
             }
         },
+        [82656] = {
+            name = "Wild Leather Vest",
+            level = 45,
+            money = 0,
+            obj = "Bring 2 Turtle Scale Breastplates, 2 Turtle Scale Gloves, and a Wildvine to Jangdor Swiftstrider in Camp Mojache.",
+            reward = {
+                8404
+            }
+        },
         [83934] = {
             name = "Show Me the Money!",
             level = 60,
-            money = 0,
+            money = 24900,
             obj = "Bring a Tarnished Undermine Real to Pix Xizzix in Booty Bay."
+        },
+        [84135] = {
+            name = "Beach Bot",
+            level = 60,
+            money = 0,
+            obj = "Use a rock or something to dislodge parts of the mech."
+        },
+        [84137] = {
+            name = "Mechanical Romance",
+            level = 60,
+            money = 14850,
+            obj = "Find a use for the Guided Buoyancy Accelerant"
+        },
+        [84138] = {
+            name = "Frosty Favors",
+            level = 60,
+            money = 14850,
+            obj = "Explain the book situation to Doctor Jurgens' colleague, Nami, in Winterspring."
+        },
+        [84146] = {
+            name = "Red Bag Blues",
+            level = 60,
+            money = 9000,
+            obj = "Locate the Red Bag that Nami in Everlook lost in a zeppelin mishap over Burning Steppes."
         },
         [84147] = {
             name = "An Earnest Proposition",
@@ -74035,6 +77140,15 @@ local c = {
                 226830
             }
         },
+        [84153] = {
+            name = "An Earnest Proposition",
+            level = 60,
+            money = 0,
+            obj = "Acquire 15 Winterspring Blood Samples and 20 gold and bring them along with a set of Dreadmist Bracers to Deliana in Ironforge.\r\n",
+            reward = {
+                226907
+            }
+        },
         [84154] = {
             name = "An Earnest Proposition",
             level = 60,
@@ -74064,6 +77178,15 @@ local c = {
             obj = "Acquire 15 Silithus Venom Samples and 20 gold and bring them along with a set of Beaststalker's Bindings to Mokvar in Orgrimmar.",
             reward = {
                 226885
+            }
+        },
+        [84157] = {
+            name = "An Earnest Proposition",
+            level = 60,
+            money = 0,
+            obj = "Acquire 15 Silithus Venom Samples and 20 gold and bring them along with a set of Magister's Bindings to Mokvar in Orgrimmar.\r\n",
+            reward = {
+                226929
             }
         },
         [84158] = {
@@ -74115,23 +77238,394 @@ local c = {
                 226865
             }
         },
+        [84163] = {
+            name = "Just Compensation",
+            level = 60,
+            money = 0,
+            obj = "Bring a Wildheart Belt and a set of Wildheart Gloves Deliana in Ironforge.",
+            choice = {
+                227337,
+                227338,
+                227339,
+                227340
+            }
+        },
+        [84164] = {
+            name = "Just Compensation",
+            level = 60,
+            money = 0,
+            obj = "Bring a Beaststalker's Belt and a set of Beaststalker's Gloves to Deliana in Ironforge.",
+            reward = {
+                226883,
+                226888
+            }
+        },
+        [84165] = {
+            name = "Just Compensation",
+            level = 60,
+            money = 0,
+            obj = "Bring a Magister's Belt and a set of Magister's Gloves to Deliana in Ironforge.\r\n",
+            reward = {
+                226934,
+                226930
+            }
+        },
+        [84166] = {
+            name = "Just Compensation",
+            level = 60,
+            money = 0,
+            obj = "Bring a Lightforge Belt and a set of Lightforge Gauntlets to Deliana in Ironforge.\r\n",
+            choice = {
+                227343,
+                227344,
+                227345
+            }
+        },
+        [84167] = {
+            name = "Just Compensation",
+            level = 60,
+            money = 0,
+            obj = "Bring a Devout Belt and a set of Devout Gloves to Deliana in Ironforge.",
+            choice = {
+                227346,
+                227347
+            }
+        },
+        [84168] = {
+            name = "Just Compensation",
+            level = 60,
+            money = 0,
+            obj = "Bring a Shadowcraft Belt and a set of Shadowcraft Gloves to Deliana in Ironforge.",
+            reward = {
+                226828,
+                226832
+            }
+        },
+        [84169] = {
+            name = "Just Compensation",
+            level = 60,
+            money = 0,
+            obj = "Bring a Dreadmist Belt and a set of Dreadmist Wraps to Deliana in Ironforge.",
+            reward = {
+                226911,
+                226905
+            }
+        },
+        [84170] = {
+            name = "Just Compensation",
+            level = 60,
+            money = 0,
+            obj = "Bring a Belt of Valor and a set of Gauntlets of Valor to Deliana in Ironforge.",
+            choice = {
+                227356,
+                227357
+            }
+        },
+        [84171] = {
+            name = "Just Compensation",
+            level = 60,
+            money = 0,
+            obj = "Bring a Wildheart Belt and a set of Wildheart Gloves to Mokvar in Orgrimmar.",
+            choice = {
+                227337,
+                227338,
+                227339,
+                227340
+            }
+        },
+        [84172] = {
+            name = "Just Compensation",
+            level = 60,
+            money = 0,
+            obj = "Bring a Beaststalker's Belt and a set of Beaststalker's Gloves to Mokvar in Orgrimmar.",
+            reward = {
+                226883,
+                226888
+            }
+        },
+        [84173] = {
+            name = "Just Compensation",
+            level = 60,
+            money = 0,
+            obj = "Bring a Magister's Belt and a set of Magister's Gloves to Mokvar in Orgrimmar.",
+            reward = {
+                226934,
+                226930
+            }
+        },
+        [84174] = {
+            name = "Just Compensation",
+            level = 60,
+            money = 0,
+            obj = "Bring a Devout Belt and a set of Devout Gloves to Mokvar in Orgrimmar.",
+            choice = {
+                227346,
+                227347
+            }
+        },
+        [84175] = {
+            name = "Just Compensation",
+            level = 60,
+            money = 0,
+            obj = "Bring a Shadowcraft Belt and a set of Shadowcraft Gloves to Mokvar in Orgrimmar.",
+            reward = {
+                226828,
+                226832
+            }
+        },
+        [84176] = {
+            name = "Just Compensation",
+            level = 60,
+            money = 0,
+            obj = "Bring a Cord of the Elements and a set of Gauntlets of the Elements to Mokvar in Orgrimmar.\r\n",
+            choice = {
+                227350,
+                227351,
+                227352
+            }
+        },
+        [84177] = {
+            name = "Just Compensation",
+            level = 60,
+            money = 0,
+            obj = "Bring a Dreadmist Belt and a set of Dreadmist Wraps to Mokvar in Orgrimmar.\r\n",
+            reward = {
+                226911,
+                226905
+            }
+        },
+        [84178] = {
+            name = "Just Compensation",
+            level = 60,
+            money = 0,
+            obj = "Bring a Belt of Valor and a set of Gauntlets of Valor to Mokvar in Orgrimmar.\r\n",
+            choice = {
+                227356,
+                227357
+            }
+        },
+        [84179] = {
+            name = "Anthion's Parting Words",
+            level = 60,
+            money = 0,
+            obj = "Return to Deliana in Ironforge with a set of Wildheart Boots, a Wildheart Kilt and Wildheart Spaulders.",
+            choice = {
+                227359,
+                227360,
+                227361,
+                227365
+            }
+        },
+        [84180] = {
+            name = "Anthion's Parting Words",
+            level = 60,
+            money = 0,
+            obj = "Return to Deliana in Ironforge with a set of Beaststalker's Boots, Beaststalker's Pants and Beaststalker's Mantle.",
+            reward = {
+                226881,
+                226882,
+                226884
+            }
+        },
+        [84181] = {
+            name = "Anthion's Parting Words",
+            level = 60,
+            money = 0,
+            obj = "Return to Deliana in Ironforge with a set of Magister's Boots, Magister's Leggings and Magister's Mantle.",
+            reward = {
+                226931,
+                226933,
+                226936
+            }
+        },
+        [84182] = {
+            name = "Anthion's Parting Words",
+            level = 60,
+            money = 0,
+            obj = "Return to Deliana in Ironforge with a set of Lightforge Boots, Lightforge Legplates and Lightforge Spaulders.",
+            choice = {
+                227368,
+                227369,
+                227370
+            }
+        },
+        [84184] = {
+            name = "Anthion's Parting Words",
+            level = 60,
+            money = 0,
+            obj = "Return to Deliana in Ironforge with a set of Shadowcraft Boots, Shadowcraft Pants and Shadowcraft Spaulders.",
+            reward = {
+                226831,
+                226827,
+                226826
+            }
+        },
+        [84186] = {
+            name = "Anthion's Parting Words",
+            level = 60,
+            money = 0,
+            obj = "Return to Deliana in Ironforge with a set of Boots of Valor, Legplates of Valor and Spaulders of Valor.",
+            choice = {
+                227381,
+                227382
+            }
+        },
+        [84187] = {
+            name = "Anthion's Parting Words",
+            level = 60,
+            money = 0,
+            obj = "Return to Mokvar in Orgimmar with a set of Wildheart Boots, a Wildheart Kilt and Wildheart Spaulders.\r\n",
+            choice = {
+                227359,
+                227360,
+                227361,
+                227365
+            }
+        },
+        [84188] = {
+            name = "Anthion's Parting Words",
+            level = 60,
+            money = 0,
+            obj = "Return to Mokvar in Orgimmar with a set of Beaststalker's Boots, Beaststalker's Pants and Beaststalker's Mantle.",
+            reward = {
+                226881,
+                226882,
+                226884
+            }
+        },
+        [84190] = {
+            name = "Anthion's Parting Words",
+            level = 60,
+            money = 0,
+            obj = "Return to Mokvar in Orgimmar with a set of Devout Sandals, Devout Skirt and Devout Mantle.",
+            choice = {
+                227371,
+                227372
+            }
+        },
+        [84191] = {
+            name = "Anthion's Parting Words",
+            level = 60,
+            money = 0,
+            obj = "Return to Mokvar in Orgimmar with a set of  Shadowcraft Boots, Shadowcraft Pants and Shadowcraft Spaulders.",
+            reward = {
+                226831,
+                226827,
+                226826
+            }
+        },
+        [84192] = {
+            name = "Anthion's Parting Words",
+            level = 60,
+            money = 0,
+            obj = "Return to Mokvar in Orgimmar with a set of Boots of Elements, Kilt of Elements and Pauldrons of Elements.",
+            choice = {
+                227375,
+                227376,
+                227377
+            }
+        },
+        [84193] = {
+            name = "Anthion's Parting Words",
+            level = 60,
+            money = 0,
+            obj = "Return to Mokvar in Orgimmar with a set of Dreadmist Sandals, Dreadmist Leggings and Dreadmist Mantle.",
+            reward = {
+                226908,
+                226910,
+                226912
+            }
+        },
+        [84194] = {
+            name = "Anthion's Parting Words",
+            level = 60,
+            money = 0,
+            obj = "Return to Mokvar in Orgimmar with a set of Boots of Valor, Legplates of Valor and Spaulders of Valor.",
+            choice = {
+                227381,
+                227382
+            }
+        },
+        [84196] = {
+            name = "Saving the Best for Last",
+            level = 60,
+            money = 0,
+            obj = "Give Deliana your Beaststalker's Cap and Beaststalker's Tunic.",
+            reward = {
+                226887,
+                226886
+            }
+        },
+        [84208] = {
+            name = "Saving the Best for Last",
+            level = 60,
+            money = 0,
+            obj = "Give Mokvar your Coif of Elements and Vest of Elements.",
+            choice = {
+                227397,
+                227398,
+                227399
+            }
+        },
+        [84210] = {
+            name = "Saving the Best for Last",
+            level = 60,
+            money = 0,
+            obj = "Give Mokvar your Helm of Valor and Breastplate of Valor.",
+            choice = {
+                227403,
+                227404
+            }
+        },
+        [84211] = {
+            name = "Poacher's Den",
+            level = 60,
+            money = 9000,
+            obj = "Recover the rest of the materials and return to Nami in Everlook."
+        },
+        [84212] = {
+            name = "Bookin' it Back",
+            level = 60,
+            money = 24300,
+            obj = "Return to the D.E.L.T.A lab with the book Jurgens was looking for."
+        },
+        [84213] = {
+            name = "Rift Away",
+            level = 62,
+            money = 0,
+            obj = "Use the Distant Communication Device to send the signal to Jurgens at either Tirisfal Glades or Westfall\r\nThen, assist him in demonstrating the capabilities of his elecro transmitter."
+        },
         [84318] = {
             name = "Oi!",
             level = 57,
-            money = 0,
+            money = 15750,
             obj = "Find Orthas' missing hammer in Corrin's Crossing."
         },
         [84319] = {
             name = "Oh No Ye Don't!",
             level = 58,
-            money = 0,
+            money = 17050,
             obj = "Orthas needs you to recover his missing armor from the corpse of an Abomination somewhere in Plaguewood."
         },
         [84330] = {
             name = "A Wee Bit O' Necromancy",
             level = 59,
-            money = 0,
+            money = 23144,
             obj = "Obtain a Necrotic Runestone from Maleki the Pallid in Stratholme, then find the Rotting Dwarf Corpse near the Undercroft in southwestern Eastern Plaguelands."
+        },
+        [84332] = {
+            name = "A Thane's Gratitude",
+            level = 59,
+            money = 0,
+            choice = {
+                227935
+            }
+        },
+        [84377] = {
+            name = "End of the Dark Horde",
+            level = 60,
+            money = 43350,
+            obj = "Take the Head of Rend Blackhand to Master Mathias Shaw in Stormwind."
         },
         [84394] = {
             name = "Greater Friend of the Library",
@@ -74191,6 +77685,27 @@ local c = {
             money = 900,
             obj = "Requirements:"
         },
+        [84414] = {
+            name = "Send Me On Me Way",
+            level = 59,
+            money = 0,
+            obj = "Observe Orthas as he moves on from this world."
+        },
+        [84549] = {
+            name = "The Arcanist's Cookbook",
+            level = 60,
+            money = 0,
+            obj = "Return the book to its rightful owners.",
+            reward = {
+                228466
+            }
+        },
+        [85713] = {
+            name = "The Art of the Armorsmith",
+            level = 40,
+            money = 0,
+            obj = "To become an Armorsmith, you must make the following items and return them to Grumnus: 4 Ornate Mithril Helms, 2 Ornate Mithril Boots, 1 Ornate Mithril Breastplate."
+        },
         [86574] = {
             name = "Stonetalon Supply Run",
             level = 24,
@@ -74212,7 +77727,7 @@ local c = {
         [86577] = {
             name = "A Sampling of Putrescence",
             level = 55,
-            money = 8500,
+            money = 16783,
             obj = "Bring 8 Putrescent Bear Organs and 10 Putrescent Wolf Organs to Kelek Skykeeper."
         },
         [86585] = {
@@ -74261,13 +77776,13 @@ local c = {
         [86616] = {
             name = "Repurposed Totems",
             level = 48,
-            money = 7000,
+            money = 8350,
             obj = "Bring 12 Vilebranch Totems back to Maret Firetend."
         },
         [86620] = {
             name = "Fledgling Rescue",
             level = 51,
-            money = 7500,
+            money = 11531,
             obj = "Collect 6 Lost Gryphon Eggs for Gryphon Master Talonaxe."
         },
         [86667] = {
@@ -74279,7 +77794,7 @@ local c = {
         [86746] = {
             name = "The Legashi Threat",
             level = 53,
-            money = 8000,
+            money = 13990,
             obj = "Kill 5 Legashi Satyr, 5 Legashi Rogues, and 5 Legashi Hellcallers for Ekkal at the Ruins of Eldarth."
         },
         [86752] = {
@@ -74341,13 +77856,13 @@ local c = {
         [86792] = {
             name = "Thinning Their Forces",
             level = 54,
-            money = 4000,
+            money = 13763,
             obj = "Kill 6 Legashi Hellraisers, 4 Legashi Soulstealers, and 2 Legashi Blackguards for Korsa outside Legashi Stronghold."
         },
         [86796] = {
             name = "Later, Satyr",
             level = 54,
-            money = 6000,
+            money = 14513,
             obj = "Help Graal break out of Legashi Stronghold, then inform Korsa outside Legashi Stronghold."
         },
         [86797] = {
@@ -74371,7 +77886,7 @@ local c = {
         [86804] = {
             name = "An Unlikely Source",
             level = 53,
-            money = 0,
+            money = 8394,
             obj = "Find a way to get Legashi Firewater in the Legashi Encampment."
         },
         [86812] = {
@@ -74408,13 +77923,13 @@ local c = {
         [86925] = {
             name = "Toil and Trouble",
             level = 53,
-            money = 0,
+            money = 11156,
             obj = "Find a Legashi Firewater Recipe from satyr in the Legashi Encampment."
         },
         [86926] = {
             name = "Felfire Burn, Cauldron Bubble",
             level = 53,
-            money = 0,
+            money = 11156,
             obj = "Bring 5 Satyrweed and a Fel Mote to the Legashi Cauldron in the Legashi Encampment."
         },
         [86927] = {
@@ -74438,13 +77953,13 @@ local c = {
         [87295] = {
             name = "Deflective Surface",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Bring 10 Redstone Basilisk Scales to Bernie Heisten."
         },
         [87346] = {
             name = "Chieftain Bloodmaw",
             level = 55,
-            money = 0,
+            money = 13419,
             obj = "Kill Chieftain Bloodmaw and bring his mace to Gorn One Eye in Timbermaw Hold."
         },
         [87451] = {
@@ -74466,7 +77981,7 @@ local c = {
         [87492] = {
             name = "Uncanny Crystal",
             level = 55,
-            money = 8500,
+            money = 16783,
             obj = "Bring 1 Damaged Blue Crystal back to Torwa Pathfinder."
         },
         [87494] = {
@@ -74501,19 +78016,19 @@ local c = {
         [88807] = {
             name = "Slay the Spitelash",
             level = 48,
-            money = 7000,
+            money = 8350,
             obj = "Kill 8 Spitelash Warriors and 8 Spitelash Screamers for Commander Truesong in Azshara."
         },
         [88809] = {
             name = "Preserving Eldarath",
             level = 52,
-            money = 7500,
+            money = 12700,
             obj = "Collect 12 Eldarath Relics from Spitelash Serpent Guards, Spitelash Sirens, and Spitelash Myrmidons, and Lord Sarthiss' Head for Commander Truesong in Azshara."
         },
         [88812] = {
             name = "Reclaiming Ravencrest",
             level = 55,
-            money = 8500,
+            money = 16783,
             obj = "Kill 5 Spitelash Battlemasters, 5 Spitelash Enchantresses, and nullify the 3 Naga Power Stones near Ravencrest Monument for Commander Truesong in Azshara."
         },
         [88813] = {
@@ -74541,19 +78056,19 @@ local c = {
         [88884] = {
             name = "Highborne Tablets",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Find the three highborne tablets among the ruins of Southridge Beach, then bring them to Saria Fairmoon in Azshara."
         },
         [88917] = {
             name = "Slithering Looters",
             level = 52,
-            money = 0,
+            money = 10200,
             obj = "Find the Staff of Archmage Selwyn among the Ruins of Eldarath, and bring it to Saria Fairmoon in Azshara."
         },
         [89001] = {
             name = "Home on the Range",
             level = 48,
-            money = 0,
+            money = 6600,
             obj = "Bring 5 Mosshoof Hides to Berdun Cliffbrew at Talrendis Point in Azshara."
         },
         [89013] = {
@@ -74592,7 +78107,7 @@ local c = {
         [89038] = {
             name = "A Monumental Task",
             level = 55,
-            money = 4000,
+            money = 15002,
             obj = "Search for the Mark of the Queen among the ruins of the Ravencrest Monument, and bring it to Saria Fairmoon in Azshara."
         },
         [89053] = {
@@ -74609,7 +78124,7 @@ local c = {
         [89228] = {
             name = "Winter Frontier Fishery",
             level = 48,
-            money = 7000,
+            money = 8350,
             obj = "Fish up 10 Winter Squid for Berdun Cliffbrew at Talrendis Point, in Azshara."
         },
         [89470] = {
@@ -74627,13 +78142,13 @@ local c = {
         [90647] = {
             name = "The Staff of the Mountain",
             level = 57,
-            money = 4500,
+            money = 17719,
             obj = "Bring the Staff of the Mountain to Tiala Whitemane at the Summit of Eternity."
         },
         [90702] = {
             name = "Disturbed Grave",
             level = 58,
-            money = 6500,
+            money = 20029,
             obj = "Search the area for the grave's missing contents."
         },
         [90750] = {
@@ -74645,7 +78160,7 @@ local c = {
         [90789] = {
             name = "Scalebeard",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Retrieve the Prismatic Shell for Archmage Xylem.  The Archmage resides in a tower atop the cliffs of Azshara."
         },
         [90813] = {
@@ -74657,10 +78172,24 @@ local c = {
                 243299
             }
         },
+        [90854] = {
+            name = "Leather for Inclement Weather",
+            level = 57,
+            money = 0,
+            obj = "Bring 2 Rugged Armor Kits and 1 Cured Rugged Hide to Zet'gan in Elderwild on Mount Hyjal.",
+            choice = {
+                274719,
+                274720
+            },
+            reward = {
+                252877,
+                252933
+            }
+        },
         [90865] = {
             name = "Eyes of the Watchers",
             level = 58,
-            money = 0,
+            money = 17050,
             obj = "Retrieve 8 Watcher's Eyes for Eluneth."
         },
         [90902] = {
@@ -74721,19 +78250,19 @@ local c = {
         [91488] = {
             name = "Home on the Range",
             level = 48,
-            money = 0,
+            money = 6600,
             obj = "Bring 5 Mosshoof Hides to Kurll at Valormok in Azshara."
         },
         [91497] = {
             name = "Seals of the Sin'dorei",
             level = 53,
-            money = 0,
+            money = 11156,
             obj = "Bring the Seal of the Warden, Seal of the Warrior, and Seal of the Ranger to the Sin'dorei Tome of Summoning."
         },
         [91500] = {
             name = "An Explosive Gambit",
             level = 55,
-            money = 0,
+            money = 9975,
             obj = "Break the Seals of the Sin'dorei, then bring Magus Rimtori's head to Ag'tor Bloodfist in Valormok."
         },
         [91531] = {
@@ -74770,16 +78299,26 @@ local c = {
                 260196
             }
         },
+        [91564] = {
+            name = "Itching for a Fixing",
+            level = 57,
+            money = 0,
+            obj = "Bring 2 Mithril Casings and 1 Mechanical Repair Kit to Hnaz Blunderflame.",
+            reward = {
+                15993,
+                264233
+            }
+        },
         [91568] = {
             name = "Long Walks on the Beach",
             level = 51,
-            money = 1900,
+            money = 9781,
             obj = "Dig up 10 Highborne Treasure Fragments with the Treasure Trowel 3000 for Izvi Glidfizz in Valormok."
         },
         [91569] = {
             name = "Blue Gold",
             level = 53,
-            money = 0,
+            money = 8394,
             obj = "Bring a Mana-Siphoning Wand to Izvi Gildfizz at Valormok."
         },
         [91607] = {
@@ -74857,7 +78396,7 @@ local c = {
         [91698] = {
             name = "Barkskin Breakout",
             level = 58,
-            money = 0,
+            money = 12788,
             obj = "Recover a Deadwood Key from a Deadwood Warden and return to the Barkskin Cage."
         },
         [91723] = {
@@ -74976,7 +78515,7 @@ local c = {
         [91755] = {
             name = "Leaves to Ligatures",
             level = 56,
-            money = 4000,
+            money = 16167,
             obj = "Collect 12 Verdant Leaves from Tainted Shrubbery in the foothills of Mount Hyjal."
         },
         [91758] = {
@@ -75083,7 +78622,7 @@ local c = {
         [91883] = {
             name = "Spear of the Skylord",
             level = 59,
-            money = 0,
+            money = 13800,
             obj = "Slay Zarrat Wormwing and return Omnuron's Spear."
         },
         [91920] = {
@@ -75128,7 +78667,7 @@ local c = {
         [92009] = {
             name = "Crate Expectations",
             level = 56,
-            money = 0,
+            money = 14500,
             obj = "Gently transport the crate of parts and baubles to Kaylaena Springwhisper in Mount Hyjal."
         },
         [92011] = {
@@ -75164,7 +78703,7 @@ local c = {
         [92017] = {
             name = "Cleansing Winds",
             level = 59,
-            money = 4500,
+            money = 15956,
             obj = "Collect 5 Grand Hippogryph Feathers and 3 Oily Chimaera Hair for Marn."
         },
         [92020] = {
@@ -75221,22 +78760,28 @@ local c = {
                 279893
             }
         },
+        [92094] = {
+            name = "Rocket Gnomes",
+            level = 57,
+            money = 0,
+            obj = "Wennzut Togglespring lost sight of his brother, Fenwick, floating in his parachute into Hyjal. Look for where he may have ended up."
+        },
         [92100] = {
             name = "Anywhere But Here",
             level = 58,
-            money = 0,
+            money = 12788,
             obj = "Find the Veteran of the Third War's scabbard near Elderwild."
         },
         [92101] = {
             name = "Lifted by Legacy",
             level = 58,
-            money = 0,
+            money = 17050,
             obj = "Find the Veteran of the Third War's markings of significance on the Great Lift."
         },
         [92102] = {
             name = "Praise",
             level = 58,
-            money = 0,
+            money = 17050,
             obj = "Use the Embroidered Scabbard to meet the Veteran of the Third War in Mount Hyjal near the broken cannon in Mourning's Rest."
         },
         [92109] = {
@@ -75274,13 +78819,13 @@ local c = {
         [92147] = {
             name = "Highfeather Helper",
             level = 58,
-            money = 6500,
+            money = 20029,
             obj = "Slay 18 Wormwing harpies on Mount Hyjal and bring their feathers to Phoebe Highfeather."
         },
         [92169] = {
             name = "Paying Back the Pact",
             level = 59,
-            money = 18000,
+            money = 31769,
             obj = "Use the Staff of the Mountain on 10  members of the Blackthorne Pact on the Summit of Eternity to remove their wards and then kill them."
         },
         [92171] = {
@@ -75289,10 +78834,20 @@ local c = {
             money = 0,
             obj = "Travel to the Shrine of Aviana on Mount Hyjal and seek out Skylord Omnuron for aid."
         },
+        [92189] = {
+            name = "Back to the Grind",
+            level = 57,
+            money = 0,
+            obj = "Bring 2 Dense Sharpening Stones and 2 Dense Grinding Stones to Trigg Ironhand in Elderwild on Mount Hyjal.",
+            reward = {
+                274718,
+                251468
+            }
+        },
         [92317] = {
             name = "Stolen Life",
             level = 58,
-            money = 0,
+            money = 12788,
             obj = "Acquire a Drop of Stolen Life from the Scourge in the ruins on Mount Hyjal, then return to Ketharas."
         },
         [92328] = {
@@ -75321,13 +78876,13 @@ local c = {
         [92343] = {
             name = "Get to the Roots of It",
             level = 55,
-            money = 0,
+            money = 13419,
             obj = "Gather 10 Nordrassil Root Caps inside Blackmaw Hold for Nara Wildmane in Thunder Bluff."
         },
         [92344] = {
             name = "Get to the Roots of It",
             level = 55,
-            money = 0,
+            money = 13419,
             obj = "Gather 10 Nordrassil Root Caps inside Blackmaw Hold for Mathrengyl Bearwalker in Darnassus."
         },
         [92345] = {
@@ -75364,13 +78919,27 @@ local c = {
             name = "The Wrath of Rath'mael",
             level = 22,
             money = 0,
-            obj = "Kill Rath'mael in the Ruins of Lordaeron for Deathguard Kristof in Brill."
+            obj = "Kill Rath'mael in the Ruins of Lordaeron for Deathguard Kristof in Brill.",
+            choice = {
+                251533,
+                251534
+            }
         },
         [92432] = {
             name = "An Alarming Request",
             level = 33,
             money = 0,
             obj = "Report to the Image of Archmage Modera near the City of Dalaran."
+        },
+        [92433] = {
+            name = "Now We're Cooking",
+            level = 57,
+            money = 0,
+            obj = "Bring 6 Savory Stag Sliders to Hnaz Blunderflame in Elderwild.",
+            reward = {
+                250179,
+                250071
+            }
         },
         [92434] = {
             name = "Blood in the Streets",
@@ -75773,7 +79342,7 @@ local c = {
         [92594] = {
             name = "Kindling, Kinda",
             level = 56,
-            money = 4000,
+            money = 12542,
             obj = "Destroy 15 Tainted Shrubbery for Kaylaena Springwhisper at the workshop in the Tainted Foothills."
         },
         [92595] = {
@@ -76086,31 +79655,19 @@ local c = {
             name = "Mysterious Mysticism",
             level = 35,
             money = 1800,
-            obj = "Maintain your reputation with the Gelkis, and bring 3 Greater Mystic Essences to Halea in the Gelkis Village in Desolace.",
-            choice = {
-                249486,
-                249489
-            }
+            obj = "Maintain your reputation with the Gelkis, and bring 3 Greater Mystic Essences to Halea in the Gelkis Village in Desolace."
         },
         [92814] = {
             name = "I Need a Tailor",
             level = 35,
             money = 1800,
-            obj = "Maintain your reputation with the Gelkis, and bring a White Bandit Mask to Molkar in the Gelkis Village in Desolace.",
-            choice = {
-                254682,
-                253974
-            }
+            obj = "Maintain your reputation with the Gelkis, and bring a White Bandit Mask to Molkar in the Gelkis Village in Desolace."
         },
         [92817] = {
             name = "Leather Technique",
             level = 35,
             money = 1800,
-            obj = "Maintain your reputation with the Gelkis, and bring a Barbaric Harness to Talra in the Gelkis Village in Desolace.",
-            choice = {
-                252833,
-                252883
-            }
+            obj = "Maintain your reputation with the Gelkis, and bring a Barbaric Harness to Talra in the Gelkis Village in Desolace."
         },
         [92818] = {
             name = "Big, No, MASSIVE Iron Axes",
@@ -76131,7 +79688,7 @@ local c = {
         [92833] = {
             name = "Ve'han's Fall",
             level = 60,
-            money = 18000,
+            money = 33900,
             obj = "Use the Staff of the Mountain to strip Ve'han Talongrasp of his stolen power, then destroy him."
         },
         [92834] = {
@@ -76340,7 +79897,7 @@ local c = {
         [92960] = {
             name = "Siphoned Ephemeral Essence",
             level = 59,
-            money = 9000,
+            money = 22713,
             obj = "Retrieve 6 Ephemeral Essences for Elaena Moonwhisper."
         },
         [93016] = {
@@ -76494,6 +80051,12 @@ local c = {
             level = 13,
             money = 0,
             obj = "Gather 8 Shadowgale Acorns in Shadowgale Forest."
+        },
+        [93163] = {
+            name = "Heart of the Obliterator",
+            level = 50,
+            money = 14554,
+            obj = "Bring the Heart of the Obliterator to Thorium Point."
         },
         [93165] = {
             name = "Mercy Falls on Deaf Ears",
@@ -76668,19 +80231,19 @@ local c = {
         [93406] = {
             name = "Unfrozen Deliveries",
             level = 56,
-            money = 0,
+            money = 10875,
             obj = "Find 4 pieces of Missing Mail in the hills north of Everlook and bring it back to Innkeeper Vizzie."
         },
         [93407] = {
             name = "A Thorn in the Paw",
             level = 60,
-            money = 7000,
+            money = 23300,
             obj = "Find thorn seeds in the forests at the summit of Mount Hyjal and bring them back to Tiala Whitemane."
         },
         [93422] = {
             name = "Blackthorne Blackout",
             level = 60,
-            money = 9000,
+            money = 29400,
             obj = "Kill the Blackthorne Courier and confiscate her message."
         },
         [93429] = {
@@ -76717,6 +80280,12 @@ local c = {
             money = 0,
             obj = "Take Vindael's unfinished sword and figure out a way to usher it into the spirit realm, then return the Phantasmal Blade to him at Shen'dralas."
         },
+        [93451] = {
+            name = "Phantasmal Problems",
+            level = 42,
+            money = 0,
+            obj = "Locate Vindael's unfinished sword and return it to him in Shen'dralas."
+        },
         [93461] = {
             name = "Welcome to Shen'dar Village",
             level = 6,
@@ -76738,7 +80307,7 @@ local c = {
         [93510] = {
             name = "Wake Memories",
             level = 58,
-            money = 0,
+            money = 17050,
             obj = "Find the anchor on Lake Everstill the War Veteran remembers from childhood."
         },
         [93521] = {
@@ -76765,7 +80334,7 @@ local c = {
         [93551] = {
             name = "Praise",
             level = 58,
-            money = 0,
+            money = 17050,
             obj = "Use the Embroidered Scabbard to meet the Veteran of the Third War in Mount Hyjal near the broken cannon in Mourning's Rest."
         },
         [93552] = {
@@ -76794,6 +80363,15 @@ local c = {
             money = 0,
             obj = "Return the Partially Digested Collar to someone who knows about it. Presumably, they can be found in or near Shen'dralas in Desolace."
         },
+        [93572] = {
+            name = "To Serve The Draenei",
+            level = 55,
+            money = 0,
+            obj = "Protect the draenei refugees as they pass through Kum'isha's rift to Outland. None of the refugees may die.",
+            reward = {
+                10752
+            }
+        },
         [93574] = {
             name = "Corpsefeeder's Carapace",
             level = 45,
@@ -76808,7 +80386,7 @@ local c = {
         [93584] = {
             name = "Cult Closure",
             level = 60,
-            money = 9000,
+            money = 24300,
             obj = "Kill 10 Blackthorne Adepts and 10 Wild-branded Cultists."
         },
         [93585] = {
@@ -76912,7 +80490,7 @@ local c = {
         [93685] = {
             name = "To Serve Kum'isha",
             level = 55,
-            money = 25000,
+            money = 29965,
             obj = "Find a Flawless Draenethyst Sphere in the Blasted Lands, and bring it to Kum'isha the Collector.\r\n\r\nBe warned, this gem is one of the rarest crystals in all of Azeroth. Any creature in these lands could be holding a Flawless Draenethyst Sphere."
         },
         [93689] = {
@@ -77028,19 +80606,19 @@ local c = {
         [93825] = {
             name = "Barkbound Blessings",
             level = 57,
-            money = 0,
+            money = 15750,
             obj = "Gather 12 clumps of Moonveil Moss and return to Suma Mossmane."
         },
         [93826] = {
             name = "Deal Dread to Deadwood",
             level = 57,
-            money = 4500,
+            money = 17719,
             obj = "Defeat 8 Deadwood Totemics and 8 Deadwood Fel-Tenders and return to Elder Pinespeaker."
         },
         [93827] = {
             name = "Windswept Wards",
             level = 58,
-            money = 9000,
+            money = 21175,
             obj = "Collect 16 Enchanted Harpy Amulet and return to Thobon Sapclaw."
         },
         [93828] = {
@@ -77067,20 +80645,20 @@ local c = {
         [93832] = {
             name = "Shatter the Stonewatchers",
             level = 58,
-            money = 0,
+            money = 12788,
             obj = "Destroy 6 Eternal Sentry gargoyles in the destroyed Alliance base in upper Hyjal and return to Elder Mistpaw."
         },
         [93833] = {
             name = "Wicked Wisdom",
             level = 57,
-            money = 0,
+            money = 11813,
             obj = "Bring 5 owl bodies to Elder Pinespeaker in Barkskin Burrow in Hyjal."
         },
         [93834] = {
             name = "Burrow Beetles",
             level = 57,
             money = 0,
-            obj = "Gather 6 Burrow Beetle Bits for Dala Fairmaw.",
+            obj = "Gather 10 Burrow Beetle Bits for Dala Fairmaw.",
             reward = {
                 18253
             }
@@ -77149,7 +80727,7 @@ local c = {
         [93952] = {
             name = "Balance Through Strength",
             level = 57,
-            money = 0,
+            money = 11813,
             obj = "Defeat 9 Deadwood Den Guardians and return to Brerufa."
         },
         [93958] = {
@@ -77219,6 +80797,12 @@ local c = {
             money = 0,
             obj = "Use the Taming Rod to tame a Vuldren Alpha in the Gustberry Lowlands. Practice your skills, then return the Taming Rod to Quel'ana Quickgale in Valanaar."
         },
+        [94049] = {
+            name = "zzOLD Training the Beast",
+            level = 10,
+            money = 0,
+            obj = "Speak with Quel'dora Quickbreeze in Valanaar to learn to train pets."
+        },
         [94050] = {
             name = "Training the Beast",
             level = 10,
@@ -77274,7 +80858,6 @@ local c = {
             name = "Craftsman's Writ: Lesser Troll's Blood Elixir",
             level = 60,
             money = 0,
-            obj = "Acquire the items requested by the customer and deliver them to the location marked on your map. This writ must be in your possession to complete the transaction.",
             reward = {
                 284584
             }
@@ -77958,7 +81541,6 @@ local c = {
             name = "Craftsman's Writ: Guardian Cloak",
             level = 60,
             money = 0,
-            obj = "Acquire the items requested by the customer and deliver them to the location marked on your map. This writ must be in your possession to complete the transaction.",
             reward = {
                 284585
             }
@@ -79514,6 +83096,12 @@ local c = {
                 279853
             }
         },
+        [94969] = {
+            name = "Krol'dok No More!",
+            level = 42,
+            money = 0,
+            obj = "Escort Marcus Tilwell to safety."
+        },
         [94971] = {
             name = "A Paladin's Steed",
             level = 40,
@@ -79683,6 +83271,12 @@ local c = {
             money = 0,
             obj = "Collect 7 Gnomeregan Archival Data cards from around Gnomeregan, then deliver them to Jemma Quikswitch in Ironforge."
         },
+        [95056] = {
+            name = "Krol'dok No More!",
+            level = 42,
+            money = 0,
+            obj = "Escort NAME to safety."
+        },
         [95059] = {
             name = "Frazzlespark's Crate",
             level = 36,
@@ -79749,7 +83343,7 @@ local c = {
         [95108] = {
             name = "Mystic Mix",
             level = 58,
-            money = 0,
+            money = 12788,
             obj = "Kill two Deadwood Death Mystics and destroy two Deadwood Cauldrons within Deadwood Den."
         },
         [95111] = {
@@ -79892,6 +83486,12 @@ local c = {
             level = 44,
             money = 0,
             obj = "Plant a remote explosive charge on each of the Eastsea's three boats."
+        },
+        [95181] = {
+            name = "Twilight Scouting Report",
+            level = 42,
+            money = 0,
+            obj = "Deliver Azka's message to Krom'rosh at Rog'mar."
         },
         [95183] = {
             name = "Step One: Rock",
@@ -80041,7 +83641,7 @@ local c = {
         [95262] = {
             name = "The Secret Prison",
             level = 53,
-            money = 0,
+            money = 13919,
             obj = "Enter Alcaz Prison and learn what became of the King of Stormwind."
         },
         [95263] = {
@@ -80137,7 +83737,7 @@ local c = {
         [95309] = {
             name = "No Orc Left Behind",
             level = 53,
-            money = 0,
+            money = 13919,
             obj = "Enter the Alcaz Prison and find Commander Folkar."
         },
         [95312] = {
@@ -80171,7 +83771,7 @@ local c = {
         [95317] = {
             name = "Notation, Notation, Notation",
             level = 57,
-            money = 0,
+            money = 15750,
             obj = "Find 12 Fel Ash Experimentation Notes."
         },
         [95318] = {
@@ -80186,7 +83786,7 @@ local c = {
         [95319] = {
             name = "Crystalline Collection",
             level = 57,
-            money = 0,
+            money = 15750,
             obj = "Gather 8 Fel-Slime Crystals and 1 Pristine Fel-Slime Crystal."
         },
         [95320] = {
@@ -80243,6 +83843,11 @@ local c = {
             money = 0,
             obj = "Deliver Cassandra's surplus farm goods to Halligan Turner at Turner's Logging Camp."
         },
+        [95331] = {
+            name = "REUSE ME",
+            level = 45,
+            money = 0
+        },
         [95349] = {
             name = "The Earthen Ring",
             level = 13,
@@ -80258,19 +83863,19 @@ local c = {
         [95378] = {
             name = "The Hydra's Head",
             level = 58,
-            money = 4500,
+            money = 19113,
             obj = "Retrieve the bones of Frezzlie Popwhiz, Tyaeha Darkoath and Dazka Shadowsleep."
         },
         [95379] = {
             name = "A Revenge So Sweet",
             level = 58,
-            money = 4500,
+            money = 19113,
             obj = "Slay Brashann Grimdark and search his body for his soulstone."
         },
         [95380] = {
             name = "A Prolific Source",
             level = 57,
-            money = 0,
+            money = 15750,
             obj = "Gather 8 Fel-Slime Ooze."
         },
         [95383] = {
@@ -80369,7 +83974,7 @@ local c = {
         [95454] = {
             name = "The Honor of the Kor'kron",
             level = 53,
-            money = 0,
+            money = 13919,
             obj = "Look for King Varian Wrynn in Alcaz Prison."
         },
         [95472] = {
@@ -80437,6 +84042,12 @@ local c = {
                 277206
             }
         },
+        [95555] = {
+            name = "Corrupted Nature",
+            level = 50,
+            money = 10413,
+            obj = "Find the source of corruption from the staff in Feralas."
+        },
         [95561] = {
             name = "Apple of My Eye",
             level = 38,
@@ -80455,13 +84066,13 @@ local c = {
         [95568] = {
             name = "Seeds for a New Season",
             level = 56,
-            money = 0,
+            money = 10875,
             obj = "Collect 10 Untainted Seeds for Ketharas."
         },
         [95569] = {
             name = "Hope for Hatchlings",
             level = 56,
-            money = 0,
+            money = 14500,
             obj = "Rescue 12 Hyjal Owl Eggs and bring them to Ketharas."
         },
         [95599] = {
@@ -80581,10 +84192,6 @@ local c = {
             level = 31,
             money = 0,
             obj = "Enter the Excavation Sites in the Wetlands and bring back Thicket Raptor Meat.",
-            choice = {
-                280766,
-                280805
-            },
             reward = {
                 250185,
                 250077
@@ -80614,11 +84221,29 @@ local c = {
             money = 0,
             obj = "Find the strange bird in the corrupted lands on the southwest slope."
         },
+        [95769] = {
+            name = "Threading a Solution",
+            level = 57,
+            money = 0,
+            obj = "Bring 6 Bolts of Runecloth to Mez'dan in Elderwild on Mount Hyjal.",
+            reward = {
+                274721,
+                254124
+            }
+        },
         [95770] = {
             name = "Locating the Lost City",
             level = 40,
             money = 5000,
             obj = "Explore the Vile Reef and find the cavern entrance."
+        },
+        [95771] = {
+            name = "A Taste of Darkness",
+            level = 10,
+            money = 350,
+            reward = {
+                270298
+            }
         },
         [95772] = {
             name = "Songblade Search",
@@ -80676,11 +84301,7 @@ local c = {
             name = "Shady Saltseers",
             level = 40,
             money = 10000,
-            obj = "Collect 10 Voodoo Infused Artifacts from Saltseer pirates in the Drowned City.",
-            choice = {
-                279882,
-                279930
-            }
+            obj = "Collect 10 Voodoo Infused Artifacts from Saltseer pirates in the Drowned City."
         },
         [95790] = {
             name = "Digestible Research",
@@ -80696,11 +84317,7 @@ local c = {
             name = "The Saltseer Captain",
             level = 40,
             money = 0,
-            obj = "Slay 3 Saltseer Coroners and Captain Dreadrise in the Drowned City.",
-            choice = {
-                279883,
-                279884
-            }
+            obj = "Slay 3 Saltseer Coroners and Captain Dreadrise in the Drowned City."
         },
         [95792] = {
             name = "Clear 'em Out",
@@ -80711,7 +84328,7 @@ local c = {
         [95793] = {
             name = "Stemming the Demon Tide",
             level = 59,
-            money = 4500,
+            money = 20556,
             obj = "Slay 12 Felguard Sentinels in Dae'gun."
         },
         [95795] = {
@@ -80787,6 +84404,29 @@ local c = {
             level = 60,
             money = 900,
             obj = "Bring the completed form to Elaine Compton in Redridge Mountains."
+        },
+        [95817] = {
+            name = "Rotgath Stonebeard",
+            level = 60,
+            money = 900,
+            obj = "Meet Rotgath Stonebeard near the Great Forge in Ironforge."
+        },
+        [95818] = {
+            name = "A Quick Craft",
+            level = 60,
+            money = 9000,
+            obj = "Bring the requested materials to Rotgath Stonebeard near the Great Forge in Ironforge.",
+            choice = {
+                270877,
+                270878,
+                270880,
+                270881,
+                270882,
+                270883
+            },
+            reward = {
+                270868
+            }
         },
         [95819] = {
             name = "Sign Me Up!",
@@ -81085,6 +84725,18 @@ local c = {
                 251460
             }
         },
+        [96027] = {
+            name = "Might Over Magic",
+            level = 41,
+            money = 0,
+            obj = "Kill 10 Plains Prowlers for Bal'mog in Bolder'ok."
+        },
+        [96028] = {
+            name = "Magic Over Might",
+            level = 40,
+            money = 0,
+            obj = "Use 10 magic for Bal'mog in Bolder'ok."
+        },
         [96031] = {
             name = "Camping 101: Leatherworking",
             level = 6,
@@ -81177,6 +84829,15 @@ local c = {
             money = 0,
             obj = "Help Sleebo test his creation."
         },
+        [96075] = {
+            name = "In Demand - Blackrock Legal Records",
+            level = 60,
+            money = 0,
+            obj = "Acquire Nefarian's Remit from General Drakkisath in Blackrock Spire, Overseer's License from Overlord Wyrmthalak in Blackrock Spire, and Bronzebeard Wedding Contract from Emperor Thaurissan in Blackrock Depths, and bring them to Pix Xizzix in Booty Bay.",
+            reward = {
+                271994
+            }
+        },
         [96076] = {
             name = "In Demand - Ancient Elven Curiosities",
             level = 60,
@@ -81241,6 +84902,24 @@ local c = {
             obj = "Find whatever creature is causing the drinking water contamination and eliminate it. Then, return to Sister Rowland at the chapel in Farholde Keep.",
             reward = {
                 3928
+            }
+        },
+        [96087] = {
+            name = "In Demand - Plague Records",
+            level = 60,
+            money = 0,
+            obj = "Acquire Headmaster's Records from Darkmaster Gandling, Grain Shipment Orders from Baron Rivendare, and Dathrohan's Correspondence from Grand Crusader Saidan Dathrohan, and bring them to Pix Xizzix in Booty Bay.",
+            reward = {
+                271994
+            }
+        },
+        [96088] = {
+            name = "In Demand - Titan Relics",
+            level = 60,
+            money = 0,
+            obj = "Acquire Ysera's Tear from the Shade of Eranikus in the Sunken Temple, a Mark of Xavius from Varrox Bleakhoof in Blackmaw Hold, and Freya's Sigil from Nanaya in the Shaper's Terrace, and bring them to Pix Xizzix in Booty Bay.",
+            reward = {
+                271994
             }
         },
         [96101] = {
@@ -81380,12 +85059,6 @@ local c = {
             level = 42,
             money = 11500,
             obj = "Bring the Maraudine Key Fragment to Umarak in the Desolace.",
-            choice = {
-                6773,
-                6774,
-                6788,
-                6789
-            },
             reward = {
                 254432
             }
@@ -81414,7 +85087,7 @@ local c = {
         [96255] = {
             name = "Amalgamated Marrow",
             level = 58,
-            money = 9000,
+            money = 25438,
             obj = "Slay the Awakened Fel Ash Slime."
         },
         [96259] = {
@@ -81448,7 +85121,7 @@ local c = {
         [96262] = {
             name = "Prickly Pinecones",
             level = 57,
-            money = 0,
+            money = 11813,
             obj = "Collect 10 Prickly Pinecones under healthy trees."
         },
         [96264] = {
@@ -81466,7 +85139,7 @@ local c = {
         [96296] = {
             name = "Fetid Corruption",
             level = 58,
-            money = 0,
+            money = 12788,
             obj = "Find and remove 6 Corrupted Knots from the trees nearby."
         },
         [96301] = {
@@ -81535,6 +85208,14 @@ local c = {
             level = 53,
             money = 0,
             obj = "Use the note provided by Mason Connery to find his hidden treasure."
+        },
+        [96339] = {
+            name = "Legacy Reward: Replica Ironforge Air Rifle",
+            level = 60,
+            money = 0,
+            reward = {
+                276236
+            }
         },
         [96369] = {
             name = "Bad News for Folkar",
@@ -81669,7 +85350,7 @@ local c = {
         [96529] = {
             name = "A Shaw Deal",
             level = 59,
-            money = 0,
+            money = 18400,
             obj = "Bring the Blackthorne Information to Master Mathias Shaw in Stormwind."
         },
         [96550] = {
@@ -81707,7 +85388,7 @@ local c = {
         [96603] = {
             name = "Unstable Magic",
             level = 60,
-            money = 18000,
+            money = 33900,
             obj = "Bring 10 Motes of Unstable Magic to Archmage Celindra in Dalaran."
         },
         [96604] = {
@@ -81756,7 +85437,7 @@ local c = {
         [96616] = {
             name = "Herbs for the Bruised and Weary",
             level = 57,
-            money = 0,
+            money = 11813,
             obj = "Collect 12 Hyjal Silphium."
         },
         [96622] = {
@@ -81899,7 +85580,7 @@ local c = {
         [96772] = {
             name = "The Dragon's Journal",
             level = 53,
-            money = 8000,
+            money = 16752,
             obj = "Recover Zarla's Journal from the depths of Alcaz Prison."
         },
         [96773] = {
@@ -81911,8 +85592,7 @@ local c = {
         [96774] = {
             name = "Ancient Gurubashi Idol",
             level = 40,
-            money = 10000,
-            obj = "Recover an Ancient Gurubashi Idol from the Drowned City."
+            money = 10000
         },
         [96775] = {
             name = "Zum'rah's Head",
@@ -81923,7 +85603,7 @@ local c = {
         [96776] = {
             name = "An'she's Radiance",
             level = 51,
-            money = 7500,
+            money = 13781,
             obj = "Recover the crystal known as An'she's Radiance from Maraudon."
         },
         [96779] = {
@@ -81977,13 +85657,13 @@ local c = {
         [96797] = {
             name = "The Orphan",
             level = 54,
-            money = 8000,
+            money = 12225,
             obj = "Travel to Nethergarde Keep in the Blasted Lands and locate Sergeant Danneth."
         },
         [96798] = {
             name = "Into the Darkness",
             level = 54,
-            money = 8000,
+            money = 15263,
             obj = "Find Sergeant Danneth somewhere in the Serpent's Coil caverns southeast of Nethergarde Keep."
         },
         [96799] = {
@@ -82005,7 +85685,7 @@ local c = {
         [96811] = {
             name = "Escaping the Shadows",
             level = 54,
-            money = 8000,
+            money = 15263,
             obj = "Escort Sergeant Danneth out of the Serpent's Coil caves and back to Nethergarde Keep."
         },
         [96812] = {
@@ -82121,6 +85801,12 @@ local c = {
             money = 0,
             obj = "Win 10 duels."
         },
+        [96913] = {
+            name = "Field of Honor: Week 2",
+            level = 60,
+            money = 0,
+            obj = "Complete 3 Warsong Gulch battles."
+        },
         [96930] = {
             name = "The Capricious Corvid",
             level = 58,
@@ -82142,7 +85828,7 @@ local c = {
         [96957] = {
             name = "Bone Sweet Bone",
             level = 58,
-            money = 0,
+            money = 12788,
             obj = "Collect 20 Sun-Bleached Bones."
         },
         [96959] = {
@@ -82160,7 +85846,7 @@ local c = {
         [96971] = {
             name = "To Outfox a Demon",
             level = 59,
-            money = 0,
+            money = 13800,
             obj = "Collect 8 Abandoned Supplies."
         },
         [96978] = {
@@ -82200,44 +85886,25 @@ local c = {
             name = "Heart of Disruption",
             level = 33,
             money = 0,
-            obj = "Collect the Arcane Mote in the City of Dalaran for Magus Wordeen Voidglare in Tarren Mill.",
-            choice = {
-                279842,
-                279843,
-                279844
-            }
+            obj = "Collect the Arcane Mote in the City of Dalaran for Magus Wordeen Voidglare in Tarren Mill."
         },
         [96986] = {
             name = "The Grave Knight",
             level = 33,
             money = 10000,
-            obj = "Defeat Atrexis the Grave Knight in the City of Dalaran for Melisara in Tarren Mill.",
-            choice = {
-                251963,
-                251965
-            }
+            obj = "Defeat Atrexis the Grave Knight in the City of Dalaran for Melisara in Tarren Mill."
         },
         [96987] = {
             name = "Opportunistic Education",
             level = 33,
             money = 0,
-            startText = "Rexxie Copperclutch, City of Dalaran",
-            finishText = "Rexxie Copperclutch, City of Dalaran",
-            obj = "Collect the Founding of Dalaran from the City of Dalaran for Rexxie Copperclutch near the sewer entrance.",
-            choice = {
-                279845,
-                279846
-            }
+            obj = "Collect the Founding of Dalaran from the City of Dalaran for Rexxie Copperclutch near the sewer entrance."
         },
         [96988] = {
             name = "Source of Power",
             level = 33,
             money = 0,
-            obj = "Collect 6 Cracked Sentry Cores in the City of Dalaran for Doctor Martin Felben in Undercity.",
-            choice = {
-                279847,
-                279848
-            }
+            obj = "Collect 6 Cracked Sentry Cores in the City of Dalaran for Doctor Martin Felben in Undercity."
         },
         [96989] = {
             name = "Your First Riding Raptor",
@@ -82253,7 +85920,7 @@ local c = {
         [96991] = {
             name = "Trail Assist",
             level = 59,
-            money = 0,
+            money = 13800,
             obj = "Deliver Galvinquam's Belongings to Marn Euhron in the Summit."
         },
         [96992] = {
@@ -82322,7 +85989,7 @@ local c = {
         [97001] = {
             name = "Sawyer's Legacy",
             level = 57,
-            money = 0,
+            money = 15750,
             obj = "Take the Sawyer Family Ledger to Abigail Sawyer in Undercity's War Quarter."
         },
         [97003] = {
@@ -82363,7 +86030,7 @@ local c = {
         [97009] = {
             name = "Maerion's Misery",
             level = 59,
-            money = 0,
+            money = 18400,
             obj = "Bring 12 Felhound Spikes to Maerion Thaelemaches in Dae'gun."
         },
         [97010] = {
@@ -82473,8 +86140,18 @@ local c = {
         [97168] = {
             name = "Material Assistance",
             level = 60,
-            money = 0,
+            money = 14850,
             obj = "If you are interested in helping Eldrun Stormbreaker in Ironforge, bring him an Azerothian Diamond and a Pristine Black Diamond."
+        },
+        [97169] = {
+            name = "The Darkreaver Menace",
+            level = 60,
+            money = 0,
+            obj = "Use the Divination Scryer in the heart of the Great Ossuary's basement in the Scholomance.  Doing so will bring forth spirits you must fight. Defeating these spirits will summon forth Death Knight Darkreaver; defeat him.\n\nBring Darkreaver's Head to Eldrun Stormbreaker in the Forlorn Caverns, Ironforge.",
+            choice = {
+                20134,
+                20133
+            }
         },
         [97170] = {
             name = "Learning to Ride",
@@ -82497,7 +86174,7 @@ local c = {
         [97173] = {
             name = "Blackmaw Magic",
             level = 59,
-            money = 9000,
+            money = 22713,
             obj = "Recover a Blackmaw Ritual Totem from Blackmaw Hold."
         },
         [97174] = {
@@ -82512,6 +86189,18 @@ local c = {
             money = 0,
             obj = "Travel to Orgrimmar and get High Priest Zayus's Exorcism Censer. You will need to make a donation of 150 gold in order to secure it."
         },
+        [97176] = {
+            name = "Exorcising Terrordale",
+            level = 60,
+            money = 19800,
+            obj = "Use the Exorcism Censer to drive out the tormented spirits in Terrordale. When you have destroyed 25 Terrordale Spirits, return to Danitha Morr at Bandarion Keep in Tirisfal Glades."
+        },
+        [97177] = {
+            name = "Acts of Mercy",
+            level = 60,
+            money = 0,
+            obj = "Return the Exorcism Censer to Danitha Morr at Bandarion Keep in Tirisfal Glades."
+        },
         [97178] = {
             name = "Ott of Tarren Mill",
             level = 60,
@@ -82523,6 +86212,45 @@ local c = {
             level = 60,
             money = 0,
             obj = "Bring 40 Runecloth, 6 Arcanite Bars, 10 Arthas' Tears, 5 Stratholme Holy Water vials, and 150 gold to Ott in Hillsbrad Foothills."
+        },
+        [97180] = {
+            name = "Ott's Finest Work",
+            level = 60,
+            money = 19800,
+            obj = "Take the Arcanite Barding to Danitha Morr at Bandarion Keep for inspection."
+        },
+        [97182] = {
+            name = "An Offering of Vengeance",
+            level = 60,
+            money = 14850,
+            obj = "Acquire special horse feed used for feeding a spirit horse. Nathanos Blightcaller in Eastern Plaguelands may be able to provide such a feed.\r\n\r\nTravel to the Dire Maul in Feralas and slay Tendris Warpwood. Doing so will free the Ancient Equine Spirit. Feed it the special horse feed to soothe it. \r\n\r\nLastly, give it the Arcanite Barding and hope that it is willing to provide the needed blessing."
+        },
+        [97183] = {
+            name = "Blessed Arcanite Barding",
+            level = 60,
+            money = 24900,
+            obj = "Return with the Blessed Arcanite Barding to Danitha Morr at Bandarion Keep in Tirisfal Glades."
+        },
+        [97184] = {
+            name = "The Divination Scryer",
+            level = 60,
+            money = 0,
+            obj = "Bring an Azerothian Diamond and a Pristine Black Diamond to Danitha Morr at Bandarion Keep in Tirisfal Glades."
+        },
+        [97185] = {
+            name = "Justice and Retribution",
+            level = 60,
+            money = 29850,
+            obj = "Use the Divination Scryer in the heart of the Great Ossuary's basement in the Scholomance.  Doing so will bring forth the spirits you must judge. Defeating these spirits will summon forth Death Knight Darkreaver.  Defeat him and reclaim the lost soul of the fallen charger.\r\n\r\nGive the Spirit of Retribution and the Blessed Enchanted Barding to Darkreaver's Fallen Charger."
+        },
+        [97186] = {
+            name = "Manna-Enriched Horse Feed",
+            level = 60,
+            money = 0,
+            obj = "Retrieve 20 Enriched Manna Biscuits for Nathanos Blightcaller in Eastern Plaguelands. The Argent Dawn is known as the sole purveyor of the biscuits. You'll also need to provide Blightcaller with 50 gold for his time.",
+            reward = {
+                18775
+            }
         },
         [97188] = {
             name = "Learning to Ride",
@@ -82545,13 +86273,13 @@ local c = {
         [97197] = {
             name = "Fragment of the Firelands",
             level = 55,
-            money = 8500,
+            money = 20108,
             obj = "Recover a Fragment of the Firelands from Blackrock Depths for Alaana Stormwalker in Mulgore."
         },
         [97198] = {
             name = "Blackmaw Magic",
             level = 59,
-            money = 9000,
+            money = 27456,
             obj = "Recover a Blackmaw Ritual Totem from Blackmaw Hold."
         },
         [97200] = {
@@ -82673,11 +86401,7 @@ local c = {
             name = "Wrongly Blamed, Justly Corrected",
             level = 23,
             money = 0,
-            choice = {
-                277286,
-                277288,
-                277289
-            }
+            obj = "Slay Alliance soldiers encroaching into the Barrens at the border to Dustwallow Marsh, then return to Grunt Logmar at Camp Taurajo."
         },
         [97253] = {
             name = "Parts and Pieces",
@@ -82707,18 +86431,20 @@ local c = {
         [97264] = {
             name = "Shardtooth Pulling",
             level = 58,
-            money = 0,
+            money = 17050,
             obj = "Remove 12 Elder Shardtooth from nearby areas, then return to Sarna Brownhorn."
         },
         [97265] = {
             name = "Hate the Hatefury",
             level = 33,
             money = 3500,
-            obj = "Defeat a variety of Hatefury satyr at Sargeron in Desolace and then return to Aka'rai in Shadowprey Village.",
-            choice = {
-                277514,
-                277515
-            }
+            obj = "Defeat a variety of Hatefury satyr at Sargeron in Desolace and then return to Aka'rai in Shadowprey Village."
+        },
+        [97270] = {
+            name = "Brawl at the Maul",
+            level = 60,
+            money = 0,
+            obj = "Speak with Griniblix the Spectator above the Maul in Dire Maul."
         },
         [97275] = {
             name = "Whuut's the Rush",
@@ -82835,7 +86561,7 @@ local c = {
         [97327] = {
             name = "Blackmaw Pouches",
             level = 60,
-            money = 9000,
+            money = 24300,
             obj = "Enter Blackmaw Hold and recover 5 Blackmaw Pouches for Ekkal at the Ruins of Eldarath in Azshara."
         },
         [97328] = {
@@ -82886,17 +86612,12 @@ local c = {
             name = "The Offense of Grom'gol",
             level = 44,
             money = 0,
-            obj = "Commander Aggro'gosh of the Grom'gol base camp wants you to kill ogres at the Mosh'Ogg Ogre Mount.",
-            choice = {
-                277979,
-                277980,
-                277981
-            }
+            obj = "Commander Aggro'gosh of the Grom'gol base camp wants you to kill ogres at the Mosh'Ogg Ogre Mount."
         },
         [97403] = {
             name = "Two-Headed Ravagers",
             level = 59,
-            money = 0,
+            money = 18400,
             obj = "Kill 15 Chillwind Ravagers and return to Rilan Howard in northern Winterspring."
         },
         [97404] = {
@@ -82931,6 +86652,28 @@ local c = {
                 226970
             }
         },
+        [97412] = {
+            name = "Just Compensation",
+            level = 60,
+            money = 0,
+            obj = "Bring a Lightforge Belt and a set of Lightforge Gauntlets to Mokvar in Orgrimmar.",
+            choice = {
+                227343,
+                227344,
+                227345
+            }
+        },
+        [97413] = {
+            name = "Anthion's Parting Words",
+            level = 60,
+            money = 0,
+            obj = "Return to Mokvar in Orgrimmar with a set of Lightforge Boots, Lightforge Legplates and Lightforge Spaulders.",
+            choice = {
+                227368,
+                227369,
+                227370
+            }
+        },
         [97420] = {
             name = "Reduce, Reuse, Reconcile",
             level = 36,
@@ -82958,6 +86701,28 @@ local c = {
                 227001,
                 227009,
                 227017
+            }
+        },
+        [97448] = {
+            name = "Just Compensation",
+            level = 60,
+            money = 0,
+            obj = "Bring a Cord of the Elements and a set of Gauntlets of the Elements to Deliana in Ironforge.",
+            choice = {
+                227350,
+                227351,
+                227352
+            }
+        },
+        [97449] = {
+            name = "Anthion's Parting Words",
+            level = 60,
+            money = 0,
+            obj = "Return to Deliana in Ironforge with a set of Boots of Elements, Kilt of Elements and Pauldrons of Elements.",
+            choice = {
+                227375,
+                227376,
+                227377
             }
         },
         [97453] = {
@@ -83022,7 +86787,7 @@ local c = {
         [97540] = {
             name = "Oasis",
             level = 50,
-            money = 0,
+            money = 6213,
             obj = "Show the newly quenched Tooga the way back to his wife, Torta."
         },
         [97558] = {
@@ -83056,6 +86821,12 @@ local c = {
             reward = {
                 277844
             }
+        },
+        [97883] = {
+            name = "End of the Dark Horde",
+            level = 60,
+            money = 900,
+            obj = "Bring the Head of Rend Blackhand to Major Mattingly in Stormwind."
         },
         [97884] = {
             name = "Armory of Sunnyglade",
@@ -83515,7 +87286,11 @@ local c = {
             name = "Orgrimmar's Windshapers",
             level = 57,
             money = 0,
-            obj = "Speak with Corswyn Aseril in Orgrimmar's Valley of Wisdom."
+            obj = "Speak with Corswyn Aseril in Orgrimmar's Valley of Wisdom.",
+            choice = {
+                281287,
+                281288
+            }
         },
         [98013] = {
             name = "Swelling Forces",
@@ -83625,7 +87400,11 @@ local c = {
             name = "Field to Clear",
             level = 23,
             money = 0,
-            obj = "Sulhasa in southern Barrens wants you to clear out 7 Stormhide lizards and 7 Hecklefang Stalkers in the area so she can leave the tree safely."
+            obj = "Sulhasa in southern Barrens wants you to clear out 7 Stormhide lizards and 7 Hecklefang Stalkers in the area so she can leave the tree safely.",
+            choice = {
+                279391,
+                287064
+            }
         },
         [98094] = {
             name = "Scout Support",
@@ -83637,11 +87416,7 @@ local c = {
             name = "Valuable Vantages",
             level = 25,
             money = 0,
-            obj = "Deathstalker Masoj needs you to place the three Apothecary Vials on peaks around Hillsbrad Foothills and return to him.",
-            choice = {
-                281293,
-                281294
-            }
+            obj = "Deathstalker Masoj needs you to place the three Apothecary Vials on peaks around Hillsbrad Foothills and return to him."
         },
         [98096] = {
             name = "Sisters In Duty",
@@ -84143,6 +87918,11 @@ local c = {
             money = 0,
             obj = "Collect the rest of Supervisor Fizsprocket's pages inside The Venture Co. Mine and bring them to Morin Cloudstalker near Bloodhoof Village."
         },
+        [98426] = {
+            name = "REUSEME",
+            level = 38,
+            money = 0
+        },
         [98427] = {
             name = "Ceasing Operations",
             level = 12,
@@ -84193,10 +87973,16 @@ local c = {
             money = 0,
             obj = "Visit Nixxrax Fillamug in the Salty Sailor Tavern in Booty Bay in Stranglethorn."
         },
+        [98471] = {
+            name = "Message from the Supreme Magister",
+            level = 35,
+            money = 0,
+            obj = "Meet Elaadrin Evengale at the cliffs overlooking The Uplands in Alterac Mountains."
+        },
         [98477] = {
             name = "Unstable Magic",
             level = 60,
-            money = 18000,
+            money = 33900,
             obj = "Bring 10 Motes of Unstable Magic to Nuara Tremorhoof."
         },
         [98512] = {
@@ -84291,7 +88077,18 @@ local c = {
             name = "Prehistoric Prism",
             level = 31,
             money = 6000,
-            obj = "Bring the Titan Relic to High Explorer Magellas in Ironforge's Hall of Explorers."
+            obj = "Bring the Titan Relic to High Explorer Magellas in Ironforge's Hall of Explorers.",
+            choice = {
+                271716,
+                271767,
+                271766
+            }
+        },
+        [98830] = {
+            name = "The Broken Glaive",
+            level = 60,
+            money = 19800,
+            obj = "Deliver Tortheldrin's Broken Glaive to the Shen'dralar Ancient in Dire Maul."
         },
         [98887] = {
             name = "Conflict at Darkspear Islands",
@@ -84308,13 +88105,13 @@ local c = {
         [98891] = {
             name = "Conflict at Darkspear Islands",
             level = 59,
-            money = 9000,
+            money = 22713,
             obj = "Bring 3 Darkspear Islands Marks of Honor to a Horde Warbringer outside the battlegrounds."
         },
         [98893] = {
             name = "Conflict at Darkspear Islands",
             level = 60,
-            money = 9000,
+            money = 24300,
             obj = "Bring 3 Darkspear Islands Marks of Honor to a Horde Warbringer outside the battlegrounds."
         },
         [98895] = {
@@ -84332,13 +88129,13 @@ local c = {
         [98899] = {
             name = "Darkspear Islands Clash",
             level = 59,
-            money = 9000,
+            money = 22713,
             obj = "Bring 3 Darkspear Islands Marks of Honor to an Alliance Brigadier General outside the battlegrounds."
         },
         [98901] = {
             name = "Darkspear Islands Clash",
             level = 60,
-            money = 9000,
+            money = 24300,
             obj = "Bring 3 Darkspear Islands Marks of Honor to an Alliance Brigadier General outside the battlegrounds."
         },
         [98903] = {
@@ -84350,13 +88147,13 @@ local c = {
         [98904] = {
             name = "The Battle for Darkspear Islands!",
             level = 49,
-            money = 14000,
+            money = 11185,
             obj = "Win a Darkspear Islands battleground and return back to Brelinda McFarry at Northwatch Hold."
         },
         [98905] = {
             name = "The Battle for Darkspear Islands!",
             level = 60,
-            money = 18000,
+            money = 28800,
             obj = "Win a Darkspear Islands battleground and return back to Brelinda McFarry at Northwatch Hold."
         },
         [98906] = {
@@ -84368,14 +88165,50 @@ local c = {
         [98907] = {
             name = "The Battle for Darkspear Islands!",
             level = 49,
-            money = 14000,
+            money = 11185,
             obj = "Win a Darkspear Islands battleground and return back to Nizook Boof at The Merchant Coast."
         },
         [98908] = {
             name = "The Battle for Darkspear Islands!",
             level = 60,
-            money = 18000,
+            money = 28800,
             obj = "Win a Darkspear Islands battleground and return back to Nizook Boof at The Merchant Coast."
+        },
+        [98910] = {
+            name = "Darkspear's Basic Care Package",
+            level = 39,
+            money = 0,
+            obj = "Requirements:",
+            reward = {
+                285171
+            }
+        },
+        [98911] = {
+            name = "Darkspear's Standard Care Package",
+            level = 49,
+            money = 0,
+            obj = "Requirements:",
+            reward = {
+                285172
+            }
+        },
+        [98913] = {
+            name = "Theramore Basic Care Package",
+            level = 39,
+            money = 0,
+            obj = "Requirements:",
+            reward = {
+                285168
+            }
+        },
+        [98914] = {
+            name = "Theramore Standard Care Package",
+            level = 49,
+            money = 0,
+            obj = "Requirements:",
+            reward = {
+                285169
+            }
         },
         [98977] = {
             name = "Mossheart the Elder",
@@ -84669,7 +88502,7 @@ local c = {
         [99194] = {
             name = "A Donation of Runecloth",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Requirements:"
         },
         [99196] = {
@@ -84693,8 +88526,26 @@ local c = {
         [99199] = {
             name = "A Donation of Runecloth",
             level = 60,
-            money = 0,
+            money = 19800,
             obj = "Requirements:"
+        },
+        [99201] = {
+            name = "Swift as the Wind",
+            level = 60,
+            money = 0,
+            obj = "Learn the Journeyman Riding skill from Xar'ti."
+        },
+        [99202] = {
+            name = "Swift as the Wind",
+            level = 60,
+            money = 0,
+            obj = "Learn the Journeyman Riding skill from Kar Stormsinger."
+        },
+        [99203] = {
+            name = "Swift as the Wind",
+            level = 60,
+            money = 0,
+            obj = "Learn the Journeyman Riding skill from Genn Fairweather."
         },
         [99204] = {
             name = "Swift as the Wind",
@@ -84714,13 +88565,130 @@ local c = {
             money = 0,
             obj = "Learn the Journeyman Riding skill from Randal Hunter."
         },
+        [99207] = {
+            name = "Swift as the Wind",
+            level = 60,
+            money = 0,
+            obj = "Learn the Journeyman Riding skill from Binjy Featherwhistle."
+        },
         [99208] = {
             name = "Swift as the Wind",
             level = 60,
             money = 0,
             obj = "Learn the Journeyman Riding skill from Velma Warnam."
         },
+        [99209] = {
+            name = "Swift as the Wind",
+            level = 60,
+            money = 0,
+            obj = "Learn the Journeyman Riding skill from Ultham Ironhorn."
+        },
+        [99210] = {
+            name = "An Epic Ride",
+            level = 60,
+            money = 0,
+            obj = "Inspect the armored riding rams to choose your epic mount.",
+            choice = {
+                18785,
+                18786,
+                18787
+            }
+        },
+        [99211] = {
+            name = "An Epic Ride",
+            level = 60,
+            money = 0,
+            obj = "Inspect the armored undead riding warhorses to choose your epic mount.",
+            choice = {
+                274799,
+                13334,
+                265840
+            }
+        },
+        [99212] = {
+            name = "An Epic Ride",
+            level = 60,
+            money = 0,
+            obj = "Inspect the upgraded riding mechanostriders to choose your epic mount.",
+            choice = {
+                18772,
+                18773,
+                18774
+            }
+        },
+        [99213] = {
+            name = "An Epic Ride",
+            level = 60,
+            money = 0,
+            obj = "Inspect the armored riding horses to choose your epic mount.",
+            choice = {
+                18776,
+                18777,
+                18778
+            }
+        },
+        [99214] = {
+            name = "An Epic Ride",
+            level = 60,
+            money = 0,
+            obj = "Inspect the armored riding sabers to choose your epic mount.",
+            choice = {
+                18902,
+                18767,
+                18766
+            }
+        },
+        [99215] = {
+            name = "An Epic Ride",
+            level = 60,
+            money = 0,
+            obj = "Inspect the armored riding wolves to choose your epic mount.",
+            choice = {
+                18797,
+                18796,
+                18798
+            }
+        },
+        [99216] = {
+            name = "An Epic Ride",
+            level = 60,
+            money = 0,
+            obj = "Inspect the armored riding striders to choose your epic mount.",
+            choice = {
+                269671,
+                274933,
+                269678
+            }
+        },
+        [99217] = {
+            name = "An Epic Ride",
+            level = 60,
+            money = 0,
+            obj = "Inspect the armored riding kodos to choose your epic mount.",
+            choice = {
+                18795,
+                18794,
+                18793
+            }
+        },
+        [99218] = {
+            name = "An Epic Ride",
+            level = 60,
+            money = 0,
+            obj = "Inspect the armored riding raptors to choose your epic mount.",
+            choice = {
+                18788,
+                18789,
+                18790
+            }
+        },
         [99233] = {
+            name = "Brawl at the Maul",
+            level = 60,
+            money = 0,
+            obj = "Speak with Griniblix the Spectator above the Maul in Dire Maul."
+        },
+        [99234] = {
             name = "Brawl at the Maul",
             level = 60,
             money = 0,
@@ -84764,7 +88732,7 @@ local c = {
         [99435] = {
             name = "The Great Masquerade",
             level = 60,
-            money = 0,
+            money = 29850,
             obj = "Follow Reginald Windsor through Stormwind. Protect him from harm!\r\n\r\nSpeak to Squire Rowe if you need to contact Reginald Windsor again."
         }
     }
@@ -84816,4 +88784,4 @@ for id, fresh in pairs(c.quests) do
     end
 end
 LJ.COLLECT_BUILD = c.build
-LJ.COLLECT_COUNTS = { items = 24238, quests = 4654, npcs = 1488 }
+LJ.COLLECT_COUNTS = { items = 24638, quests = 5077, npcs = 1489 }

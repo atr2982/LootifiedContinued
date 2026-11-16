@@ -9,6 +9,8 @@ LJ.Data = LJ.Data or {}
 -- Stored as one string per quest and read on demand (Items.GetWorldQuest):
 -- [questID] = "name|level|minLevel|side (A, H, B)|CLASS,CLASS|giver|continent,worldX,worldY|choice rewards|fixed rewards"
 LJ.Data.WorldQuests = {
+    [94411] = "Meddlesome Mages|6|4|H|DRUID,SHAMAN|Illaya Amberwind||263411,263412|",
+    [96261] = "The Broodmother|30|23|H||||276895|",
     [9] = "The Killing Fields|15|8|A||Farmer Saldean|0,-10129,1055|3578,1561|",
     [14] = "The People's Militia|17|9|A||Gryan Stoutmantle|0,-10509,1045|1566,1480,12296|",
     [19] = "Tharil'zun|25|18|A||Marshal Marris|0,-9284,-2298|1276,6093|",
@@ -1712,6 +1714,9 @@ LJ.Data.WorldQuestItems = {
 
 -- [itemID] = questID, or "questID,questID" when several quests reward the item
 LJ.Data.WorldQuestRewards = {
+    [263411] = 94411,
+    [263412] = 94411,
+    [276895] = 96261,
     [744] = 53,
     [1009] = 417,
     [1116] = 1046,

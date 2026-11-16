@@ -295,8 +295,7 @@ LJ.charDefaults = {
     -- every drop), every armor kind the class wears
     list = { quests = true, dungeons = true, rare = true, crafted = false, world = false, chance = 10,
         cloth = true, leather = true, mail = true, plate = true },
-    statPrio = {},        -- the stat priority the player dragged: [specKey] = { order, factor }; none: the spec's own
-                          -- (Core/StatPrio.lua)
+    statPrio = {},        -- legacy drag priorities; Core/StatPrio.lua clears these in favor of researched defaults
 }
 
 -- The Database look's filters, switches and sort per page: every login and /reload starts with these (they are not
@@ -355,7 +354,7 @@ LJ:On("ADDON_LOADED", function(_, name)
     LootifiedData.gameNames, LootifiedData.gameSim = nil, nil
     -- the notes next to the folded class list of the Best in Slot page up to 1.4.7 (it has none since 1.4.8)
     LootifiedData.hints = nil
-    -- the stat priority of 1.6.0 (only the order; 1.6.1 keeps what each drag made of a stat: statPrio)
+    -- legacy stat-order settings (Core/StatPrio.lua replaces dragged priorities with researched defaults)
     LootifiedCharData.statOrder = nil
     -- "Only good drops" of earlier versions (on: 10 %, off: every drop) is the drop chance now
     local list = LootifiedCharData.list

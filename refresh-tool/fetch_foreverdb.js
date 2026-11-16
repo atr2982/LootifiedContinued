@@ -10,8 +10,16 @@ if (!key || !output) throw new Error("Usage: FOREVERDB_API_KEY=... node fetch_fo
 const base = "https://foreverdb.net/api/v1/";
 async function get(path) {
   for (let attempt = 0; attempt < 6; attempt++) {
-    const res = await fetch(base + path, { headers: { "X-API-Key": key, Accept: "application/json" } });
+    let res;
+    try {
+      res = await fetch(base + path, { headers: { "X-API-Key": key, Accept: "application/json" } });
+    } catch (error) {
+      if (attempt === 5) throw new Error(`${path}: network retries exhausted (${error.cause?.code || error.message})`);
+      await new Promise(resolve => setTimeout(resolve, (attempt + 1) * 3000));
+      continue;
+    }
     if (res.ok) return res.json();
+    if (res.status === 402) throw new Error(`${path}: HTTP 402 subscription_required (ForeverDB daily limit or subscription tier reached)`);
     if (res.status !== 429 && res.status < 500) throw new Error(`${path}: HTTP ${res.status}`);
     const retry = Number(res.headers.get("retry-after")) || (attempt + 1) * 5;
     await new Promise(resolve => setTimeout(resolve, Math.max(5000, retry * 1000)));
@@ -24,10 +32,11 @@ async function list(kind) {
   const out = [...(first.data || [])];
   const total = Number(first.meta?.total || out.length);
   for (let offset = out.length; offset < total; offset += 100) {
-    // ForeverDB allows 60 requests/minute per key; keep the bulk snapshot below that.
-    await new Promise(resolve => setTimeout(resolve, 1050));
+    // Keep paginated snapshot requests below the account-wide 30 requests/minute limit.
+    await new Promise(resolve => setTimeout(resolve, 2050));
     const page = await get(`${kind}?limit=100&offset=${offset}`);
     out.push(...(page.data || []));
+    if (offset % 2500 === 0 || offset + 100 >= total) console.log(`${kind}: ${Math.min(out.length, total)}/${total}`);
   }
   return out;
 }

@@ -71,7 +71,9 @@ if input and input.web then
     mergeMap(LJ.Data.Items, web.items)
     if type(LJ.Data.ItemStats) == "table" then
         mergeMap(LJ.Data.ItemStats.items, web.item_stats)
-        LJ.Data.ItemStats.build = web.build
+        if type(web.item_stats) == "table" and next(web.item_stats) then
+            LJ.Data.ItemStats.build = web.build
+        end
     end
     mergeMap(LJ.Data.Quests, web.quests)
     local function Unique(list, excluded)
@@ -93,8 +95,8 @@ if input and input.web then
     mergeMap(LJ.Data.WorldDrops, web.world_drops)
     if type(web.instances) == "table" and #web.instances > 0 then LJ.Data.Instances = web.instances end
     if type(web.bis_weights) == "table" and next(web.bis_weights) then LJ.Data.BiS = web.bis_weights end
-    LJ.DATA_BUILD = web.build
+    LJ.DATA_BUILD = LJ.COLLECT_BUILD or (LJ.Data.ForeverDB and LJ.Data.ForeverDB.build) or web.build
     LJ.DATA_CHECKED = date("%Y-%m-%d")
-    LJ.DATA_STATUS = "client collection verified; reviewed Forever overrides installed"
+    LJ.DATA_STATUS = "current Forever client collection and ForeverDB catalog installed; curated overrides retained"
     LJ.DATA_SOURCES = "Forever client collection; reviewed Wowhead and Bind on Forever records"
 end

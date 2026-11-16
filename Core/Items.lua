@@ -547,6 +547,8 @@ function Items.GetKnownLevels(itemID)
         local il, ml = NumField(text, 3), NumField(text, 4)
         if il and ml then return ml, il end
     end
+    local forever = LJ.Data.ForeverDB and LJ.Data.ForeverDB.items and LJ.Data.ForeverDB.items[itemID]
+    if forever then return forever.min or 0, forever.level or 0 end
     return nil
 end
 
@@ -1327,8 +1329,8 @@ end
 -- Does the list take the item for a class at a level: its armor kind is picked (the armor slots) and one of its
 -- sources is (a drop: at least the list's drop chance). Kept per class and level until the list changes.
 local inList = {}
-function Items.InList(itemID, class, level)
-    local key = class .. level
+function Items.InList(itemID, class, level, ignoreSources)
+    local key = class .. level .. (ignoreSources and ":fallback" or "")
     local known = inList[key]
     if not known then
         known = {}
@@ -1340,6 +1342,8 @@ function Items.InList(itemID, class, level)
         local armor = ArmorChoice(itemID)
         if armor and not list[armor] then
             yes = false
+        elseif ignoreSources then
+            yes = true
         else
             local chance, random = WorldDropOf(itemID)
             yes = (list.quests and QuestReward(itemID, class, level))

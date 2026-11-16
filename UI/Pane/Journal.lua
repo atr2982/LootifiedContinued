@@ -555,9 +555,11 @@ function Page:RefreshHome()
     local open = function(d) UI:Open("instance", d.inst.key) end
     for _, inst in ipairs(LJ.instancesByKind[kind] or {}) do
         local d = { inst = inst, onClick = open }
-        if inst.status ~= "announced" then d.quests = Lists.OpenQuests(inst) end
-        if Lists.IsNear(inst) and inst.status ~= "announced" then
+        if inst.status ~= "announced" then
+            d.quests = Lists.CardQuestCount(inst)
             d.upgrades = Lists.CountFor(inst)
+        end
+        if Lists.IsNear(inst) and inst.status ~= "announced" then
             near[#near + 1] = d
         elseif nearOnly then
             if inst.minLevel > level and inst.status ~= "announced" then coming[#coming + 1] = d end
@@ -591,7 +593,6 @@ function Page:RefreshHome()
     end
     if nearOnly then
         table.sort(coming, ByLevel)
-        for _, d in ipairs(coming) do d.upgrades = Lists.CountFor(d.inst) end
         Section(L("Coming up"), L("a few levels above you"), coming, COLUMNS)
     else
         table.sort(others, ByLevel)
@@ -688,7 +689,7 @@ end
 local function CountUpgrades(g)
     local n = 0
     for _, e in ipairs(g.entries) do
-        if BiS.Upgrade(e.id) then n = n + 1 end
+        if BiS.JournalUpgrade(e.id) then n = n + 1 end
     end
     return n
 end
@@ -802,6 +803,8 @@ function Page:RefreshLoot()
     local cells, upgrades = {}, 0
     for _, e in ipairs(g.entries) do
         local d = Kit.ItemData(e.id, spec)
+        d.upgrade = BiS.JournalUpgrade(e.id)
+        d.upgradeText = d.upgrade and BiS.FormatJournalUpgrade(e.id) or nil
         if Lists.PassesClass(Items.Get(e.id), db.spec, d.upgrade) then
             if g.kind ~= "quests" and d.upgrade then upgrades = upgrades + 1 end
             if g.kind == "quests" then

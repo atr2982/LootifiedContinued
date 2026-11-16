@@ -1,6 +1,6 @@
-# Lootified
+# Lootified Continued
 
-Lootified is an English-only, lightweight loot and progression journal for WoW: Forever. It brings dungeon quests, quest chains, boss loot, open-world drops, and level-aware gear upgrades together so you can see what is worth doing next without juggling several database addons.
+Lootified Continued is an English-only, lightweight loot and progression journal for WoW: Forever. It brings dungeon quests, quest chains, boss loot, open-world drops, and level-aware gear upgrades together so you can see what is worth doing next without juggling several database addons.
 
 ## What it does
 
@@ -14,7 +14,7 @@ Lootified is an English-only, lightweight loot and progression journal for WoW: 
 
 ## Designed to stay lightweight
 
-Lootified focuses on lookup, planning, and upgrade comparison. It uses English text, avoids language packs and dungeon-map assets, and keeps the main journal, Open World, and Best in Slot pages focused on the information you need while leveling.
+Lootified Continued focuses on lookup, planning, and upgrade comparison. It uses English text, avoids language packs and dungeon-map assets, and keeps the main journal, Open World, and Best in Slot pages focused on the information you need while leveling.
 
 ## Maintained data
 
@@ -24,4 +24,4 @@ The original license, notices, and attribution remain in the repository files.
 
 ## Current data
 
-The local installation and repository data are refreshed against Forever client build 1.60.1.70862 using `/lf collect`. The packaged snapshot combines client-collected facts with refreshed ForeverDB catalog and dungeon-detail data, verified Forever Atlas dungeon tables, and the latest accessible Forever-specific BiS guide snapshot. Personal account collection data is excluded from this public repository.
+The local installation and repository data are refreshed against Forever client build 1.60.1.70938 using `/lf collect`. The packaged snapshot combines client-collected facts with refreshed ForeverDB catalog and dungeon-detail data, verified Forever Atlas dungeon tables, and reviewed Forever-specific guide data. Personal account collection data is excluded from this public repository.

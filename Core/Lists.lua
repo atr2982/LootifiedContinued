@@ -88,7 +88,7 @@ function Lists.CountFor(inst)
     local upgrades = 0
     for _, g in ipairs(Lists.BuildGroups(inst)) do
         for _, e in ipairs(g.entries) do
-            if BiS.Upgrade(e.id) then upgrades = upgrades + 1 end
+            if BiS.JournalUpgrade(e.id) then upgrades = upgrades + 1 end
         end
     end
     return upgrades
@@ -117,14 +117,15 @@ function Lists.IsNear(inst)
     return inst.minLevel <= high and inst.maxLevel >= low
 end
 
--- The quests of an instance its card shows: the ones the character can take, work on or turn in now.
-function Lists.OpenQuests(inst)
-    local _, open = Quests.CountForInstance(inst.key)
-    return open
+-- The quest count on an instance card matches the total shown in its hover tooltip. Keep open/completed state for
+-- the dungeon detail view, but don't hide a dungeon's quest count just because none are currently active.
+function Lists.CardQuestCount(inst)
+    local total = Quests.CountForInstance(inst.key)
+    return total
 end
 
--- The better of two instance cards ({ inst, upgrades, quests: Lists.OpenQuests }), the same on every page ("Best for
--- you right now", the order for the level): more upgrades, then more open quests, then the lower one, then by name.
+-- The better of two instance cards ({ inst, upgrades, quests }), the same on every page ("Best for you right now",
+-- the order for the level): more upgrades, then more quests, then the lower one, then by name.
 function Lists.Better(a, b)
     if a.upgrades ~= b.upgrades then return a.upgrades > b.upgrades end
     if a.quests ~= b.quests then return a.quests > b.quests end
@@ -133,7 +134,7 @@ function Lists.Better(a, b)
 end
 
 -- Dungeons and raids for the character's level ("My level"), the best first (Lists.Better); when none fits: the next
--- three coming up. Returns { { inst, upgrades, quests (open) } } and whether they are the coming ones.
+-- three coming up. Returns { { inst, upgrades, quests } } and whether they are the coming ones.
 function Lists.InstancesFor(level)
     local near, later = {}, {}
     for _, kind in ipairs({ "dungeon", "raid" }) do
@@ -159,7 +160,7 @@ function Lists.InstancesFor(level)
     end
     local list = {}
     for _, inst in ipairs(chosen) do
-        list[#list + 1] = { inst = inst, upgrades = Lists.CountFor(inst), quests = Lists.OpenQuests(inst) }
+        list[#list + 1] = { inst = inst, upgrades = Lists.CountFor(inst), quests = Lists.CardQuestCount(inst) }
     end
     if not upcoming then table.sort(list, Lists.Better) end
     return list, upcoming

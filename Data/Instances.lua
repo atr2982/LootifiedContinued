@@ -147,7 +147,7 @@ LJ.Data.Instances = {
         bosses = {
             { name = "Ghamoo-ra", npc = 4887, display = 5027, level = "25", loot = { 6907, 6908, 273839 }, chance = { 40, 60, 0 } },
             { name = "Lady Sarevess", npc = 4831, display = 4979, level = "25", loot = { 888, 3078, 11121, 252798 }, chance = { 40, 20, 40, 0 } },
-            { name = "Gelihast", npc = 6243, display = 1773, level = "26", loot = { 6906, 6905, 1470 }, chance = { 50, 50, 15 } },
+            { name = "Gelihast", npc = 6243, display = 1773, level = "26", loot = { 6906, 6905, 1470, 273840 }, chance = { 50, 50, 15 } },
             { name = "Lorgus Jett", npc = 12902, display = 12822, level = "26", loot = { 273843, 273842 } },
             { name = "Baron Aquanis", npc = 12876, display = 110, level = "28", loot = { 16782 }, chance = { 100 } },
             { name = "Twilight Lord Kelris", npc = 4832, display = 4939, level = "27", loot = { 1155, 6903, 273846 }, chance = { 60, 40, 0 } },

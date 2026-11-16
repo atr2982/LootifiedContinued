@@ -190,6 +190,20 @@ end
 function Scoring.GetStats(itemID)
     local cached = statCache[itemID]
     if Items.IsShipped(itemID) then
+        -- The shipped snapshot is a fallback, not a live override. Forever can change an existing item's stats
+        -- without changing its ID; once the client has that item cached, prefer its current stats and Equip lines.
+        if not liveStats[itemID] then
+            local rec = Items.GetLive(itemID)
+            if rec and rec.live then
+                local current = Scoring.ClientStats(itemID)
+                if next(current) ~= nil then
+                    statCache[itemID] = current
+                    liveStats[itemID] = true
+                    Items.SaveStats(itemID, current)
+                    return current
+                end
+            end
+        end
         if not cached then
             cached = Items.GetShippedStats(itemID)
             statCache[itemID] = cached
@@ -292,10 +306,14 @@ function Scoring.Score(itemID, spec, slotKey, atCurrentLevel, stats)
     -- Ratings -> percent -> weights (per 1%).
     local hitPct = RatingToPct("HIT_MELEE", (s.HitRating or 0) + (s.MeleeHitRating or 0), atCurrentLevel) + (s.HitPct or 0)
     local rangedHitPct = RatingToPct("HIT_RANGED", s.RangedHitRating, atCurrentLevel)
-    local spellHitPct = RatingToPct("HIT_SPELL", (s.HitRating or 0) + (s.SpellHitRating or 0), atCurrentLevel) + (s.SpellHitPct or 0)
+    -- Forever's generic flat Hit/Crit effects apply across attack schools. Keep explicitly school-specific bonuses
+    -- distinct, while carrying a generic Equip: percentage through both physical and spell scoring channels.
+    local spellHitPct = RatingToPct("HIT_SPELL", (s.HitRating or 0) + (s.SpellHitRating or 0), atCurrentLevel)
+        + (s.HitPct or 0) + (s.SpellHitPct or 0)
     local critPct = RatingToPct("CRIT_MELEE", (s.CritRating or 0) + (s.MeleeCritRating or 0), atCurrentLevel) + (s.CritPct or 0)
     local rangedCritPct = RatingToPct("CRIT_RANGED", s.RangedCritRating, atCurrentLevel)
-    local spellCritPct = RatingToPct("CRIT_SPELL", (s.CritRating or 0) + (s.SpellCritRating or 0), atCurrentLevel) + (s.SpellCritPct or 0)
+    local spellCritPct = RatingToPct("CRIT_SPELL", (s.CritRating or 0) + (s.SpellCritRating or 0), atCurrentLevel)
+        + (s.CritPct or 0) + (s.SpellCritPct or 0)
     local isHunter = spec.class == "HUNTER"
     score = score + (hitPct + (isHunter and rangedHitPct or 0)) * W(w, "Hit")
     score = score + (critPct + (isHunter and rangedCritPct or 0)) * W(w, "Crit")
@@ -305,14 +323,11 @@ function Scoring.Score(itemID, spec, slotKey, atCurrentLevel, stats)
     score = score + (RatingToPct("PARRY", s.ParryRating, atCurrentLevel) + (s.ParryPct or 0)) * W(w, "Parry")
     score = score + (RatingToPct("BLOCK", s.BlockRating, atCurrentLevel) + (s.BlockPct or 0)) * W(w, "Block")
 
-    -- Haste / expertise have no Classic weights: derive conservative values.
-    local physicalCrit = math.max(W(w, "Crit"), 0)
-    local spellCrit = math.max(W(w, "SpellCrit"), 0)
-    local hasteWeight = w.Haste or (0.6 * math.max(physicalCrit, spellCrit))
-    score = score + RatingToPct("HASTE", s.HasteRating, atCurrentLevel) * hasteWeight
-    local expertiseWeight = w.Expertise or (0.8 * W(w, "Hit"))
-    score = score + RatingToPct("EXPERTISE", s.ExpertiseRating, atCurrentLevel) * expertiseWeight
-    score = score + (s.WeaponSkill or 0) * 0.2 * W(w, "Hit")
+    -- Only score stats that have a visible, spec-specific row. Hidden fallback weights made items
+    -- gain value from stats the player could not see in the priority panel.
+    score = score + RatingToPct("HASTE", s.HasteRating, atCurrentLevel) * W(w, "Haste")
+    score = score + RatingToPct("EXPERTISE", s.ExpertiseRating, atCurrentLevel) * W(w, "Expertise")
+    score = score + (s.WeaponSkill or 0) * W(w, "WeaponSkill")
 
     -- Weapon damage.
     local dps = s.DPS or 0
@@ -413,9 +428,9 @@ end
 
 function Scoring.GetAllCandidateIDs()
     if Scoring.allIDs then return Scoring.allIDs end
-    local list = {}
-    for _, id in ipairs(Scoring.GetBaseCandidateIDs()) do list[#list + 1] = id end
-    for _, id in ipairs(Scoring.GetWorldCandidateIDs()) do list[#list + 1] = id end
+    -- The Database is a catalog, not just an index of items with already-known acquisition sources. Include the
+    -- complete shipped item records so Forever gear does not disappear merely because its source table is incomplete.
+    local list = Scoring.GetAllItemIDs()
     Scoring.allIDs = list
     return list
 end
@@ -437,6 +452,7 @@ function Scoring.GetForeverItemIDs()
     end
     local D = LJ.Data
     for id in pairs(D.Items or {}) do add(id) end
+    for id in pairs(D.ForeverDB and D.ForeverDB.items or {}) do add(id) end
     for id in pairs(D.WorldDrops or {}) do add(id) end
     for id in pairs(D.WorldQuestItems or {}) do add(id) end
     for id in pairs(D.ItemStats and D.ItemStats.items or {}) do add(id) end
@@ -472,6 +488,7 @@ function Scoring.GetAllItemIDs()
     for _, id in ipairs(Scoring.GetForeverItemIDs()) do add(id) end
     local D = LJ.Data
     for id in pairs(D.Items or {}) do add(id) end
+    for id in pairs(D.ForeverDB and D.ForeverDB.items or {}) do add(id) end
     for id in pairs(D.WorldDrops or {}) do add(id) end
     for id in pairs(D.WorldQuestItems or {}) do add(id) end
     for id in pairs(D.ItemStats and D.ItemStats.items or {}) do add(id) end
@@ -483,6 +500,20 @@ function Scoring.GetAllItemIDs()
     return list
 end
 
+-- The all-item catalog also contains consumables and quest objects. Cache just records the current Forever client
+-- identifies as equippable for the Best in Slot fallback scan.
+local catalogGearIDs
+function Scoring.GetCatalogGearIDs()
+    if catalogGearIDs then return catalogGearIDs end
+    local list = {}
+    for _, id in ipairs(Scoring.GetAllItemIDs()) do
+        local itemID, _, _, equipLoc = C_Item.GetItemInfoInstant(id)
+        if itemID and equipLoc and equipLoc ~= "" then list[#list + 1] = id end
+    end
+    catalogGearIDs = list
+    return list
+end
+
 -- Rankings are kept until something they come from changes: the spec or the character (Scoring.InvalidateCache), an
 -- item's levels; one that waited for items without data yet (pending) until item data arrives (ITEMS_UPDATED).
 local rankingCache, rankingCount = {}, 0
@@ -491,8 +522,6 @@ local RANKINGS_KEPT = 6     -- specs and level options switched between; older r
 function Scoring.InvalidateCache()
     rankingCache, rankingCount = {}, 0
 end
-
-local function ByScore(a, b) return a.score > b.score end
 
 -- Ranks every known item for a spec, grouped by slot: the items its list takes (Items.InList: the sources the player
 -- picked) that the character can wear (not the other faction's, on the own class's list none with a profession the
@@ -516,7 +545,7 @@ function Scoring.RankAll(spec, opts)
     local waiting = {}
     local class, maxLevel = spec.class, opts.maxLevel
     local level, own = maxLevel or 60, class == Player.class
-    local function Rank(id, world)
+    local function Rank(id, world, sourceFallback, fallbackSlots)
         -- an item without server data (the shipped list, or this game version's answers) is not in the game
         if Items.IsKnownMissing(id) then return end
         local itemID, _, _, equipLoc, _, classID, subclassID = C_Item.GetItemInfoInstant(id)
@@ -527,7 +556,9 @@ function Scoring.RankAll(spec, opts)
         -- the character's own list: not with a profession it lacks (Scoring.MissingSkill)
         if own and Scoring.MissingSkill(id) then return end
         -- only what the list takes (a quest of the other faction or another class gives none)
-        if not Items.InList(id, class, level) then return end
+        if not Items.InList(id, class, level, sourceFallback) then return end
+        -- Fallback is explicitly the best available catalog candidate when enabled sources have no item for a slot.
+        -- The Forever item catalog proves the item exists; missing source/stat coverage must not make the slot blank.
         local minLevel, itemLevel = Items.GetKnownLevels(id)
         if not minLevel then
             -- open world items never ask the server: they rank when their data ships with the addon
@@ -540,27 +571,54 @@ function Scoring.RankAll(spec, opts)
             minLevel, itemLevel = rec.minLevel or 0, rec.itemLevel or 0
         end
         -- ... and only with stats that are known without asking the server
-        if world and not Items.HasKnownStats(id) then return end
+        if world and not Items.HasKnownStats(id) and not sourceFallback then return end
         if maxLevel and Items.UseLevelFrom(id, minLevel, itemLevel) > maxLevel then return end
         -- stats read this session, then saved or shipped ones; unknown stats come from the client or the server
-        local stats = Scoring.GetCachedStats(id) or Items.GetKnownStats(id, scratchStats) or Scoring.GetStats(id)
+        local stats = Scoring.GetCachedStats(id) or Items.GetKnownStats(id, scratchStats)
+        if not stats and sourceFallback then
+            -- An item with no parsed numeric stats remains a valid zero-score last resort. Do not request thousands of
+            -- tooltips during this scan; item details can still arrive through ordinary client use or /lf collect.
+            stats = {}
+        elseif not stats then
+            stats = Scoring.GetStats(id)
+        end
         if not stats then
             -- (a shipped item without stats has none: it does not rank)
             if not Items.IsShipped(id) then waiting[#waiting + 1] = id end
             return
         end
         for _, slot in ipairs(Scoring.GetItemSlots(facts, class, level)) do
-            local score = Scoring.Score(id, spec, slot, opts.current, stats)
-            if score and score > 0 then
-                local list = bySlot[slot]
-                list[#list + 1] = { id = id, score = score }
+            if not fallbackSlots or fallbackSlots[slot] then
+                local score = Scoring.Score(id, spec, slot, opts.current, stats)
+                if score and (score > 0 or (sourceFallback and score == 0)) then
+                    local list = bySlot[slot]
+                    local _, itemLevel = Items.GetKnownLevels(id)
+                    list[#list + 1] = { id = id, score = score, fallback = sourceFallback, itemLevel = itemLevel or 0 }
+                end
             end
         end
     end
     for _, id in ipairs(Scoring.GetBaseCandidateIDs()) do Rank(id, false) end
     for _, id in ipairs(Scoring.GetWorldCandidateIDs()) do Rank(id, true) end
+    -- If selected sources have no scored option for a slot, search the full known item catalog while preserving class,
+    -- level, faction, profession, and armor-filter rules. This is deliberately a fallback: normal source-filtered picks
+    -- always win, but a slot does not stay empty just because its source table or stat cache is incomplete.
+    local fallbackSlots = {}
+    for slot, list in pairs(bySlot) do
+        if #list == 0 then fallbackSlots[slot] = true end
+    end
+    if next(fallbackSlots) then
+        for _, id in ipairs(Scoring.GetCatalogGearIDs()) do Rank(id, true, true, fallbackSlots) end
+    end
     for _, list in pairs(bySlot) do
-        table.sort(list, ByScore)
+        table.sort(list, function(a, b)
+            if a.score ~= b.score then return a.score > b.score end
+            if a.fallback and b.fallback then
+                if a.itemLevel ~= b.itemLevel then return a.itemLevel > b.itemLevel end
+                return a.id < b.id
+            end
+            return false
+        end)
     end
     local result = { bySlot = bySlot, pending = #waiting }
     if rankingCount >= RANKINGS_KEPT then rankingCache, rankingCount = {}, 0 end

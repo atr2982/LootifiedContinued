@@ -24,7 +24,7 @@ local function Matches(key, tokens)
     return true
 end
 
--- Items the search knows: dungeon, raid and BiS items plus the open world drops (the database's Items page lists them).
+-- Every item record shipped or collected by the addon, including equipment whose source has not been catalogued yet.
 local searchIDs
 local function SearchItemIDs()
     if searchIDs then return searchIDs end

@@ -9,8 +9,16 @@ const base = "https://foreverdb.net/api/v1/";
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 async function get(p) {
   for (let attempt = 0; attempt < 6; attempt++) {
-    const r = await fetch(base + p, { headers: { "X-API-Key": key, Accept: "application/json" } });
+    let r;
+    try {
+      r = await fetch(base + p, { headers: { "X-API-Key": key, Accept: "application/json" } });
+    } catch (error) {
+      if (attempt === 5) throw new Error(`${p}: network retries exhausted (${error.cause?.code || error.message})`);
+      await wait((attempt + 1) * 3000);
+      continue;
+    }
     if (r.ok) return r.json();
+    if (r.status === 402) throw new Error(`${p}: HTTP 402 subscription_required (ForeverDB daily limit or subscription tier reached)`);
     if (r.status !== 429 && r.status < 500) throw new Error(`${p}: HTTP ${r.status}`);
     await wait(Math.max(5000, (Number(r.headers.get("retry-after")) || (attempt + 1) * 5) * 1000));
   }
@@ -29,8 +37,9 @@ function keyName(s) { return String(s || "").toLowerCase().replace(/^the\s+/, ""
 (async () => {
   const index = await get("dungeons?limit=100");
   const out = {};
-  for (const row of index.data || []) {
-    await wait(1050);
+  const rows = index.data || [];
+  for (const [i, row] of rows.entries()) {
+    await wait(2050);
     const detail = await get(`dungeons/${row.id}`);
     const d = detail.data || row;
     out[d.id] = {
@@ -39,6 +48,7 @@ function keyName(s) { return String(s || "").toLowerCase().replace(/^the\s+/, ""
       notableLoot: (d.notableLoot || []).map(x => ({ itemId: x.itemId, name: x.name, why: x.why })),
       url: d.url,
     };
+    if ((i + 1) % 10 === 0 || i + 1 === rows.length) console.log(`dungeons: ${i + 1}/${rows.length}`);
   }
   const script = `-- Generated from ForeverDB.net dungeon details.\nlocal _, LJ = ...\nLJ.Data = LJ.Data or {}\nLJ.Data.ForeverDBDungeons = ${lua(out)}\nlocal function FDBName(s) return tostring(s or ""):lower():gsub("^the%s+", ""):gsub("[^a-z0-9]", "") end\nfor _, inst in ipairs(LJ.Data.Instances or {}) do\n    local ik = FDBName(inst.name)\n    for _, d in pairs(LJ.Data.ForeverDBDungeons) do\n        if FDBName(d.name) == ik then\n            inst.foreverDB = d\n            if d.range then inst.minLevel, inst.maxLevel = d.range[1], d.range[2] end\n            inst.foreverDBStatus = d.status\n            inst.foreverDBURL = d.url\n            inst.notableLoot = d.notableLoot\n            break\n        end\n    end\nend\n`;
   fs.mkdirSync(path.dirname(output), { recursive: true });

@@ -1,4 +1,4 @@
-# Lootified Refresh Tool
+# Lootified Continued Refresh Tool
 
 This tool stages verified Forever data for review. It does not scrape arbitrary websites and does not overwrite the live addon automatically.
 

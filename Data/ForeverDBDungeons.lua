@@ -35,7 +35,7 @@ LJ.Data.ForeverDBDungeons = {
                 itemId = 273643,
                 name = "Worgenbane Talisman",
                 why = {
-                    "top pick for Arcane Mage and 9 more specs at level 30/40/50"
+                    "top pick for Arcane Mage and 9 more specs at level 30/40"
                 }
             },
             {
@@ -75,17 +75,17 @@ LJ.Data.ForeverDBDungeons = {
                 }
             },
             {
+                itemId = 3202,
+                name = "Forest Leather Bracers",
+                why = {
+                    "top pick for Assassination Rogue and 5 more specs at level 20"
+                }
+            },
+            {
                 itemId = 273808,
                 name = "Bridgebreaker Bindings",
                 why = {
                     "top pick for Discipline Priest and 4 more specs at level 30"
-                }
-            },
-            {
-                itemId = 2280,
-                name = "Kam's Walking Stick",
-                why = {
-                    "top pick for Beast Mastery Hunter and 1 more spec at level 30"
                 }
             }
         },
@@ -169,18 +169,19 @@ LJ.Data.ForeverDBDungeons = {
                 }
             },
             {
+                itemId = 10413,
+                name = "Gloves of the Fang",
+                why = {
+                    "Embrace of the Viper set",
+                    "top pick for Arms Warrior and 10 more specs at level 20"
+                }
+            },
+            {
                 itemId = 10410,
                 name = "Leggings of the Fang",
                 why = {
                     "Embrace of the Viper set",
                     "top pick for Assassination Rogue and 8 more specs at level 20"
-                }
-            },
-            {
-                itemId = 5404,
-                name = "Serpent's Shoulders",
-                why = {
-                    "top pick for Arms Warrior and 9 more specs at level 20"
                 }
             }
         },
@@ -312,10 +313,10 @@ LJ.Data.ForeverDBDungeons = {
                 }
             },
             {
-                itemId = 9415,
-                name = "Grimlok's Tribal Vestments",
+                itemId = 274425,
+                name = "White Obsidian Wand",
                 why = {
-                    "top pick for Discipline Priest and 1 more spec at level 50"
+                    "top pick for Demonology Warlock and 2 more specs at level 40"
                 }
             }
         },
@@ -348,17 +349,17 @@ LJ.Data.ForeverDBDungeons = {
                 }
             },
             {
+                itemId = 2059,
+                name = "Sentry Cloak",
+                why = {
+                    "top pick for Assassination Rogue and 8 more specs at level 20"
+                }
+            },
+            {
                 itemId = 9456,
                 name = "Glass Shooter",
                 why = {
                     "top pick for Arms Warrior and 7 more specs at level 30"
-                }
-            },
-            {
-                itemId = 5214,
-                name = "Wand of Eventide",
-                why = {
-                    "top pick for Affliction Warlock and 6 more specs at level 30"
                 }
             }
         },
@@ -394,17 +395,17 @@ LJ.Data.ForeverDBDungeons = {
                 }
             },
             {
-                itemId = 10842,
-                name = "Windscale Sarong",
-                why = {
-                    "top pick for Balance Druid and 1 more spec at level 50"
-                }
-            },
-            {
                 itemId = 10845,
                 name = "Warrior's Embrace",
                 why = {
                     "top pick for Protection Paladin and 1 more spec at level 50"
+                }
+            },
+            {
+                itemId = 12465,
+                name = "Nightfall Drape",
+                why = {
+                    "top pick for Affliction Warlock and 1 more spec at level 50"
                 }
             }
         },
@@ -441,7 +442,7 @@ LJ.Data.ForeverDBDungeons = {
                 itemId = 274385,
                 name = "Abomination Chain",
                 why = {
-                    "top pick for Feral Combat Druid and 2 more specs at level 40/50"
+                    "top pick for Feral Combat Druid and 2 more specs at level 40"
                 }
             },
             {
@@ -534,15 +535,15 @@ LJ.Data.ForeverDBDungeons = {
         },
         notableLoot = {
             {
-                itemId = 274641,
-                name = "Theka's Last Breath",
+                itemId = 12471,
+                name = "Desertwalker Cane",
                 why = {
-                    "top pick for Arcane Mage and 8 more specs at level 50"
+                    "top pick for Discipline Priest and 4 more specs at level 50"
                 }
             },
             {
-                itemId = 12471,
-                name = "Desertwalker Cane",
+                itemId = 274641,
+                name = "Theka's Last Breath",
                 why = {
                     "top pick for Discipline Priest and 4 more specs at level 50"
                 }
@@ -593,17 +594,17 @@ LJ.Data.ForeverDBDungeons = {
                 }
             },
             {
-                itemId = 13183,
-                name = "Venomspitter",
+                itemId = 22267,
+                name = "Spellweaver's Turban",
                 why = {
-                    "Spider's Kiss set"
+                    "top pick for Affliction Warlock and 8 more specs at level 60"
                 }
             },
             {
-                itemId = 13211,
-                name = "Slashclaw Bracers",
+                itemId = 12927,
+                name = "Truestrike Shoulders",
                 why = {
-                    "top pick for Beast Mastery Hunter and 1 more spec at level 60"
+                    "top pick for Arms Warrior and 2 more specs at level 60"
                 }
             }
         },
@@ -645,13 +646,6 @@ LJ.Data.ForeverDBDungeons = {
         },
         notableLoot = {
             {
-                itemId = 11626,
-                name = "Blackveil Cape",
-                why = {
-                    "top pick for Arms Warrior and 9 more specs at level 50"
-                }
-            },
-            {
                 itemId = 11623,
                 name = "Spritecaster Cape",
                 why = {
@@ -663,6 +657,13 @@ LJ.Data.ForeverDBDungeons = {
                 name = "Kentic Amice",
                 why = {
                     "top pick for Affliction Warlock and 8 more specs at level 50"
+                }
+            },
+            {
+                itemId = 11626,
+                name = "Blackveil Cape",
+                why = {
+                    "top pick for Arms Warrior and 7 more specs at level 50"
                 }
             }
         },
@@ -687,7 +688,7 @@ LJ.Data.ForeverDBDungeons = {
                 itemId = 11302,
                 name = "Uther's Strength",
                 why = {
-                    "top pick for Discipline Priest and 5 more specs at level 50/60"
+                    "top pick for Discipline Priest and 4 more specs at level 50/60"
                 }
             },
             {
@@ -748,6 +749,13 @@ LJ.Data.ForeverDBDungeons = {
         },
         notableLoot = {
             {
+                itemId = 13938,
+                name = "Bonecreeper Stylus",
+                why = {
+                    "top pick for Affliction Warlock and 8 more specs at level 60"
+                }
+            },
+            {
                 itemId = 14616,
                 name = "Bloodmail Boots",
                 why = {
@@ -756,18 +764,10 @@ LJ.Data.ForeverDBDungeons = {
                 }
             },
             {
-                itemId = 13967,
-                name = "Windreaver Greaves",
+                itemId = 18681,
+                name = "Burial Shawl",
                 why = {
-                    "top pick for Beast Mastery Hunter and 4 more specs at level 60"
-                }
-            },
-            {
-                itemId = 16711,
-                name = "Shadowcraft Boots",
-                why = {
-                    "Shadowcraft Armor set",
-                    "top pick for Beast Mastery Hunter and 2 more specs at level 60"
+                    "top pick for Arcane Mage and 5 more specs at level 60"
                 }
             }
         },
@@ -833,24 +833,24 @@ LJ.Data.ForeverDBDungeons = {
         },
         notableLoot = {
             {
-                itemId = 23125,
-                name = "Chains of the Lich",
+                itemId = 22403,
+                name = "Nacreous Shell Necklace",
                 why = {
-                    "top pick for Affliction Warlock and 7 more specs at level 60"
+                    "top pick for Affliction Warlock and 8 more specs at level 60"
                 }
             },
             {
-                itemId = 22408,
-                name = "Ritssyn's Wand of Bad Mojo",
+                itemId = 280065,
+                name = "Behemoth Bones",
                 why = {
-                    "top pick for Affliction Warlock and 6 more specs at level 60"
+                    "top pick for Arms Warrior and 7 more specs at level 60"
                 }
             },
             {
-                itemId = 18727,
-                name = "Crimson Felt Hat",
+                itemId = 13404,
+                name = "Mask of the Unforgiven",
                 why = {
-                    "top pick for Affliction Warlock and 5 more specs at level 60"
+                    "top pick for Assassination Rogue and 6 more specs at level 60"
                 }
             }
         },
@@ -882,7 +882,7 @@ LJ.Data.ForeverDBDungeons = {
                 itemId = 17713,
                 name = "Blackstone Ring",
                 why = {
-                    "top pick for Affliction Warlock and 14 more specs at level 50"
+                    "top pick for Affliction Warlock and 13 more specs at level 50"
                 }
             },
             {
@@ -959,7 +959,7 @@ LJ.Data.ForeverDBDungeons = {
                 itemId = 11302,
                 name = "Uther's Strength",
                 why = {
-                    "top pick for Discipline Priest and 5 more specs at level 50/60"
+                    "top pick for Discipline Priest and 4 more specs at level 50/60"
                 }
             },
             {
@@ -1013,6 +1013,13 @@ LJ.Data.ForeverDBDungeons = {
         },
         notableLoot = {
             {
+                itemId = 18327,
+                name = "Whipvine Cord",
+                why = {
+                    "top pick for Discipline Priest and 4 more specs at level 60"
+                }
+            },
+            {
                 itemId = 18386,
                 name = "Padre's Trousers",
                 why = {
@@ -1024,13 +1031,6 @@ LJ.Data.ForeverDBDungeons = {
                 name = "Bracers of the Eclipse",
                 why = {
                     "top pick for Assassination Rogue and 3 more specs at level 60"
-                }
-            },
-            {
-                itemId = 18525,
-                name = "Bracers of Prosperity",
-                why = {
-                    "top pick for Holy Paladin and 2 more specs at level 60"
                 }
             }
         },
@@ -1062,7 +1062,7 @@ LJ.Data.ForeverDBDungeons = {
                 itemId = 11302,
                 name = "Uther's Strength",
                 why = {
-                    "top pick for Discipline Priest and 5 more specs at level 50/60"
+                    "top pick for Discipline Priest and 4 more specs at level 50/60"
                 }
             },
             {
@@ -1439,6 +1439,14 @@ LJ.Data.ForeverDBDungeons = {
         },
         notableLoot = {
             {
+                itemId = 286989,
+                name = "Violet Sorcerer's Wraps",
+                why = {
+                    "Violet Sorcerer's Vestments set",
+                    "top pick for Affliction Warlock and 18 more specs at level 30/40"
+                }
+            },
+            {
                 itemId = 273036,
                 name = "Graveweave Bindings",
                 why = {
@@ -1446,18 +1454,10 @@ LJ.Data.ForeverDBDungeons = {
                 }
             },
             {
-                itemId = 273044,
-                name = "Violet Sorcerer's Robes",
+                itemId = 286994,
+                name = "Tattered Kirin Tor Cloak",
                 why = {
-                    "Violet Sorcerer's Vestments set",
-                    "top pick for Arcane Mage and 6 more specs at level 30"
-                }
-            },
-            {
-                itemId = 273047,
-                name = "Unstable Crystalline Shoulderpads",
-                why = {
-                    "top pick for Assassination Rogue and 6 more specs at level 30"
+                    "top pick for Affliction Warlock and 14 more specs at level 30/40"
                 }
             }
         },
@@ -1496,10 +1496,10 @@ LJ.Data.ForeverDBDungeons = {
                 }
             },
             {
-                itemId = 273029,
-                name = "Golemsight Long Gun",
+                itemId = 273027,
+                name = "Raptor's Gaze",
                 why = {
-                    "top pick for Assassination Rogue and 5 more specs at level 30"
+                    "top pick for Arcane Mage and 3 more specs at level 30"
                 }
             }
         },

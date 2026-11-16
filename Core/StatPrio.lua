@@ -1,12 +1,5 @@
--- Lootified - the stat priority: the order of a spec's stats the player drags in the filter's panel (UI/StatPrioView.lua)
--- and the stat weights it gives (Core/Scoring.lua scores every item with StatPrio.Weights). A stat's value is what an
--- item's usual amount of it counts by the spec's weights (STATS: typical); the spec's own order sorts its stats by it.
--- A stat the player drags takes a value between its new neighbours' (their geometric mean; above the first STEP more,
--- below the last STEP less): its weights scale by as much, every other weight stays. An order like the spec's own is
--- the spec's own (its weights as they are). Saved per character and spec of its class (LJ.cdb.statPrio[specKey] =
--- { order = the stat keys top down, factor = { [stat key] = what the drags made of its weights } }; none: the spec's
--- own). Weapon damage keeps its weight. It counts only while items are rated in Percent: with Sim the simulator rates
--- them and what it has no number for yet goes by the spec's own weights (StatPrio.Counts); the saved order is kept.
+-- Lootified - one researched, spec-specific stat order drives both the Stat priority panel and Percent scoring.
+-- The displayed bars are the relative values used by the scorer, so a lower row can never silently count more.
 local _, LJ = ...
 
 local StatPrio = {}
@@ -15,14 +8,8 @@ LJ.StatPrio = StatPrio
 local Player = LJ.Player
 local Scoring = LJ.Scoring
 
--- The stats an order can have, in the order of equal values: the name items show, what an item gives of it in place of
--- 13 points of a primary stat (13: the median of a primary stat on the shipped uncommon and better items of required
--- level 50 to 60, Data/ItemStats.lua; the item budget of the others from the same items' medians: 2 attack power, 2.5
--- ranged attack power, 1.15 spell power, 2.2 healing, 2 school damage, 0.4 MP5, 0.77 Defense, 1.3 block value or 14
--- armor for a point of a primary stat, ratings 1 to 1; research/build_forever_specs.py checks the specs' weights the
--- same way) and the weights it stands for (Core/Scoring.lua keys) with the rating one point of a weight counts (its
--- Scoring.CR name: the rating per 1 % at level 60, Scoring.RATING_PER_PCT_60); a stat without them stands for its own
--- key, 1 to 1.
+-- Typical item amounts are used only to put different units on the same visual/score scale. Each spec's existing
+-- weight curve is retained; the researched order assigns that curve from highest to lowest priority per spec.
 StatPrio.STATS = {
     { key = "Strength", text = "Strength", typical = 13 },
     { key = "Agility", text = "Agility", typical = 13 },
@@ -31,6 +18,9 @@ StatPrio.STATS = {
     { key = "Spirit", text = "Spirit", typical = 13 },
     { key = "AttackPower", text = "Attack Power", typical = 26 },
     { key = "RangedAttackPower", text = "Ranged Attack Power", typical = 32.5 },
+    { key = "WeaponDPS", text = "Weapon DPS", typical = 1 },
+    { key = "OffHandWeaponDPS", text = "Off-hand Weapon DPS", typical = 1 },
+    { key = "RangedWeaponDPS", text = "Ranged Weapon DPS", typical = 1 },
     { key = "SpellPower", text = "Spell Power", typical = 15 },
     { key = "Healing", text = "Healing", typical = 29 },
     { key = "ShadowPower", text = "Shadow Spell Power", typical = 26 },
@@ -43,6 +33,7 @@ StatPrio.STATS = {
     { key = "Crit", text = "Critical Strike Rating", typical = 13, weights = { Crit = "CRIT_MELEE", SpellCrit = "CRIT_SPELL" } },
     { key = "Haste", text = "Haste Rating", typical = 13, weights = { Haste = "HASTE" } },
     { key = "Expertise", text = "Expertise Rating", typical = 13, weights = { Expertise = "EXPERTISE" } },
+    { key = "WeaponSkill", text = "Weapon Skill", typical = 1, weights = { WeaponSkill = "WEAPON_SKILL" } },
     { key = "MP5", text = "Mana per 5 sec.", typical = 5.2 },
     { key = "Defense", text = "Defense", typical = 10 },
     { key = "Dodge", text = "Dodge Rating", typical = 13, weights = { Dodge = "DODGE" } },
@@ -51,66 +42,66 @@ StatPrio.STATS = {
     { key = "BlockValue", text = "Block Value", typical = 17 },
     { key = "Armor", text = "Armor", typical = 183 },
 }
--- the weights no stat stands for: weapon damage
-local WEAPON = { WeaponDPS = true, OffHandWeaponDPS = true, RangedWeaponDPS = true }
-local STEP = 1.15
 
--- Curated starting orders, based on current WoW: Forever class guides and the author's saved Druid order.
--- These are rankings only: they do not change any spec's scoring weights. A curated key is used only when
--- that stat already exists for the spec; remaining supported stats keep their normal fallback order.
-local CURATED_ORDER = {
+local WEAPON = { WeaponDPS = true, OffHandWeaponDPS = true, RangedWeaponDPS = true }
+
+-- Forever-focused PvE guide priorities. Weapon DPS remains a separate weapon score; hit/expertise caps, role, and
+-- healing/threat/mitigation goals are reflected in the order where the spec's item model supports those stats.
+-- Sources are noted in the repository documentation; when a guide gives separate tank threat and mitigation lists,
+-- Bear and Protection use a practical combined leveling/gearing order with survivability first.
+local PRIORITY = {
     WARRIOR = {
-        ARMS = { "Hit", "Expertise", "Crit", "Strength", "Agility", "AttackPower", "Haste", "Stamina" },
-        FURY = { "Hit", "Expertise", "Crit", "Strength", "Agility", "AttackPower", "Haste", "Stamina" },
-        PROT = { "Stamina", "Defense", "Armor", "Expertise", "Hit", "Dodge", "Parry", "Block", "BlockValue", "Strength", "AttackPower", "Agility", "Crit" },
+        ARMS = { "WeaponDPS", "Hit", "Expertise", "Crit", "Strength", "AttackPower", "Agility", "Haste", "Stamina" },
+        FURY = { "WeaponDPS", "OffHandWeaponDPS", "Hit", "Expertise", "Crit", "Strength", "AttackPower", "Agility", "Haste", "Stamina" },
+        PROT = { "Stamina", "Armor", "Agility", "Dodge", "Parry", "Defense", "Expertise", "Hit", "Strength", "WeaponDPS", "AttackPower", "BlockValue", "Block", "Crit", "Haste" },
     },
     PALADIN = {
-        HOLY = { "Healing", "Intellect", "Crit", "Spirit", "MP5", "Haste", "SpellPower", "HolyPower", "Stamina", "Armor", "Agility" },
-        PROT = { "Stamina", "Defense", "Armor", "Hit", "Expertise", "Dodge", "Parry", "Block", "BlockValue", "Strength", "AttackPower", "SpellPower", "HolyPower", "Intellect", "Crit", "Haste" },
-        RET = { "Hit", "Expertise", "Strength", "AttackPower", "SpellPower", "HolyPower", "Crit", "Agility", "Intellect", "Stamina", "Spirit", "MP5" },
-        HOLY_DMG = { "Hit", "Expertise", "Strength", "AttackPower", "SpellPower", "HolyPower", "Crit", "Agility", "Intellect", "Stamina", "Spirit", "MP5" },
+        HOLY = { "Healing", "Intellect", "Spirit", "MP5", "Crit", "Haste", "SpellPower", "HolyPower", "Stamina", "Armor", "Agility" },
+        PROT = { "Stamina", "Defense", "SpellPower", "Intellect", "Strength", "Armor", "Block", "BlockValue", "Dodge", "Parry", "WeaponDPS", "Hit", "HolyPower", "Expertise", "Crit", "Haste" },
+        RET = { "WeaponDPS", "Hit", "Expertise", "Strength", "SpellPower", "HolyPower", "AttackPower", "Crit", "Agility", "Intellect", "Stamina", "Haste", "Spirit", "MP5" },
+        HOLY_DMG = { "WeaponDPS", "Hit", "SpellPower", "HolyPower", "Crit", "Intellect", "Strength", "AttackPower", "Expertise", "Agility", "Stamina", "Spirit", "MP5" },
     },
     HUNTER = {
-        BM = { "Hit", "Crit", "Agility", "RangedAttackPower", "AttackPower", "Intellect", "Spirit", "Stamina", "MP5" },
-        MM = { "Hit", "Crit", "Agility", "RangedAttackPower", "AttackPower", "Intellect", "Spirit", "Stamina", "MP5" },
-        SV = { "Hit", "Crit", "Agility", "Strength", "AttackPower", "RangedAttackPower", "Intellect", "Spirit", "Stamina", "MP5" },
+        BM = { "RangedWeaponDPS", "Hit", "Crit", "Agility", "RangedAttackPower", "AttackPower", "Intellect", "Stamina", "Spirit", "MP5" },
+        MM = { "RangedWeaponDPS", "Hit", "Crit", "Agility", "RangedAttackPower", "AttackPower", "Intellect", "Stamina", "Spirit", "MP5" },
+        SV = { "WeaponDPS", "OffHandWeaponDPS", "RangedWeaponDPS", "Hit", "Crit", "Agility", "RangedAttackPower", "AttackPower", "Strength", "Intellect", "Stamina", "Spirit", "MP5" },
     },
     ROGUE = {
-        ASSA = { "Hit", "Expertise", "Agility", "Crit", "Haste", "Strength", "AttackPower", "Stamina" },
-        COMBAT = { "Hit", "Expertise", "Agility", "Crit", "Haste", "Strength", "AttackPower", "Stamina" },
-        SUB = { "Hit", "Expertise", "Agility", "Crit", "Haste", "Strength", "AttackPower", "Stamina" },
+        ASSA = { "Expertise", "Hit", "Agility", "WeaponDPS", "OffHandWeaponDPS", "Crit", "AttackPower", "Strength", "Haste", "Stamina" },
+        COMBAT = { "Expertise", "Hit", "Agility", "WeaponDPS", "OffHandWeaponDPS", "Crit", "AttackPower", "Strength", "Haste", "Stamina" },
+        SUB = { "WeaponDPS", "OffHandWeaponDPS", "Expertise", "Hit", "WeaponSkill", "Agility", "Crit", "AttackPower", "Strength", "Haste", "Stamina" },
     },
     PRIEST = {
-        DISC = { "Healing", "Intellect", "MP5", "Spirit", "Crit", "SpellPower", "Stamina" },
-        HOLY = { "Healing", "Intellect", "MP5", "Spirit", "Crit", "SpellPower", "Stamina" },
-        SHADOW = { "Hit", "Crit", "SpellPower", "ShadowPower", "Intellect", "Spirit", "MP5", "Stamina", "Haste" },
-        DISC_DMG = { "Hit", "Crit", "SpellPower", "ShadowPower", "Intellect", "Spirit", "MP5", "Stamina", "Haste" },
-        HOLY_DMG = { "Hit", "Crit", "SpellPower", "ShadowPower", "Intellect", "Spirit", "MP5", "Stamina", "Haste" },
+        DISC = { "Healing", "MP5", "Spirit", "Intellect", "Crit", "SpellPower", "ShadowPower", "Stamina" },
+        HOLY = { "Healing", "Intellect", "Spirit", "MP5", "Crit", "SpellPower", "Stamina" },
+        SHADOW = { "Hit", "SpellPower", "ShadowPower", "Crit", "Haste", "Intellect", "Spirit", "MP5", "Stamina" },
+        DISC_DMG = { "Hit", "SpellPower", "ShadowPower", "Crit", "Haste", "Intellect", "Spirit", "MP5", "Stamina" },
+        HOLY_DMG = { "Hit", "SpellPower", "HolyPower", "Crit", "Haste", "Intellect", "Spirit", "MP5", "Stamina" },
     },
     SHAMAN = {
-        ELE = { "Hit", "Haste", "SpellPower", "NaturePower", "FirePower", "FrostPower", "Crit", "Intellect", "Spirit", "MP5", "Stamina" },
-        ENH = { "Hit", "Expertise", "Strength", "AttackPower", "SpellPower", "Intellect", "Crit", "Agility", "Spirit", "Stamina", "MP5" },
-        RESTO = { "Healing", "Intellect", "Spirit", "MP5", "Crit", "Haste", "SpellPower", "Stamina" },
+        ELE = { "SpellPower", "NaturePower", "FirePower", "FrostPower", "Hit", "Crit", "Haste", "Intellect", "MP5", "Spirit", "Stamina" },
+        ENH = { "WeaponDPS", "Hit", "Expertise", "Strength", "Intellect", "SpellPower", "AttackPower", "Crit", "Agility", "Stamina", "Spirit", "MP5" },
+        RESTO = { "Healing", "Intellect", "MP5", "Spirit", "Crit", "Haste", "SpellPower", "Stamina" },
     },
     MAGE = {
-        ARCANE = { "Hit", "SpellPower", "ArcanePower", "Crit", "Haste", "Intellect", "Spirit", "MP5", "Stamina" },
+        ARCANE = { "Hit", "SpellPower", "ArcanePower", "Crit", "Haste", "Intellect", "MP5", "Spirit", "Stamina" },
         FIRE = { "Hit", "SpellPower", "FirePower", "Crit", "Haste", "Intellect", "Spirit", "MP5", "Stamina" },
-        FROST = { "Hit", "Crit", "SpellPower", "FrostPower", "ArcanePower", "Intellect", "Spirit", "Haste", "MP5", "Stamina" },
+        FROST = { "Hit", "SpellPower", "FrostPower", "ArcanePower", "Crit", "Intellect", "Haste", "MP5", "Spirit", "Stamina" },
     },
     WARLOCK = {
-        AFFLI = { "SpellPower", "ShadowPower", "Crit", "Hit", "Haste", "Intellect", "Spirit", "Stamina" },
-        DEMO = { "SpellPower", "ShadowPower", "Hit", "Crit", "Haste", "Intellect", "Spirit", "Stamina" },
-        DESTRO = { "SpellPower", "FirePower", "Crit", "Hit", "Haste", "Intellect", "Spirit", "Stamina" },
+        AFFLI = { "Hit", "SpellPower", "ShadowPower", "Crit", "Haste", "Intellect", "Spirit", "Stamina", "FirePower" },
+        DEMO = { "Hit", "SpellPower", "ShadowPower", "Crit", "Haste", "Intellect", "Spirit", "Stamina", "FirePower" },
+        DESTRO = { "Hit", "SpellPower", "FirePower", "Haste", "Crit", "Intellect", "Spirit", "Stamina", "ShadowPower" },
     },
     DRUID = {
-        CAT = { "Hit", "Expertise", "Crit", "Strength", "Agility", "AttackPower", "Stamina", "Armor", "Spirit", "Intellect", "SpellPower", "MP5" },
-        RESTO = { "Healing", "Intellect", "Spirit", "MP5", "Crit", "Haste", "Stamina", "Armor", "Agility" },
-        BALANCE = { "Hit", "Crit", "SpellPower", "ArcanePower", "NaturePower", "Intellect", "Haste", "Spirit", "MP5", "Stamina", "Armor", "Agility" },
-        BEAR = { "Stamina", "Defense", "Armor", "Agility", "Dodge", "Hit", "Expertise", "Strength", "AttackPower", "Crit", "Spirit", "Intellect", "MP5" },
+        CAT = { "WeaponDPS", "Expertise", "Hit", "Agility", "Strength", "Crit", "AttackPower", "Stamina", "Armor", "Intellect", "Spirit", "MP5" },
+        BEAR = { "Armor", "Defense", "Stamina", "WeaponDPS", "Expertise", "Hit", "Agility", "Dodge", "Crit", "Strength", "AttackPower", "Spirit", "Intellect", "MP5" },
+        BALANCE = { "Hit", "SpellPower", "NaturePower", "ArcanePower", "Crit", "Haste", "Intellect", "MP5", "Spirit", "Stamina", "Armor", "Agility" },
+        RESTO = { "Healing", "Intellect", "MP5", "Spirit", "Crit", "Haste", "SpellPower", "Stamina", "Armor", "Agility" },
     },
 }
 
-local BY_KEY, OF_WEIGHT = {}, {}   -- stat key -> stat; weight key -> the stat that stands for it
+local BY_KEY, OF_WEIGHT = {}, {}
 for i, stat in ipairs(StatPrio.STATS) do
     stat.index = i
     stat.weights = stat.weights or { [stat.key] = false }
@@ -118,190 +109,185 @@ for i, stat in ipairs(StatPrio.STATS) do
     for weight in pairs(stat.weights) do OF_WEIGHT[weight] = stat end
 end
 
--- What one point of a weight counts of the stat's item amount (1, or a rating per 1 %).
+-- A spec cannot gain useful damage from every stat present on an item. Feral Cat's Forever DPS guide has no value
+-- for generic spell power; counting that line was enough to make Staff of Jordan outrank a higher-DPS feral weapon.
+-- Remove inputs that the Forever spec does not use. This prevents old generic weight tables from letting caster
+-- stats dominate a physical item comparison. Hybrid specs (Enhancement and Retribution) keep their documented
+-- cross-school stats.
+local IGNORE = {
+    DRUID = {
+        CAT = { SpellPower = true, Healing = true, ShadowPower = true, FirePower = true, FrostPower = true,
+            NaturePower = true, ArcanePower = true, HolyPower = true, SpellHit = true, SpellCrit = true,
+            Intellect = true, Spirit = true, MP5 = true },
+        BEAR = { SpellPower = true, Healing = true, ShadowPower = true, FirePower = true, FrostPower = true,
+            NaturePower = true, ArcanePower = true, HolyPower = true, SpellHit = true, SpellCrit = true,
+            Intellect = true, Spirit = true, MP5 = true },
+    },
+    WARRIOR = {
+        ARMS = { SpellPower = true, Healing = true, ShadowPower = true, FirePower = true, FrostPower = true,
+            NaturePower = true, ArcanePower = true, HolyPower = true, SpellHit = true, SpellCrit = true,
+            Intellect = true, Spirit = true, MP5 = true },
+        FURY = { SpellPower = true, Healing = true, ShadowPower = true, FirePower = true, FrostPower = true,
+            NaturePower = true, ArcanePower = true, HolyPower = true, SpellHit = true, SpellCrit = true,
+            Intellect = true, Spirit = true, MP5 = true },
+        PROT = { SpellPower = true, Healing = true, ShadowPower = true, FirePower = true, FrostPower = true,
+            NaturePower = true, ArcanePower = true, HolyPower = true, SpellHit = true, SpellCrit = true,
+            Intellect = true, Spirit = true, MP5 = true },
+    },
+    ROGUE = {
+        ASSA = { SpellPower = true, Healing = true, ShadowPower = true, FirePower = true, FrostPower = true,
+            NaturePower = true, ArcanePower = true, HolyPower = true, SpellHit = true, SpellCrit = true,
+            Intellect = true, Spirit = true, MP5 = true },
+        COMBAT = { SpellPower = true, Healing = true, ShadowPower = true, FirePower = true, FrostPower = true,
+            NaturePower = true, ArcanePower = true, HolyPower = true, SpellHit = true, SpellCrit = true,
+            Intellect = true, Spirit = true, MP5 = true },
+        SUB = { SpellPower = true, Healing = true, ShadowPower = true, FirePower = true, FrostPower = true,
+            NaturePower = true, ArcanePower = true, HolyPower = true, SpellHit = true, SpellCrit = true,
+            Intellect = true, Spirit = true, MP5 = true },
+    },
+    HUNTER = {
+        BM = { SpellPower = true, Healing = true, ShadowPower = true, FirePower = true, FrostPower = true,
+            NaturePower = true, ArcanePower = true, HolyPower = true, SpellHit = true, SpellCrit = true },
+        MM = { SpellPower = true, Healing = true, ShadowPower = true, FirePower = true, FrostPower = true,
+            NaturePower = true, ArcanePower = true, HolyPower = true, SpellHit = true, SpellCrit = true },
+        SV = { SpellPower = true, Healing = true, ShadowPower = true, FirePower = true, FrostPower = true,
+            NaturePower = true, ArcanePower = true, HolyPower = true, SpellHit = true, SpellCrit = true },
+    },
+}
+
+local function InputWeights(spec)
+    local weights = {}
+    for key, value in pairs(spec.weights) do weights[key] = value end
+    -- Subtlety's current Forever guide explicitly values weapon skill. The lightweight scorer
+    -- retains the established equivalence used by its legacy item model, now exposed as its own row.
+    if spec.class == "ROGUE" and spec.key == "SUB" and weights.WeaponSkill == nil then
+        weights.WeaponSkill = 0.2 * (weights.Hit or 0)
+    end
+    local ignored = IGNORE[spec.class] and IGNORE[spec.class][spec.key]
+    for key in pairs(ignored or {}) do
+        local stat = BY_KEY[key]
+        if stat then
+            for weight in pairs(stat.weights) do weights[weight] = 0 end
+        else
+            weights[key] = 0
+        end
+    end
+    return weights
+end
+
 local function Per(stat, weight)
     local cr = stat.weights[weight]
     return cr and Scoring.RATING_PER_PCT_60[cr] or 1
 end
 
--- What an item's usual amount of a stat counts by weights.
 local function Value(weights, stat)
-    local v = 0
-    for weight in pairs(stat.weights) do v = v + (weights[weight] or 0) * stat.typical / Per(stat, weight) end
-    return v
+    local value = 0
+    for weight in pairs(stat.weights) do
+        value = value + (weights[weight] or 0) * stat.typical / Per(stat, weight)
+    end
+    return value
 end
 
--- The spec's own order: its stats with a value, the highest first (equal ones in STATS' order).
-function StatPrio.DefaultOrder(spec)
-    local order, values = {}, {}
-    for weight, w in pairs(spec.weights) do
+local function BaseRows(spec, weights)
+    local rows, seen = {}, {}
+    for weight, w in pairs(weights) do
         assert(OF_WEIGHT[weight] or WEAPON[weight], "stat priority: no stat for the weight " .. weight)
-        local stat = OF_WEIGHT[weight]
-        if stat and w > 0 and not values[stat.key] then
-            values[stat.key] = Value(spec.weights, stat)
-            order[#order + 1] = stat.key
+        -- Weapon DPS has no regular item-stat weight mapping, but it still needs a visible priority row and must
+        -- participate in the same per-spec order as the other scoring inputs.
+        local stat = OF_WEIGHT[weight] or (WEAPON[weight] and BY_KEY[weight])
+        if stat and w > 0 and not seen[stat.key] then
+            seen[stat.key] = true
+            rows[#rows + 1] = { key = stat.key, value = Value(weights, stat), stat = stat }
         end
     end
-    table.sort(order, function(a, b)
-        if values[a] ~= values[b] then return values[a] > values[b] end
-        return BY_KEY[a].index < BY_KEY[b].index
+    table.sort(rows, function(a, b)
+        if a.value ~= b.value then return a.value > b.value end
+        return a.stat.index < b.stat.index
     end)
+    return rows
+end
 
-    local preferred = CURATED_ORDER[spec.class] and CURATED_ORDER[spec.class][spec.key]
-    if not preferred then return order end
-    local available, curated, seen = {}, {}, {}
-    for _, key in ipairs(order) do available[key] = true end
-    for _, key in ipairs(preferred) do
-        if available[key] and not seen[key] then
-            curated[#curated + 1], seen[key] = key, true
-        end
+-- Return a full spec-specific order: researched ranks first, then any supported leftovers by their original baseline.
+local function MakeOrder(spec)
+    local weights = InputWeights(spec)
+    local base, byKey, order, seen = BaseRows(spec, weights), {}, {}, {}
+    for _, row in ipairs(base) do byKey[row.key] = row end
+    local preferred = PRIORITY[spec.class] and PRIORITY[spec.class][spec.key]
+    for _, key in ipairs(preferred or {}) do
+        if byKey[key] and not seen[key] then order[#order + 1], seen[key] = key, true end
     end
-    for _, key in ipairs(order) do
-        if not seen[key] then curated[#curated + 1] = key end
+    for _, row in ipairs(base) do
+        if not seen[row.key] then order[#order + 1], seen[row.key] = row.key, true end
     end
-    return curated
+    return order, base, byKey, weights
 end
 
--- The player's priority counts for a spec: one of the character's class while its items are rated in Percent (with
--- Sim the simulator rates them: UI.Sim.RanksItems).
-function StatPrio.Counts(spec)
-    return spec.class == Player.class and not LJ.UI.Sim.RanksItems(spec)
-end
-
--- The priority the player set for a spec while it counts; nil: the spec's own counts.
-local function Saved(spec)
-    return StatPrio.Counts(spec) and LJ.cdb.statPrio[spec.key] or nil
-end
-
--- A saved priority's weights, its stats' values, the stats it moved and its key (the rankings are kept per key); kept
--- per spec until it changes.
 local computed = {}
+
+-- The source priority controls scoring, not just the labels: existing per-spec weight magnitudes are sorted and
+-- assigned in the researched order, keeping their spread while making the displayed order and scorer agree.
 local function Computed(spec)
-    local saved = Saved(spec)
-    if not saved then return nil end
-    local c = computed[spec.key]
+    local c = computed[spec.class .. ":" .. spec.key]
     if c then return c end
-    c = { weights = {}, value = {}, moved = {} }
-    for weight, w in pairs(spec.weights) do c.weights[weight] = w end
-    local parts = {}
-    for _, key in ipairs(saved.order) do
-        local stat, f = BY_KEY[key], saved.factor[key]
-        c.value[key] = Value(spec.weights, stat) * (f or 1)
-        if f then
-            c.moved[key] = true
-            parts[#parts + 1] = key .. "=" .. f
+    local order, base, byKey, inputWeights = MakeOrder(spec)
+    c = { weights = {}, value = {}, order = order }
+    for weight, value in pairs(inputWeights) do c.weights[weight] = value end
+    for index, key in ipairs(order) do
+        local stat, original = BY_KEY[key], byKey[key]
+        local target = base[index] and base[index].value or 0
+        local factor = original and original.value > 0 and target / original.value or 1
+        c.value[key] = target
+        if factor ~= 1 then
             for weight in pairs(stat.weights) do
-                if spec.weights[weight] then c.weights[weight] = spec.weights[weight] * f end
+                if inputWeights[weight] then c.weights[weight] = inputWeights[weight] * factor end
             end
         end
     end
-    c.key = table.concat(saved.order, ",") .. "|" .. table.concat(parts, ",")
-    computed[spec.key] = c
+    c.key = table.concat(order, ",")
+    computed[spec.class .. ":" .. spec.key] = c
     return c
 end
 
--- The weights a spec's items are scored with: its own (the same table), or those of the priority the player set.
+function StatPrio.DefaultOrder(spec)
+    local order = Computed(spec).order
+    local copy = {}
+    for i, key in ipairs(order) do copy[i] = key end
+    return copy
+end
+
+function StatPrio.Counts(spec)
+    -- Keep the read-only priority explanation visible for the active scorer on every spec.
+    return spec.class == Player.class
+end
+
 function StatPrio.Weights(spec)
-    local c = Computed(spec)
-    return c and c.weights or spec.weights
+    if not StatPrio.Counts(spec) then return spec.weights end
+    return Computed(spec).weights
 end
 
--- The priority as one text for the rankings kept per priority ("": the spec's own).
 function StatPrio.Key(spec)
-    local c = Computed(spec)
-    return c and c.key or ""
+    return Computed(spec).key
 end
 
-function StatPrio.IsCustom(spec)
-    return Saved(spec) ~= nil
-end
+function StatPrio.IsCustom() return false end
+function StatPrio.Order(spec) return StatPrio.DefaultOrder(spec) end
 
--- The order of a spec now (stat keys top down; a copy).
-function StatPrio.Order(spec)
-    local saved, order = Saved(spec), {}
-    for i, key in ipairs(saved and saved.order or StatPrio.DefaultOrder(spec)) do order[i] = key end
-    return order
-end
-
--- The stats top down as the panel shows them: { key, text, value (what an item's usual amount counts now), moved
--- (dragged: its weights changed) }.
 function StatPrio.Rows(spec)
     local c, rows = Computed(spec), {}
-    for i, key in ipairs(StatPrio.Order(spec)) do
+    for i, key in ipairs(c.order) do
         local stat = BY_KEY[key]
-        rows[i] = { key = key, text = stat.text, value = c and c.value[key] or Value(spec.weights, stat),
-            moved = c ~= nil and c.moved[key] == true }
+        rows[i] = { key = key, text = stat.text, value = c.value[key] or 0 }
     end
     return rows
 end
 
--- Saves a spec's priority (nil: its own) and everything that rates items follows (LIST_CHANGED).
-local function Store(spec, saved)
-    assert(StatPrio.Counts(spec), "stat priority of another class or with Sim: " .. spec.class .. " " .. spec.key)
-    LJ.cdb.statPrio[spec.key] = saved
-    computed[spec.key] = nil
-    LJ:Fire("LIST_CHANGED")
-end
-
--- A stat dragged to place index of the order (1: the top): it takes a value between its new neighbours' (above the
--- first STEP more, below the last STEP less), the others keep theirs; an order like the spec's own is its own again.
-function StatPrio.Move(spec, key, index)
-    local rows = StatPrio.Rows(spec)
-    local order, value, from = {}, {}, nil
-    for i, r in ipairs(rows) do
-        order[i], value[r.key] = r.key, r.value
-        if r.key == key then from = i end
-    end
-    assert(from, "stat priority: no stat " .. tostring(key) .. " for " .. spec.key)
-    assert(index >= 1 and index <= #order, "stat priority: no place " .. tostring(index))
-    if index == from then return end
-    table.remove(order, from)
-    table.insert(order, index, key)
-    local above = order[index - 1] and value[order[index - 1]]
-    local below = order[index + 1] and value[order[index + 1]]
-    local v
-    if above and below then
-        v = math.sqrt(above * below)
-    elseif below then
-        v = below * STEP
-    else
-        v = above / STEP
-    end
-    local factor, saved = {}, Saved(spec)
-    for k, f in pairs(saved and saved.factor or {}) do factor[k] = f end
-    factor[key] = v / Value(spec.weights, BY_KEY[key])
-    local own = table.concat(StatPrio.DefaultOrder(spec), ",") == table.concat(order, ",")
-    Store(spec, not own and { order = order, factor = factor } or nil)
-end
-
-function StatPrio.Reset(spec)
-    Store(spec, nil)
-end
-
--- A saved priority goes when its spec is gone, its stats are not the spec's or its values no longer fall top down (the
--- spec's weights changed in an update); read with the saved data.
-local function Valid(spec, saved)
-    if not spec or type(saved.order) ~= "table" or type(saved.factor) ~= "table" then return false end
-    local own, keys = StatPrio.DefaultOrder(spec), {}
-    for i, k in ipairs(saved.order) do keys[i] = k end
-    table.sort(own)
-    table.sort(keys)
-    if table.concat(own, ",") ~= table.concat(keys, ",") then return false end
-    local last
-    for _, key in ipairs(saved.order) do
-        local f = saved.factor[key]
-        if f ~= nil and not (type(f) == "number" and f > 0) then return false end
-        local v = Value(spec.weights, BY_KEY[key]) * (f or 1)
-        if last and v > last * (1 + 1e-9) then return false end
-        last = v
-    end
-    return true
-end
+-- Kept as harmless compatibility shims for older UI and saved-variable migrations.
+function StatPrio.Move() return false end
+function StatPrio.Reset() return false end
 
 function StatPrio.DropStale()
     computed = {}
-    for key, saved in pairs(LJ.cdb.statPrio) do
-        if not Valid(Player:GetSpec(Player.class, key), saved) then LJ.cdb.statPrio[key] = nil end
-    end
+    -- Discard legacy user multipliers: those came from the broken drag model and can invert the guide order/scoring.
+    LJ.cdb.statPrio = {}
 end
 LJ:Listen("DB_READY", StatPrio.DropStale)
