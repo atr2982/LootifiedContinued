@@ -1,3 +1,13 @@
+## 1.2.0.16 — 2026-11-16
+
+- Fixed the ForeverDB data file startup error by using Forever's available date function instead of the unavailable `os` library.
+- Updated the data refresh generators to keep future ForeverDB refreshes compatible with the Forever addon sandbox.
+
+## 1.2.0.15 — 2026-11-16
+
+- Dungeon cards now count only quests your character can still do, hiding the quest badge when all eligible quests are complete.
+- Corrected Hall of Thanes' Important Heirlooms quest to be available to both factions, so Horde characters can track it too.
+
 ## 1.2.0.14 — 2026-11-16
 
 - Updated item, quest, NPC, and dungeon catalog data for Forever client build 1.60.1.70938.

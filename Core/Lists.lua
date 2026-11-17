@@ -117,11 +117,11 @@ function Lists.IsNear(inst)
     return inst.minLevel <= high and inst.maxLevel >= low
 end
 
--- The quest count on an instance card matches the total shown in its hover tooltip. Keep open/completed state for
--- the dungeon detail view, but don't hide a dungeon's quest count just because none are currently active.
+-- Show only quests this character can take that are not already complete. This keeps card badges useful as a
+-- checklist and excludes completed quests and the other faction, while the dungeon detail page retains its full list.
 function Lists.CardQuestCount(inst)
-    local total = Quests.CountForInstance(inst.key)
-    return total
+    local total, _, completed = Quests.CountForInstance(inst.key)
+    return math.max(0, total - completed)
 end
 
 -- The better of two instance cards ({ inst, upgrades, quests }), the same on every page ("Best for you right now",

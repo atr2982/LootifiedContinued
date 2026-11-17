@@ -306600,7 +306600,7 @@ LJ.Data.ForeverDB = {
     }
 }
 LJ.DATA_BUILD = LJ.Data.ForeverDB.build
-LJ.DATA_CHECKED = os.date("!%Y-%m-%d")
+LJ.DATA_CHECKED = date("%Y-%m-%d")
 LJ.DATA_STATUS = "ForeverDB snapshot packaged; client collection remains authoritative for tooltip stats"
 LJ.DATA_SOURCES = { "https://foreverdb.net" }
 local D = LJ.Data.ForeverDB
