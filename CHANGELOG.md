@@ -1,6 +1,11 @@
+## 1.2.0.17 — 2026-11-17
+
+- Fixed the Open World and dungeon quest views failing when they checked quests added by the late-loaded ForeverDB catalog. Quest IDs and reverse indexes are now built again after all data sources load, and invalid IDs are kept out of the Forever completion API.
+- Added and corrected quest-chain, faction, prerequisite, and quest-location data for the newly available dungeons, including the missing chain steps needed to track quests across instance pages.
+
 ## 1.2.0.16 — 2026-11-16
 
-- Fixed the ForeverDB data file startup error by using Forever's available date function instead of the unavailable `os` library.
+- Removed runtime date lookups from packaged data files; refresh tools now write the date when generating data so Forever's addon sandbox does not abort data loading.
 - Updated the data refresh generators to keep future ForeverDB refreshes compatible with the Forever addon sandbox.
 
 ## 1.2.0.15 — 2026-11-16

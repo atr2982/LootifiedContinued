@@ -67,7 +67,7 @@ LJ.errors = {}
 
 -- Keeps a report for /lf errors (newest first, the last 50).
 local function KeepError(text)
-    table.insert(LJ.errors, 1, { time = date and date("%H:%M:%S") or "", text = text })
+    table.insert(LJ.errors, 1, { time = "", text = text })
     if #LJ.errors > 50 then
         table.remove(LJ.errors)
     end

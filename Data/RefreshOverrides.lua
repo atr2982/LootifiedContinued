@@ -96,7 +96,189 @@ if input and input.web then
     if type(web.instances) == "table" and #web.instances > 0 then LJ.Data.Instances = web.instances end
     if type(web.bis_weights) == "table" and next(web.bis_weights) then LJ.Data.BiS = web.bis_weights end
     LJ.DATA_BUILD = LJ.COLLECT_BUILD or (LJ.Data.ForeverDB and LJ.Data.ForeverDB.build) or web.build
-    LJ.DATA_CHECKED = date("%Y-%m-%d")
+    LJ.DATA_CHECKED = "2026-11-16"
     LJ.DATA_STATUS = "current Forever client collection and ForeverDB catalog installed; curated overrides retained"
     LJ.DATA_SOURCES = "Forever client collection; reviewed Wowhead and Bind on Forever records"
+end
+
+-- Curated quest corrections verified against Forever build 1.60.1.70938 and
+-- current Forever dungeon quest guides. ForeverDB labels some faction-variant
+-- quests BOTH, so restore their distinct faction before the Journal filters run.
+local newInstanceQuestFixes = {
+    -- Hall of Thanes: Alliance dungeon quests; the map quest is a chain step
+    -- outside the instance list. An Ancient Grudge is faction-neutral.
+    [96395] = { side = "BOTH" }, -- An Ancient Grudge
+    [96403] = { side = "BOTH" }, -- Important Heirlooms
+    [96394] = { side = "A" }, -- The Restless Dead
+    [96391] = { side = "A", next = { 96393 } }, -- Underground Map
+    [96393] = { side = "A", pre = { 96391 } }, -- Old Ironforge Incursion
+    [98423] = { side = "A" }, -- Treaty of Understanding
+
+    -- Ruins of Lordaeron: restore faction-specific copies and the verified
+    -- five-step Unending Torment chain.
+    [95250] = { side = "A" }, -- Abominable Creatures
+    [92401] = { side = "H" }, -- A Frightened Request
+    [95195] = { side = "A" }, -- Bloodied Insignia
+    [95189] = { side = "A" }, -- Crest of Lordaeron
+    [95204] = { side = "H" }, -- Crest of Lordaeron
+    [92421] = { side = "H" }, -- Light's Justice
+    [92415] = { side = "A" }, -- Remember That I Love You
+    [95216] = { side = "H" }, -- The New Plague
+    [92422] = { side = "H" }, -- The Wrath of Rath'mael
+    [97288] = { side = "H", next = { 97289 } }, -- Unending Torment, Abominable Head
+    [97289] = { side = "H", pre = { 97288 }, next = { 97290 } },
+    [97290] = { side = "H", pre = { 97289 }, next = { 97291 } },
+    [97291] = { side = "H", pre = { 97290 }, next = { 97292 } },
+    [97292] = { side = "H", pre = { 97291 } },
+
+    -- Excavation Site: all mapped quests have explicit Forever faction sides;
+    -- chain links are confirmed by current Forever XP data.
+    [98815] = { side = "A" }, -- Highland Hides
+    [95697] = { side = "H" }, -- Changing Tastes
+    [95663] = { side = "H", next = { 95682 } }, -- Dragonmaw Rumors
+    [95682] = { side = "H", pre = { 95663 } }, -- Open the Maw <- Dragonmaw Rumors
+    [95664] = { side = "H", next = { 98823 } }, -- Elder Knowledge
+    [98823] = { side = "H", pre = { 95664 } }, -- Earthen Echo <- Elder Knowledge
+    [95795] = { side = "A", pre = { 95772 } }, -- Fallen in the Fen <- Songblade Search
+    [95809] = { side = "A" }, -- Heartwoven
+    [95646] = { side = "A" }, -- Horrors in the Highland
+    [95810] = { side = "A" }, -- Lost Relic Carry
+    [95647] = { side = "A" }, -- Lost in the Thicket Things
+    [98824] = { side = "A" }, -- Prehistoric Prism
+    [95737] = { side = "A" }, -- Seeking Caitlin
+    [95772] = { side = "A", next = { 95795 } }, -- Songblade Search
+
+    -- City of Dalaran: Forever has separate faction versions of these quests;
+    -- write every side explicitly so missing metadata cannot leak rows.
+    [92457] = { side = "A" }, -- Starving Arcane
+    [92458] = { side = "A" }, -- Heart of Disruption (Alliance)
+    [92456] = { side = "A" }, -- A Green Sample
+    [92489] = { side = "A" }, -- Power Overwhelming
+    [96984] = { side = "H" }, -- Heart of Disruption (Horde)
+    [96987] = { side = "H" }, -- Opportunistic Education
+    [96988] = { side = "H" }, -- Source of Power
+    [96986] = { side = "H" }, -- The Grave Knight
+
+    -- Krol'dok: faction-specific quest versions and confirmed chains.
+    [95428] = { side = "H", next = { 94744 } }, -- Clugfist's Decree -> The Wayward Warrior
+    [94744] = { side = "H", next = { 94745, 94748, 95431 } }, -- The Wayward Warrior
+    [94745] = { side = "H", pre = { 94744 }, next = { 94768 } }, -- Carving a Path
+    [94748] = { side = "H", pre = { 94744 }, next = { 94768 } }, -- Break Their Chains
+    [95431] = { side = "H", pre = { 94744 }, next = { 94768 } }, -- Rumblings of Discontent
+    [94768] = { side = "H", pre = { 94745, 94748, 95431 }, next = { 94975, 95278 } }, -- Bring Me His Head
+    [95278] = { side = "H", pre = { 94768 }, next = { 94968, 94972 } }, -- It Is Time, Brother... unlocks Eye/Tome
+    [94968] = { side = "H", pre = { 95278 } }, -- Eye of Mugg
+    [94972] = { side = "H", pre = { 95278 } }, -- Tome of Twilight
+    [94973] = { side = "H", next = { 94974 } }, -- Krol'dok Moulding
+    [94974] = { side = "H", pre = { 94973 } }, -- Key Ingredients
+    [94975] = { side = "H", pre = { 94768 } }, -- A Token of Vengeance
+    [94980] = { side = "A", next = { 94981 } }, -- Krol'dok Moulding
+    [94981] = { side = "A", pre = { 94980 } }, -- Key Ingredients
+    [94982] = { side = "A" }, -- Eye of Mugg
+    [94983] = { side = "A", next = { 94998 } }, -- Twilight Mementos
+    [94984] = { side = "A" }, -- Tome of Twilight
+    [94998] = { side = "A", pre = { 94983 } }, -- Curios of Curiosity
+    [96771] = { side = "A" }, -- Vengeance of the Highborne
+
+    -- Alcaz Prison: explicit faction ownership and verified quest chains.
+    [95262] = { side = "A", pre = { 95198 }, next = { 95263 } }, -- The Secret Prison
+    [95263] = { side = "A", pre = { 95262 }, next = { 95264 } }, -- Somber News
+    [95264] = { side = "A", pre = { 95263 } }, -- Shaw Needs To Know
+    [95283] = { side = "H" }, -- The Missing Kor'kron
+    [95284] = { side = "H", next = { 95285 } }, -- The Elite of the Elite
+    [95285] = { side = "H", pre = { 95284 }, next = { 96332, 96334, 95309 } }, -- Right Place, Wrong Time
+    [95309] = { side = "H", pre = { 95285 }, next = { 95454 } }, -- No Orc Left Behind
+    [95454] = { side = "H", pre = { 95309 }, next = { 96369 } }, -- The Honor of the Kor'kron
+    [95483] = { side = "H" }, -- Thrall Needs to Know
+    [96332] = { side = "H", pre = { 95285 } }, -- A Little Payback
+    [96334] = { side = "H", pre = { 95285 } }, -- Blood Red Bandanas
+    [96335] = { side = "BOTH", next = { 96337 } }, -- The Man in the Iron Chains
+    [96337] = { side = "BOTH", pre = { 96335 } }, -- More Valuable Than Gold
+    [96369] = { side = "H", pre = { 95454 } }, -- Bad News for Folkar
+    [96381] = { side = "A", pre = { 95198 } }, -- A Bit of Wet Work
+    [96772] = { side = "A" }, -- The Dragon's Journal
+    [95194] = { side = "A", next = { 95196 } }, -- Our Man in Theramore
+    [95196] = { side = "A", pre = { 95194 }, next = { 95198 } }, -- Watch Yer Back
+    [95198] = { side = "A", pre = { 95196 }, next = { 95262, 96381 } }, -- The Return of the King?
+
+    -- Blackmaw Hold: verified Azshara chain; any one of the three opening
+    -- quests unlocks Return to Rageroar, then the chain proceeds to the dungeon.
+    [86777] = { side = "BOTH", next = { 86797 } }, -- Master Feardred
+    [86792] = { side = "BOTH", next = { 86797 } }, -- Thinning Their Forces
+    [86796] = { side = "BOTH", next = { 86797 } }, -- Later, Satyr
+    [86797] = { side = "BOTH", preAny = { { 86777, 86792, 86796 } }, next = { 86798 } }, -- Return to Rageroar
+    [86798] = { side = "BOTH", pre = { 86797 }, next = { 87346 } }, -- Timbermaw Reinforcements
+    [87346] = { side = "BOTH", pre = { 86798 }, next = { 86814 } }, -- Chieftain Bloodmaw
+    [86814] = { side = "BOTH", pre = { 87346 }, next = { 92065 } }, -- Blackmaw Counter-Offensive
+    [92065] = { side = "BOTH", pre = { 86814 } }, -- Blackmaw Reclamation
+    [92066] = { side = "BOTH" }, -- The Twin Bears
+    [92069] = { side = "BOTH" }, -- Claws That Rend, Tusks that Gore
+    [92070] = { side = "BOTH" }, -- A Lost Memento
+    [92345] = { side = "A", next = { 92344 } }, -- Beneath Nordrassil
+    [92344] = { side = "A", pre = { 92345 } }, -- Get to the Roots of It
+    [92346] = { side = "H", next = { 92343 } }, -- Beneath Nordrassil
+    [92343] = { side = "H", pre = { 92346 } }, -- Get to the Roots of It
+    [97173] = { side = "A" }, -- Blackmaw Magic
+    [97198] = { side = "H" }, -- Blackmaw Magic
+    [97327] = { side = "BOTH" }, -- Blackmaw Pouches
+
+    -- Shaper's Terrace faction-specific quest list.
+    [95924] = { side = "A" }, -- Panic at the Digsite
+    [95925] = { side = "A" }, -- Mapping the Way Forward
+    [95926] = { side = "H" }, -- The Dark Crystal
+    [95928] = { side = "H" }, -- Crystalline Elements
+    [95790] = { side = "A" }, -- Digestible Research
+    [97049] = { side = "H" }, -- Essence of Seeping Slimes
+
+    -- The Drowned City: ForeverDB labels faction variants BOTH, hiding shared
+    -- rows and showing Alliance-only/Horde-only rows for the wrong faction.
+    [95748] = { side = "H", pre = { 629 }, next = { 95770 } }, -- The Gurubashi Legends of Old
+    [95770] = { side = "H", pre = { 95748 }, next = { 95775, 95776 } }, -- optional entrance quest
+    [95773] = { side = "H" }, -- Enemies in the Water; required by 95776
+    [95775] = { side = "H", pre = { 95770 }, next = { 96078 } }, -- The Drowned City
+    [95776] = { side = "H", pre = { 95770, 95773 } }, -- The Only Good Brinescale...
+    [95786] = { side = "A", pre = { 205 }, next = { 95787, 95788 } }, -- An Acquaintance in Southshore
+    [95787] = { side = "A", pre = { 95786 } }, -- Take Two With Water
+    [95788] = { side = "A", pre = { 95786 } }, -- Magics of the Drowned City
+    [96774] = { side = "H" }, -- Horde Ancient Gurubashi Idol
+    [97130] = { side = "A" }, -- Alliance Ancient Gurubashi Secrets
+    [95789] = { side = "BOTH" }, -- Shady Saltseers
+    [95791] = { side = "BOTH" }, -- The Saltseer Captain
+    [96078] = { side = "H", pre = { 95775 } }, -- A Tale Spun Around the Fire
+}
+
+local function AddQuestLinks(q, field, links)
+    q[field] = q[field] or {}
+    local seen = {}
+    for _, id in ipairs(q[field]) do seen[id] = true end
+    for _, id in ipairs(links or {}) do
+        if not seen[id] then
+            q[field][#q[field] + 1] = id
+            seen[id] = true
+        end
+    end
+end
+
+for id, fix in pairs(newInstanceQuestFixes) do
+    local q = LJ.Data.Quests and LJ.Data.Quests[id]
+    if q then
+        q.side = fix.side
+        AddQuestLinks(q, "pre", fix.pre)
+        AddQuestLinks(q, "next", fix.next)
+        if type(fix.preAny) == "table" then
+            q.preAny = q.preAny or {}
+            local existing = {}
+            for _, group in ipairs(q.preAny) do
+                local key = table.concat(group, ",")
+                existing[key] = true
+            end
+            for _, group in ipairs(fix.preAny) do
+                local key = table.concat(group, ",")
+                if not existing[key] then
+                    q.preAny[#q.preAny + 1] = group
+                    existing[key] = true
+                end
+            end
+        end
+    end
 end

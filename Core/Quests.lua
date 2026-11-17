@@ -61,7 +61,12 @@ local function OrderIndexes()
 end
 
 function Quests.Get(qid)
-    return LJ.Data.Quests and LJ.Data.Quests[qid]
+    local q = LJ.Data.Quests and LJ.Data.Quests[qid]
+    -- ForeverDB and the reviewed refresh overrides load after this module.
+    -- Give late-added quest records their index immediately; DB_READY also
+    -- rebuilds reverse indexes after every data source has finished loading.
+    if q and q.id == nil then q.id = tonumber(qid) or qid end
+    return q
 end
 
 function Quests.GetName(qid)
@@ -75,7 +80,8 @@ end
 local SIDE = { Alliance = "A", Horde = "H" }
 
 function Quests.IsForSide(q, side)
-    return q.side == "B" or q.side == nil or q.side == side
+    local questSide = type(q.side) == "string" and q.side:upper() or q.side
+    return questSide == "B" or questSide == "BOTH" or questSide == nil or questSide == side
 end
 
 function Quests.IsForClass(q, class)
@@ -116,6 +122,7 @@ local completionItems = { [5722] = 14381 }
 local countCache = {}
 
 local function IsFlaggedCompleted(qid)
+    if type(qid) ~= "number" or qid <= 0 then return false end
     local v = completedCache[qid]
     if v == nil then
         v = C_QuestLog.IsQuestFlaggedCompleted(qid)
@@ -700,4 +707,7 @@ LJ:Listen("PLAYER_CHANGED", Changed)
 LJ:Listen("WINDOW_CLOSED", Quests.InvalidateCache)
 
 BuildIndexes()
-LJ:Listen("DB_READY", OrderIndexes)
+LJ:Listen("DB_READY", function()
+    BuildIndexes()
+    OrderIndexes()
+end)

@@ -306600,7 +306600,7 @@ LJ.Data.ForeverDB = {
     }
 }
 LJ.DATA_BUILD = LJ.Data.ForeverDB.build
-LJ.DATA_CHECKED = date("%Y-%m-%d")
+LJ.DATA_CHECKED = "2026-11-16"
 LJ.DATA_STATUS = "ForeverDB snapshot packaged; client collection remains authoritative for tooltip stats"
 LJ.DATA_SOURCES = { "https://foreverdb.net" }
 local D = LJ.Data.ForeverDB
@@ -306616,8 +306616,17 @@ end
 for id, fresh in pairs(D.quests) do
     local q = LJ.Data.Quests[id]
     if q then
-        q.name, q.level, q.min, q.side, q.src = fresh.name, fresh.level, fresh.min, fresh.side, fresh.src
-        q.startText, q.finishText = fresh.startText, fresh.finishText
+        -- The packaged ForeverDB snapshot is sparse: nil fields mean “not in
+        -- this snapshot”, not “erase the reviewed Forever-specific value”.
+        -- In particular, overwriting min here made quests appear available
+        -- below their verified level and weakened the instance quest filters.
+        q.name = fresh.name or q.name
+        q.level = fresh.level or q.level
+        if fresh.min ~= nil then q.min = fresh.min end
+        if fresh.side ~= nil then q.side = fresh.side end
+        q.src = fresh.src or q.src
+        q.startText = q.startText or fresh.startText
+        q.finishText = q.finishText or fresh.finishText
     else
         LJ.Data.Quests[id] = fresh
     end
