@@ -1326,6 +1326,11 @@ local function QuestReward(itemID, class, level)
     return false
 end
 
+local function HasQuestRewardSource(itemID)
+    local questIDs = LJ.Quests and LJ.Quests.rewardOf[itemID]
+    return (questIDs and #questIDs > 0) or RewardQuestIDs(itemID) ~= nil
+end
+
 -- Does the list take the item for a class at a level: its armor kind is picked (the armor slots) and one of its
 -- sources is (a drop: at least the list's drop chance). Kept per class and level until the list changes.
 local inList = {}
@@ -1343,7 +1348,11 @@ function Items.InList(itemID, class, level, ignoreSources)
         if armor and not list[armor] then
             yes = false
         elseif ignoreSources then
-            yes = true
+            -- The empty-slot fallback may relax the user's source filters, but it
+            -- must not offer a known quest-only reward to a class that cannot take
+            -- its quest. Items with another recorded source still pass through
+            -- IsObtainable; items with no known quest source remain valid fallbacks.
+            yes = not HasQuestRewardSource(itemID) or Items.IsObtainable(itemID, class)
         else
             local chance, random = WorldDropOf(itemID)
             yes = (list.quests and QuestReward(itemID, class, level))

@@ -21,6 +21,7 @@ local C = Theme.COLORS
 local GROUP_TEXT = {
     READY = "Ready to turn in", ACTIVE = "In your quest log", AVAILABLE = "Available", LOCKED = "Earlier quests missing",
     LOW_LEVEL = "Level too low", COMPLETED = "Completed", OTHER = "Not for your character",
+    OTHER_CLASS = "Not for your class", OTHER_FACTION = "Not for your faction", OTHER_RACE = "Not for your character",
 }
 -- The quests one line each.
 local ROW_HEIGHT, SECTION_HEIGHT = 34, 28
@@ -57,6 +58,14 @@ local function SideShort(side)
     if side == "A" then return L("Alliance") end
     if side == "H" then return L("Horde") end
     return L("Both")
+end
+
+local function OtherReason(q)
+    local side = Player.faction == "Horde" and "H" or "A"
+    if not Quests.IsForSide(q, side) then return "FACTION" end
+    if not Quests.IsForClass(q, Player.class) then return "CLASS" end
+    if not Quests.IsForRace(q, Player.race) then return "RACE" end
+    return "OTHER"
 end
 
 -- The classes of a class quest in their colors (onDark: for a tooltip, the game's class colors in every look).
@@ -119,6 +128,7 @@ end
 function PQ.List(inst)
     local list = Quests.ForInstance(inst.key, LJ.db.journal.questFilter, true)
     local status, detail, order = {}, {}, {}
+    local otherReasonOrder = { FACTION = 1, CLASS = 2, RACE = 3, OTHER = 4 }
     for i, q in ipairs(list) do
         order[q] = i
         status[q], detail[q] = Quests.GetStatus(q)
@@ -126,6 +136,10 @@ function PQ.List(inst)
     table.sort(list, function(a, b)
         local sa, sb = Quests.STATUS_ORDER[status[a]] or 9, Quests.STATUS_ORDER[status[b]] or 9
         if sa ~= sb then return sa < sb end
+        if status[a] == Quests.OTHER then
+            local ra, rb = otherReasonOrder[OtherReason(a)] or 4, otherReasonOrder[OtherReason(b)] or 4
+            if ra ~= rb then return ra < rb end
+        end
         return order[a] < order[b]
     end)
     return list, status, detail
@@ -153,9 +167,12 @@ function PQ.FillList(sheet, inst, selected, onSelect)
     local i = 1
     while i <= #list do
         local s = status[list[i]]
+        local reason = s == Quests.OTHER and OtherReason(list[i]) or nil
         local j = i
-        while list[j + 1] and status[list[j + 1]] == s do j = j + 1 end
-        sheet:Add("section", { text = L(GROUP_TEXT[s] or s), count = j - i + 1 }, SECTION_HEIGHT)
+        while list[j + 1] and status[list[j + 1]] == s
+            and (s ~= Quests.OTHER or OtherReason(list[j + 1]) == reason) do j = j + 1 end
+        local group = s == Quests.OTHER and ("OTHER_" .. reason) or s
+        sheet:Add("section", { text = L(GROUP_TEXT[group] or GROUP_TEXT[s] or s), count = j - i + 1 }, SECTION_HEIGHT)
         for k = i, j do
             local q = list[k]
             local glyph, color = PQ.StatusGlyph(s)

@@ -439,17 +439,17 @@ LJ.Data.ForeverDBDungeons = {
                 }
             },
             {
-                itemId = 274385,
-                name = "Abomination Chain",
-                why = {
-                    "top pick for Feral Combat Druid and 2 more specs at level 40"
-                }
-            },
-            {
                 itemId = 10764,
                 name = "Deathchill Armor",
                 why = {
                     "top pick for Holy Paladin and 1 more spec at level 40"
+                }
+            },
+            {
+                itemId = 10766,
+                name = "Plaguerot Sprig",
+                why = {
+                    "top pick for Demonology Warlock and 1 more spec at level 40"
                 }
             }
         },

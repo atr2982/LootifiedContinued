@@ -51,9 +51,16 @@ function lua(v, depth = 0) {
   return Object.keys(v).length ? `{\n${Object.entries(v).map(([k, x]) => child + luaKey(k) + " = " + lua(x, depth + 4)).join(",\n")}\n${pad}}` : "{}";
 }
 
+const CLASS_CATEGORIES = new Map([
+  "Druid", "Hunter", "Mage", "Paladin", "Priest", "Rogue", "Shaman", "Warlock", "Warrior",
+].map(name => [name.toLowerCase(), name]));
+
 function questRow(q) {
   const row = { name: q.name, level: q.level, min: q.requiredLevel, side: q.side ? q.side.toUpperCase() : undefined, src: q.source };
-  if (q.category) row.zone = q.category;
+  const category = typeof q.category === "string" ? q.category.trim() : "";
+  const className = CLASS_CATEGORIES.get(category.toLowerCase());
+  if (className) row.classes = [className];
+  else if (category) row.zone = category;
   if (q.zone?.m) row.map = q.zone.m;
   if (q.starts?.name) row.startText = `${q.starts.name}${q.starts.location?.zone ? ", " + q.starts.location.zone : ""}`;
   if (q.ends?.name) row.finishText = `${q.ends.name}${q.ends.location?.zone ? ", " + q.ends.location.zone : ""}`;
@@ -97,8 +104,21 @@ end
 for id, fresh in pairs(D.quests) do
     local q = LJ.Data.Quests[id]
     if q then
-        q.name, q.level, q.min, q.side, q.src = fresh.name, fresh.level, fresh.min, fresh.side, fresh.src
-        q.startText, q.finishText = fresh.startText, fresh.finishText
+        -- This catalog is sparse: nil means “not in this snapshot,” not “erase
+        -- the reviewed Forever-specific value.”
+        q.name = fresh.name or q.name
+        q.level = fresh.level or q.level
+        if fresh.min ~= nil then q.min = fresh.min end
+        if fresh.side ~= nil then q.side = fresh.side end
+        q.src = fresh.src or q.src
+        q.startText = q.startText or fresh.startText
+        q.finishText = q.finishText or fresh.finishText
+        if fresh.classes then
+            q.classes = fresh.classes
+            if type(q.zone) == "string" and string.lower(q.zone) == string.lower(fresh.classes[1]) then q.zone = nil end
+        elseif fresh.zone then
+            q.zone = fresh.zone
+        end
     else
         LJ.Data.Quests[id] = fresh
     end

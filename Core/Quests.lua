@@ -78,16 +78,65 @@ end
 -- Faction and class
 ---------------------------------------------------------------------------
 local SIDE = { Alliance = "A", Horde = "H" }
+local CLASS_CATEGORY = {
+    DRUID = "DRUID", HUNTER = "HUNTER", MAGE = "MAGE", PALADIN = "PALADIN", PRIEST = "PRIEST",
+    ROGUE = "ROGUE", SHAMAN = "SHAMAN", WARLOCK = "WARLOCK", WARRIOR = "WARRIOR",
+}
 
 function Quests.IsForSide(q, side)
     local questSide = type(q.side) == "string" and q.side:upper() or q.side
     return questSide == "B" or questSide == "BOTH" or questSide == nil or questSide == side
 end
 
+local function DirectClassRestriction(q)
+    local classes = q.classes
+    -- ForeverDB's quest category is a class for class quests, but older snapshots
+    -- stored that category as `zone`. Normalize those rows at the point of use.
+    if (not classes or #classes == 0) and type(q.zone) == "string" then
+        local category = CLASS_CATEGORY[q.zone:upper()]
+        if category then
+            classes = { category }
+            q.classes, q.zone = classes, nil
+        end
+    end
+    return classes and #classes > 0 and classes or nil
+end
+
+function Quests.GetClassRestriction(q)
+    local classes = DirectClassRestriction(q)
+    if classes then return classes end
+
+    -- Some Forever class quests have separate faction IDs, and one collected
+    -- variant may lack the class category. If a same-title sibling gives the same
+    -- item and is explicitly class-scoped, carry that restriction to this variant.
+    if type(q.name) ~= "string" then return nil end
+    for _, itemID in ipairs(q.choice or {}) do
+        for _, siblingID in ipairs(Quests.rewardOf[itemID] or {}) do
+            local sibling = Quests.Get(siblingID)
+            if sibling and sibling ~= q and sibling.name == q.name then
+                classes = DirectClassRestriction(sibling)
+                if classes then return classes end
+            end
+        end
+    end
+    for _, itemID in ipairs(q.reward or {}) do
+        for _, siblingID in ipairs(Quests.rewardOf[itemID] or {}) do
+            local sibling = Quests.Get(siblingID)
+            if sibling and sibling ~= q and sibling.name == q.name then
+                classes = DirectClassRestriction(sibling)
+                if classes then return classes end
+            end
+        end
+    end
+    return nil
+end
+
 function Quests.IsForClass(q, class)
-    if not q.classes or #q.classes == 0 then return true end
-    for _, c in ipairs(q.classes) do
-        if c:upper() == class then return true end
+    local classes = Quests.GetClassRestriction(q)
+    if not classes then return true end
+    class = type(class) == "string" and class:upper() or class
+    for _, c in ipairs(classes) do
+        if type(c) == "string" and c:upper() == class then return true end
     end
     return false
 end

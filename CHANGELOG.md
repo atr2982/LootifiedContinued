@@ -1,3 +1,10 @@
+## 1.2.0.18 — 2026-11-17
+
+- Fixed class-locked quest rewards appearing in Best in Slot for classes that cannot obtain them, including when an empty slot triggers the fallback item search. Items with another recorded source remain eligible.
+- Correctly read class restrictions from ForeverDB quest categories for all nine classes, and carry the restriction to matching same-title faction quest variants when their reward overlaps.
+- Separate dungeon quests that are unavailable because of class or faction, so players can see why those quests do not apply to their character.
+- Refreshed collected item and quest data from Forever client build 1.60.1.70959, updated the packaged ForeverDB catalog snapshot, and refreshed dungeon notable-loot picks.
+
 ## 1.2.0.17 — 2026-11-17
 
 - Fixed the Open World and dungeon quest views failing when they checked quests added by the late-loaded ForeverDB catalog. Quest IDs and reverse indexes are now built again after all data sources load, and invalid IDs are kept out of the Forever completion API.
