@@ -1,3 +1,9 @@
+## 1.2.0.20 — 2026-11-20
+
+- Fixed dungeon quest-chain missing counts so available or in-progress earlier quests are not counted as missing.
+- Restored the Krol'dok Stronghold prerequisite steps in quest chains, including the shared Horde chain for Eye of Mugg, Tome of Twilight, and A Token of Vengeance.
+- Added verified Riverglades map buttons for Krol'dok quest givers and turn-ins, including Da'grosh, Krom'rosh, Tran'gul, Kreza Darkthorn, Crag'rog, and Clugfist.
+
 ## 1.2.0.19 — 2026-11-20
 
 - Show Open World drops as indented item rows beneath collapsible mob and rare rows. Rows start collapsed, show the drop count and a larger chevron, and keep the map action visible.

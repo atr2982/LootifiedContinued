@@ -161,7 +161,7 @@ local newInstanceQuestFixes = {
 
     -- Krol'dok: faction-specific quest versions and confirmed chains.
     [95428] = { side = "H", next = { 94744 } }, -- Clugfist's Decree -> The Wayward Warrior
-    [94744] = { side = "H", next = { 94745, 94748, 95431 } }, -- The Wayward Warrior
+    [94744] = { side = "H", pre = { 95428 }, next = { 94745, 94748, 95431 } }, -- The Wayward Warrior
     [94745] = { side = "H", pre = { 94744 }, next = { 94768 } }, -- Carving a Path
     [94748] = { side = "H", pre = { 94744 }, next = { 94768 } }, -- Break Their Chains
     [95431] = { side = "H", pre = { 94744 }, next = { 94768 } }, -- Rumblings of Discontent

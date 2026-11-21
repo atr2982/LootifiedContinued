@@ -460,9 +460,10 @@ local function ChainEntries(q, inst)
     for _, e in ipairs(chain) do
         if e.role == "before" then
             earlier = earlier + 1
+            local stepStatus = Quests.GetStatus(e.id)
             if Quests.IsCompleted(e.id) then
                 completed = completed + 1
-            elseif not e.passed then
+            elseif not e.passed and stepStatus ~= Quests.AVAILABLE and stepStatus ~= Quests.ACTIVE and stepStatus ~= Quests.READY then
                 missing = missing + 1
             end
         end
