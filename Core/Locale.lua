@@ -12,13 +12,12 @@ local Locale = {}
 LJ.Locale = Locale
 Locale.active = "enUS"
 
--- The languages the addon has besides English, in the order of the settings.
--- Forever Lite ships English only.
-Locale.LANGUAGES = {}
+-- The languages enabled in this Forever build, in the order shown in settings.
+Locale.LANGUAGES = { "deDE", "esES", "esMX", "frFR", "koKR", "ptBR", "ruRU", "zhCN", "zhTW" }
 local LANGUAGES = {}
 for _, lang in ipairs(Locale.LANGUAGES) do LANGUAGES[lang] = true end
 -- Korean and Chinese only in a client of that language: only its font has their letters
-Locale.OWN_CLIENT_ONLY = {}
+Locale.OWN_CLIENT_ONLY = { koKR = true, zhCN = true, zhTW = true }
 
 -- Whether a language can be chosen in this client.
 function Locale.Available(lang)

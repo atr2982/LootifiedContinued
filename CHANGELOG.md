@@ -1,3 +1,10 @@
+## 1.2.0.19 — 2026-11-20
+
+- Show Open World drops as indented item rows beneath collapsible mob and rare rows. Rows start collapsed, show the drop count and a larger chevron, and keep the map action visible.
+- Fix Open World upgrade filtering so known mob drops are compared directly against equipped gear, regardless of character level or the generic loot-list drop-chance threshold.
+- Show percent-based tooltip comparisons for gear above the character's level while retaining armor-training and class usability restrictions.
+- Enable the packaged German, Spanish, French, Korean, Portuguese, Russian, and Chinese translations. Korean and Chinese choices appear only in matching game-client locales.
+
 ## 1.2.0.18 — 2026-11-17
 
 - Fixed class-locked quest rewards appearing in Best in Slot for classes that cannot obtain them, including when an empty slot triggers the fallback item search. Items with another recorded source remain eligible.

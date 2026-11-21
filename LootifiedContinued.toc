@@ -1,8 +1,8 @@
 ## Interface: 16001
 ## Title: Lootified
-## Notes: English-only WoW: Forever loot journal, dungeon quests, loot, level-aware Best in Slot and percent-based upgrades. Quest and world map pins remain available.
+## Notes: WoW: Forever loot journal with multilingual interface, dungeon quests, loot, level-aware Best in Slot and percent-based upgrades.
 ## Author: atr2982 (continuation based on Lootified by Alen)
-## Version: 1.2.0.18
+## Version: 1.2.0.19
 ## IconTexture: Interface\AddOns\LootifiedContinued\Media\Logo64
 ## Category: Loot
 ## SavedVariables: LootifiedData
@@ -30,6 +30,15 @@ Data\CollectIDs.lua
 Data\SimInventory.lua
 Data\SpellPower.lua
 Data\Locale_enUS.lua
+Data\Locale_ruRU.lua
+Data\Locale_deDE.lua
+Data\Locale_esES.lua
+Data\Locale_esMX.lua
+Data\Locale_frFR.lua
+Data\Locale_koKR.lua
+Data\Locale_ptBR.lua
+Data\Locale_zhCN.lua
+Data\Locale_zhTW.lua
 Data\BuildInfo.lua
 
 Core\Locale.lua

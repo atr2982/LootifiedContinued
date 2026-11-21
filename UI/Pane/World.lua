@@ -1,7 +1,6 @@
 -- Lootified - Open World in the classic and the modern look: the zone list on the left (the zones for the character's
 -- level, or all), the picked zone on the right; it follows the zone the player is in until the player picks another
--- one. The zone is a hunt board: its rares as cards (face, level, camps, their best drops for the character and a
--- button for their camps), the other mobs as lines with their best drop (a click shows all).
+-- one. Each mob is a collapsible header row followed by its indented item drops.
 local _, LJ = ...
 local L, F = LJ.L, LJ.F
 
@@ -24,9 +23,7 @@ local HUNT_COLUMNS, HUNT_PAD, HUNT_FACE = 3, 10, 56
 local HUNT_TOP = 122                 -- where the drops start
 local HUNT_DROPS = 2                 -- drops a card shows before "+N more"
 local DROP_H, DROP_GAP = 40, 4
--- the mob lines: face, name column, the best drop, map button; their other drops indented below
 local LINE_H, LINE_NAME, LINE_INDENT = 56, 160, 24
-local CHIP_X = 9 + 34 + 12 + LINE_NAME + 10
 
 local function MobTooltip(owner, mob, hint)
     GameTooltip:SetOwner(owner, "ANCHOR_RIGHT")
@@ -270,7 +267,7 @@ local function LineEnter(f)
     f.hovered = true
     Kit.MarkVisual(f)
     local d = f.sheet.data[f.entry]
-    MobTooltip(f, d.mob, d.onClick and "Click: show all its drops.")
+    MobTooltip(f, d.mob)
 end
 
 local function LineLeave(f)
@@ -279,8 +276,7 @@ local function LineLeave(f)
     GameTooltip:Hide()
 end
 
--- A mob as a line: its face with the level, name and level with its camps, its best drop, "+N more" (a click on the
--- line shows the other drops below it) and a button for its camps. data = { mob, cells (best first), open, onClick }
+-- A mob header row with its level, camps, and map button. Its drops are separate item rows below it.
 Kit.KINDS.mobLine = {
     height = LINE_H,
     create = function(parent)
@@ -288,28 +284,30 @@ Kit.KINDS.mobLine = {
         Kit.AddMarks(f)
         local dy = Kit.RowDY()
         f.emblem = Widgets.CreateEmblem(f, 34)
-        f.emblem:SetPoint("LEFT", 9, dy)
+        f.emblem:SetPoint("LEFT", 44, dy)
         f.badge = Kit.Badge(f.emblem, 17)
         f.badge:SetPoint("CENTER", f.emblem, "BOTTOMLEFT", 2, 3)
+        f.caret = Widgets.Glyph(f, "caretRight", 20, C.text3)
+        f.caret:SetPoint("LEFT", 8, dy)
+        f.caret:Hide()
         f.name = Widgets.Text(f, "item", C.text1)
         f.name:SetPoint("TOPLEFT", f.emblem, "TOPRIGHT", 12, 1)
         f.name:SetWidth(LINE_NAME)
         f.sub = Widgets.Text(f, "small", C.text3)
         f.sub:SetPoint("BOTTOMLEFT", f.emblem, "BOTTOMRIGHT", 12, -1)
         f.sub:SetWidth(LINE_NAME)
-        f.drop = CreateChip(f)
-        f.drop:SetPoint("LEFT", CHIP_X, dy)
-        f.more = Widgets.Text(f, "small", C.text3)
-        f.more:SetPoint("LEFT", f.drop, "RIGHT", 10, 0)
         f.map = CreateMapButton(f, nil, 24)
         f.map:SetPoint("RIGHT", -9, dy)
+        f.dropCount = Widgets.Text(f, "small", C.text3, nil, "RIGHT")
+        f.dropCount:SetPoint("RIGHT", f.map, "LEFT", -10, dy)
         f:SetScript("OnEnter", LineEnter)
         f:SetScript("OnLeave", LineLeave)
         f:SetScript("OnClick", function(self)
             local d = self.sheet.data[self.entry]
-            if not d.onClick then return end
+            if #d.cells == 0 then return end
             Util.PlaySound("IG_MAINMENU_OPTION")
-            d.onClick(d)
+            Page.expanded[d.mob.id] = not Page.expanded[d.mob.id] or nil
+            Page:Refresh()
         end)
         return f
     end,
@@ -319,13 +317,13 @@ Kit.KINDS.mobLine = {
         f.badge.text:SetText(tostring(mob.maxLevel))
         f.name:SetText(mob.name)
         f.sub:SetText(F("Level %s", Util.LevelRange(mob.minLevel, mob.maxLevel)) .. "  ·  " .. Util.Plural(#mob.locs, "camp"))
+        local expanded = Page.expanded[mob.id]
+        f.caret:SetShown(#d.cells > 0)
+        Theme.SetGlyph(f.caret, expanded and "caretDown" or "caretRight", C.text3)
+        f.dropCount:SetShown(#d.cells > 0)
+        f.dropCount:SetText(Util.Plural(#d.cells, "item"))
         f.map.mob = mob
         MapState(f.map, mob, "Map")
-        local more = #d.cells - 1
-        f.more:SetShown(more > 0)
-        f.more:SetText(d.open and L("Show fewer") or F("+%d more", more))
-        local moreW = more > 0 and (Widgets.TextWidth(f.more) + 10) or 0
-        SetChip(f.drop, d.cells[1], w - CHIP_X - moreW - f.map:GetWidth() - 9 - 12)
         f.hovered = f:IsMouseOver()
         Kit.MarkVisual(f)
     end,
@@ -457,48 +455,31 @@ local function BestDrops(drops, spec)
     return cells
 end
 
--- The rares as cards in rows of three, the other mobs as lines (a click shows their other drops below).
+-- Rares and other mobs use the same collapsible header-and-drops layout. Rows start collapsed.
 function Page:AddHuntBoard(list, rares, others, spec)
     local sheet = self.sheet
-    local toggle = function(d)
-        self.expanded[d.mob.id] = not self.expanded[d.mob.id] or nil
-        self:Refresh()
-    end
-    local cards, lines = {}, {}
+    local rareRows, mobRows = {}, {}
     for _, entry in ipairs(list) do
-        local mob = entry.mob
-        local d = { mob = mob, cells = BestDrops(entry.drops, spec), open = self.expanded[mob.id] }
-        if mob.isRare then cards[#cards + 1] = d else lines[#lines + 1] = d end
+        local d = { mob = entry.mob, cells = BestDrops(entry.drops, spec) }
+        if d.mob.isRare then rareRows[#rareRows + 1] = d else mobRows[#mobRows + 1] = d end
     end
-    if #cards > 0 then
-        sheet:Add("section", { text = L("Rares to hunt"), count = rares })
-        for first = 1, #cards, HUNT_COLUMNS do
-            local row, shown, more = {}, 1, false
-            for i = first, math.min(first + HUNT_COLUMNS - 1, #cards) do
-                local d = cards[i]
-                d.shown = d.open and #d.cells or math.min(#d.cells, HUNT_DROPS)
-                d.onToggle = toggle
-                shown = math.max(shown, d.shown)
-                more = more or #d.cells > HUNT_DROPS
-                self.mobY[d.mob.id] = sheet.cursor
-                row[#row + 1] = d
-            end
-            sheet:Grid("hunt", row, HUNT_COLUMNS, HuntHeight(shown, more), GAP)
-        end
-    end
-    if #lines > 0 then
-        sheet:Add("section", { text = L("Mobs"), count = others })
-        for _, d in ipairs(lines) do
+    local function AddRows(rows)
+        for _, d in ipairs(rows) do
             self.mobY[d.mob.id] = sheet.cursor
-            if #d.cells > 1 then d.onClick = toggle end
             sheet:Add("mobLine", d)
-            if d.open and #d.cells > 1 then
-                local rest = {}
-                for i = 2, #d.cells do rest[#rest + 1] = d.cells[i] end
-                sheet:Grid("item", rest, 1, Kit.M().item, 0, LINE_INDENT)
+            if self.expanded[d.mob.id] and #d.cells > 0 then
+                sheet:Grid("item", d.cells, 1, Kit.M().item, 0, LINE_INDENT)
                 sheet:Space(4)
             end
         end
+    end
+    if #rareRows > 0 then
+        sheet:Add("section", { text = L("Rares to hunt"), count = rares })
+        AddRows(rareRows)
+    end
+    if #mobRows > 0 then
+        sheet:Add("section", { text = L("Mobs"), count = others })
+        AddRows(mobRows)
     end
 end
 
@@ -551,8 +532,8 @@ function Page:Refresh()
     self:RefreshZone()
 end
 
--- map: zone to show, picked by the player or a link (nil: the zone the player is in, see FollowPlayer); npcID: open
--- this mob and scroll to it.
+-- map: zone to show, picked by the player or a link (nil: the zone the player is in, see FollowPlayer); npcID: scroll
+-- to this mob.
 function Page:Show(map, npcID)
     if map then
         -- the pick stays until the player moves to another map (false: the player's map is not known)

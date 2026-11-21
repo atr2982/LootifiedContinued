@@ -17,7 +17,7 @@ LJ.BiS = BiS
 local Items = LJ.Items
 local Player = LJ.Player
 local Scoring = LJ.Scoring
-local potentialCache, potentialDeltaCache, journalUpgradeCache = {}, {}, {}
+local potentialCache, potentialDeltaCache, journalUpgradeCache, worldUpgradeCache = {}, {}, {}, {}
 
 BiS.LEFT_SLOTS = { "HEAD", "NECK", "SHOULDER", "BACK", "CHEST", "WRIST", "HANDS" }
 BiS.RIGHT_SLOTS = { "WAIST", "LEGS", "FEET", "FINGER1", "FINGER2", "TRINKET1", "TRINKET2" }
@@ -334,7 +334,16 @@ end
 -- future-item preview make a filtered-out Journal drop look like an upgrade.
 function BiS.Upgrade(itemID)
     local t = BiS.Target(itemID)
-    return t and t.value
+    if t then return t.value end
+
+    -- Items outside the current-level BiS target list can still be useful upgrades.
+    -- JournalUpgrade preserves the class, faction, source, and armor checks while
+    -- comparing at the supported level cap.
+    local result = BiS.JournalUpgrade(itemID)
+    if not result then return nil end
+    local total = LJ.ItemCheck.WornTotal(Player:GetActiveSpec())
+    if result.pct and total and total > 0 then return result.pct * total / 100 end
+    return result.better and 0.000001 or nil
 end
 
 -- Journal loot rows and their dungeon/boss counts use the same live stat-weight comparison as item tooltips. Unlike
@@ -356,7 +365,8 @@ function BiS.JournalUpgrade(itemID)
         journalUpgradeCache[itemID] = false
         return nil
     end
-    local share = LJ.ItemCheck.Share(spec, Items.GetLink(itemID))
+    local link = Items.GetLink(itemID)
+    local share = link and LJ.ItemCheck.Share(spec, link) or nil
     if not share then
         -- The tooltip can score from the live link, while an unopened dungeon's item may only have shipped Forever
         -- stats. Use the same weighted score against current gear when the client link has not resolved yet.
@@ -368,7 +378,7 @@ function BiS.JournalUpgrade(itemID)
     end
     if not share then return nil end
     local result
-    if LJ.ItemCheck.StatsDirection(share) == "up" then result = { pct = share.pct } end
+    if LJ.ItemCheck.StatsDirection(share) == "up" then result = { pct = share.pct, better = share.better } end
     journalUpgradeCache[itemID] = result or false
     return result
 end
@@ -380,33 +390,58 @@ function BiS.FormatJournalUpgrade(itemID)
     return "|cff55ee55" .. text .. "|r"
 end
 
--- Open-world rows need a live answer even when the cached target sheet was built before
--- an item or an equipped link finished loading. Compare the drop directly with current gear.
-function BiS.WorldUpgrade(itemID)
-    local value = BiS.Upgrade(itemID)
-    if value then return value end
+-- Open World has already selected a concrete drop. Compare it directly with gear,
+-- independent of generic loot-list source and drop-chance thresholds.
+local function WorldUpgradeResult(itemID)
+    local cached = worldUpgradeCache[itemID]
+    if cached ~= nil then return cached ~= false and cached or nil end
+
     local spec = Player:GetActiveSpec()
-    if not spec or Items.IsOwned(itemID) or Items.IsOtherFaction(itemID) then return nil end
-    local level = Player.level or 1
-    if not Items.InList(itemID, spec.class, level) then return nil end
-    local minLevel, itemLevel = Items.GetKnownLevels(itemID)
-    if not minLevel or Items.UseLevelFrom(itemID, minLevel, itemLevel) > level then return nil end
-    local itemID2, _, _, equipLoc, _, classID, subclassID = C_Item.GetItemInfoInstant(itemID)
-    if not itemID2 or not equipLoc or equipLoc == "" then return nil end
-    local facts = { id = itemID, equipLoc = equipLoc, classID = classID, subclassID = subclassID }
-    if not Player:CanClassUse(facts, spec.class, level) or Scoring.MissingSkill(itemID) then return nil end
-    local stats = Scoring.GetStats(itemID)
-    if not stats then return nil end
-    local best
-    for _, slot in ipairs(Scoring.GetItemSlots(facts, spec.class, level)) do
-        local worn = Scoring.GetEquippedScore(spec, slot, true)
-        local score = Scoring.Score(itemID, spec, slot, true, stats)
-        if worn and score then
-            local gain = score - worn
-            if gain > 0 and (not best or gain > best) then best = gain end
-        end
+    if not spec or not LJ.Modules.On("bis") or Items.IsOwned(itemID) or Items.IsOtherFaction(itemID) then
+        worldUpgradeCache[itemID] = false
+        return nil
     end
-    return best
+    local _, _, _, equipLoc, _, classID, subclassID = C_Item.GetItemInfoInstant(itemID)
+    if not equipLoc or equipLoc == "" then return nil end
+    local facts = { id = itemID, equipLoc = equipLoc, classID = classID, subclassID = subclassID }
+    if not Player:CanClassUse(facts, spec.class, BiS.MAX_LEVEL) or Scoring.MissingSkill(itemID) then
+        worldUpgradeCache[itemID] = false
+        return nil
+    end
+
+    local link = Items.GetLink(itemID)
+    local share = link and LJ.ItemCheck.Share(spec, link) or nil
+    local gain, pct
+    if share then
+        if not share.better then
+            worldUpgradeCache[itemID] = false
+            return nil
+        end
+        pct = share.pct
+        local total = LJ.ItemCheck.WornTotal(spec)
+        gain = pct and total and total > 0 and pct * total / 100 or 0.000001
+    else
+        gain = BiS.PotentialDelta(itemID)
+        if not gain or gain <= 0 then return nil end
+        local total = LJ.ItemCheck.WornTotal(spec)
+        pct = total and total > 0 and gain / total * 100 or nil
+    end
+
+    local result = { gain = gain, pct = pct }
+    worldUpgradeCache[itemID] = result
+    return result
+end
+
+function BiS.WorldUpgrade(itemID)
+    local result = WorldUpgradeResult(itemID)
+    return result and result.gain
+end
+
+function BiS.WorldUpgradeText(itemID)
+    local result = WorldUpgradeResult(itemID)
+    if not result then return nil end
+    return result.pct and math.abs(result.pct) >= 0.05
+        and string.format("+%.1f%%", result.pct) or L("Upgrade")
 end
 
 -- A preview-only percentage for the Database Items page. Unlike the normal upgrade
@@ -483,7 +518,11 @@ end
 -- gear), else "BiS"; nil when it is not on it.
 function BiS.UpgradeText(itemID)
     local t = BiS.Target(itemID)
-    if not t then return nil end
+    if not t then
+        local result = BiS.JournalUpgrade(itemID)
+        if not result then return nil end
+        return result.pct and string.format("+%.1f%%", result.pct) or L("Upgrade")
+    end
     if not LJ.NO_SIM and t.delta and LJ.SimBiS.Shows(t.delta, t.err) then return string.format("+%.1f DPS", t.delta) end
     if t.pct then return string.format("+%.1f%%", t.pct) end
     return L("BiS")
@@ -507,6 +546,7 @@ local function Forget()
     wipe(potentialCache)
     wipe(potentialDeltaCache)
     wipe(journalUpgradeCache)
+    wipe(worldUpgradeCache)
 end
 for _, message in ipairs({ "DB_READY", "SIM_BIS_CHANGED", "EQUIPMENT_CHANGED", "SPEC_CHANGED", "PLAYER_CHANGED",
     "MODULES_CHANGED", "LIST_CHANGED", "BAGS_CHANGED", "ITEMS_UPDATED" }) do

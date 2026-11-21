@@ -207,10 +207,10 @@ function ItemCheck.Get(link)
     end
     local skill = Scoring.MissingSkill(id)
     if skill then return { kind = "cannot", why = skill } end
-    -- the level: the item's own, and for armor the level the class learns its kind (mail, plate)
-    local level = select(5, C_Item.GetItemInfo(link)) or Items.GetKnownLevels(id) or 0
-    if classID == 4 then level = math.max(level, Player.ARMOR[spec.class][subclassID]) end
-    if level > Player.level then return { kind = "level", level = level } end
+    -- Compare future-level drops too: the tooltip's percentage is useful before the item can be equipped.
+    -- Keep the actual armor-training restriction, since that is class usability rather than item level.
+    local armorLevel = classID == 4 and Player.ARMOR[spec.class][subclassID]
+    if armorLevel and armorLevel > Player.level then return { kind = "level", level = armorLevel } end
     if not LJ.BiS.ArmorFits(spec, id, Player.level) then
         return { kind = "cannot", why = L("Tanks wear their heaviest armor.") }
     end
