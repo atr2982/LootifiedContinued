@@ -78,9 +78,17 @@ end
 -- without a share (an empty slot) up when it scores at all.
 function ItemCheck.StatsDirection(v)
     if not v.pct then return v.better and "up" or "same" end
-    if v.pct >= 0.05 then return "up" end
-    if v.pct <= -0.05 then return "down" end
+    if v.pct > 0 then return "up" end
+    if v.pct < 0 then return "down" end
     return "same"
+end
+
+function ItemCheck.FormatPercent(value)
+    if type(value) ~= "number" then return nil end
+    local rounded = math.floor(math.abs(value) * 10 + 0.5) / 10
+    local sign = value > 0 and "+" or value < 0 and "-" or ""
+    if value ~= 0 and rounded == 0 then return sign .. "<0.1%" end
+    return sign .. ("%.1f%%"):format(rounded)
 end
 
 -- Gear for a slot of the sheet (Scoring's slots: weapons, armor, rings ...); bags, shirts, tabards, ammo are none.
@@ -145,8 +153,8 @@ function ItemCheck.Share(spec, link)
 end
 
 -- An item in a sheet slot by a spec's stat weights against what is worn in that slot (a two-hander in the main hand:
--- against both hands): what it adds to the whole gear in percent (WornTotal; Percent: the pickers, the Best in Slot
--- sheet); 0 for what is worn there, nil when nothing worn scores or the stats of an item are not known yet.
+-- against both hands): its gain relative to the replaced item, matching item tooltips; use whole-gear share only when
+-- the slot's current score is zero. 0 for what is worn there, nil when the stats are not known yet.
 function ItemCheck.SlotShare(spec, slot, id)
     if id == GetInventoryItemID("player", SimBiS.INV_SLOT[slot]) then return 0 end
     local base = WornScore(spec, slot)
@@ -156,8 +164,10 @@ function ItemCheck.SlotShare(spec, slot, id)
     end
     local score = Scoring.Score(id, spec, slot, true)
     local total = WornTotal(spec)
-    if not (base and score and total and total > 0) then return nil end
-    return (score - base) / total * 100
+    if not (base and score) then return nil end
+    if base > 0 then return (score - base) / base * 100 end
+    if total and total > 0 then return score / total * 100 end
+    return nil
 end
 
 -- A set by a spec's stat weights against what is worn, in percent (Percent: the Best in Slot sheet; the

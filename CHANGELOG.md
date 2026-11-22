@@ -1,13 +1,18 @@
+## 1.2.0.23 — 2026-11-21
+
+- Keep item upgrade percentages consistent across tooltips, Best in Slot, Journal, Open World, and item pickers by comparing each item with the gear it replaces.
+- Show every positive weighted upgrade, including small gains, and format sub-0.1% results clearly.
+
 ## 1.2.0.22 — 2026-11-21
 
-- Make Lootified's percent-based gear scoring standalone by embedding the verified PawnForever scale data and upgrade evaluation; remove the PawnForever dependency and legacy integration.
+- Make Lootified's percent-based gear scoring standalone with embedded stat scales and upgrade evaluation.
 - Use consistent percent-based upgrade results in item tooltips, Best in Slot, Open World, and Journal views, including when the best item is already equipped.
 - Keep dungeon quest lists focused on actual dungeon quests while preserving their prerequisite chains; audit all current dungeon mappings and correct missing quest records, faction assignments, and misclassified dungeon quests.
 - Correct dungeon quest placements and data, including Blackrock Depths, Dire Maul West, Scholomance, Blackmaw Hold, Wailing Caverns, and Zul'Farrak.
 
 ## 1.2.0.21 — 2026-11-21
 
-- Use PawnForever's selected-spec scoring and upgrade verdicts for Lootified's gear comparisons, and remove the obsolete stat-priority page and controls.
+- Use selected-spec scoring and upgrade verdicts for Lootified's gear comparisons, and remove the obsolete stat-priority page and controls.
 - Keep above-level item comparisons available while respecting class and Feral gear eligibility; exclude caster-effect items from Cat and Bear recommendations and show only relics that benefit the selected Feral spec.
 - Include eligible equipped gear in Best in Slot rankings so the currently worn best item is correctly identified.
 - Remove healer damage pseudo-specs from Lootified.

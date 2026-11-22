@@ -1470,7 +1470,7 @@ function SimUI.SlotItems(spec, slot, n, higher)
 end
 
 -- The number beside an item of a slot (the pickers): with Sim what the last Best in Slot sim found it adds there, with
--- Percent the share it adds by the stat weights (LJ.ItemCheck.SlotShare); nil for what is worn and an item without
+-- Percent the relative upgrade by the stat weights (LJ.ItemCheck.SlotShare); nil for what is worn and an item without
 -- one. text, color
 function SimUI.ItemNumber(spec, slot, id)
     if id == Worn(slot) then return nil end
@@ -1482,7 +1482,7 @@ function SimUI.ItemNumber(spec, slot, id)
     local pct = LJ.ItemCheck.SlotShare(spec, slot, id)
     if not pct then return nil end
     local dir = LJ.ItemCheck.StatsDirection({ pct = pct })
-    return Signed(pct) .. "%", dir == "up" and C.ok or dir == "down" and C.bad or C.text3
+    return LJ.ItemCheck.FormatPercent(pct), dir == "up" and C.ok or dir == "down" and C.bad or C.text3
 end
 
 -- The note under the pickers' items: what their numbers are (shown: some have one); Sim without a Best in Slot sim:

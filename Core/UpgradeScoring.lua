@@ -156,61 +156,6 @@ function Integration.Weights(spec)
     return mapped
 end
 
-local function ItemValue(stats, key, spec, scale)
-    local direct = {
-        STRENGTH = "Strength", AGILITY = "Agility", STAMINA = "Stamina", INTELLECT = "Intellect",
-        SPIRIT = "Spirit", ATTACK_POWER = "AttackPower", RANGED_AP = "RangedAttackPower",
-        FERAL_AP = "FeralAttackPower", ARMOR = "Armor", DEFENSE = "Defense", BLOCK_VALUE = "BlockValue",
-        HP5 = "HP5", MP5 = "MP5", SPELL_PEN = "SpellPenetration", HEALING = "Healing",
-        ARCANE_DAMAGE = "ArcanePower", FIRE_DAMAGE = "FirePower", FROST_DAMAGE = "FrostPower",
-        NATURE_DAMAGE = "NaturePower", SHADOW_DAMAGE = "ShadowPower", HOLY_DAMAGE = "HolyPower",
-    }
-    if direct[key] then return stats[direct[key]] or 0 end
-    if key == "SPELL_DAMAGE" then return (stats.SpellPowerAll or 0) + (stats.SpellDamage or 0) end
-    if key == "HIT" then
-        local kind = scale.spell and "HIT_SPELL" or scale.weights.RANGED_HIT ~= nil and "HIT_RANGED" or "HIT_MELEE"
-        local rating = (stats.HitRating or 0) + (scale.spell and (stats.SpellHitRating or 0)
-            or scale.weights.RANGED_HIT ~= nil and (stats.RangedHitRating or 0) or (stats.MeleeHitRating or 0))
-        return LJ.Scoring.RatingToPct(kind, rating, true) + (stats.HitPct or 0)
-            + (scale.spell and (stats.SpellHitPct or 0) or 0)
-    end
-    if key == "CRIT" then
-        local kind = scale.spell and "CRIT_SPELL" or scale.weights.RANGED_HIT ~= nil and "CRIT_RANGED" or "CRIT_MELEE"
-        local rating = (stats.CritRating or 0) + (scale.spell and (stats.SpellCritRating or 0)
-            or scale.weights.RANGED_HIT ~= nil and (stats.RangedCritRating or 0) or (stats.MeleeCritRating or 0))
-        return LJ.Scoring.RatingToPct(kind, rating, true) + (stats.CritPct or 0)
-            + (scale.spell and (stats.SpellCritPct or 0) or 0)
-    end
-    if key == "EXPERTISE" then return LJ.Scoring.RatingToPct("EXPERTISE", stats.ExpertiseRating or 0, true) end
-    if key == "HASTE" then return LJ.Scoring.RatingToPct("HASTE", stats.HasteRating or 0, true) end
-    if key == "DODGE" then return LJ.Scoring.RatingToPct("DODGE", stats.DodgeRating or 0, true) + (stats.DodgePct or 0) end
-    if key == "PARRY" then return LJ.Scoring.RatingToPct("PARRY", stats.ParryRating or 0, true) + (stats.ParryPct or 0) end
-    if key == "BLOCK" then return LJ.Scoring.RatingToPct("BLOCK", stats.BlockRating or 0, true) + (stats.BlockPct or 0) end
-    if key == "WEAPON_SKILL" then return stats.WeaponSkill or 0 end
-    if key == "MELEE_DPS" or key == "OFFHAND_DPS" or key == "RANGED_DPS" then return stats.DPS or 0 end
-    if key == "MELEE_HIT" or key == "RANGED_HIT" then return stats.WeaponHitDamage or 0 end
-    if key == "MELEE_SPEED" or key == "OFFHAND_SPEED" or key == "RANGED_SPEED" then return stats.WeaponSpeed or 0 end
-    return 0
-end
-
-local function Dominates(link, oldID, oldLink, spec, scale)
-    if not oldID then return false end
-    local newer = LJ.Scoring.GetStatsForLink(link)
-    local older = oldLink and LJ.Scoring.GetStatsForLink(oldLink) or LJ.Scoring.GetStats(oldID)
-    if not (newer and older) or newer.HasUnparsedEquip or older.HasUnparsedEquip then return false end
-    local changed = false
-    for key, weight in pairs(scale.weights or {}) do
-        if weight ~= 0 then
-            local a = ItemValue(newer, key, spec, scale)
-            local b = ItemValue(older, key, spec, scale)
-            if weight < 0 then a, b = b, a end
-            if a < b then return false end
-            changed = changed or a > b
-        end
-    end
-    return changed
-end
-
 function Integration.CacheKey(spec)
     talentCache = ReadTalentsSafely() or talentCache or {}
     local keys = {}
@@ -228,20 +173,18 @@ function Integration.Check(link, spec)
     if not share then return nil end
     local points = share.points
     local empty = share.empty == true
-    local scale = FindScale(spec)
-    local dominant = scale and Dominates(link, share.replaces, share.replacesLink, spec, scale) or false
     -- Pawn's headline gain is relative to the item or pair being replaced, not
     -- to the score of every equipped slot combined.
     local gain = share.current and share.current > 0 and points and points / share.current * 100 or share.pct
-    local upgrade = share.better and gain ~= nil
-        and (empty or dominant or ((gain or 0) >= 2 and (points or 0) >= 0.1)) or false
+    -- Any positive weighted score gain is an upgrade; don't hide small wins
+    -- behind a minimum percent or point threshold.
+    local upgrade = share.better and gain ~= nil and gain > 0
     return { upgrade = upgrade, gain = upgrade and gain or nil, points = points,
         empty = empty, slot = share.slot, score = share.score }
 end
 
 function Integration.GainText(verdict)
-    if verdict and verdict.gain then return ("+%.1f%%"):format(verdict.gain) end
-    return nil
+    return verdict and LJ.ItemCheck.FormatPercent(verdict.gain) or nil
 end
 
 function Integration.Active()

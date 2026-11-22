@@ -279,9 +279,9 @@ end
 ---------------------------------------------------------------------------
 -- Every upgrade mark, count and tooltip line of the addon comes from here. Per item: { id, slot (sheet slot), value
 -- (the sort key: the damage the sim found, else the hidden ranking's gain), delta, err (the sim's numbers, nil when it
--- did not sim the item), pct (Percent: what it adds to the whole gear by the stat weights, as the upgrade check says
--- it) }. The items: the sim's (Sim/SimBiS.lua: the items of each slot whose gain shows), else (Percent, before a spec's
--- first sim) the best of the list's own items (BiS.OnSheet) that beat what is worn. Items the character owns are none.
+-- did not sim the item), pct (Percent: the gain relative to the replaced item, or the whole-gear share for an empty
+-- slot) }. The items: the sim's (Sim/SimBiS.lua: the items of each slot whose gain shows), else (Percent, before a
+-- spec's first sim) the best of the list's own items (BiS.OnSheet) that beat what is worn. Items the character owns are none.
 local targets          -- [itemID] = entry, for targetsSpec; nil: made again when asked
 local targetsSpec
 local wornUnknown      -- an item worn was not known when they were made: made again when item data comes
@@ -293,7 +293,8 @@ local function AddTarget(list, id, slot, value, delta, err, pct, fallback)
 end
 
 -- The best items of the list's own items (SheetList) of every slot that beat what is worn there (its scores:
--- GetEquippedScore); with Percent only those whose share shows (ItemCheck.StatsDirection: +0.1 % and more).
+-- GetEquippedScore); Percent uses the same replaced-item denominator as the item tooltip, with whole-gear share only
+-- when the slot's current score is zero.
 local function AddRanked(list, spec)
     local ranking, done = BiS.Ranking(spec), {}
     local total
@@ -312,7 +313,7 @@ local function AddRanked(list, spec)
             else
                 for _, e in ipairs(SheetList(spec, ranking, dataSlot)) do
                     local gain = e.score - worn
-                    local pct = total and gain / total * 100
+                    local pct = worn > 0 and gain / worn * 100 or total and total > 0 and gain / total * 100
                     if gain <= 0 then break end
                     if not C_Item.IsEquippedItem(e.id) then
                         AddTarget(list, e.id, slot, gain, nil, nil, pct, e.fallback)
@@ -405,7 +406,7 @@ end
 function BiS.FormatJournalUpgrade(itemID)
     local result = BiS.JournalUpgrade(itemID)
     if not (result and result.pct) then return nil end
-    return "|cff55ee55" .. string.format("+%.1f%%", result.pct) .. "|r"
+    return "|cff55ee55" .. LJ.ItemCheck.FormatPercent(result.pct) .. "|r"
 end
 
 -- Open World has already selected a concrete drop. Compare it directly with gear,
@@ -450,8 +451,7 @@ end
 function BiS.WorldUpgradeText(itemID)
     local result = WorldUpgradeResult(itemID)
     if not result then return nil end
-    return result.pct and math.abs(result.pct) >= 0.05
-        and string.format("+%.1f%%", result.pct) or L("Upgrade")
+    return result.pct and LJ.ItemCheck.FormatPercent(result.pct) or L("Upgrade")
 end
 
 -- A preview-only percentage for the Database Items page. Unlike the normal upgrade
@@ -524,17 +524,17 @@ function BiS.Targets()
     return list
 end
 
--- The mark of an item on the list: "+3.1 DPS" (the gain the sim found), "+2.4%" (Percent: what it adds to the whole
--- gear), else "BiS"; nil when it is not on it.
+-- The mark of an item on the list: "+3.1 DPS" (the gain the sim found), "+2.4%" (Percent: its gain versus the item
+-- it replaces), else "BiS"; nil when it is not on it.
 function BiS.UpgradeText(itemID)
     local t = BiS.Target(itemID)
     if not t then
         local result = BiS.JournalUpgrade(itemID)
         if not result then return nil end
-        return result.pct and string.format("+%.1f%%", result.pct) or L("Upgrade")
+        return result.pct and LJ.ItemCheck.FormatPercent(result.pct) or L("Upgrade")
     end
     if not LJ.NO_SIM and t.delta and LJ.SimBiS.Shows(t.delta, t.err) then return string.format("+%.1f DPS", t.delta) end
-    if t.pct then return string.format("+%.1f%%", t.pct) end
+    if t.pct then return LJ.ItemCheck.FormatPercent(t.pct) end
     return L("BiS")
 end
 
