@@ -2,7 +2,7 @@
 ## Title: Lootified
 ## Notes: WoW: Forever loot journal with multilingual interface, dungeon quests, loot, level-aware Best in Slot and percent-based upgrades.
 ## Author: atr2982 (continuation based on Lootified by Alen)
-## Version: 1.2.0.20
+## Version: 1.2.0.21
 ## IconTexture: Interface\AddOns\LootifiedContinued\Media\Logo64
 ## Category: Loot
 ## SavedVariables: LootifiedData
@@ -11,6 +11,7 @@
 ## AddonCompartmentFuncOnEnter: Lootified_OnAddonCompartmentEnter
 ## AddonCompartmentFuncOnLeave: Lootified_OnAddonCompartmentLeave
 ## X-License: GPL-3.0
+## OptionalDeps: PawnForever
 
 Core\Init.lua
 Core\Util.lua
@@ -46,7 +47,7 @@ Core\Locale.lua
 Core\Items.lua
 Core\Player.lua
 Core\Scoring.lua
-Core\StatPrio.lua
+Core\PawnForever.lua
 Core\Quests.lua
 Core\MapPin.lua
 Core\BiS.lua
@@ -73,7 +74,6 @@ UI\Glyphs.lua
 UI\Theme.lua
 UI\Widgets.lua
 UI\ListFilter.lua
-UI\StatPrioView.lua
 UI\MainFrame.lua
 UI\BiSPage.lua
 UI\SearchPage.lua

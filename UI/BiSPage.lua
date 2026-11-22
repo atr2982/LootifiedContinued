@@ -321,6 +321,7 @@ function Page:CreateWell(doll)
     -- otherwise TryOn can run against an unfinished model and leave the preview undressed.
     model:SetScript("OnModelLoaded", function()
         self.modelReady = true
+        self.modelLoading = false
         self:ApplyDressModel()
     end)
     self.dressLoader = CreateFrame("Frame")
@@ -1024,7 +1025,10 @@ function Page:DressModel()
         -- model asynchronously while the outfit is being applied.
         self:ApplyDressModel()
     else
-        model:SetUnit("player")
+        if not self.modelLoading then
+            self.modelLoading = true
+            model:SetUnit("player")
+        end
     end
 end
 
@@ -1042,6 +1046,19 @@ function Page:ApplyDressModel()
     self.dressed = pending.signature
     self.pendingDress = nil
 end
+
+-- Rebuild the model's asynchronous player appearance when the selected Lootified spec changes.
+-- MainFrame refreshes the page on the same event, so the new spec's outfit is queued afterward.
+LJ:Listen("SPEC_CHANGED", function()
+    if not Page.model then return end
+    Page.dressed, Page.pendingDress = nil, nil
+    if Page.root and Page.root:IsShown() then
+        Page.modelReady = false
+        Page.modelLoading = true
+        Page.model:SetUnit("player")
+        Page:Refresh()
+    end
+end)
 
 function Page:Show()
     Player:Refresh()

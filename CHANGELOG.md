@@ -1,3 +1,10 @@
+## 1.2.0.21 — 2026-11-21
+
+- Use PawnForever's selected-spec scoring and upgrade verdicts for Lootified's gear comparisons, and remove the obsolete stat-priority page and controls.
+- Keep above-level item comparisons available while respecting class and Feral gear eligibility; exclude caster-effect items from Cat and Bear recommendations and show only relics that benefit the selected Feral spec.
+- Include eligible equipped gear in Best in Slot rankings so the currently worn best item is correctly identified.
+- Remove healer damage pseudo-specs from Lootified.
+- Exclude ForeverDB items marked speculative from obtainable gear lists when no verified source is recorded.
 ## 1.2.0.20 — 2026-11-20
 
 - Fixed dungeon quest-chain missing counts so available or in-progress earlier quests are not counted as missing.

@@ -119,7 +119,9 @@ local function Estimate(spec, id, link, facts)
     for _, dataSlot in ipairs(Scoring.GetItemSlots(facts, spec.class)) do
         local worn, wornID = Scoring.GetEquippedScore(spec, dataSlot, true)
         if worn == nil then return nil end
-        local margin = Scoring.Score(id, spec, dataSlot, true, stats) - worn
+        local score = Scoring.Score(id, spec, dataSlot, true, stats)
+        if not score then return nil end
+        local margin = score - worn
         if not best or margin > best then best, replaces = margin, wornID end
     end
     if not best then return nil end
@@ -198,6 +200,9 @@ function ItemCheck.Get(link)
     if not IsGear(equipLoc) then return nil end
     if C_Item.IsEquippedItem(id) then return { kind = "worn" } end
     local facts = { id = id, equipLoc = equipLoc, classID = classID, subclassID = subclassID }
+    if not Scoring.IsSpecEligible(id, spec, Scoring.EQUIPLOC_SLOTS[equipLoc], Scoring.GetStatsForLink(link)) then
+        return { kind = "cannot", why = L("This item has caster effects that Feral form cannot use.") }
+    end
     if not Player:CanClassUse(facts, spec.class) then
         if not Items.IsClassAllowed(id, spec.class) then return { kind = "cannot", why = L("Only other classes can use it.") } end
         if equipLoc == "INVTYPE_WEAPONOFFHAND" and not Player:CanDualWield(spec.class) then
@@ -217,12 +222,14 @@ function ItemCheck.Get(link)
 
     local slots = FightSlots(id)
     if not LJ.UI.Sim.RanksItems(spec) then
-        local share = ItemCheck.Share(spec, link)
-        if not share then
+        local verdict = LJ.PawnForever.Check(link, spec)
+        if verdict == nil or verdict == false then
             return { kind = "unknown", canSim = false,
                 replaces = slots[1] and GetInventoryItemID("player", SimBiS.INV_SLOT[slots[1]]) }
         end
-        return { kind = "stats", better = share.better, pct = share.pct, replaces = share.replaces }
+        return { kind = "pawn", better = verdict.upgrade, pct = verdict.upgrade and verdict.gain or nil,
+            gainText = verdict.upgrade and LJ.PawnForever.GainText(verdict) or nil,
+            replaces = verdict.slot and GetInventoryItemID("player", verdict.slot), verdict = verdict }
     end
     local canSim = LJ.UI.Sim.Model(spec) ~= nil and #slots > 0
     local n = ItemCheck.Number(link)

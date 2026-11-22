@@ -157,8 +157,7 @@ function Player:GetTalentTreeSpec()
     return best
 end
 
--- The damage entries of the healer trees (HOLY_DMG, DISC_DMG: listed after the trees' specs) are never detected: the
--- player picks them in the Best in Slot list (healers take their talents too).
+-- Healers use their healing spec profiles; their damage spells remain part of the game, not separate Lootified specs.
 function Player:DetectSpecKey()
     local specs = self:GetSpecs()
     if #specs == 0 then return nil end

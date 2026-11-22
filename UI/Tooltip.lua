@@ -93,27 +93,22 @@ local function AddSource(tooltip, glyph, name, chance, below)
     tooltip:AddLine(Theme.DotSafe(below), BELOW[1], BELOW[2], BELOW[3], false, INDENT)
 end
 
--- The gain beside the item's name: the first line's right text, in the tooltip's title font. What the sim found for the
--- item (link) with what is worn now (Sim/ItemCheck.lua: an upgrade green after an arrow, a loss red, about the same
--- grey); Percent: what it adds to the whole gear by the stat weights ("+4.2%", "Upgrade" while nothing worn scores);
--- else the mark of the Best in Slot list ("+1.1 DPS" or "BiS" after a green arrow); none for other items. The game
--- clears it with the tooltip's lines and sizes the tooltip after our lines (TooltipDataHandler).
+-- The first line's right text uses PawnForever's verdict for Lootified's selected spec. Its own gain formatter and
+-- verdict threshold are used so the displayed upgrade matches PawnForever's bag marker. Unsupported scales show no
+-- competing Lootified percentage.
 local function ShowTopGain(tooltip, itemID, link)
-    local n = LJ.ItemCheck.Number(link)
-    local v = not n and LJ.ItemCheck.Get(link)
+    local spec = LJ.Player:GetActiveSpec()
+    local scale = LJ.PawnForever.Scale(spec)
+    local verdict = scale and LJ.PawnForever.Check(link, spec)
     local text, color, dir
-    if n then
-        dir = LJ.ItemCheck.Direction(n)
-        text = string.format("%+.1f DPS", n.delta)
-    elseif v and v.kind == "stats" and (v.pct or v.better) then
-        dir = LJ.ItemCheck.StatsDirection(v)
-        text = v.pct and string.format("%+.1f%%", v.pct) or L("Upgrade")
+    if verdict and verdict.upgrade then
+        dir = "up"
+        text = LJ.PawnForever.GainText(verdict)
     end
+    if text == nil then return end
     if text then
         if dir == "up" then text = Theme.IconString("upgrade", 14) .. " " .. text end
         color = dir == "up" and GAIN or dir == "down" and LOSS or SAME
-    elseif LJ.BiS.Target(itemID) then
-        text, color = Theme.IconString("upgrade", 14) .. " " .. LJ.BiS.UpgradeText(itemID), GAIN
     else
         return
     end

@@ -2,8 +2,7 @@
 -- Items.InList) and, on the Best in Slot page, the spec it is made for. The list's box (a chip per armor kind the class
 -- wears, a chip per source, the drop chance) sits in the first start's question (UI/RatingPicker.lua) and in the
 -- filter's panel; the Best in Slot page's header has the filter's button (the spec and the list), a click opens the
--- panel at the right (Filter: the spec as cards, the list's box, Back to realistic; Stat priority, with Percent only:
--- UI/StatPrioView.lua).
+-- panel at the right (spec cards, the list's box and the PawnForever scoring note).
 -- A change counts at once for the whole addon: the list, For you, the marks and the sims.
 local _, LJ = ...
 local L, F = LJ.L, LJ.F
@@ -266,8 +265,7 @@ function Filter.CreateButton(parent, onClick)
 end
 
 ---------------------------------------------------------------------------
--- The panel: two tabs. Filter: the spec as cards, the list's box, Back to realistic and Done; Stat priority: the spec's
--- recommended per-spec stat priorities (UI/StatPrioView.lua)
+-- The panel: spec cards, the list's box, PawnForever scoring note, Back to realistic and Done.
 ---------------------------------------------------------------------------
 Filter.PANEL_WIDTH = 430
 local PAD, CARD_GAP, CARD_HEIGHT = 16, 8, 46
@@ -302,22 +300,10 @@ local function NewCard(panel, width)
     return card
 end
 
--- The tab picked: Filter with the cards of the class's specs (the active one picked; the one the talents point to says
--- so) and the box as the list is now, or Stat priority with the active spec's stats. With Sim there is no Stat priority
--- tab: the simulator rates the items (StatPrio.Counts).
 local function PanelRefresh(panel)
     local specs, active = Player:GetSpecs(Player.class), Player:GetActiveSpec()
-    local prio = active ~= nil and LJ.StatPrio.Counts(active)
-    panel.tabs.stats:SetShown(prio)
-    if not prio then panel.tab = "filter" end
     for key, chip in pairs(panel.tabs) do chip:SetActive(panel.tab == key) end
-    panel.filter:SetShown(panel.tab == "filter")
-    panel.stats:SetShown(panel.tab == "stats")
-    if panel.tab == "stats" then
-        panel.stats:Refresh(active)
-        return
-    end
-    local detected = Player:DetectSpecKey()
+    panel.filter:Show()
     local width = math.floor((Filter.PANEL_WIDTH - PAD * 2 - CARD_GAP) / 2)
     for i, spec in ipairs(specs) do
         local card = panel.cards[i] or NewCard(panel.filter, width)
@@ -325,7 +311,7 @@ local function PanelRefresh(panel)
         card.specKey = spec.key
         card.active = active ~= nil and spec.key == active.key
         card.name:SetText(L(spec.name))
-        card.sub:SetText(spec.key == detected and F("%s · %s", L(spec.role), L("your talents")) or L(spec.role))
+        card.sub:SetText(L(spec.role))
         card:ClearAllPoints()
         card:SetPoint("TOPLEFT", PAD + ((i - 1) % 2) * (width + CARD_GAP),
             -(panel.cardsTop + math.floor((i - 1) / 2) * (CARD_HEIGHT + CARD_GAP)))
@@ -366,21 +352,11 @@ function Filter.CreatePanel(parent, onDone)
     panel.close:SetScript("OnClick", function() onDone() end)
     -- the tabs at the top (the one picked kept while the session lasts)
     panel.tab, panel.tabs = "filter", {}
-    local x = PAD
-    for _, tab in ipairs({ { key = "filter", text = "Filter", glyph = "funnel" },
-        { key = "stats", text = "Stat priority", glyph = "sortDown" } }) do
-        local chip = Widgets.CreateChip(panel, tab.text, tab.glyph, 24)
-        chip.key = tab.key
-        chip:SetPoint("TOPLEFT", x, -PAD)
-        x = x + chip:GetWidth() + 6
-        chip:SetScript("OnClick", function(c)
-            if panel.tab == c.key then return end
-            Util.PlaySound("U_CHAT_SCROLL_BUTTON")
-            panel.tab = c.key
-            panel:Refresh()
-        end)
-        panel.tabs[tab.key] = chip
-    end
+    local filterTab = Widgets.CreateChip(panel, "Filter", "funnel", 24)
+    filterTab.key = "filter"
+    filterTab:SetPoint("TOPLEFT", PAD, -PAD)
+    filterTab:SetActive(true)
+    panel.tabs.filter = filterTab
     local top = PAD + 24 + 14
     -- Filter
     panel.filter = CreateFrame("Frame", nil, panel)
@@ -407,9 +383,6 @@ function Filter.CreatePanel(parent, onDone)
         "ANCHOR_TOP")
     panel.done = Widgets.CreateButton(panel.filter, "Done", "primary", nil, nil, PANEL_BUTTON_HEIGHT)
     panel.done:SetScript("OnClick", function() onDone() end)
-    -- Stat priority
-    panel.stats = UI.StatPrioView.Create(panel, Filter.PANEL_WIDTH - PAD * 2)
-    panel.stats:SetPoint("TOPLEFT", PAD, -top)
     panel.Refresh = PanelRefresh
     panel:Hide()
     return panel
@@ -417,7 +390,7 @@ end
 
 ---------------------------------------------------------------------------
 -- The panel's tour: the first time it opens the panel explains itself, each part once (LJ.db.filterTour; starting the
--- main tour again resets it): the spec, the list's box and, where it counts (Percent), the Stat priority tab. It uses
+-- main tour again resets it): the spec and the list's box. It uses
 -- the spotlight of the main tour (UI/Tour.lua).
 ---------------------------------------------------------------------------
 local filterTour
@@ -433,7 +406,7 @@ local function TourSteps(panel)
     end
     if not seen.filter then
         steps[#steps + 1] = { key = "filter", title = "Spec",
-            text = "Lootified rates items for the spec picked here: your list, For you and the marks. \"your talents\" marks the one your talents point to.",
+            text = "Lootified rates items for the spec picked here: your list, For you and the marks.",
             enter = Tab("filter"),
             target = function() return panel.specLabel, unpack(panel.cards) end }
         local armor = #Filter.ClassArmor() > 1
@@ -443,13 +416,6 @@ local function TourSteps(panel)
                 or "What your list may use: where its items may come from. The drop chance leaves out rarer drops (10 % at the start). Every change counts at once; Back to realistic gives back the list of your first start.",
             enter = Tab("filter"),
             target = function() return panel.box, panel.reset end }
-    end
-    local spec = Player:GetActiveSpec()
-    if not seen.stats and spec and LJ.StatPrio.Counts(spec) then
-        steps[#steps + 1] = { key = "stats", title = "Stat priority",
-            text = "Your spec's recommended stat order. The bars and gear rankings use these priorities; each specialization has its own order.",
-            enter = Tab("stats"),
-            target = function() return panel.tabs.stats, panel.stats end }
     end
     return steps
 end
@@ -478,5 +444,5 @@ function Filter.StopTour()
     if filterTour and filterTour.active then filterTour:Stop(true) end
 end
 
--- The panel's tour (nil until it ran once), for the tests.
+-- The panel's tour (nil until it ran once).
 function Filter.Tour() return filterTour end

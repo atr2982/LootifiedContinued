@@ -121,7 +121,7 @@ local WARRIOR_ARMS_FURY = {
         { id = 19107, src = "Quest reward - Alterac Valley (PvP)" },
     },
 }
-local PALADIN_RET_HOLY_DMG = {
+local PALADIN_RET_ITEMS = {
     HEAD = {
         { id = 12640 },
         { id = 22411, src = "Baron Rivendare, Stratholme" },
@@ -481,7 +481,7 @@ local PRIEST_DISC_HOLY = {
         { id = 16997, src = "Quest: Order Must Be Restored", note = "Icy Veins BiS wand" },
     },
 }
-local PRIEST_SHADOW_DISC_DMG_HOLY_DMG = {
+local PRIEST_SHADOW_ITEMS = {
     HEAD = {
         { id = 22267, src = "General Drakkisath, Upper Blackrock Spire" },
         { id = 18727, src = "Magistrate Barthilas, Stratholme" },
@@ -1049,13 +1049,7 @@ LJ.Data.BiS = {
             key = "RET", name = "Retribution", role = "DPS", icon = "Interface\\Icons\\Spell_Holy_AuraOfLight", weapon = "2H",
             estimated = true,
             weights = { Strength = 0.512, Agility = 0.3277, Stamina = 0.2621, Intellect = 0.4096, Spirit = 0.2097, AttackPower = 0.256, Crit = 5.6, Hit = 5, SpellCrit = 5.6, SpellHit = 4, Expertise = 10, SpellPower = 0.5547, HolyPower = 0.5547, MP5 = 0.125, Armor = 0.003552, WeaponDPS = 3.584 },
-            slots = PALADIN_RET_HOLY_DMG,
-        },
-        {
-            key = "HOLY_DMG", name = "Holy (Damage)", role = "DPS", icon = "Interface\\Icons\\Spell_Holy_HolyBolt", weapon = "2H",
-            estimated = true,
-            weights = { Strength = 0.512, Agility = 0.3277, Stamina = 0.2621, Intellect = 0.4096, Spirit = 0.2097, AttackPower = 0.256, Crit = 5.6, Hit = 5, SpellCrit = 5.6, SpellHit = 4, Expertise = 10, SpellPower = 0.5547, HolyPower = 0.5547, MP5 = 0.125, Armor = 0.003552, WeaponDPS = 3.584 },
-            slots = PALADIN_RET_HOLY_DMG,
+            slots = PALADIN_RET_ITEMS,
         },
     },
     HUNTER = {
@@ -1196,19 +1190,7 @@ LJ.Data.BiS = {
             key = "SHADOW", name = "Shadow", role = "DPS", icon = "Interface\\Icons\\Spell_Shadow_ShadowWordPain", weapon = "1H",
             estimated = true,
             weights = { Agility = 0.05, Stamina = 0.4096, Intellect = 0.512, Spirit = 0.05, SpellCrit = 11.2, SpellHit = 5.12, SpellPower = 0.8667, ShadowPower = 0.8667, MP5 = 0.8192, Armor = 0.003552 },
-            slots = PRIEST_SHADOW_DISC_DMG_HOLY_DMG,
-        },
-        {
-            key = "DISC_DMG", name = "Discipline (Damage)", role = "DPS", icon = "Interface\\Icons\\Spell_Holy_WordFortitude", weapon = "1H",
-            estimated = true,
-            weights = { Agility = 0.05, Stamina = 0.4096, Intellect = 0.512, Spirit = 0.05, SpellCrit = 11.2, SpellHit = 5.12, SpellPower = 0.8667, ShadowPower = 0.8667, MP5 = 0.8192, Armor = 0.003552 },
-            slots = PRIEST_SHADOW_DISC_DMG_HOLY_DMG,
-        },
-        {
-            key = "HOLY_DMG", name = "Holy (Damage)", role = "DPS", icon = "Interface\\Icons\\Spell_Holy_GreaterHeal", weapon = "1H",
-            estimated = true,
-            weights = { Agility = 0.05, Stamina = 0.4096, Intellect = 0.512, Spirit = 0.05, SpellCrit = 11.2, SpellHit = 5.12, SpellPower = 0.8667, ShadowPower = 0.8667, MP5 = 0.8192, Armor = 0.003552 },
-            slots = PRIEST_SHADOW_DISC_DMG_HOLY_DMG,
+            slots = PRIEST_SHADOW_ITEMS,
         },
     },
     SHAMAN = {

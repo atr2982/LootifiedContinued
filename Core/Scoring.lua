@@ -262,12 +262,40 @@ local function W(w, key) return w[key] or 0 end
 
 local SCHOOLS = { "ShadowPower", "FirePower", "FrostPower", "NaturePower", "ArcanePower", "HolyPower" }
 
+-- Feral form gear must not be selected for spell damage it cannot use. Weapon DPS still counts in form,
+-- but caster spell bonuses and weapon off-hands are not Feral upgrades.
+local FERAL_SPECS = { CAT = true, BEAR = true }
+local FERAL_RELIC_SPECS = {
+    [249441] = {},             -- Talons of Wrath restores mana to Wrath; not useful in either Feral form.
+    [213594] = { BEAR = true }, -- Idol of the Heckler's Forever effect is unlocked through Challenging Roar.
+}
+local function IsFeral(spec)
+    return spec and spec.class == "DRUID" and FERAL_SPECS[spec.key]
+end
+
+function Scoring.IsSpecEligible(itemID, spec, slotKey, stats)
+    if not IsFeral(spec) then return true end
+    if slotKey == "OFFHAND" then return false end
+    local relicSpecs = FERAL_RELIC_SPECS[itemID]
+    if relicSpecs and not relicSpecs[spec.key] then return false end
+    stats = stats or Scoring.GetStats(itemID)
+    if stats then
+        for _, key in ipairs({ "SpellPowerAll", "SpellDamage", "ShadowPower", "FirePower", "FrostPower",
+            "NaturePower", "ArcanePower", "HolyPower" }) do
+            if (stats[key] or 0) > 0 then return false end
+        end
+    end
+    return true
+end
+
 -- slotKey decides how weapon DPS counts (MAINHAND/TWOHAND/OFFHAND/RANGED).
 -- stats: optional stat table (Scoring.GetStatsForLink), otherwise the item's stats are used.
 function Scoring.Score(itemID, spec, slotKey, atCurrentLevel, stats)
     local s = stats or Scoring.GetStats(itemID)
     if not s then return nil end
-    local w = LJ.StatPrio.Weights(spec) or {}
+    if not Scoring.IsSpecEligible(itemID, spec, slotKey, s) then return nil end
+    local w = LJ.PawnForever.Weights(spec)
+    if not w then return nil end
     local score = 0
 
     score = score + (s.Strength or 0) * W(w, "Strength")
@@ -426,11 +454,31 @@ function Scoring.GetWorldCandidateIDs()
     return list
 end
 
+-- ForeverDB includes speculative records that are present in client data but have no confirmed acquisition
+-- path. Keep those in the raw catalog for /lf collect, but don't present them as obtainable gear unless one of
+-- Lootified's verified source tables identifies where they come from.
+local function HasVerifiedItemSource(id)
+    local dungeonSources = Items.GetSources(id)
+    if (dungeonSources and #dungeonSources > 0) or Items.HasWorldDrop(id) then return true end
+    if LJ.Data.Crafted and LJ.Data.Crafted[id] then return true end
+    if LJ.Data.WorldQuestRewards and LJ.Data.WorldQuestRewards[id] then return true end
+    if LJ.Quests and LJ.Quests.rewardOf and LJ.Quests.rewardOf[id] then return true end
+    return false
+end
+
+local function IsUnconfirmedForeverItem(id)
+    local record = LJ.Data.ForeverDB and LJ.Data.ForeverDB.items and LJ.Data.ForeverDB.items[id]
+    return record and record.speculation == true and not HasVerifiedItemSource(id)
+end
+
 function Scoring.GetAllCandidateIDs()
     if Scoring.allIDs then return Scoring.allIDs end
     -- The Database is a catalog, not just an index of items with already-known acquisition sources. Include the
-    -- complete shipped item records so Forever gear does not disappear merely because its source table is incomplete.
-    local list = Scoring.GetAllItemIDs()
+    -- shipped item records, except ForeverDB entries explicitly marked speculative with no verified source.
+    local list = {}
+    for _, id in ipairs(Scoring.GetAllItemIDs()) do
+        if not IsUnconfirmedForeverItem(id) then list[#list + 1] = id end
+    end
     Scoring.allIDs = list
     return list
 end
@@ -507,8 +555,10 @@ function Scoring.GetCatalogGearIDs()
     if catalogGearIDs then return catalogGearIDs end
     local list = {}
     for _, id in ipairs(Scoring.GetAllItemIDs()) do
-        local itemID, _, _, equipLoc = C_Item.GetItemInfoInstant(id)
-        if itemID and equipLoc and equipLoc ~= "" then list[#list + 1] = id end
+        if not IsUnconfirmedForeverItem(id) then
+            local itemID, _, _, equipLoc = C_Item.GetItemInfoInstant(id)
+            if itemID and equipLoc and equipLoc ~= "" then list[#list + 1] = id end
+        end
     end
     catalogGearIDs = list
     return list
@@ -525,7 +575,7 @@ end
 
 -- Ranks every known item for a spec, grouped by slot: the items its list takes (Items.InList: the sources the player
 -- picked) that the character can wear (not the other faction's, on the own class's list none with a profession the
--- character lacks). Kept per list (Items.ListKey) and stat priority (Core/StatPrio.lua): another one is ranked anew.
+-- character lacks). Kept per list (Items.ListKey) and PawnForever scale generation: another one is ranked anew.
 -- opts.maxLevel limits the items to those usable at that level (Items.GetUseLevel), opts.current uses the
 -- rating conversions of the current level.
 -- Thousands of candidates are looked at without an item record each: slot and type come from the client
@@ -536,7 +586,7 @@ local scratchStats = {}     -- shipped stats of that candidate, parsed for its s
 function Scoring.RankAll(spec, opts)
     opts = opts or {}
     local cacheKey = table.concat({ spec.class, spec.key, tostring(opts.maxLevel or 0), tostring(opts.current and 1 or 0),
-        Items.ListKey(), LJ.StatPrio.Key(spec) }, ":")
+        Items.ListKey(), LJ.PawnForever.CacheKey(spec) }, ":")
     if rankingCache[cacheKey] then return rankingCache[cacheKey] end
     local started = debugprofilestop()
     local bySlot = {}

@@ -133,15 +133,11 @@ local BIS = {
     enter = function() UI:Open("bis") end,
     target = Content, place = "inside", pad = 0,
 }
--- the filter's button above the character; its panel explains itself the first time it opens (UI/ListFilter.lua). The
--- Stat priority tab only where it counts (Percent: Core/StatPrio.lua)
+-- the filter's button above the character; its panel explains itself the first time it opens (UI/ListFilter.lua).
 local FILTER = {
     title = "Filter",
     text = function()
-        local spec = Player:GetActiveSpec()
-        return spec and LJ.StatPrio.Counts(spec)
-            and L("The filter of your Best in Slot list: the spec it is made for, the armor it takes and where its items may come from; its second tab orders your stats. Open it any time: the first time it explains itself.")
-            or L("The filter of your Best in Slot list: the spec it is made for, the armor it takes and where its items may come from. Open it any time: the first time it explains itself.")
+        return L("The filter of your Best in Slot list: its spec, the armor it takes, and where its items may come from. Open it any time: the first time it explains itself.")
     end,
     enter = function() UI:Open("bis") end,
     target = function() return UI.pages.bis.filterButton end,

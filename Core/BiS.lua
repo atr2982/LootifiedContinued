@@ -92,17 +92,47 @@ function BiS.OnSheet(spec, itemID, level, ignoreSources)
     return Items.InList(itemID, spec.class, level, ignoreSources)
 end
 
--- The part of a data slot's ranked list the sheet picks from (BiS.OnSheet; none: the slot stays empty). Kept with the
--- ranking (one per spec and level).
+-- The part of a data slot's ranked list the sheet picks from: source-filtered drops plus the character's equipped,
+-- spec-eligible items. Equipped items must compete too, so the sheet never labels a lower-scoring drop as BiS.
+-- Kept with the ranking (one per spec and level).
 local function SheetList(spec, ranking, dataSlot)
     ranking.sheet = ranking.sheet or {}
     local kept = ranking.sheet[dataSlot]
     if kept then return kept end
     kept = {}
+    local byID = {}
     local level = BiS.ListLevel(spec)
     for _, x in ipairs(ranking.bySlot[dataSlot] or {}) do
-        if BiS.OnSheet(spec, x.id, level, x.fallback) then kept[#kept + 1] = x end
+        if BiS.OnSheet(spec, x.id, level, x.fallback) then
+            local item = {}
+            for key, value in pairs(x) do item[key] = value end
+            kept[#kept + 1] = item
+            byID[item.id] = item
+        end
     end
+    for _, slotID in ipairs(Player.SLOT_IDS[dataSlot] or {}) do
+        local itemID = Player:GetEquippedItemID(slotID)
+        if itemID then
+            local score = Scoring.EquippedScore(slotID, spec, dataSlot, true)
+            if score ~= nil then
+                local item = byID[itemID]
+                if item then
+                    item.score = math.max(item.score, score)
+                    item.worn = true
+                else
+                    item = { id = itemID, score = score, worn = true,
+                        itemLevel = select(2, Items.GetKnownLevels(itemID)) or 0 }
+                    kept[#kept + 1] = item
+                    byID[itemID] = item
+                end
+            end
+        end
+    end
+    table.sort(kept, function(a, b)
+        if a.score ~= b.score then return a.score > b.score end
+        if a.worn ~= b.worn then return a.worn == true end
+        return a.id < b.id
+    end)
     ranking.sheet[dataSlot] = kept
     return kept
 end
