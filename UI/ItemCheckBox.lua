@@ -123,9 +123,6 @@ local function Words(v)
         if dir == "up" then return "upgrade", C.ok, L("Upgrade for you"), note end
         if dir == "down" then return "minus", C.red, L("Not an upgrade"), note end
         return "minus", C.text3, L("About the same"), note
-    elseif v.kind == "pawn" then
-        if v.better then return "upgrade", C.ok, L("Upgrade for you"), v.gainText end
-        return "minus", C.red, L("Not an upgrade"), L("This is not an upgrade for the selected spec.")
     elseif v.kind == "estimate" then
         local note = L("Estimate from its stats.")
         if v.better then return "upgrade", C.warn, L("Probably an upgrade"), note end
@@ -213,7 +210,7 @@ local function Refresh(f)
         f.sim:SetGlyph("lightning")
     end
     -- the number: the damage the sim found, or (Percent) the share by the stat weights
-    local share = (v.kind == "stats" or v.kind == "pawn") and v.pct ~= nil
+    local share = v.kind == "stats" and v.pct ~= nil
     local numberShown = (v.kind == "sim" or share) and not running
     for _, part in ipairs({ f.value, f.unit, f.err }) do part:SetShown(numberShown) end
     f.note:SetShown(not numberShown)
@@ -225,11 +222,7 @@ local function Refresh(f)
     if numberShown then
         local dir = share and ItemCheck.StatsDirection(v) or ItemCheck.Direction(v)
         local c = dir == "up" and C.okText or dir == "down" and C.redText or C.text2
-        if v.kind == "pawn" and v.pct then
-            f.value:SetText(("+%d"):format(math.max(1, math.floor(v.pct + 0.5))))
-        else
-            f.value:SetText(Signed(share and v.pct or v.delta))
-        end
+        f.value:SetText(Signed(share and v.pct or v.delta))
         Widgets.SetTextColor(f.value, c)
         Widgets.SetTextColor(f.unit, c)
         f.unit:SetText(share and "%" or "DPS")

@@ -115,18 +115,21 @@ ItemCheck.WornTotal = WornTotal
 local function Estimate(spec, id, link, facts)
     local stats = Scoring.GetStatsForLink(link)
     if not stats then return nil end
-    local best, replaces
+    local best, replaces, replacesLink, bestScore, bestWorn, bestSlot
     for _, dataSlot in ipairs(Scoring.GetItemSlots(facts, spec.class)) do
-        local worn, wornID = Scoring.GetEquippedScore(spec, dataSlot, true)
+        local worn, wornID, wornLink = Scoring.GetEquippedScore(spec, dataSlot, true)
         if worn == nil then return nil end
         local score = Scoring.Score(id, spec, dataSlot, true, stats)
         if not score then return nil end
         local margin = score - worn
-        if not best or margin > best then best, replaces = margin, wornID end
+        if not best or margin > best then
+            best, replaces, replacesLink, bestScore, bestWorn, bestSlot = margin, wornID, wornLink, score, worn, dataSlot
+        end
     end
     if not best then return nil end
     local total = WornTotal(spec)
-    return best > 0, replaces, total and total > 0 and best / total * 100 or nil
+    return best > 0, replaces, total and total > 0 and best / total * 100 or nil,
+        best, bestScore, bestWorn, bestSlot, replacesLink
 end
 
 -- An item by the stat weights of a spec (Percent: the tooltips and the boxes):
@@ -134,10 +137,11 @@ end
 function ItemCheck.Share(spec, link)
     local _, _, _, equipLoc, _, classID, subclassID = C_Item.GetItemInfoInstant(link)
     local id = Parse(link)
-    local better, replaces, pct = Estimate(spec, id, link,
+    local better, replaces, pct, points, score, current, slot, replacesLink = Estimate(spec, id, link,
         { id = id, equipLoc = equipLoc, classID = classID, subclassID = subclassID })
     if better == nil then return nil end
-    return { better = better, pct = pct, replaces = replaces }
+    return { better = better, pct = pct, points = points, score = score, current = current,
+        empty = replaces == nil, replaces = replaces, replacesLink = replacesLink, slot = slot }
 end
 
 -- An item in a sheet slot by a spec's stat weights against what is worn in that slot (a two-hander in the main hand:
@@ -222,13 +226,13 @@ function ItemCheck.Get(link)
 
     local slots = FightSlots(id)
     if not LJ.UI.Sim.RanksItems(spec) then
-        local verdict = LJ.PawnForever.Check(link, spec)
+        local verdict = LJ.UpgradeScoring.Check(link, spec)
         if verdict == nil or verdict == false then
             return { kind = "unknown", canSim = false,
                 replaces = slots[1] and GetInventoryItemID("player", SimBiS.INV_SLOT[slots[1]]) }
         end
-        return { kind = "pawn", better = verdict.upgrade, pct = verdict.upgrade and verdict.gain or nil,
-            gainText = verdict.upgrade and LJ.PawnForever.GainText(verdict) or nil,
+        return { kind = "stats", better = verdict.upgrade, pct = verdict.upgrade and verdict.gain or nil,
+            gainText = verdict.upgrade and LJ.UpgradeScoring.GainText(verdict) or nil,
             replaces = verdict.slot and GetInventoryItemID("player", verdict.slot), verdict = verdict }
     end
     local canSim = LJ.UI.Sim.Model(spec) ~= nil and #slots > 0

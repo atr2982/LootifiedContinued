@@ -114,6 +114,19 @@ local newInstanceQuestFixes = {
     [96393] = { side = "A", pre = { 96391 } }, -- Old Ironforge Incursion
     [98423] = { side = "A" }, -- Treaty of Understanding
 
+    -- Current classic-dungeon additions, cross-checked against Forever quest
+    -- listings. ForeverDB build 1.60.1.70938 mislabeled several faction rows
+    -- as BOTH, so restore their actual Forever sides before Journal filtering.
+    [96770] = { side = "A" }, -- The Witch Doctor's Head
+    [96773] = { side = "A" }, -- The Coldbringer's Eye
+    [96800] = { side = "A" }, -- Past Due
+    [96775] = { side = "H", next = { 96776 } }, -- Zum'rah's Head -> An'she's Radiance
+    [96776] = { side = "H", pre = { 96775 }, next = { 97197 } }, -- An'she's Radiance -> Fragment of the Firelands
+    [97196] = { side = "H" }, -- The Coldbringer's Eye
+    [97197] = { side = "H", pre = { 96776 } }, -- Fragment of the Firelands
+    [93404] = { side = "BOTH" }, -- Rot and Regret
+    [98830] = { side = "BOTH" }, -- The Broken Glaive
+
     -- Ruins of Lordaeron: restore faction-specific copies and the verified
     -- five-step Unending Torment chain.
     [95250] = { side = "A" }, -- Abominable Creatures
@@ -164,7 +177,9 @@ local newInstanceQuestFixes = {
     [94744] = { side = "H", pre = { 95428 }, next = { 94745, 94748, 95431 } }, -- The Wayward Warrior
     [94745] = { side = "H", pre = { 94744 }, next = { 94768 } }, -- Carving a Path
     [94748] = { side = "H", pre = { 94744 }, next = { 94768 } }, -- Break Their Chains
-    [95431] = { side = "H", pre = { 94744 }, next = { 94768 } }, -- Rumblings of Discontent
+    [95431] = { side = "H", pre = { 94744 }, next = { 94768, 95432 } }, -- Rumblings -> dungeon chain and Rise Up!
+    [95432] = { side = "H", pre = { 95431 }, next = { 95433 } }, -- Rise Up! -> Death to the Executioner
+    [95433] = { side = "H", pre = { 95432 } }, -- Death to the Executioner
     [94768] = { side = "H", pre = { 94745, 94748, 95431 }, next = { 94975, 95278 } }, -- Bring Me His Head
     [95278] = { side = "H", pre = { 94768 }, next = { 94968, 94972 } }, -- It Is Time, Brother... unlocks Eye/Tome
     [94968] = { side = "H", pre = { 95278 } }, -- Eye of Mugg

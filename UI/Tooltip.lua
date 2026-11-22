@@ -93,17 +93,15 @@ local function AddSource(tooltip, glyph, name, chance, below)
     tooltip:AddLine(Theme.DotSafe(below), BELOW[1], BELOW[2], BELOW[3], false, INDENT)
 end
 
--- The first line's right text uses PawnForever's verdict for Lootified's selected spec. Its own gain formatter and
--- verdict threshold are used so the displayed upgrade matches PawnForever's bag marker. Unsupported scales show no
--- competing Lootified percentage.
+-- The first line's right text uses Lootified's embedded scale and upgrade evaluator.
 local function ShowTopGain(tooltip, itemID, link)
     local spec = LJ.Player:GetActiveSpec()
-    local scale = LJ.PawnForever.Scale(spec)
-    local verdict = scale and LJ.PawnForever.Check(link, spec)
+    local scale = LJ.UpgradeScoring.Scale(spec)
+    local verdict = scale and LJ.UpgradeScoring.Check(link, spec)
     local text, color, dir
     if verdict and verdict.upgrade then
         dir = "up"
-        text = LJ.PawnForever.GainText(verdict)
+        text = LJ.UpgradeScoring.GainText(verdict)
     end
     if text == nil then return end
     if text then

@@ -395,29 +395,17 @@ function BiS.JournalUpgrade(itemID)
         journalUpgradeCache[itemID] = false
         return nil
     end
-    local link = Items.GetLink(itemID)
-    local share = link and LJ.ItemCheck.Share(spec, link) or nil
-    if not share then
-        -- The tooltip can score from the live link, while an unopened dungeon's item may only have shipped Forever
-        -- stats. Use the same weighted score against current gear when the client link has not resolved yet.
-        local gain = BiS.PotentialDelta(itemID)
-        if gain ~= nil then
-            local total = LJ.ItemCheck.WornTotal(spec)
-            share = { better = gain > 0, pct = total and total > 0 and gain / total * 100 or nil }
-        end
-    end
-    if not share then return nil end
-    local result
-    if LJ.ItemCheck.StatsDirection(share) == "up" then result = { pct = share.pct, better = share.better } end
+    local verdict = LJ.UpgradeScoring.Check(Items.GetLink(itemID), spec)
+    if not verdict then return nil end
+    local result = verdict.upgrade and { pct = verdict.gain, better = true, points = verdict.points } or nil
     journalUpgradeCache[itemID] = result or false
     return result
 end
 
 function BiS.FormatJournalUpgrade(itemID)
     local result = BiS.JournalUpgrade(itemID)
-    if not result then return nil end
-    local text = result.pct and string.format("+%.1f%%", result.pct) or L("Upgrade")
-    return "|cff55ee55" .. text .. "|r"
+    if not (result and result.pct) then return nil end
+    return "|cff55ee55" .. string.format("+%.1f%%", result.pct) .. "|r"
 end
 
 -- Open World has already selected a concrete drop. Compare it directly with gear,
@@ -439,25 +427,17 @@ local function WorldUpgradeResult(itemID)
         return nil
     end
 
-    local link = Items.GetLink(itemID)
-    local share = link and LJ.ItemCheck.Share(spec, link) or nil
-    local gain, pct
-    if share then
-        if not share.better then
-            worldUpgradeCache[itemID] = false
-            return nil
-        end
-        pct = share.pct
-        local total = LJ.ItemCheck.WornTotal(spec)
-        gain = pct and total and total > 0 and pct * total / 100 or 0.000001
-    else
-        gain = BiS.PotentialDelta(itemID)
-        if not gain or gain <= 0 then return nil end
-        local total = LJ.ItemCheck.WornTotal(spec)
-        pct = total and total > 0 and gain / total * 100 or nil
+    local verdict = LJ.UpgradeScoring.Check(Items.GetLink(itemID), spec)
+    if not verdict then return nil end
+    if not verdict.upgrade then
+        worldUpgradeCache[itemID] = false
+        return nil
     end
 
-    local result = { gain = gain, pct = pct }
+    local total = LJ.ItemCheck.WornTotal(spec)
+    local gain = verdict.gain and total and total > 0 and verdict.gain * total / 100
+        or verdict.points or 0.000001
+    local result = { gain = gain, pct = verdict.gain }
     worldUpgradeCache[itemID] = result
     return result
 end

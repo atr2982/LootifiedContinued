@@ -40,6 +40,7 @@ local STAT_KEYS = {
     ITEM_MOD_SPELL_POWER_SHORT = "SpellPowerAll",
     ITEM_MOD_SPELL_DAMAGE_DONE_SHORT = "SpellDamage",
     ITEM_MOD_SPELL_HEALING_DONE_SHORT = "Healing",
+    ITEM_MOD_SPELL_PENETRATION_SHORT = "SpellPenetration",
     ITEM_MOD_SHADOW_DAMAGE_DONE_SHORT = "ShadowPower",
     ITEM_MOD_FIRE_DAMAGE_DONE_SHORT = "FirePower",
     ITEM_MOD_FROST_DAMAGE_DONE_SHORT = "FrostPower",
@@ -90,6 +91,7 @@ local EQUIP_PATTERNS = {
     { "Increased Defense %+(%d+)", "Defense" },
     { "your hit by (%d+)", "HitRating" },
     { "your critical strike by (%d+)", "CritRating" },
+    { "spell penetration by (%d+)", "SpellPenetration" },
 }
 
 local statCache = {}
@@ -108,19 +110,40 @@ local function ParseTooltipData(data, stats)
         local text = line.leftText
         if type(text) == "string" and not LJ.Util.IsSecret(text) and text:find("Equip:", 1, true)
             and not text:find(" when fighting ", 1, true) then
+            local recognized = false
             for _, p in ipairs(EQUIP_PATTERNS) do
                 local value = text:match(p[1])
-                if value and not stats[p[2]] then
-                    stats[p[2]] = tonumber(value)
+                if value then
+                    recognized = true
+                    if not stats[p[2]] then stats[p[2]] = tonumber(value) end
                     break
                 end
             end
+            if not recognized then stats.HasUnparsedEquip = true end
         end
     end
 end
 
 local function ParseTooltip(itemID, stats)
     ParseTooltipData(C_TooltipInfo.GetItemByID(itemID), stats)
+end
+
+local function ParseWeaponTooltip(data, stats)
+    if not (data and data.lines) then return end
+    for _, line in ipairs(data.lines) do
+        local left, right = line.leftText, line.rightText
+        if type(left) == "string" and not LJ.Util.IsSecret(left) then
+            local lo, hi = left:match("(%d+)%s*%-%s*(%d+)%s+[Dd]amage")
+            if lo and hi then stats.WeaponHitDamage = (tonumber(lo) + tonumber(hi)) / 2 end
+        end
+        if type(right) == "string" and not LJ.Util.IsSecret(right) then
+            local speed = right:match("[Ss]peed%s+(%d+%.?%d*)")
+            if speed then stats.WeaponSpeed = tonumber(speed) end
+        end
+    end
+    if not stats.WeaponHitDamage and stats.DPS and stats.WeaponSpeed then
+        stats.WeaponHitDamage = stats.DPS * stats.WeaponSpeed
+    end
 end
 
 -- Stats of one concrete item link (random suffixes like "of the Bear" included), for tooltips of any item in
@@ -154,6 +177,7 @@ function Scoring.GetStatsForLink(link)
         end
     end
     ParseTooltipData(C_TooltipInfo.GetHyperlink(link), stats)
+    ParseWeaponTooltip(C_TooltipInfo.GetHyperlink(link), stats)
     if linkStatsCount > 400 then linkStats, linkStatsCount = {}, 0 end
     linkStats[link] = stats
     linkStatsCount = linkStatsCount + 1
@@ -181,6 +205,7 @@ function Scoring.ClientStats(itemID)
         end
     end
     ParseTooltip(itemID, stats)
+    ParseWeaponTooltip(C_TooltipInfo.GetItemByID(itemID), stats)
     return stats
 end
 
@@ -294,7 +319,8 @@ function Scoring.Score(itemID, spec, slotKey, atCurrentLevel, stats)
     local s = stats or Scoring.GetStats(itemID)
     if not s then return nil end
     if not Scoring.IsSpecEligible(itemID, spec, slotKey, s) then return nil end
-    local w = LJ.PawnForever.Weights(spec)
+    local w = LJ.UpgradeScoring.Weights(spec)
+    local pawnScale = LJ.UpgradeScoring.Scale(spec)
     if not w then return nil end
     local score = 0
 
@@ -308,45 +334,48 @@ function Scoring.Score(itemID, spec, slotKey, atCurrentLevel, stats)
     score = score + (s.Defense or 0) * W(w, "Defense")
     score = score + (s.BlockValue or 0) * W(w, "BlockValue")
 
-    -- Attack power. Hunters value ranged AP; "+Attack Power" also raises ranged AP.
+    -- PawnForever scores the parsed ATTACK_POWER and RANGED_AP stats separately.
+    -- Generic attack power stays on its own weight; the item stat parser does not
+    -- duplicate it as ranged AP.
     local apWeight = W(w, "AttackPower")
     local rapWeight = W(w, "RangedAttackPower")
-    score = score + (s.AttackPower or 0) * math.max(apWeight, rapWeight)
+    score = score + (s.AttackPower or 0) * apWeight
     score = score + (s.RangedAttackPower or 0) * rapWeight
     if spec.key == "CAT" or spec.key == "BEAR" then
         score = score + (s.FeralAttackPower or 0) * apWeight
     end
 
-    -- Spell power: generic spell power counts for damage and healing. The client also reports the healing part of
-    -- a "damage and healing" effect as Healing (equal values on all 335 shipped items that have both), so that
-    -- healing is not counted a second time.
+    -- Match PawnForever's parser: a combined spell damage/healing bonus contributes
+    -- to both weights, and healing-only bonuses contribute one third as spell damage
+    -- when the item has no explicit spell damage bonus.
     local spWeight = W(w, "SpellPower")
     local healWeight = W(w, "Healing")
     local spellPower, healing = s.SpellPowerAll or 0, s.Healing or 0
-    if spellPower > 0 and healing == spellPower then healing = 0 end
-    score = score + spellPower * math.max(spWeight, healWeight)
+    score = score + spellPower * (spWeight + healWeight)
     score = score + (s.SpellDamage or 0) * spWeight
     score = score + healing * healWeight
+    if spellPower == 0 and (s.SpellDamage or 0) == 0 then
+        score = score + healing / 3 * spWeight
+    end
     for _, school in ipairs(SCHOOLS) do
         score = score + (s[school] or 0) * W(w, school)
     end
 
-    -- Ratings -> percent -> weights (per 1%).
-    local hitPct = RatingToPct("HIT_MELEE", (s.HitRating or 0) + (s.MeleeHitRating or 0), atCurrentLevel) + (s.HitPct or 0)
-    local rangedHitPct = RatingToPct("HIT_RANGED", s.RangedHitRating, atCurrentLevel)
-    -- Forever's generic flat Hit/Crit effects apply across attack schools. Keep explicitly school-specific bonuses
-    -- distinct, while carrying a generic Equip: percentage through both physical and spell scoring channels.
-    local spellHitPct = RatingToPct("HIT_SPELL", (s.HitRating or 0) + (s.SpellHitRating or 0), atCurrentLevel)
-        + (s.HitPct or 0) + (s.SpellHitPct or 0)
-    local critPct = RatingToPct("CRIT_MELEE", (s.CritRating or 0) + (s.MeleeCritRating or 0), atCurrentLevel) + (s.CritPct or 0)
-    local rangedCritPct = RatingToPct("CRIT_RANGED", s.RangedCritRating, atCurrentLevel)
-    local spellCritPct = RatingToPct("CRIT_SPELL", (s.CritRating or 0) + (s.SpellCritRating or 0), atCurrentLevel)
-        + (s.CritPct or 0) + (s.SpellCritPct or 0)
-    local isHunter = spec.class == "HUNTER"
-    score = score + (hitPct + (isHunter and rangedHitPct or 0)) * W(w, "Hit")
-    score = score + (critPct + (isHunter and rangedCritPct or 0)) * W(w, "Crit")
-    score = score + spellHitPct * W(w, "SpellHit")
-    score = score + spellCritPct * W(w, "SpellCrit")
+    -- PawnForever gives each scale one hit and crit weight. Apply those weights to
+    -- the scale's attack school (spell, ranged for hunters, otherwise melee).
+    local spellScale = pawnScale and pawnScale.spell
+    local rangedScale = pawnScale and pawnScale.weights and pawnScale.weights.RANGED_HIT ~= nil
+    local hitKey = spellScale and "HIT_SPELL" or rangedScale and "HIT_RANGED" or "HIT_MELEE"
+    local critKey = spellScale and "CRIT_SPELL" or rangedScale and "CRIT_RANGED" or "CRIT_MELEE"
+    local hitRating = (s.HitRating or 0) + (spellScale and (s.SpellHitRating or 0)
+        or rangedScale and (s.RangedHitRating or 0) or (s.MeleeHitRating or 0))
+    local critRating = (s.CritRating or 0) + (spellScale and (s.SpellCritRating or 0)
+        or rangedScale and (s.RangedCritRating or 0) or (s.MeleeCritRating or 0))
+    local hitPct = RatingToPct(hitKey, hitRating, atCurrentLevel) + (s.HitPct or 0)
+        + (spellScale and (s.SpellHitPct or 0) or 0)
+    local critPct = RatingToPct(critKey, critRating, atCurrentLevel) + (s.CritPct or 0)
+        + (spellScale and (s.SpellCritPct or 0) or 0)
+    score = score + hitPct * W(w, "Hit") + critPct * W(w, "Crit")
     score = score + (RatingToPct("DODGE", s.DodgeRating, atCurrentLevel) + (s.DodgePct or 0)) * W(w, "Dodge")
     score = score + (RatingToPct("PARRY", s.ParryRating, atCurrentLevel) + (s.ParryPct or 0)) * W(w, "Parry")
     score = score + (RatingToPct("BLOCK", s.BlockRating, atCurrentLevel) + (s.BlockPct or 0)) * W(w, "Block")
@@ -356,6 +385,7 @@ function Scoring.Score(itemID, spec, slotKey, atCurrentLevel, stats)
     score = score + RatingToPct("HASTE", s.HasteRating, atCurrentLevel) * W(w, "Haste")
     score = score + RatingToPct("EXPERTISE", s.ExpertiseRating, atCurrentLevel) * W(w, "Expertise")
     score = score + (s.WeaponSkill or 0) * W(w, "WeaponSkill")
+    score = score + (s.SpellPenetration or 0) * W(w, "SpellPenetration")
 
     -- Weapon damage.
     local dps = s.DPS or 0
@@ -366,6 +396,12 @@ function Scoring.Score(itemID, spec, slotKey, atCurrentLevel, stats)
             score = score + dps * (w.OffHandWeaponDPS or 0.5 * W(w, "WeaponDPS"))
         else
             score = score + dps * W(w, "WeaponDPS")
+        end
+        local speed = s.WeaponSpeed or s.Speed or 0
+        if slotKey == "RANGED" then
+            score = score + dps * speed * W(w, "RangedHitDamage")
+        elseif slotKey ~= "OFFHAND" then
+            score = score + dps * speed * W(w, "WeaponHitDamage")
         end
     end
     return score
@@ -586,7 +622,7 @@ local scratchStats = {}     -- shipped stats of that candidate, parsed for its s
 function Scoring.RankAll(spec, opts)
     opts = opts or {}
     local cacheKey = table.concat({ spec.class, spec.key, tostring(opts.maxLevel or 0), tostring(opts.current and 1 or 0),
-        Items.ListKey(), LJ.PawnForever.CacheKey(spec) }, ":")
+        Items.ListKey(), LJ.UpgradeScoring.CacheKey(spec) }, ":")
     if rankingCache[cacheKey] then return rankingCache[cacheKey] end
     local started = debugprofilestop()
     local bySlot = {}

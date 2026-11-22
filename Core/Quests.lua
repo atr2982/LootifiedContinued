@@ -572,40 +572,35 @@ function Quests.ForInstance(instKey, filter, chainsOnce)
     if not chainsOnce then return list end
     local before = {}
     for _, q in ipairs(list) do Earlier(q, before, 0) end
-    local shown = {}
-    local active = {}
-    -- The final reward quest is normally the best single representative of a
-    -- chain.  While the player is on an earlier step, however, that final
-    -- record is misleading: Forever can have a live dungeon quest whose
-    -- classic follow-up is also present in the database.  Remember live
-    -- steps so the list can prefer what is actually in the quest log.
+    local inList = {}
     for _, q in ipairs(list) do
-        local status = Quests.GetStatus(q)
-        if status == Quests.ACTIVE or status == Quests.READY then
-            active[q.id] = true
-        end
+        inList[q.id] = true
     end
-    for _, q in ipairs(list) do
-        if not before[q.id] then
-            local replaceWithLiveStep = false
-            for p in pairs(Earlier(q, {}, 0)) do
-                if active[p] then
-                    replaceWithLiveStep = true
-                    break
+    -- Some verified chain records only publish the forward link. Follow those
+    -- links through non-dungeon steps too, so no chain part becomes a list row.
+    local function HasListedFollowup(q, seen, depth)
+        if depth > 30 then return false end
+        for _, nextID in ipairs(q.next or {}) do
+            if inList[nextID] then return true end
+            if not seen[nextID] then
+                seen[nextID] = true
+                local nextQuest = Quests.Get(nextID)
+                if nextQuest and HasListedFollowup(nextQuest, seen, depth + 1) then
+                    return true
                 end
             end
-            if not replaceWithLiveStep then shown[#shown + 1] = q end
+        end
+        return false
+    end
+    for _, q in ipairs(list) do
+        if HasListedFollowup(q, { [q.id] = true }, 0) then
+            before[q.id] = true
         end
     end
-    -- Earlier live steps are not necessarily terminal records in the
-    -- instance table. Add them after removing their chain's terminal row.
+    local shown = {}
     for _, q in ipairs(list) do
-        if active[q.id] then
-            local present = false
-            for _, existing in ipairs(shown) do
-                if existing.id == q.id then present = true break end
-            end
-            if not present then shown[#shown + 1] = q end
+        if not before[q.id] then
+            shown[#shown + 1] = q
         end
     end
     return shown

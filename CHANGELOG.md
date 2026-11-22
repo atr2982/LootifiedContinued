@@ -1,3 +1,10 @@
+## 1.2.0.22 — 2026-11-21
+
+- Make Lootified's percent-based gear scoring standalone by embedding the verified PawnForever scale data and upgrade evaluation; remove the PawnForever dependency and legacy integration.
+- Use consistent percent-based upgrade results in item tooltips, Best in Slot, Open World, and Journal views, including when the best item is already equipped.
+- Keep dungeon quest lists focused on actual dungeon quests while preserving their prerequisite chains; audit all current dungeon mappings and correct missing quest records, faction assignments, and misclassified dungeon quests.
+- Correct dungeon quest placements and data, including Blackrock Depths, Dire Maul West, Scholomance, Blackmaw Hold, Wailing Caverns, and Zul'Farrak.
+
 ## 1.2.0.21 — 2026-11-21
 
 - Use PawnForever's selected-spec scoring and upgrade verdicts for Lootified's gear comparisons, and remove the obsolete stat-priority page and controls.
