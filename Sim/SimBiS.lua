@@ -95,13 +95,15 @@ local pool, poolKey
 function SimBiS.Pool(spec)
     local Items, Scoring, Player = LJ.Items, LJ.Scoring, LJ.Player
     local level = Player.level or 1
-    local key = spec.key .. ":" .. level
+    local availability = Items.AvailabilityKey()
+    local key = spec.key .. ":" .. level .. ":" .. availability
     if pool and poolKey == key then return pool end
     local class = spec.class
     local out = {}
     for _, slot in ipairs(LJ.BiS.SLOTS) do out[slot] = {} end
     local facts = {}
     local function Consider(id, world)
+        if not Items.IsAvailableNow(id) then return end
         if not Wearable(id, facts, class, level) or Items.IsOtherFaction(id) then return end
         -- quest rewards of the other faction or another class's quests are not for this character
         if world and not Items.IsObtainable(id, class) then return end
@@ -217,7 +219,9 @@ end
 -- class's spec: never) and while items are rated in Percent (LJ.cdb.rating: it is kept for Sim).
 function SimBiS.Get(spec)
     if not spec or spec.class ~= LJ.Player.class or LJ.cdb.rating ~= "sim" then return nil end
-    return LJ.cdb.simBiS[spec.key]
+    local rec = LJ.cdb.simBiS[spec.key]
+    if rec and rec.availability ~= LJ.Items.AvailabilityKey() then return nil end
+    return rec
 end
 
 -- Simmed with the level, the gear and the talents of now: what single items did still counts (Sim/ItemCheck.lua).
@@ -243,7 +247,8 @@ function SimBiS.Save(spec, result, run)
     end
     local best = {}
     for slot, row in pairs(SimBiS.BestPicks(slots)) do best[slot] = { id = row.id, delta = row.delta, err = row.err } end
-    LJ.cdb.simBiS[spec.key] = { level = run.level, setup = run.setup, list = run.list, time = time(), base = result.base.dps,
+    LJ.cdb.simBiS[spec.key] = { level = run.level, setup = run.setup, list = run.list,
+        availability = LJ.Items.AvailabilityKey(), time = time(), base = result.base.dps,
         tested = result.tested, gain = result.gain, foot = result.foot, slots = slots, best = best }
     LJ:Fire("SIM_BIS_CHANGED")
 end

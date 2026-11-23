@@ -1,3 +1,8 @@
+## 1.2.0.24 — 2026-11-22
+
+- Gate Onyxia's Lair, Barrow Deeps, and Hyjal Summit gear from active Best in Slot and upgrade recommendations until their announced December 9 opening, using the in-game calendar and refreshing cached results when availability changes.
+- Exclude Naxxramas-only tier and Atiesh quest rewards, plus Naxxramas placeholder items, while keeping future/reference data available for browsing.
+- Keep dungeon access independent from loot-data confidence labels so currently available dungeons remain eligible.
 ## 1.2.0.23 — 2026-11-21
 
 - Keep item upgrade percentages consistent across tooltips, Best in Slot, Journal, Open World, and item pickers by comparing each item with the gear it replaces.

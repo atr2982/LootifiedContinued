@@ -622,7 +622,7 @@ local scratchStats = {}     -- shipped stats of that candidate, parsed for its s
 function Scoring.RankAll(spec, opts)
     opts = opts or {}
     local cacheKey = table.concat({ spec.class, spec.key, tostring(opts.maxLevel or 0), tostring(opts.current and 1 or 0),
-        Items.ListKey(), LJ.UpgradeScoring.CacheKey(spec) }, ":")
+        Items.ListKey(), Items.AvailabilityKey(), LJ.UpgradeScoring.CacheKey(spec) }, ":")
     if rankingCache[cacheKey] then return rankingCache[cacheKey] end
     local started = debugprofilestop()
     local bySlot = {}
@@ -790,3 +790,4 @@ LJ:Listen("WINDOW_CLOSED", function() statCache, liveStats = {}, {} end)
 
 LJ:Listen("SPEC_CHANGED", Scoring.InvalidateCache)
 LJ:Listen("PLAYER_CHANGED", Scoring.InvalidateCache)
+LJ:Listen("CONTENT_AVAILABILITY_CHANGED", Scoring.InvalidateCache)

@@ -7,6 +7,130 @@ LJ.Items = Items
 
 local Util = LJ.Util
 
+-- Availability is separate from loot-table confidence. Blizzard's Forever raid overview schedules the first raid
+-- tier for 2026-12-09; the Forever calendar, not the computer clock, controls these gates. Naxxramas has no announced
+-- opening, so its legacy tier turn-ins are not active BiS sources. Existing dungeon status labels describe loot
+-- confidence and are deliberately not used as access flags.
+local UNRELEASED_QUESTS = {
+    [9034] = true, [9036] = true, [9037] = true, [9038] = true, [9039] = true, [9040] = true,
+    [9041] = true, [9042] = true, [9043] = true, [9044] = true, [9045] = true, [9046] = true, [9047] = true,
+    [9048] = true, [9049] = true, [9050] = true,
+    [9054] = true, [9055] = true, [9056] = true, [9057] = true, [9058] = true, [9059] = true, [9060] = true,
+    [9061] = true,
+    [9068] = true, [9069] = true, [9070] = true, [9071] = true, [9072] = true, [9073] = true, [9074] = true,
+    [9075] = true,
+    [9077] = true, [9078] = true, [9079] = true, [9080] = true, [9081] = true, [9082] = true, [9083] = true,
+    [9084] = true,
+    [9086] = true, [9087] = true, [9088] = true, [9089] = true, [9090] = true, [9091] = true, [9092] = true,
+    [9093] = true,
+    [9095] = true, [9096] = true, [9097] = true, [9098] = true, [9099] = true, [9100] = true, [9101] = true,
+    [9102] = true, [9103] = true, [9104] = true, [9105] = true, [9106] = true, [9107] = true, [9108] = true,
+    [9109] = true, [9110] = true, [9111] = true, [9112] = true, [9113] = true, [9114] = true, [9115] = true,
+    [9116] = true, [9117] = true, [9118] = true, [9120] = true,
+    [9257] = true, [9269] = true, [9270] = true, [9271] = true,
+}
+local UNRELEASED_ITEMS = { [22805] = true, [22814] = true, [22817] = true } -- Forever item data labels these Naxxramas placeholders.
+local REQUIRED_RAID = { [18348] = "ONY" } -- Foror's Compendium quest requires Onyxia's head to temper the blade.
+
+local function GameDate()
+    local api = C_DateAndTime and C_DateAndTime.GetCurrentCalendarTime
+    if not api then return nil end
+    local now = api()
+    if type(now) ~= "table" or type(now.year) ~= "number" or type(now.month) ~= "number"
+        or type(now.monthDay) ~= "number" then return nil end
+    return now.year, now.month, now.monthDay
+end
+
+local function DateReached(releaseDate)
+    local year, month, day = GameDate()
+    if not year then return false end
+    local current = year * 10000 + month * 100 + day
+    local release = releaseDate.year * 10000 + releaseDate.month * 100 + releaseDate.monthDay
+    return current >= release
+end
+
+function Items.IsInstanceAvailable(instanceKey)
+    local inst = LJ.instanceByKey and LJ.instanceByKey[instanceKey]
+    return inst ~= nil and (not inst.opensOn or DateReached(inst.opensOn))
+end
+
+function Items.IsQuestAvailable(questID)
+    return not UNRELEASED_QUESTS[tonumber(questID)]
+end
+
+-- A compact state key invalidates cached lists and rankings exactly when a scheduled source opens, not every day.
+function Items.AvailabilityKey()
+    local states = {}
+    for _, inst in ipairs(LJ.Data.Instances or {}) do
+        if inst.opensOn then
+            local year = GameDate()
+            states[#states + 1] = inst.key .. (year and DateReached(inst.opensOn) and "1" or year and "0" or "?")
+        end
+    end
+    states[#states + 1] = "NAXX0" -- no opening date has been announced
+    return table.concat(states, ",")
+end
+
+local function HasAvailableQuestSource(itemID)
+    local quests = LJ.Quests
+    for _, qid in ipairs(quests and quests.rewardOf and quests.rewardOf[itemID] or {}) do
+        if Items.IsQuestAvailable(qid) then return true end
+    end
+    local rewards = LJ.Data.WorldQuestRewards and LJ.Data.WorldQuestRewards[itemID]
+    if type(rewards) == "number" then return Items.IsQuestAvailable(rewards) end
+    if type(rewards) == "string" then
+        for qid in rewards:gmatch("%d+") do
+            if Items.IsQuestAvailable(tonumber(qid)) then return true end
+        end
+    end
+    return false
+end
+
+-- True when at least one verified way to obtain an item is currently open. This is checked by all active BiS paths;
+-- the database can still retain future/reference records for browsing.
+function Items.IsAvailableNow(itemID)
+    if UNRELEASED_ITEMS[itemID] then return false end
+    local requiredRaid = REQUIRED_RAID[itemID]
+    if requiredRaid then return Items.IsInstanceAvailable(requiredRaid) end
+
+    local hasLockedSource = false
+    local questIDs = LJ.Quests and LJ.Quests.rewardOf and LJ.Quests.rewardOf[itemID]
+    for _, qid in ipairs(questIDs or {}) do
+        if not Items.IsQuestAvailable(qid) then hasLockedSource = true end
+    end
+    local sources = Items.sources[itemID]
+    if sources then
+        for _, source in ipairs(sources) do
+            if Items.IsInstanceAvailable(source.inst) then return true end
+            hasLockedSource = true
+        end
+    end
+    if Items.HasWorldDrop(itemID) or LJ.Data.Crafted[itemID] or HasAvailableQuestSource(itemID) then return true end
+
+    local rewards = LJ.Data.WorldQuestRewards and LJ.Data.WorldQuestRewards[itemID]
+    if type(rewards) == "number" then
+        if not Items.IsQuestAvailable(rewards) then hasLockedSource = true end
+    elseif type(rewards) == "string" then
+        for qid in rewards:gmatch("%d+") do
+            if not Items.IsQuestAvailable(tonumber(qid)) then hasLockedSource = true end
+        end
+    end
+    return not hasLockedSource
+end
+
+local availabilityFrame = CreateFrame("Frame")
+local lastAvailabilityKey
+function Items.RefreshAvailability()
+    local key = Items.AvailabilityKey()
+    if lastAvailabilityKey and key ~= lastAvailabilityKey then LJ:Fire("CONTENT_AVAILABILITY_CHANGED") end
+    lastAvailabilityKey = key
+end
+availabilityFrame:RegisterEvent("PLAYER_LOGIN")
+availabilityFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
+availabilityFrame:SetScript("OnEvent", Items.RefreshAvailability)
+local availabilityTicker
+if C_Timer and C_Timer.NewTicker then availabilityTicker = C_Timer.NewTicker(60, Items.RefreshAvailability) end
+
 ---------------------------------------------------------------------------
 -- Indexes (built once at load)
 ---------------------------------------------------------------------------
@@ -1230,6 +1354,7 @@ end
 -- Can a character of this faction and class get the item: any drop source, a quest it can take (same answer as
 -- Items.GetBestQuest, without building quest tables) or a recipe (Data/Crafted.lua).
 function Items.IsObtainable(itemID, class)
+    if not Items.IsAvailableNow(itemID) then return false end
     if Items.sources[itemID] or Items.HasWorldDrop(itemID) or LJ.Data.Crafted[itemID] then return true end
     class = class or (LJ.Player and LJ.Player.class) or "?"
     local horde = LJ.Player and LJ.Player.faction == "Horde"
@@ -1311,14 +1436,14 @@ local function QuestReward(itemID, class, level)
     local own = class == P.class
     for _, qid in ipairs(Q.rewardOf[itemID] or NO_QUESTS) do
         local q = Q.Get(qid)
-        if q and Items.QuestFrom(q.min, q.level) <= level and Q.IsForSide(q, horde and "H" or "A")
+        if q and Items.IsQuestAvailable(qid) and Items.QuestFrom(q.min, q.level) <= level and Q.IsForSide(q, horde and "H" or "A")
             and Q.IsForClass(q, class) and (not own or Q.IsForRace(q, P.race)) then
             return true
         end
     end
     for _, qid in ipairs(RewardQuestIDs(itemID) or NO_QUESTS) do
         local races = own and LJ.Data.WorldQuestRaces[qid]
-        if WorldQuestFits(qid, horde and 72 or 65, class, level)
+        if Items.IsQuestAvailable(qid) and WorldQuestFits(qid, horde and 72 or 65, class, level)
             and (not races or math.floor(races / 2 ^ (P.race - 1)) % 2 == 1) then
             return true
         end
@@ -1335,7 +1460,8 @@ end
 -- sources is (a drop: at least the list's drop chance). Kept per class and level until the list changes.
 local inList = {}
 function Items.InList(itemID, class, level, ignoreSources)
-    local key = class .. level .. (ignoreSources and ":fallback" or "")
+    if not Items.IsAvailableNow(itemID) then return false end
+    local key = class .. level .. ":" .. Items.AvailabilityKey() .. (ignoreSources and ":fallback" or "")
     local known = inList[key]
     if not known then
         known = {}
