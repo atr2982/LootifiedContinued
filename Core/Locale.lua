@@ -39,15 +39,26 @@ local function Rename(loc, L)
     if type(loc) ~= "table" or not loc.id then return nil end
     local de
     if loc.kind == "object" then
-        de = L.object[loc.id]
+        de = L.object[loc.id] or (loc.name and L.name[loc.name])
     elseif loc.kind == "item" then
         de = L.item[loc.id]
     else
-        de = L.npc[loc.id]
+        de = L.npc[loc.id] or (loc.name and L.name[loc.name])
     end
     if not de or loc.name == de then return nil end
     local old = loc.name
     loc.name = de
+    return old
+end
+
+-- Some newer Forever quest records provide a giver name and map position but no NPC ID.
+-- Use the locale's English-name dictionary for those records too.
+local function RenameByName(loc, L)
+    if type(loc) ~= "table" or not loc.name or loc.kind == "item" then return nil end
+    local translated = L.name[loc.name] or L.giver[loc.name]
+    if not translated or translated == loc.name then return nil end
+    local old = loc.name
+    loc.name = translated
     return old
 end
 
@@ -117,7 +128,9 @@ local function Apply(L)
         end
         for _, key in ipairs(ROLES) do
             local loc = q[key]
-            if type(loc) == "table" and oldNames[loc] == nil then oldNames[loc] = Rename(loc, L) or false end
+            if type(loc) == "table" and oldNames[loc] == nil then
+                oldNames[loc] = Rename(loc, L) or RenameByName(loc, L) or false
+            end
             local old = type(loc) == "table" and oldNames[loc]
             local text = q[key .. "Text"]
             if text then

@@ -1,3 +1,8 @@
+## 1.2.0.25 — 2026-11-23
+
+- Translate the newly added Krol'dok quest names, objectives, and giver locations in Russian.
+- Translate quest-giver names from locale dictionaries even when Forever quest records have no NPC ID.
+
 ## 1.2.0.24 — 2026-11-22
 
 - Gate Onyxia's Lair, Barrow Deeps, and Hyjal Summit gear from active Best in Slot and upgrade recommendations until their announced December 9 opening, using the in-game calendar and refreshing cached results when availability changes.
