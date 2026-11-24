@@ -1,3 +1,7 @@
+## 1.2.0.26 — 2026-11-23
+
+- Prevent tooltips from marking gear as an upgrade when the character's class cannot equip that item type.
+
 ## 1.2.0.25 — 2026-11-23
 
 - Translate the newly added Krol'dok quest names, objectives, and giver locations in Russian.

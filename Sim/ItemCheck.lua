@@ -143,10 +143,12 @@ end
 -- An item by the stat weights of a spec (Percent: the tooltips and the boxes):
 -- { better, pct, replaces } as Estimate gives them; nil while its stats or those of what is worn there are not known.
 function ItemCheck.Share(spec, link)
+    if not spec then return nil end
     local _, _, _, equipLoc, _, classID, subclassID = C_Item.GetItemInfoInstant(link)
     local id = Parse(link)
-    local better, replaces, pct, points, score, current, slot, replacesLink = Estimate(spec, id, link,
-        { id = id, equipLoc = equipLoc, classID = classID, subclassID = subclassID })
+    local facts = { id = id, equipLoc = equipLoc, classID = classID, subclassID = subclassID }
+    if not Player:CanClassUse(facts, spec.class) then return nil end
+    local better, replaces, pct, points, score, current, slot, replacesLink = Estimate(spec, id, link, facts)
     if better == nil then return nil end
     return { better = better, pct = pct, points = points, score = score, current = current,
         empty = replaces == nil, replaces = replaces, replacesLink = replacesLink, slot = slot }
