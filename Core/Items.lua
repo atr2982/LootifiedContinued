@@ -780,8 +780,14 @@ function Items.WhenLoaded(itemID, callback)
 end
 
 local function OnItemData(_, itemID, success)
-    if not itemID or not requested[itemID] then return end
-    requested[itemID] = nil
+    if not itemID then return end
+    -- Shipped items already have fallback records, so Lootified doesn't request
+    -- them. The Forever client can still load their live data (for example when
+    -- the player hovers a Journal drop). Accept that result too so cached scores
+    -- and the visible page can be refreshed from the client's current item data.
+    local wasRequested = requested[itemID]
+    if not wasRequested and not (Items.IsShipped(itemID) and cache[itemID]) then return end
+    if wasRequested then requested[itemID] = nil end
     local rec = cache[itemID]
     local st = Items.netStats
     st.answers = st.answers + 1

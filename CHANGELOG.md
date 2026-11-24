@@ -1,3 +1,7 @@
+## 1.2.0.27 — 2026-11-23
+
+- Refresh dungeon Journal upgrade badges and item rows when Forever item data finishes loading, and clear stale comparison results when Lootified closes.
+
 ## 1.2.0.26 — 2026-11-23
 
 - Prevent tooltips from marking gear as an upgrade when the character's class cannot equip that item type.

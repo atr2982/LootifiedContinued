@@ -559,7 +559,8 @@ local function Forget()
     wipe(worldUpgradeCache)
 end
 for _, message in ipairs({ "DB_READY", "SIM_BIS_CHANGED", "EQUIPMENT_CHANGED", "SPEC_CHANGED", "PLAYER_CHANGED",
-    "MODULES_CHANGED", "LIST_CHANGED", "BAGS_CHANGED", "ITEMS_UPDATED", "CONTENT_AVAILABILITY_CHANGED" }) do
+    "MODULES_CHANGED", "LIST_CHANGED", "BAGS_CHANGED", "ITEMS_UPDATED", "CONTENT_AVAILABILITY_CHANGED",
+    "WINDOW_CLOSED" }) do
     LJ:Listen(message, Forget)
 end
 LJ:Listen("ITEMS_UPDATED", function()

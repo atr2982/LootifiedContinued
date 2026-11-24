@@ -718,6 +718,10 @@ end
 
 -- New item data: the rankings that waited for items are made again with them.
 LJ:Listen("ITEMS_UPDATED", function()
+    -- A client item-data load can replace the shipped fallback stats. Drop
+    -- stats parsed before that load so Journal comparisons use the same data
+    -- the item tooltip now sees.
+    statCache, liveStats, linkStats, linkStatsCount = {}, {}, {}, 0
     for key, r in pairs(rankingCache) do
         if r.pending > 0 then
             rankingCache[key] = nil
