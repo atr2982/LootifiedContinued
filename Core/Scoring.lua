@@ -52,10 +52,13 @@ local STAT_KEYS = {
     ITEM_MOD_EXTRA_ARMOR_SHORT = "Armor",
     RESISTANCE0_NAME = "Armor",
     ITEM_MOD_DAMAGE_PER_SECOND_SHORT = "DPS",
-    ITEM_MOD_AXES_SHORT = "WeaponSkill", ITEM_MOD_BOWS_SHORT = "WeaponSkill", ITEM_MOD_CROSSBOWS_SHORT = "WeaponSkill",
-    ITEM_MOD_DAGGERS_SHORT = "WeaponSkill", ITEM_MOD_FIST_WEAPONS_SHORT = "WeaponSkill", ITEM_MOD_GUNS_SHORT = "WeaponSkill",
-    ITEM_MOD_MACES_SHORT = "WeaponSkill", ITEM_MOD_POLEARMS_SHORT = "WeaponSkill", ITEM_MOD_SWORDS_SHORT = "WeaponSkill",
-    ITEM_MOD_STAVES_SHORT = "WeaponSkill",
+    ITEM_MOD_AXES_SHORT = "WeaponSkillAxes", ITEM_MOD_BOWS_SHORT = "WeaponSkillBows",
+    ITEM_MOD_CROSSBOWS_SHORT = "WeaponSkillCrossbows", ITEM_MOD_DAGGERS_SHORT = "WeaponSkillDaggers",
+    ITEM_MOD_FIST_WEAPONS_SHORT = "WeaponSkillFistWeapons", ITEM_MOD_GUNS_SHORT = "WeaponSkillGuns",
+    ITEM_MOD_MACES_SHORT = "WeaponSkillMaces", ITEM_MOD_POLEARMS_SHORT = "WeaponSkillPolearms",
+    ITEM_MOD_SWORDS_SHORT = "WeaponSkillSwords", ITEM_MOD_STAVES_SHORT = "WeaponSkillStaves",
+    ITEM_MOD_HEALTH_REGENERATION_SHORT = "HP5",
+    ITEM_MOD_HEALTH_REGENERATION = "HP5",
 }
 
 Scoring.STAT_KEYS = STAT_KEYS
@@ -92,6 +95,7 @@ local EQUIP_PATTERNS = {
     { "your hit by (%d+)", "HitRating" },
     { "your critical strike by (%d+)", "CritRating" },
     { "spell penetration by (%d+)", "SpellPenetration" },
+    { "spells pierce (%d+) magical resistance", "SpellPiercing" },
 }
 
 local statCache = {}
@@ -108,6 +112,17 @@ local function ParseTooltipData(data, stats)
     if not data or not data.lines then return end
     for _, line in ipairs(data.lines) do
         local text = line.leftText
+        if type(text) == "string" and not LJ.Util.IsSecret(text) then
+            local lower = text:lower()
+            local allDamage = lower:match("%+?(%d+) weapon damage")
+            local meleeDamage = lower:match("adds? (%d+) %a* damage to your melee attacks")
+            if allDamage then
+                stats.MeleeDamage = (stats.MeleeDamage or 0) + tonumber(allDamage)
+                stats.RangedDamage = (stats.RangedDamage or 0) + tonumber(allDamage)
+            elseif meleeDamage then
+                stats.MeleeDamage = (stats.MeleeDamage or 0) + tonumber(meleeDamage)
+            end
+        end
         if type(text) == "string" and not LJ.Util.IsSecret(text) and text:find("Equip:", 1, true)
             and not text:find(" when fighting ", 1, true) then
             local recognized = false
@@ -265,20 +280,101 @@ local CR = { HIT_MELEE = 6, HIT_RANGED = 7, HIT_SPELL = 8, CRIT_MELEE = 9, CRIT_
     DODGE = 3, PARRY = 4, BLOCK = 5, HASTE = 18, EXPERTISE = 24 }
 Scoring.CR = CR
 
--- Approximate rating per 1% at level 60 (Forever tooltips: +20 hit ~ 2%, +14 crit ~ 1%).
-local RATING_PER_PCT_60 = { HIT_MELEE = 10, HIT_RANGED = 10, HIT_SPELL = 8, CRIT_MELEE = 14, CRIT_RANGED = 14,
-    CRIT_SPELL = 14, DODGE = 12, PARRY = 20, BLOCK = 5, HASTE = 10, EXPERTISE = 10 }
+-- PawnForever 1.7.1 parses item rating lines at these level-60 conversions,
+-- then scales the corresponding weights by character level.
+local RATING_PER_PCT_60 = { HIT_MELEE = 10, HIT_RANGED = 10, HIT_SPELL = 10, CRIT_MELEE = 14, CRIT_RANGED = 14,
+    CRIT_SPELL = 14, DODGE = 12, PARRY = 15, BLOCK = 5, HASTE = 10, EXPERTISE = 10 }
 Scoring.RATING_PER_PCT_60 = RATING_PER_PCT_60
 
 local function RatingToPct(which, rating, atCurrentLevel)
     if not rating or rating == 0 then return 0 end
-    if atCurrentLevel then
-        local pct = GetCombatRatingBonusForCombatRatingValue(CR[which], rating)
-        if pct > 0 then return pct end
-    end
     return rating / RATING_PER_PCT_60[which]
 end
 Scoring.RatingToPct = RatingToPct
+
+-- PawnForever's upgrade scorer applies the character's current hit cap to
+-- the replacement comparison. Keep the cap math here so every Lootified
+-- surface that compares gear uses the same scorer.
+local HIT_KIND = { MELEE = { key = "HIT_MELEE", rating = CR.HIT_MELEE, modifier = "GetHitModifier" },
+    RANGED = { key = "HIT_RANGED", rating = CR.HIT_RANGED, modifier = "GetRangedHitModifier" },
+    SPELL = { key = "HIT_SPELL", rating = CR.HIT_SPELL, modifier = "GetSpellHitModifier" } }
+
+local function HitKind(spec)
+    local scale = LJ.UpgradeScoring.Scale(spec)
+    if scale and scale.spell then return HIT_KIND.SPELL end
+    if scale and scale.weights and scale.weights.RANGED_HIT ~= nil then return HIT_KIND.RANGED end
+    return HIT_KIND.MELEE
+end
+
+local function PlainNumber(value)
+    if LJ.Util and LJ.Util.IsSecret and LJ.Util.IsSecret(value) then return nil end
+    return tonumber(value)
+end
+
+local function ItemHitPct(stats, kind)
+    if not stats then return 0 end
+    local rating = (stats.HitRating or 0) + (kind == HIT_KIND.SPELL and (stats.SpellHitRating or 0)
+        or kind == HIT_KIND.RANGED and (stats.RangedHitRating or 0) or (stats.MeleeHitRating or 0))
+    return RatingToPct(kind.key, rating) + (stats.HitPct or 0)
+        + (kind == HIT_KIND.SPELL and (stats.SpellHitPct or 0) or 0)
+end
+function Scoring.HitStatPercent(stats, spec)
+    return ItemHitPct(stats, HitKind(spec))
+end
+
+function Scoring.HitCap(spec)
+    if HitKind(spec) == HIT_KIND.SPELL then return Player.level >= 60 and 17 or 4 end
+    return Player.level >= 60 and 8 or 6
+end
+
+local function EquippedStats(slotID)
+    local itemID = Player:GetEquippedItemID(slotID)
+    if not itemID then return nil end
+    local link = Player:GetEquippedLink(slotID)
+    local stats = link and Scoring.GetStatsForLink(link)
+    return stats and next(stats) and stats or Scoring.GetStats(itemID)
+end
+
+local function PlayerHitTotal(kind)
+    local rating, modifier
+    if type(GetCombatRatingBonus) == "function" then
+        local ok, value = pcall(GetCombatRatingBonus, kind.rating)
+        if ok then rating = PlainNumber(value) end
+    end
+    if type(_G[kind.modifier]) == "function" then
+        local ok, value = pcall(_G[kind.modifier])
+        if ok then modifier = PlainNumber(value) end
+    end
+    if rating ~= nil or modifier ~= nil then return (rating or 0) + (modifier or 0) end
+
+    -- Same fallback as PawnForever: sum the parsed hit from the currently
+    -- equipped items when the client does not expose readable hit APIs.
+    local total = 0
+    for slotID = 1, 18 do
+        local id = Player:GetEquippedItemID(slotID)
+        if id then total = total + ItemHitPct(EquippedStats(slotID), kind) end
+    end
+    return total
+end
+
+function Scoring.HitContext(spec, excludedSlots, dualWielding)
+    local kind = HitKind(spec)
+    local total = PlayerHitTotal(kind)
+    for _, slotID in ipairs(excludedSlots or {}) do
+        local id = Player:GetEquippedItemID(slotID)
+        if id then
+            local stats = EquippedStats(slotID)
+            if not stats then return nil end
+            total = total - ItemHitPct(stats, kind)
+        end
+    end
+    return total, dualWielding
+end
+
+local function HitWorth(hit, cap, beyond)
+    return math.min(hit, cap) + beyond * math.max(hit - cap, 0)
+end
+Scoring.HitWorth = HitWorth
 
 ---------------------------------------------------------------------------
 -- Scoring
@@ -286,6 +382,12 @@ Scoring.RatingToPct = RatingToPct
 local function W(w, key) return w[key] or 0 end
 
 local SCHOOLS = { "ShadowPower", "FirePower", "FrostPower", "NaturePower", "ArcanePower", "HolyPower" }
+local WEAPON_SKILL_SUBCLASSES = {
+    WeaponSkillAxes = { 0, 1 }, WeaponSkillBows = { 2 }, WeaponSkillGuns = { 3 },
+    WeaponSkillMaces = { 4, 5 }, WeaponSkillPolearms = { 6 }, WeaponSkillSwords = { 7, 8 },
+    WeaponSkillStaves = { 10 }, WeaponSkillFistWeapons = { 13 }, WeaponSkillDaggers = { 15 },
+    WeaponSkillCrossbows = { 18 },
+}
 
 -- Feral form gear must not be selected for spell damage it cannot use. Weapon DPS still counts in form,
 -- but caster spell bonuses and weapon off-hands are not Feral upgrades.
@@ -315,7 +417,9 @@ end
 
 -- slotKey decides how weapon DPS counts (MAINHAND/TWOHAND/OFFHAND/RANGED).
 -- stats: optional stat table (Scoring.GetStatsForLink), otherwise the item's stats are used.
-function Scoring.Score(itemID, spec, slotKey, atCurrentLevel, stats)
+-- hitBase: hit chance without the item being compared (PawnForever's capped-hit comparison context).
+-- dualWielding: whether the character currently has a weapon in the off hand (PawnForever's over-cap value).
+function Scoring.Score(itemID, spec, slotKey, atCurrentLevel, stats, hitBase, dualWielding)
     local s = stats or Scoring.GetStats(itemID)
     if not s then return nil end
     if not Scoring.IsSpecEligible(itemID, spec, slotKey, s) then return nil end
@@ -330,9 +434,15 @@ function Scoring.Score(itemID, spec, slotKey, atCurrentLevel, stats)
     score = score + (s.Intellect or 0) * W(w, "Intellect")
     score = score + (s.Spirit or 0) * W(w, "Spirit")
     score = score + (s.MP5 or 0) * W(w, "MP5")
+    score = score + (s.HP5 or 0) * W(w, "HP5")
     score = score + (s.Armor or 0) * W(w, "Armor")
     score = score + (s.Defense or 0) * W(w, "Defense")
     score = score + (s.BlockValue or 0) * W(w, "BlockValue")
+    score = score + (s.ArcaneResistance or 0) * W(w, "ArcaneResistance")
+    score = score + (s.FireResistance or 0) * W(w, "FireResistance")
+    score = score + (s.FrostResistance or 0) * W(w, "FrostResistance")
+    score = score + (s.NatureResistance or 0) * W(w, "NatureResistance")
+    score = score + (s.ShadowResistance or 0) * W(w, "ShadowResistance")
 
     -- PawnForever scores the parsed ATTACK_POWER and RANGED_AP stats separately.
     -- Generic attack power stays on its own weight; the item stat parser does not
@@ -342,7 +452,7 @@ function Scoring.Score(itemID, spec, slotKey, atCurrentLevel, stats)
     score = score + (s.AttackPower or 0) * apWeight
     score = score + (s.RangedAttackPower or 0) * rapWeight
     if spec.key == "CAT" or spec.key == "BEAR" then
-        score = score + (s.FeralAttackPower or 0) * apWeight
+        score = score + (s.FeralAttackPower or 0) * W(w, "FeralAttackPower")
     end
 
     -- Match PawnForever's parser: a combined spell damage/healing bonus contributes
@@ -375,6 +485,11 @@ function Scoring.Score(itemID, spec, slotKey, atCurrentLevel, stats)
         + (spellScale and (s.SpellHitPct or 0) or 0)
     local critPct = RatingToPct(critKey, critRating, atCurrentLevel) + (s.CritPct or 0)
         + (spellScale and (s.SpellCritPct or 0) or 0)
+    if hitBase ~= nil then
+        local cap = Scoring.HitCap(spec)
+        local beyond = dualWielding and 0.4 or 0
+        hitPct = HitWorth(hitBase + hitPct, cap, beyond) - HitWorth(hitBase, cap, beyond)
+    end
     score = score + hitPct * W(w, "Hit") + critPct * W(w, "Crit")
     score = score + (RatingToPct("DODGE", s.DodgeRating, atCurrentLevel) + (s.DodgePct or 0)) * W(w, "Dodge")
     score = score + (RatingToPct("PARRY", s.ParryRating, atCurrentLevel) + (s.ParryPct or 0)) * W(w, "Parry")
@@ -384,8 +499,36 @@ function Scoring.Score(itemID, spec, slotKey, atCurrentLevel, stats)
     -- gain value from stats the player could not see in the priority panel.
     score = score + RatingToPct("HASTE", s.HasteRating, atCurrentLevel) * W(w, "Haste")
     score = score + RatingToPct("EXPERTISE", s.ExpertiseRating, atCurrentLevel) * W(w, "Expertise")
+    -- PawnForever scores a generic weapon-skill bonus as a regular stat, but
+    -- weapon-type-specific bonuses only apply to currently wielded weapons of
+    -- that type (or the candidate weapon itself). Preserve the type from the
+    -- client's stat keys instead of flattening every weapon skill together.
     score = score + (s.WeaponSkill or 0) * W(w, "WeaponSkill")
+    local _, _, _, _, _, classID, subclassID = C_Item.GetItemInfoInstant(itemID)
+    if W(w, "WeaponSkill") ~= 0 and classID == 2 then
+        local wielded = {}
+        for _, equipSlot in ipairs({ 16, 17, 18 }) do
+            local equippedID = GetInventoryItemID("player", equipSlot)
+            if equippedID then
+                local equippedClass, equippedSubclass = select(6, C_Item.GetItemInfoInstant(equippedID))
+                if equippedClass == 2 and equippedSubclass ~= nil then wielded[equippedSubclass] = true end
+            end
+        end
+        if subclassID ~= nil then wielded[subclassID] = true end
+        for key, subclasses in pairs(WEAPON_SKILL_SUBCLASSES) do
+            local value = s[key] or 0
+            if value ~= 0 then
+                for _, weaponSubclass in ipairs(subclasses) do
+                    if wielded[weaponSubclass] then
+                        score = score + value * W(w, "WeaponSkill")
+                        break
+                    end
+                end
+            end
+        end
+    end
     score = score + (s.SpellPenetration or 0) * W(w, "SpellPenetration")
+    score = score + (s.SpellPiercing or 0) * W(w, "SpellPiercing")
 
     -- Weapon damage.
     local dps = s.DPS or 0
@@ -398,11 +541,51 @@ function Scoring.Score(itemID, spec, slotKey, atCurrentLevel, stats)
             score = score + dps * W(w, "WeaponDPS")
         end
         local speed = s.WeaponSpeed or s.Speed or 0
+        local hitDamage = s.WeaponHitDamage or (speed > 0 and dps * speed) or 0
         if slotKey == "RANGED" then
-            score = score + dps * speed * W(w, "RangedHitDamage")
-        elseif slotKey ~= "OFFHAND" then
-            score = score + dps * speed * W(w, "WeaponHitDamage")
+            score = score + hitDamage * W(w, "RangedHitDamage")
+            score = score + speed * W(w, "RangedSpeedWeight")
+        elseif slotKey == "OFFHAND" then
+            score = score + speed * W(w, "OffHandSpeedWeight")
+        else
+            score = score + hitDamage * W(w, "WeaponHitDamage")
+            score = score + speed * W(w, "WeaponSpeedWeight")
         end
+    end
+
+    -- PawnForever values flat weapon damage from the currently equipped weapon
+    -- speeds (or the selected weapon's own speed when evaluating a weapon).
+    local flatMelee, flatRanged = s.MeleeDamage or 0, s.RangedDamage or 0
+    if flatMelee ~= 0 or flatRanged ~= 0 then
+        local scale = pawnScale or {}
+        local function EquippedSpeed(invSlot)
+            local link = GetInventoryItemLink("player", invSlot)
+            if not link then return nil end
+            local itemStats = Scoring.GetStatsForLink(link)
+            return itemStats and (itemStats.WeaponSpeed or itemStats.Speed)
+        end
+        local mainSpeed = EquippedSpeed(16)
+        local offSpeed = EquippedSpeed(17)
+        local rangedSpeed = EquippedSpeed(18)
+        local mainID = GetInventoryItemID("player", 16)
+        local mainLoc = mainID and select(4, C_Item.GetItemInfoInstant(mainID))
+        if slotKey == "MAINHAND" or slotKey == "TWOHAND" then
+            mainSpeed = s.WeaponSpeed or s.Speed or mainSpeed
+            if slotKey == "TWOHAND" then offSpeed = nil end
+        elseif slotKey == "OFFHAND" then
+            offSpeed = s.WeaponSpeed or s.Speed or offSpeed
+        elseif slotKey == "RANGED" then
+            rangedSpeed = s.WeaponSpeed or s.Speed or rangedSpeed
+        end
+        if mainLoc == "INVTYPE_2HWEAPON" and slotKey ~= "OFFHAND" then offSpeed = nil end
+        local formSwing = scale.swing
+        local meleeWorth = W(w, "WeaponDPS") / (formSwing or mainSpeed or 2) + W(w, "WeaponHitDamage")
+        if offSpeed and offSpeed > 0 then
+            meleeWorth = meleeWorth + (w.OffHandWeaponDPS or 0) / offSpeed
+        end
+        local rangedWorth = rangedSpeed and rangedSpeed > 0
+            and (W(w, "RangedWeaponDPS") / rangedSpeed + W(w, "RangedHitDamage")) or 0
+        score = score + flatMelee * meleeWorth + flatRanged * rangedWorth
     end
     return score
 end
@@ -609,6 +792,23 @@ function Scoring.InvalidateCache()
     rankingCache, rankingCount = {}, 0
 end
 
+-- A newly loaded item can replace its shipped fallback stats with the live
+-- Forever record. Invalidate only rankings that considered that item.
+function Scoring.InvalidateItem(itemID)
+    if not itemID then return end
+    statCache[itemID], liveStats[itemID] = nil, nil
+    local linkPrefix = "item:" .. itemID .. ":"
+    for link in pairs(linkStats) do
+        if link:find(linkPrefix, 1, true) then linkStats[link] = nil end
+    end
+    for key, ranking in pairs(rankingCache) do
+        if ranking.itemIDs and ranking.itemIDs[itemID] then
+            rankingCache[key] = nil
+            rankingCount = math.max(0, rankingCount - 1)
+        end
+    end
+end
+
 -- Ranks every known item for a spec, grouped by slot: the items its list takes (Items.InList: the sources the player
 -- picked) that the character can wear (not the other faction's, on the own class's list none with a profession the
 -- character lacks). Kept per list (Items.ListKey) and PawnForever scale generation: another one is ranked anew.
@@ -629,6 +829,7 @@ function Scoring.RankAll(spec, opts)
     for _, slot in ipairs(Scoring.SLOTS) do bySlot[slot] = {} end
     -- the candidates whose data the game has not sent yet (asked for once: Items.Request)
     local waiting = {}
+    local rankedItems = {}
     local class, maxLevel = spec.class, opts.maxLevel
     local level, own = maxLevel or 60, class == Player.class
     local function Rank(id, world, sourceFallback, fallbackSlots)
@@ -643,6 +844,7 @@ function Scoring.RankAll(spec, opts)
         if own and Scoring.MissingSkill(id) then return end
         -- only what the list takes (a quest of the other faction or another class gives none)
         if not Items.InList(id, class, level, sourceFallback) then return end
+        rankedItems[id] = true
         -- Fallback is explicitly the best available catalog candidate when enabled sources have no item for a slot.
         -- The Forever item catalog proves the item exists; missing source/stat coverage must not make the slot blank.
         local minLevel, itemLevel = Items.GetKnownLevels(id)
@@ -660,13 +862,24 @@ function Scoring.RankAll(spec, opts)
         if world and not Items.HasKnownStats(id) and not sourceFallback then return end
         if maxLevel and Items.UseLevelFrom(id, minLevel, itemLevel) > maxLevel then return end
         -- stats read this session, then saved or shipped ones; unknown stats come from the client or the server
-        local stats = Scoring.GetCachedStats(id) or Items.GetKnownStats(id, scratchStats)
+        -- The ID cache can contain an older shipped snapshot. The scorer used
+        -- by links and tooltips prefers the current Forever client record, so
+        -- ranking must ask the same source first as soon as it is available.
+        local stats
+        if not stats and sourceFallback then
+            -- For fallback catalog scans, use client stats only when already
+            -- known; never trigger item requests for thousands of unrelated gear.
+            if Items.HasKnownStats(id) then stats = Scoring.GetStats(id) end
+            stats = stats or Items.GetKnownStats(id, scratchStats)
+        else
+            -- Match tooltip scoring: prefer the scorer's live Forever item data,
+            -- then use the shipped snapshot only when the client has none.
+            stats = Scoring.GetStats(id) or Scoring.GetCachedStats(id) or Items.GetKnownStats(id, scratchStats)
+        end
         if not stats and sourceFallback then
             -- An item with no parsed numeric stats remains a valid zero-score last resort. Do not request thousands of
             -- tooltips during this scan; item details can still arrive through ordinary client use or /lf collect.
             stats = {}
-        elseif not stats then
-            stats = Scoring.GetStats(id)
         end
         if not stats then
             -- (a shipped item without stats has none: it does not rank)
@@ -675,7 +888,8 @@ function Scoring.RankAll(spec, opts)
         end
         for _, slot in ipairs(Scoring.GetItemSlots(facts, class, level)) do
             if not fallbackSlots or fallbackSlots[slot] then
-                local score = Scoring.Score(id, spec, slot, opts.current, stats)
+                local hitBase, dualWielding = Scoring.GetRankHitContext(spec, slot)
+                local score = hitBase ~= nil and Scoring.Score(id, spec, slot, opts.current, stats, hitBase, dualWielding) or nil
                 if score and (score > 0 or (sourceFallback and score == 0)) then
                     local list = bySlot[slot]
                     local _, itemLevel = Items.GetKnownLevels(id)
@@ -706,7 +920,7 @@ function Scoring.RankAll(spec, opts)
             return false
         end)
     end
-    local result = { bySlot = bySlot, pending = #waiting }
+    local result = { bySlot = bySlot, pending = #waiting, itemIDs = rankedItems }
     if rankingCount >= RANKINGS_KEPT then rankingCache, rankingCount = {}, 0 end
     rankingCache[cacheKey] = result
     rankingCount = rankingCount + 1
@@ -730,10 +944,14 @@ LJ:Listen("ITEMS_UPDATED", function()
     end
 end)
 
+LJ:Listen("ITEM_DATA_UPDATED", function(_, itemID)
+    Scoring.InvalidateItem(itemID)
+end)
+
 -- The score of the item worn in an equipment slot, from its link (random suffixes count): score, item ID, link; 0
 -- for an empty slot. The score is nil while the game has no data for the worn item yet (no link, no stats of it): the
 -- game is asked for it (ITEMS_UPDATED follows).
-local function EquippedScore(slotID, spec, slotKey, current)
+local function EquippedScore(slotID, spec, slotKey, current, hitBase, dualWielding)
     local itemID = Player:GetEquippedItemID(slotID)
     if not itemID then return 0, nil end
     local link = Player:GetEquippedLink(slotID)
@@ -748,16 +966,16 @@ local function EquippedScore(slotID, spec, slotKey, current)
         Items.Request(itemID)
         return nil, itemID, link
     end
-    return Scoring.Score(itemID, spec, slotKey, current, stats), itemID, link
+    return Scoring.Score(itemID, spec, slotKey, current, stats, hitBase, dualWielding), itemID, link
 end
 Scoring.EquippedScore = EquippedScore
 
 -- The score of what is worn where an item of a slot goes (the lower one of two ring or trinket slots): score, item ID,
 -- link; the score is nil while the game has no data for an item worn there yet (EquippedScore).
-function Scoring.GetEquippedScore(spec, slot, current)
+function Scoring.GetEquippedScore(spec, slot, current, hitBase, dualWielding)
     if slot == "TWOHAND" then
-        local mhScore, mh, mhLink = EquippedScore(16, spec, "MAINHAND", current)
-        local ohScore, oh, ohLink = EquippedScore(17, spec, "OFFHAND", current)
+        local mhScore, mh, mhLink = EquippedScore(16, spec, "TWOHAND", current, hitBase, dualWielding)
+        local ohScore, oh, ohLink = EquippedScore(17, spec, "OFFHAND", current, hitBase, dualWielding)
         if not (mhScore and ohScore) then return nil, mh or oh, mhLink or ohLink end
         return mhScore + ohScore, mh or oh, mhLink or ohLink
     end
@@ -767,17 +985,146 @@ function Scoring.GetEquippedScore(spec, slot, current)
     if slot == "OFFHAND" and not Player:GetEquippedItemID(17) then
         local mainHand = Player:GetEquippedItemID(16)
         local mainLoc = mainHand and select(4, C_Item.GetItemInfoInstant(mainHand))
-        if mainLoc == "INVTYPE_2HWEAPON" then return EquippedScore(16, spec, "TWOHAND", current) end
+        if mainLoc == "INVTYPE_2HWEAPON" then return EquippedScore(16, spec, "TWOHAND", current, hitBase, dualWielding) end
     end
     local lowest, lowestID, lowestLink
     for _, slotID in ipairs(ids) do
-        local score, itemID, link = EquippedScore(slotID, spec, slot, current)
+        local score, itemID, link = EquippedScore(slotID, spec, slot, current, hitBase, dualWielding)
         if not score then return nil, itemID, link end
         if not lowest or score < lowest then
             lowest, lowestID, lowestLink = score, itemID, link
         end
     end
     return lowest or 0, lowestID, lowestLink
+end
+
+-- Score the exact equipped slot PawnForever would replace, including each
+-- ring/trinket independently and the two hands together for a two-hand slot.
+function Scoring.GetReplacementScore(spec, slot)
+    local dualID = Player:GetEquippedItemID(17)
+    local dualClass = dualID and select(6, C_Item.GetItemInfoInstant(dualID))
+    local dualWielding = dualClass == 2
+    if slot == "TWOHAND" then
+        local hitBase = Scoring.HitContext(spec, { 16, 17 }, dualWielding)
+        if hitBase == nil then return nil end
+        local score, id, link = Scoring.GetEquippedScore(spec, slot, true, hitBase, dualWielding)
+        return score, id, link, hitBase, dualWielding
+    end
+    local slotIDs = Player.SLOT_IDS[slot]
+    if not slotIDs then return 0, nil, nil, Scoring.HitContext(spec, {}, dualWielding), dualWielding end
+    local best, bestID, bestLink, bestHit
+    for _, slotID in ipairs(slotIDs) do
+        local id = Player:GetEquippedItemID(slotID)
+        local hitBase = Scoring.HitContext(spec, id and { slotID } or {}, dualWielding)
+        if hitBase == nil then return nil end
+        local score, wornID, link = EquippedScore(slotID, spec, slot, true, hitBase, dualWielding)
+        if score == nil then return nil, wornID, link end
+        if best == nil or score < best or (score == best and not wornID) then
+            best, bestID, bestLink, bestHit = score, wornID, link, hitBase
+        end
+    end
+    return best or 0, bestID, bestLink, bestHit, dualWielding
+end
+
+function Scoring.GetRankHitContext(spec, slot)
+    local dualID = Player:GetEquippedItemID(17)
+    local dualClass = dualID and select(6, C_Item.GetItemInfoInstant(dualID))
+    local dualWielding = dualClass == 2
+    if slot == "MAINHAND" or slot == "OFFHAND" or slot == "TWOHAND" then
+        return Scoring.HitContext(spec, { 16, 17 }, dualWielding), dualWielding
+    end
+    local _, _, _, hitBase, dual = Scoring.GetReplacementScore(spec, slot)
+    return hitBase, dual
+end
+
+-- PawnForever compares weapon replacements as a two-hand loadout, including
+-- the different off-hand weights and a usable bag partner when replacing a
+-- two-hander. The result is still built only from Scoring.Score.
+function Scoring.CompareWeapon(itemID, spec, candidateStats, equipLoc)
+    local mainID, offID = Player:GetEquippedItemID(16), Player:GetEquippedItemID(17)
+    local mainLoc = mainID and select(4, C_Item.GetItemInfoInstant(mainID))
+    local mainStats = mainID and EquippedStats(16)
+    local offStats = offID and EquippedStats(17)
+    if (mainID and not mainStats) or (offID and not offStats) then return nil end
+
+    local offClass = offID and select(6, C_Item.GetItemInfoInstant(offID))
+    local offIsWeapon = offClass == 2
+    local canDual = Player:CanDualWield(spec.class)
+    local hitBase = Scoring.HitContext(spec, { 16, 17 }, offIsWeapon)
+    if hitBase == nil then return nil end
+    local currentMain = mainID and Scoring.Score(mainID, spec, mainLoc == "INVTYPE_2HWEAPON" and "TWOHAND" or "MAINHAND",
+        true, mainStats, hitBase, offIsWeapon) or 0
+    local currentOff = offID and offIsWeapon and Scoring.Score(offID, spec, "OFFHAND", true, offStats, hitBase, offIsWeapon) or 0
+    local current = currentMain + currentOff
+    local mainTwoHand = mainLoc == "INVTYPE_2HWEAPON"
+
+    local function CandidateScore(hand)
+        return Scoring.Score(itemID, spec, hand, true, candidateStats, hitBase, offIsWeapon)
+    end
+    local function BestBagPartner(hand)
+        if not C_Container or not C_Container.GetContainerNumSlots or not C_Container.GetContainerItemInfo then return nil end
+        local best
+        for bag = 0, NUM_BAG_SLOTS or 4 do
+            for bagSlot = 1, C_Container.GetContainerNumSlots(bag) or 0 do
+                local containerItem = C_Container.GetContainerItemInfo(bag, bagSlot)
+                local link = containerItem and containerItem.hyperlink
+                local partnerID = link and tonumber(link:match("item:(%d+)"))
+                if partnerID and partnerID ~= itemID and partnerID ~= mainID and partnerID ~= offID then
+                    local _, _, _, loc, _, classID, subclassID = C_Item.GetItemInfoInstant(link)
+                    local facts = { id = partnerID, equipLoc = loc, classID = classID, subclassID = subclassID }
+                    local isMainPartner = classID == 2 and (loc == "INVTYPE_WEAPON" or loc == "INVTYPE_WEAPONMAINHAND")
+                    local isOffWeapon = classID == 2 and (loc == "INVTYPE_WEAPON" or loc == "INVTYPE_WEAPONOFFHAND") and canDual
+                    local isOffArmor = loc == "INVTYPE_SHIELD" or loc == "INVTYPE_HOLDABLE"
+                    if (isMainPartner or isOffWeapon or isOffArmor) and Player:CanClassUse(facts, spec.class) then
+                        local partnerStats = Scoring.GetStatsForLink(link)
+                        local partnerHand = hand == "MAINHAND" and "MAINHAND" or "OFFHAND"
+                        local allowed = hand == "MAINHAND" and isMainPartner
+                            or hand == "OFFHAND" and (isOffWeapon or isOffArmor)
+                        if allowed and partnerStats then
+                            local score = Scoring.Score(partnerID, spec, partnerHand, true, partnerStats, hitBase, offIsWeapon)
+                            if score and score > 0 and (not best or score > best.score) then
+                                best = { id = partnerID, score = score }
+                            end
+                        end
+                    end
+                end
+            end
+        end
+        return best
+    end
+
+    local candidate, shown, chosenSlot
+    if equipLoc == "INVTYPE_2HWEAPON" then
+        shown = CandidateScore("TWOHAND")
+        candidate, chosenSlot = shown, "MAINHAND"
+    elseif equipLoc == "INVTYPE_WEAPON" or equipLoc == "INVTYPE_WEAPONMAINHAND" then
+        local asMain = CandidateScore("MAINHAND")
+        local asOff = canDual and Scoring.IsSpecEligible(itemID, spec, "OFFHAND", candidateStats)
+            and CandidateScore("OFFHAND") or nil
+        shown, candidate, chosenSlot = asMain, (asMain or 0) + currentOff, "MAINHAND"
+        if mainTwoHand then
+            local partner = BestBagPartner("OFFHAND")
+            if partner then candidate = (asMain or 0) + partner.score end
+        elseif mainID and canDual and mainLoc == "INVTYPE_WEAPON" then
+            local mainAsOff = Scoring.Score(mainID, spec, "OFFHAND", true, mainStats, hitBase, offIsWeapon)
+            if mainAsOff and asMain and asMain + mainAsOff > candidate then candidate = asMain + mainAsOff end
+        end
+        if asOff and not mainTwoHand and currentMain + asOff > candidate then
+            candidate, shown, chosenSlot = currentMain + asOff, asOff, "OFFHAND"
+        end
+    else
+        shown = CandidateScore("OFFHAND")
+        chosenSlot = "OFFHAND"
+        if mainTwoHand then
+            local partner = BestBagPartner("MAINHAND")
+            candidate = (partner and partner.score or 0) + (shown or 0)
+        else
+            candidate = currentMain + (shown or 0)
+        end
+    end
+    if not candidate or not shown then return nil end
+    return { current = current, candidate = candidate, delta = candidate - current, itemScore = shown,
+        slot = chosenSlot, hitBase = hitBase }
 end
 
 -- The profession an item asks for (Data/ItemStats.lua) when the character does not have it at that rank:
@@ -794,4 +1141,5 @@ LJ:Listen("WINDOW_CLOSED", function() statCache, liveStats = {}, {} end)
 
 LJ:Listen("SPEC_CHANGED", Scoring.InvalidateCache)
 LJ:Listen("PLAYER_CHANGED", Scoring.InvalidateCache)
+LJ:Listen("EQUIPMENT_CHANGED", Scoring.InvalidateCache)
 LJ:Listen("CONTENT_AVAILABILITY_CHANGED", Scoring.InvalidateCache)

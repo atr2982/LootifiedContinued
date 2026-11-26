@@ -374,6 +374,7 @@ end
 -- Fills t (emptied first) from a shipped stat text ("Stat=value,...", starting at position i of st). The values
 -- are read digit by digit, so ranking thousands of items leaves no strings behind; the result equals ParseStats.
 local POW10 = { 10, 100, 1000, 10000, 100000, 1000000 }
+local RefreshWhenItemRequestsSettle
 local function ParseStatsInto(st, t, i)
     for k in pairs(t) do t[k] = nil end
     i = i or 1
@@ -425,7 +426,11 @@ local function Persist(rec)
     if usedIL ~= il or usedML ~= ml then
         LJ:Debug("item %d: levels %s/%s -> %s/%s", rec.id, tostring(usedIL), tostring(usedML), il, ml)
         if LJ.Scoring then LJ.Scoring.InvalidateCache() end
-        LJ:FireDebounced("ITEMS_UPDATED", 0.2)
+        if RefreshWhenItemRequestsSettle then
+            RefreshWhenItemRequestsSettle()
+        else
+            LJ:FireDebounced("ITEMS_UPDATED", 0.2)
+        end
     end
 end
 
@@ -568,6 +573,10 @@ function Items.MarkMissing(itemID)
 end
 
 function Items.IsKnownMissing(itemID)
+    -- CollectedOverrides and later refresh data can add a real item record after
+    -- the original ItemStats missing list was generated. A shipped record wins:
+    -- do not let the stale missing marker hide it from ranking and other lists.
+    if bakedItems and bakedItems[itemID] then return false end
     return (missing and missing[itemID]) or (bakedMissing and bakedMissing[itemID]) or false
 end
 
@@ -779,22 +788,27 @@ function Items.WhenLoaded(itemID, callback)
     end
 end
 
+-- Refresh once after the current item-request batch has settled. Each result
+-- schedules this check again; don't poll while another request is pending.
+RefreshWhenItemRequestsSettle = function()
+    LJ:Debounce("ITEM_DATA_SETTLED", 0.25, function()
+        if not next(requested) then LJ:Fire("ITEMS_UPDATED") end
+    end)
+end
+
 local function OnItemData(_, itemID, success)
-    if not itemID then return end
-    -- Shipped items already have fallback records, so Lootified doesn't request
-    -- them. The Forever client can still load their live data (for example when
-    -- the player hovers a Journal drop). Accept that result too so cached scores
-    -- and the visible page can be refreshed from the client's current item data.
-    local wasRequested = requested[itemID]
-    if not wasRequested and not (Items.IsShipped(itemID) and cache[itemID]) then return end
-    if wasRequested then requested[itemID] = nil end
+    -- Only follow item loads Lootified requested itself. The client also reports
+    -- loads initiated by other addons, including on item hover; reacting to those
+    -- would redraw the active page while the user is merely moving the mouse.
+    if not itemID or not requested[itemID] then return end
+    requested[itemID] = nil
     local rec = cache[itemID]
     local st = Items.netStats
     st.answers = st.answers + 1
     local changed = success ~= false
-    if rec and not Items.IsShipped(itemID) then
+    if rec then
         local ok = FillFull(rec)
-        if success == false or not ok then
+        if not Items.IsShipped(itemID) and (success == false or not ok) then
             -- the server answered, but has no data for this item
             rec.failed = true
             changed = false
@@ -816,8 +830,9 @@ local function OnItemData(_, itemID, success)
     -- the pages show the new data; an answer without data changes nothing they show
     if changed then
         LJ:Debug("item data: %d", itemID)
-        LJ:FireDebounced("ITEMS_UPDATED", 0.2)
+        LJ:Fire("ITEM_DATA_UPDATED", itemID)
     end
+    RefreshWhenItemRequestsSettle()
 end
 
 LJ:On("GET_ITEM_INFO_RECEIVED", OnItemData)

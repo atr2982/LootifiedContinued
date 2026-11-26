@@ -15063,6 +15063,8 @@ LJ.Locales.koKR = function()
             [2652] = "셴드랄라스",
         },
         ui = {
+            ["Live dungeon finder rows at player level %s (%d LFD, %d browser):"] = "플레이어 레벨 %s의 던전 찾기 항목 (%d LFD, %d 브라우저):",
+            ["Browser activity %s | %s | minimum %s | suggested levels %s-%s | map %s"] = "브라우저 활동 %s | %s | 최소 레벨 %s | 권장 레벨 %s-%s | 지도 %s",
             ["  Built into the addon: %d items, %d without server data (game %s)"] = "  애드온 내장: 아이템 %d개, 서버 데이터 없음 %d개 (게임 %s)",
             ["  Saved: %d items (%d with stats), %d marked missing; loaded from the last session: %d"] = "  저장됨: 아이템 %d개 (능력치 포함 %d개), 누락 표시 %d개; 지난 세션에서 불러옴: %d개",
             ["  Server this session: %d requests (%d repeated), %d answers, %d answers without data"] = "  이번 세션 서버: 요청 %d회 (반복 %d회), 응답 %d회, 데이터 없는 응답 %d회",

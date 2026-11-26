@@ -1,9 +1,9 @@
--- Generated from ForeverDB.net build 1.60.1.70938.
+-- Generated from ForeverDB.net build 1.60.1.71091.
 
 local _, LJ = ...
 LJ.Data = LJ.Data or {}
 LJ.Data.ForeverDB = {
-    build = "1.60.1.70938",
+    build = "1.60.1.71091",
     attribution = "Data from ForeverDB.net (https://foreverdb.net). You must credit ForeverDB.net, with a visible link to https://foreverdb.net, wherever you show this data.",
     items = {
         [25] = {
@@ -53142,7 +53142,7 @@ LJ.Data.ForeverDB = {
             level = 10,
             min = 0,
             classId = 4,
-            subclassId = 0,
+            subclassId = 1,
             inventoryTypeId = 20,
             betaEvent = false,
             speculation = false
@@ -60686,6 +60686,17 @@ LJ.Data.ForeverDB = {
             name = "Plans: Dazzling Mithril Rapier",
             quality = 2,
             level = 48,
+            min = 0,
+            classId = 9,
+            subclassId = 4,
+            inventoryTypeId = 0,
+            betaEvent = false,
+            speculation = false
+        },
+        [7994] = {
+            name = "Plans: Orcish War Leggings",
+            quality = 2,
+            level = 46,
             min = 0,
             classId = 9,
             subclassId = 4,
@@ -77276,7 +77287,7 @@ LJ.Data.ForeverDB = {
             level = 47,
             min = 0,
             classId = 4,
-            subclassId = 0,
+            subclassId = 1,
             inventoryTypeId = 20,
             betaEvent = false,
             speculation = false
@@ -86565,6 +86576,28 @@ LJ.Data.ForeverDB = {
             betaEvent = false,
             speculation = false
         },
+        [11422] = {
+            name = "Goblin Engineer's Renewal Gift",
+            quality = 1,
+            level = 1,
+            min = 0,
+            classId = 15,
+            subclassId = 0,
+            inventoryTypeId = 0,
+            betaEvent = false,
+            speculation = false
+        },
+        [11423] = {
+            name = "Gnome Engineer's Renewal Gift",
+            quality = 1,
+            level = 1,
+            min = 0,
+            classId = 15,
+            subclassId = 0,
+            inventoryTypeId = 0,
+            betaEvent = false,
+            speculation = false
+        },
         [11442] = {
             name = "Stormwind Deputy Kit",
             quality = 1,
@@ -87134,6 +87167,17 @@ LJ.Data.ForeverDB = {
             classId = 13,
             subclassId = 0,
             inventoryTypeId = 0,
+            betaEvent = false,
+            speculation = false
+        },
+        [11603] = {
+            name = "Vilerend Slicer",
+            quality = 3,
+            level = 51,
+            min = 46,
+            classId = 2,
+            subclassId = 13,
+            inventoryTypeId = 21,
             betaEvent = false,
             speculation = false
         },
@@ -175456,6 +175500,28 @@ LJ.Data.ForeverDB = {
             betaEvent = false,
             speculation = true
         },
+        [219326] = {
+            name = "Seed of Renewal",
+            quality = 3,
+            level = 50,
+            min = 0,
+            classId = 4,
+            subclassId = 0,
+            inventoryTypeId = 12,
+            betaEvent = false,
+            speculation = true
+        },
+        [219343] = {
+            name = "Filcher's Cowl",
+            quality = 3,
+            level = 50,
+            min = 0,
+            classId = 4,
+            subclassId = 1,
+            inventoryTypeId = 16,
+            betaEvent = false,
+            speculation = false
+        },
         [219345] = {
             name = "Infernal Lasso",
             quality = 3,
@@ -234661,7 +234727,7 @@ LJ.Data.ForeverDB = {
         [273884] = {
             name = "Grovekeeper Trousers",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 2,
@@ -234672,7 +234738,7 @@ LJ.Data.ForeverDB = {
         [273885] = {
             name = "Grovekeeper Grips",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 2,
@@ -234683,7 +234749,7 @@ LJ.Data.ForeverDB = {
         [273886] = {
             name = "Grovekeeper Shoulderpads",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 2,
@@ -234694,7 +234760,7 @@ LJ.Data.ForeverDB = {
         [273887] = {
             name = "Grovekeeper Stompers",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 2,
@@ -234705,7 +234771,7 @@ LJ.Data.ForeverDB = {
         [273888] = {
             name = "Grovekeeper Kilt",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 2,
@@ -234716,7 +234782,7 @@ LJ.Data.ForeverDB = {
         [273889] = {
             name = "Grovekeeper Mitts",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 2,
@@ -234727,7 +234793,7 @@ LJ.Data.ForeverDB = {
         [273890] = {
             name = "Grovekeeper Mantle",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 2,
@@ -234738,7 +234804,7 @@ LJ.Data.ForeverDB = {
         [273891] = {
             name = "Grovekeeper Sandals",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 2,
@@ -234749,7 +234815,7 @@ LJ.Data.ForeverDB = {
         [273892] = {
             name = "Grovekeeper Legguards",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 2,
@@ -234760,7 +234826,7 @@ LJ.Data.ForeverDB = {
         [273893] = {
             name = "Grovekeeper Handguards",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 2,
@@ -234771,7 +234837,7 @@ LJ.Data.ForeverDB = {
         [273894] = {
             name = "Grovekeeper Pauldrons",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 2,
@@ -234782,7 +234848,7 @@ LJ.Data.ForeverDB = {
         [273895] = {
             name = "Grovekeeper Boots",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 2,
@@ -234793,7 +234859,7 @@ LJ.Data.ForeverDB = {
         [273896] = {
             name = "Grovekeeper Leggings",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 2,
@@ -234804,7 +234870,7 @@ LJ.Data.ForeverDB = {
         [273897] = {
             name = "Grovekeeper Gauntlets",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 2,
@@ -234815,7 +234881,7 @@ LJ.Data.ForeverDB = {
         [273898] = {
             name = "Grovekeeper Spaulders",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 2,
@@ -234826,7 +234892,7 @@ LJ.Data.ForeverDB = {
         [273899] = {
             name = "Grovekeeper Treads",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 2,
@@ -234837,7 +234903,7 @@ LJ.Data.ForeverDB = {
         [273900] = {
             name = "Wildstalker's Legguards",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 3,
@@ -234848,7 +234914,7 @@ LJ.Data.ForeverDB = {
         [273901] = {
             name = "Wildstalker's Gauntlets",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 3,
@@ -234859,7 +234925,7 @@ LJ.Data.ForeverDB = {
         [273902] = {
             name = "Wildstalker's Spaulders",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 3,
@@ -234870,7 +234936,7 @@ LJ.Data.ForeverDB = {
         [273903] = {
             name = "Wildstalker's Greaves",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 3,
@@ -234881,7 +234947,7 @@ LJ.Data.ForeverDB = {
         [273904] = {
             name = "Manaflare Pants",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 1,
@@ -234892,7 +234958,7 @@ LJ.Data.ForeverDB = {
         [273905] = {
             name = "Manaflare Gloves",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 1,
@@ -234903,7 +234969,7 @@ LJ.Data.ForeverDB = {
         [273906] = {
             name = "Manaflare Mantle",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 1,
@@ -234914,7 +234980,7 @@ LJ.Data.ForeverDB = {
         [273907] = {
             name = "Manaflare Boots",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 1,
@@ -234925,7 +234991,7 @@ LJ.Data.ForeverDB = {
         [273908] = {
             name = "Justice Leggings",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 4,
@@ -234936,7 +235002,7 @@ LJ.Data.ForeverDB = {
         [273909] = {
             name = "Justice Gauntlets",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 4,
@@ -234947,7 +235013,7 @@ LJ.Data.ForeverDB = {
         [273910] = {
             name = "Justice Spaulders",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 4,
@@ -234958,7 +235024,7 @@ LJ.Data.ForeverDB = {
         [273911] = {
             name = "Justice Greaves",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 4,
@@ -234969,7 +235035,7 @@ LJ.Data.ForeverDB = {
         [273912] = {
             name = "Justice Legplates",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 4,
@@ -234980,7 +235046,7 @@ LJ.Data.ForeverDB = {
         [273913] = {
             name = "Justice Gloves",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 4,
@@ -234991,7 +235057,7 @@ LJ.Data.ForeverDB = {
         [273914] = {
             name = "Justice Epaulets",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 4,
@@ -235002,7 +235068,7 @@ LJ.Data.ForeverDB = {
         [273915] = {
             name = "Justice Treads",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 4,
@@ -235013,7 +235079,7 @@ LJ.Data.ForeverDB = {
         [273916] = {
             name = "Justice Legguards",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 4,
@@ -235024,7 +235090,7 @@ LJ.Data.ForeverDB = {
         [273917] = {
             name = "Justice Handguards",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 4,
@@ -235035,7 +235101,7 @@ LJ.Data.ForeverDB = {
         [273918] = {
             name = "Justice Pauldrons",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 4,
@@ -235046,7 +235112,7 @@ LJ.Data.ForeverDB = {
         [273919] = {
             name = "Justice Sabatons",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 4,
@@ -235057,7 +235123,7 @@ LJ.Data.ForeverDB = {
         [273920] = {
             name = "Pants of Conviction",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 1,
@@ -235068,7 +235134,7 @@ LJ.Data.ForeverDB = {
         [273921] = {
             name = "Gloves of Conviction",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 1,
@@ -235079,7 +235145,7 @@ LJ.Data.ForeverDB = {
         [273922] = {
             name = "Mantle of Conviction",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 1,
@@ -235090,7 +235156,7 @@ LJ.Data.ForeverDB = {
         [273923] = {
             name = "Treads of Conviction",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 1,
@@ -235101,7 +235167,7 @@ LJ.Data.ForeverDB = {
         [273924] = {
             name = "Leggings of Conviction",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 1,
@@ -235112,7 +235178,7 @@ LJ.Data.ForeverDB = {
         [273925] = {
             name = "Handguards of Conviction",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 1,
@@ -235123,7 +235189,7 @@ LJ.Data.ForeverDB = {
         [273926] = {
             name = "Pauldrons of Conviction",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 1,
@@ -235134,7 +235200,7 @@ LJ.Data.ForeverDB = {
         [273927] = {
             name = "Boots of Conviction",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 1,
@@ -235145,7 +235211,7 @@ LJ.Data.ForeverDB = {
         [273928] = {
             name = "Grimstitch Pants",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 2,
@@ -235156,7 +235222,7 @@ LJ.Data.ForeverDB = {
         [273929] = {
             name = "Grimstitch Gloves",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 2,
@@ -235167,7 +235233,7 @@ LJ.Data.ForeverDB = {
         [273930] = {
             name = "Grimstitch Spaulders",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 2,
@@ -235178,7 +235244,7 @@ LJ.Data.ForeverDB = {
         [273931] = {
             name = "Grimstitch Boots",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 2,
@@ -235189,7 +235255,7 @@ LJ.Data.ForeverDB = {
         [273932] = {
             name = "Spiritcaller Leggings",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 3,
@@ -235200,7 +235266,7 @@ LJ.Data.ForeverDB = {
         [273933] = {
             name = "Spiritcaller Grips",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 3,
@@ -235211,7 +235277,7 @@ LJ.Data.ForeverDB = {
         [273934] = {
             name = "Spiritcaller Spaulders",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 3,
@@ -235222,7 +235288,7 @@ LJ.Data.ForeverDB = {
         [273935] = {
             name = "Spiritcaller Treads",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 3,
@@ -235233,7 +235299,7 @@ LJ.Data.ForeverDB = {
         [273936] = {
             name = "Spiritcaller Pants",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 3,
@@ -235244,7 +235310,7 @@ LJ.Data.ForeverDB = {
         [273937] = {
             name = "Spiritcaller Gauntlets",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 3,
@@ -235255,7 +235321,7 @@ LJ.Data.ForeverDB = {
         [273938] = {
             name = "Spiritcaller Epaulets",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 3,
@@ -235266,7 +235332,7 @@ LJ.Data.ForeverDB = {
         [273939] = {
             name = "Spiritcaller Greaves",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 3,
@@ -235277,7 +235343,7 @@ LJ.Data.ForeverDB = {
         [273940] = {
             name = "Demonheart Leggings",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 1,
@@ -235288,7 +235354,7 @@ LJ.Data.ForeverDB = {
         [273941] = {
             name = "Demonheart Gloves",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 1,
@@ -235299,7 +235365,7 @@ LJ.Data.ForeverDB = {
         [273942] = {
             name = "Demonheart Spaulders",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 1,
@@ -235310,7 +235376,7 @@ LJ.Data.ForeverDB = {
         [273943] = {
             name = "Demonheart Boots",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 1,
@@ -235321,7 +235387,7 @@ LJ.Data.ForeverDB = {
         [273944] = {
             name = "Legplates of Glory",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 4,
@@ -235332,7 +235398,7 @@ LJ.Data.ForeverDB = {
         [273945] = {
             name = "Gauntlets of Glory",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 4,
@@ -235343,7 +235409,7 @@ LJ.Data.ForeverDB = {
         [273946] = {
             name = "Shoulders of Glory",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 4,
@@ -235354,7 +235420,7 @@ LJ.Data.ForeverDB = {
         [273947] = {
             name = "Greaves of Glory",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 4,
@@ -235365,7 +235431,7 @@ LJ.Data.ForeverDB = {
         [273948] = {
             name = "Legguards of Glory",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 4,
@@ -235376,7 +235442,7 @@ LJ.Data.ForeverDB = {
         [273949] = {
             name = "Handguards of Glory",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 4,
@@ -235387,7 +235453,7 @@ LJ.Data.ForeverDB = {
         [273950] = {
             name = "Pauldrons of Glory",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 4,
@@ -235398,7 +235464,7 @@ LJ.Data.ForeverDB = {
         [273951] = {
             name = "Sabatons of Glory",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 4,
@@ -242944,7 +243010,7 @@ LJ.Data.ForeverDB = {
         [276538] = {
             name = "Spiritcaller Kilt",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 3,
@@ -242955,7 +243021,7 @@ LJ.Data.ForeverDB = {
         [276539] = {
             name = "Spiritcaller Gloves",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 3,
@@ -242966,7 +243032,7 @@ LJ.Data.ForeverDB = {
         [276540] = {
             name = "Spiritcaller Mantle",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 3,
@@ -242977,7 +243043,7 @@ LJ.Data.ForeverDB = {
         [276541] = {
             name = "Spiritcaller Boots",
             quality = 4,
-            level = 61,
+            level = 60,
             min = 60,
             classId = 4,
             subclassId = 3,
@@ -261805,6 +261871,28 @@ LJ.Data.ForeverDB = {
             inventoryTypeId = 26,
             betaEvent = false,
             speculation = false
+        },
+        [291005] = {
+            name = "Camper's Lure",
+            quality = 1,
+            level = 20,
+            min = 0,
+            classId = 0,
+            subclassId = 14,
+            inventoryTypeId = 0,
+            betaEvent = false,
+            speculation = false
+        },
+        [291874] = {
+            name = "Ruined Herb Seeds",
+            quality = 0,
+            level = 1,
+            min = 0,
+            classId = 15,
+            subclassId = 0,
+            inventoryTypeId = 0,
+            betaEvent = false,
+            speculation = false
         }
     },
     quests = {
@@ -262053,19 +262141,23 @@ LJ.Data.ForeverDB = {
             name = "A Lesson to Learn",
             level = 16,
             min = 16,
-            side = "H",
+            side = "A",
             src = "forever",
-            zone = "Druid",
-            startText = "Turak Runetotem, Thunder Bluff",
+            classes = {
+                "Druid"
+            },
+            startText = "Mathrengyl Bearwalker, Darnassus",
             finishText = "Dendrite Starblaze, Moonglade"
         },
         [27] = {
             name = "A Lesson to Learn",
             level = 16,
             min = 16,
-            side = "A",
+            side = "H",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Turak Runetotem, Thunder Bluff",
             finishText = "Dendrite Starblaze, Moonglade"
         },
@@ -262075,7 +262167,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "H",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Dendrite Starblaze, Moonglade",
             finishText = "Tajarri, Moonglade"
         },
@@ -262085,7 +262179,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "A",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Dendrite Starblaze, Moonglade",
             finishText = "Tajarri, Moonglade"
         },
@@ -262095,7 +262191,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "H",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Tajarri, Moonglade",
             finishText = "Dendrite Starblaze, Moonglade"
         },
@@ -262105,7 +262203,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "H",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Dendrite Starblaze, Moonglade",
             finishText = "Turak Runetotem, Thunder Bluff"
         },
@@ -262114,7 +262214,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 39,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Tanaris",
             map = 1446,
             startText = "Senior Surveyor Fizzledowser, Tanaris",
@@ -262412,7 +262512,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Islen Waterseer, The Barrens",
             finishText = "Brazier of Everfount, Silverpine Forest"
         },
@@ -262597,7 +262699,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 42,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Orgrimmar",
             map = 1454,
             startText = "Gilveradin Sunchaser, The Hinterlands",
@@ -262763,7 +262865,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Minor Manifestation of Water, Silverpine Forest",
             finishText = "Islen Waterseer, The Barrens"
         },
@@ -262806,7 +262910,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Brazier of Everfount, Silverpine Forest",
             finishText = "Minor Manifestation of Water, Silverpine Forest"
         },
@@ -262859,7 +262965,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "High Executor Derrington, Western Plaguelands",
@@ -264001,7 +264107,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Commander Ashlam Valorfist, Western Plaguelands",
@@ -264101,7 +264207,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Brine, The Barrens",
             finishText = "Islen Waterseer, The Barrens"
         },
@@ -264617,7 +264725,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "A",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Tajarri, Moonglade",
             finishText = "Dendrite Starblaze, Moonglade"
         },
@@ -265413,6 +265523,17 @@ LJ.Data.ForeverDB = {
             startText = "Fin Fizracket, Stranglethorn Vale",
             finishText = "Fin Fizracket, Stranglethorn Vale"
         },
+        [349] = {
+            name = "Stranglethorn Fever",
+            level = 45,
+            min = 32,
+            side = "BOTH",
+            src = "forever",
+            zone = "Stranglethorn Vale",
+            map = 1434,
+            startText = "Witch Doctor Unbagwa, Stranglethorn Vale",
+            finishText = "Witch Doctor Unbagwa, Stranglethorn Vale"
+        },
         [350] = {
             name = "Look to an Old Friend",
             level = 31,
@@ -266084,7 +266205,7 @@ LJ.Data.ForeverDB = {
             level = 10,
             min = 8,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Dun Morogh",
             map = 1426,
             startText = "Tharek Blackstone, Dun Morogh",
@@ -267085,7 +267206,7 @@ LJ.Data.ForeverDB = {
             level = 40,
             min = 29,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Hillsbrad Foothills",
             map = 1424,
             startText = "Elysa, Alterac Mountains",
@@ -267217,7 +267338,7 @@ LJ.Data.ForeverDB = {
             level = 43,
             min = 34,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Hillsbrad Foothills",
             map = 1424,
             startText = "Melisara, Hillsbrad Foothills",
@@ -267228,7 +267349,7 @@ LJ.Data.ForeverDB = {
             level = 43,
             min = 34,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Hillsbrad Foothills",
             map = 1424,
             startText = "Melisara, Hillsbrad Foothills",
@@ -267942,7 +268063,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 30,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Stranglethorn Vale",
             map = 1434,
             startText = "Kin'weelay, Stranglethorn Vale",
@@ -267964,7 +268085,7 @@ LJ.Data.ForeverDB = {
             level = 46,
             min = 30,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Stranglethorn Vale",
             map = 1434,
             startText = "Kin'weelay, Stranglethorn Vale",
@@ -267975,7 +268096,7 @@ LJ.Data.ForeverDB = {
             level = 46,
             min = 30,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Stranglethorn Vale",
             map = 1434,
             startText = "Kin'weelay, Stranglethorn Vale",
@@ -267986,7 +268107,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 45,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Stranglethorn Vale",
             map = 1434,
             startText = "Carefully Folded Note",
@@ -268162,7 +268283,7 @@ LJ.Data.ForeverDB = {
             level = 39,
             min = 32,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Stranglethorn Vale",
             map = 1434,
             startText = "Catelyn the Blade, Stranglethorn Vale",
@@ -268266,7 +268387,7 @@ LJ.Data.ForeverDB = {
             level = 43,
             min = 38,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Stranglethorn Vale",
             map = 1434,
             startText = "Privateer Bloads, Stranglethorn Vale",
@@ -268292,17 +268413,17 @@ LJ.Data.ForeverDB = {
             zone = "Stranglethorn Vale",
             map = 1434,
             startText = "A Soggy Scroll, Swamp of Sorrows",
-            finishText = "Musty Scroll, The Barrens"
+            finishText = "Musty Scroll, Dustwallow Marsh"
         },
         [626] = {
             name = "Cortello's Riddle",
             level = 51,
             min = 35,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Stranglethorn Vale",
             map = 1434,
-            startText = "Musty Scroll, The Barrens",
+            startText = "Musty Scroll, Dustwallow Marsh",
             finishText = "Cortello's Treasure, The Hinterlands"
         },
         [627] = {
@@ -268462,7 +268583,7 @@ LJ.Data.ForeverDB = {
             level = 40,
             min = 32,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Arathi Highlands",
             map = 1417,
             startText = "Tor'gan, Arathi Highlands",
@@ -268484,7 +268605,7 @@ LJ.Data.ForeverDB = {
             level = 41,
             min = 32,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Arathi Highlands",
             map = 1417,
             startText = "Zengu, Arathi Highlands",
@@ -268495,7 +268616,7 @@ LJ.Data.ForeverDB = {
             level = 42,
             min = 32,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Arathi Highlands",
             map = 1417,
             startText = "Zengu, Arathi Highlands",
@@ -268506,7 +268627,7 @@ LJ.Data.ForeverDB = {
             level = 42,
             min = 32,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Arathi Highlands",
             map = 1417,
             startText = "Zengu, Arathi Highlands",
@@ -268605,7 +268726,7 @@ LJ.Data.ForeverDB = {
             level = 46,
             min = 38,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Tanaris",
             map = 1446,
             startText = "Model 4711-FTZ Power Source",
@@ -268748,7 +268869,7 @@ LJ.Data.ForeverDB = {
             level = 44,
             min = 35,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Arathi Highlands",
             map = 1417,
             startText = "Shakes O'Breen, Arathi Highlands",
@@ -269100,7 +269221,7 @@ LJ.Data.ForeverDB = {
             level = 42,
             min = 35,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Swamp of Sorrows",
             map = 1435,
             startText = "Tok'Kar, Swamp of Sorrows",
@@ -269355,6 +269476,7 @@ LJ.Data.ForeverDB = {
             side = "A",
             src = "forever",
             zone = "Uldaman",
+            map = 1418,
             startText = "Hammertoe Grez, Badlands",
             finishText = "Hammertoe Grez, Badlands"
         },
@@ -269484,7 +269606,7 @@ LJ.Data.ForeverDB = {
             level = 42,
             min = 35,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Badlands",
             map = 1418,
             startText = "Lotwil Veriatus, Badlands",
@@ -269934,7 +270056,7 @@ LJ.Data.ForeverDB = {
             level = 42,
             min = 35,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Badlands",
             map = 1418,
             startText = "Lucien Tosselwrench, Badlands",
@@ -269945,7 +270067,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 35,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Badlands",
             map = 1418,
             startText = "Lotwil Veriatus, Badlands",
@@ -270104,6 +270226,17 @@ LJ.Data.ForeverDB = {
             map = 1411,
             startText = "Zureetha Fargaze, Durotar",
             finishText = "Zureetha Fargaze, Durotar"
+        },
+        [795] = {
+            name = "Seal of the Earth",
+            level = 55,
+            min = 40,
+            side = "H",
+            src = "forever",
+            zone = "Badlands",
+            map = 1418,
+            startText = "Seal of the Earth, Badlands",
+            finishText = "Seal of the Earth, Badlands"
         },
         [804] = {
             name = "Sarkoth",
@@ -270429,7 +270562,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 55,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "High Executor Derrington, Western Plaguelands",
@@ -270451,7 +270584,7 @@ LJ.Data.ForeverDB = {
             level = 46,
             min = 38,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Tanaris",
             map = 1446,
             startText = "Chief Engineer Bilgewhizzle, Tanaris",
@@ -271421,7 +271554,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 47,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Orgrimmar",
             map = 1454,
             startText = "Innkeeper Gryshka, Orgrimmar",
@@ -271454,7 +271587,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 49,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Flute of Xavaric",
@@ -271476,7 +271609,7 @@ LJ.Data.ForeverDB = {
             level = 12,
             min = 9,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Teldrassil",
             map = 1438,
             startText = "Denalan, Teldrassil",
@@ -271668,6 +271801,17 @@ LJ.Data.ForeverDB = {
             startText = "Crane Operator Bigglefuzz, The Barrens",
             finishText = "Crane Operator Bigglefuzz, The Barrens"
         },
+        [961] = {
+            name = "Onu is meditating",
+            level = 1,
+            min = 1,
+            side = "A",
+            src = "forever",
+            zone = "Darkshore",
+            map = 1439,
+            startText = "Onu, Darkshore",
+            finishText = "Onu, Darkshore"
+        },
         [962] = {
             name = "Serpentbloom",
             level = 18,
@@ -271694,10 +271838,10 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 55,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
-            startText = "Apothecary Dithers, Western Plaguelands",
+            startText = "Apothecary Dithers, Tirisfal Glades",
             finishText = "Apothecary Dithers, Western Plaguelands"
         },
         [965] = {
@@ -271749,7 +271893,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 55,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Witch Doctor Mau'ari, Winterspring",
@@ -271775,6 +271919,18 @@ LJ.Data.ForeverDB = {
             zone = "Blackfathom Deeps",
             startText = "Gerrig Bonegrip, Ironforge",
             finishText = "Gerrig Bonegrip, Ironforge"
+        },
+        [972] = {
+            name = "Water Sapta",
+            level = 20,
+            min = 20,
+            side = "H",
+            src = "forever",
+            classes = {
+                "Shaman"
+            },
+            startText = "Islen Waterseer, The Barrens",
+            finishText = "Islen Waterseer, The Barrens"
         },
         [973] = {
             name = "The Tower of Althalaxx",
@@ -271825,7 +271981,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Umi Rumplesnicker, Winterspring",
@@ -271836,7 +271992,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 52,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Rut'theran Village",
             map = 1438,
             startText = "Erelas Ambersky, Teldrassil",
@@ -272012,7 +272168,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 54,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Thunder Bluff",
             map = 1456,
             startText = "Bluff Runner Windstrider, Thunder Bluff",
@@ -272056,7 +272212,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 54,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Undercity",
             map = 1458,
             startText = "Harbinger Balthazad, Undercity",
@@ -272341,7 +272497,7 @@ LJ.Data.ForeverDB = {
             level = 32,
             min = 26,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Ashenvale",
             map = 1440,
             startText = "Illiyana, Ashenvale",
@@ -272506,7 +272662,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 54,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Darnassus",
             map = 1457,
             startText = "Herald Moonstalker, Darnassus",
@@ -272801,7 +272957,7 @@ LJ.Data.ForeverDB = {
             level = 21,
             min = 17,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Stonetalon Mountains",
             map = 1442,
             startText = "Lomac Gearstrip, Ironforge",
@@ -273107,7 +273263,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Tiev Mordune, Silverpine Forest",
             finishText = "Tiev Mordune, Silverpine Forest"
         },
@@ -273173,7 +273331,6 @@ LJ.Data.ForeverDB = {
             side = "H",
             src = "forever",
             zone = "Razorfen Kraul",
-            map = 1416,
             startText = "Master Apothecary Faranell, Undercity",
             finishText = "Master Apothecary Faranell, Undercity"
         },
@@ -273281,7 +273438,7 @@ LJ.Data.ForeverDB = {
             level = 44,
             min = 35,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Thousand Needles",
             map = 1441,
             startText = "Crank Fizzlebub, Stranglethorn Vale",
@@ -273292,7 +273449,7 @@ LJ.Data.ForeverDB = {
             level = 44,
             min = 35,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Thousand Needles",
             map = 1441,
             startText = "Kravel Koalbeard, Thousand Needles",
@@ -273314,7 +273471,7 @@ LJ.Data.ForeverDB = {
             level = 44,
             min = 35,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Thousand Needles",
             map = 1441,
             startText = "Kravel Koalbeard, Thousand Needles",
@@ -273325,7 +273482,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 54,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Thunder Bluff",
             map = 1456,
             startText = "Arch Druid Hamuul Runetotem, Thunder Bluff",
@@ -273336,7 +273493,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 54,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Moonglade",
             map = 1450,
             startText = "Rabine Saturna, Moonglade",
@@ -273347,7 +273504,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 54,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Silithus",
             map = 1451,
             startText = "Layo Starstrike, Silithus",
@@ -273468,7 +273625,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 35,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Uldaman",
             startText = "Advisor Belgrum, Ironforge",
             finishText = "Advisor Belgrum, Ironforge"
@@ -273510,7 +273667,7 @@ LJ.Data.ForeverDB = {
             level = 31,
             min = 13,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Darkshore",
             map = 1439,
             startText = "Balthule Shadowstrike, Darkshore",
@@ -273654,6 +273811,7 @@ LJ.Data.ForeverDB = {
             side = "H",
             src = "forever",
             zone = "Scarlet Monastery",
+            map = 1420,
             startText = "Parqual Fintallas, Undercity",
             finishText = "Parqual Fintallas, Undercity"
         },
@@ -273684,7 +273842,7 @@ LJ.Data.ForeverDB = {
             level = 28,
             min = 13,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Darkshore",
             map = 1439,
             startText = "Delgren the Purifier, Ashenvale",
@@ -273739,7 +273897,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 38,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Dustwallow Marsh",
             map = 1445,
             startText = "Draz'Zilb, Dustwallow Marsh",
@@ -273750,7 +273908,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 38,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Dustwallow Marsh",
             map = 1445,
             startText = "Overlord Mok'Morokk, Dustwallow Marsh",
@@ -273931,6 +274089,17 @@ LJ.Data.ForeverDB = {
             map = 1441,
             startText = "Pozzik, Thousand Needles",
             finishText = "Rizzle's Unguarded Plans, Thousand Needles"
+        },
+        [1191] = {
+            name = "Zamek's Distraction",
+            level = 41,
+            min = 29,
+            side = "BOTH",
+            src = "forever",
+            zone = "Thousand Needles",
+            map = 1441,
+            startText = "Zamek, Thousand Needles",
+            finishText = "Zamek, Thousand Needles"
         },
         [1194] = {
             name = "Rizzle's Schematics",
@@ -274352,7 +274521,7 @@ LJ.Data.ForeverDB = {
             level = 40,
             min = 30,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Dustwallow Marsh",
             map = 1445,
             startText = "Nazeer Bloodpike, Dustwallow Marsh",
@@ -274429,7 +274598,7 @@ LJ.Data.ForeverDB = {
             level = 37,
             min = 30,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Dustwallow Marsh",
             map = 1445,
             startText = "\"Stinky\" Ignatz, Dustwallow Marsh",
@@ -274601,7 +274770,7 @@ LJ.Data.ForeverDB = {
             level = 35,
             min = 30,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Dustwallow Marsh",
             map = 1445,
             startText = "Krog, Dustwallow Marsh",
@@ -274898,7 +275067,7 @@ LJ.Data.ForeverDB = {
             level = 42,
             min = 37,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Duskwood",
             map = 1431,
             startText = "Apothecary Faustin, Duskwood",
@@ -274975,7 +275144,7 @@ LJ.Data.ForeverDB = {
             level = 42,
             min = 37,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Duskwood",
             map = 1431,
             startText = "Deathstalker Zraedus, Duskwood",
@@ -275052,7 +275221,7 @@ LJ.Data.ForeverDB = {
             level = 35,
             min = 30,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Swamp of Sorrows",
             map = 1435,
             startText = "Helgrum the Swift, Swamp of Sorrows",
@@ -275096,7 +275265,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 35,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Swamp of Sorrows",
             map = 1435,
             startText = "Tok'Kar, Swamp of Sorrows",
@@ -275107,7 +275276,7 @@ LJ.Data.ForeverDB = {
             level = 40,
             min = 30,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Swamp of Sorrows",
             map = 1435,
             startText = "Lost Supplies",
@@ -275125,7 +275294,7 @@ LJ.Data.ForeverDB = {
             finishText = "Fel'zerul, Swamp of Sorrows"
         },
         [1425] = {
-            name = "Deliver the Shipment",
+            name = "Deliver the First Shipment",
             level = 42,
             min = 30,
             side = "A",
@@ -275140,7 +275309,7 @@ LJ.Data.ForeverDB = {
             level = 43,
             min = 35,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Swamp of Sorrows",
             map = 1435,
             startText = "Katar, Swamp of Sorrows",
@@ -275151,7 +275320,7 @@ LJ.Data.ForeverDB = {
             level = 43,
             min = 35,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Swamp of Sorrows",
             map = 1435,
             startText = "Katar, Swamp of Sorrows",
@@ -275162,7 +275331,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 35,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Swamp of Sorrows",
             map = 1435,
             startText = "Katar, Swamp of Sorrows",
@@ -275173,7 +275342,7 @@ LJ.Data.ForeverDB = {
             level = 44,
             min = 38,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Swamp of Sorrows",
             map = 1435,
             startText = "Fel'zerul, Swamp of Sorrows",
@@ -275184,7 +275353,7 @@ LJ.Data.ForeverDB = {
             level = 44,
             min = 35,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Swamp of Sorrows",
             map = 1435,
             startText = "Dar, Swamp of Sorrows",
@@ -275306,7 +275475,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Thundris Windweaver, Darkshore",
             finishText = "Thundris Windweaver, Darkshore"
         },
@@ -275315,7 +275486,7 @@ LJ.Data.ForeverDB = {
             level = 44,
             min = 38,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "The Hinterlands",
             map = 1425,
             startText = "Atal'ai Exile, The Hinterlands",
@@ -275326,7 +275497,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 38,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Sunken Temple",
             startText = "Fel'zerul, Swamp of Sorrows",
             finishText = "Fel'zerul, Swamp of Sorrows"
@@ -275338,6 +275509,7 @@ LJ.Data.ForeverDB = {
             side = "BOTH",
             src = "forever",
             zone = "Sunken Temple",
+            map = 1435,
             startText = "Atal'ai Exile, The Hinterlands",
             finishText = "Atal'ai Exile, The Hinterlands"
         },
@@ -275379,7 +275551,7 @@ LJ.Data.ForeverDB = {
             level = 43,
             min = 38,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "The Hinterlands",
             map = 1425,
             startText = "Falstad Wildhammer, The Hinterlands",
@@ -275390,7 +275562,7 @@ LJ.Data.ForeverDB = {
             level = 43,
             min = 38,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "The Hinterlands",
             map = 1425,
             startText = "Gryphon Master Talonaxe, The Hinterlands",
@@ -275401,7 +275573,7 @@ LJ.Data.ForeverDB = {
             level = 43,
             min = 38,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "The Hinterlands",
             map = 1425,
             startText = "Rhapsody Shindigger, The Hinterlands",
@@ -275490,7 +275662,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Telf Joolam, Durotar",
             finishText = "Telf Joolam, Durotar"
         },
@@ -275542,7 +275716,7 @@ LJ.Data.ForeverDB = {
             level = 43,
             min = 38,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "The Hinterlands",
             map = 1425,
             startText = "Rhapsody Shindigger, The Hinterlands",
@@ -275554,7 +275728,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Venya Marthand, Tirisfal Glades",
             finishText = "Venya Marthand, Tirisfal Glades"
         },
@@ -275564,7 +275740,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Carendin Halgar, Undercity",
             finishText = "Carendin Halgar, Undercity"
         },
@@ -275574,7 +275752,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Carendin Halgar, Undercity",
             finishText = "Godrick Farsan, Undercity"
         },
@@ -275584,7 +275764,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Carendin Halgar, Undercity",
             finishText = "Carendin Halgar, Undercity"
         },
@@ -275593,8 +275775,10 @@ LJ.Data.ForeverDB = {
             level = 20,
             min = 20,
             side = "H",
-            src = "classic",
-            zone = "Warlock",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
             startText = "Carendin Halgar, Undercity",
             finishText = "Carendin Halgar, Undercity"
         },
@@ -275603,7 +275787,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 41,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Sunken Temple",
             startText = "Brohann Caskbelly, Stormwind City",
             finishText = "Brohann Caskbelly, Stormwind City"
@@ -275614,7 +275798,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Godrick Farsan, Undercity",
             finishText = "Carendin Halgar, Undercity"
         },
@@ -275635,7 +275821,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Ageron Kargal, Tirisfal Glades",
             finishText = "Carendin Halgar, Undercity"
         },
@@ -275710,7 +275898,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Ruzan, Durotar",
             finishText = "Ruzan, Durotar"
         },
@@ -275795,7 +275985,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Uzzek, The Barrens",
             finishText = "Uzzek, The Barrens"
         },
@@ -275805,7 +275997,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Ruzan, Durotar",
             finishText = "Zureetha Fargaze, Durotar"
         },
@@ -275815,7 +276009,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Gan'rul Bloodeye, Orgrimmar",
             finishText = "Gan'rul Bloodeye, Orgrimmar"
         },
@@ -275825,7 +276021,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Uzzek, The Barrens",
             finishText = "Thun'grim Firegaze, The Barrens"
         },
@@ -275835,7 +276033,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Thun'grim Firegaze, The Barrens",
             finishText = "Thun'grim Firegaze, The Barrens"
         },
@@ -275845,7 +276045,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Gan'rul Bloodeye, Orgrimmar",
             finishText = "Gan'rul Bloodeye, Orgrimmar"
         },
@@ -275855,7 +276057,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Tarshaw Jaggedscar, Durotar",
             finishText = "Uzzek, The Barrens"
         },
@@ -275865,7 +276069,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Ophek, Durotar",
             finishText = "Gan'rul Bloodeye, Orgrimmar"
         },
@@ -275875,7 +276081,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Gan'rul Bloodeye, Orgrimmar",
             finishText = "Cazul, Orgrimmar"
         },
@@ -275885,7 +276093,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Cazul, Orgrimmar",
             finishText = "Zankaja, Orgrimmar"
         },
@@ -275895,7 +276105,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Zankaja, Orgrimmar",
             finishText = "Gazrog, The Barrens"
         },
@@ -275905,7 +276117,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Gazrog, The Barrens",
             finishText = "Ken'zigla, Stonetalon Mountains"
         },
@@ -275915,7 +276129,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Ken'zigla, Stonetalon Mountains",
             finishText = "Grunt Logmar, The Barrens"
         },
@@ -275925,7 +276141,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Grunt Dogran, The Barrens",
             finishText = "Gan'rul Bloodeye, Orgrimmar"
         },
@@ -275935,7 +276153,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Gan'rul Bloodeye, Orgrimmar",
             finishText = "Gan'rul Bloodeye, Orgrimmar"
         },
@@ -275945,7 +276165,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Grunt Logmar, The Barrens",
             finishText = "Grunt Dogran, The Barrens"
         },
@@ -275955,7 +276177,9 @@ LJ.Data.ForeverDB = {
             min = 4,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Canaga Earthcaller, Durotar",
             finishText = "Canaga Earthcaller, Durotar"
         },
@@ -275965,7 +276189,9 @@ LJ.Data.ForeverDB = {
             min = 4,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Canaga Earthcaller, Durotar",
             finishText = "Minor Manifestation of Earth, Durotar"
         },
@@ -275975,7 +276201,9 @@ LJ.Data.ForeverDB = {
             min = 4,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Minor Manifestation of Earth, Durotar",
             finishText = "Canaga Earthcaller, Durotar"
         },
@@ -275985,7 +276213,9 @@ LJ.Data.ForeverDB = {
             min = 4,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Seer Ravenfeather, Mulgore",
             finishText = "Seer Ravenfeather, Mulgore"
         },
@@ -275995,9 +276225,11 @@ LJ.Data.ForeverDB = {
             min = 4,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Seer Ravenfeather, Mulgore",
-            finishText = "Minor Manifestation of Earth, Durotar"
+            finishText = "Minor Manifestation of Earth, Mulgore"
         },
         [1521] = {
             name = "Call of Earth",
@@ -276005,8 +276237,10 @@ LJ.Data.ForeverDB = {
             min = 4,
             side = "H",
             src = "forever",
-            zone = "Shaman",
-            startText = "Minor Manifestation of Earth, Durotar",
+            classes = {
+                "Shaman"
+            },
+            startText = "Minor Manifestation of Earth, Mulgore",
             finishText = "Seer Ravenfeather, Mulgore"
         },
         [1522] = {
@@ -276015,7 +276249,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Searn Firewarder, Orgrimmar",
             finishText = "Kranal Fiss, The Barrens"
         },
@@ -276025,7 +276261,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "classic",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Beram Skychaser, Thunder Bluff",
             finishText = "Kranal Fiss, The Barrens"
         },
@@ -276035,7 +276273,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Kranal Fiss, The Barrens",
             finishText = "Telf Joolam, Durotar"
         },
@@ -276045,7 +276285,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Telf Joolam, Durotar",
             finishText = "Telf Joolam, Durotar"
         },
@@ -276055,7 +276297,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Telf Joolam, Durotar",
             finishText = "Brazier of the Dormant Flame, Durotar"
         },
@@ -276065,7 +276309,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Brazier of the Dormant Flame, Durotar",
             finishText = "Kranal Fiss, The Barrens"
         },
@@ -276075,7 +276321,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Searn Firewarder, Orgrimmar",
             finishText = "Islen Waterseer, The Barrens"
         },
@@ -276085,7 +276333,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Xanis Flameweaver, Thunder Bluff",
             finishText = "Islen Waterseer, The Barrens"
         },
@@ -276095,7 +276345,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Islen Waterseer, The Barrens",
             finishText = "Brine, The Barrens"
         },
@@ -276105,7 +276357,9 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Searn Firewarder, Orgrimmar",
             finishText = "Prate Cloudseer, Thousand Needles"
         },
@@ -276115,7 +276369,9 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Xanis Flameweaver, Thunder Bluff",
             finishText = "Prate Cloudseer, Thousand Needles"
         },
@@ -276125,7 +276381,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Brine, The Barrens",
             finishText = "Brine, The Barrens"
         },
@@ -276135,7 +276393,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Brine, The Barrens",
             finishText = "Brine, The Barrens"
         },
@@ -276145,7 +276405,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Brine, The Barrens",
             finishText = "Brine, The Barrens"
         },
@@ -276236,7 +276498,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Drusilla La Salle, Elwynn Forest",
             finishText = "Drusilla La Salle, Elwynn Forest"
         },
@@ -276246,7 +276510,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Alamar Grimm, Dun Morogh",
             finishText = "Alamar Grimm, Dun Morogh"
         },
@@ -276266,7 +276532,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Lyria Du Lac, Elwynn Forest",
             finishText = "Harry Burlguard, Stormwind City"
         },
@@ -276276,7 +276544,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Harry Burlguard, Stormwind City",
             finishText = "Bartleby, Stormwind City"
         },
@@ -276286,7 +276556,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Bartleby, Stormwind City",
             finishText = "Bartleby, Stormwind City"
         },
@@ -276296,7 +276568,9 @@ LJ.Data.ForeverDB = {
             min = 12,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Duthorian Rall, Stormwind City",
             finishText = "Duthorian Rall, Stormwind City"
         },
@@ -276306,7 +276580,9 @@ LJ.Data.ForeverDB = {
             min = 12,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Tome of Divinity",
             finishText = "Duthorian Rall, Stormwind City"
         },
@@ -276316,7 +276592,9 @@ LJ.Data.ForeverDB = {
             min = 12,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Duthorian Rall, Stormwind City",
             finishText = "Stephanie Turner, Stormwind City"
         },
@@ -276326,17 +276604,33 @@ LJ.Data.ForeverDB = {
             min = 12,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Stephanie Turner, Stormwind City",
             finishText = "Stephanie Turner, Stormwind City"
+        },
+        [1645] = {
+            name = "The Tome of Divinity",
+            level = 12,
+            min = 12,
+            side = "A",
+            src = "forever",
+            classes = {
+                "Paladin"
+            },
+            startText = "Tiza Battleforge, Ironforge",
+            finishText = "Tiza Battleforge, Ironforge"
         },
         [1646] = {
             name = "The Tome of Divinity",
             level = 12,
             min = 12,
             side = "A",
-            src = "classic",
-            zone = "Paladin",
+            src = "forever",
+            classes = {
+                "Paladin"
+            },
             startText = "Tome of Divinity",
             finishText = "Tiza Battleforge, Ironforge"
         },
@@ -276345,8 +276639,10 @@ LJ.Data.ForeverDB = {
             level = 12,
             min = 12,
             side = "A",
-            src = "classic",
-            zone = "Paladin",
+            src = "forever",
+            classes = {
+                "Paladin"
+            },
             startText = "Tiza Battleforge, Ironforge",
             finishText = "John Turner, Ironforge"
         },
@@ -276355,8 +276651,10 @@ LJ.Data.ForeverDB = {
             level = 13,
             min = 12,
             side = "A",
-            src = "classic",
-            zone = "Paladin",
+            src = "forever",
+            classes = {
+                "Paladin"
+            },
             startText = "John Turner, Ironforge",
             finishText = "John Turner, Ironforge"
         },
@@ -276366,7 +276664,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Tome of Valor",
             finishText = "Duthorian Rall, Stormwind City"
         },
@@ -276376,7 +276676,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Duthorian Rall, Stormwind City",
             finishText = "Daphne Stilwell, Westfall"
         },
@@ -276386,7 +276688,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Daphne Stilwell, Westfall",
             finishText = "Daphne Stilwell, Westfall"
         },
@@ -276396,7 +276700,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Daphne Stilwell, Westfall",
             finishText = "Duthorian Rall, Stormwind City"
         },
@@ -276406,7 +276712,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Duthorian Rall, Stormwind City",
             finishText = "Jordan Stilwell, Dun Morogh"
         },
@@ -276416,7 +276724,10 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
+            map = 1426,
             startText = "Jordan Stilwell, Dun Morogh",
             finishText = "Jordan Stilwell, Dun Morogh"
         },
@@ -276426,7 +276737,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Bailor Stonehand, Loch Modan",
             finishText = "Bailor Stonehand, Loch Modan"
         },
@@ -276466,8 +276779,10 @@ LJ.Data.ForeverDB = {
             level = 40,
             min = 40,
             side = "A",
-            src = "classic",
-            zone = "Paladin",
+            src = "forever",
+            classes = {
+                "Paladin"
+            },
             startText = "Duthorian Rall, Stormwind City",
             finishText = "Duthorian Rall, Stormwind City"
         },
@@ -276477,7 +276792,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Bartleby, Stormwind City",
             finishText = "Harry Burlguard, Stormwind City"
         },
@@ -276487,7 +276804,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Harry Burlguard, Stormwind City",
             finishText = "Marshal Haggard, Elwynn Forest"
         },
@@ -276497,7 +276816,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Marshal Haggard, Elwynn Forest",
             finishText = "Marshal Haggard, Elwynn Forest"
         },
@@ -276507,7 +276828,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Muren Stormpike, Ironforge",
             finishText = "Muren Stormpike, Ironforge"
         },
@@ -276517,7 +276840,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Granis Swiftaxe, Dun Morogh",
             finishText = "Muren Stormpike, Ironforge"
         },
@@ -276527,7 +276852,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Muren Stormpike, Ironforge",
             finishText = "Tormus Deepforge, Ironforge"
         },
@@ -276537,7 +276864,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Tormus Deepforge, Ironforge",
             finishText = "Tormus Deepforge, Ironforge"
         },
@@ -276547,7 +276876,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Tormus Deepforge, Ironforge",
             finishText = "Tormus Deepforge, Ironforge"
         },
@@ -276557,7 +276888,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Elanaria, Darnassus",
             finishText = "Elanaria, Darnassus"
         },
@@ -276567,7 +276900,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Kyra Windblade, Teldrassil",
             finishText = "Elanaria, Darnassus"
         },
@@ -276577,7 +276912,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Remen Marcot, Elwynn Forest",
             finishText = "Gakin the Darkbinder, Stormwind City"
         },
@@ -276587,7 +276924,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Elanaria, Darnassus",
             finishText = "Elanaria, Darnassus"
         },
@@ -276607,7 +276946,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Gakin the Darkbinder, Stormwind City",
             finishText = "Gakin the Darkbinder, Stormwind City"
         },
@@ -276617,7 +276958,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Gakin the Darkbinder, Stormwind City",
             finishText = "Gakin the Darkbinder, Stormwind City"
         },
@@ -276649,7 +276992,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Elanaria, Darnassus",
             finishText = "Mathiel, Darnassus"
         },
@@ -276659,7 +277004,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Mathiel, Darnassus",
             finishText = "Mathiel, Darnassus"
         },
@@ -276669,7 +277016,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Wu Shen, Stormwind City",
             finishText = "Yorus Barleybrew, Redridge Mountains"
         },
@@ -276679,7 +277028,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Yorus Barleybrew, Redridge Mountains",
             finishText = "Yorus Barleybrew, Redridge Mountains"
         },
@@ -276689,7 +277040,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "classic",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Furen Longbeard, Stormwind City",
             finishText = "Grimand Elmore, Stormwind City"
         },
@@ -276699,7 +277052,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Furen Longbeard, Stormwind City",
             finishText = "Furen Longbeard, Stormwind City"
         },
@@ -276709,7 +277064,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Yorus Barleybrew, Redridge Mountains",
             finishText = "Furen Longbeard, Stormwind City"
         },
@@ -276719,7 +277076,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "classic",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Furen Longbeard, Stormwind City",
             finishText = "Mathiel, Darnassus"
         },
@@ -276728,8 +277087,10 @@ LJ.Data.ForeverDB = {
             level = 28,
             min = 20,
             side = "A",
-            src = "classic",
-            zone = "Warrior",
+            src = "forever",
+            classes = {
+                "Warrior"
+            },
             startText = "Furen Longbeard, Stormwind City",
             finishText = "Klockmort Spannerspan, Ironforge"
         },
@@ -276739,7 +277100,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "classic",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Grimand Elmore, Stormwind City",
             finishText = "Grimand Elmore, Stormwind City"
         },
@@ -276749,7 +277112,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "classic",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Grimand Elmore, Stormwind City",
             finishText = "Grimand Elmore, Stormwind City"
         },
@@ -276770,7 +277135,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Klockmort Spannerspan, Ironforge",
             finishText = "Klockmort Spannerspan, Ironforge"
         },
@@ -276780,7 +277147,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Klockmort Spannerspan, Ironforge",
             finishText = "Klockmort Spannerspan, Ironforge"
         },
@@ -276790,7 +277159,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Mathiel, Darnassus",
             finishText = "Mathiel, Darnassus"
         },
@@ -276800,7 +277171,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "classic",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Mathiel, Darnassus",
             finishText = "Mathiel, Darnassus"
         },
@@ -276810,7 +277183,9 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "BOTH",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Bath'rah the Windwatcher, Alterac Mountains",
             finishText = "Bath'rah the Windwatcher, Alterac Mountains"
         },
@@ -276820,7 +277195,9 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "BOTH",
             src = "classic",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Bath'rah the Windwatcher, Alterac Mountains",
             finishText = "Bath'rah the Windwatcher, Alterac Mountains"
         },
@@ -276829,8 +277206,10 @@ LJ.Data.ForeverDB = {
             level = 10,
             min = 10,
             side = "A",
-            src = "classic",
-            zone = "Warlock",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
             startText = "Lago Blackwrench, Ironforge",
             finishText = "Gakin the Darkbinder, Stormwind City"
         },
@@ -276840,7 +277219,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Gakin the Darkbinder, Stormwind City",
             finishText = "Takar the Seer, The Barrens"
         },
@@ -276850,7 +277231,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Lago Blackwrench, Ironforge",
             finishText = "Gakin the Darkbinder, Stormwind City"
         },
@@ -276860,7 +277243,9 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "BOTH",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Wu Shen, Stormwind City",
             finishText = "Klannoc Macleod, The Barrens"
         },
@@ -276870,7 +277255,9 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "BOTH",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Klannoc Macleod, The Barrens",
             finishText = "Klannoc Macleod, The Barrens"
         },
@@ -276880,7 +277267,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Takar the Seer, The Barrens",
             finishText = "Gakin the Darkbinder, Stormwind City"
         },
@@ -276890,7 +277279,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Gakin the Darkbinder, Stormwind City",
             finishText = "Gakin the Darkbinder, Stormwind City"
         },
@@ -276900,7 +277291,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "BOTH",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             map = 1439,
             startText = "Doan Karhan, The Barrens",
             finishText = "Doan Karhan, The Barrens"
@@ -276910,8 +277303,10 @@ LJ.Data.ForeverDB = {
             level = 30,
             min = 30,
             side = "A",
-            src = "classic",
-            zone = "Warlock",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
             startText = "Strahad Farsan, The Barrens",
             finishText = "Krom Stoutarm, Ironforge"
         },
@@ -276921,7 +277316,9 @@ LJ.Data.ForeverDB = {
             min = 12,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "John Turner, Ironforge",
             finishText = "Tiza Battleforge, Ironforge"
         },
@@ -276930,8 +277327,10 @@ LJ.Data.ForeverDB = {
             level = 13,
             min = 12,
             side = "A",
-            src = "classic",
-            zone = "Paladin",
+            src = "forever",
+            classes = {
+                "Paladin"
+            },
             startText = "Tiza Battleforge, Ironforge",
             finishText = "Muiredon Battleforge, Ironforge"
         },
@@ -276941,7 +277340,9 @@ LJ.Data.ForeverDB = {
             min = 12,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Stephanie Turner, Stormwind City",
             finishText = "Duthorian Rall, Stormwind City"
         },
@@ -276951,7 +277352,9 @@ LJ.Data.ForeverDB = {
             min = 12,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Duthorian Rall, Stormwind City",
             finishText = "Gazin Tenorm, Stormwind City"
         },
@@ -276961,7 +277364,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Furen Longbeard, Stormwind City",
             finishText = "Furen Longbeard, Stormwind City"
         },
@@ -276970,8 +277375,10 @@ LJ.Data.ForeverDB = {
             level = 13,
             min = 12,
             side = "A",
-            src = "classic",
-            zone = "Paladin",
+            src = "forever",
+            classes = {
+                "Paladin"
+            },
             startText = "Muiredon Battleforge, Ironforge",
             finishText = "Narm Faulk, Dun Morogh"
         },
@@ -276980,8 +277387,10 @@ LJ.Data.ForeverDB = {
             level = 13,
             min = 12,
             side = "A",
-            src = "classic",
-            zone = "Paladin",
+            src = "forever",
+            classes = {
+                "Paladin"
+            },
             startText = "Narm Faulk, Dun Morogh",
             finishText = "Muiredon Battleforge, Ironforge"
         },
@@ -276990,8 +277399,10 @@ LJ.Data.ForeverDB = {
             level = 13,
             min = 12,
             side = "A",
-            src = "classic",
-            zone = "Paladin",
+            src = "forever",
+            classes = {
+                "Paladin"
+            },
             startText = "Muiredon Battleforge, Ironforge",
             finishText = "Tiza Battleforge, Ironforge"
         },
@@ -277001,7 +277412,9 @@ LJ.Data.ForeverDB = {
             min = 12,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Gazin Tenorm, Stormwind City",
             finishText = "Henze Faulk, Elwynn Forest"
         },
@@ -277011,7 +277424,9 @@ LJ.Data.ForeverDB = {
             min = 12,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Henze Faulk, Elwynn Forest",
             finishText = "Gazin Tenorm, Stormwind City"
         },
@@ -277021,7 +277436,9 @@ LJ.Data.ForeverDB = {
             min = 12,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Gazin Tenorm, Stormwind City",
             finishText = "Duthorian Rall, Stormwind City"
         },
@@ -277031,7 +277448,9 @@ LJ.Data.ForeverDB = {
             min = 12,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Duthorian Rall, Stormwind City",
             finishText = "Duthorian Rall, Stormwind City"
         },
@@ -277041,7 +277460,9 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "BOTH",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Klannoc Macleod, The Barrens",
             finishText = "Bath'rah the Windwatcher, Alterac Mountains"
         },
@@ -277051,7 +277472,9 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "BOTH",
             src = "classic",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Bath'rah the Windwatcher, Alterac Mountains",
             finishText = "Bath'rah the Windwatcher, Alterac Mountains"
         },
@@ -277061,7 +277484,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Duthorian Rall, Stormwind City",
             finishText = "Duthorian Rall, Stormwind City"
         },
@@ -277070,8 +277495,10 @@ LJ.Data.ForeverDB = {
             level = 30,
             min = 30,
             side = "BOTH",
-            src = "classic",
-            zone = "Warlock",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
             startText = "Strahad Farsan, The Barrens",
             finishText = "Strahad Farsan, The Barrens"
         },
@@ -277081,7 +277508,9 @@ LJ.Data.ForeverDB = {
             min = 31,
             side = "BOTH",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Menara Voidrender, The Barrens",
             finishText = "Menara Voidrender, The Barrens"
         },
@@ -277091,7 +277520,9 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "A",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Lago Blackwrench, Ironforge",
             finishText = "Strahad Farsan, The Barrens"
         },
@@ -277101,7 +277532,9 @@ LJ.Data.ForeverDB = {
             min = 35,
             side = "BOTH",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Menara Voidrender, The Barrens",
             finishText = "Tabetha, Dustwallow Marsh"
         },
@@ -277121,7 +277554,9 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Strahad Farsan, The Barrens",
             finishText = "Jorah Annison, Undercity"
         },
@@ -277131,7 +277566,9 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "A",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Krom Stoutarm, Ironforge",
             finishText = "Krom Stoutarm, Ironforge"
         },
@@ -277141,7 +277578,9 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Jorah Annison, Undercity",
             finishText = "Jorah Annison, Undercity"
         },
@@ -277151,7 +277590,9 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "A",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Krom Stoutarm, Ironforge",
             finishText = "Strahad Farsan, The Barrens"
         },
@@ -277160,8 +277601,10 @@ LJ.Data.ForeverDB = {
             level = 30,
             min = 30,
             side = "H",
-            src = "classic",
-            zone = "Warlock",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
             startText = "Jorah Annison, Undercity",
             finishText = "Strahad Farsan, The Barrens"
         },
@@ -277171,7 +277614,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Jordan Stilwell, Dun Morogh",
             finishText = "Jordan Stilwell, Dun Morogh"
         },
@@ -277181,7 +277626,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Austil de Mon, Tirisfal Glades",
             finishText = "Deathguard Dillinger, Tirisfal Glades"
         },
@@ -277191,7 +277638,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Deathguard Dillinger, Tirisfal Glades",
             finishText = "Deathguard Dillinger, Tirisfal Glades"
         },
@@ -277201,7 +277650,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Deathguard Dillinger, Tirisfal Glades",
             finishText = "Coleman Farthing, Tirisfal Glades"
         },
@@ -277211,7 +277662,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Coleman Farthing, Tirisfal Glades",
             finishText = "Coleman Farthing, Tirisfal Glades"
         },
@@ -277221,7 +277674,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Coleman Farthing, Tirisfal Glades",
             finishText = "Coleman Farthing, Tirisfal Glades"
         },
@@ -277231,7 +277686,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Sorek, Orgrimmar",
             finishText = "Ruga Ragetotem, The Barrens"
         },
@@ -277241,7 +277698,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Ruga Ragetotem, The Barrens",
             finishText = "Ruga Ragetotem, The Barrens"
         },
@@ -277251,7 +277710,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Ruga Ragetotem, The Barrens",
             finishText = "Thun'grim Firegaze, The Barrens"
         },
@@ -277261,7 +277722,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Thun'grim Firegaze, The Barrens",
             finishText = "Thun'grim Firegaze, The Barrens"
         },
@@ -277271,7 +277734,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "classic",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Thun'grim Firegaze, The Barrens",
             finishText = "Ula'elek, Durotar"
         },
@@ -277281,7 +277746,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "classic",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Thun'grim Firegaze, The Barrens",
             finishText = "Orm Stonehoof, Thunder Bluff"
         },
@@ -277291,7 +277758,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "classic",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Thun'grim Firegaze, The Barrens",
             finishText = "Velora Nitely, Undercity"
         },
@@ -277301,7 +277770,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "classic",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Ula'elek, Durotar",
             finishText = "Ula'elek, Durotar"
         },
@@ -277311,7 +277782,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "classic",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Ula'elek, Durotar",
             finishText = "Ula'elek, Durotar"
         },
@@ -277321,7 +277794,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "classic",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Orm Stonehoof, Thunder Bluff",
             finishText = "Orm Stonehoof, Thunder Bluff"
         },
@@ -277331,7 +277806,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "classic",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Orm Stonehoof, Thunder Bluff",
             finishText = "Orm Stonehoof, Thunder Bluff"
         },
@@ -277340,8 +277817,10 @@ LJ.Data.ForeverDB = {
             level = 30,
             min = 20,
             side = "H",
-            src = "classic",
-            zone = "Warrior",
+            src = "forever",
+            classes = {
+                "Warrior"
+            },
             startText = "Velora Nitely, Undercity",
             finishText = "Velora Nitely, Undercity"
         },
@@ -277351,7 +277830,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "classic",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Velora Nitely, Undercity",
             finishText = "Velora Nitely, Undercity"
         },
@@ -277361,7 +277842,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "classic",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Thun'grim Firegaze, The Barrens",
             finishText = "Thun'grim Firegaze, The Barrens"
         },
@@ -277370,8 +277853,10 @@ LJ.Data.ForeverDB = {
             level = 13,
             min = 10,
             side = "H",
-            src = "classic",
-            zone = "Rogue",
+            src = "forever",
+            classes = {
+                "Rogue"
+            },
             startText = "Therzok, Orgrimmar",
             finishText = "Therzok, Orgrimmar"
         },
@@ -277381,7 +277866,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Kaplak, Durotar",
             finishText = "Therzok, Orgrimmar"
         },
@@ -277391,7 +277878,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Zaldimar Wefhellt, Elwynn Forest",
             finishText = "Jennea Cannon, Stormwind City"
         },
@@ -277401,9 +277890,22 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Jennea Cannon, Stormwind City",
             finishText = "Jennea Cannon, Stormwind City"
+        },
+        [1878] = {
+            name = "Water Pouch Bounty",
+            level = 44,
+            min = 40,
+            side = "BOTH",
+            src = "forever",
+            zone = "Tanaris",
+            map = 1446,
+            startText = "Spigot Operator Luglunket, Tanaris",
+            finishText = "Spigot Operator Luglunket, Tanaris"
         },
         [1879] = {
             name = "Speak with Bink",
@@ -277411,7 +277913,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Magis Sparkmantle, Dun Morogh",
             finishText = "Bink, Ironforge"
         },
@@ -277421,7 +277925,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Bink, Ironforge",
             finishText = "Bink, Ironforge"
         },
@@ -277431,7 +277937,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Cain Firesong, Tirisfal Glades",
             finishText = "Anastasia Hartwell, Undercity"
         },
@@ -277441,7 +277949,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Anastasia Hartwell, Undercity",
             finishText = "Anastasia Hartwell, Undercity"
         },
@@ -277451,7 +277961,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Uthel'nay, Orgrimmar",
             finishText = "Un'Thuwa, Durotar"
         },
@@ -277461,7 +277973,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Un'Thuwa, Durotar",
             finishText = "Un'Thuwa, Durotar"
         },
@@ -277471,7 +277985,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Marion Call, Tirisfal Glades",
             finishText = "Mennet Carkad, Undercity"
         },
@@ -277481,7 +277997,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Mennet Carkad, Undercity",
             finishText = "Mennet Carkad, Undercity"
         },
@@ -277491,7 +278009,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Mennet Carkad, Undercity",
             finishText = "Andron Gant, Undercity"
         },
@@ -277501,7 +278021,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Andron Gant, Undercity",
             finishText = "Mennet Carkad, Undercity"
         },
@@ -277522,8 +278044,10 @@ LJ.Data.ForeverDB = {
             min = 15,
             side = "A",
             src = "forever",
-            zone = "Mage",
-            startText = "Zaldimar Wefhellt, Elwynn Forest",
+            classes = {
+                "Mage"
+            },
+            startText = "Dink, Ironforge",
             finishText = "Jennea Cannon, Stormwind City"
         },
         [1920] = {
@@ -277532,7 +278056,9 @@ LJ.Data.ForeverDB = {
             min = 15,
             side = "A",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Jennea Cannon, Stormwind City",
             finishText = "Jennea Cannon, Stormwind City"
         },
@@ -277542,7 +278068,9 @@ LJ.Data.ForeverDB = {
             min = 15,
             side = "A",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Jennea Cannon, Stormwind City",
             finishText = "Wynne Larson, Stormwind City"
         },
@@ -277552,7 +278080,9 @@ LJ.Data.ForeverDB = {
             min = 26,
             side = "A",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "High Sorcerer Andromath, Stormwind City",
             finishText = "High Sorcerer Andromath, Stormwind City"
         },
@@ -277562,7 +278092,9 @@ LJ.Data.ForeverDB = {
             min = 26,
             side = "A",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Jennea Cannon, Stormwind City",
             finishText = "High Sorcerer Andromath, Stormwind City"
         },
@@ -277571,8 +278103,10 @@ LJ.Data.ForeverDB = {
             level = 26,
             min = 26,
             side = "A",
-            src = "classic",
-            zone = "Mage",
+            src = "forever",
+            classes = {
+                "Mage"
+            },
             startText = "High Sorcerer Andromath, Stormwind City",
             finishText = "Wynne Larson, Stormwind City"
         },
@@ -277582,7 +278116,9 @@ LJ.Data.ForeverDB = {
             min = 15,
             side = "A",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Wynne Larson, Stormwind City",
             finishText = "Wynne Larson, Stormwind City"
         },
@@ -277592,7 +278128,9 @@ LJ.Data.ForeverDB = {
             min = 26,
             side = "A",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Wynne Larson, Stormwind City",
             finishText = "Wynne Larson, Stormwind City"
         },
@@ -277602,7 +278140,9 @@ LJ.Data.ForeverDB = {
             min = 26,
             side = "H",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Anastasia Hartwell, Undercity",
             finishText = "Deino, Orgrimmar"
         },
@@ -277612,7 +278152,9 @@ LJ.Data.ForeverDB = {
             min = 26,
             side = "H",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Deino, Orgrimmar",
             finishText = "Deino, Orgrimmar"
         },
@@ -277622,7 +278164,9 @@ LJ.Data.ForeverDB = {
             min = 26,
             side = "H",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Deino, Orgrimmar",
             finishText = "Kil'hala, The Barrens"
         },
@@ -277632,7 +278176,9 @@ LJ.Data.ForeverDB = {
             min = 26,
             side = "H",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Kil'hala, The Barrens",
             finishText = "Kil'hala, The Barrens"
         },
@@ -277642,8 +278188,10 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "BOTH",
             src = "forever",
-            zone = "Mage",
-            startText = "Jennea Cannon, Stormwind City",
+            classes = {
+                "Mage"
+            },
+            startText = "Anastasia Hartwell, Undercity",
             finishText = "Tabetha, Dustwallow Marsh"
         },
         [1948] = {
@@ -277652,7 +278200,9 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "BOTH",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Tabetha, Dustwallow Marsh",
             finishText = "Tabetha, Dustwallow Marsh"
         },
@@ -277662,7 +278212,9 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "BOTH",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Tabetha, Dustwallow Marsh",
             finishText = "Magus Tirth, Thousand Needles"
         },
@@ -277672,7 +278224,9 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "BOTH",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Magus Tirth, Thousand Needles",
             finishText = "Magus Tirth, Thousand Needles"
         },
@@ -277682,7 +278236,9 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "BOTH",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Magus Tirth, Thousand Needles",
             finishText = "Tabetha, Dustwallow Marsh"
         },
@@ -277692,7 +278248,9 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "BOTH",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Tabetha, Dustwallow Marsh",
             finishText = "Tabetha, Dustwallow Marsh"
         },
@@ -277702,8 +278260,10 @@ LJ.Data.ForeverDB = {
             min = 35,
             side = "BOTH",
             src = "forever",
-            zone = "Mage",
-            startText = "Anastasia Hartwell, Undercity",
+            classes = {
+                "Mage"
+            },
+            startText = "Jennea Cannon, Stormwind City",
             finishText = "Tabetha, Dustwallow Marsh"
         },
         [1954] = {
@@ -277711,8 +278271,10 @@ LJ.Data.ForeverDB = {
             level = 40,
             min = 35,
             side = "BOTH",
-            src = "classic",
-            zone = "Mage",
+            src = "forever",
+            classes = {
+                "Mage"
+            },
             startText = "Tabetha, Dustwallow Marsh",
             finishText = "Tabetha, Dustwallow Marsh"
         },
@@ -277721,8 +278283,10 @@ LJ.Data.ForeverDB = {
             level = 40,
             min = 35,
             side = "BOTH",
-            src = "classic",
-            zone = "Mage",
+            src = "forever",
+            classes = {
+                "Mage"
+            },
             startText = "Tabetha, Dustwallow Marsh",
             finishText = "Tabetha, Dustwallow Marsh"
         },
@@ -277731,8 +278295,10 @@ LJ.Data.ForeverDB = {
             level = 40,
             min = 35,
             side = "BOTH",
-            src = "classic",
-            zone = "Mage",
+            src = "forever",
+            classes = {
+                "Mage"
+            },
             startText = "Tabetha, Dustwallow Marsh",
             finishText = "Tabetha, Dustwallow Marsh"
         },
@@ -277742,7 +278308,9 @@ LJ.Data.ForeverDB = {
             min = 35,
             side = "BOTH",
             src = "classic",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Tabetha, Dustwallow Marsh",
             finishText = "Tabetha, Dustwallow Marsh"
         },
@@ -277752,7 +278320,9 @@ LJ.Data.ForeverDB = {
             min = 35,
             side = "BOTH",
             src = "classic",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Tabetha, Dustwallow Marsh",
             finishText = "Tabetha, Dustwallow Marsh"
         },
@@ -277762,7 +278332,9 @@ LJ.Data.ForeverDB = {
             min = 15,
             side = "H",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Uthel'nay, Orgrimmar",
             finishText = "Anastasia Hartwell, Undercity"
         },
@@ -277772,7 +278344,9 @@ LJ.Data.ForeverDB = {
             min = 15,
             side = "H",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Anastasia Hartwell, Undercity",
             finishText = "Anastasia Hartwell, Undercity"
         },
@@ -277782,7 +278356,9 @@ LJ.Data.ForeverDB = {
             min = 15,
             side = "H",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Anastasia Hartwell, Undercity",
             finishText = "Josef Gregorian, Undercity"
         },
@@ -277792,7 +278368,9 @@ LJ.Data.ForeverDB = {
             min = 15,
             side = "H",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Josef Gregorian, Undercity",
             finishText = "Josef Gregorian, Undercity"
         },
@@ -277802,7 +278380,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Therzok, Orgrimmar",
             finishText = "Therzok, Orgrimmar"
         },
@@ -277812,7 +278392,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Mennet Carkad, Undercity",
             finishText = "Varimathras, Undercity"
         },
@@ -277822,7 +278404,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Mennet Carkad, Undercity",
             finishText = "Mennet Carkad, Undercity"
         },
@@ -277832,7 +278416,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Mennet Carkad, Undercity",
             finishText = "Mennet Carkad, Undercity"
         },
@@ -277995,6 +278581,7 @@ LJ.Data.ForeverDB = {
             side = "A",
             src = "forever",
             zone = "Uldaman",
+            map = 1426,
             startText = "Shattered Necklace",
             finishText = "Talvash del Kissel, Ironforge"
         },
@@ -278005,6 +278592,7 @@ LJ.Data.ForeverDB = {
             side = "A",
             src = "forever",
             zone = "Uldaman",
+            map = 1426,
             startText = "Talvash del Kissel, Ironforge",
             finishText = "Talvash del Kissel, Ironforge"
         },
@@ -278035,6 +278623,7 @@ LJ.Data.ForeverDB = {
             side = "H",
             src = "forever",
             zone = "Uldaman",
+            map = 1418,
             startText = "Jarkal Mossmeld, Badlands",
             finishText = "Jarkal Mossmeld, Badlands"
         },
@@ -278065,7 +278654,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Keryn Sylvius, Elwynn Forest",
             finishText = "Master Mathias Shaw, Stormwind City"
         },
@@ -278075,7 +278666,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Master Mathias Shaw, Stormwind City",
             finishText = "Master Mathias Shaw, Stormwind City"
         },
@@ -278085,7 +278678,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Hogral Bakkan, Dun Morogh",
             finishText = "Hulfdan Blackbeard, Ironforge"
         },
@@ -278095,7 +278690,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Hulfdan Blackbeard, Ironforge",
             finishText = "Onin MacHammar, Dun Morogh"
         },
@@ -278105,7 +278702,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Onin MacHammar, Dun Morogh",
             finishText = "Hulfdan Blackbeard, Ironforge"
         },
@@ -278125,7 +278724,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Jannok Breezesong, Teldrassil",
             finishText = "Syurna, Darnassus"
         },
@@ -278135,7 +278736,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Syurna, Darnassus",
             finishText = "Syurna, Darnassus"
         },
@@ -278156,7 +278759,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "A",
             src = "classic",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Jannok Breezesong, Teldrassil",
             finishText = "Erion Shadewhisper, Darnassus"
         },
@@ -278166,7 +278771,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "A",
             src = "classic",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Erion Shadewhisper, Darnassus",
             finishText = "Renzik \"The Shiv\", Stormwind City"
         },
@@ -278206,7 +278813,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "A",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Renzik \"The Shiv\", Stormwind City",
             finishText = "Lucius, Redridge Mountains"
         },
@@ -278216,7 +278825,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "A",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Lucius, Redridge Mountains",
             finishText = "Lucius, Redridge Mountains"
         },
@@ -278235,7 +278846,7 @@ LJ.Data.ForeverDB = {
             level = 41,
             min = 37,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Uldaman",
             startText = "Dran Droffers, Orgrimmar",
             finishText = "Remains of a Paladin"
@@ -278246,7 +278857,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "A",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Hulfdan Blackbeard, Ironforge",
             finishText = "Renzik \"The Shiv\", Stormwind City"
         },
@@ -278256,7 +278869,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "A",
             src = "classic",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Hogral Bakkan, Dun Morogh",
             finishText = "Hulfdan Blackbeard, Ironforge"
         },
@@ -278266,7 +278881,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "A",
             src = "classic",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Keryn Sylvius, Elwynn Forest",
             finishText = "Renzik \"The Shiv\", Stormwind City"
         },
@@ -278275,7 +278892,7 @@ LJ.Data.ForeverDB = {
             level = 42,
             min = 37,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Uldaman",
             startText = "Remains of a Paladin",
             finishText = "Jarkal Mossmeld, Badlands"
@@ -278285,7 +278902,7 @@ LJ.Data.ForeverDB = {
             level = 42,
             min = 37,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Uldaman",
             startText = "Jarkal Mossmeld, Badlands",
             finishText = "Jarkal Mossmeld, Badlands"
@@ -278295,7 +278912,7 @@ LJ.Data.ForeverDB = {
             level = 44,
             min = 37,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Uldaman",
             startText = "Jarkal Mossmeld, Badlands",
             finishText = "Jarkal Mossmeld, Badlands"
@@ -278305,7 +278922,7 @@ LJ.Data.ForeverDB = {
             level = 44,
             min = 37,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Uldaman",
             startText = "Jarkal Mossmeld, Badlands",
             finishText = "Dran Droffers, Orgrimmar"
@@ -278315,7 +278932,7 @@ LJ.Data.ForeverDB = {
             level = 44,
             min = 40,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Uldaman",
             startText = "Dran Droffers, Orgrimmar",
             finishText = "Jarkal Mossmeld, Badlands"
@@ -278337,7 +278954,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "A",
             src = "classic",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Arantir, Redridge Mountains",
             finishText = "Arantir, Redridge Mountains"
         },
@@ -278347,7 +278966,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Agent Kearnen, Westfall",
             finishText = "Master Mathias Shaw, Stormwind City"
         },
@@ -278357,7 +278978,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Master Mathias Shaw, Stormwind City",
             finishText = "Agent Kearnen, Westfall"
         },
@@ -278377,7 +279000,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Mennet Carkad, Undercity",
             finishText = "Shenthul, Orgrimmar"
         },
@@ -278387,7 +279012,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Shenthul, Orgrimmar",
             finishText = "Zando'zan, Orgrimmar"
         },
@@ -278397,7 +279024,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Kaplak, Durotar",
             finishText = "Shenthul, Orgrimmar"
         },
@@ -278407,7 +279036,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Wrenix the Wretched, The Barrens",
             finishText = "Wrenix the Wretched, The Barrens"
         },
@@ -278417,7 +279048,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Zando'zan, Orgrimmar",
             finishText = "Wrenix the Wretched, The Barrens"
         },
@@ -278427,7 +279060,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Gornek, Durotar",
             finishText = "Frang, Durotar"
         },
@@ -278459,6 +279094,7 @@ LJ.Data.ForeverDB = {
             side = "BOTH",
             src = "forever",
             zone = "Uldaman",
+            map = 1418,
             startText = "Rigglefuzz, Badlands",
             finishText = "Rigglefuzz, Badlands"
         },
@@ -278501,7 +279137,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Shenthul, Orgrimmar",
             finishText = "Taskmaster Fizzule, The Barrens"
         },
@@ -278522,7 +279160,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Shenthul, Orgrimmar",
             finishText = "Shenthul, Orgrimmar"
         },
@@ -278532,7 +279172,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Taskmaster Fizzule, The Barrens",
             finishText = "Shenthul, Orgrimmar"
         },
@@ -278542,7 +279184,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Shenthul, Orgrimmar",
             finishText = "Serge Hinott, Hillsbrad Foothills"
         },
@@ -278552,7 +279196,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Serge Hinott, Hillsbrad Foothills",
             finishText = "Serge Hinott, Hillsbrad Foothills"
         },
@@ -278677,8 +279323,30 @@ LJ.Data.ForeverDB = {
             startText = "Bloodmage Drazial, Blasted Lands",
             finishText = "Bloodmage Drazial, Blasted Lands"
         },
+        [2582] = {
+            name = "Rage of Ages",
+            level = 50,
+            min = 45,
+            side = "BOTH",
+            src = "classic",
+            zone = "Blasted Lands",
+            map = 1419,
+            startText = "Bloodmage Drazial, Blasted Lands",
+            finishText = "Bloodmage Drazial, Blasted Lands"
+        },
         [2583] = {
             name = "A Boar's Vitality",
+            level = 50,
+            min = 45,
+            side = "BOTH",
+            src = "forever",
+            zone = "Blasted Lands",
+            map = 1419,
+            startText = "Bloodmage Drazial, Blasted Lands",
+            finishText = "Bloodmage Drazial, Blasted Lands"
+        },
+        [2584] = {
+            name = "Spirit of the Boar",
             level = 50,
             min = 45,
             side = "BOTH",
@@ -278699,8 +279367,30 @@ LJ.Data.ForeverDB = {
             startText = "Bloodmage Drazial, Blasted Lands",
             finishText = "Bloodmage Drazial, Blasted Lands"
         },
+        [2586] = {
+            name = "Salt of the Scorpok",
+            level = 50,
+            min = 45,
+            side = "BOTH",
+            src = "forever",
+            zone = "Blasted Lands",
+            map = 1419,
+            startText = "Bloodmage Drazial, Blasted Lands",
+            finishText = "Bloodmage Drazial, Blasted Lands"
+        },
         [2601] = {
             name = "The Basilisk's Bite",
+            level = 50,
+            min = 45,
+            side = "BOTH",
+            src = "forever",
+            zone = "Blasted Lands",
+            map = 1419,
+            startText = "Bloodmage Lynnore, Blasted Lands",
+            finishText = "Bloodmage Lynnore, Blasted Lands"
+        },
+        [2602] = {
+            name = "Infallible Mind",
             level = 50,
             min = 45,
             side = "BOTH",
@@ -278716,6 +279406,17 @@ LJ.Data.ForeverDB = {
             min = 45,
             side = "BOTH",
             src = "forever",
+            zone = "Blasted Lands",
+            map = 1419,
+            startText = "Bloodmage Lynnore, Blasted Lands",
+            finishText = "Bloodmage Lynnore, Blasted Lands"
+        },
+        [2604] = {
+            name = "Spiritual Domination",
+            level = 50,
+            min = 45,
+            side = "BOTH",
+            src = "classic",
             zone = "Blasted Lands",
             map = 1419,
             startText = "Bloodmage Lynnore, Blasted Lands",
@@ -278749,7 +279450,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Master Mathias Shaw, Stormwind City",
             finishText = "Doc Mixilpixil, Stormwind City"
         },
@@ -278759,7 +279462,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Doc Mixilpixil, Stormwind City",
             finishText = "Doc Mixilpixil, Stormwind City"
         },
@@ -278769,7 +279474,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Doc Mixilpixil, Stormwind City",
             finishText = "Doc Mixilpixil, Stormwind City"
         },
@@ -278778,7 +279485,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 45,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blasted Lands",
             map = 1419,
             startText = "Fallen Hero of the Horde, Swamp of Sorrows",
@@ -278789,7 +279496,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 45,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Swamp of Sorrows",
             map = 1435,
             startText = "Dispatch Commander Ruag, Swamp of Sorrows",
@@ -278800,7 +279507,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 45,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Swamp of Sorrows",
             map = 1435,
             startText = "Bengor, Swamp of Sorrows",
@@ -278833,7 +279540,7 @@ LJ.Data.ForeverDB = {
             level = 49,
             min = 44,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Tanaris",
             map = 1446,
             startText = "Marin Noggenfogger, Tanaris",
@@ -278844,7 +279551,7 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 45,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Blasted Lands",
             map = 1419,
             startText = "Fallen Hero of the Horde, Swamp of Sorrows",
@@ -278949,6 +279656,17 @@ LJ.Data.ForeverDB = {
             startText = "Tyrion, Stormwind City",
             finishText = "Tyrion, Stormwind City"
         },
+        [2749] = {
+            name = "An Ordinary Egg",
+            level = 60,
+            min = 42,
+            side = "BOTH",
+            src = "forever",
+            zone = "Tanaris",
+            map = 1446,
+            startText = "Curgle Cranklehop, Tanaris",
+            finishText = "Curgle Cranklehop, Tanaris"
+        },
         [2751] = {
             name = "Barbaric Battlements",
             level = 32,
@@ -279004,7 +279722,7 @@ LJ.Data.ForeverDB = {
             level = 40,
             min = 40,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blacksmithing",
             startText = "Aturk the Anvil, Orgrimmar",
             finishText = "Aturk the Anvil, Orgrimmar"
@@ -279014,7 +279732,7 @@ LJ.Data.ForeverDB = {
             level = 40,
             min = 40,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blacksmithing",
             startText = "Ox, Orgrimmar",
             finishText = "McGavan, Stranglethorn Vale"
@@ -279054,7 +279772,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Blacksmithing",
             startText = "Galvan the Ancient, Stranglethorn Vale",
             finishText = "Galvan the Ancient, Stranglethorn Vale"
@@ -279064,7 +279782,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Blacksmithing",
             startText = "Galvan the Ancient, Stranglethorn Vale",
             finishText = "Galvan the Ancient, Stranglethorn Vale"
@@ -279074,7 +279792,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Blacksmithing",
             startText = "Galvan the Ancient, Stranglethorn Vale",
             finishText = "Galvan the Ancient, Stranglethorn Vale"
@@ -279084,7 +279802,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Blacksmithing",
             startText = "Galvan the Ancient, Stranglethorn Vale",
             finishText = "Trenton Lighthammer, Tanaris"
@@ -279157,7 +279875,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Blacksmithing",
             startText = "Trenton Lighthammer, Tanaris",
             finishText = "Trenton Lighthammer, Tanaris"
@@ -279167,7 +279885,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Blacksmithing",
             startText = "Trenton Lighthammer, Tanaris",
             finishText = "Trenton Lighthammer, Tanaris"
@@ -279177,7 +279895,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Blacksmithing",
             startText = "Trenton Lighthammer, Tanaris",
             finishText = "Trenton Lighthammer, Tanaris"
@@ -279209,7 +279927,7 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Blasted Lands",
             map = 1419,
             startText = "Ambassador Ardalan, Blasted Lands",
@@ -279220,7 +279938,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 45,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blasted Lands",
             map = 1419,
             startText = "Fallen Hero of the Horde, Swamp of Sorrows",
@@ -279231,7 +279949,7 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 45,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Blasted Lands",
             map = 1419,
             startText = "Fallen Hero of the Horde, Swamp of Sorrows",
@@ -279266,7 +279984,6 @@ LJ.Data.ForeverDB = {
             side = "H",
             src = "forever",
             zone = "Gnomeregan",
-            map = 1426,
             startText = "Nogg, Orgrimmar",
             finishText = "Nogg, Orgrimmar"
         },
@@ -279277,7 +279994,6 @@ LJ.Data.ForeverDB = {
             side = "H",
             src = "forever",
             zone = "Gnomeregan",
-            map = 1434,
             startText = "Sovik, Orgrimmar",
             finishText = "Scooty, Stranglethorn Vale"
         },
@@ -279297,7 +280013,7 @@ LJ.Data.ForeverDB = {
             level = 49,
             min = 44,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Feralas",
             map = 1444,
             startText = "Rockbiter, Feralas",
@@ -279308,7 +280024,7 @@ LJ.Data.ForeverDB = {
             level = 49,
             min = 44,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Feralas",
             map = 1444,
             startText = "Shay Leafrunner, Feralas",
@@ -279339,7 +280055,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 30,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Leatherworking",
             startText = "Pratt McGrubben, Feralas",
             finishText = "Pratt McGrubben, Feralas"
@@ -279359,7 +280075,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 30,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Leatherworking",
             startText = "Pratt McGrubben, Feralas",
             finishText = "Pratt McGrubben, Feralas"
@@ -279399,7 +280115,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 30,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Leatherworking",
             startText = "Jangdor Swiftstrider, Feralas",
             finishText = "Jangdor Swiftstrider, Feralas"
@@ -279409,7 +280125,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 30,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Leatherworking",
             startText = "Jangdor Swiftstrider, Feralas",
             finishText = "Jangdor Swiftstrider, Feralas"
@@ -279419,7 +280135,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 30,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Leatherworking",
             startText = "Jangdor Swiftstrider, Feralas",
             finishText = "Jangdor Swiftstrider, Feralas"
@@ -279429,7 +280145,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 30,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Leatherworking",
             startText = "Jangdor Swiftstrider, Feralas",
             finishText = "Jangdor Swiftstrider, Feralas"
@@ -279439,7 +280155,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 30,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Leatherworking",
             startText = "Jangdor Swiftstrider, Feralas",
             finishText = "Jangdor Swiftstrider, Feralas"
@@ -279449,7 +280165,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 30,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Leatherworking",
             startText = "Jangdor Swiftstrider, Feralas",
             finishText = "Jangdor Swiftstrider, Feralas"
@@ -279459,7 +280175,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 30,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Leatherworking",
             startText = "Jangdor Swiftstrider, Feralas",
             finishText = "Una, Thunder Bluff"
@@ -279517,7 +280233,7 @@ LJ.Data.ForeverDB = {
             finishText = "Tran'rek, Tanaris"
         },
         [2866] = {
-            name = "The Ruins of Solarsal ",
+            name = "The Ruins of Solarsal",
             level = 43,
             min = 40,
             side = "A",
@@ -279620,7 +280336,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Tanaris",
             map = 1446,
             startText = "Ship Schedule",
@@ -279637,12 +280353,23 @@ LJ.Data.ForeverDB = {
             startText = "Fraggar Thundermantle, The Hinterlands",
             finishText = "Fraggar Thundermantle, The Hinterlands"
         },
+        [2878] = {
+            name = "Corrupted Songflower",
+            level = 55,
+            min = 48,
+            side = "BOTH",
+            src = "forever",
+            zone = "Felwood",
+            map = 1448,
+            startText = "Corrupted Songflower, Felwood",
+            finishText = "Corrupted Songflower, Felwood"
+        },
         [2879] = {
             name = "The Stave of Equinex",
             level = 50,
             min = 42,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Feralas",
             map = 1444,
             startText = "Troyas Moonbreeze, Feralas",
@@ -279659,12 +280386,23 @@ LJ.Data.ForeverDB = {
             startText = "Fraggar Thundermantle, The Hinterlands",
             finishText = "Fraggar Thundermantle, The Hinterlands"
         },
+        [2881] = {
+            name = "Troll Necklace Bounty",
+            level = 45,
+            min = 40,
+            side = "A",
+            src = "forever",
+            zone = "The Hinterlands",
+            map = 1425,
+            startText = "Fraggar Thundermantle, The Hinterlands",
+            finishText = "Fraggar Thundermantle, The Hinterlands"
+        },
         [2882] = {
             name = "Cuergo's Gold",
             level = 45,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Treasure Map",
             startText = "Cuergo's Treasure Map",
             finishText = "Pirate's Treasure!"
@@ -279823,7 +280561,7 @@ LJ.Data.ForeverDB = {
             level = 43,
             min = 40,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "The Hinterlands",
             map = 1425,
             startText = "Venom Bottle, The Hinterlands",
@@ -279834,7 +280572,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 40,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "The Hinterlands",
             map = 1425,
             startText = "Apothecary Lydon, Hillsbrad Foothills",
@@ -279845,7 +280583,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 40,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "The Hinterlands",
             map = 1425,
             startText = "Apothecary Lydon, Hillsbrad Foothills",
@@ -279856,7 +280594,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 40,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Zul'Farrak",
             startText = "Master Gadrin, Durotar",
             finishText = "Master Gadrin, Durotar"
@@ -279866,7 +280604,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 40,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "The Hinterlands",
             map = 1425,
             startText = "Master Gadrin, Durotar",
@@ -279877,7 +280615,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 40,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "The Hinterlands",
             map = 1425,
             startText = "Apothecary Lydon, Hillsbrad Foothills",
@@ -279921,7 +280659,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 42,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Feralas",
             map = 1444,
             startText = "Equinex Monolith, Feralas",
@@ -279932,7 +280670,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 42,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Feralas",
             map = 1444,
             startText = "Daryn Lightwind, Teldrassil",
@@ -279964,7 +280702,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 45,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Ironforge",
             map = 1455,
             startText = "Historian Karnik, Ironforge",
@@ -279996,7 +280734,7 @@ LJ.Data.ForeverDB = {
             level = 34,
             min = 28,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Gnomeregan",
             startText = "The Sparklematic 5200",
             finishText = "Nogg, Orgrimmar"
@@ -280006,7 +280744,7 @@ LJ.Data.ForeverDB = {
             level = 35,
             min = 28,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Orgrimmar",
             map = 1454,
             startText = "Nogg, Orgrimmar",
@@ -280047,10 +280785,10 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 45,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Tanaris",
             map = 1446,
-            startText = "Stone Watcher of Norgannon",
+            startText = "Uldum Pedestal, Tanaris",
             finishText = "Uldum Pedestal, Tanaris"
         },
         [2962] = {
@@ -280080,7 +280818,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 45,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Ironforge",
             map = 1455,
             startText = "Historian Karnik, Ironforge",
@@ -280091,7 +280829,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 45,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Thunder Bluff",
             map = 1456,
             startText = "Sage Truthseeker, Thunder Bluff",
@@ -280102,7 +280840,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 45,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Thunder Bluff",
             map = 1456,
             startText = "Nara Wildmane, Thunder Bluff",
@@ -280113,7 +280851,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 45,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Thunder Bluff",
             map = 1456,
             startText = "Uldum Pedestal, Tanaris",
@@ -280124,7 +280862,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 45,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Thunder Bluff",
             map = 1456,
             startText = "Nara Wildmane, Thunder Bluff",
@@ -280212,7 +280950,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 45,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Ironforge",
             map = 1455,
             startText = "Uldum Pedestal, Tanaris",
@@ -280234,7 +280972,7 @@ LJ.Data.ForeverDB = {
             level = 46,
             min = 38,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Feralas",
             map = 1444,
             startText = "Rok Orhan, Feralas",
@@ -280245,7 +280983,7 @@ LJ.Data.ForeverDB = {
             level = 44,
             min = 38,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Feralas",
             map = 1444,
             startText = "Rok Orhan, Feralas",
@@ -280279,7 +281017,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Swart, Durotar",
             finishText = "Kranal Fiss, The Barrens"
         },
@@ -280289,7 +281029,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Narm Skychaser, Mulgore",
             finishText = "Kranal Fiss, The Barrens"
         },
@@ -280299,7 +281041,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "classic",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Swart, Durotar",
             finishText = "Islen Waterseer, The Barrens"
         },
@@ -280309,7 +281053,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "classic",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Narm Skychaser, Mulgore",
             finishText = "Islen Waterseer, The Barrens"
         },
@@ -280391,7 +281137,7 @@ LJ.Data.ForeverDB = {
         },
         [2994] = {
             name = "Saving Sharpbeak",
-            level = 53,
+            level = 51,
             min = 40,
             side = "A",
             src = "forever",
@@ -280417,7 +281163,9 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Gan'rul Bloodeye, Orgrimmar",
             finishText = "Strahad Farsan, The Barrens"
         },
@@ -280426,8 +281174,10 @@ LJ.Data.ForeverDB = {
             level = 12,
             min = 12,
             side = "A",
-            src = "classic",
-            zone = "Paladin",
+            src = "forever",
+            classes = {
+                "Paladin"
+            },
             startText = "Azar Stronghammer, Dun Morogh",
             finishText = "Tiza Battleforge, Ironforge"
         },
@@ -280437,7 +281187,9 @@ LJ.Data.ForeverDB = {
             min = 12,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Brother Wilhelm, Elwynn Forest",
             finishText = "Duthorian Rall, Stormwind City"
         },
@@ -280447,7 +281199,9 @@ LJ.Data.ForeverDB = {
             min = 12,
             side = "A",
             src = "classic",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Brandur Ironhammer, Ironforge",
             finishText = "Tiza Battleforge, Ironforge"
         },
@@ -280457,7 +281211,9 @@ LJ.Data.ForeverDB = {
             min = 12,
             side = "A",
             src = "classic",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Lord Grayson Shadowbreaker, Stormwind City",
             finishText = "Tiza Battleforge, Ironforge"
         },
@@ -280467,7 +281223,9 @@ LJ.Data.ForeverDB = {
             min = 30,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Carendin Halgar, Undercity",
             finishText = "Strahad Farsan, The Barrens"
         },
@@ -280476,7 +281234,7 @@ LJ.Data.ForeverDB = {
             level = 47,
             min = 38,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Feralas",
             map = 1444,
             startText = "Rok Orhan, Feralas",
@@ -280531,7 +281289,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Gornek, Durotar",
             finishText = "Frang, Durotar"
         },
@@ -280541,7 +281301,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Gornek, Durotar",
             finishText = "Jen'shan, Durotar"
         },
@@ -280551,7 +281313,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Gornek, Durotar",
             finishText = "Rwag, Durotar"
         },
@@ -280561,7 +281325,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Gornek, Durotar",
             finishText = "Shikrik, Durotar"
         },
@@ -280571,7 +281337,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Gornek, Durotar",
             finishText = "Ken'jai, Durotar"
         },
@@ -280581,7 +281349,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Gornek, Durotar",
             finishText = "Mai'ah, Durotar"
         },
@@ -280591,7 +281361,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Gornek, Durotar",
             finishText = "Jen'shan, Durotar"
         },
@@ -280600,8 +281372,10 @@ LJ.Data.ForeverDB = {
             level = 1,
             min = 1,
             side = "H",
-            src = "classic",
-            zone = "Rogue",
+            src = "forever",
+            classes = {
+                "Rogue"
+            },
             startText = "Gornek, Durotar",
             finishText = "Rwag, Durotar"
         },
@@ -280611,7 +281385,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Gornek, Durotar",
             finishText = "Shikrik, Durotar"
         },
@@ -280621,7 +281397,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Gornek, Durotar",
             finishText = "Nartok, Durotar"
         },
@@ -280631,7 +281409,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Grull Hawkwind, Mulgore",
             finishText = "Harutt Thunderhorn, Mulgore"
         },
@@ -280641,7 +281421,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Grull Hawkwind, Mulgore",
             finishText = "Lanka Farshot, Mulgore"
         },
@@ -280651,7 +281433,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Grull Hawkwind, Mulgore",
             finishText = "Meela Dawnstrider, Mulgore"
         },
@@ -280661,7 +281445,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Grull Hawkwind, Mulgore",
             finishText = "Gart Mistrunner, Mulgore"
         },
@@ -280671,7 +281457,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Shadow Priest Sarvis, Tirisfal Glades",
             finishText = "Dannal Stern, Tirisfal Glades"
         },
@@ -280681,7 +281469,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Shadow Priest Sarvis, Tirisfal Glades",
             finishText = "David Trias, Tirisfal Glades"
         },
@@ -280691,7 +281481,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Shadow Priest Sarvis, Tirisfal Glades",
             finishText = "Dark Cleric Duesten, Tirisfal Glades"
         },
@@ -280701,7 +281493,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Shadow Priest Sarvis, Tirisfal Glades",
             finishText = "Isabella, Tirisfal Glades"
         },
@@ -280711,7 +281505,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Shadow Priest Sarvis, Tirisfal Glades",
             finishText = "Maximillion, Tirisfal Glades"
         },
@@ -280721,7 +281517,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Marshal McBride, Elwynn Forest",
             finishText = "Llane Beshere, Elwynn Forest"
         },
@@ -280731,7 +281529,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Marshal McBride, Elwynn Forest",
             finishText = "Brother Sammuel, Elwynn Forest"
         },
@@ -280741,7 +281541,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Marshal McBride, Elwynn Forest",
             finishText = "Jorik Kerridan, Elwynn Forest"
         },
@@ -280751,7 +281553,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Marshal McBride, Elwynn Forest",
             finishText = "Priestess Anetta, Elwynn Forest"
         },
@@ -280761,7 +281565,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Marshal McBride, Elwynn Forest",
             finishText = "Khelden Bremen, Elwynn Forest"
         },
@@ -280771,7 +281577,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Marshal McBride, Elwynn Forest",
             finishText = "Drusilla La Salle, Elwynn Forest"
         },
@@ -280781,7 +281589,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Sten Stoutarm, Dun Morogh",
             finishText = "Thran Khorman, Dun Morogh"
         },
@@ -280791,7 +281601,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Sten Stoutarm, Dun Morogh",
             finishText = "Bromos Grummner, Dun Morogh"
         },
@@ -280801,7 +281613,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Sten Stoutarm, Dun Morogh",
             finishText = "Thorgas Grimson, Dun Morogh"
         },
@@ -280811,7 +281625,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Sten Stoutarm, Dun Morogh",
             finishText = "Solm Hargrin, Dun Morogh"
         },
@@ -280821,7 +281637,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Sten Stoutarm, Dun Morogh",
             finishText = "Branstock Khalder, Dun Morogh"
         },
@@ -280831,7 +281649,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Sten Stoutarm, Dun Morogh",
             finishText = "Thran Khorman, Dun Morogh"
         },
@@ -280841,7 +281661,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Sten Stoutarm, Dun Morogh",
             finishText = "Solm Hargrin, Dun Morogh"
         },
@@ -280851,7 +281673,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Sten Stoutarm, Dun Morogh",
             finishText = "Marryk Nurribit, Dun Morogh"
         },
@@ -280861,7 +281685,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Sten Stoutarm, Dun Morogh",
             finishText = "Alamar Grimm, Dun Morogh"
         },
@@ -280871,7 +281697,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Conservator Ilthalaine, Teldrassil",
             finishText = "Alyissia, Teldrassil"
         },
@@ -280881,7 +281709,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Conservator Ilthalaine, Teldrassil",
             finishText = "Ayanna Everstride, Teldrassil"
         },
@@ -280891,7 +281721,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Conservator Ilthalaine, Teldrassil",
             finishText = "Frahun Shadewhisper, Teldrassil"
         },
@@ -280901,7 +281733,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Conservator Ilthalaine, Teldrassil",
             finishText = "Shanda, Teldrassil"
         },
@@ -280911,7 +281745,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Conservator Ilthalaine, Teldrassil",
             finishText = "Mardant Strongoak, Teldrassil"
         },
@@ -280942,7 +281778,7 @@ LJ.Data.ForeverDB = {
             level = 47,
             min = 40,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Feralas",
             map = 1444,
             startText = "Witch Doctor Uzer'i, Feralas",
@@ -280964,7 +281800,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 40,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Feralas",
             map = 1444,
             startText = "Witch Doctor Uzer'i, Feralas",
@@ -280975,7 +281811,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 40,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Feralas",
             map = 1444,
             startText = "Witch Doctor Uzer'i, Feralas",
@@ -280997,7 +281833,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 40,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Feralas",
             map = 1444,
             startText = "Witch Doctor Uzer'i, Feralas",
@@ -281052,7 +281888,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 40,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Margol's Horn",
@@ -281063,7 +281899,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 40,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Loch Modan",
             map = 1432,
             startText = "Mountaineer Pebblebitty, Loch Modan",
@@ -281074,7 +281910,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 40,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Ironforge",
             map = 1455,
             startText = "Curator Thorius, Ironforge",
@@ -281129,7 +281965,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Blacksmithing",
             startText = "Trenton Lighthammer, Tanaris",
             finishText = "Trenton Lighthammer, Tanaris"
@@ -281193,7 +282029,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 40,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Dorius Stonetender, Searing Gorge",
@@ -281204,7 +282040,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 40,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Singed Letter, Searing Gorge",
@@ -281248,7 +282084,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 40,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Dying Archaeologist, Searing Gorge",
@@ -281269,7 +282105,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 48,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Swamp of Sorrows",
             map = 1435,
             startText = "Oathstone of Ysera's Dragonflight",
@@ -281280,7 +282116,7 @@ LJ.Data.ForeverDB = {
             level = 42,
             min = 37,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Uldaman",
             startText = "Talvash del Kissel, Ironforge",
             finishText = "Talvash del Kissel, Ironforge"
@@ -281301,7 +282137,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 40,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Zamael Lunthistle, Searing Gorge",
@@ -281312,7 +282148,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 40,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Zamael Lunthistle, Searing Gorge",
@@ -281333,8 +282169,9 @@ LJ.Data.ForeverDB = {
             level = 51,
             min = 46,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Sunken Temple",
+            map = 1446,
             startText = "Witch Doctor Uzer'i, Feralas",
             finishText = "Marvon Rivetseeker, Tanaris"
         },
@@ -281343,7 +282180,7 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 48,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Azshara",
             map = 1447,
             startText = "Captain Vanessa Beltis, Azshara",
@@ -281369,12 +282206,23 @@ LJ.Data.ForeverDB = {
             startText = "Nilith Lokrav, Searing Gorge",
             finishText = "Vizzklick, Tanaris"
         },
+        [3421] = {
+            name = "Return Trip",
+            level = 55,
+            min = 45,
+            side = "BOTH",
+            src = "forever",
+            zone = "Azshara",
+            map = 1447,
+            startText = "Nyrill, Azshara",
+            finishText = "Nyrill, Azshara"
+        },
         [3441] = {
             name = "Divine Retribution",
             level = 48,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Kalaran Windblade, Searing Gorge",
@@ -281385,7 +282233,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Kalaran Windblade, Searing Gorge",
@@ -281396,7 +282244,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Kalaran Windblade, Searing Gorge",
@@ -281464,7 +282312,7 @@ LJ.Data.ForeverDB = {
             zone = "Ironforge",
             map = 1455,
             startText = "Tymor, Ironforge",
-            finishText = "Pilot Xiggs Fuselighter"
+            finishText = "Pilot Xiggs Fuselighter, Azshara"
         },
         [3450] = {
             name = "An Easy Pickup",
@@ -281493,7 +282341,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Kalaran Windblade, Searing Gorge",
@@ -281504,7 +282352,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Kalaran Windblade, Searing Gorge",
@@ -281515,7 +282363,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Kalaran Windblade, Searing Gorge",
@@ -281526,10 +282374,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 45,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Ironforge",
             map = 1455,
-            startText = "Pilot Xiggs Fuselighter",
+            startText = "Pilot Xiggs Fuselighter, Azshara",
             finishText = "Tymor, Ironforge"
         },
         [3462] = {
@@ -281537,7 +282385,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Kalaran Windblade, Searing Gorge",
@@ -281548,7 +282396,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Squire Maltrake, Searing Gorge",
@@ -281559,22 +282407,55 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Hoard of the Black Dragonflight, Searing Gorge",
             finishText = "Hoard of the Black Dragonflight, Searing Gorge"
+        },
+        [3483] = {
+            name = "Signal for Pickup",
+            level = 52,
+            min = 45,
+            side = "A",
+            src = "forever",
+            zone = "Ironforge",
+            map = 1455,
+            startText = "Xiggs Fuselighter, Ironforge",
+            finishText = "Xiggs Fuselighter, Ironforge"
         },
         [3501] = {
             name = "Everything Counts In Large Amounts",
             level = 55,
             min = 45,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Blasted Lands",
             map = 1419,
             startText = "Kum'isha the Collector, Blasted Lands",
             finishText = "Kum'isha the Collector, Blasted Lands"
+        },
+        [3502] = {
+            name = "One Draenei's Junk...",
+            level = 55,
+            min = 45,
+            side = "BOTH",
+            src = "forever",
+            zone = "Blasted Lands",
+            map = 1419,
+            startText = "Kum'isha the Collector, Blasted Lands",
+            finishText = "Kum'isha the Collector, Blasted Lands"
+        },
+        [3503] = {
+            name = "Meeting with the Master",
+            level = 55,
+            min = 45,
+            side = "BOTH",
+            src = "forever",
+            zone = "Azshara",
+            map = 1447,
+            startText = "Sanath Lim-yo, Azshara",
+            finishText = "Sanath Lim-yo, Azshara"
         },
         [3504] = {
             name = "Betrayed",
@@ -281592,11 +282473,11 @@ LJ.Data.ForeverDB = {
             level = 53,
             min = 44,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Orgrimmar",
             map = 1454,
             startText = "Ag'tor Bloodfist, Azshara",
-            finishText = "Kaldorei Tome of Summoning, Azshara"
+            finishText = "Sin'dorei Tome of Summoning, Azshara"
         },
         [3506] = {
             name = "Betrayed",
@@ -281669,7 +282550,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 48,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Swamp of Sorrows",
             map = 1435,
             startText = "Itharius, Swamp of Sorrows",
@@ -281829,7 +282710,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 45,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Azshara",
             map = 1447,
             startText = "Jediga, Azshara",
@@ -281840,7 +282721,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 45,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Azshara",
             map = 1447,
             startText = "Jediga, Azshara",
@@ -281862,7 +282743,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 45,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Azshara",
             map = 1447,
             startText = "Magatha Grimtotem, Thunder Bluff",
@@ -281873,7 +282754,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 45,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Azshara",
             map = 1447,
             startText = "Jes'rimon, Orgrimmar",
@@ -281884,7 +282765,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 45,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Azshara",
             map = 1447,
             startText = "Andron Gant, Undercity",
@@ -281906,7 +282787,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 45,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Dying Archaeologist, Searing Gorge",
@@ -281917,7 +282798,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 45,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Undercity",
             map = 1458,
             startText = "Chemist Cuely, Undercity",
@@ -281950,7 +282831,7 @@ LJ.Data.ForeverDB = {
             level = 53,
             min = 47,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Azshara",
             map = 1447,
             startText = "Kim'jael, Azshara",
@@ -282047,8 +282928,10 @@ LJ.Data.ForeverDB = {
             level = 40,
             min = 40,
             side = "H",
-            src = "classic",
-            zone = "Warlock",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
             startText = "Zevrost, Orgrimmar",
             finishText = "Strahad Farsan, The Barrens"
         },
@@ -282107,7 +282990,7 @@ LJ.Data.ForeverDB = {
             level = 47,
             min = 30,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Engineering",
             startText = "Tinkerwiz, The Barrens",
             finishText = "Oglethorpe Obnoticus, Stranglethorn Vale"
@@ -282157,7 +283040,7 @@ LJ.Data.ForeverDB = {
             level = 47,
             min = 30,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Engineering",
             startText = "Oglethorpe Obnoticus, Stranglethorn Vale",
             finishText = "Oglethorpe Obnoticus, Stranglethorn Vale"
@@ -282167,7 +283050,7 @@ LJ.Data.ForeverDB = {
             level = 47,
             min = 30,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Engineering",
             startText = "Oglethorpe Obnoticus, Stranglethorn Vale",
             finishText = "Oglethorpe Obnoticus, Stranglethorn Vale"
@@ -282188,8 +283071,10 @@ LJ.Data.ForeverDB = {
             level = 12,
             min = 12,
             side = "A",
-            src = "classic",
-            zone = "Paladin",
+            src = "forever",
+            classes = {
+                "Paladin"
+            },
             startText = "Brandur Ironhammer, Ironforge",
             finishText = "Duthorian Rall, Stormwind City"
         },
@@ -282209,7 +283094,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Ironforge",
             map = 1455,
             startText = "Royal Historian Archesonus, Ironforge",
@@ -282220,7 +283105,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 45,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Booty Bay",
             map = 1434,
             startText = "Oglethorpe Obnoticus, Stranglethorn Vale",
@@ -282253,7 +283138,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 47,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Thunder Bluff",
             map = 1456,
             startText = "Innkeeper Pala, Thunder Bluff",
@@ -282264,7 +283149,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 47,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Darnassus",
             map = 1457,
             startText = "Innkeeper Saelienne, Darnassus",
@@ -282319,7 +283204,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Umi Rumplesnicker, Winterspring",
@@ -282341,7 +283226,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 47,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Darnassus",
             map = 1457,
             startText = "Mathrengyl Bearwalker, Darnassus",
@@ -282352,7 +283237,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 47,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Thunder Bluff",
             map = 1456,
             startText = "Bashana Runetotem, Thunder Bluff",
@@ -282385,7 +283270,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 47,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Stormwind City",
             map = 1453,
             startText = "Innkeeper Allison, Stormwind City",
@@ -282396,7 +283281,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 47,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Ironforge",
             map = 1455,
             startText = "Innkeeper Firebrew, Ironforge",
@@ -282438,21 +283323,21 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 48,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Badlands",
             map = 1418,
             startText = "Thal'trak Proudtusk, Badlands",
-            finishText = "Sha'ni Proudtusk"
+            finishText = "Sha'ni Proudtusk, Burning Steppes"
         },
         [3822] = {
             name = "Krom'Grul",
             level = 53,
             min = 48,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Burning Steppes",
             map = 1428,
-            startText = "Sha'ni Proudtusk",
+            startText = "Sha'ni Proudtusk, Burning Steppes",
             finishText = "Thal'trak Proudtusk, Badlands"
         },
         [3823] = {
@@ -282460,7 +283345,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 48,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Burning Steppes",
             map = 1428,
             startText = "Oralius, Burning Steppes",
@@ -282550,7 +283435,7 @@ LJ.Data.ForeverDB = {
             side = "A",
             src = "forever",
             zone = "Special",
-            startText = "Chicken, Wetlands",
+            startText = "Chicken, Westfall",
             finishText = "Chicken, Westfall"
         },
         [3881] = {
@@ -282657,7 +283542,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 48,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Mountain",
             map = 1418,
             startText = "Thunderheart, Badlands",
@@ -282668,7 +283553,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 48,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Depths",
             startText = "Thunderheart, Badlands",
             finishText = "Thunderheart, Badlands"
@@ -282700,7 +283585,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 47,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
             startText = "Donova Snowden, Winterspring",
@@ -282711,7 +283596,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 47,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
             startText = "Gaeriyan, Tanaris",
@@ -282722,7 +283607,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 47,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
             startText = "A Conspicuous Gravestone, Tanaris",
@@ -282777,21 +283662,21 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 47,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
             startText = "Linken, Un'Goro Crater",
-            finishText = "J.D. Collie, Thousand Needles"
+            finishText = "J.D. Collie, Un'Goro Crater"
         },
         [3942] = {
             name = "Linken's Memory",
             level = 54,
             min = 47,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
-            startText = "J.D. Collie, Thousand Needles",
+            startText = "J.D. Collie, Un'Goro Crater",
             finishText = "Eridan Bluewind, Felwood"
         },
         [3961] = {
@@ -282799,10 +283684,10 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 47,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
-            startText = "J.D. Collie, Thousand Needles",
+            startText = "J.D. Collie, Un'Goro Crater",
             finishText = "Linken, Un'Goro Crater"
         },
         [3962] = {
@@ -282810,7 +283695,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 47,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
             startText = "Linken, Un'Goro Crater",
@@ -282821,7 +283706,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 48,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Depths",
             startText = "Galamav the Marksman, Badlands",
             finishText = "Commander Gor'shak"
@@ -282831,7 +283716,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 48,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Depths",
             startText = "Commander Gor'shak",
             finishText = "Commander Gor'shak"
@@ -282841,7 +283726,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 48,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Depths",
             startText = "Commander Gor'shak",
             finishText = "Thrall, Orgrimmar"
@@ -282851,7 +283736,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 48,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Depths",
             startText = "Thrall, Orgrimmar",
             finishText = "Thrall, Orgrimmar"
@@ -282861,7 +283746,7 @@ LJ.Data.ForeverDB = {
             level = 59,
             min = 48,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Depths",
             startText = "Thrall, Orgrimmar",
             finishText = "Princess Moira Bronzebeard"
@@ -282871,7 +283756,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 48,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Depths",
             startText = "Princess Moira Bronzebeard",
             finishText = "Thrall, Orgrimmar"
@@ -282881,11 +283766,11 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 47,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
             startText = "Eridan Bluewind, Felwood",
-            finishText = "J.D. Collie, Thousand Needles"
+            finishText = "J.D. Collie, Un'Goro Crater"
         },
         [4021] = {
             name = "Counterattack!",
@@ -282903,11 +283788,11 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Burning Steppes",
             map = 1428,
-            startText = "Cyrus Therepentous, Riverglades",
-            finishText = "Cyrus Therepentous, Riverglades"
+            startText = "Cyrus Therepentous, Burning Steppes",
+            finishText = "Cyrus Therepentous, Burning Steppes"
         },
         [4023] = {
             name = "A Taste of Flame",
@@ -282917,8 +283802,8 @@ LJ.Data.ForeverDB = {
             src = "forever",
             zone = "Burning Steppes",
             map = 1428,
-            startText = "Cyrus Therepentous, Riverglades",
-            finishText = "Cyrus Therepentous, Riverglades"
+            startText = "Cyrus Therepentous, Burning Steppes",
+            finishText = "Cyrus Therepentous, Burning Steppes"
         },
         [4024] = {
             name = "A Taste of Flame",
@@ -282927,15 +283812,26 @@ LJ.Data.ForeverDB = {
             side = "BOTH",
             src = "forever",
             zone = "Blackrock Depths",
-            startText = "Cyrus Therepentous, Riverglades",
-            finishText = "Cyrus Therepentous, Riverglades"
+            startText = "Cyrus Therepentous, Burning Steppes",
+            finishText = "Cyrus Therepentous, Burning Steppes"
+        },
+        [4041] = {
+            name = "The Videre Elixir",
+            level = 52,
+            min = 47,
+            side = "BOTH",
+            src = "forever",
+            zone = "Feralas",
+            map = 1444,
+            startText = "Gregan Brewspewer, Feralas",
+            finishText = "Gregan Brewspewer, Feralas"
         },
         [4061] = {
             name = "The Rise of the Machines",
             level = 54,
             min = 52,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Burning Steppes",
             map = 1428,
             startText = "Hierophant Theodora Mulvadania, Badlands",
@@ -282946,7 +283842,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 52,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Badlands",
             map = 1418,
             startText = "Hierophant Theodora Mulvadania, Badlands",
@@ -282957,7 +283853,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 52,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Depths",
             startText = "Lotwil Veriatus, Badlands",
             finishText = "Lotwil Veriatus, Badlands"
@@ -282967,7 +283863,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 48,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Depths",
             startText = "WANTED, Badlands",
             finishText = "Warlord Goretooth, Badlands"
@@ -282977,8 +283873,9 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Depths",
+            map = 1427,
             startText = "KILL ON SIGHT, Badlands",
             finishText = "Warlord Goretooth, Badlands"
         },
@@ -282987,17 +283884,17 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Depths",
             startText = "Spectral Chalice",
             finishText = "Spectral Chalice"
         },
         [4084] = {
             name = "Silver Heart",
-            level = 55,
+            level = 54,
             min = 47,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
             startText = "Eridan Bluewind, Felwood",
@@ -283008,7 +283905,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 48,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Arathandris Silversky, Felwood",
@@ -283019,18 +283916,51 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 48,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Maybess Riverbreeze, Felwood",
             finishText = "Maybess Riverbreeze, Felwood"
+        },
+        [4108] = {
+            name = "Salve via Hunting",
+            level = 55,
+            min = 48,
+            side = "H",
+            src = "forever",
+            zone = "Felwood",
+            map = 1448,
+            startText = "Maybess Riverbreeze, Felwood",
+            finishText = "Maybess Riverbreeze, Felwood"
+        },
+        [4113] = {
+            name = "Corrupted Songflower",
+            level = 55,
+            min = 48,
+            side = "BOTH",
+            src = "forever",
+            zone = "Felwood",
+            map = 1448,
+            startText = "Corrupted Songflower, Felwood",
+            finishText = "Corrupted Songflower, Felwood"
+        },
+        [4115] = {
+            name = "Corrupted Windblossom",
+            level = 55,
+            min = 48,
+            side = "BOTH",
+            src = "forever",
+            zone = "Felwood",
+            map = 1448,
+            startText = "Corrupted Windblossom, Felwood",
+            finishText = "Corrupted Windblossom, Felwood"
         },
         [4120] = {
             name = "The Strength of Corruption",
             level = 52,
             min = 47,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Feralas",
             map = 1444,
             startText = "Talo Thornhoof, Feralas",
@@ -283051,7 +283981,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 52,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Depths",
             startText = "Lexlort, Badlands",
             finishText = "Grark Lorkrub, Burning Steppes"
@@ -283063,6 +283993,7 @@ LJ.Data.ForeverDB = {
             side = "BOTH",
             src = "forever",
             zone = "Blackrock Depths",
+            map = 1428,
             startText = "Maxwort Uberglint, Burning Steppes",
             finishText = "Maxwort Uberglint, Burning Steppes"
         },
@@ -283157,7 +284088,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 52,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Depths",
             startText = "Warlord Goretooth, Badlands",
             finishText = "Warlord Goretooth, Badlands"
@@ -283167,8 +284098,9 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Depths",
+            map = 1418,
             startText = "Apothecary Zinge, Undercity",
             finishText = "Shadowmage Vivian Lagrave, Badlands"
         },
@@ -283177,7 +284109,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Depths",
             startText = "Shadowmage Vivian Lagrave, Badlands",
             finishText = "Shadowmage Vivian Lagrave, Badlands"
@@ -283219,7 +284151,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 47,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
             startText = "Muigin, Un'Goro Crater",
@@ -283241,7 +284173,7 @@ LJ.Data.ForeverDB = {
             level = 53,
             min = 47,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
             startText = "Muigin, Un'Goro Crater",
@@ -283252,7 +284184,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 47,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
             startText = "Larion, Un'Goro Crater",
@@ -283263,7 +284195,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 47,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Sunken Temple",
             startText = "Liv Rizzlefix, The Barrens",
             finishText = "Larion, Un'Goro Crater"
@@ -283273,7 +284205,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 47,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
             startText = "Larion, Un'Goro Crater",
@@ -283284,7 +284216,7 @@ LJ.Data.ForeverDB = {
             level = 53,
             min = 47,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
             startText = "Larion, Un'Goro Crater",
@@ -283370,10 +284302,21 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Depths",
             startText = "Mistress Nagmara",
             finishText = "Mistress Nagmara"
+        },
+        [4221] = {
+            name = "Corrupted Windblossom",
+            level = 55,
+            min = 48,
+            side = "BOTH",
+            src = "forever",
+            zone = "Felwood",
+            map = 1448,
+            startText = "Corrupted Windblossom, Felwood",
+            finishText = "Corrupted Windblossom, Felwood"
         },
         [4223] = {
             name = "The True Masters",
@@ -283422,7 +284365,7 @@ LJ.Data.ForeverDB = {
             level = 53,
             min = 48,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
             startText = "Karna Remtravel, Un'Goro Crater",
@@ -283444,7 +284387,7 @@ LJ.Data.ForeverDB = {
             level = 53,
             min = 48,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
             startText = "A-Me 01, Un'Goro Crater",
@@ -283576,8 +284519,8 @@ LJ.Data.ForeverDB = {
             src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
-            startText = "J.D. Collie, Thousand Needles",
-            finishText = "J.D. Collie, Thousand Needles"
+            startText = "J.D. Collie, Un'Goro Crater",
+            finishText = "J.D. Collie, Un'Goro Crater"
         },
         [4286] = {
             name = "The Good Stuff",
@@ -283597,8 +284540,8 @@ LJ.Data.ForeverDB = {
             src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
-            startText = "J.D. Collie, Thousand Needles",
-            finishText = "J.D. Collie, Thousand Needles"
+            startText = "J.D. Collie, Un'Goro Crater",
+            finishText = "J.D. Collie, Un'Goro Crater"
         },
         [4288] = {
             name = "The Western Pylon",
@@ -283608,8 +284551,8 @@ LJ.Data.ForeverDB = {
             src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
-            startText = "J.D. Collie, Thousand Needles",
-            finishText = "J.D. Collie, Thousand Needles"
+            startText = "J.D. Collie, Un'Goro Crater",
+            finishText = "J.D. Collie, Un'Goro Crater"
         },
         [4289] = {
             name = "The Apes of Un'Goro",
@@ -283660,7 +284603,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 48,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Undercity",
             map = 1458,
             startText = "Chemist Fuely, Undercity",
@@ -283671,7 +284614,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 48,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Undercity",
             map = 1458,
             startText = "Chemist Fuely, Undercity",
@@ -283715,7 +284658,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 48,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Orgrimmar",
             map = 1454,
             startText = "Jes'rimon, Orgrimmar",
@@ -283726,7 +284669,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
             startText = "Torwa Pathfinder, Un'Goro Crater",
@@ -283737,11 +284680,11 @@ LJ.Data.ForeverDB = {
             level = 53,
             min = 47,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
-            startText = "J.D. Collie, Thousand Needles",
-            finishText = "J.D. Collie, Thousand Needles"
+            startText = "J.D. Collie, Un'Goro Crater",
+            finishText = "J.D. Collie, Un'Goro Crater"
         },
         [4322] = {
             name = "Jail Break!",
@@ -283829,7 +284772,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 49,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Eridan Bluewind, Felwood",
@@ -283840,7 +284783,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 49,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Eridan Bluewind, Felwood",
@@ -283851,7 +284794,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 49,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Eridan Bluewind, Felwood",
@@ -283873,7 +284816,7 @@ LJ.Data.ForeverDB = {
             level = 46,
             min = 43,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Wooden Outhouse, Searing Gorge",
@@ -283884,7 +284827,7 @@ LJ.Data.ForeverDB = {
             level = 47,
             min = 43,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Grimesilt Outhouse Key",
@@ -283896,7 +284839,9 @@ LJ.Data.ForeverDB = {
             min = 40,
             side = "A",
             src = "classic",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Arthur the Faithful, Stormwind City",
             finishText = "Duthorian Rall, Stormwind City"
         },
@@ -283905,8 +284850,10 @@ LJ.Data.ForeverDB = {
             level = 40,
             min = 40,
             side = "A",
-            src = "classic",
-            zone = "Paladin",
+            src = "forever",
+            classes = {
+                "Paladin"
+            },
             startText = "Brandur Ironhammer, Ironforge",
             finishText = "Duthorian Rall, Stormwind City"
         },
@@ -283916,7 +284863,9 @@ LJ.Data.ForeverDB = {
             min = 40,
             side = "A",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Briarthorn, Ironforge",
             finishText = "Strahad Farsan, The Barrens"
         },
@@ -283925,8 +284874,10 @@ LJ.Data.ForeverDB = {
             level = 40,
             min = 40,
             side = "A",
-            src = "classic",
-            zone = "Warlock",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
             startText = "Demisette Cloyce, Stormwind City",
             finishText = "Strahad Farsan, The Barrens"
         },
@@ -283936,7 +284887,9 @@ LJ.Data.ForeverDB = {
             min = 40,
             side = "H",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Kaal Soulreaper, Undercity",
             finishText = "Strahad Farsan, The Barrens"
         },
@@ -283945,8 +284898,10 @@ LJ.Data.ForeverDB = {
             level = 40,
             min = 40,
             side = "BOTH",
-            src = "classic",
-            zone = "Warlock",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
             startText = "Strahad Farsan, The Barrens",
             finishText = "Strahad Farsan, The Barrens"
         },
@@ -283977,7 +284932,7 @@ LJ.Data.ForeverDB = {
             level = 53,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Darnassus",
             map = 1457,
             startText = "Gracina Spiritmight, Darnassus",
@@ -283988,7 +284943,7 @@ LJ.Data.ForeverDB = {
             level = 53,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Orgrimmar",
             map = 1454,
             startText = "Zilzibin Drumlore, Orgrimmar",
@@ -284010,7 +284965,7 @@ LJ.Data.ForeverDB = {
             level = 53,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Tanaris",
             map = 1446,
             startText = "Alchemist Pestlezugg, Tanaris",
@@ -284032,7 +284987,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 49,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Un'Goro Crater",
             map = 1449,
             startText = "Liv Rizzlefix, The Barrens",
@@ -284076,7 +285031,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 49,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Winna Hazzard, Felwood",
@@ -284087,7 +285042,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Tanaris",
             map = 1446,
             startText = "Alchemist Pestlezugg, Tanaris",
@@ -284098,7 +285053,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Tanaris",
             map = 1446,
             startText = "Alchemist Pestlezugg, Tanaris",
@@ -284109,7 +285064,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Tanaris",
             map = 1446,
             startText = "Alchemist Pestlezugg, Tanaris",
@@ -284131,7 +285086,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Orgrimmar",
             map = 1454,
             startText = "Zilzibin Drumlore, Orgrimmar",
@@ -284142,7 +285097,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 48,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Ironforge",
             map = 1455,
             startText = "Laris Geardawdle, Ironforge",
@@ -284153,7 +285108,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 48,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Ironforge",
             map = 1455,
             startText = "Laris Geardawdle, Ironforge",
@@ -284164,7 +285119,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 52,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Trull Failbane, Felwood",
@@ -284180,6 +285135,16 @@ LJ.Data.ForeverDB = {
             map = 1441,
             startText = "Brave Moonhorn, Thousand Needles",
             finishText = "Cliffwatcher Longhorn, Thousand Needles"
+        },
+        [4561] = {
+            name = "Testing for Impurities - Un'Goro Crater",
+            level = 52,
+            min = 48,
+            side = "H",
+            src = "forever",
+            zone = "Undercity",
+            startText = "Testing Equipment, Ironforge",
+            finishText = "Testing Equipment, Undercity"
         },
         [4581] = {
             name = "Kayneth Stillwind",
@@ -284301,7 +285266,7 @@ LJ.Data.ForeverDB = {
             level = 59,
             min = 55,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Spire",
             startText = "Helendis Riverhorn, Burning Steppes",
             finishText = "Helendis Riverhorn, Burning Steppes"
@@ -284311,7 +285276,7 @@ LJ.Data.ForeverDB = {
             level = 59,
             min = 52,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Trull Failbane, Felwood",
@@ -284344,7 +285309,7 @@ LJ.Data.ForeverDB = {
             level = 59,
             min = 55,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Spire",
             startText = "Galamav the Marksman, Badlands",
             finishText = "Galamav the Marksman, Badlands"
@@ -284398,7 +285363,7 @@ LJ.Data.ForeverDB = {
             level = 59,
             min = 55,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Spire",
             startText = "Kibler, Burning Steppes",
             finishText = "Kibler, Burning Steppes"
@@ -284452,7 +285417,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 57,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Spire",
             startText = "Tinkee Steamboil, Burning Steppes",
             finishText = "Tinkee Steamboil, Burning Steppes"
@@ -284473,7 +285438,9 @@ LJ.Data.ForeverDB = {
             min = 31,
             side = "H",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Briarthorn, Ironforge",
             finishText = "Menara Voidrender, The Barrens"
         },
@@ -284481,9 +285448,11 @@ LJ.Data.ForeverDB = {
             name = "In Search of Menara Voidrender",
             level = 31,
             min = 31,
-            side = "A",
+            side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Zevrost, Orgrimmar",
             finishText = "Menara Voidrender, The Barrens"
         },
@@ -284493,7 +285462,9 @@ LJ.Data.ForeverDB = {
             min = 31,
             side = "A",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Demisette Cloyce, Stormwind City",
             finishText = "Menara Voidrender, The Barrens"
         },
@@ -284502,8 +285473,10 @@ LJ.Data.ForeverDB = {
             level = 31,
             min = 31,
             side = "H",
-            src = "classic",
-            zone = "Warlock",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
             startText = "Kaal Soulreaper, Undercity",
             finishText = "Menara Voidrender, The Barrens"
         },
@@ -284523,7 +285496,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 52,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Trull Failbane, Felwood",
@@ -284534,7 +285507,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 57,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Spire",
             startText = "Vaelan",
             finishText = "Vaelan"
@@ -284587,7 +285560,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 57,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Spire",
             startText = "Mayara Brightwing, Burning Steppes",
             finishText = "Mayara Brightwing, Burning Steppes"
@@ -284607,7 +285580,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 57,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Spire",
             startText = "Count Remington Ridgewell, Stormwind City",
             finishText = "Mayara Brightwing, Burning Steppes"
@@ -284628,7 +285601,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 57,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Spire",
             startText = "Shadowmage Vivian Lagrave, Badlands",
             finishText = "Shadowmage Vivian Lagrave, Badlands"
@@ -284638,8 +285611,9 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 57,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Spire",
+            map = 1418,
             startText = "Apothecary Zinge, Undercity",
             finishText = "Shadowmage Vivian Lagrave, Badlands"
         },
@@ -284670,7 +285644,9 @@ LJ.Data.ForeverDB = {
             min = 31,
             side = "BOTH",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Menara Voidrender, The Barrens",
             finishText = "Xizk Goodstitch, Stranglethorn Vale"
         },
@@ -284679,8 +285655,10 @@ LJ.Data.ForeverDB = {
             level = 34,
             min = 31,
             side = "BOTH",
-            src = "classic",
-            zone = "Warlock",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
             startText = "Xizk Goodstitch, Stranglethorn Vale",
             finishText = "Menara Voidrender, The Barrens"
         },
@@ -284690,7 +285668,9 @@ LJ.Data.ForeverDB = {
             min = 31,
             side = "BOTH",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Menara Voidrender, The Barrens",
             finishText = "Menara Voidrender, The Barrens"
         },
@@ -284700,9 +285680,23 @@ LJ.Data.ForeverDB = {
             min = 31,
             side = "BOTH",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Menara Voidrender, The Barrens",
             finishText = "Menara Voidrender, The Barrens"
+        },
+        [4785] = {
+            name = "Fine Gold Thread",
+            level = 37,
+            min = 31,
+            side = "BOTH",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
+            startText = "Xizk Goodstitch, Stranglethorn Vale",
+            finishText = "Xizk Goodstitch, Stranglethorn Vale"
         },
         [4786] = {
             name = "The Completed Robe",
@@ -284710,7 +285704,9 @@ LJ.Data.ForeverDB = {
             min = 31,
             side = "BOTH",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Menara Voidrender, The Barrens",
             finishText = "Menara Voidrender, The Barrens"
         },
@@ -284730,7 +285726,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Spire",
             startText = "Prospector Ironboot, Tanaris",
             finishText = "Prospector Ironboot, Tanaris"
@@ -284751,7 +285747,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Felnok Steelspring, Winterspring",
@@ -284762,7 +285758,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Felnok Steelspring, Winterspring",
@@ -284838,7 +285834,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 51,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Donova Snowden, Winterspring",
@@ -284849,7 +285845,7 @@ LJ.Data.ForeverDB = {
             level = 59,
             min = 53,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Jaron Stoneshaper, Winterspring",
@@ -284860,7 +285856,7 @@ LJ.Data.ForeverDB = {
             level = 59,
             min = 55,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Spire",
             startText = "Kibler, Burning Steppes",
             finishText = "Kibler, Burning Steppes"
@@ -284870,7 +285866,7 @@ LJ.Data.ForeverDB = {
             level = 59,
             min = 53,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Damaged Crate, Winterspring",
@@ -284881,7 +285877,7 @@ LJ.Data.ForeverDB = {
             level = 59,
             min = 53,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Jaron's Wagon, Winterspring",
@@ -284903,7 +285899,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 55,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Spire",
             startText = "Ragged John, Burning Steppes",
             finishText = "Ragged John, Burning Steppes"
@@ -284913,7 +285909,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 55,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Spire",
             startText = "Warosh",
             finishText = "Warosh"
@@ -284956,7 +285952,7 @@ LJ.Data.ForeverDB = {
             level = 59,
             min = 52,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Ranshalla, Winterspring",
@@ -284967,7 +285963,7 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 52,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Erelas Ambersky, Teldrassil",
@@ -284978,7 +285974,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 55,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Spire",
             startText = "Warlord Goretooth's Command",
             finishText = "Warlord Goretooth, Badlands"
@@ -284991,7 +285987,7 @@ LJ.Data.ForeverDB = {
             src = "forever",
             zone = "Thousand Needles",
             map = 1441,
-            startText = "Lakota Windsong, The Barrens",
+            startText = "Lakota Windsong, Thousand Needles",
             finishText = "Thalia Amberhide, Thousand Needles"
         },
         [4906] = {
@@ -284999,7 +285995,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 49,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Eridan Bluewind, Felwood",
@@ -285043,7 +286039,9 @@ LJ.Data.ForeverDB = {
             min = 35,
             side = "BOTH",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Tabetha, Dustwallow Marsh",
             finishText = "Tabetha, Dustwallow Marsh"
         },
@@ -285052,8 +286050,10 @@ LJ.Data.ForeverDB = {
             level = 40,
             min = 35,
             side = "BOTH",
-            src = "classic",
-            zone = "Warlock",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
             startText = "Acolyte Wytula, The Barrens",
             finishText = "Menara Voidrender, The Barrens"
         },
@@ -285063,7 +286063,9 @@ LJ.Data.ForeverDB = {
             min = 35,
             side = "BOTH",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Acolyte Magaz, The Barrens",
             finishText = "Menara Voidrender, The Barrens"
         },
@@ -285072,8 +286074,10 @@ LJ.Data.ForeverDB = {
             level = 40,
             min = 35,
             side = "BOTH",
-            src = "classic",
-            zone = "Warlock",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
             startText = "Menara Voidrender, The Barrens",
             finishText = "Menara Voidrender, The Barrens"
         },
@@ -285082,8 +286086,10 @@ LJ.Data.ForeverDB = {
             level = 35,
             min = 35,
             side = "A",
-            src = "classic",
-            zone = "Warlock",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
             startText = "Briarthorn, Ironforge",
             finishText = "Menara Voidrender, The Barrens"
         },
@@ -285102,9 +286108,11 @@ LJ.Data.ForeverDB = {
             name = "Knowledge of the Orb of Orahil",
             level = 35,
             min = 35,
-            side = "A",
+            side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Zevrost, Orgrimmar",
             finishText = "Menara Voidrender, The Barrens"
         },
@@ -285114,7 +286122,9 @@ LJ.Data.ForeverDB = {
             min = 35,
             side = "H",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Demisette Cloyce, Stormwind City",
             finishText = "Menara Voidrender, The Barrens"
         },
@@ -285123,8 +286133,10 @@ LJ.Data.ForeverDB = {
             level = 35,
             min = 35,
             side = "H",
-            src = "classic",
-            zone = "Warlock",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
             startText = "Kaal Soulreaper, Undercity",
             finishText = "Menara Voidrender, The Barrens"
         },
@@ -285144,7 +286156,18 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 53,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
+            zone = "Western Plaguelands",
+            map = 1422,
+            startText = "Chromie, Western Plaguelands",
+            finishText = "Chromie, Western Plaguelands"
+        },
+        [4973] = {
+            name = "Counting Out Time",
+            level = 56,
+            min = 53,
+            side = "BOTH",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Chromie, Western Plaguelands",
@@ -285155,7 +286178,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 55,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Spire",
             startText = "Thrall, Orgrimmar",
             finishText = "Thrall, Orgrimmar"
@@ -285166,7 +286189,9 @@ LJ.Data.ForeverDB = {
             min = 35,
             side = "BOTH",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Menara Voidrender, The Barrens",
             finishText = "Menara Voidrender, The Barrens"
         },
@@ -285176,7 +286201,9 @@ LJ.Data.ForeverDB = {
             min = 35,
             side = "BOTH",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Tabetha, Dustwallow Marsh",
             finishText = "Menara Voidrender, The Barrens"
         },
@@ -285185,7 +286212,7 @@ LJ.Data.ForeverDB = {
             level = 59,
             min = 55,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Spire",
             startText = "Lexlort, Badlands",
             finishText = "Bijou"
@@ -285195,7 +286222,7 @@ LJ.Data.ForeverDB = {
             level = 59,
             min = 55,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Spire",
             startText = "Bijou",
             finishText = "Bijou"
@@ -285205,7 +286232,7 @@ LJ.Data.ForeverDB = {
             level = 59,
             min = 55,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Spire",
             startText = "Bijou",
             finishText = "Lexlort, Badlands"
@@ -285237,7 +286264,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 51,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Mulgris Deepriver, Western Plaguelands",
@@ -285248,7 +286275,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 51,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Mulgris Deepriver, Western Plaguelands",
@@ -285279,7 +286306,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Janice Felstone, Western Plaguelands",
@@ -285290,7 +286317,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Janice's Parcel, Western Plaguelands",
@@ -285301,7 +286328,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Janice's Parcel, Western Plaguelands",
@@ -285388,7 +286415,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Stormwind City",
             map = 1453,
             startText = "Royal Factor Bathrilor, Stormwind City",
@@ -285399,7 +286426,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Undercity",
             map = 1458,
             startText = "Royal Overseer Bauhaus, Undercity",
@@ -285410,7 +286437,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Ol' Emma, Stormwind City",
@@ -285421,7 +286448,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Janice Felstone, Western Plaguelands",
@@ -285443,7 +286470,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 53,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Storm Shadowhoof, Winterspring",
@@ -285454,7 +286481,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 53,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Storm Shadowhoof, Winterspring",
@@ -285465,7 +286492,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 53,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Storm Shadowhoof, Winterspring",
@@ -285476,7 +286503,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 53,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Storm Shadowhoof, Winterspring",
@@ -285487,7 +286514,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Mrs. Dalson's Diary, Western Plaguelands",
@@ -285510,7 +286537,9 @@ LJ.Data.ForeverDB = {
             min = 16,
             side = "A",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Dendrite Starblaze, Moonglade",
             finishText = "Mathrengyl Bearwalker, Darnassus"
         },
@@ -285541,7 +286570,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Prospector Ironboot, Tanaris",
@@ -285552,7 +286581,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Stormwind City",
             map = 1453,
             startText = "Crier Goodman, Stormwind City",
@@ -285573,7 +286602,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Donova Snowden, Winterspring",
@@ -285617,7 +286646,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Donova Snowden, Winterspring",
@@ -285628,7 +286657,7 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Donova Snowden, Winterspring",
@@ -285660,7 +286689,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Ironforge",
             map = 1455,
             startText = "Courier Hammerfall, Ironforge",
@@ -285671,7 +286700,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Darnassus",
             map = 1457,
             startText = "Herald Moonstalker, Darnassus",
@@ -285682,7 +286711,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Commander Ashlam Valorfist, Western Plaguelands",
@@ -285693,7 +286722,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Warcaller Gorlach, Orgrimmar",
@@ -285704,7 +286733,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Harbinger Balthazad, Undercity",
@@ -285715,29 +286744,29 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Bluff Runner Windstrider, Thunder Bluff",
-            finishText = "High Executor Derrington, Western Plaguelands"
+            finishText = "High Executor Derrington, Tirisfal Glades"
         },
         [5096] = {
             name = "Scarlet Diversions",
             level = 53,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
-            startText = "High Executor Derrington, Western Plaguelands",
-            finishText = "High Executor Derrington, Western Plaguelands"
+            startText = "High Executor Derrington, Tirisfal Glades",
+            finishText = "High Executor Derrington, Tirisfal Glades"
         },
         [5097] = {
             name = "All Along the Watchtowers",
             level = 56,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Commander Ashlam Valorfist, Western Plaguelands",
@@ -285748,10 +286777,10 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
-            startText = "High Executor Derrington, Western Plaguelands",
+            startText = "High Executor Derrington, Tirisfal Glades",
             finishText = "High Executor Derrington, Western Plaguelands"
         },
         [5102] = {
@@ -285759,7 +286788,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 55,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Spire",
             startText = "Marshal Maxwell, Burning Steppes",
             finishText = "Marshal Maxwell, Burning Steppes"
@@ -285779,7 +286808,7 @@ LJ.Data.ForeverDB = {
             level = 59,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Donova Snowden, Winterspring",
@@ -285790,7 +286819,7 @@ LJ.Data.ForeverDB = {
             level = 59,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Crudely-written Log",
@@ -285843,7 +286872,7 @@ LJ.Data.ForeverDB = {
             level = 59,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Donova Snowden, Winterspring",
@@ -285854,7 +286883,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 40,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Leatherworking",
             startText = "Peter Galen, Azshara",
             finishText = "Peter Galen, Azshara"
@@ -285864,7 +286893,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Marlene Redpath, Western Plaguelands",
@@ -285926,7 +286955,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 40,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Leatherworking",
             startText = "Se'Jib, Stranglethorn Vale",
             finishText = "Se'Jib, Stranglethorn Vale"
@@ -285936,7 +286965,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Pamela Redpath, Eastern Plaguelands",
@@ -285958,7 +286987,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Pamela Redpath, Eastern Plaguelands",
@@ -285969,7 +286998,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Marlene Redpath, Western Plaguelands",
@@ -285980,7 +287009,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Chromie, Western Plaguelands",
@@ -286002,7 +287031,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 48,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Taronn Redfeather, Felwood",
@@ -286035,7 +287064,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 48,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Islen Waterseer, The Barrens",
@@ -286078,7 +287107,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Umi Rumplesnicker, Winterspring",
@@ -286100,7 +287129,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 48,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Greta Mosshoof, Felwood",
@@ -286142,7 +287171,7 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Carlin Redpath, Eastern Plaguelands",
@@ -286153,7 +287182,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 49,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Blood Red Key",
@@ -286164,7 +287193,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 49,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Captured Arko'narin, Felwood",
@@ -286175,7 +287204,7 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 49,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Jessir Moonbow, Felwood",
@@ -286186,7 +287215,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Carlin Redpath, Eastern Plaguelands",
@@ -286197,7 +287226,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Chromie, Western Plaguelands",
@@ -286208,7 +287237,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Carlin Redpath, Eastern Plaguelands",
@@ -286219,7 +287248,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 55,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Stratholme",
             startText = "Betina Bigglezink, Eastern Plaguelands",
             finishText = "Betina Bigglezink, Eastern Plaguelands"
@@ -286229,8 +287258,9 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 55,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Stratholme",
+            map = 1423,
             startText = "Betina Bigglezink, Eastern Plaguelands",
             finishText = "Betina Bigglezink, Eastern Plaguelands"
         },
@@ -286239,7 +287269,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 55,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Stratholme",
             startText = "Smokey LaRue, Eastern Plaguelands",
             finishText = "Smokey LaRue, Eastern Plaguelands"
@@ -286249,7 +287279,7 @@ LJ.Data.ForeverDB = {
             level = 53,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Commander Ashlam Valorfist, Western Plaguelands",
@@ -286260,7 +287290,7 @@ LJ.Data.ForeverDB = {
             level = 53,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "High Priestess MacDonnell, Western Plaguelands",
@@ -286271,7 +287301,7 @@ LJ.Data.ForeverDB = {
             level = 53,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Scourge Cauldron, Western Plaguelands",
@@ -286282,7 +287312,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "High Priestess MacDonnell, Western Plaguelands",
@@ -286293,7 +287323,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Scourge Cauldron, Western Plaguelands",
@@ -286304,7 +287334,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "High Priestess MacDonnell, Western Plaguelands",
@@ -286315,7 +287345,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Scourge Cauldron, Western Plaguelands",
@@ -286326,7 +287356,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "High Priestess MacDonnell, Western Plaguelands",
@@ -286337,7 +287367,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Scourge Cauldron, Western Plaguelands",
@@ -286348,21 +287378,21 @@ LJ.Data.ForeverDB = {
             level = 53,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
-            startText = "High Executor Derrington, Western Plaguelands",
-            finishText = "Shadow Priestess Vandis, Western Plaguelands"
+            startText = "High Executor Derrington, Tirisfal Glades",
+            finishText = "Shadow Priestess Vandis, Tirisfal Glades"
         },
         [5229] = {
             name = "Target: Felstone Field",
             level = 53,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
-            startText = "Shadow Priestess Vandis, Western Plaguelands",
+            startText = "Shadow Priestess Vandis, Tirisfal Glades",
             finishText = "Scourge Cauldron, Western Plaguelands"
         },
         [5230] = {
@@ -286370,21 +287400,21 @@ LJ.Data.ForeverDB = {
             level = 53,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Scourge Cauldron, Western Plaguelands",
-            finishText = "Shadow Priestess Vandis, Western Plaguelands"
+            finishText = "Shadow Priestess Vandis, Tirisfal Glades"
         },
         [5231] = {
             name = "Target: Dalson's Tears",
             level = 55,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
-            startText = "Shadow Priestess Vandis, Western Plaguelands",
+            startText = "Shadow Priestess Vandis, Tirisfal Glades",
             finishText = "Scourge Cauldron, Western Plaguelands"
         },
         [5232] = {
@@ -286392,11 +287422,11 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Scourge Cauldron, Western Plaguelands",
-            finishText = "Shadow Priestess Vandis, Western Plaguelands"
+            finishText = "Shadow Priestess Vandis, Tirisfal Glades"
         },
         [5233] = {
             name = "Target: Writhing Haunt",
@@ -286406,7 +287436,7 @@ LJ.Data.ForeverDB = {
             src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
-            startText = "Shadow Priestess Vandis, Western Plaguelands",
+            startText = "Shadow Priestess Vandis, Tirisfal Glades",
             finishText = "Scourge Cauldron, Western Plaguelands"
         },
         [5234] = {
@@ -286418,17 +287448,17 @@ LJ.Data.ForeverDB = {
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Scourge Cauldron, Western Plaguelands",
-            finishText = "Shadow Priestess Vandis, Western Plaguelands"
+            finishText = "Shadow Priestess Vandis, Tirisfal Glades"
         },
         [5235] = {
             name = "Target: Gahrron's Withering",
             level = 58,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
-            startText = "Shadow Priestess Vandis, Western Plaguelands",
+            startText = "Shadow Priestess Vandis, Tirisfal Glades",
             finishText = "Scourge Cauldron, Western Plaguelands"
         },
         [5236] = {
@@ -286436,7 +287466,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Scourge Cauldron, Western Plaguelands",
@@ -286447,7 +287477,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Commander Ashlam Valorfist, Western Plaguelands",
@@ -286458,7 +287488,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "High Executor Derrington, Western Plaguelands",
@@ -286469,7 +287499,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Pamela Redpath, Eastern Plaguelands",
@@ -286480,7 +287510,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 48,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Greta Mosshoof, Felwood",
@@ -286491,7 +287521,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 55,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Stratholme",
             startText = "Leonid Barthalomew the Revered, Eastern Plaguelands",
             finishText = "Leonid Barthalomew the Revered, Eastern Plaguelands"
@@ -286512,7 +287542,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 53,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Jaron Stoneshaper, Winterspring",
@@ -286523,7 +287553,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 53,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Aurora Skycaller, Eastern Plaguelands",
@@ -286556,7 +287586,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 53,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Ivy Leafrunner, Felwood",
@@ -286578,7 +287608,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 55,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Stratholme",
             startText = "Duke Nicholas Zverenhoff, Eastern Plaguelands",
             finishText = "Duke Nicholas Zverenhoff, Eastern Plaguelands"
@@ -286663,7 +287693,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 55,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Caretaker Alen, Eastern Plaguelands",
@@ -286674,7 +287704,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 55,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Stratholme",
             startText = "Egan, Eastern Plaguelands",
             finishText = "Egan, Eastern Plaguelands"
@@ -286684,7 +287714,7 @@ LJ.Data.ForeverDB = {
             level = 40,
             min = 40,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Blacksmithing",
             startText = "Grumnus Steelshaper, Ironforge",
             finishText = "Grumnus Steelshaper, Ironforge"
@@ -286694,7 +287724,7 @@ LJ.Data.ForeverDB = {
             level = 40,
             min = 40,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Blacksmithing",
             startText = "Ironus Coldsteel, Ironforge",
             finishText = "Ironus Coldsteel, Ironforge"
@@ -286704,7 +287734,7 @@ LJ.Data.ForeverDB = {
             level = 40,
             min = 40,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blacksmithing",
             startText = "Okothos Ironrager, Orgrimmar",
             finishText = "Okothos Ironrager, Orgrimmar"
@@ -286765,9 +287795,9 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 52,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Scholomance",
-            startText = "Alexi Barov, Western Plaguelands",
+            startText = "Alexi Barov, Tirisfal Glades",
             finishText = "Alexi Barov, Western Plaguelands"
         },
         [5342] = {
@@ -286775,7 +287805,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 52,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Alexi Barov, Western Plaguelands",
@@ -286786,7 +287816,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 52,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Scholomance",
             startText = "Weldon Barov, Western Plaguelands",
             finishText = "Weldon Barov, Western Plaguelands"
@@ -286796,7 +287826,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 52,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Weldon Barov, Western Plaguelands",
@@ -286829,7 +287859,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 55,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Scholomance",
             startText = "Eva Sarkhoff, Western Plaguelands",
             finishText = "Eva Sarkhoff, Western Plaguelands"
@@ -286849,7 +287879,7 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 49,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Remains of Trey Lightforge, Felwood",
@@ -286871,7 +287901,18 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
+            zone = "Western Plaguelands",
+            map = 1422,
+            startText = "Argent Officer Pureheart, Western Plaguelands",
+            finishText = "Argent Officer Pureheart, Western Plaguelands"
+        },
+        [5402] = {
+            name = "Minion's Scourgestones",
+            level = 55,
+            min = 50,
+            side = "BOTH",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Argent Officer Pureheart, Western Plaguelands",
@@ -286882,11 +287923,22 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Argent Officer Garush, Western Plaguelands",
-            finishText = "Argent Officer Garush, Western Plaguelands"
+            finishText = "Argent Officer Garush, Tirisfal Glades"
+        },
+        [5421] = {
+            name = "Fish in a Bucket",
+            level = 1,
+            min = 25,
+            side = "H",
+            src = "forever",
+            zone = "Desolace",
+            map = 1443,
+            startText = "Jinar'Zillen, Desolace",
+            finishText = "Jinar'Zillen, Desolace"
         },
         [5441] = {
             name = "Lazy Peons",
@@ -287033,7 +288085,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 55,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Alchemist Arbington, Western Plaguelands",
@@ -287049,6 +288101,17 @@ LJ.Data.ForeverDB = {
             map = 1422,
             startText = "Argent Quartermaster Lightspark, Western Plaguelands",
             finishText = "Argent Quartermaster Lightspark, Western Plaguelands"
+        },
+        [5510] = {
+            name = "Minion's Scourgestones",
+            level = 55,
+            min = 50,
+            side = "BOTH",
+            src = "forever",
+            zone = "Eastern Plaguelands",
+            map = 1423,
+            startText = "Duke Nicholas Zverenhoff, Eastern Plaguelands",
+            finishText = "Duke Nicholas Zverenhoff, Eastern Plaguelands"
         },
         [5511] = {
             name = "The Key to Scholomance",
@@ -287088,7 +288151,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 55,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Scholomance",
             startText = "Eva Sarkhoff, Western Plaguelands",
             finishText = "Eva Sarkhoff, Western Plaguelands"
@@ -287109,7 +288172,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 56,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Dire Maul",
             startText = "Knot Thimblejack",
             finishText = "Knot Thimblejack"
@@ -287162,7 +288225,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 56,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Moonglade",
             map = 1450,
             startText = "Rabine Saturna, Moonglade",
@@ -287173,7 +288236,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 56,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Moonglade",
             map = 1450,
             startText = "Rabine Saturna, Moonglade",
@@ -287194,7 +288257,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 55,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Scholomance",
             startText = "Betina Bigglezink, Eastern Plaguelands",
             finishText = "Betina Bigglezink, Eastern Plaguelands"
@@ -287214,7 +288277,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 55,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Commander Ashlam Valorfist, Western Plaguelands",
@@ -287225,7 +288288,7 @@ LJ.Data.ForeverDB = {
             level = 53,
             min = 47,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Azshara",
             map = 1447,
             startText = "Kim'jael, Azshara",
@@ -287258,7 +288321,7 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 55,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Alchemist Arbington, Western Plaguelands",
@@ -287269,7 +288332,7 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 55,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Alchemist Arbington, Western Plaguelands",
@@ -287291,10 +288354,10 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
-            startText = "Tirion Fordring, Western Plaguelands",
+            startText = "Tirion Fordring, Eastern Plaguelands",
             finishText = "Tirion Fordring, Western Plaguelands"
         },
         [5543] = {
@@ -287302,10 +288365,10 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
-            startText = "Tirion Fordring, Western Plaguelands",
+            startText = "Tirion Fordring, Eastern Plaguelands",
             finishText = "Tirion Fordring, Western Plaguelands"
         },
         [5544] = {
@@ -287313,10 +288376,10 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
-            startText = "Tirion Fordring, Western Plaguelands",
+            startText = "Tirion Fordring, Eastern Plaguelands",
             finishText = "Tirion Fordring, Western Plaguelands"
         },
         [5545] = {
@@ -287352,12 +288415,22 @@ LJ.Data.ForeverDB = {
             startText = "Taiga Wisemane, Desolace",
             finishText = "Taiga Wisemane, Desolace"
         },
+        [5582] = {
+            name = "Healthy Dragon Scale",
+            level = 58,
+            min = 55,
+            side = "BOTH",
+            src = "forever",
+            zone = "Scholomance",
+            startText = "Healthy Dragon Scale",
+            finishText = "Betina Bigglezink, Eastern Plaguelands"
+        },
         [5601] = {
             name = "Sister Pamela",
             level = 55,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Jessica Redpath, Winterspring",
@@ -287369,7 +288442,9 @@ LJ.Data.ForeverDB = {
             min = 5,
             side = "A",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Laurna Morninglight, Teldrassil",
             finishText = "Laurna Morninglight, Teldrassil"
         },
@@ -287379,7 +288454,9 @@ LJ.Data.ForeverDB = {
             min = 5,
             side = "A",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Shanda, Teldrassil",
             finishText = "Laurna Morninglight, Teldrassil"
         },
@@ -287389,7 +288466,9 @@ LJ.Data.ForeverDB = {
             min = 5,
             side = "A",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Priestess Anetta, Elwynn Forest",
             finishText = "Priestess Josetta, Elwynn Forest"
         },
@@ -287399,7 +288478,9 @@ LJ.Data.ForeverDB = {
             min = 5,
             side = "A",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Priestess Josetta, Elwynn Forest",
             finishText = "Priestess Josetta, Elwynn Forest"
         },
@@ -287409,7 +288490,9 @@ LJ.Data.ForeverDB = {
             min = 5,
             side = "A",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Maxan Anvol, Dun Morogh",
             finishText = "Maxan Anvol, Dun Morogh"
         },
@@ -287419,7 +288502,9 @@ LJ.Data.ForeverDB = {
             min = 5,
             side = "A",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Branstock Khalder, Dun Morogh",
             finishText = "Maxan Anvol, Dun Morogh"
         },
@@ -287429,7 +288514,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Priestess Alathea, Darnassus",
             finishText = "Priestess Alathea, Darnassus"
         },
@@ -287439,7 +288526,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Priestess Josetta, Elwynn Forest",
             finishText = "Priestess Alathea, Darnassus"
         },
@@ -287449,7 +288538,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Laurna Morninglight, Teldrassil",
             finishText = "Priestess Alathea, Darnassus"
         },
@@ -287459,7 +288550,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Maxan Anvol, Dun Morogh",
             finishText = "Priestess Alathea, Darnassus"
         },
@@ -287469,7 +288562,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Brother Joshua, Stormwind City",
             finishText = "Priestess Alathea, Darnassus"
         },
@@ -287479,7 +288574,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Nara Meideros, Stormwind City",
             finishText = "Priestess Alathea, Darnassus"
         },
@@ -287489,7 +288586,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Braenna Flintcrag, Ironforge",
             finishText = "Priestess Alathea, Darnassus"
         },
@@ -287499,7 +288598,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Lariia, Darnassus",
             finishText = "High Priestess Laurena, Stormwind City"
         },
@@ -287509,7 +288610,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Maxan Anvol, Dun Morogh",
             finishText = "High Priestess Laurena, Stormwind City"
         },
@@ -287519,7 +288622,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Laurna Morninglight, Teldrassil",
             finishText = "High Priestess Laurena, Stormwind City"
         },
@@ -287529,7 +288634,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Priestess Josetta, Elwynn Forest",
             finishText = "High Priestess Laurena, Stormwind City"
         },
@@ -287539,7 +288646,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Nara Meideros, Stormwind City",
             finishText = "High Priestess Laurena, Stormwind City"
         },
@@ -287549,7 +288658,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "High Priest Rohan, Ironforge",
             finishText = "High Priestess Laurena, Stormwind City"
         },
@@ -287559,7 +288670,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "High Priestess Laurena, Stormwind City",
             finishText = "High Priest Rohan, Ironforge"
         },
@@ -287569,7 +288682,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Miles Welsh, Thunder Bluff",
             finishText = "Ur'kyo, Orgrimmar"
         },
@@ -287579,7 +288694,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Father Lankester, Undercity",
             finishText = "Ur'kyo, Orgrimmar"
         },
@@ -287589,7 +288706,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Zayus, Orgrimmar",
             finishText = "Aelthalyste, Undercity"
         },
@@ -287599,7 +288718,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Toldren Deepiron, Ironforge",
             finishText = "High Priest Rohan, Ironforge"
         },
@@ -287609,7 +288730,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Father Cobb, Thunder Bluff",
             finishText = "Aelthalyste, Undercity"
         },
@@ -287619,7 +288742,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Lariia, Darnassus",
             finishText = "High Priest Rohan, Ironforge"
         },
@@ -287629,7 +288754,9 @@ LJ.Data.ForeverDB = {
             min = 5,
             side = "H",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Tai'jin, Durotar",
             finishText = "Tai'jin, Durotar"
         },
@@ -287639,7 +288766,9 @@ LJ.Data.ForeverDB = {
             min = 5,
             side = "H",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Ken'jai, Durotar",
             finishText = "Tai'jin, Durotar"
         },
@@ -287649,7 +288778,9 @@ LJ.Data.ForeverDB = {
             min = 5,
             side = "H",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Dark Cleric Beryl, Tirisfal Glades",
             finishText = "Dark Cleric Beryl, Tirisfal Glades"
         },
@@ -287659,7 +288790,9 @@ LJ.Data.ForeverDB = {
             min = 5,
             side = "H",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Dark Cleric Duesten, Tirisfal Glades",
             finishText = "Dark Cleric Beryl, Tirisfal Glades"
         },
@@ -287668,8 +288801,10 @@ LJ.Data.ForeverDB = {
             level = 10,
             min = 10,
             side = "H",
-            src = "classic",
-            zone = "Priest",
+            src = "forever",
+            classes = {
+                "Priest"
+            },
             startText = "Ur'kyo, Orgrimmar",
             finishText = "Ur'kyo, Orgrimmar"
         },
@@ -287679,8 +288814,10 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Priest",
-            startText = "Var'jun, Mulgore",
+            classes = {
+                "Priest"
+            },
+            startText = "Tai'jin, Durotar",
             finishText = "Ur'kyo, Orgrimmar"
         },
         [5655] = {
@@ -287689,7 +288826,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Tai'jin, Durotar",
             finishText = "Ur'kyo, Orgrimmar"
         },
@@ -287699,7 +288838,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Father Lankester, Undercity",
             finishText = "Ur'kyo, Orgrimmar"
         },
@@ -287709,7 +288850,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Ken'jai, Durotar",
             finishText = "Ur'kyo, Orgrimmar"
         },
@@ -287719,7 +288862,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Father Lankester, Undercity",
             finishText = "Aelthalyste, Undercity"
         },
@@ -287728,8 +288873,10 @@ LJ.Data.ForeverDB = {
             level = 10,
             min = 10,
             side = "H",
-            src = "classic",
-            zone = "Priest",
+            src = "forever",
+            classes = {
+                "Priest"
+            },
             startText = "Tai'jin, Durotar",
             finishText = "Aelthalyste, Undercity"
         },
@@ -287739,7 +288886,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Miles Welsh, Thunder Bluff",
             finishText = "Aelthalyste, Undercity"
         },
@@ -287749,7 +288898,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Ur'kyo, Orgrimmar",
             finishText = "Aelthalyste, Undercity"
         },
@@ -287759,7 +288910,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Dark Cleric Beryl, Tirisfal Glades",
             finishText = "Aelthalyste, Undercity"
         },
@@ -287769,7 +288922,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Laurna Morninglight, Teldrassil",
             finishText = "Priestess Alathea, Darnassus"
         },
@@ -287779,7 +288934,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "High Priestess Laurena, Stormwind City",
             finishText = "Priestess Alathea, Darnassus"
         },
@@ -287789,7 +288946,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Astarii Starseeker, Darnassus",
             finishText = "Priestess Alathea, Darnassus"
         },
@@ -287799,7 +288958,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "High Priest Rohan, Ironforge",
             finishText = "Priestess Alathea, Darnassus"
         },
@@ -287808,8 +288969,10 @@ LJ.Data.ForeverDB = {
             level = 20,
             min = 20,
             side = "A",
-            src = "classic",
-            zone = "Priest",
+            src = "forever",
+            classes = {
+                "Priest"
+            },
             startText = "Brother Joshua, Stormwind City",
             finishText = "High Priestess Laurena, Stormwind City"
         },
@@ -287819,7 +288982,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "A",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "High Priest Rohan, Ironforge",
             finishText = "High Priestess Laurena, Stormwind City"
         },
@@ -287829,7 +288994,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "H",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Father Lankester, Undercity",
             finishText = "Aelthalyste, Undercity"
         },
@@ -287838,8 +289005,10 @@ LJ.Data.ForeverDB = {
             level = 20,
             min = 20,
             side = "H",
-            src = "classic",
-            zone = "Priest",
+            src = "forever",
+            classes = {
+                "Priest"
+            },
             startText = "Zayus, Orgrimmar",
             finishText = "Ur'kyo, Orgrimmar"
         },
@@ -287979,7 +289148,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Tirion Fordring, Western Plaguelands",
@@ -288023,18 +289192,18 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
-            startText = "Tirion Fordring, Western Plaguelands",
-            finishText = "Tirion Fordring, Western Plaguelands"
+            startText = "Tirion Fordring, Eastern Plaguelands",
+            finishText = "Tirion Fordring, Eastern Plaguelands"
         },
         [5801] = {
             name = "Fire Plume Forged",
             level = 57,
             min = 55,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Tanaris",
             map = 1446,
             startText = "Krinkle Goodsteel, Tanaris",
@@ -288045,7 +289214,7 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 55,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Tanaris",
             map = 1446,
             startText = "Krinkle Goodsteel, Tanaris",
@@ -288056,7 +289225,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 55,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Alchemist Arbington, Western Plaguelands",
@@ -288144,21 +289313,21 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
-            startText = "Tirion Fordring, Western Plaguelands",
-            finishText = "Tirion Fordring, Western Plaguelands"
+            startText = "Tirion Fordring, Eastern Plaguelands",
+            finishText = "Tirion Fordring, Eastern Plaguelands"
         },
         [5846] = {
             name = "Of Love and Family",
             level = 58,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
-            startText = "Tirion Fordring, Western Plaguelands",
+            startText = "Tirion Fordring, Eastern Plaguelands",
             finishText = "Artist Renfray, Western Plaguelands"
         },
         [5847] = {
@@ -288177,20 +289346,20 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Stratholme",
             startText = "Artist Renfray, Western Plaguelands",
-            finishText = "Tirion Fordring, Western Plaguelands"
+            finishText = "Tirion Fordring, Eastern Plaguelands"
         },
         [5861] = {
             name = "Find Myranda",
             level = 60,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
-            startText = "Tirion Fordring, Western Plaguelands",
+            startText = "Tirion Fordring, Eastern Plaguelands",
             finishText = "Myranda the Hag, Western Plaguelands"
         },
         [5862] = {
@@ -288198,7 +289367,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Myranda the Hag, Western Plaguelands",
@@ -288264,7 +289433,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 48,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Arathandris Silversky, Felwood",
@@ -288286,7 +289455,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 48,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Maybess Riverbreeze, Felwood",
@@ -288319,7 +289488,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 48,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Maybess Riverbreeze, Felwood",
@@ -288336,6 +289505,16 @@ LJ.Data.ForeverDB = {
             startText = "Maybess Riverbreeze, Felwood",
             finishText = "Maybess Riverbreeze, Felwood"
         },
+        [5893] = {
+            name = "Coldtooth Supplies",
+            level = 60,
+            min = 51,
+            side = "H",
+            src = "classic",
+            zone = "Alterac Valley",
+            startText = "Frostwolf Quartermaster, Alterac Valley",
+            finishText = "Frostwolf Quartermaster, Alterac Valley"
+        },
         [5901] = {
             name = "A Plague Upon Thee",
             level = 55,
@@ -288344,7 +289523,7 @@ LJ.Data.ForeverDB = {
             src = "forever",
             zone = "Tirisfal Glades",
             map = 1420,
-            startText = "Mickey Levine, Western Plaguelands",
+            startText = "Mickey Levine, Tirisfal Glades",
             finishText = "Mickey Levine, Western Plaguelands"
         },
         [5902] = {
@@ -288352,7 +289531,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 48,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Tirisfal Glades",
             map = 1420,
             startText = "Mickey Levine, Western Plaguelands",
@@ -288363,7 +289542,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 48,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Nathaniel Dumah, Western Plaguelands",
@@ -288374,7 +289553,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 48,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Nathaniel Dumah, Western Plaguelands",
@@ -288386,7 +289565,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Mathrengyl Bearwalker, Darnassus",
             finishText = "Dendrite Starblaze, Moonglade"
         },
@@ -288396,7 +289577,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Turak Runetotem, Thunder Bluff",
             finishText = "Dendrite Starblaze, Moonglade"
         },
@@ -288406,7 +289589,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Kal, Teldrassil",
             finishText = "Mathrengyl Bearwalker, Darnassus"
         },
@@ -288416,7 +289601,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "classic",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Fylerian Nightwing, Darnassus",
             finishText = "Mathrengyl Bearwalker, Darnassus"
         },
@@ -288426,8 +289613,10 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Druid",
-            startText = "Denatharion, Darnassus",
+            classes = {
+                "Druid"
+            },
+            startText = "Kal, Teldrassil",
             finishText = "Mathrengyl Bearwalker, Darnassus"
         },
         [5926] = {
@@ -288436,7 +289625,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "classic",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Gennia Runetotem, Mulgore",
             finishText = "Turak Runetotem, Thunder Bluff"
         },
@@ -288446,7 +289637,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "classic",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Gart Mistrunner, Mulgore",
             finishText = "Turak Runetotem, Thunder Bluff"
         },
@@ -288456,7 +289649,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Gennia Runetotem, Mulgore",
             finishText = "Turak Runetotem, Thunder Bluff"
         },
@@ -288466,7 +289661,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Dendrite Starblaze, Moonglade",
             finishText = "Dendrite Starblaze, Moonglade"
         },
@@ -288476,7 +289673,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Dendrite Starblaze, Moonglade",
             finishText = "Dendrite Starblaze, Moonglade"
         },
@@ -288486,7 +289685,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Dendrite Starblaze, Moonglade",
             finishText = "Mathrengyl Bearwalker, Darnassus"
         },
@@ -288496,7 +289697,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Dendrite Starblaze, Moonglade",
             finishText = "Turak Runetotem, Thunder Bluff"
         },
@@ -288527,7 +289730,7 @@ LJ.Data.ForeverDB = {
             level = 38,
             min = 32,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Desolace",
             map = 1443,
             startText = "Rigger Gizelton, Desolace",
@@ -288538,18 +289741,18 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 52,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Highlord Taelan Fordring, Western Plaguelands",
-            finishText = "Tirion Fordring, Western Plaguelands"
+            finishText = "Lord Tirion Fordring, Western Plaguelands"
         },
         [5961] = {
             name = "The Champion of the Banshee Queen",
             level = 56,
             min = 54,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Undercity",
             map = 1458,
             startText = "Lady Sylvanas Windrunner, Undercity",
@@ -288561,7 +289764,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Mathrengyl Bearwalker, Darnassus",
             finishText = "Mathrengyl Bearwalker, Darnassus"
         },
@@ -288571,7 +289776,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Turak Runetotem, Thunder Bluff",
             finishText = "Turak Runetotem, Thunder Bluff"
         },
@@ -288580,7 +289787,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Kirsta Deepshadow, Western Plaguelands",
@@ -288591,7 +289798,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Caretaker Alen, Eastern Plaguelands",
@@ -288602,7 +289809,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 54,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Nathanos Blightcaller, Eastern Plaguelands",
@@ -288613,7 +289820,7 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Kirsta Deepshadow, Western Plaguelands",
@@ -288624,7 +289831,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 54,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Torn Scroll, Eastern Plaguelands",
@@ -288635,7 +289842,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Kirsta Deepshadow, Western Plaguelands",
@@ -288646,7 +289853,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 54,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Smokey LaRue, Eastern Plaguelands",
@@ -288668,7 +289875,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Gregor Greystone, Winterspring",
@@ -288690,7 +289897,7 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Gregor Greystone, Winterspring",
@@ -288723,7 +289930,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 54,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Smokey LaRue, Eastern Plaguelands",
@@ -288734,7 +289941,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 54,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Nathanos Blightcaller, Eastern Plaguelands",
@@ -288746,7 +289953,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Yaw Sharpmane, Mulgore",
             finishText = "Yaw Sharpmane, Mulgore"
         },
@@ -288756,7 +289965,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Thotar, Durotar",
             finishText = "Thotar, Durotar"
         },
@@ -288766,7 +289977,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Dazalar, Teldrassil",
             finishText = "Dazalar, Teldrassil"
         },
@@ -288776,7 +289989,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Grif Wildheart, Dun Morogh",
             finishText = "Grif Wildheart, Dun Morogh"
         },
@@ -288786,7 +290001,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "classic",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Kary Thunderhorn, Thunder Bluff",
             finishText = "Yaw Sharpmane, Mulgore"
         },
@@ -288796,7 +290013,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "classic",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Lanka Farshot, Mulgore",
             finishText = "Yaw Sharpmane, Mulgore"
         },
@@ -288806,7 +290025,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "classic",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Thotar, Durotar",
             finishText = "Yaw Sharpmane, Mulgore"
         },
@@ -288816,7 +290037,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "classic",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Jen'shan, Durotar",
             finishText = "Thotar, Durotar"
         },
@@ -288826,7 +290049,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Kali Remik, Durotar",
             finishText = "Thotar, Durotar"
         },
@@ -288836,7 +290061,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "classic",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Sian'dur, Orgrimmar",
             finishText = "Thotar, Durotar"
         },
@@ -288846,7 +290073,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Jocaste, Darnassus",
             finishText = "Dazalar, Teldrassil"
         },
@@ -288856,7 +290085,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "classic",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Ayanna Everstride, Teldrassil",
             finishText = "Dazalar, Teldrassil"
         },
@@ -288866,7 +290097,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "classic",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Dorion, Darnassus",
             finishText = "Dazalar, Teldrassil"
         },
@@ -288875,8 +290108,10 @@ LJ.Data.ForeverDB = {
             level = 10,
             min = 10,
             side = "A",
-            src = "classic",
-            zone = "Hunter",
+            src = "forever",
+            classes = {
+                "Hunter"
+            },
             startText = "Thorgas Grimson, Dun Morogh",
             finishText = "Grif Wildheart, Dun Morogh"
         },
@@ -288886,7 +290121,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "classic",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Regnus Thundergranite, Ironforge",
             finishText = "Grif Wildheart, Dun Morogh"
         },
@@ -288896,7 +290133,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "classic",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Einris Brightspear, Stormwind City",
             finishText = "Grif Wildheart, Dun Morogh"
         },
@@ -288906,7 +290145,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Thotar, Durotar",
             finishText = "Ormak Grimshot, Orgrimmar"
         },
@@ -288916,7 +290157,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Thotar, Durotar",
             finishText = "Thotar, Durotar"
         },
@@ -288926,7 +290169,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Thotar, Durotar",
             finishText = "Thotar, Durotar"
         },
@@ -288936,7 +290181,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Grif Wildheart, Dun Morogh",
             finishText = "Grif Wildheart, Dun Morogh"
         },
@@ -288946,7 +290193,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Grif Wildheart, Dun Morogh",
             finishText = "Grif Wildheart, Dun Morogh"
         },
@@ -288956,7 +290205,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Grif Wildheart, Dun Morogh",
             finishText = "Belia Thundergranite, Ironforge"
         },
@@ -288966,7 +290217,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Yaw Sharpmane, Mulgore",
             finishText = "Yaw Sharpmane, Mulgore"
         },
@@ -288976,7 +290229,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Yaw Sharpmane, Mulgore",
             finishText = "Yaw Sharpmane, Mulgore"
         },
@@ -288986,7 +290241,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "H",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Yaw Sharpmane, Mulgore",
             finishText = "Holt Thunderhorn, Thunder Bluff"
         },
@@ -288996,7 +290253,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Dazalar, Teldrassil",
             finishText = "Dazalar, Teldrassil"
         },
@@ -289006,7 +290265,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Dazalar, Teldrassil",
             finishText = "Dazalar, Teldrassil"
         },
@@ -289016,7 +290277,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Dazalar, Teldrassil",
             finishText = "Jocaste, Darnassus"
         },
@@ -289026,7 +290289,9 @@ LJ.Data.ForeverDB = {
             min = 14,
             side = "A",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Mathrengyl Bearwalker, Darnassus",
             finishText = "Dendrite Starblaze, Moonglade"
         },
@@ -289036,7 +290301,9 @@ LJ.Data.ForeverDB = {
             min = 14,
             side = "A",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Dendrite Starblaze, Moonglade",
             finishText = "Alanndarian Nightsong, Darkshore"
         },
@@ -289046,7 +290313,9 @@ LJ.Data.ForeverDB = {
             min = 14,
             side = "A",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Alanndarian Nightsong, Darkshore",
             finishText = "Alanndarian Nightsong, Darkshore"
         },
@@ -289056,7 +290325,9 @@ LJ.Data.ForeverDB = {
             min = 14,
             side = "A",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Alanndarian Nightsong, Darkshore",
             finishText = "Dendrite Starblaze, Moonglade"
         },
@@ -289066,7 +290337,9 @@ LJ.Data.ForeverDB = {
             min = 14,
             side = "A",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Dendrite Starblaze, Moonglade",
             finishText = "Mathrengyl Bearwalker, Darnassus"
         },
@@ -289076,7 +290349,9 @@ LJ.Data.ForeverDB = {
             min = 14,
             side = "H",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Turak Runetotem, Thunder Bluff",
             finishText = "Dendrite Starblaze, Moonglade"
         },
@@ -289086,7 +290361,9 @@ LJ.Data.ForeverDB = {
             min = 14,
             side = "H",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Dendrite Starblaze, Moonglade",
             finishText = "Tonga Runetotem, The Barrens"
         },
@@ -289096,7 +290373,9 @@ LJ.Data.ForeverDB = {
             min = 14,
             side = "H",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Tonga Runetotem, The Barrens",
             finishText = "Tonga Runetotem, The Barrens"
         },
@@ -289106,7 +290385,9 @@ LJ.Data.ForeverDB = {
             min = 14,
             side = "H",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Tonga Runetotem, The Barrens",
             finishText = "Dendrite Starblaze, Moonglade"
         },
@@ -289116,7 +290397,9 @@ LJ.Data.ForeverDB = {
             min = 14,
             side = "H",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             startText = "Dendrite Starblaze, Moonglade",
             finishText = "Turak Runetotem, Thunder Bluff"
         },
@@ -289136,7 +290419,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 54,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Nathanos Blightcaller, Eastern Plaguelands",
@@ -289158,7 +290441,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 56,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Nathanos Blightcaller, Eastern Plaguelands",
@@ -289290,7 +290573,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 56,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Stratholme",
             startText = "Nathanos Blightcaller, Eastern Plaguelands",
             finishText = "Nathanos Blightcaller, Eastern Plaguelands"
@@ -289344,7 +290627,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 56,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Master Mathias Shaw, Stormwind City",
@@ -289355,7 +290638,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 56,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Flint Shadowmore, Western Plaguelands",
@@ -289366,7 +290649,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 56,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Stormwind City",
             map = 1453,
             startText = "Flint Shadowmore, Western Plaguelands",
@@ -289377,7 +290660,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 56,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Highlord Bolvar Fordragon, Stormwind City",
@@ -289707,7 +290990,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 48,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Western Plaguelands",
             map = 1422,
             startText = "Termite Barrel, Western Plaguelands",
@@ -289788,7 +291071,7 @@ LJ.Data.ForeverDB = {
             zone = "Stormwind City",
             map = 1453,
             startText = "Marshal Maxwell, Burning Steppes",
-            finishText = "Reginald Windsor"
+            finishText = "Squire Rowe, Stormwind City"
         },
         [6403] = {
             name = "The Great Masquerade",
@@ -289894,7 +291177,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Spire",
             startText = "Haleh, Winterspring",
             finishText = "Haleh, Winterspring"
@@ -290252,7 +291535,7 @@ LJ.Data.ForeverDB = {
             level = 59,
             min = 53,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Harlo Wigglesworth, Winterspring",
@@ -290335,7 +291618,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 35,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Cooking",
             startText = "Daryl Riknussun, Ironforge",
             finishText = "Dirge Quikcleave, Tanaris"
@@ -290366,7 +291649,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 35,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "First Aid",
             startText = "Arnok, Orgrimmar",
             finishText = "Doctor Gregory Victor, Arathi Highlands"
@@ -290386,7 +291669,7 @@ LJ.Data.ForeverDB = {
             level = 45,
             min = 35,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "First Aid",
             startText = "Nissa Firestone, Ironforge",
             finishText = "Doctor Gustaf VanHowzen, Dustwallow Marsh"
@@ -290417,7 +291700,7 @@ LJ.Data.ForeverDB = {
             level = 30,
             min = 25,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Thousand Needles",
             map = 1441,
             startText = "Parqual Fintallas, Undercity",
@@ -290471,9 +291754,23 @@ LJ.Data.ForeverDB = {
             min = 24,
             side = "BOTH",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Elegant Letter",
             finishText = "Fahrad, Alterac Mountains"
+        },
+        [6701] = {
+            name = "Syndicate Emblems",
+            level = 60,
+            min = 24,
+            side = "BOTH",
+            src = "forever",
+            classes = {
+                "Rogue"
+            },
+            startText = "Ravenholdt Guard, Alterac Mountains",
+            finishText = "Ravenholdt Guard, Alterac Mountains"
         },
         [6721] = {
             name = "The Hunter's Path",
@@ -290481,7 +291778,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "classic",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Regnus Thundergranite, Ironforge",
             finishText = "Dazalar, Teldrassil"
         },
@@ -290491,7 +291790,9 @@ LJ.Data.ForeverDB = {
             min = 10,
             side = "A",
             src = "classic",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Einris Brightspear, Stormwind City",
             finishText = "Dazalar, Teldrassil"
         },
@@ -290500,7 +291801,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 54,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Darnassus",
             map = 1457,
             startText = "Arch Druid Fandral Staghelm, Darnassus",
@@ -290694,6 +291995,26 @@ LJ.Data.ForeverDB = {
             startText = "Kaymard Copperpinch, Orgrimmar",
             finishText = "Great-father Winter, Orgrimmar"
         },
+        [6985] = {
+            name = "Irondeep Supplies",
+            level = 60,
+            min = 51,
+            side = "H",
+            src = "classic",
+            zone = "Alterac Valley",
+            startText = "Frostwolf Quartermaster, Alterac Valley",
+            finishText = "Frostwolf Quartermaster, Alterac Valley"
+        },
+        [7001] = {
+            name = "Empty Stables",
+            level = 60,
+            min = 51,
+            side = "H",
+            src = "classic",
+            zone = "Alterac Valley",
+            startText = "Frostwolf Stable Master, Alterac Valley",
+            finishText = "Frostwolf Stable Master, Alterac Valley"
+        },
         [7003] = {
             name = "Zapped Giants",
             level = 48,
@@ -290762,6 +292083,7 @@ LJ.Data.ForeverDB = {
             side = "BOTH",
             src = "forever",
             zone = "Maraudon",
+            map = 1443,
             startText = "Willow, Desolace",
             finishText = "Willow, Desolace"
         },
@@ -290770,7 +292092,7 @@ LJ.Data.ForeverDB = {
             level = 47,
             min = 41,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Maraudon",
             startText = "Vark Battlescar, Desolace",
             finishText = "Vark Battlescar, Desolace"
@@ -290870,7 +292192,7 @@ LJ.Data.ForeverDB = {
             level = 51,
             min = 45,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Maraudon",
             startText = "Selendra, Desolace",
             finishText = "Selendra, Desolace"
@@ -290941,7 +292263,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 51,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Alterac Valley",
             map = 1416,
             startText = "Corporal Teeka Bloodsnarl, Alterac Mountains",
@@ -290952,7 +292274,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 51,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Alterac Valley",
             map = 1416,
             startText = "Corporal Teeka Bloodsnarl, Alterac Mountains",
@@ -290963,7 +292285,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 51,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Alterac Valley",
             map = 1416,
             startText = "Sergeant Durgen Stormpike, Alterac Mountains",
@@ -291005,7 +292327,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 51,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Alterac Valley",
             map = 1416,
             startText = "Corporal Teeka Bloodsnarl, Alterac Mountains",
@@ -291016,7 +292338,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 51,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Alterac Valley",
             map = 1416,
             startText = "Prospector Stonehewer, Alterac Mountains",
@@ -291027,7 +292349,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 51,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Alterac Valley",
             map = 1416,
             startText = "Voggah Deathgrip, Alterac Mountains",
@@ -291038,7 +292360,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 51,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Alterac Valley",
             map = 1416,
             startText = "Warmaster Laggrond, Alterac Mountains",
@@ -291049,7 +292371,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 51,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Alterac Valley",
             map = 1416,
             startText = "Lieutenant Haggerdin, Alterac Mountains",
@@ -291179,7 +292501,7 @@ LJ.Data.ForeverDB = {
             level = 54,
             min = 48,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Blackrock Depths",
             startText = "Shadowmage Vivian Lagrave, Badlands",
             finishText = "Shadowmage Vivian Lagrave, Badlands"
@@ -291236,7 +292558,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 51,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Alterac Valley",
             map = 1454,
             startText = "Frostwolf Ambassador Rokhstrom, Orgrimmar",
@@ -291247,7 +292569,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 51,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Alterac Valley",
             map = 1455,
             startText = "Lieutenant Rotimer, Ironforge",
@@ -291260,8 +292582,8 @@ LJ.Data.ForeverDB = {
             side = "H",
             src = "classic",
             zone = "Alterac Valley",
-            startText = "Commander Louis Philips",
-            finishText = "Commander Louis Philips"
+            startText = "Commander Louis Philips, Alterac Valley",
+            finishText = "Commander Louis Philips, Alterac Valley"
         },
         [7282] = {
             name = "Brotherly Love",
@@ -291290,8 +292612,8 @@ LJ.Data.ForeverDB = {
             side = "H",
             src = "classic",
             zone = "Alterac Valley",
-            startText = "Commander Mulfort",
-            finishText = "Commander Mulfort"
+            startText = "Commander Mulfort, Alterac Valley",
+            finishText = "Commander Mulfort, Alterac Valley"
         },
         [7321] = {
             name = "Soothing Turtle Bisque",
@@ -291401,7 +292723,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 54,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Dire Maul",
             startText = "Azj'Tordin, Feralas",
             finishText = "Azj'Tordin, Feralas"
@@ -291411,7 +292733,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 56,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Dire Maul",
             startText = "Shen'dralar Ancient",
             finishText = "Shen'dralar Ancient"
@@ -291441,7 +292763,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 54,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Dire Maul",
             startText = "Sage Korolusk, Feralas",
             finishText = "Sage Korolusk, Feralas"
@@ -291451,10 +292773,20 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 54,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Dire Maul",
             startText = "Scholar Runethorn, Feralas",
             finishText = "Scholar Runethorn, Feralas"
+        },
+        [7483] = {
+            name = "Libram of Rapidity",
+            level = 60,
+            min = 58,
+            side = "BOTH",
+            src = "classic",
+            zone = "Dire Maul",
+            startText = "Lorekeeper Lydros",
+            finishText = "Lorekeeper Lydros"
         },
         [7486] = {
             name = "A Hero's Reward",
@@ -291472,7 +292804,7 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 54,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Dire Maul",
             startText = "Latronicus Moonspear, Feralas",
             finishText = "Latronicus Moonspear, Feralas"
@@ -291482,7 +292814,7 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 54,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Dire Maul",
             startText = "Talo Thornhoof, Feralas",
             finishText = "Talo Thornhoof, Feralas"
@@ -291513,9 +292845,9 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 54,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Dire Maul",
-            startText = "Warcaller Gorlach, Orgrimmar",
+            startText = "Harbinger Balthazad, Undercity",
             finishText = "Talo Thornhoof, Feralas"
         },
         [7493] = {
@@ -291534,7 +292866,7 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 54,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Dire Maul",
             startText = "Crier Goodman, Stormwind City",
             finishText = "Latronicus Moonspear, Feralas"
@@ -291708,7 +293040,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Spackle Thornberry, Stormwind City",
             finishText = "Mor'zul Bloodbringer, Burning Steppes"
         },
@@ -291718,7 +293052,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Mor'zul Bloodbringer, Burning Steppes",
             finishText = "Mor'zul Bloodbringer, Burning Steppes"
         },
@@ -291728,7 +293064,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Mor'zul Bloodbringer, Burning Steppes",
             finishText = "Gorzeeki Wildeyes, Burning Steppes"
         },
@@ -291738,7 +293076,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Daio the Decrepit, Blasted Lands",
             finishText = "Daio the Decrepit, Blasted Lands"
         },
@@ -291748,7 +293088,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Daio the Decrepit, Blasted Lands",
             finishText = "Daio the Decrepit, Blasted Lands"
         },
@@ -291758,7 +293100,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Daio the Decrepit, Blasted Lands",
             finishText = "Daio the Decrepit, Blasted Lands"
         },
@@ -291767,8 +293111,10 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Warlock",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
             startText = "Niby the Almighty, Felwood",
             finishText = "Impsy, Felwood"
         },
@@ -291777,8 +293123,10 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Warlock",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
             startText = "Impsy, Felwood",
             finishText = "Impsy, Felwood"
         },
@@ -291788,7 +293136,9 @@ LJ.Data.ForeverDB = {
             min = 50,
             side = "BOTH",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Impsy, Felwood",
             finishText = "Niby the Almighty, Felwood"
         },
@@ -291808,7 +293158,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Eris Havenfire, Eastern Plaguelands",
             finishText = "Eris Havenfire, Eastern Plaguelands"
         },
@@ -291818,7 +293170,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             startText = "Eris Havenfire, Eastern Plaguelands",
             finishText = "Eris Havenfire, Eastern Plaguelands"
         },
@@ -291828,7 +293182,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Gorzeeki Wildeyes, Burning Steppes",
             finishText = "Lord Banehollow, Felwood"
         },
@@ -291838,7 +293194,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Lord Banehollow, Felwood",
             finishText = "Lord Banehollow, Felwood"
         },
@@ -291848,7 +293206,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Lord Banehollow, Felwood",
             finishText = "Gorzeeki Wildeyes, Burning Steppes"
         },
@@ -291858,7 +293218,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Mor'zul Bloodbringer, Burning Steppes",
             finishText = "Gorzeeki Wildeyes, Burning Steppes"
         },
@@ -291868,7 +293230,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Mor'zul Bloodbringer, Burning Steppes",
             finishText = "Gorzeeki Wildeyes, Burning Steppes"
         },
@@ -291878,7 +293242,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Mor'zul Bloodbringer, Burning Steppes",
             finishText = "Gorzeeki Wildeyes, Burning Steppes"
         },
@@ -291888,7 +293254,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Gorzeeki Wildeyes, Burning Steppes",
             finishText = "Gorzeeki Wildeyes, Burning Steppes"
         },
@@ -291898,7 +293266,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Gorzeeki Wildeyes, Burning Steppes",
             finishText = "Gorzeeki Wildeyes, Burning Steppes"
         },
@@ -291908,7 +293278,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Mor'zul Bloodbringer, Burning Steppes",
             finishText = "Dreadsteed Spirit"
         },
@@ -291918,7 +293290,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Ancient Petrified Leaf",
             finishText = "Vartrus the Ancient"
         },
@@ -291928,7 +293302,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Vartrus the Ancient",
             finishText = "Vartrus the Ancient"
         },
@@ -291938,7 +293314,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Hastat the Ancient",
             finishText = "Hastat the Ancient"
         },
@@ -291948,7 +293326,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Stoma the Ancient",
             finishText = "Stoma the Ancient"
         },
@@ -291958,7 +293338,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             startText = "Vartrus the Ancient",
             finishText = "Vartrus the Ancient"
         },
@@ -291968,7 +293350,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "A",
             src = "classic",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Lord Grayson Shadowbreaker, Stormwind City",
             finishText = "High Priest Rohan, Ironforge"
         },
@@ -291978,7 +293362,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "A",
             src = "classic",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Duthorian Rall, Stormwind City",
             finishText = "Lord Grayson Shadowbreaker, Stormwind City"
         },
@@ -291988,7 +293374,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "A",
             src = "classic",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "High Priest Rohan, Ironforge",
             finishText = "Lord Grayson Shadowbreaker, Stormwind City"
         },
@@ -291998,7 +293386,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "A",
             src = "classic",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Lord Grayson Shadowbreaker, Stormwind City",
             finishText = "Lord Grayson Shadowbreaker, Stormwind City"
         },
@@ -292008,7 +293398,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "A",
             src = "classic",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Lord Grayson Shadowbreaker, Stormwind City",
             finishText = "Grimand Elmore, Stormwind City"
         },
@@ -292017,8 +293409,10 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 60,
             side = "A",
-            src = "classic",
-            zone = "Paladin",
+            src = "forever",
+            classes = {
+                "Paladin"
+            },
             startText = "Grimand Elmore, Stormwind City",
             finishText = "Grimand Elmore, Stormwind City"
         },
@@ -292028,7 +293422,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "A",
             src = "classic",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Lord Grayson Shadowbreaker, Stormwind City",
             finishText = "Ancient Equine Spirit"
         },
@@ -292038,7 +293434,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "A",
             src = "classic",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Ancient Equine Spirit",
             finishText = "Lord Grayson Shadowbreaker, Stormwind City"
         },
@@ -292048,7 +293446,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "A",
             src = "classic",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Merideth Carlson, Hillsbrad Foothills",
             finishText = "Merideth Carlson, Hillsbrad Foothills"
         },
@@ -292058,7 +293458,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "A",
             src = "classic",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Lord Grayson Shadowbreaker, Stormwind City",
             finishText = "Lord Grayson Shadowbreaker, Stormwind City"
         },
@@ -292068,7 +293470,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "A",
             src = "classic",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Lord Grayson Shadowbreaker, Stormwind City",
             finishText = "Darkreaver's Fallen Charger"
         },
@@ -292078,7 +293482,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "A",
             src = "classic",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Grimand Elmore, Stormwind City",
             finishText = "Lord Grayson Shadowbreaker, Stormwind City"
         },
@@ -292198,7 +293604,9 @@ LJ.Data.ForeverDB = {
             min = 58,
             side = "H",
             src = "classic",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Sagorne Creststrider, Orgrimmar",
             finishText = "Sagorne Creststrider, Orgrimmar"
         },
@@ -292207,7 +293615,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 45,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Wanted/Missing/Lost & Found, Searing Gorge",
@@ -292250,7 +293658,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 45,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Master Smith Burninate, Searing Gorge",
@@ -292261,7 +293669,7 @@ LJ.Data.ForeverDB = {
             level = 49,
             min = 45,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Hansel Heavyhands, Searing Gorge",
@@ -292272,18 +293680,40 @@ LJ.Data.ForeverDB = {
             level = 49,
             min = 45,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Hansel Heavyhands, Searing Gorge",
             finishText = "Hansel Heavyhands, Searing Gorge"
+        },
+        [7725] = {
+            name = "Again With the Zapped Giants",
+            level = 55,
+            min = 45,
+            side = "BOTH",
+            src = "forever",
+            zone = "Feralas",
+            map = 1444,
+            startText = "Zorbin Fandazzle, Feralas",
+            finishText = "Zorbin Fandazzle, Feralas"
+        },
+        [7726] = {
+            name = "Refuel for the Zapping",
+            level = 55,
+            min = 45,
+            side = "BOTH",
+            src = "forever",
+            zone = "Feralas",
+            map = 1444,
+            startText = "Zorbin Fandazzle, Feralas",
+            finishText = "Zorbin Fandazzle, Feralas"
         },
         [7727] = {
             name = "Incendosaurs? Whateverosaur is More Like It",
             level = 49,
             min = 45,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Hansel Heavyhands, Searing Gorge",
@@ -292294,7 +293724,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 45,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Wanted/Missing/Lost & Found, Searing Gorge",
@@ -292305,7 +293735,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 45,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Searing Gorge",
             map = 1427,
             startText = "Wanted/Missing/Lost & Found, Searing Gorge",
@@ -292327,7 +293757,7 @@ LJ.Data.ForeverDB = {
             level = 47,
             min = 39,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Feralas",
             map = 1444,
             startText = "Hadoken Swiftstrider, Feralas",
@@ -292338,7 +293768,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 39,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Feralas",
             map = 1444,
             startText = "Hadoken Swiftstrider, Feralas",
@@ -292349,7 +293779,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 40,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Feralas",
             map = 1444,
             startText = "Pratt McGrubben, Feralas",
@@ -292364,6 +293794,28 @@ LJ.Data.ForeverDB = {
             zone = "Feralas",
             map = 1444,
             startText = "Jangdor Swiftstrider, Feralas",
+            finishText = "Jangdor Swiftstrider, Feralas"
+        },
+        [7735] = {
+            name = "Pristine Yeti Hide",
+            level = 48,
+            min = 40,
+            side = "A",
+            src = "forever",
+            zone = "Feralas",
+            map = 1444,
+            startText = "Pristine Yeti Hide",
+            finishText = "Pratt McGrubben, Feralas"
+        },
+        [7738] = {
+            name = "Perfect Yeti Hide",
+            level = 48,
+            min = 40,
+            side = "H",
+            src = "forever",
+            zone = "Feralas",
+            map = 1444,
+            startText = "Perfect Yeti Hide",
             finishText = "Jangdor Swiftstrider, Feralas"
         },
         [7761] = {
@@ -292471,7 +293923,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 12,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Stormwind City",
             map = 1453,
             startText = "Clavicus Knavingham, Stormwind City",
@@ -292482,7 +293934,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 12,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Darnassus",
             map = 1457,
             startText = "Raedon Duskstriker, Darnassus",
@@ -292493,7 +293945,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 26,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Stormwind City",
             map = 1453,
             startText = "Clavicus Knavingham, Stormwind City",
@@ -292504,7 +293956,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 40,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Stormwind City",
             map = 1453,
             startText = "Clavicus Knavingham, Stormwind City",
@@ -292515,7 +293967,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Stormwind City",
             map = 1453,
             startText = "Clavicus Knavingham, Stormwind City",
@@ -292526,7 +293978,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 26,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Darnassus",
             map = 1457,
             startText = "Raedon Duskstriker, Darnassus",
@@ -292537,7 +293989,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 40,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Darnassus",
             map = 1457,
             startText = "Raedon Duskstriker, Darnassus",
@@ -292548,7 +294000,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Darnassus",
             map = 1457,
             startText = "Raedon Duskstriker, Darnassus",
@@ -292559,7 +294011,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 12,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Ironforge",
             map = 1455,
             startText = "Mistina Steelshield, Ironforge",
@@ -292581,7 +294033,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 40,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Ironforge",
             map = 1455,
             startText = "Mistina Steelshield, Ironforge",
@@ -292592,7 +294044,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Ironforge",
             map = 1455,
             startText = "Mistina Steelshield, Ironforge",
@@ -292603,7 +294055,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 12,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Ironforge",
             map = 1455,
             startText = "Bubulo Acerbus, Ironforge",
@@ -292614,7 +294066,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 26,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Ironforge",
             map = 1455,
             startText = "Bubulo Acerbus, Ironforge",
@@ -292625,7 +294077,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 40,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Ironforge",
             map = 1455,
             startText = "Bubulo Acerbus, Ironforge",
@@ -292647,7 +294099,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 50,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Ironforge",
             map = 1455,
             startText = "Bubulo Acerbus, Ironforge",
@@ -292746,7 +294198,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 40,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Thunder Bluff",
             map = 1456,
             startText = "Rumstag Proudstrider, Thunder Bluff",
@@ -292801,7 +294253,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 44,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "The Hinterlands",
             map = 1425,
             startText = "Huntsman Markhor, The Hinterlands",
@@ -292812,7 +294264,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 44,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "The Hinterlands",
             map = 1425,
             startText = "Huntsman Markhor, The Hinterlands",
@@ -292889,7 +294341,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 44,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "The Hinterlands",
             map = 1425,
             startText = "Smith Slagtree, The Hinterlands",
@@ -292911,7 +294363,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 44,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "The Hinterlands",
             map = 1425,
             startText = "Otho Moji'ko, The Hinterlands",
@@ -292922,7 +294374,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 44,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "The Hinterlands",
             map = 1425,
             startText = "Otho Moji'ko, The Hinterlands",
@@ -292933,7 +294385,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 44,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "The Hinterlands",
             map = 1425,
             startText = "Otho Moji'ko, The Hinterlands",
@@ -292944,7 +294396,7 @@ LJ.Data.ForeverDB = {
             level = 48,
             min = 44,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "The Hinterlands",
             map = 1425,
             startText = "Mystic Yayo'jin, The Hinterlands",
@@ -293016,7 +294468,7 @@ LJ.Data.ForeverDB = {
             finishText = "Primal Torntusk, The Hinterlands"
         },
         [7861] = {
-            name = "Wanted: Vile Priestess Hexx and Her Minions",
+            name = "WANTED: Vile Priestess Hexx and Her Minions",
             level = 51,
             min = 46,
             side = "H",
@@ -293960,9 +295412,11 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Hunter",
-            startText = "Kary Thunderhorn, Thunder Bluff",
+            src = "forever",
+            classes = {
+                "Hunter"
+            },
+            startText = "Holt Thunderhorn, Thunder Bluff",
             finishText = "Ogtinc, Azshara"
         },
         [8153] = {
@@ -293970,8 +295424,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Hunter",
+            src = "forever",
+            classes = {
+                "Hunter"
+            },
             startText = "Ogtinc, Azshara",
             finishText = "Ogtinc, Azshara"
         },
@@ -294104,7 +295560,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Tanaris",
             map = 1446,
             startText = "Prospector Ironboot, Tanaris",
@@ -294155,8 +295611,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Hunter",
+            src = "forever",
+            classes = {
+                "Hunter"
+            },
             startText = "Ogtinc, Azshara",
             finishText = "Ogtinc, Azshara"
         },
@@ -294165,8 +295623,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Hunter",
+            src = "forever",
+            classes = {
+                "Hunter"
+            },
             startText = "Ogtinc, Azshara",
             finishText = "Ogtinc, Azshara"
         },
@@ -294176,7 +295636,9 @@ LJ.Data.ForeverDB = {
             min = 50,
             side = "BOTH",
             src = "classic",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Ormok, Orgrimmar",
             finishText = "Lord Jorach Ravenholdt, Alterac Mountains"
         },
@@ -294186,7 +295648,9 @@ LJ.Data.ForeverDB = {
             min = 50,
             side = "BOTH",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Lord Jorach Ravenholdt, Alterac Mountains",
             finishText = "Archmage Xylem, Azshara"
         },
@@ -294196,7 +295660,9 @@ LJ.Data.ForeverDB = {
             min = 50,
             side = "BOTH",
             src = "classic",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Archmage Xylem, Azshara",
             finishText = "Archmage Xylem, Azshara"
         },
@@ -294206,7 +295672,9 @@ LJ.Data.ForeverDB = {
             min = 50,
             side = "BOTH",
             src = "classic",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Archmage Xylem, Azshara",
             finishText = "Lord Jorach Ravenholdt, Alterac Mountains"
         },
@@ -294226,7 +295694,9 @@ LJ.Data.ForeverDB = {
             min = 50,
             side = "BOTH",
             src = "classic",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Fahrad, Alterac Mountains",
             finishText = "Fahrad, Alterac Mountains"
         },
@@ -294235,8 +295705,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Mage",
+            src = "forever",
+            classes = {
+                "Mage"
+            },
             startText = "Thurston Xane, Thunder Bluff",
             finishText = "Sanath Lim-yo, Azshara"
         },
@@ -294245,8 +295717,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Mage",
+            src = "forever",
+            classes = {
+                "Mage"
+            },
             startText = "Archmage Xylem, Azshara",
             finishText = "Archmage Xylem, Azshara"
         },
@@ -294255,8 +295729,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Mage",
+            src = "forever",
+            classes = {
+                "Mage"
+            },
             startText = "Archmage Xylem, Azshara",
             finishText = "Archmage Xylem, Azshara"
         },
@@ -294265,8 +295741,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Mage",
+            src = "forever",
+            classes = {
+                "Mage"
+            },
             startText = "Archmage Xylem, Azshara",
             finishText = "Archmage Xylem, Azshara"
         },
@@ -294275,8 +295753,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Priest",
+            src = "forever",
+            classes = {
+                "Priest"
+            },
             startText = "High Priestess Laurena, Stormwind City",
             finishText = "Ogtinc, Azshara"
         },
@@ -294285,8 +295765,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Priest",
+            src = "forever",
+            classes = {
+                "Priest"
+            },
             startText = "Ogtinc, Azshara",
             finishText = "Ogtinc, Azshara"
         },
@@ -294295,8 +295777,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Priest",
+            src = "forever",
+            classes = {
+                "Priest"
+            },
             startText = "Ogtinc, Azshara",
             finishText = "Ogtinc, Azshara"
         },
@@ -294305,8 +295789,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Priest",
+            src = "forever",
+            classes = {
+                "Priest"
+            },
             startText = "Ogtinc, Azshara",
             finishText = "Greta Mosshoof, Felwood"
         },
@@ -294316,7 +295802,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "H",
             src = "classic",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Sagorne Creststrider, Orgrimmar",
             finishText = "Sagorne Creststrider, Orgrimmar"
         },
@@ -294440,7 +295928,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 54,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Ironforge",
             map = 1455,
             startText = "Cenarion Emissary Jademoon, Ironforge",
@@ -294451,7 +295939,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 54,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Orgrimmar",
             map = 1454,
             startText = "Cenarion Emissary Blackhoof, Orgrimmar",
@@ -294462,7 +295950,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 54,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Silithus",
             map = 1451,
             startText = "Beetix Ficklespragg, Silithus",
@@ -294473,7 +295961,7 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 54,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Silithus",
             map = 1451,
             startText = "Beetix Ficklespragg, Silithus",
@@ -294484,7 +295972,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 54,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Silithus",
             map = 1451,
             startText = "Hermit Ortell, Silithus",
@@ -294495,7 +295983,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 54,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Silithus",
             map = 1451,
             startText = "Windcaller Proudhorn, Silithus",
@@ -294506,7 +295994,7 @@ LJ.Data.ForeverDB = {
             level = 57,
             min = 54,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Silithus",
             map = 1451,
             startText = "Windcaller Proudhorn, Silithus",
@@ -294517,7 +296005,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 54,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Silithus",
             map = 1451,
             startText = "Noggle Ficklespragg, Silithus",
@@ -294528,7 +296016,7 @@ LJ.Data.ForeverDB = {
             level = 59,
             min = 54,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Silithus",
             map = 1451,
             startText = "Wanted Poster: Deathclasp, Silithus",
@@ -294539,7 +296027,7 @@ LJ.Data.ForeverDB = {
             level = 58,
             min = 54,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Silithus",
             map = 1451,
             startText = "Geologist Larksbane, Silithus",
@@ -294550,7 +296038,7 @@ LJ.Data.ForeverDB = {
             level = 59,
             min = 54,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Silithus",
             map = 1451,
             startText = "Geologist Larksbane, Silithus",
@@ -294663,7 +296151,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 60,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Silithus",
             map = 1451,
             startText = "Commander Mar'alith, Silithus",
@@ -294685,7 +296173,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 58,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Silithus",
             map = 1451,
             startText = "Commander Mar'alith, Silithus",
@@ -294706,7 +296194,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 58,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Silithus",
             map = 1451,
             startText = "Brann Bronzebeard's Lost Letter",
@@ -294823,7 +296311,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 60,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Silithus",
             map = 1451,
             startText = "Huum Wildmane, Silithus",
@@ -294987,10 +296475,10 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 51,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Orgrimmar",
             map = 1454,
-            startText = "Horde Warbringer, The Barrens",
+            startText = "Horde Warbringer, Alterac Mountains",
             finishText = "Horde Warbringer, The Barrens"
         },
         [8368] = {
@@ -295001,18 +296489,18 @@ LJ.Data.ForeverDB = {
             src = "forever",
             zone = "Warsong Gulch",
             map = 1413,
-            startText = "Horde Warbringer, The Barrens",
-            finishText = "Horde Warbringer, The Barrens"
+            startText = "Horde Warbringer, Undercity",
+            finishText = "Horde Warbringer, Orgrimmar"
         },
         [8369] = {
             name = "Invaders of Alterac Valley",
             level = 60,
             min = 51,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Alterac Valley",
             map = 1413,
-            startText = "Horde Warbringer, The Barrens",
+            startText = "Horde Warbringer, Alterac Mountains",
             finishText = "Horde Warbringer, The Barrens"
         },
         [8370] = {
@@ -295024,14 +296512,14 @@ LJ.Data.ForeverDB = {
             zone = "Arathi Basin",
             map = 1413,
             startText = "Horde Warbringer, Thunder Bluff",
-            finishText = "Horde Warbringer, The Barrens"
+            finishText = "Horde Warbringer, Orgrimmar"
         },
         [8371] = {
             name = "Concerted Efforts",
             level = 60,
             min = 51,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Ironforge",
             map = 1455,
             startText = "Alliance Brigadier General, Ironforge",
@@ -295046,7 +296534,7 @@ LJ.Data.ForeverDB = {
             zone = "Warsong Gulch",
             map = 1455,
             startText = "Alliance Brigadier General, Ironforge",
-            finishText = "Alliance Brigadier General, Ironforge"
+            finishText = "Alliance Brigadier General, Stormwind City"
         },
         [8373] = {
             name = "The Power of Pine",
@@ -295074,7 +296562,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 51,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Alterac Valley",
             map = 1416,
             startText = "Alliance Brigadier General, Ironforge",
@@ -295166,7 +296654,39 @@ LJ.Data.ForeverDB = {
             zone = "Arathi Basin",
             map = 1455,
             startText = "Alliance Brigadier General, Ironforge",
-            finishText = "Alliance Brigadier General, Ironforge"
+            finishText = "Alliance Brigadier General, Stormwind City"
+        },
+        [8386] = {
+            name = "Fight for Warsong Gulch",
+            level = 19,
+            min = 10,
+            side = "A",
+            src = "forever",
+            zone = "Warsong Gulch",
+            startText = "Alliance Brigadier General, Ironforge",
+            finishText = "Alliance Brigadier General, Stormwind City"
+        },
+        [8389] = {
+            name = "Battle of Warsong Gulch",
+            level = 19,
+            min = 10,
+            side = "H",
+            src = "forever",
+            zone = "Warsong Gulch",
+            map = 1413,
+            startText = "Horde Warbringer, The Barrens",
+            finishText = "Horde Warbringer, Orgrimmar"
+        },
+        [8390] = {
+            name = "Conquering Arathi Basin",
+            level = 29,
+            min = 20,
+            side = "H",
+            src = "forever",
+            zone = "Arathi Basin",
+            map = 1413,
+            startText = "Horde Warbringer, The Barrens",
+            finishText = "Horde Warbringer, The Barrens"
         },
         [8393] = {
             name = "Claiming Arathi Basin",
@@ -295206,7 +296726,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 60,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Arathi Basin",
             map = 1455,
             startText = "Alliance Brigadier General, Ironforge",
@@ -295294,7 +296814,9 @@ LJ.Data.ForeverDB = {
             min = 50,
             side = "H",
             src = "classic",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Haromm, Swamp of Sorrows",
             finishText = "Bath'rah the Windwatcher, Alterac Mountains"
         },
@@ -295304,7 +296826,9 @@ LJ.Data.ForeverDB = {
             min = 50,
             side = "H",
             src = "classic",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Bath'rah the Windwatcher, Alterac Mountains",
             finishText = "Bath'rah the Windwatcher, Alterac Mountains"
         },
@@ -295314,7 +296838,9 @@ LJ.Data.ForeverDB = {
             min = 50,
             side = "H",
             src = "classic",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Bath'rah the Windwatcher, Alterac Mountains",
             finishText = "Bath'rah the Windwatcher, Alterac Mountains"
         },
@@ -295324,7 +296850,9 @@ LJ.Data.ForeverDB = {
             min = 50,
             side = "H",
             src = "classic",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Bath'rah the Windwatcher, Alterac Mountains",
             finishText = "Bath'rah the Windwatcher, Alterac Mountains"
         },
@@ -295334,7 +296862,9 @@ LJ.Data.ForeverDB = {
             min = 50,
             side = "A",
             src = "classic",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Commander Ashlam Valorfist, Western Plaguelands",
             finishText = "High Priest Thel'danis, Western Plaguelands"
         },
@@ -295343,8 +296873,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "A",
-            src = "classic",
-            zone = "Paladin",
+            src = "forever",
+            classes = {
+                "Paladin"
+            },
             startText = "Lord Grayson Shadowbreaker, Stormwind City",
             finishText = "Commander Ashlam Valorfist, Western Plaguelands"
         },
@@ -295354,17 +296886,21 @@ LJ.Data.ForeverDB = {
             min = 50,
             side = "A",
             src = "classic",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "High Priest Thel'danis, Western Plaguelands",
             finishText = "Commander Ashlam Valorfist, Western Plaguelands"
         },
         [8417] = {
             name = "A Troubled Spirit",
-            level = 50,
+            level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Warrior",
+            src = "forever",
+            classes = {
+                "Warrior"
+            },
             startText = "Torm Ragetotem, Thunder Bluff",
             finishText = "Fallen Hero of the Horde, Swamp of Sorrows"
         },
@@ -295374,7 +296910,9 @@ LJ.Data.ForeverDB = {
             min = 50,
             side = "A",
             src = "classic",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             startText = "Commander Ashlam Valorfist, Western Plaguelands",
             finishText = "Commander Ashlam Valorfist, Western Plaguelands"
         },
@@ -295383,8 +296921,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Warlock",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
             startText = "Demisette Cloyce, Stormwind City",
             finishText = "Impsy, Felwood"
         },
@@ -295394,7 +296934,9 @@ LJ.Data.ForeverDB = {
             min = 50,
             side = "BOTH",
             src = "classic",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             startText = "Impsy, Felwood",
             finishText = "Impsy, Felwood"
         },
@@ -295403,8 +296945,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Warlock",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
             startText = "Impsy, Felwood",
             finishText = "Impsy, Felwood"
         },
@@ -295413,8 +296957,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Warlock",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
             startText = "Impsy, Felwood",
             finishText = "Impsy, Felwood"
         },
@@ -295423,8 +296969,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Warrior",
+            src = "forever",
+            classes = {
+                "Warrior"
+            },
             startText = "Fallen Hero of the Horde, Swamp of Sorrows",
             finishText = "Fallen Hero of the Horde, Swamp of Sorrows"
         },
@@ -295434,7 +296982,9 @@ LJ.Data.ForeverDB = {
             min = 50,
             side = "BOTH",
             src = "classic",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             startText = "Fallen Hero of the Horde, Swamp of Sorrows",
             finishText = "Fallen Hero of the Horde, Swamp of Sorrows"
         },
@@ -295443,8 +296993,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Warrior",
+            src = "forever",
+            classes = {
+                "Warrior"
+            },
             startText = "Fallen Hero of the Horde, Swamp of Sorrows",
             finishText = "Fallen Hero of the Horde, Swamp of Sorrows"
         },
@@ -295464,7 +297016,7 @@ LJ.Data.ForeverDB = {
             level = 39,
             min = 30,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Warsong Gulch",
             map = 1413,
             startText = "Horde Warbringer, The Barrens",
@@ -295497,7 +297049,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 60,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Warsong Gulch",
             map = 1413,
             startText = "Horde Warbringer, The Barrens",
@@ -295512,6 +297064,17 @@ LJ.Data.ForeverDB = {
             zone = "Warsong Gulch",
             map = 1413,
             startText = "Horde Warbringer, The Barrens",
+            finishText = "Horde Warbringer, Orgrimmar"
+        },
+        [8432] = {
+            name = "Battle of Warsong Gulch",
+            level = 39,
+            min = 30,
+            side = "H",
+            src = "forever",
+            zone = "Warsong Gulch",
+            map = 1413,
+            startText = "Horde Warbringer, The Barrens",
             finishText = "Horde Warbringer, The Barrens"
         },
         [8436] = {
@@ -295519,10 +297082,10 @@ LJ.Data.ForeverDB = {
             level = 39,
             min = 30,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Arathi Basin",
             map = 1413,
-            startText = "Horde Warbringer, The Barrens",
+            startText = "Horde Warbringer, Arathi Highlands",
             finishText = "Horde Warbringer, The Barrens"
         },
         [8437] = {
@@ -295541,7 +297104,7 @@ LJ.Data.ForeverDB = {
             level = 59,
             min = 50,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Arathi Basin",
             map = 1413,
             startText = "Horde Warbringer, The Barrens",
@@ -295552,11 +297115,22 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 60,
             side = "H",
-            src = "classic",
+            src = "forever",
             zone = "Arathi Basin",
             map = 1413,
             startText = "Horde Warbringer, The Barrens",
             finishText = "Horde Warbringer, The Barrens"
+        },
+        [8440] = {
+            name = "Conquering Arathi Basin",
+            level = 39,
+            min = 30,
+            side = "H",
+            src = "forever",
+            zone = "Arathi Basin",
+            map = 1413,
+            startText = "Horde Warbringer, The Barrens",
+            finishText = "Horde Warbringer, Arathi Highlands"
         },
         [8446] = {
             name = "Shrouded in Nightmare",
@@ -295594,7 +297168,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 45,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Timbermaw Hold",
             map = 1448,
             startText = "Nafien, Felwood",
@@ -295605,7 +297179,7 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 45,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Grazle, Felwood",
@@ -295627,18 +297201,40 @@ LJ.Data.ForeverDB = {
             level = 55,
             min = 45,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Nafien, Felwood",
             finishText = "Salfa, Winterspring"
+        },
+        [8466] = {
+            name = "Feathers for Grazle",
+            level = 55,
+            min = 45,
+            side = "BOTH",
+            src = "forever",
+            zone = "Felwood",
+            map = 1448,
+            startText = "Grazle, Felwood",
+            finishText = "Grazle, Felwood"
+        },
+        [8467] = {
+            name = "Feathers for Nafien",
+            level = 55,
+            min = 45,
+            side = "BOTH",
+            src = "forever",
+            zone = "Felwood",
+            map = 1448,
+            startText = "Nafien, Felwood",
+            finishText = "Nafien, Felwood"
         },
         [8470] = {
             name = "Deadwood Ritual Totem",
             level = 55,
             min = 45,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Felwood",
             map = 1448,
             startText = "Deadwood Ritual Totem",
@@ -295649,7 +297245,7 @@ LJ.Data.ForeverDB = {
             level = 56,
             min = 50,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Winterspring",
             map = 1452,
             startText = "Winterfall Ritual Totem",
@@ -295916,7 +297512,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Stranglethorn Vale",
             map = 1434,
             startText = "Captain Hecklebury Smotts, Stranglethorn Vale",
@@ -295927,7 +297523,7 @@ LJ.Data.ForeverDB = {
             level = 50,
             min = 40,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Stranglethorn Vale",
             map = 1434,
             startText = "Sprogger, Stranglethorn Vale",
@@ -297914,7 +299510,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 58,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Tanaris",
             map = 1446,
             startText = "Mux Manascrambler, Tanaris",
@@ -297925,7 +299521,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 58,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Tanaris",
             map = 1446,
             startText = "Deliana, Ironforge",
@@ -297947,7 +299543,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 58,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Tanaris",
             map = 1446,
             startText = "Mux Manascrambler, Tanaris",
@@ -298002,7 +299598,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 58,
             side = "A",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Deliana, Ironforge",
@@ -298178,7 +299774,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 58,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Stratholme",
             startText = "Anthion Harmon, Eastern Plaguelands",
             finishText = "Ysida Harmon"
@@ -298199,7 +299795,7 @@ LJ.Data.ForeverDB = {
             level = 60,
             min = 58,
             side = "BOTH",
-            src = "classic",
+            src = "forever",
             zone = "Eastern Plaguelands",
             map = 1423,
             startText = "Anthion Harmon, Eastern Plaguelands",
@@ -299017,8 +300613,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Druid",
+            src = "forever",
+            classes = {
+                "Druid"
+            },
             startText = "Torwa Pathfinder, Un'Goro Crater",
             finishText = "Torwa Pathfinder, Un'Goro Crater"
         },
@@ -299027,8 +300625,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Druid",
+            src = "forever",
+            classes = {
+                "Druid"
+            },
             startText = "Torwa Pathfinder, Un'Goro Crater",
             finishText = "Torwa Pathfinder, Un'Goro Crater"
         },
@@ -299037,8 +300637,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Druid",
+            src = "forever",
+            classes = {
+                "Druid"
+            },
             startText = "Torwa Pathfinder, Un'Goro Crater",
             finishText = "Torwa Pathfinder, Un'Goro Crater"
         },
@@ -299047,8 +300649,10 @@ LJ.Data.ForeverDB = {
             level = 52,
             min = 50,
             side = "BOTH",
-            src = "classic",
-            zone = "Druid",
+            src = "forever",
+            classes = {
+                "Druid"
+            },
             startText = "Turak Runetotem, Thunder Bluff",
             finishText = "Torwa Pathfinder, Un'Goro Crater"
         },
@@ -299699,7 +301303,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Archmage Xylem, Azshara",
             finishText = "Archmage Xylem, Azshara"
         },
@@ -299709,7 +301315,9 @@ LJ.Data.ForeverDB = {
             min = 60,
             side = "BOTH",
             src = "classic",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             startText = "Archmage Xylem, Azshara",
             finishText = "Archmage Xylem, Azshara"
         },
@@ -299844,18 +301452,25 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "H",
             src = "forever",
-            zone = "Warlock",
+            classes = {
+                "Warlock"
+            },
             map = 1454,
-            startText = "Cazul, Orgrimmar"
+            startText = "Cazul, Orgrimmar",
+            finishText = "Magar, Orgrimmar"
         },
         [65610] = {
             name = "Wish You Were Here",
             level = 27,
             min = nil,
-            side = "BOTH",
+            side = "H",
             src = "forever",
-            zone = "Warlock",
-            map = 1413
+            classes = {
+                "Warlock"
+            },
+            map = 1440,
+            startText = "Magar, Orgrimmar",
+            finishText = "Gan'rul Bloodeye, Orgrimmar"
         },
         [76156] = {
             name = "Stalk With The Earthmother",
@@ -299864,6 +301479,7 @@ LJ.Data.ForeverDB = {
             side = "BOTH",
             src = "forever",
             zone = "Mulgore",
+            map = 1412,
             startText = "Boarton Shadetotem, Thunder Bluff",
             finishText = "Boarton Shadetotem, Thunder Bluff"
         },
@@ -299889,13 +301505,21 @@ LJ.Data.ForeverDB = {
             startText = "Boarton Shadetotem, Thunder Bluff",
             finishText = "Boarton Shadetotem, Thunder Bluff"
         },
+        [78124] = {
+            name = "Nar'thalas Almanac",
+            level = nil,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            finishText = "Garion Wendell, Stormwind City"
+        },
         [78127] = {
             name = "The Dalaran Digest",
             level = nil,
             min = nil,
             side = "BOTH",
             src = "forever",
-            finishText = "Garion Wendell, Stormwind City"
+            finishText = "Owen Thadd, Undercity"
         },
         [78142] = {
             name = "Bewitchments and Glamours",
@@ -299945,13 +301569,23 @@ LJ.Data.ForeverDB = {
             src = "forever",
             finishText = "Owen Thadd, Undercity"
         },
+        [78150] = {
+            name = "Friend of the Library",
+            level = nil,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            finishText = "Garion Wendell, Stormwind City"
+        },
         [78261] = {
             name = "The Horn of Xelthos",
             level = 23,
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             map = 1413,
             startText = "Object #410369, Silverpine Forest",
             finishText = "Dead Drop, Silverpine Forest"
@@ -300119,7 +301753,8 @@ LJ.Data.ForeverDB = {
             src = "forever",
             zone = "Desolace",
             map = 1417,
-            startText = "Tokal, Stranglethorn Vale"
+            startText = "Tokal, Stranglethorn Vale",
+            finishText = "Illari's Loot Cache, Arathi Highlands"
         },
         [79358] = {
             name = "Storm, Earth, and Fire",
@@ -300127,10 +301762,25 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             map = 1418,
             startText = "Veyric Thunderhame, Arathi Highlands",
             finishText = "Veyric Thunderhame, Arathi Highlands"
+        },
+        [79360] = {
+            name = "Elemental Aid",
+            level = 33,
+            min = nil,
+            side = "H",
+            src = "forever",
+            classes = {
+                "Shaman"
+            },
+            map = 1441,
+            startText = "Prate Cloudseer, Thousand Needles",
+            finishText = "Rau Cliffrunner, Thousand Needles"
         },
         [79362] = {
             name = "Grant's Shield",
@@ -300158,7 +301808,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             map = 1441
         },
         [79624] = {
@@ -300194,6 +301846,22 @@ LJ.Data.ForeverDB = {
         },
         [79947] = {
             name = "Geomancy: The Stone-Cold Truth",
+            level = nil,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            finishText = "Owen Thadd, Undercity"
+        },
+        [79949] = {
+            name = "A Web of Lies: Debunking Myths and Legends",
+            level = nil,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            finishText = "Owen Thadd, Undercity"
+        },
+        [79950] = {
+            name = "Demons and You",
             level = nil,
             min = nil,
             side = "BOTH",
@@ -300248,6 +301916,38 @@ LJ.Data.ForeverDB = {
             startText = "Pocket Litter, Stonetalon Mountains",
             finishText = "Mound of Dirt, Stonetalon Mountains"
         },
+        [80001] = {
+            name = "Rekindle",
+            level = nil,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            finishText = "Firepit, Stonetalon Mountains"
+        },
+        [81924] = {
+            name = "Wisdom of the Guardians",
+            level = 50,
+            min = 40,
+            side = "BOTH",
+            src = "forever"
+        },
+        [81952] = {
+            name = "Everyday Etiquette",
+            level = nil,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            finishText = "Garion Wendell, Stormwind City"
+        },
+        [84156] = {
+            name = "An Earnest Proposition",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Orgrimmar",
+            map = 1444
+        },
         [86576] = {
             name = "Bloodfury Trinkets",
             level = 26,
@@ -300291,6 +301991,28 @@ LJ.Data.ForeverDB = {
             startText = "Discarded Fishing Toolbox, Loch Modan",
             finishText = "Khara Deepwater, Loch Modan"
         },
+        [86615] = {
+            name = "Treaty Obligations",
+            level = 51,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Aerie Peak",
+            map = 1425,
+            startText = "Tove Redstone, The Hinterlands",
+            finishText = "Tove Redstone, The Hinterlands"
+        },
+        [86620] = {
+            name = "Fledgling Rescue",
+            level = 51,
+            min = nil,
+            side = "A",
+            src = "forever",
+            zone = "The Hinterlands",
+            map = 1425,
+            startText = "Gryphon Master Talonaxe, The Hinterlands",
+            finishText = "Gryphon Master Talonaxe, The Hinterlands"
+        },
         [86667] = {
             name = "Snowbound",
             level = 10,
@@ -300312,6 +302034,17 @@ LJ.Data.ForeverDB = {
             map = 1440,
             startText = "Shandrina, Ashenvale",
             finishText = "Shandrina, Ashenvale"
+        },
+        [86776] = {
+            name = "Ingredients for the Forge",
+            level = 30,
+            min = nil,
+            side = "A",
+            src = "forever",
+            zone = "Loch Modan",
+            map = 1432,
+            startText = "Morhan Coppertongue, Loch Modan",
+            finishText = "Morhan Coppertongue, Loch Modan"
         },
         [86784] = {
             name = "Sticks and Bones",
@@ -300368,13 +302101,69 @@ LJ.Data.ForeverDB = {
             startText = "Ashlan Stonesmirk, Wetlands",
             finishText = "Ashlan Stonesmirk, Wetlands"
         },
+        [88807] = {
+            name = "Slay the Spitelash",
+            level = 48,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Azshara",
+            map = 1447,
+            startText = "Commander Truesong, Azshara",
+            finishText = "Commander Truesong, Azshara"
+        },
+        [88857] = {
+            name = "Saving a Sentinel",
+            level = 47,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Azshara",
+            map = 1447,
+            startText = "Sentinel Keldara Sunblade, Azshara",
+            finishText = "Commander Truesong, Azshara"
+        },
+        [89001] = {
+            name = "Home on the Range",
+            level = 48,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Azshara",
+            map = 1447,
+            startText = "Berdun Cliffbrew, Azshara",
+            finishText = "Berdun Cliffbrew, Azshara"
+        },
+        [89013] = {
+            name = "Gettin' Buzzed",
+            level = 48,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Azshara",
+            map = 1447,
+            startText = "Berdun Cliffbrew, Azshara",
+            finishText = "Berdun Cliffbrew, Azshara"
+        },
+        [90854] = {
+            name = "Leather for Inclement Weather",
+            level = 57,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Zet'gan, Mount Hyjal"
+        },
         [90902] = {
             name = "Rediscovering the Light",
             level = 2,
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1420,
             startText = "Aramis Hammerhand, Tirisfal Glades",
             finishText = "Aramis Hammerhand, Tirisfal Glades"
@@ -300385,7 +302174,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1420,
             startText = "Aramis Hammerhand, Tirisfal Glades",
             finishText = "Aramis Hammerhand, Tirisfal Glades"
@@ -300396,7 +302187,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1420,
             startText = "Aramis Hammerhand, Tirisfal Glades",
             finishText = "Shari Stilwell, Tirisfal Glades"
@@ -300407,7 +302200,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1420,
             startText = "Shari Stilwell, Tirisfal Glades",
             finishText = "Breton Samuels, Tirisfal Glades"
@@ -300418,7 +302213,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1420,
             startText = "Breton Samuels, Tirisfal Glades",
             finishText = "Breton Samuels, Tirisfal Glades"
@@ -300429,7 +302226,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1420,
             startText = "Breton Samuels, Tirisfal Glades",
             finishText = "Danitha Morr, Tirisfal Glades"
@@ -300440,7 +302239,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1420,
             startText = "Jorin Croge, Tirisfal Glades",
             finishText = "Jorin Croge, Tirisfal Glades"
@@ -300451,7 +302252,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1420,
             startText = "Danitha Morr, Tirisfal Glades",
             finishText = "Danitha Morr, Tirisfal Glades"
@@ -300481,7 +302284,7 @@ LJ.Data.ForeverDB = {
         [91725] = {
             name = "Stolen Enchanting Supplies",
             level = 10,
-            min = nil,
+            min = 7,
             side = "BOTH",
             src = "forever",
             zone = "Elwynn Forest",
@@ -300491,8 +302294,8 @@ LJ.Data.ForeverDB = {
         },
         [91732] = {
             name = "Good Steel",
-            level = 10,
-            min = nil,
+            level = 7,
+            min = 6,
             side = "BOTH",
             src = "forever",
             zone = "Elwynn Forest",
@@ -300510,6 +302313,17 @@ LJ.Data.ForeverDB = {
             map = 1429,
             startText = "Ormin Pelford, Elwynn Forest",
             finishText = "Ormin Pelford, Elwynn Forest"
+        },
+        [91737] = {
+            name = "Remote Contact",
+            level = 52,
+            min = nil,
+            side = "H",
+            src = "forever",
+            zone = "Azshara",
+            map = 1447,
+            startText = "Magatha Grimtotem, Thunder Bluff",
+            finishText = "Jediga, Azshara"
         },
         [91740] = {
             name = "Croaky's Head",
@@ -300596,6 +302410,28 @@ LJ.Data.ForeverDB = {
             startText = "Kitta Firewind, Elwynn Forest",
             finishText = "Kitta Firewind, Elwynn Forest"
         },
+        [91754] = {
+            name = "Rub Some Dirt In It",
+            level = 56,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Hyacinth, Mount Hyjal",
+            finishText = "Hyacinth, Mount Hyjal"
+        },
+        [91755] = {
+            name = "Leaves to Ligatures",
+            level = 56,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Hyacinth, Mount Hyjal",
+            finishText = "Hyacinth, Mount Hyjal"
+        },
         [91758] = {
             name = "Follow That Kobold!",
             level = 4,
@@ -300640,13 +302476,26 @@ LJ.Data.ForeverDB = {
             startText = "Marshal Dughan, Elwynn Forest",
             finishText = "Brother Paxton, Elwynn Forest"
         },
+        [91794] = {
+            name = "Flags of Our Forebears",
+            level = 59,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Kal'tinzan, Mount Hyjal",
+            finishText = "Kal'tinzan, Mount Hyjal"
+        },
         [91858] = {
             name = "Diplomatic Incident",
             level = 22,
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1420,
             startText = "Danitha Morr, Tirisfal Glades",
             finishText = "Trevan Rol, Silverpine Forest"
@@ -300657,7 +302506,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1421,
             startText = "Trevan Rol, Silverpine Forest",
             finishText = "Deathguard Baldren, Silverpine Forest"
@@ -300668,7 +302519,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1421,
             startText = "Deathguard Baldren, Silverpine Forest",
             finishText = "Charred Remains, Silverpine Forest"
@@ -300679,7 +302532,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1421,
             startText = "Charred Remains, Silverpine Forest",
             finishText = "Lumina Windsinger, Silverpine Forest"
@@ -300690,7 +302545,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1421,
             startText = "Lumina Windsinger, Silverpine Forest",
             finishText = "Lumina Windsinger, Silverpine Forest"
@@ -300725,9 +302582,17 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            finishText = "Marcy Baker, Redridge Mountains"
+            finishText = "Dokimi, The Barrens"
         },
         [91905] = {
+            name = "A Sealed Crate",
+            level = nil,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            finishText = "Marcy Baker, Redridge Mountains"
+        },
+        [91906] = {
             name = "A Sealed Crate",
             level = nil,
             min = nil,
@@ -300757,6 +302622,70 @@ LJ.Data.ForeverDB = {
             startText = "Apothecary Renferrel, Silverpine Forest",
             finishText = "Quinn Yorick, Silverpine Forest"
         },
+        [91923] = {
+            name = "Celastrus the Bitter",
+            level = 57,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Thylaen, Mount Hyjal",
+            finishText = "Thylaen, Mount Hyjal"
+        },
+        [91952] = {
+            name = "The Source of the Corruption",
+            level = 55,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Felwood",
+            map = 1448,
+            startText = "Greta Mosshoof, Felwood",
+            finishText = "Ketharas, Mount Hyjal"
+        },
+        [92008] = {
+            name = "Premiere Parts",
+            level = 56,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Kaylaena Springwhisper, Mount Hyjal",
+            finishText = "Nami, Winterspring"
+        },
+        [92011] = {
+            name = "Rubble Rummage",
+            level = 58,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Kaylaena Springwhisper, Mount Hyjal",
+            finishText = "Kaylaena Springwhisper, Mount Hyjal"
+        },
+        [92020] = {
+            name = "Hol'anyee's Big Book of Big Lizards",
+            level = 55,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Un'Goro Crater",
+            map = 1449,
+            startText = "Hol'anyee Marshal, Un'Goro Crater",
+            finishText = "Tiala Whitemane, Mount Hyjal"
+        },
+        [92069] = {
+            name = "Claws That Rend, Tusks that Gore",
+            level = 58,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Blackmaw Hold",
+            startText = "Ogtinc, Azshara"
+        },
         [92124] = {
             name = "Book Inventory",
             level = 2,
@@ -300767,6 +302696,37 @@ LJ.Data.ForeverDB = {
             map = 1429,
             startText = "Brother Paxton, Elwynn Forest",
             finishText = "Daniel, Elwynn Forest"
+        },
+        [92317] = {
+            name = "Stolen Life",
+            level = 58,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Marrosis, Mount Hyjal",
+            finishText = "Ketharas, Mount Hyjal"
+        },
+        [92335] = {
+            name = "Ashes of the Legion Ascent",
+            level = 59,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Renalard, Mount Hyjal",
+            finishText = "Ketharas, Mount Hyjal"
+        },
+        [92343] = {
+            name = "Get to the Roots of It",
+            level = 55,
+            min = nil,
+            side = "H",
+            src = "forever",
+            zone = "Blackmaw Hold",
+            startText = "Nara Wildmane, Thunder Bluff"
         },
         [92401] = {
             name = "A Frightened Request",
@@ -301045,7 +303005,9 @@ LJ.Data.ForeverDB = {
             min = 1,
             side = "A",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             map = 1429,
             startText = "Marshal McBride, Elwynn Forest",
             finishText = "Tordrin Sternblade, Elwynn Forest"
@@ -301056,7 +303018,9 @@ LJ.Data.ForeverDB = {
             min = 2,
             side = "BOTH",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             map = 2521,
             startText = "Rorian the Dayseeker, Zephras Isle",
             finishText = "Dorii Brightwhisper, Zephras Isle"
@@ -301067,7 +303031,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             map = 2521,
             startText = "Rorian the Dayseeker, Zephras Isle",
             finishText = "Tai'ree Farsight, Zephras Isle"
@@ -301078,7 +303044,9 @@ LJ.Data.ForeverDB = {
             min = 2,
             side = "BOTH",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             map = 2521,
             startText = "Rorian the Dayseeker, Zephras Isle",
             finishText = "Akeri Duskblade, Zephras Isle"
@@ -301089,7 +303057,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             map = 2521,
             startText = "Rorian the Dayseeker, Zephras Isle",
             finishText = "Windshaper Boro, Zephras Isle"
@@ -301100,7 +303070,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             map = 2521,
             startText = "Rorian the Dayseeker, Zephras Isle",
             finishText = "Xyton Silverwind, Zephras Isle"
@@ -301199,7 +303171,9 @@ LJ.Data.ForeverDB = {
             min = 2,
             side = "BOTH",
             src = "forever",
-            zone = "Warrior",
+            classes = {
+                "Warrior"
+            },
             map = 2521,
             startText = "Rorian the Dayseeker, Zephras Isle",
             finishText = "Blademaster Ren, Zephras Isle"
@@ -301259,6 +303233,28 @@ LJ.Data.ForeverDB = {
             startText = "Constable Aonda, Zephras Isle",
             finishText = "Valennia Stormfist, Zephras Isle"
         },
+        [92592] = {
+            name = "Final Death",
+            level = 59,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Zet'gan, Mount Hyjal",
+            finishText = "Zet'gan, Mount Hyjal"
+        },
+        [92594] = {
+            name = "Kindling, Kinda",
+            level = 56,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Kaylaena Springwhisper, Mount Hyjal",
+            finishText = "Kaylaena Springwhisper, Mount Hyjal"
+        },
         [92595] = {
             name = "The Windshapers",
             level = 6,
@@ -301273,7 +303269,7 @@ LJ.Data.ForeverDB = {
         [92596] = {
             name = "The High Order",
             level = 6,
-            min = nil,
+            min = 4,
             side = "BOTH",
             src = "forever",
             zone = "Zephras Isle",
@@ -301282,7 +303278,7 @@ LJ.Data.ForeverDB = {
             finishText = "Rathiril Sunlance, Zephras Isle"
         },
         [92597] = {
-            name = "Reading the Ley Lines",
+            name = "Reading the Leylines",
             level = 4,
             min = 2,
             side = "BOTH",
@@ -301302,6 +303298,17 @@ LJ.Data.ForeverDB = {
             map = 2521,
             startText = "Ventaari Brightwish, Zephras Isle",
             finishText = "Ventaari Brightwish, Zephras Isle"
+        },
+        [92609] = {
+            name = "Feathers in Flight",
+            level = 57,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Zet'gan, Mount Hyjal",
+            finishText = "Zet'gan, Mount Hyjal"
         },
         [92640] = {
             name = "Desperate Times",
@@ -301508,7 +303515,7 @@ LJ.Data.ForeverDB = {
             side = "H",
             src = "forever",
             zone = "Arathi Highlands",
-            map = 1417,
+            map = 1458,
             finishText = "Drum Fel, Arathi Highlands"
         },
         [92708] = {
@@ -301552,7 +303559,8 @@ LJ.Data.ForeverDB = {
             src = "forever",
             zone = "Zephras Isle",
             map = 2521,
-            startText = "Iaadaria Bitterwind, Zephras Isle"
+            startText = "Iaadaria Bitterwind, Zephras Isle",
+            finishText = "Iaadaria Bitterwind, Zephras Isle"
         },
         [92742] = {
             name = "Testing the Wells",
@@ -301663,6 +303671,17 @@ LJ.Data.ForeverDB = {
             map = 1443,
             startText = "Mirda, Desolace"
         },
+        [92755] = {
+            name = "Mysterious Mysticism",
+            level = 35,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Desolace",
+            map = 1443,
+            startText = "Halea, Desolace",
+            finishText = "Halea, Desolace"
+        },
         [92811] = {
             name = "Economic Warfare",
             level = nil,
@@ -301670,6 +303689,36 @@ LJ.Data.ForeverDB = {
             side = "BOTH",
             src = "forever",
             finishText = "Gorhak, Desolace"
+        },
+        [92812] = {
+            name = "Economic Warfare",
+            level = nil,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            finishText = "Molkar, Desolace"
+        },
+        [92814] = {
+            name = "I Need a Tailor",
+            level = 35,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Desolace",
+            map = 1443,
+            startText = "Molkar, Desolace",
+            finishText = "Molkar, Desolace"
+        },
+        [92817] = {
+            name = "Leather Technique",
+            level = 35,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Desolace",
+            map = 1443,
+            startText = "Talra, Desolace",
+            finishText = "Talra, Desolace"
         },
         [92818] = {
             name = "Big, No, MASSIVE Iron Axes",
@@ -301733,7 +303782,8 @@ LJ.Data.ForeverDB = {
             src = "forever",
             zone = "Shen'dralas",
             map = 2652,
-            startText = "Orgrul, Shen'dralas"
+            startText = "Orgrul, Shen'dralas",
+            finishText = "Orgrul, Shen'dralas"
         },
         [92849] = {
             name = "The Missing Scholar",
@@ -301757,6 +303807,38 @@ LJ.Data.ForeverDB = {
             startText = "Fillion Flamebreeze, Zephras Isle",
             finishText = "Fillion Flamebreeze, Zephras Isle"
         },
+        [92858] = {
+            name = "WANTED: Ohk'zi",
+            level = 43,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Feralas",
+            map = 1444,
+            startText = "WANTED!, Feralas"
+        },
+        [92859] = {
+            name = "Shroud of the Winter Wilds",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Winterspring",
+            map = 1452,
+            startText = "Evie Whirlbrew, Winterspring",
+            finishText = "Evie Whirlbrew, Winterspring"
+        },
+        [92867] = {
+            name = "Ground to Keep",
+            level = 39,
+            min = nil,
+            side = "A",
+            src = "forever",
+            zone = "Arathi Highlands",
+            map = 1417,
+            startText = "Groundskeeper Lomar, Arathi Highlands",
+            finishText = "Groundskeeper Lomar, Arathi Highlands"
+        },
         [92871] = {
             name = "In Service of Zephras",
             level = 11,
@@ -301767,6 +303849,28 @@ LJ.Data.ForeverDB = {
             map = 2521,
             startText = "Ayessa Dawnsinger, Zephras Isle",
             finishText = "Valennia Stormfist, Zephras Isle"
+        },
+        [92873] = {
+            name = "Proof of Concept",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Orgrul, Shen'dralas",
+            finishText = "Orgrul, Shen'dralas"
+        },
+        [92878] = {
+            name = "Lost for Words",
+            level = 43,
+            min = nil,
+            side = "H",
+            src = "forever",
+            zone = "Feralas",
+            map = 1444,
+            startText = "Blaise Montgomery, Feralas",
+            finishText = "Blaise Montgomery, Feralas"
         },
         [92880] = {
             name = "Return to Valanaar",
@@ -301790,6 +303894,28 @@ LJ.Data.ForeverDB = {
             startText = "Valennia Stormfist, Zephras Isle",
             finishText = "Talaanis Shadowsong, Zephras Isle"
         },
+        [92893] = {
+            name = "No Mercy for the Weak",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Orgrul, Shen'dralas",
+            finishText = "Orgrul, Shen'dralas"
+        },
+        [92894] = {
+            name = "Bone Raising",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Orgrul, Shen'dralas",
+            finishText = "Orgrul, Shen'dralas"
+        },
         [92909] = {
             name = "Harvesting the Harvesters",
             level = 15,
@@ -301801,26 +303927,16 @@ LJ.Data.ForeverDB = {
             startText = "Ozwin Ironsprocket, Westfall",
             finishText = "Ozwin Ironsprocket, Westfall"
         },
-        [92910] = {
-            name = "Harvesting the Harvesters",
-            level = 15,
+        [92914] = {
+            name = "Strange Pylons",
+            level = 43,
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Westfall",
-            map = 1436,
-            finishText = "Ozwin Ironsprocket, Westfall"
-        },
-        [92911] = {
-            name = "Harvesting the Harvesters",
-            level = 15,
-            min = nil,
-            side = "BOTH",
-            src = "forever",
-            zone = "Westfall",
-            map = 1436,
-            startText = "Ozwin Ironsprocket, Westfall",
-            finishText = "Ozwin Ironsprocket, Westfall"
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Shen'dralar Pylon, Shen'dralas",
+            finishText = "Mordent Evenshade, Shen'dralas"
         },
         [92947] = {
             name = "Making Our Move",
@@ -301833,6 +303949,50 @@ LJ.Data.ForeverDB = {
             startText = "Valennia Stormfist, Zephras Isle",
             finishText = "Hyusaa Quickbreeze, Zephras Isle"
         },
+        [92960] = {
+            name = "Siphoned Ephemeral Essence",
+            level = 59,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Elaena Moonwhisper, Mount Hyjal",
+            finishText = "Elaena Moonwhisper, Mount Hyjal"
+        },
+        [93016] = {
+            name = "A Brief History Lesson",
+            level = 43,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Mordent Evenshade, Shen'dralas",
+            finishText = "Mordent Evenshade, Shen'dralas"
+        },
+        [93034] = {
+            name = "Valley of Bones",
+            level = 38,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 1443,
+            startText = "Uthek the Wise, Desolace",
+            finishText = "Nerlokh, Shen'dralas"
+        },
+        [93035] = {
+            name = "Ravaging Ravagers",
+            level = 38,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Nerlokh, Shen'dralas",
+            finishText = "Nerlokh, Shen'dralas"
+        },
         [93036] = {
             name = "Infiltrating the Cult",
             level = 8,
@@ -301843,6 +304003,39 @@ LJ.Data.ForeverDB = {
             map = 2521,
             startText = "Constable Aonda, Zephras Isle",
             finishText = "Sania Silverstream, Zephras Isle"
+        },
+        [93037] = {
+            name = "Outing Outcasts",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Nerlokh, Shen'dralas",
+            finishText = "Nerlokh, Shen'dralas"
+        },
+        [93041] = {
+            name = "Facing the Truth",
+            level = 38,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Nerlokh, Shen'dralas",
+            finishText = "Uthek the Wise, Desolace"
+        },
+        [93044] = {
+            name = "A Cleansing Cry",
+            level = 38,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Desolace",
+            map = 1443,
+            startText = "Uthek the Wise, Desolace",
+            finishText = "Uthek the Wise, Desolace"
         },
         [93065] = {
             name = "Prepare for Battle",
@@ -301855,6 +304048,28 @@ LJ.Data.ForeverDB = {
             startText = "Valennia Stormfist, Zephras Isle",
             finishText = "Valennia Stormfist, Zephras Isle"
         },
+        [93066] = {
+            name = "Bristleback Retreat",
+            level = 43,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Orgrul, Shen'dralas",
+            finishText = "Hagiak, Shen'dralas"
+        },
+        [93072] = {
+            name = "Long-Term Solutions",
+            level = 43,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Hagiak, Shen'dralas",
+            finishText = "Hagiak, Shen'dralas"
+        },
         [93090] = {
             name = "What Comes Next",
             level = 13,
@@ -301865,6 +304080,17 @@ LJ.Data.ForeverDB = {
             map = 2521,
             startText = "Talaanis Shadowsong, Zephras Isle",
             finishText = "Ayessa Dawnsinger, Zephras Isle"
+        },
+        [93129] = {
+            name = "Threat of Starvation",
+            level = 43,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Hagiak, Shen'dralas",
+            finishText = "Hagiak, Shen'dralas"
         },
         [93159] = {
             name = "The Strange Hermit",
@@ -301921,6 +304147,28 @@ LJ.Data.ForeverDB = {
             startText = "Amaryllis Webb, Swamp of Sorrows",
             finishText = "Amaryllis Webb, Swamp of Sorrows"
         },
+        [93188] = {
+            name = "Return to Orgrul",
+            level = 43,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Hagiak, Shen'dralas",
+            finishText = "Orgrul, Shen'dralas"
+        },
+        [93196] = {
+            name = "Khan Jehn",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Desolace",
+            map = 2652,
+            startText = "Orgrul, Shen'dralas",
+            finishText = "Khan Jehn, Desolace"
+        },
         [93224] = {
             name = "Carved Centaur Totems",
             level = 40,
@@ -301953,6 +304201,17 @@ LJ.Data.ForeverDB = {
             map = 1443,
             startText = "Captain Pentigast, Desolace",
             finishText = "Gorhak, Desolace"
+        },
+        [93227] = {
+            name = "Buying Friendship: Gelkis",
+            level = 45,
+            min = nil,
+            side = "A",
+            src = "forever",
+            zone = "Desolace",
+            map = 1443,
+            startText = "Captain Pentigast, Desolace",
+            finishText = "Molkar, Desolace"
         },
         [93317] = {
             name = "Crab Season",
@@ -301998,6 +304257,61 @@ LJ.Data.ForeverDB = {
             startText = "Valennia Stormfist, Zephras Isle",
             finishText = "Yorana Windyreed, Zephras Isle"
         },
+        [93341] = {
+            name = "Forlorn Gardens",
+            level = 43,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Mithera, Shen'dralas",
+            finishText = "Mithera, Shen'dralas"
+        },
+        [93362] = {
+            name = "What They've Done to My Peonies",
+            level = 43,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Mithera, Shen'dralas",
+            finishText = "Mithera, Shen'dralas"
+        },
+        [93394] = {
+            name = "Meeting the Magister",
+            level = 43,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Mordent Evenshade, Shen'dralas",
+            finishText = "Magister Kirandis, Shen'dralas"
+        },
+        [93404] = {
+            name = "Rot and Regret",
+            level = 49,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Maraudon",
+            map = 2652,
+            startText = "Woodwyrd, Shen'dralas",
+            finishText = "Woodwyrd, Shen'dralas"
+        },
+        [93407] = {
+            name = "A Thorn in the Paw",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Tiala Whitemane, Mount Hyjal",
+            finishText = "Tiala Whitemane, Mount Hyjal"
+        },
         [93443] = {
             name = "Lost Shipping Crate",
             level = 36,
@@ -302008,6 +304322,25 @@ LJ.Data.ForeverDB = {
             map = 1434,
             startText = "Lost Shipping Crate, Stranglethorn Vale",
             finishText = "Friz Frazzlespark, Riverglades"
+        },
+        [93450] = {
+            name = "Phantasmal Problems",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Vindael, Shen'dralas",
+            finishText = "Vindael, Shen'dralas"
+        },
+        [93459] = {
+            name = "More Al'Aketh Ears",
+            level = nil,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            finishText = "Vayn Moongaze, Zephras Isle"
         },
         [93461] = {
             name = "Welcome to Shen'dar Village",
@@ -302020,6 +304353,27 @@ LJ.Data.ForeverDB = {
             startText = "Constable Aonda, Zephras Isle",
             finishText = "Constable Aonda, Zephras Isle"
         },
+        [93464] = {
+            name = "The Visiting Mage",
+            level = 38,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Swamp of Sorrows",
+            map = 1435,
+            startText = "Magtoor, Swamp of Sorrows"
+        },
+        [93546] = {
+            name = "Spectral Iron Ore",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Vindael, Shen'dralas",
+            finishText = "Vindael, Shen'dralas"
+        },
         [93552] = {
             name = "Harvesting Windstones",
             level = 4,
@@ -302031,15 +304385,68 @@ LJ.Data.ForeverDB = {
             startText = "Dalia the Collector, Zephras Isle",
             finishText = "Dalia the Collector, Zephras Isle"
         },
+        [93568] = {
+            name = "Partially Digested Collar",
+            level = 45,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            finishText = "Liranne, Shen'dralas"
+        },
+        [93574] = {
+            name = "Corpsefeeder's Carapace",
+            level = 45,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            finishText = "Kog'thug the Brave, Shen'dralas"
+        },
         [93585] = {
             name = "This Light of Mine",
-            level = nil,
+            level = 34,
             min = nil,
             side = "BOTH",
             src = "forever",
             zone = "Swamp of Sorrows",
             map = 1435,
-            startText = "Father Tuttle, Swamp of Sorrows"
+            startText = "Father Tuttle, Swamp of Sorrows",
+            finishText = "Magtoor, Swamp of Sorrows"
+        },
+        [93594] = {
+            name = "Word of the Woods",
+            level = 43,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Mithera, Shen'dralas",
+            finishText = "Woodwyrd, Shen'dralas"
+        },
+        [93601] = {
+            name = "Passing the Blame",
+            level = 45,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Woodwyrd, Shen'dralas",
+            finishText = "Kog'thug the Brave, Shen'dralas"
+        },
+        [93604] = {
+            name = "Agamaggan's Blood",
+            level = 45,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Razorfen Downs",
+            map = 2652,
+            startText = "Kog'thug the Brave, Shen'dralas"
         },
         [93644] = {
             name = "Tattered Journal",
@@ -302139,13 +304546,59 @@ LJ.Data.ForeverDB = {
             startText = "Ayessa Dawnsinger, Zephras Isle",
             finishText = "Ayessa Dawnsinger, Zephras Isle"
         },
+        [93747] = {
+            name = "Violence Into Verdure",
+            level = 56,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Ketharas, Mount Hyjal",
+            finishText = "Ketharas, Mount Hyjal"
+        },
+        [93786] = {
+            name = "A Message in Blood",
+            level = 36,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Krom'rosh, Riverglades",
+            finishText = "Krom'rosh, Riverglades"
+        },
+        [93787] = {
+            name = "Food for the Taking",
+            level = 36,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Krom'rosh, Riverglades",
+            finishText = "Krom'rosh, Riverglades"
+        },
+        [93788] = {
+            name = "Borrowed Blades",
+            level = 38,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Kreza Darkthorn, Riverglades",
+            finishText = "Kreza Darkthorn, Riverglades"
+        },
         [93791] = {
             name = "Speak with Belann",
             level = 10,
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             map = 2521,
             startText = "Belann Windwood, Zephras Isle",
             finishText = "Belann Windwood, Zephras Isle"
@@ -302156,9 +304609,12 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             map = 2521,
-            startText = "Belann Windwood, Zephras Isle"
+            startText = "Belann Windwood, Zephras Isle",
+            finishText = "Belann Windwood, Zephras Isle"
         },
         [93836] = {
             name = "The Fate of Zephras",
@@ -302248,13 +304704,26 @@ LJ.Data.ForeverDB = {
             startText = "Highlord Bolvar Fordragon, Stormwind City",
             finishText = "Highlord Bolvar Fordragon, Stormwind City"
         },
+        [93976] = {
+            name = "The Goblin Trader",
+            level = 36,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Kreza Darkthorn, Riverglades",
+            finishText = "Friz Frazzlespark, Riverglades"
+        },
         [94006] = {
             name = "The Great Ursera Spirit",
             level = 10,
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             map = 2521,
             startText = "Lotheluum Starbreeze, Zephras Isle",
             finishText = "Urs'endris, Zephras Isle"
@@ -302265,7 +304734,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             map = 2521,
             startText = "Elayaa Easewind, Zephras Isle",
             finishText = "Quel'ana Quickgale, Zephras Isle"
@@ -302276,7 +304747,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             map = 2521,
             startText = "Quel'ana Quickgale, Zephras Isle",
             finishText = "Quel'ana Quickgale, Zephras Isle"
@@ -302287,7 +304760,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             map = 2521,
             startText = "Quel'ana Quickgale, Zephras Isle",
             finishText = "Quel'dora Quickgale, Zephras Isle"
@@ -302302,6 +304777,16 @@ LJ.Data.ForeverDB = {
             map = 1420,
             finishText = "Muggol Breezebeard, Arathi Highlands"
         },
+        [94214] = {
+            name = "Craftsman's Writ: Shadow Protection Potion",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Crafting",
+            map = 1429,
+            finishText = "Kzixx, Duskwood"
+        },
         [94216] = {
             name = "Craftsman's Writ: Elixir of Lesser Agility",
             level = 60,
@@ -302309,7 +304794,8 @@ LJ.Data.ForeverDB = {
             side = "BOTH",
             src = "forever",
             zone = "Crafting",
-            map = 1431
+            map = 1431,
+            finishText = "Ziz Fizziks, Stonetalon Mountains"
         },
         [94217] = {
             name = "Craftsman's Writ: Lesser Troll's Blood Elixir",
@@ -302318,7 +304804,18 @@ LJ.Data.ForeverDB = {
             side = "BOTH",
             src = "forever",
             zone = "Crafting",
-            map = 1454
+            map = 1454,
+            finishText = "Short John Mithril, Stranglethorn Vale"
+        },
+        [94219] = {
+            name = "Craftsman's Writ: Draught of Water Breathing",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Crafting",
+            map = 1437,
+            finishText = "Kixxle, Wetlands"
         },
         [94220] = {
             name = "Craftsman's Writ: Pearl-Handled Dagger",
@@ -302336,6 +304833,16 @@ LJ.Data.ForeverDB = {
             side = "BOTH",
             src = "forever",
             zone = "Crafting"
+        },
+        [94223] = {
+            name = "Craftsman's Writ: Silver Skeleton Key",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Crafting",
+            map = 1413,
+            finishText = "Object #642320, Duskwood"
         },
         [94226] = {
             name = "Craftsman's Writ: Green Iron Gauntlets",
@@ -302357,13 +304864,44 @@ LJ.Data.ForeverDB = {
             map = 1453,
             finishText = "\"Plucky\" Johnson, Thousand Needles"
         },
+        [94230] = {
+            name = "Craftsman's Writ: Explosive Sheep",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Crafting",
+            map = 1454,
+            finishText = "Alyce, Arathi Highlands"
+        },
+        [94231] = {
+            name = "Craftsman's Writ: Moonsight Rifle",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Crafting",
+            map = 1456,
+            finishText = "Grembly, Ashenvale"
+        },
+        [94234] = {
+            name = "Craftsman's Writ: Shadow Goggles",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Crafting",
+            map = 1457,
+            finishText = "Ziz Fizziks, Stonetalon Mountains"
+        },
         [94237] = {
             name = "Craftsman's Writ: Crafted Solid Shot",
             level = 60,
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Crafting"
+            zone = "Crafting",
+            finishText = "Kixxle, Wetlands"
         },
         [94238] = {
             name = "Craftsman's Writ: Heavy Leather Ball",
@@ -302391,6 +304929,16 @@ LJ.Data.ForeverDB = {
             map = 1456,
             finishText = "Ziz Fizziks, Stonetalon Mountains"
         },
+        [94244] = {
+            name = "Craftsman's Writ: Dark Leather Shoulders",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Crafting",
+            map = 1413,
+            finishText = "Narkk, Stranglethorn Vale"
+        },
         [94245] = {
             name = "Craftsman's Writ: Barbaric Gloves",
             level = 60,
@@ -302403,12 +304951,23 @@ LJ.Data.ForeverDB = {
         },
         [94246] = {
             name = "Craftsman's Writ: Red Whelp Gloves",
-            level = nil,
+            level = 60,
             min = nil,
             side = "BOTH",
             src = "forever",
             zone = "Undercity",
-            map = 1458
+            map = 1458,
+            finishText = "Kixxle, Wetlands"
+        },
+        [94250] = {
+            name = "Craftsman's Writ: Small Silk Pack",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Crafting",
+            map = 1454,
+            finishText = "Kzixx, Duskwood"
         },
         [94254] = {
             name = "Craftsman's Writ: Greater Adept's Robe",
@@ -302420,6 +304979,15 @@ LJ.Data.ForeverDB = {
             map = 1453,
             finishText = "Magus Tirth, Thousand Needles"
         },
+        [94256] = {
+            name = "Craftsman's Writ: Frost Protection Potion",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Crafting",
+            map = 1458
+        },
         [94258] = {
             name = "Craftsman's Writ: Lesser Stoneshield Potion",
             level = 60,
@@ -302430,14 +304998,80 @@ LJ.Data.ForeverDB = {
             map = 1453,
             finishText = "Mudcrush Durtfeet, Dustwallow Marsh"
         },
+        [94259] = {
+            name = "Craftsman's Writ: Nature Protection Potion",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Crafting",
+            map = 2548
+        },
+        [94261] = {
+            name = "Craftsman's Writ: Great Rage Potion",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Crafting",
+            finishText = "Dendrite Starblaze, Moonglade"
+        },
+        [94264] = {
+            name = "Craftsman's Writ: Shadow Oil",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Crafting"
+        },
         [94269] = {
             name = "Craftsman's Writ: Inlaid Mithril Cylinder",
-            level = nil,
+            level = 60,
             min = nil,
             side = "BOTH",
             src = "forever",
             zone = "Stormwind City",
-            map = 1453
+            map = 1453,
+            finishText = "Bibbly F'utzbuckle, Desolace"
+        },
+        [94293] = {
+            name = "Craftsman's Writ: Guardian Cloak",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Crafting",
+            map = 1456,
+            finishText = "Azore Aldamort, Desolace"
+        },
+        [94294] = {
+            name = "Craftsman's Writ: Dusky Bracers",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Crafting",
+            map = 1434,
+            finishText = "The Ravenous, Dustwallow Marsh"
+        },
+        [94297] = {
+            name = "Craftsman's Writ: Quickdraw Quiver",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Crafting",
+            map = 1413,
+            finishText = "Narianna, Moonglade"
+        },
+        [94303] = {
+            name = "Craftsman's Writ: Thick Leather Ammo Pouch",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Crafting",
+            map = 1454
         },
         [94313] = {
             name = "Craftsman's Writ: White Bandit Mask",
@@ -302454,7 +305088,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             map = 1426,
             startText = "Teo Hammerstorm, Dun Morogh",
             finishText = "Teo Hammerstorm, Dun Morogh"
@@ -302465,7 +305101,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             map = 1426,
             startText = "Teo Hammerstorm, Dun Morogh",
             finishText = "Minor Manifestation of Earth, Dun Morogh"
@@ -302476,7 +305114,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             map = 1426,
             startText = "Minor Manifestation of Earth, Dun Morogh",
             finishText = "Teo Hammerstorm, Dun Morogh"
@@ -302495,7 +305135,7 @@ LJ.Data.ForeverDB = {
         [94413] = {
             name = "A Magical Affront",
             level = 6,
-            min = nil,
+            min = 4,
             side = "BOTH",
             src = "forever",
             zone = "Zephras Isle",
@@ -302520,7 +305160,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1420,
             startText = "Danitha Morr, Tirisfal Glades",
             finishText = "Tanis Alderwood, Undercity"
@@ -302531,7 +305173,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1458,
             startText = "Tanis Alderwood, Undercity",
             finishText = "Tanis Alderwood, Undercity"
@@ -302542,7 +305186,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1458,
             startText = "Tanis Alderwood, Undercity",
             finishText = "Danitha Morr, Tirisfal Glades"
@@ -302553,7 +305199,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1420,
             startText = "Danitha Morr, Tirisfal Glades",
             finishText = "Deathguard Billmuth, Tirisfal Glades"
@@ -302564,7 +305212,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1420,
             startText = "Deathguard Billmuth, Tirisfal Glades",
             finishText = "Deathguard Falgan, Tirisfal Glades"
@@ -302575,7 +305225,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1420,
             startText = "Deathguard Falgan, Tirisfal Glades",
             finishText = "Deathguard Billmuth, Tirisfal Glades"
@@ -302586,7 +305238,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1420,
             startText = "Deathguard Billmuth, Tirisfal Glades",
             finishText = "Danitha Morr, Tirisfal Glades"
@@ -302597,9 +305251,11 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             map = 1426,
-            startText = "Eldrun Stormbreaker, Ironforge",
+            startText = "Ingrid Dunwald, Dun Morogh",
             finishText = "Bruegs Kindleborn, Dun Morogh"
         },
         [94468] = {
@@ -302608,7 +305264,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             startText = "Brazier of the Dormant Flame, Loch Modan",
             finishText = "Bruegs Kindleborn, Dun Morogh"
         },
@@ -302619,6 +305277,50 @@ LJ.Data.ForeverDB = {
             side = "BOTH",
             src = "forever",
             finishText = "Teo Hammerstorm, Dun Morogh"
+        },
+        [94479] = {
+            name = "One Person's Trash",
+            level = 56,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Object #650234, Mount Hyjal",
+            finishText = "Ketharas, Mount Hyjal"
+        },
+        [94480] = {
+            name = "A Gift From Our Enemies",
+            level = 36,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Krom'rosh, Riverglades",
+            finishText = "Gorg, Riverglades"
+        },
+        [94481] = {
+            name = "A Serving of Strength",
+            level = 38,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Gorg, Riverglades",
+            finishText = "Gorg, Riverglades"
+        },
+        [94483] = {
+            name = "Show Them How It's Done",
+            level = 39,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Krom'rosh, Riverglades",
+            finishText = "Krom'rosh, Riverglades"
         },
         [94484] = {
             name = "Unnerving Silence",
@@ -302694,7 +305396,6 @@ LJ.Data.ForeverDB = {
             src = "forever",
             zone = "Zephras Isle",
             map = 2521,
-            startText = "Vayn Moongaze, Zephras Isle",
             finishText = "Elegael Thornpaw, Zephras Isle"
         },
         [94491] = {
@@ -302708,6 +305409,17 @@ LJ.Data.ForeverDB = {
             startText = "Elegael Thornpaw, Zephras Isle",
             finishText = "Lotheluum Starbreeze, Zephras Isle"
         },
+        [94493] = {
+            name = "A Sacrifice in Vain",
+            level = 11,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Zephras Isle",
+            map = 2521,
+            startText = "Elegael Thornpaw, Zephras Isle",
+            finishText = "Elegael Thornpaw, Zephras Isle"
+        },
         [94502] = {
             name = "Call of Water",
             level = 23,
@@ -302717,6 +305429,60 @@ LJ.Data.ForeverDB = {
             map = 1436,
             startText = "Norric Lochthane, Loch Modan",
             finishText = "Object #619896, Westfall"
+        },
+        [94504] = {
+            name = "Barkskin Beginnings",
+            level = 57,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Elder Mistpaw, Mount Hyjal"
+        },
+        [94532] = {
+            name = "Gnoll Infestation",
+            level = 38,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Neza Bloodsnout, Riverglades",
+            finishText = "Neza Bloodsnout, Riverglades"
+        },
+        [94533] = {
+            name = "Snargl's Snout",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Neza Bloodsnout, Riverglades",
+            finishText = "Neza Bloodsnout, Riverglades"
+        },
+        [94535] = {
+            name = "Bristle Hills Bandits",
+            level = 38,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Kreza Darkthorn, Riverglades",
+            finishText = "Kreza Darkthorn, Riverglades"
+        },
+        [94556] = {
+            name = "Jom-jom's Escape",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Jom-jom, Riverglades",
+            finishText = "Clugfist, Riverglades"
         },
         [94568] = {
             name = "The Cult's True Plans",
@@ -302790,10 +305556,56 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             map = 2521,
             startText = "Urs'endris, Zephras Isle",
             finishText = "Urs'endris, Zephras Isle"
+        },
+        [94668] = {
+            name = "Bloodmaster's Ring",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Clugfist, Riverglades",
+            finishText = "Jezap Jinglesprocket, Riverglades"
+        },
+        [94669] = {
+            name = "Pay to Play",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Jezap Jinglesprocket, Riverglades",
+            finishText = "Jezap Jinglesprocket, Riverglades"
+        },
+        [94670] = {
+            name = "Bloodmaster's Ring",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Jezap Jinglesprocket, Riverglades",
+            finishText = "Jezap Jinglesprocket, Riverglades"
+        },
+        [94672] = {
+            name = "Encroaching Twilight",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Tran'gul, Riverglades",
+            finishText = "Tran'gul, Riverglades"
         },
         [94678] = {
             name = "Gnoll Infestation",
@@ -302817,16 +305629,175 @@ LJ.Data.ForeverDB = {
             startText = "Cedric Dalton, Riverglades",
             finishText = "Cedric Dalton, Riverglades"
         },
+        [94680] = {
+            name = "Twilight Missives",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Tran'gul, Riverglades",
+            finishText = "Tran'gul, Riverglades"
+        },
+        [94727] = {
+            name = "Digging for Answers",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Tran'gul, Riverglades",
+            finishText = "Clubtoe, Riverglades"
+        },
+        [94733] = {
+            name = "Our Ogre Friend",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Jezap Jinglesprocket, Riverglades",
+            finishText = "Gobam, Riverglades"
+        },
+        [94734] = {
+            name = "A Boar's Delight",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Gobam, Riverglades",
+            finishText = "Gobam, Riverglades"
+        },
+        [94737] = {
+            name = "A Treat for a Friend",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Gobam, Riverglades",
+            finishText = "Jezap Jinglesprocket, Riverglades"
+        },
+        [94739] = {
+            name = "Bloodmaster's Ring",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Jezap Jinglesprocket, Riverglades",
+            finishText = "Jezap Jinglesprocket, Riverglades"
+        },
+        [94744] = {
+            name = "The Wayward Warrior",
+            level = 43,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Krom'rosh, Riverglades",
+            finishText = "Da'grosh, Riverglades"
+        },
+        [94745] = {
+            name = "Carving a Path",
+            level = 44,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Da'grosh, Riverglades",
+            finishText = "Da'grosh, Riverglades"
+        },
+        [94748] = {
+            name = "Break Their Chains",
+            level = 44,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Da'grosh, Riverglades",
+            finishText = "Da'grosh, Riverglades"
+        },
+        [94768] = {
+            name = "Bring Me His Head",
+            level = 46,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Da'grosh, Riverglades",
+            finishText = "Da'grosh, Riverglades"
+        },
+        [94773] = {
+            name = "Divine Grace",
+            level = nil,
+            min = nil,
+            side = "A",
+            src = "forever",
+            finishText = "High Priestess Laurena, Stormwind City"
+        },
+        [94774] = {
+            name = "Divine Grace",
+            level = 10,
+            min = nil,
+            side = "A",
+            src = "forever",
+            classes = {
+                "Priest"
+            },
+            map = 1429,
+            startText = "Priestess Josetta, Elwynn Forest",
+            finishText = "High Priestess Laurena, Stormwind City"
+        },
         [94789] = {
             name = "Call of Air",
             level = 30,
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             map = 1455,
             startText = "Eldrun Stormbreaker, Ironforge",
             finishText = "Veyric Thunderhame, Arathi Highlands"
+        },
+        [94792] = {
+            name = "Taming the Beast",
+            level = 10,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            classes = {
+                "Hunter"
+            },
+            map = 1429,
+            startText = "Josephine Carson, Elwynn Forest",
+            finishText = "Josephine Carson, Elwynn Forest"
+        },
+        [94793] = {
+            name = "Training the Beast",
+            level = 10,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            classes = {
+                "Hunter"
+            },
+            map = 1429,
+            startText = "Josephine Carson, Elwynn Forest",
+            finishText = "Isaac Chan, Elwynn Forest"
         },
         [94819] = {
             name = "Contingency Plan",
@@ -302834,7 +305805,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "A",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             map = 1453,
             startText = "High Priestess Laurena, Stormwind City",
             finishText = "High Priestess Mims, Ironforge"
@@ -302845,7 +305818,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "A",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             map = 1453,
             startText = "High Priestess Laurena, Stormwind City",
             finishText = "High Priestess Mims, Ironforge"
@@ -302927,6 +305902,43 @@ LJ.Data.ForeverDB = {
             startText = "Hurley, Riverglades",
             finishText = "Halligan Turner, Riverglades"
         },
+        [94863] = {
+            name = "Taming the Beast",
+            level = 10,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            classes = {
+                "Hunter"
+            },
+            map = 1429,
+            startText = "Josephine Carson, Elwynn Forest",
+            finishText = "Josephine Carson, Elwynn Forest"
+        },
+        [94864] = {
+            name = "Taming the Beast",
+            level = 10,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            classes = {
+                "Hunter"
+            },
+            map = 1429,
+            startText = "Josephine Carson, Elwynn Forest",
+            finishText = "Josephine Carson, Elwynn Forest"
+        },
+        [94873] = {
+            name = "Buying Friendship: Gelkis",
+            level = 45,
+            min = nil,
+            side = "H",
+            src = "forever",
+            zone = "Desolace",
+            map = 1443,
+            startText = "Gurda Wildmane, Desolace",
+            finishText = "Molkar, Desolace"
+        },
         [94877] = {
             name = "Saving Sunnyglade",
             level = 40,
@@ -302960,6 +305972,17 @@ LJ.Data.ForeverDB = {
             startText = "Ashe Amberhall, Riverglades",
             finishText = "Ashe Amberhall, Riverglades"
         },
+        [94884] = {
+            name = "An Unsettling Discovery",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Apprentice Claire, Riverglades",
+            finishText = "Ashe Amberhall, Riverglades"
+        },
         [94885] = {
             name = "Field Marshal's Log",
             level = 40,
@@ -302969,6 +305992,17 @@ LJ.Data.ForeverDB = {
             zone = "Riverglades",
             map = 2548,
             finishText = "Demar Brant, Riverglades"
+        },
+        [94886] = {
+            name = "The Western Front",
+            level = 44,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Demar Brant, Riverglades",
+            finishText = "Sergeant Riftan, Riverglades"
         },
         [94887] = {
             name = "Saving Marshal Ryan",
@@ -302980,6 +306014,94 @@ LJ.Data.ForeverDB = {
             map = 2548,
             startText = "Demar Brant, Riverglades",
             finishText = "Marshal Ryan, Riverglades"
+        },
+        [94888] = {
+            name = "No Soldier Left Behind",
+            level = 44,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Sergeant Riftan, Riverglades",
+            finishText = "Sergeant Riftan, Riverglades"
+        },
+        [94889] = {
+            name = "Carving a Path",
+            level = 44,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Sergeant Riftan, Riverglades",
+            finishText = "Sergeant Riftan, Riverglades"
+        },
+        [94890] = {
+            name = "Bring Me His Head",
+            level = 46,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Sergeant Riftan, Riverglades",
+            finishText = "Sergeant Riftan, Riverglades"
+        },
+        [94891] = {
+            name = "News to Farholde",
+            level = 46,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Sergeant Riftan, Riverglades",
+            finishText = "Ashe Amberhall, Riverglades"
+        },
+        [94892] = {
+            name = "Dying Wish",
+            level = 47,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Marshal Ryan, Riverglades",
+            finishText = "Demar Brant, Riverglades"
+        },
+        [94893] = {
+            name = "Delivering Closure",
+            level = 47,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Demar Brant, Riverglades",
+            finishText = "Abigail Lawson, Stormwind City"
+        },
+        [94894] = {
+            name = "The Twilight Threat",
+            level = 45,
+            min = nil,
+            side = "A",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Demar Brant, Riverglades",
+            finishText = "Highlord Bolvar Fordragon, Stormwind City"
+        },
+        [94895] = {
+            name = "Lost Shipping Crate",
+            level = 38,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Desolace",
+            map = 1443,
+            startText = "Lost Shipping Crate, Desolace",
+            finishText = "Friz Frazzlespark, Riverglades"
         },
         [94896] = {
             name = "Aid For The Refugees",
@@ -303003,13 +306125,26 @@ LJ.Data.ForeverDB = {
             startText = "Ealaane Nimbuswalker, Zephras Isle",
             finishText = "Ealaane Nimbuswalker, Zephras Isle"
         },
+        [94907] = {
+            name = "A Small Favor",
+            level = 44,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Ashe Amberhall, Riverglades",
+            finishText = "Ashe Amberhall, Riverglades"
+        },
         [94911] = {
             name = "Child of Nature",
             level = 10,
             min = nil,
             side = "H",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             map = 1412,
             startText = "Muln Earthfury, Mulgore",
             finishText = "Turak Runetotem, Thunder Bluff"
@@ -303020,7 +306155,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "H",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             map = 1456,
             startText = "Turak Runetotem, Thunder Bluff",
             finishText = "Dendrite Starblaze, Moonglade"
@@ -303058,6 +306195,17 @@ LJ.Data.ForeverDB = {
             startText = "Watcher Cornelius, Riverglades",
             finishText = "Watcher Cornelius, Riverglades"
         },
+        [94927] = {
+            name = "Dunston Checks Out",
+            level = 44,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Dunston Willis, Riverglades",
+            finishText = "Watcher Cornelius, Riverglades"
+        },
         [94928] = {
             name = "A Few Furs for Friz",
             level = 39,
@@ -303067,6 +306215,17 @@ LJ.Data.ForeverDB = {
             zone = "Riverglades",
             map = 2548,
             startText = "Watcher Cornelius, Riverglades",
+            finishText = "Friz Frazzlespark, Riverglades"
+        },
+        [94930] = {
+            name = "Lost Shipping Crate",
+            level = 38,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Thousand Needles",
+            map = 1441,
+            startText = "Lost Shipping Crate, Thousand Needles",
             finishText = "Friz Frazzlespark, Riverglades"
         },
         [94931] = {
@@ -303091,6 +306250,17 @@ LJ.Data.ForeverDB = {
             startText = "Fuzzle, Riverglades",
             finishText = "Fuzzle, Riverglades"
         },
+        [94962] = {
+            name = "Bloodmaster's Ring",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Jezap Jinglesprocket, Riverglades",
+            finishText = "Jezap Jinglesprocket, Riverglades"
+        },
         [94963] = {
             name = "Biting the Hand",
             level = 40,
@@ -303102,13 +306272,91 @@ LJ.Data.ForeverDB = {
             startText = "Fuzzle, Riverglades",
             finishText = "Fuzzle's Treasure, Riverglades"
         },
+        [94964] = {
+            name = "Bloodmaster's Ring",
+            level = 43,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Jezap Jinglesprocket, Riverglades",
+            finishText = "Jezap Jinglesprocket, Riverglades"
+        },
+        [94965] = {
+            name = "Bloodmaster's Ring",
+            level = 44,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Jezap Jinglesprocket, Riverglades",
+            finishText = "Jezap Jinglesprocket, Riverglades"
+        },
+        [94968] = {
+            name = "Eye of Mugg",
+            level = 45,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Krol'dok Stronghold",
+            map = 2548,
+            startText = "Krom'rosh, Riverglades",
+            finishText = "Krom'rosh, Riverglades"
+        },
+        [94972] = {
+            name = "Tome of Twilight",
+            level = 44,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Krol'dok Stronghold",
+            map = 2548,
+            startText = "Tran'gul, Riverglades",
+            finishText = "Tran'gul, Riverglades"
+        },
+        [94973] = {
+            name = "Krol'dok Moulding",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Krol'dok Stronghold",
+            map = 2548,
+            finishText = "Kreza Darkthorn, Riverglades"
+        },
+        [94974] = {
+            name = "Key Ingredients",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Krol'dok Stronghold",
+            map = 2548,
+            startText = "Kreza Darkthorn, Riverglades",
+            finishText = "Kreza Darkthorn, Riverglades"
+        },
+        [94975] = {
+            name = "A Token of Vengeance",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Krol'dok Stronghold",
+            map = 2548,
+            startText = "Da'grosh, Riverglades",
+            finishText = "Da'grosh, Riverglades"
+        },
         [94978] = {
             name = "Taming the Beast",
             level = 10,
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             map = 2521,
             startText = "Quel'ana Quickgale, Zephras Isle",
             finishText = "Quel'ana Quickgale, Zephras Isle"
@@ -303119,10 +306367,66 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Hunter",
+            classes = {
+                "Hunter"
+            },
             map = 2521,
             startText = "Quel'ana Quickgale, Zephras Isle",
             finishText = "Quel'ana Quickgale, Zephras Isle"
+        },
+        [94980] = {
+            name = "Krol'dok Moulding",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Krol'dok Stronghold",
+            map = 2548,
+            finishText = "Alphonse Dumas, Riverglades"
+        },
+        [94981] = {
+            name = "Key Ingredients",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Krol'dok Stronghold",
+            map = 2548,
+            startText = "Alphonse Dumas, Riverglades",
+            finishText = "Alphonse Dumas, Riverglades"
+        },
+        [94982] = {
+            name = "Eye of Mugg",
+            level = 45,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Krol'dok Stronghold",
+            map = 2548,
+            startText = "Demar Brant, Riverglades",
+            finishText = "Demar Brant, Riverglades"
+        },
+        [94983] = {
+            name = "Twilight Mementos",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Krol'dok Stronghold",
+            map = 2548,
+            startText = "Sergeant Riftan, Riverglades",
+            finishText = "Sergeant Riftan, Riverglades"
+        },
+        [94984] = {
+            name = "Tome of Twilight",
+            level = 44,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Krol'dok Stronghold",
+            map = 2548,
+            startText = "Ashe Amberhall, Riverglades",
+            finishText = "Ashe Amberhall, Riverglades"
         },
         [94992] = {
             name = "Rescue Roundup",
@@ -303135,6 +306439,28 @@ LJ.Data.ForeverDB = {
             startText = "Lost Horse, Riverglades",
             finishText = "Benjy Wheeler, Riverglades"
         },
+        [94997] = {
+            name = "Lingering Essence",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Krol'dok Stronghold",
+            map = 2548,
+            startText = "Sergeant Riftan, Riverglades",
+            finishText = "Ashe Amberhall, Riverglades"
+        },
+        [94998] = {
+            name = "Curios of Curiosity",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Krol'dok Stronghold",
+            map = 2548,
+            startText = "Ashe Amberhall, Riverglades",
+            finishText = "Melanie Sable, Riverglades"
+        },
         [94999] = {
             name = "Eyes for the Watchman",
             level = 36,
@@ -303146,13 +306472,37 @@ LJ.Data.ForeverDB = {
             startText = "Eleanor Holmsby, Riverglades",
             finishText = "Watcher Fredericks, Riverglades"
         },
+        [95026] = {
+            name = "Blight No More",
+            level = 58,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Zet'gan, Mount Hyjal",
+            finishText = "Zet'gan, Mount Hyjal"
+        },
+        [95033] = {
+            name = "On the Other Side",
+            level = 41,
+            min = nil,
+            side = "H",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Tan'jani, Riverglades",
+            finishText = "Witch Doctor Uzer'i, Feralas"
+        },
         [95034] = {
             name = "The Debt",
             level = 24,
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1421,
             startText = "Lumina Windsinger, Silverpine Forest",
             finishText = "Lumina Windsinger, Silverpine Forest"
@@ -303163,7 +306513,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1421,
             startText = "Lumina Windsinger, Silverpine Forest",
             finishText = "Trevan Rol, Silverpine Forest"
@@ -303185,7 +306537,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1440,
             startText = "Ulric Frostveil, Ashenvale",
             finishText = "Ulric Frostveil, Ashenvale"
@@ -303200,6 +306554,28 @@ LJ.Data.ForeverDB = {
             map = 2548,
             startText = "Friz Frazzlespark, Riverglades",
             finishText = "Demar Brant, Riverglades"
+        },
+        [95062] = {
+            name = "Frazzlespark's Crate",
+            level = 36,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Friz Frazzlespark, Riverglades",
+            finishText = "Krom'rosh, Riverglades"
+        },
+        [95063] = {
+            name = "Bloodmaster's Ring",
+            level = 45,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Jezap Jinglesprocket, Riverglades",
+            finishText = "Clugfist, Riverglades"
         },
         [95064] = {
             name = "Preventative Measures",
@@ -303240,7 +306616,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "H",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1421,
             startText = "Trevan Rol, Silverpine Forest",
             finishText = "Ott, Hillsbrad Foothills"
@@ -303289,13 +306667,48 @@ LJ.Data.ForeverDB = {
             startText = "Fimbo Greasemitz, Riverglades",
             finishText = "Fimbo Greasemitz, Riverglades"
         },
+        [95122] = {
+            name = "Unchecked Expansion",
+            level = 44,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Wharfmaster Whizzbuzz, Riverglades",
+            finishText = "Wharfmaster Whizzbuzz, Riverglades"
+        },
+        [95123] = {
+            name = "A Blast Ye Scurvy Dogs!",
+            level = 44,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Wharfmaster Whizzbuzz, Riverglades",
+            finishText = "Wharfmaster Whizzbuzz, Riverglades"
+        },
+        [95124] = {
+            name = "Admiral Lamora",
+            level = 45,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Wharfmaster Whizzbuzz, Riverglades",
+            finishText = "Wharfmaster Whizzbuzz, Riverglades"
+        },
         [95125] = {
             name = "Ott's Masterwork",
             level = 25,
             min = nil,
             side = "H",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1424,
             startText = "Ott, Hillsbrad Foothills",
             finishText = "Ott, Hillsbrad Foothills"
@@ -303306,7 +306719,10 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "H",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
+            map = 1424,
             startText = "Ott, Hillsbrad Foothills",
             finishText = "Trevan Rol, Silverpine Forest"
         },
@@ -303316,7 +306732,9 @@ LJ.Data.ForeverDB = {
             min = 20,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1421,
             startText = "Lumina Windsinger, Silverpine Forest",
             finishText = "Lumina Windsinger, Silverpine Forest"
@@ -303336,10 +306754,12 @@ LJ.Data.ForeverDB = {
             name = "Finding Tan'jani",
             level = 38,
             min = nil,
-            side = "BOTH",
+            side = "H",
             src = "forever",
             zone = "Arathi Highlands",
-            map = 1417
+            map = 1417,
+            startText = "Tor'gan, Arathi Highlands",
+            finishText = "Tan'jani, Riverglades"
         },
         [95144] = {
             name = "Overseas Delivery",
@@ -303395,6 +306815,50 @@ LJ.Data.ForeverDB = {
             map = 1453,
             startText = "Orphan Matron Nightingale, Stormwind City",
             finishText = "Avette Fellwood, Duskwood"
+        },
+        [95162] = {
+            name = "Paletusk Harvesting",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Na'zok, Riverglades",
+            finishText = "Na'zok, Riverglades"
+        },
+        [95163] = {
+            name = "Drive Them Back",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Na'zok, Riverglades",
+            finishText = "Na'zok, Riverglades"
+        },
+        [95165] = {
+            name = "See Ya, Scallywags!",
+            level = 44,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Wharfmaster Whizzbuzz, Riverglades",
+            finishText = "Wharfmaster Whizzbuzz, Riverglades"
+        },
+        [95183] = {
+            name = "Step One: Rock",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Hamur, Riverglades",
+            finishText = "Hamur, Riverglades"
         },
         [95184] = {
             name = "The Sharpest of Blades",
@@ -303477,6 +306941,27 @@ LJ.Data.ForeverDB = {
             startText = "Theodore Griffs, Undercity",
             finishText = "Theodore Griffs, Undercity"
         },
+        [95219] = {
+            name = "From Port to Port",
+            level = 41,
+            min = nil,
+            side = "A",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Friz Frazzlespark, Riverglades",
+            finishText = "Mardrack Greenwell, Feralas"
+        },
+        [95248] = {
+            name = "To the Summit of Eternity",
+            level = 59,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Zet'gan, Mount Hyjal"
+        },
         [95250] = {
             name = "Abominable Creatures",
             level = 21,
@@ -303518,6 +307003,39 @@ LJ.Data.ForeverDB = {
             startText = "Argo Brinewhistle, Riverglades",
             finishText = "Argo Brinewhistle, Riverglades"
         },
+        [95267] = {
+            name = "The Monster Surfaces",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Argo Brinewhistle, Riverglades",
+            finishText = "Argo Brinewhistle, Riverglades"
+        },
+        [95278] = {
+            name = "It Is Time, Brother...",
+            level = 45,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Da'grosh, Riverglades",
+            finishText = "Krom'rosh, Riverglades"
+        },
+        [95283] = {
+            name = "The Missing Kor'kron",
+            level = 53,
+            min = nil,
+            side = "H",
+            src = "forever",
+            zone = "Dustwallow Marsh",
+            map = 1445,
+            startText = "Eitrigg, Orgrimmar",
+            finishText = "Nazeer Bloodpike, Dustwallow Marsh"
+        },
         [95288] = {
             name = "Smuggler's Paradise",
             level = 43,
@@ -303529,6 +307047,61 @@ LJ.Data.ForeverDB = {
             startText = "Friz Frazzlespark, Riverglades",
             finishText = "Friz Frazzlespark, Riverglades"
         },
+        [95293] = {
+            name = "Smuggler's Special",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Friz Frazzlespark, Riverglades",
+            finishText = "Captain Bentcoin, Riverglades"
+        },
+        [95294] = {
+            name = "Smuggler's Bargain",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Captain Haynes, Riverglades",
+            finishText = "Friz Frazzlespark, Riverglades"
+        },
+        [95295] = {
+            name = "I Know a Guy",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Friz Frazzlespark, Riverglades",
+            finishText = "Caravaneer Ruzzgot, Stranglethorn Vale"
+        },
+        [95296] = {
+            name = "Shipping and Handling",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Friz Frazzlespark, Riverglades",
+            finishText = "Wharfmaster Steamfizzle, Tanaris"
+        },
+        [95312] = {
+            name = "Coming to Collect",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 1446,
+            startText = "Tazzik, Tanaris",
+            finishText = "Fizbuz Mithril, Tanaris"
+        },
         [95314] = {
             name = "That Shadowvale Green Elixir",
             level = 10,
@@ -303539,6 +307112,94 @@ LJ.Data.ForeverDB = {
             map = 1420,
             startText = "Carolai Anise, Tirisfal Glades",
             finishText = "Carolai Anise, Tirisfal Glades"
+        },
+        [95315] = {
+            name = "The Riverglades Report",
+            level = 38,
+            min = nil,
+            side = "A",
+            src = "forever",
+            zone = "Arathi Highlands",
+            map = 1417,
+            startText = "Captain Nials, Arathi Highlands",
+            finishText = "Demar Brant, Riverglades"
+        },
+        [95317] = {
+            name = "Notation, Notation, Notation",
+            level = 57,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Curious Crow, Mount Hyjal",
+            finishText = "Curious Crow, Mount Hyjal"
+        },
+        [95320] = {
+            name = "A Curious Question",
+            level = 57,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Curious Crow, Mount Hyjal",
+            finishText = "Felflick, Mount Hyjal"
+        },
+        [95321] = {
+            name = "Tazzik's Dues",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 1446,
+            startText = "Fizbuz Mithril, Tanaris",
+            finishText = "Tazzik, Tanaris"
+        },
+        [95322] = {
+            name = "Get the Goods",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 1434,
+            startText = "Caravaneer Ruzzgot, Stranglethorn Vale",
+            finishText = "Caravaneer Ruzzgot, Stranglethorn Vale"
+        },
+        [95325] = {
+            name = "We've Been Robbed!",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 1434,
+            startText = "Caravaneer Ruzzgot, Stranglethorn Vale",
+            finishText = "Venture Co. Ledger, Stranglethorn Vale"
+        },
+        [95326] = {
+            name = "The Big Payback",
+            level = 39,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 1434,
+            startText = "Venture Co. Ledger, Stranglethorn Vale",
+            finishText = "Caravaneer Ruzzgot, Stranglethorn Vale"
+        },
+        [95327] = {
+            name = "All's Well That Ends Well",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 1434,
+            startText = "Caravaneer Ruzzgot, Stranglethorn Vale",
+            finishText = "Friz Frazzlespark, Riverglades"
         },
         [95328] = {
             name = "Whispering Horror Residue",
@@ -303590,9 +307251,20 @@ LJ.Data.ForeverDB = {
             side = "H",
             src = "forever",
             zone = "Orgrimmar",
-            map = 1456,
+            map = 1412,
             startText = "Alaana Stormwalker, Mulgore",
             finishText = "Thrall, Orgrimmar"
+        },
+        [95383] = {
+            name = "Shipping and Handling",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 1446,
+            startText = "Wharfmaster Steamfizzle, Tanaris",
+            finishText = "Tazzik, Tanaris"
         },
         [95384] = {
             name = "Partial Mystical Notes",
@@ -303601,8 +307273,73 @@ LJ.Data.ForeverDB = {
             side = "BOTH",
             src = "forever",
             zone = "Stranglethorn Vale",
-            map = 1455,
+            map = 1434,
             finishText = "Dudd Fizzlescroll, Stranglethorn Vale"
+        },
+        [95385] = {
+            name = "Torn Mystical Scroll",
+            level = 43,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Stranglethorn Vale",
+            map = 1434,
+            finishText = "Dudd Fizzlescroll, Stranglethorn Vale"
+        },
+        [95417] = {
+            name = "The Purple Ones",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Clubtoe, Riverglades",
+            finishText = "Twilight Brute, Riverglades"
+        },
+        [95418] = {
+            name = "Spread the Word",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Clubtoe, Riverglades",
+            finishText = "Tran'gul, Riverglades"
+        },
+        [95420] = {
+            name = "Land of Giants",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Tran'gul, Riverglades",
+            finishText = "Clugfist, Riverglades"
+        },
+        [95424] = {
+            name = "Might Makes Right",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Clugfist, Riverglades",
+            finishText = "Clugfist, Riverglades"
+        },
+        [95425] = {
+            name = "Unworthy Champion",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Clugfist, Riverglades",
+            finishText = "Clugfist, Riverglades"
         },
         [95426] = {
             name = "Rog'mar Supplies",
@@ -303614,6 +307351,72 @@ LJ.Data.ForeverDB = {
             map = 2548,
             startText = "Watcher Cornelius, Riverglades",
             finishText = "Watcher Cornelius, Riverglades"
+        },
+        [95427] = {
+            name = "Twilight No More!",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Clubtoe, Riverglades",
+            finishText = "Clubtoe, Riverglades"
+        },
+        [95428] = {
+            name = "Clugfist's Decree",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Clugfist, Riverglades",
+            finishText = "Krom'rosh, Riverglades"
+        },
+        [95431] = {
+            name = "Rumblings of Discontent",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Da'grosh, Riverglades",
+            finishText = "Crag'rog, Riverglades"
+        },
+        [95432] = {
+            name = "Rise Up!",
+            level = 43,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Crag'rog, Riverglades",
+            finishText = "Crag'rog, Riverglades"
+        },
+        [95433] = {
+            name = "Death to the Executioner",
+            level = 46,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Crag'rog, Riverglades",
+            finishText = "Clugfist, Riverglades"
+        },
+        [95472] = {
+            name = "Consolation Prize",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 1446,
+            startText = "Tazzik, Tanaris",
+            finishText = "Friz Frazzlespark, Riverglades"
         },
         [95494] = {
             name = "Bruised Pride and Lion Hides",
@@ -303663,11 +307466,11 @@ LJ.Data.ForeverDB = {
             name = "Strahnbrad Mystery",
             level = 36,
             min = nil,
-            side = "A",
+            side = "H",
             src = "forever",
             zone = "Alterac Mountains",
             map = 1455,
-            finishText = "Kundric Zanden, Hillsbrad Foothills"
+            finishText = "Shara Blazen, Hillsbrad Foothills"
         },
         [95561] = {
             name = "Apple of My Eye",
@@ -303680,6 +307483,71 @@ LJ.Data.ForeverDB = {
             startText = "Tessa Dawnbright, Riverglades",
             finishText = "Tessa Dawnbright, Riverglades"
         },
+        [95562] = {
+            name = "Cut Off the Heads",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Apprentice Claire, Riverglades",
+            finishText = "Apprentice Claire, Riverglades"
+        },
+        [95568] = {
+            name = "Seeds for a New Season",
+            level = 56,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Ketharas, Mount Hyjal",
+            finishText = "Ketharas, Mount Hyjal"
+        },
+        [95569] = {
+            name = "Hope for Hatchlings",
+            level = 56,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Ketharas, Mount Hyjal",
+            finishText = "Ketharas, Mount Hyjal"
+        },
+        [95599] = {
+            name = "The Old Key",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Feralas",
+            map = 1444,
+            finishText = "Old Chest, Feralas"
+        },
+        [95601] = {
+            name = "The Purple Ones",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Twilight Brute, Riverglades",
+            finishText = "Clubtoe, Riverglades"
+        },
+        [95602] = {
+            name = "Sickening Lights",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Clubtoe, Riverglades",
+            finishText = "Clubtoe, Riverglades"
+        },
         [95603] = {
             name = "Bats in the Belfry",
             level = 38,
@@ -303690,6 +307558,17 @@ LJ.Data.ForeverDB = {
             map = 2548,
             startText = "Sister Rowland, Riverglades",
             finishText = "Sister Rowland, Riverglades"
+        },
+        [95611] = {
+            name = "Rites of Respect",
+            level = 56,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Ketharas, Mount Hyjal",
+            finishText = "Ketharas, Mount Hyjal"
         },
         [95613] = {
             name = "Keeping the Light On",
@@ -303723,6 +307602,28 @@ LJ.Data.ForeverDB = {
             map = 1413,
             startText = "Walton, The Barrens",
             finishText = "Walton, The Barrens"
+        },
+        [95642] = {
+            name = "Abominable Magics",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Apprentice Claire, Riverglades",
+            finishText = "Apprentice Claire, Riverglades"
+        },
+        [95643] = {
+            name = "Indiscriminate Purge",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Apprentice Claire, Riverglades",
+            finishText = "Apprentice Claire, Riverglades"
         },
         [95646] = {
             name = "Horrors in the Highland",
@@ -303763,7 +307664,6 @@ LJ.Data.ForeverDB = {
             side = "H",
             src = "forever",
             zone = "Excavation Site: Wetlands",
-            map = 1413,
             finishText = "Bashana Runetotem, Thunder Bluff"
         },
         [95682] = {
@@ -303828,7 +307728,7 @@ LJ.Data.ForeverDB = {
             side = "A",
             src = "forever",
             zone = "Excavation Site: Wetlands",
-            map = 1433,
+            map = 1437,
             startText = "Dorin Songblade, Redridge Mountains"
         },
         [95773] = {
@@ -303930,6 +307830,28 @@ LJ.Data.ForeverDB = {
             startText = "Krazek, Stranglethorn Vale",
             finishText = "Krazek, Stranglethorn Vale"
         },
+        [95792] = {
+            name = "Clear 'em Out",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Gelinda Coppergleam, Riverglades",
+            finishText = "Gelinda Coppergleam, Riverglades"
+        },
+        [95793] = {
+            name = "Stemming the Demon Tide",
+            level = 59,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Witherbeard, Mount Hyjal",
+            finishText = "Witherbeard, Mount Hyjal"
+        },
         [95795] = {
             name = "Fallen in the Fen",
             level = 31,
@@ -303967,7 +307889,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "H",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1420,
             startText = "Danitha Morr, Tirisfal Glades",
             finishText = "Lady Sylvanas Windrunner, Undercity"
@@ -304000,6 +307924,17 @@ LJ.Data.ForeverDB = {
             src = "forever",
             zone = "Excavation Site: Wetlands",
             finishText = "Prospector Whelgar, Wetlands"
+        },
+        [95882] = {
+            name = "WANTED: Scoutmaster Vargas",
+            level = 43,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Wanted, Riverglades",
+            finishText = "Neza Bloodsnout, Riverglades"
         },
         [95883] = {
             name = "The Tortured Soul",
@@ -304055,6 +307990,34 @@ LJ.Data.ForeverDB = {
             startText = "Tessa Dawnbright, Riverglades",
             finishText = "Tessa Dawnbright, Riverglades"
         },
+        [95926] = {
+            name = "The Dark Crystal",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "The Shaper's Terrace"
+        },
+        [95928] = {
+            name = "Crystalline Elements",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "The Shaper's Terrace",
+            startText = "Mayena Earthseeker, Mulgore"
+        },
+        [95934] = {
+            name = "Proof of Profit",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Gelinda Coppergleam, Riverglades",
+            finishText = "Gelinda Coppergleam, Riverglades"
+        },
         [95943] = {
             name = "Foreman's Plight",
             level = 38,
@@ -304066,6 +308029,39 @@ LJ.Data.ForeverDB = {
             startText = "Bertrand Ironbrow, Riverglades",
             finishText = "Bertrand Ironbrow, Riverglades"
         },
+        [95951] = {
+            name = "Fetch 'n' Fletch",
+            level = 38,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Tan'jani, Riverglades",
+            finishText = "Tan'jani, Riverglades"
+        },
+        [95955] = {
+            name = "Stick 'Em",
+            level = 39,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Tan'jani, Riverglades",
+            finishText = "Tan'jani, Riverglades"
+        },
+        [95957] = {
+            name = "Drink Up!",
+            level = 38,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Innkeeper Zizplink, Riverglades",
+            finishText = "Gray Dawnbright, Riverglades"
+        },
         [95961] = {
             name = "Stepped Out",
             level = 38,
@@ -304076,6 +308072,17 @@ LJ.Data.ForeverDB = {
             map = 2548,
             startText = "Tessa Dawnbright, Riverglades",
             finishText = "Gray Dawnbright, Riverglades"
+        },
+        [95975] = {
+            name = "Her World",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Gray Dawnbright, Riverglades",
+            finishText = "Tessa Dawnbright, Riverglades"
         },
         [95981] = {
             name = "Watching the Roads",
@@ -304132,6 +308139,17 @@ LJ.Data.ForeverDB = {
             startText = "Watcher Cornelius, Riverglades",
             finishText = "Watcher Cornelius, Riverglades"
         },
+        [95988] = {
+            name = "Goes Down Smooth",
+            level = 38,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Innkeeper Zizplink, Riverglades",
+            finishText = "Innkeeper Zizplink, Riverglades"
+        },
         [95991] = {
             name = "WANTED: Ghostmaw",
             level = 42,
@@ -304142,6 +308160,17 @@ LJ.Data.ForeverDB = {
             map = 2548,
             startText = "WANTED!, Riverglades",
             finishText = "Wheatley, Riverglades"
+        },
+        [95992] = {
+            name = "WANTED: Ghostmaw",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "WANTED!, Riverglades",
+            finishText = "Tan'jani, Riverglades"
         },
         [95998] = {
             name = "The Great Outdoors",
@@ -304165,6 +308194,17 @@ LJ.Data.ForeverDB = {
             startText = "Wanted: Incinerator Gar'im, Redridge Mountains",
             finishText = "Magistrate Solomon, Redridge Mountains"
         },
+        [96003] = {
+            name = "Drawing Down the Malevolent",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Elaena Moonwhisper, Mount Hyjal",
+            finishText = "Elaena Moonwhisper, Mount Hyjal"
+        },
         [96009] = {
             name = "High Stakes",
             level = 38,
@@ -304176,16 +308216,62 @@ LJ.Data.ForeverDB = {
             startText = "Bertrand Ironbrow, Riverglades",
             finishText = "Bertrand Ironbrow, Riverglades"
         },
+        [96010] = {
+            name = "Fragments of the Pylons",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Mordent Evenshade, Shen'dralas",
+            finishText = "Mordent Evenshade, Shen'dralas"
+        },
+        [96015] = {
+            name = "A Miner Problem",
+            level = 43,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Sergeant Riftan, Riverglades",
+            finishText = "Sergeant Riftan, Riverglades"
+        },
         [96016] = {
             name = "The Tempest's Weapons",
             level = 40,
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             map = 1417,
             startText = "Veyric Thunderhame, Arathi Highlands",
             finishText = "Bath'rah the Windwatcher, Alterac Mountains"
+        },
+        [96018] = {
+            name = "Powering the Pylons",
+            level = 43,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Mordent Evenshade, Shen'dralas",
+            finishText = "Mordent Evenshade, Shen'dralas"
+        },
+        [96026] = {
+            name = "Step Two: More Rock",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Hamur, Riverglades",
+            finishText = "Hamur, Riverglades"
         },
         [96045] = {
             name = "Camping 101: Alchemy",
@@ -304195,7 +308281,8 @@ LJ.Data.ForeverDB = {
             src = "forever",
             zone = "Camping",
             map = 1455,
-            startText = "Vosur Brakthel, Ironforge"
+            startText = "Vosur Brakthel, Ironforge",
+            finishText = "Vosur Brakthel, Ironforge"
         },
         [96046] = {
             name = "Camping 101: Mining",
@@ -304234,11 +308321,12 @@ LJ.Data.ForeverDB = {
             name = "Camping 101: Herbalism",
             level = 6,
             min = nil,
-            side = "BOTH",
+            side = "A",
             src = "forever",
             zone = "Camping",
             map = 1426,
-            startText = "Eric Brighthammer, Dun Morogh"
+            startText = "Eric Brighthammer, Dun Morogh",
+            finishText = "Reyna Stonebranch, Ironforge"
         },
         [96056] = {
             name = "Camping 101: Skinning",
@@ -304261,6 +308349,17 @@ LJ.Data.ForeverDB = {
             map = 1455,
             startText = "Thonys Pillarstone, Ironforge",
             finishText = "Thonys Pillarstone, Ironforge"
+        },
+        [96060] = {
+            name = "Tempered Expectations",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Vindael, Shen'dralas",
+            finishText = "Vindael, Shen'dralas"
         },
         [96063] = {
             name = "Gaseous Gold",
@@ -304372,6 +308471,72 @@ LJ.Data.ForeverDB = {
             startText = "Brakk, Durotar",
             finishText = "Snang, Orgrimmar"
         },
+        [96103] = {
+            name = "A Feast for Buzzards",
+            level = 38,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Picked Carcass, Riverglades",
+            finishText = "Neza Bloodsnout, Riverglades"
+        },
+        [96104] = {
+            name = "Song of the Strider",
+            level = 39,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Neza Bloodsnout, Riverglades",
+            finishText = "Neza Bloodsnout, Riverglades"
+        },
+        [96105] = {
+            name = "King of the Wild Plains",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Neza Bloodsnout, Riverglades",
+            finishText = "Neza Bloodsnout, Riverglades"
+        },
+        [96107] = {
+            name = "Feathers for Fletching",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Neza Bloodsnout, Riverglades",
+            finishText = "Neza Bloodsnout, Riverglades"
+        },
+        [96108] = {
+            name = "Poison Tips",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Neza Bloodsnout, Riverglades",
+            finishText = "Neza Bloodsnout, Riverglades"
+        },
+        [96109] = {
+            name = "A Hunter's Quiver",
+            level = 40,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Neza Bloodsnout, Riverglades",
+            finishText = "Neza Bloodsnout, Riverglades"
+        },
         [96125] = {
             name = "In Need of Relief",
             level = 43,
@@ -304381,6 +308546,17 @@ LJ.Data.ForeverDB = {
             zone = "Riverglades",
             map = 2548,
             startText = "Watcher Cornelius, Riverglades",
+            finishText = "Dunston Willis, Riverglades"
+        },
+        [96126] = {
+            name = "An Ogre's Captive",
+            level = 44,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Riverglades",
+            map = 2548,
+            startText = "Dunston Willis, Riverglades",
             finishText = "Dunston Willis, Riverglades"
         },
         [96130] = {
@@ -304400,7 +308576,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             map = 1417,
             startText = "Veyric Thunderhame, Arathi Highlands",
             finishText = "Veyric Thunderhame, Arathi Highlands"
@@ -304441,7 +308619,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1421,
             startText = "Lumina Windsinger, Silverpine Forest",
             finishText = "Lumina Windsinger, Silverpine Forest"
@@ -304454,7 +308634,8 @@ LJ.Data.ForeverDB = {
             src = "forever",
             zone = "Desolace",
             map = 1443,
-            startText = "Umarak, Desolace"
+            startText = "Umarak, Desolace",
+            finishText = "Umarak, Desolace"
         },
         [96241] = {
             name = "Talkin' bout Toxins, Mon",
@@ -304506,7 +308687,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             map = 1417,
             startText = "Veyric Thunderhame, Arathi Highlands",
             finishText = "Veyric Thunderhame, Arathi Highlands"
@@ -304520,6 +308703,17 @@ LJ.Data.ForeverDB = {
             zone = "Mulgore",
             map = 1412,
             finishText = "Muln Earthfury, Mulgore"
+        },
+        [96322] = {
+            name = "A Revenge Now Bitter",
+            level = 58,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Felflick, Mount Hyjal",
+            finishText = "Curious Crow, Mount Hyjal"
         },
         [96390] = {
             name = "Nip 'Em in the Bud",
@@ -304605,6 +308799,17 @@ LJ.Data.ForeverDB = {
             startText = "Beldin Steelgrill, Dun Morogh",
             finishText = "Earthseer Farsen, Dun Morogh"
         },
+        [96550] = {
+            name = "Battle Recall",
+            level = 58,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Object #654121, Mount Hyjal",
+            finishText = "Veteran of the Third War, Mount Hyjal"
+        },
         [96604] = {
             name = "The Great Outdoors",
             level = 6,
@@ -304659,6 +308864,17 @@ LJ.Data.ForeverDB = {
             map = 1426,
             startText = "Eric Brighthammer, Dun Morogh",
             finishText = "Eric Brighthammer, Dun Morogh"
+        },
+        [96616] = {
+            name = "Herbs for the Bruised and Weary",
+            level = 57,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Ortak Lomgok, Mount Hyjal",
+            finishText = "Ortak Lomgok, Mount Hyjal"
         },
         [96626] = {
             name = "Camping 101: Cooking",
@@ -304855,14 +309071,39 @@ LJ.Data.ForeverDB = {
             startText = "Mazu'kon, Mulgore",
             finishText = "Mazu'kon, Mulgore"
         },
+        [96775] = {
+            name = "Zum'rah's Head",
+            level = 46,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Zul'Farrak",
+            map = 1412,
+            startText = "Mazu'kon, Mulgore",
+            finishText = "Mazu'kon, Mulgore"
+        },
+        [96776] = {
+            name = "An'she's Radiance",
+            level = 51,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Maraudon",
+            map = 1412,
+            startText = "Olana Brighthoof, Mulgore",
+            finishText = "Olana Brighthoof, Mulgore"
+        },
         [96779] = {
             name = "Syndicate Sabotage",
             level = 24,
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Rogue",
-            startText = "Myrokos Silentform, Alterac Mountains"
+            classes = {
+                "Rogue"
+            },
+            startText = "Myrokos Silentform, Alterac Mountains",
+            finishText = "Myrokos Silentform, Alterac Mountains"
         },
         [96781] = {
             name = "What's the Big Idea?",
@@ -304870,8 +309111,11 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Rogue",
-            startText = "Myrokos Silentform, Alterac Mountains"
+            classes = {
+                "Rogue"
+            },
+            startText = "Myrokos Silentform, Alterac Mountains",
+            finishText = "Myrokos Silentform, Alterac Mountains"
         },
         [96783] = {
             name = "A Way In",
@@ -304879,7 +309123,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             startText = "Myrokos Silentform, Alterac Mountains",
             finishText = "Syndicate Footlocker, Arathi Highlands"
         },
@@ -304889,9 +309135,38 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Rogue",
+            classes = {
+                "Rogue"
+            },
             map = 1417,
-            startText = "Syndicate Footlocker, Arathi Highlands"
+            startText = "Syndicate Footlocker, Arathi Highlands",
+            finishText = "Anastasia Miller, Arathi Highlands"
+        },
+        [96785] = {
+            name = "Ain't No Telling",
+            level = 36,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            classes = {
+                "Rogue"
+            },
+            map = 1417,
+            startText = "Anastasia Miller, Arathi Highlands",
+            finishText = "Anastasia Miller, Arathi Highlands"
+        },
+        [96786] = {
+            name = "The Syndicate Sting",
+            level = 36,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            classes = {
+                "Rogue"
+            },
+            map = 1417,
+            startText = "Anastasia Miller, Arathi Highlands",
+            finishText = "Myrokos Silentform, Alterac Mountains"
         },
         [96800] = {
             name = "Past Due",
@@ -304973,7 +309248,7 @@ LJ.Data.ForeverDB = {
         [96876] = {
             name = "Ukor's Lost Pack",
             level = 8,
-            min = nil,
+            min = 5,
             side = "H",
             src = "forever",
             zone = "Durotar",
@@ -305045,6 +309320,17 @@ LJ.Data.ForeverDB = {
             startText = "Hadric Harlson, Tirisfal Glades",
             finishText = "Leonid Barthalomew the Revered, Tirisfal Glades"
         },
+        [96971] = {
+            name = "To Outfox a Demon",
+            level = 59,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Renalard, Mount Hyjal",
+            finishText = "Renalard, Mount Hyjal"
+        },
         [96984] = {
             name = "Heart of Disruption",
             level = 33,
@@ -305087,6 +309373,39 @@ LJ.Data.ForeverDB = {
             startText = "Doctor Martin Felben, Undercity",
             finishText = "Doctor Martin Felben, Undercity"
         },
+        [96989] = {
+            name = "Your First Riding Raptor",
+            level = 40,
+            min = nil,
+            side = "H",
+            src = "forever",
+            zone = "Durotar",
+            map = 1411,
+            startText = "Zjolnir, Durotar",
+            finishText = "Zjolnir, Durotar"
+        },
+        [96991] = {
+            name = "Trail Assist",
+            level = 59,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Galvinquam Leafsyre, Mount Hyjal",
+            finishText = "Marn Euhorn, Mount Hyjal"
+        },
+        [97001] = {
+            name = "Sawyer's Legacy",
+            level = 57,
+            min = nil,
+            side = "H",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 2482,
+            startText = "Object #656815, Mount Hyjal",
+            finishText = "Abigail Sawyer, Undercity"
+        },
         [97003] = {
             name = "Chol'aruk the Ravener",
             level = 21,
@@ -305108,6 +309427,17 @@ LJ.Data.ForeverDB = {
             map = 1413,
             startText = "Bainham, The Barrens",
             finishText = "Bainham, The Barrens"
+        },
+        [97046] = {
+            name = "Your First Mechanostrider",
+            level = 40,
+            min = nil,
+            side = "A",
+            src = "forever",
+            zone = "Dun Morogh",
+            map = 1426,
+            startText = "Milli Featherwhistle, Dun Morogh",
+            finishText = "Milli Featherwhistle, Dun Morogh"
         },
         [97047] = {
             name = "The Cook in the Cage",
@@ -305131,6 +309461,25 @@ LJ.Data.ForeverDB = {
             startText = "Wendel Mathers, Stranglethorn Vale",
             finishText = "Captain Aransas, Stranglethorn Vale"
         },
+        [97049] = {
+            name = "Essence of Seeping Slimes",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "The Shaper's Terrace"
+        },
+        [97074] = {
+            name = "Learning to Ride",
+            level = 40,
+            min = nil,
+            side = "A",
+            src = "forever",
+            zone = "Darnassus",
+            map = 1457,
+            startText = "Jartsam, Darnassus",
+            finishText = "Lelanai, Darnassus"
+        },
         [97130] = {
             name = "Ancient Gurubashi Secrets",
             level = 40,
@@ -305141,6 +309490,57 @@ LJ.Data.ForeverDB = {
             startText = "Archmage Timear, Alterac Mountains",
             finishText = "Archmage Timear, Alterac Mountains"
         },
+        [97188] = {
+            name = "Learning to Ride",
+            level = 40,
+            min = nil,
+            side = "A",
+            src = "forever",
+            zone = "Dun Morogh",
+            map = 1426,
+            startText = "Binjy Featherwhistle, Dun Morogh",
+            finishText = "Milli Featherwhistle, Dun Morogh"
+        },
+        [97196] = {
+            name = "The Coldbringer's Eye",
+            level = 41,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Razorfen Downs",
+            map = 1412,
+            startText = "Sutara Plainstalker, Mulgore",
+            finishText = "Sutara Plainstalker, Mulgore"
+        },
+        [97197] = {
+            name = "Fragment of the Firelands",
+            level = 55,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Blackrock Depths",
+            startText = "Alaana Stormwalker, Mulgore",
+            finishText = "Alaana Stormwalker, Mulgore"
+        },
+        [97198] = {
+            name = "Blackmaw Magic",
+            level = 59,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Blackmaw Hold",
+            startText = "Muln Earthfury, Mulgore"
+        },
+        [97204] = {
+            name = "Learning to Ride",
+            level = 40,
+            min = nil,
+            side = "H",
+            src = "forever",
+            zone = "Mulgore",
+            map = 1412,
+            startText = "Kar Stormsinger, Mulgore"
+        },
         [97205] = {
             name = "Learning to Ride",
             level = 40,
@@ -305149,7 +309549,8 @@ LJ.Data.ForeverDB = {
             src = "forever",
             zone = "Zephras Isle",
             map = 2521,
-            startText = "Genn Fairweather, Zephras Isle"
+            startText = "Genn Fairweather, Zephras Isle",
+            finishText = "Genn Fairweather, Zephras Isle"
         },
         [97220] = {
             name = "Philmor's Favor",
@@ -305160,6 +309561,17 @@ LJ.Data.ForeverDB = {
             zone = "Stormwind City",
             map = 1453,
             startText = "Manifest Clerk Philmor, Stormwind City",
+            finishText = "Elaine Trias, Stormwind City"
+        },
+        [97222] = {
+            name = "Gatehouse Goods",
+            level = 15,
+            min = nil,
+            side = "A",
+            src = "forever",
+            zone = "Stormwind City",
+            map = 1453,
+            startText = "Elaine Trias, Stormwind City",
             finishText = "Elaine Trias, Stormwind City"
         },
         [97223] = {
@@ -305430,6 +309842,16 @@ LJ.Data.ForeverDB = {
             startText = "Master Apothecary Faranell, Undercity",
             finishText = "Master Apothecary Faranell, Undercity"
         },
+        [97319] = {
+            name = "A Cousin Abroad",
+            level = 55,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Western Plaguelands",
+            map = 1422,
+            startText = "Argent Officer Garush, Tirisfal Glades"
+        },
         [97326] = {
             name = "Rocks to Rests",
             level = 15,
@@ -305440,6 +309862,15 @@ LJ.Data.ForeverDB = {
             map = 1454,
             startText = "Thra, Orgrimmar",
             finishText = "Thra, Orgrimmar"
+        },
+        [97327] = {
+            name = "Blackmaw Pouches",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Blackmaw Hold",
+            startText = "Ekkal, Azshara"
         },
         [97328] = {
             name = "Anything of Value",
@@ -305474,6 +309905,28 @@ LJ.Data.ForeverDB = {
             startText = "Zimmix Sputterspark, Stranglethorn Vale",
             finishText = "Wharfmaster Lozgil, Stranglethorn Vale"
         },
+        [97386] = {
+            name = "The Offense of Grom'gol",
+            level = 44,
+            min = nil,
+            side = "H",
+            src = "forever",
+            zone = "Stranglethorn Vale",
+            map = 1434,
+            startText = "Commander Aggro'gosh, Stranglethorn Vale",
+            finishText = "Commander Aggro'gosh, Stranglethorn Vale"
+        },
+        [97453] = {
+            name = "Weed Whacked",
+            level = 38,
+            min = nil,
+            side = "H",
+            src = "forever",
+            zone = "Stranglethorn Vale",
+            map = 1434,
+            startText = "Gemmil, Stranglethorn Vale",
+            finishText = "Nerrist, Stranglethorn Vale"
+        },
         [97485] = {
             name = "Traditions of the Bluff",
             level = 10,
@@ -305484,6 +309937,49 @@ LJ.Data.ForeverDB = {
             map = 1456,
             startText = "Eylah Sunhorn, Thunder Bluff",
             finishText = "Eylah Sunhorn, Thunder Bluff"
+        },
+        [97490] = {
+            name = "Halt the Hail",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mount Hyjal",
+            map = 1452,
+            startText = "Umaron Stragarelm, Winterspring"
+        },
+        [97530] = {
+            name = "Dunemaul Dues",
+            level = 47,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Tanaris",
+            map = 1446,
+            startText = "Security Chief Bilgewhizzle, Tanaris",
+            finishText = "Security Chief Bilgewhizzle, Tanaris"
+        },
+        [97534] = {
+            name = "Gritty Business",
+            level = 45,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Tanaris",
+            map = 1446,
+            startText = "Quinn, Tanaris",
+            finishText = "Quinn, Tanaris"
+        },
+        [97536] = {
+            name = "Gnomish Garbage",
+            level = 45,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Tanaris",
+            map = 1446,
+            startText = "Jhordy Lapforge, Tanaris",
+            finishText = "Jhordy Lapforge, Tanaris"
         },
         [97538] = {
             name = "Pigments for Paints",
@@ -305506,6 +310002,17 @@ LJ.Data.ForeverDB = {
             map = 1417,
             startText = "Doctor Gregory Victor, Arathi Highlands",
             finishText = "Doctor Gregory Victor, Arathi Highlands"
+        },
+        [97540] = {
+            name = "Oasis",
+            level = 50,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Tanaris",
+            map = 1446,
+            startText = "Tooga, Tanaris",
+            finishText = "Tooga, Tanaris"
         },
         [97558] = {
             name = "Hides for the Forsaken",
@@ -305539,6 +310046,26 @@ LJ.Data.ForeverDB = {
             startText = "Dorgaron, Badlands",
             finishText = "Dorgaron, Badlands"
         },
+        [97821] = {
+            name = "Mirage Mirror",
+            level = 42,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Badlands",
+            map = 1418
+        },
+        [97884] = {
+            name = "Armory of Sunnyglade",
+            level = 40,
+            min = nil,
+            side = "H",
+            src = "forever",
+            zone = "Riverglades",
+            map = 1458,
+            startText = "Mirelle Tremayne, Undercity",
+            finishText = "Mirelle Tremayne, Undercity"
+        },
         [97891] = {
             name = "Prompt Potion Runner",
             level = 16,
@@ -305560,6 +310087,17 @@ LJ.Data.ForeverDB = {
             map = 1453,
             startText = "Borgus Steelhand, Stormwind City",
             finishText = "Gorbold Steelhand, Darkshore"
+        },
+        [97899] = {
+            name = "Camping 101: Alchemy",
+            level = 6,
+            min = nil,
+            side = "H",
+            src = "forever",
+            zone = "Camping",
+            map = 1411,
+            startText = "Brakk, Durotar",
+            finishText = "Whuut, Orgrimmar"
         },
         [97900] = {
             name = "Camping 101: Blacksmithing",
@@ -305609,11 +310147,12 @@ LJ.Data.ForeverDB = {
             name = "Camping 101: Fishing",
             level = 6,
             min = nil,
-            side = "BOTH",
+            side = "H",
             src = "forever",
             zone = "Camping",
             map = 1411,
-            startText = "Brakk, Durotar"
+            startText = "Brakk, Durotar",
+            finishText = "Lau'Tiki, Durotar"
         },
         [97905] = {
             name = "Camping 101: Herbalism",
@@ -305674,11 +310213,12 @@ LJ.Data.ForeverDB = {
             name = "Camping 101: Alchemy",
             level = 6,
             min = nil,
-            side = "BOTH",
+            side = "A",
             src = "forever",
             zone = "Camping",
             map = 1429,
-            startText = "Sam Sarsaparilla, Elwynn Forest"
+            startText = "Sam Sarsaparilla, Elwynn Forest",
+            finishText = "Alchemist Mallory, Elwynn Forest"
         },
         [97916] = {
             name = "Camping 101: Blacksmithing",
@@ -305697,6 +310237,8 @@ LJ.Data.ForeverDB = {
             min = 4,
             side = "A",
             src = "forever",
+            zone = "Camping",
+            map = 1429,
             startText = "Sam Sarsaparilla, Elwynn Forest",
             finishText = "Betty Quin, Stormwind City"
         },
@@ -305828,6 +310370,7 @@ LJ.Data.ForeverDB = {
             side = "H",
             src = "forever",
             zone = "Camping",
+            map = 1412,
             startText = "Kaga Wildhoof, Mulgore",
             finishText = "Komin Winterhoof, Thunder Bluff"
         },
@@ -305835,9 +310378,11 @@ LJ.Data.ForeverDB = {
             name = "Camping 101: Mining",
             level = 6,
             min = nil,
-            side = "BOTH",
+            side = "H",
             src = "forever",
-            zone = "Camping"
+            zone = "Camping",
+            startText = "Kaga Wildhoof, Mulgore",
+            finishText = "Brek Stonehoof, Thunder Bluff"
         },
         [97936] = {
             name = "Camping 101: Skinning",
@@ -305941,11 +310486,12 @@ LJ.Data.ForeverDB = {
             name = "Camping 101: Fishing",
             level = 6,
             min = nil,
-            side = "BOTH",
+            side = "H",
             src = "forever",
             zone = "Camping",
             map = 1420,
-            startText = "Eleanor Shackleton, Tirisfal Glades"
+            startText = "Eleanor Shackleton, Tirisfal Glades",
+            finishText = "Clyde Kellen, Tirisfal Glades"
         },
         [97957] = {
             name = "Camping 101: Herbalism",
@@ -305957,6 +310503,17 @@ LJ.Data.ForeverDB = {
             map = 1420,
             startText = "Eleanor Shackleton, Tirisfal Glades",
             finishText = "Faruza, Tirisfal Glades"
+        },
+        [97958] = {
+            name = "Camping 101: Leatherworking",
+            level = 6,
+            min = nil,
+            side = "H",
+            src = "forever",
+            zone = "Camping",
+            map = 1420,
+            startText = "Eleanor Shackleton, Tirisfal Glades",
+            finishText = "Shelene Rhobart, Tirisfal Glades"
         },
         [97959] = {
             name = "Camping 101: Mining",
@@ -305988,12 +310545,13 @@ LJ.Data.ForeverDB = {
             src = "forever",
             zone = "Camping",
             map = 2521,
-            startText = "Raan Wildwind, Zephras Isle"
+            startText = "Raan Wildwind, Zephras Isle",
+            finishText = "Nyassa Swiftdraught, Zephras Isle"
         },
         [97965] = {
             name = "Camping 101: First Aid",
             level = 6,
-            min = nil,
+            min = 4,
             side = "BOTH",
             src = "forever",
             zone = "Camping",
@@ -306100,6 +310658,17 @@ LJ.Data.ForeverDB = {
             startText = "Calder Gray, Undercity",
             finishText = "Calder Gray, Undercity"
         },
+        [98013] = {
+            name = "Swelling Forces",
+            level = 20,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Darkshore",
+            map = 1439,
+            startText = "Arbal, Darkshore",
+            finishText = "Arbal, Darkshore"
+        },
         [98024] = {
             name = "Journey to the Crossroads",
             level = 13,
@@ -306133,6 +310702,17 @@ LJ.Data.ForeverDB = {
             startText = "Gleaming Crescent Pendant, Ashenvale",
             finishText = "Maliynn, Ashenvale"
         },
+        [98042] = {
+            name = "It's All Fun and Games Until...",
+            level = 17,
+            min = nil,
+            side = "A",
+            src = "forever",
+            zone = "Darkshore",
+            map = 1439,
+            startText = "Twilight Tome, Darkshore",
+            finishText = "Thundris Windweaver, Darkshore"
+        },
         [98046] = {
             name = "Crown of the Earth",
             level = 11,
@@ -306143,6 +310723,17 @@ LJ.Data.ForeverDB = {
             map = 1457,
             startText = "Arch Druid Fandral Staghelm, Darnassus",
             finishText = "Lariia, Darnassus"
+        },
+        [98059] = {
+            name = "Hillsbrad's Hoard",
+            level = 27,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Hillsbrad Foothills",
+            map = 1424,
+            startText = "Captain McManus, Hillsbrad Foothills",
+            finishText = "Captain McManus, Hillsbrad Foothills"
         },
         [98065] = {
             name = "Crown of the Earth",
@@ -306309,6 +310900,17 @@ LJ.Data.ForeverDB = {
             startText = "Valstag Ironjaw, Wetlands",
             finishText = "Valstag Ironjaw, Wetlands"
         },
+        [98203] = {
+            name = "Witch Doctor Ti'ik",
+            level = 49,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "The Hinterlands",
+            map = 1425,
+            startText = "Qujo, The Hinterlands",
+            finishText = "Qujo, The Hinterlands"
+        },
         [98208] = {
             name = "Bloom of the Heavens",
             level = 29,
@@ -306441,7 +311043,7 @@ LJ.Data.ForeverDB = {
         },
         [98251] = {
             name = "Never Coming Back",
-            level = 22,
+            level = 23,
             min = nil,
             side = "BOTH",
             src = "forever",
@@ -306452,11 +311054,11 @@ LJ.Data.ForeverDB = {
         },
         [98252] = {
             name = "A Void Path",
-            level = 22,
+            level = 23,
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Thunder Bluff",
+            zone = "Ashenvale",
             map = 1440,
             startText = "Va'xug Firefure, Ashenvale",
             finishText = "Eye of Kilrogg, Ashenvale"
@@ -306531,10 +311133,12 @@ LJ.Data.ForeverDB = {
             name = "Stop the Spread",
             level = 20,
             min = nil,
-            side = "BOTH",
+            side = "H",
             src = "forever",
             zone = "Silverpine Forest",
-            map = 1421
+            map = 1421,
+            startText = "Dalar Dawnweaver, Silverpine Forest",
+            finishText = "Dalar Dawnweaver, Silverpine Forest"
         },
         [98300] = {
             name = "Word to Ironforge",
@@ -306630,7 +311234,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "H",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             map = 1456,
             startText = "Turak Runetotem, Thunder Bluff",
             finishText = "Dendrite Starblaze, Moonglade"
@@ -306641,7 +311247,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             map = 1450,
             startText = "Dendrite Starblaze, Moonglade",
             finishText = "Avatar of Saeyleenan, Moonglade"
@@ -306652,7 +311260,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             map = 1450,
             startText = "Great Cat Spirit, Moonglade",
             finishText = "Great Cat Spirit, Moonglade"
@@ -306663,7 +311273,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "H",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             map = 1450,
             startText = "Dendrite Starblaze, Moonglade",
             finishText = "Turak Runetotem, Thunder Bluff"
@@ -306737,7 +311349,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "A",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             map = 1457,
             startText = "Mathrengyl Bearwalker, Darnassus",
             finishText = "Dendrite Starblaze, Moonglade"
@@ -306748,7 +311362,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             map = 1450,
             startText = "Dendrite Starblaze, Moonglade",
             finishText = "Great Cat Spirit, Moonglade"
@@ -306759,7 +311375,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             map = 1450,
             startText = "Great Cat Spirit, Moonglade",
             finishText = "Great Cat Spirit, Moonglade"
@@ -306770,7 +311388,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "A",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             map = 1450,
             startText = "Dendrite Starblaze, Moonglade",
             finishText = "Mathrengyl Bearwalker, Darnassus"
@@ -306803,7 +311423,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             map = 1450,
             startText = "Avatar of Saeyleenan, Moonglade",
             finishText = "Avatar of Saeyleenan, Moonglade"
@@ -306814,7 +311436,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             map = 1450,
             startText = "Dendrite Starblaze, Moonglade",
             finishText = "Great Cat Spirit, Moonglade"
@@ -306849,7 +311473,8 @@ LJ.Data.ForeverDB = {
             src = "forever",
             zone = "Ashenvale",
             map = 1440,
-            startText = "Maseara Autumnmoon, Ashenvale"
+            startText = "Maseara Autumnmoon, Ashenvale",
+            finishText = "Maseara Autumnmoon, Ashenvale"
         },
         [98423] = {
             name = "The Treaty of Understanding",
@@ -306879,7 +311504,8 @@ LJ.Data.ForeverDB = {
             src = "forever",
             zone = "Mulgore",
             map = 1412,
-            startText = "Morin Cloudstalker, Mulgore"
+            startText = "Morin Cloudstalker, Mulgore",
+            finishText = "Morin Cloudstalker, Mulgore"
         },
         [98430] = {
             name = "The Longwalkers",
@@ -306936,6 +311562,17 @@ LJ.Data.ForeverDB = {
             startText = "Barkeep Kelly, Hillsbrad Foothills",
             finishText = "Nixxrax Fillamug, Stranglethorn Vale"
         },
+        [98477] = {
+            name = "Unstable Magic",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Mulgore",
+            map = 1412,
+            startText = "Nuara Tremorhoof, Mulgore",
+            finishText = "Nuara Tremorhoof, Mulgore"
+        },
         [98512] = {
             name = "Al'Aketh Assassins",
             level = 11,
@@ -306964,10 +311601,25 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "A",
             src = "forever",
-            zone = "Priest",
+            classes = {
+                "Priest"
+            },
             map = 1426,
             startText = "Sten Stoutarm, Dun Morogh",
             finishText = "Branstock Khalder, Dun Morogh"
+        },
+        [98575] = {
+            name = "Tainted Tablet",
+            level = 1,
+            min = nil,
+            side = "H",
+            src = "forever",
+            classes = {
+                "Warlock"
+            },
+            map = 1411,
+            startText = "Gornek, Durotar",
+            finishText = "Nartok, Durotar"
         },
         [98576] = {
             name = "Glyphic Parchment",
@@ -306975,7 +311627,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "H",
             src = "forever",
-            zone = "Mage",
+            classes = {
+                "Mage"
+            },
             map = 1411,
             startText = "Gornek, Durotar",
             finishText = "Mai'ah, Durotar"
@@ -306986,7 +311640,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "A",
             src = "forever",
-            zone = "Shaman",
+            classes = {
+                "Shaman"
+            },
             map = 1426,
             startText = "Sten Stoutarm, Dun Morogh",
             finishText = "Teo Hammerstorm, Dun Morogh"
@@ -306997,7 +311653,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "H",
             src = "forever",
-            zone = "Paladin",
+            classes = {
+                "Paladin"
+            },
             map = 1420,
             startText = "Shadow Priest Sarvis, Tirisfal Glades",
             finishText = "Aramis Hammerhand, Tirisfal Glades"
@@ -307008,7 +311666,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             map = 1450,
             startText = "Great Cat Spirit, Moonglade",
             finishText = "Dendrite Starblaze, Moonglade"
@@ -307019,7 +311679,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             map = 1450,
             startText = "Avatar of Saeyleenan, Moonglade",
             finishText = "Dendrite Starblaze, Moonglade"
@@ -307030,7 +311692,9 @@ LJ.Data.ForeverDB = {
             min = nil,
             side = "BOTH",
             src = "forever",
-            zone = "Druid",
+            classes = {
+                "Druid"
+            },
             map = 1450,
             startText = "Great Cat Spirit, Moonglade",
             finishText = "Dendrite Starblaze, Moonglade"
@@ -307075,7 +311739,8 @@ LJ.Data.ForeverDB = {
             side = "H",
             src = "forever",
             zone = "Darkspear Islands",
-            startText = "Horde Warbringer, Undercity"
+            startText = "Horde Warbringer, Undercity",
+            finishText = "Horde Warbringer, The Barrens"
         },
         [98895] = {
             name = "Darkspear Islands Clash",
@@ -307085,7 +311750,7 @@ LJ.Data.ForeverDB = {
             src = "forever",
             zone = "Darkspear Islands",
             map = 1457,
-            startText = "Alliance Brigadier General, Alterac Mountains"
+            startText = "Alliance Brigadier General, Arathi Highlands"
         },
         [98906] = {
             name = "The Battle for Darkspear Islands!",
@@ -307406,7 +312071,7 @@ LJ.Data.ForeverDB = {
         [99156] = {
             name = "Rear Guard Patrol",
             level = 13,
-            min = nil,
+            min = 10,
             side = "H",
             src = "forever",
             zone = "Tirisfal Glades",
@@ -307468,6 +312133,37 @@ LJ.Data.ForeverDB = {
             map = 1426,
             startText = "Father Gavin, Dun Morogh",
             finishText = "Father Gavin, Dun Morogh"
+        },
+        [99201] = {
+            name = "Swift as the Wind",
+            level = 60,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Orgrimmar",
+            map = 1454
+        },
+        [99257] = {
+            name = "A Heart of Crystal",
+            level = 43,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Historian Biraxas, Shen'dralas",
+            finishText = "Historian Biraxas, Shen'dralas"
+        },
+        [99258] = {
+            name = "Mana Mania",
+            level = 43,
+            min = nil,
+            side = "BOTH",
+            src = "forever",
+            zone = "Shen'dralas",
+            map = 2652,
+            startText = "Historian Biraxas, Shen'dralas",
+            finishText = "Historian Biraxas, Shen'dralas"
         },
         [99260] = {
             name = "Fillion's Mission",
@@ -308030,7 +312726,7 @@ LJ.Data.ForeverDB = {
     }
 }
 LJ.DATA_BUILD = LJ.Data.ForeverDB.build
-LJ.DATA_CHECKED = "2026-11-17"
+LJ.DATA_CHECKED = "2026-11-25"
 LJ.DATA_STATUS = "ForeverDB snapshot packaged; client collection remains authoritative for tooltip stats"
 LJ.DATA_SOURCES = { "https://foreverdb.net" }
 local D = LJ.Data.ForeverDB

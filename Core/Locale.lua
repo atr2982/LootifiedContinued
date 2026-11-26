@@ -277,6 +277,75 @@ local function Count(list)
     return n
 end
 
+-- Forever exposes older LFD queue choices separately from the newer Group Finder dungeon browser. Capture both:
+-- GetLFGDungeonInfo returns queue/recommended values; C_LFGList activity records expose browser level suggestions.
+function Collect.ReadDungeonFinder()
+    local snapshot = { available = false, level = UnitLevel("player"), rows = {}, activities = {} }
+    if type(GetLFDChoiceOrder) == "function" and type(GetLFGDungeonInfo) == "function" then
+        local ok, ids = pcall(GetLFDChoiceOrder)
+        if ok and type(ids) == "table" then
+            snapshot.available = true
+            for _, id in ipairs(ids) do
+                if type(id) == "number" and id > 0 then
+                    local read, name, typeID, subtypeID, minLevel, maxLevel, recLevel, minRecLevel, maxRecLevel =
+                        pcall(GetLFGDungeonInfo, id)
+                    if read and name then
+                        snapshot.rows[#snapshot.rows + 1] = {
+                            id = id, name = GameText(name), typeID = typeID, subtypeID = subtypeID,
+                            minLevel = minLevel, maxLevel = maxLevel, recLevel = recLevel,
+                            minRecLevel = minRecLevel, maxRecLevel = maxRecLevel,
+                        }
+                    end
+                end
+            end
+        end
+    end
+    local lfgList = C_LFGList
+    if type(lfgList) == "table" and type(lfgList.GetAvailableActivities) == "function"
+        and type(lfgList.GetActivityInfoTable) == "function" then
+        local categoryID = GROUP_FINDER_CATEGORY_ID_DUNGEONS or 2
+        local ok, ids = pcall(lfgList.GetAvailableActivities, categoryID)
+        if ok and type(ids) == "table" then
+            snapshot.available = true
+            for _, id in ipairs(ids) do
+                local read, info = pcall(lfgList.GetActivityInfoTable, id)
+                if read and type(info) == "table" and (not info.categoryID or info.categoryID == categoryID) then
+                    snapshot.activities[#snapshot.activities + 1] = {
+                        id = id, name = GameText(info.fullName or info.shortName),
+                        minLevel = info.minLevel, minLevelSuggestion = info.minLevelSuggestion,
+                        maxLevelSuggestion = info.maxLevelSuggestion, mapID = info.mapID,
+                    }
+                end
+            end
+        end
+    end
+    return snapshot
+end
+
+function Collect.PrintDungeonFinder()
+    local snapshot = Collect.ReadDungeonFinder()
+    LJ.db.dungeonFinderSnapshot = snapshot
+    if not snapshot.available then
+        LJ:Print("Dungeon finder API is unavailable in this client state.")
+        return
+    end
+    LJ:Print("Live dungeon finder rows at player level %s (%d LFD, %d browser):",
+        tostring(snapshot.level), #snapshot.rows, #snapshot.activities)
+    for _, row in ipairs(snapshot.rows) do
+        LJ:Print("LFG id %s | %s | type %s/%s | queue %s-%s | recommended %s (range %s-%s)",
+            tostring(row.id), tostring(row.name or "?"), tostring(row.typeID or "?"), tostring(row.subtypeID or "?"),
+            tostring(row.minLevel or "?"), tostring(row.maxLevel or "?"), tostring(row.recLevel or "?"),
+            tostring(row.minRecLevel or "?"), tostring(row.maxRecLevel or "?"))
+    end
+    for _, row in ipairs(snapshot.activities) do
+        LJ:Print("Browser activity %s | %s | minimum %s | suggested levels %s-%s | map %s",
+            tostring(row.id), tostring(row.name or "?"), tostring(row.minLevel or "?"),
+            tostring(row.minLevelSuggestion or "?"),
+            tostring(row.maxLevelSuggestion or "?"), tostring(row.mapID or "?"))
+    end
+    LJ:Print("Snapshot saved in LootifiedData.dungeonFinderSnapshot; /reload saves it.")
+end
+
 ---------------------------------------------------------------------------
 -- Progress window
 ---------------------------------------------------------------------------
@@ -849,6 +918,7 @@ local function AddCollect(locale, texts)
     kept.npcOpen = Unsettled(kept.npcOpen, texts.npcOpen, function(id) return kept.npcs[id] end)
     for _, character in ipairs(texts.characters) do kept.characters[#kept.characters + 1] = character end
     kept.itemResult, kept.questResult, kept.npcResult = texts.itemResult, texts.questResult, texts.npcResult
+    kept.dungeonFinder = texts.dungeonFinder
     kept.addonItems = texts.addonItems
     kept.itemUnconfirmed, kept.questUnconfirmed = texts.itemUnconfirmed, texts.questUnconfirmed
     kept.npcUnconfirmed = texts.npcUnconfirmed
@@ -870,6 +940,9 @@ local function Finish(locale)
     LJ:Print("Quests: %d of %d read, %d refused by the server, %d read only once, %d never answered.", q.read,
         t.questIDs, q.refused, q.unconfirmed, q.open)
     LJ:Print("NPCs: %d of %d read, %d read only once, %d never answered.", n.read, t.npcIDs, n.unconfirmed, n.open)
+    local finder = t.dungeonFinder
+    LJ:Print("Dungeon finder: %s; %d rows at level %s.", finder and finder.available and "captured" or "unavailable",
+        finder and #finder.rows or 0, tostring(finder and finder.level or "?"))
     if t.language then
         LJ:Print("Taken from the English collect, not asked: %d items without data, %d refused quests.",
             #t.itemMissing - i.refused, Count(t.questRefused) - q.refused)
@@ -922,6 +995,7 @@ function Collect.Start(language)
         questRewards = {}, questRefused = refused, questLines = {}, questObjectives = {}, npcs = {},
         npcLines = {}, npcDisplays = {}, items = {}, itemClasses = {}, itemData = {}, itemMissing = missing,
         itemIDs = #LJ.Scoring.GetAllItemIDs(), questIDs = #QuestIDs(), language = language or nil,
+        dungeonFinder = Collect.ReadDungeonFinder(),
         characters = { { level = UnitLevel("player"), class = select(2, UnitClass("player")),
             faction = UnitFactionGroup("player") } } }
     Collect.texts = texts

@@ -307,16 +307,21 @@ local function AddRanked(list, spec)
         local dataSlot = BiS.ResolveDataSlot(spec, slot)
         if dataSlot and not done[dataSlot] then
             done[dataSlot] = true
-            local worn = Scoring.GetEquippedScore(spec, dataSlot, true)
+            local hitBase, dualWielding = Scoring.GetRankHitContext(spec, dataSlot)
+            local worn = hitBase ~= nil and Scoring.GetEquippedScore(spec, dataSlot, true, hitBase, dualWielding) or nil
             if worn == nil then
                 wornUnknown = true
             else
-                for _, e in ipairs(SheetList(spec, ranking, dataSlot)) do
-                    local gain = e.score - worn
-                    local pct = worn > 0 and gain / worn * 100 or total and total > 0 and gain / total * 100
-                    if gain <= 0 then break end
-                    if not C_Item.IsEquippedItem(e.id) then
-                        AddTarget(list, e.id, slot, gain, nil, nil, pct, e.fallback)
+                if hitBase == nil then
+                    wornUnknown = true
+                else
+                    for _, e in ipairs(SheetList(spec, ranking, dataSlot)) do
+                        local gain = e.score - worn
+                        local pct = worn > 0 and gain / worn * 100 or total and total > 0 and gain / total * 100
+                        if gain <= 0 then break end
+                        if not C_Item.IsEquippedItem(e.id) then
+                            AddTarget(list, e.id, slot, gain, nil, nil, pct, e.fallback)
+                        end
                     end
                 end
             end
@@ -472,9 +477,12 @@ function BiS.PotentialDelta(itemID)
     local function usableStats(stats)
         return stats and next(stats) and stats or nil
     end
-    local stats = usableStats(Scoring.GetCachedStats(itemID))
+    -- Use the same live-first item record as Journal, Open World and tooltips;
+    -- the shipped snapshot is only a fallback when the Forever client has no
+    -- current item data.
+    local stats = usableStats(Scoring.GetStats(itemID))
+        or usableStats(Scoring.GetCachedStats(itemID))
         or usableStats(Items.GetKnownStats(itemID, {}))
-        or usableStats(Scoring.GetStats(itemID))
     if not stats then
         local link = select(2, C_Item.GetItemInfo(itemID))
         stats = link and usableStats(Scoring.GetStatsForLink(link)) or nil
@@ -482,12 +490,20 @@ function BiS.PotentialDelta(itemID)
     stats = stats or usableStats(Scoring.ClientStats(itemID))
     if not stats then return nil end
     local best
-    for _, slot in ipairs(Scoring.GetItemSlots(facts, spec.class)) do
-        local worn = Scoring.GetEquippedScore(spec, slot, true)
-        local score = Scoring.Score(itemID, spec, slot, true, stats)
-        if worn and score then
-            local gain = score - worn
-            if not best or gain > best then best = gain end
+    local isPairItem = classID == 2 and (equipLoc == "INVTYPE_2HWEAPON" or equipLoc == "INVTYPE_WEAPON"
+        or equipLoc == "INVTYPE_WEAPONMAINHAND" or equipLoc == "INVTYPE_WEAPONOFFHAND")
+        or equipLoc == "INVTYPE_SHIELD" or equipLoc == "INVTYPE_HOLDABLE"
+    if isPairItem then
+        local pair = Scoring.CompareWeapon(itemID, spec, stats, equipLoc)
+        best = pair and pair.delta or nil
+    else
+        for _, slot in ipairs(Scoring.GetItemSlots(facts, spec.class)) do
+            local worn, _, _, hitBase, dualWielding = Scoring.GetReplacementScore(spec, slot)
+            local score = hitBase ~= nil and Scoring.Score(itemID, spec, slot, true, stats, hitBase, dualWielding) or nil
+            if worn and score then
+                local gain = score - worn
+                if not best or gain > best then best = gain end
+            end
         end
     end
     potentialDeltaCache[itemID] = best or false
@@ -500,15 +516,17 @@ function BiS.PotentialUpgrade(itemID)
 end
 
 function BiS.PotentialUpgradePercent(itemID)
-    local gain = BiS.PotentialUpgrade(itemID)
-    local total = LJ.ItemCheck.WornTotal(Player:GetActiveSpec())
-    return gain and total and total > 0 and gain / total * 100 or nil
+    if not BiS.PotentialUpgrade(itemID) then return nil end
+    local spec = Player:GetActiveSpec()
+    local share = spec and LJ.ItemCheck.Share(spec, Items.GetLink(itemID))
+    return share and share.better and share.pct or nil
 end
 
 function BiS.PotentialDeltaPercent(itemID)
-    local gain = BiS.PotentialDelta(itemID)
-    local total = LJ.ItemCheck.WornTotal(Player:GetActiveSpec())
-    return gain and total and total > 0 and gain / total * 100 or nil
+    if BiS.PotentialDelta(itemID) == nil then return nil end
+    local spec = Player:GetActiveSpec()
+    local share = spec and LJ.ItemCheck.Share(spec, Items.GetLink(itemID))
+    return share and share.pct or nil
 end
 
 -- Every item of the list the character does not own yet, the best first.

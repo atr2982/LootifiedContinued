@@ -125,8 +125,12 @@ function Lists.CardQuestCount(inst)
 end
 
 -- The better of two instance cards ({ inst, upgrades, quests }), the same on every page ("Best for you right now",
--- the order for the level): more upgrades, then more quests, then the lower one, then by name.
+-- the order for the level): currently level-appropriate instances first, then more upgrades, more quests, the lower
+-- level range, and name. Upcoming instances remain visible in the near-level list but cannot outrank one available now.
 function Lists.Better(a, b)
+    local level = Player.level or 1
+    local aAvailable, bAvailable = a.inst.minLevel <= level, b.inst.minLevel <= level
+    if aAvailable ~= bAvailable then return aAvailable end
     if a.upgrades ~= b.upgrades then return a.upgrades > b.upgrades end
     if a.quests ~= b.quests then return a.quests > b.quests end
     if a.inst.minLevel ~= b.inst.minLevel then return a.inst.minLevel < b.inst.minLevel end

@@ -805,6 +805,12 @@ function Page:RefreshLoot()
         local d = Kit.ItemData(e.id, spec)
         d.upgrade = BiS.JournalUpgrade(e.id)
         d.upgradeText = d.upgrade and BiS.FormatJournalUpgrade(e.id) or nil
+        -- Kit.ItemData initially adds a tooltip fallback for the regular BiS
+        -- target list. Journal rows use the broader dungeon-upgrade result above,
+        -- so rebuild that fallback from the same Journal score.
+        d.extraTooltip = nil
+        local upgradeTooltip = Lists.UpgradeTooltip(d.upgrade, e.id)
+        if upgradeTooltip then d.extraTooltip = { upgradeTooltip } end
         if Lists.PassesClass(Items.Get(e.id), db.spec, d.upgrade) then
             if g.kind ~= "quests" and d.upgrade then upgrades = upgrades + 1 end
             if g.kind == "quests" then

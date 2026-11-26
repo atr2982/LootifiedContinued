@@ -55,6 +55,13 @@ const CLASS_CATEGORIES = new Map([
   "Druid", "Hunter", "Mage", "Paladin", "Priest", "Rogue", "Shaman", "Warlock", "Warrior",
 ].map(name => [name.toLowerCase(), name]));
 
+function checkedDate() {
+  const parts = Object.fromEntries(new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Chicago", year: "numeric", month: "2-digit", day: "2-digit",
+  }).formatToParts(new Date()).map(part => [part.type, part.value]));
+  return `${parts.year}-${parts.month}-${parts.day}`;
+}
+
 function questRow(q) {
   const row = { name: q.name, level: q.level, min: q.requiredLevel, side: q.side ? q.side.toUpperCase() : undefined, src: q.source };
   const category = typeof q.category === "string" ? q.category.trim() : "";
@@ -88,7 +95,7 @@ local _, LJ = ...
 LJ.Data = LJ.Data or {}
 LJ.Data.ForeverDB = ${lua(payload)}
 LJ.DATA_BUILD = LJ.Data.ForeverDB.build
-LJ.DATA_CHECKED = ${JSON.stringify(new Date().toISOString().slice(0, 10))}
+LJ.DATA_CHECKED = ${JSON.stringify(checkedDate())}
 LJ.DATA_STATUS = "ForeverDB snapshot packaged; client collection remains authoritative for tooltip stats"
 LJ.DATA_SOURCES = { "https://foreverdb.net" }
 local D = LJ.Data.ForeverDB

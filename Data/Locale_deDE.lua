@@ -16604,6 +16604,8 @@ LJ.Locales.deDE = function()
             [2652] = "Shen'dralas",
         },
         ui = {
+            ["Live dungeon finder rows at player level %s (%d LFD, %d browser):"] = "Live-Dungeonfinder-Einträge auf Spielerstufe %s (%d LFD, %d Browser):",
+            ["Browser activity %s | %s | minimum %s | suggested levels %s-%s | map %s"] = "Browser-Aktivität %s | %s | Minimum %s | vorgeschlagene Stufen %s-%s | Karte %s",
             ["  Built into the addon: %d items, %d without server data (game %s)"] = "  Im Addon enthalten: %d Gegenstände, %d ohne Serverdaten (Spiel %s)",
             ["  Saved: %d items (%d with stats), %d marked missing; loaded from the last session: %d"] = "  Gespeichert: %d Gegenstände (%d mit Werten), %d als fehlend markiert; aus der letzten Sitzung geladen: %d",
             ["  Server this session: %d requests (%d repeated), %d answers, %d answers without data"] = "  Server in dieser Sitzung: %d Anfragen (%d wiederholt), %d Antworten, %d Antworten ohne Daten",

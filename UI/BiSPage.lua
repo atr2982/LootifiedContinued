@@ -999,21 +999,26 @@ end
 -- The character wears the sheet's items, in sheet order (the main hand before the off hand); dressed again only when
 -- they change.
 function Page:DressModel()
-    local ids = {}
+    local items = {}
+    local signatureParts = {}
     for _, slot in ipairs(BiS.SLOTS) do
         local id = self.slots[slot].itemID
-        if id then ids[#ids + 1] = id end
+        if id then
+            items[#items + 1] = { slot = slot, id = id }
+            signatureParts[#signatureParts + 1] = slot .. ":" .. id
+        end
     end
     local spec = self:GetViewSpec()
     if not spec then return end
     -- The same item IDs can be selected for two specs, but the Dressing Room model may have been reset while the
     -- filter/model was hidden or refreshed. Include the selected spec so switching specs always reapplies the set.
-    local signature = spec.key .. ":" .. table.concat(ids, ",")
+    local signature = spec.key .. ":" .. table.concat(signatureParts, ",")
     if signature == self.dressed or (self.pendingDress and self.pendingDress.signature == signature) then return end
     local model = self.model
-    local pending = { signature = signature, ids = ids, waiting = {} }
+    local pending = { signature = signature, items = items, waiting = {} }
     self.pendingDress = pending
-    for _, id in ipairs(ids) do
+    for _, item in ipairs(items) do
+        local id = item.id
         if not C_Item.IsItemDataCachedByID(id) then
             pending.waiting[id] = true
             C_Item.RequestLoadItemDataByID(id)
@@ -1042,23 +1047,18 @@ function Page:ApplyDressModel()
     local model = self.model
     model:SetSheathed(false)
     model:Undress()
-    for _, id in ipairs(pending.ids) do model:TryOn("item:" .. id) end
+    for _, item in ipairs(pending.items) do
+        local handSlot
+        if item.slot == "MAINHAND" then
+            handSlot = "MAINHANDSLOT"
+        elseif item.slot == "OFFHAND" then
+            handSlot = "SECONDARYHANDSLOT"
+        end
+        model:TryOn("item:" .. item.id, handSlot)
+    end
     self.dressed = pending.signature
     self.pendingDress = nil
 end
-
--- Rebuild the model's asynchronous player appearance when the selected Lootified spec changes.
--- MainFrame refreshes the page on the same event, so the new spec's outfit is queued afterward.
-LJ:Listen("SPEC_CHANGED", function()
-    if not Page.model then return end
-    Page.dressed, Page.pendingDress = nil, nil
-    if Page.root and Page.root:IsShown() then
-        Page.modelReady = false
-        Page.modelLoading = true
-        Page.model:SetUnit("player")
-        Page:Refresh()
-    end
-end)
 
 function Page:Show()
     Player:Refresh()

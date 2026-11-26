@@ -14767,6 +14767,8 @@ LJ.Locales.zhCN = function()
             [2652] = "辛德拉",
         },
         ui = {
+            ["Live dungeon finder rows at player level %s (%d LFD, %d browser):"] = "玩家等级 %s 的地下城查找器条目（LFD：%d，浏览器：%d）：",
+            ["Browser activity %s | %s | minimum %s | suggested levels %s-%s | map %s"] = "浏览器活动 %s | %s | 最低等级 %s | 建议等级 %s-%s | 地图 %s",
             ["  Built into the addon: %d items, %d without server data (game %s)"] = "  插件内置：%d件物品，%d件无服务器数据（游戏版本%s）",
             ["  Saved: %d items (%d with stats), %d marked missing; loaded from the last session: %d"] = "  已保存：%d件物品（%d件含属性），%d件标记为缺失；从上次会话载入：%d",
             ["  Server this session: %d requests (%d repeated), %d answers, %d answers without data"] = "  本次会话服务器：%d次请求（%d次重复），%d次回应，%d次回应无数据",

@@ -187,7 +187,7 @@ def validate_web(data: dict[str, Any]) -> None:
     for field in ("items", "item_stats", "quests", "world_drops"):
         if field in data:
             as_int_key_map(data[field], field)
-    for field in ("instances", "dungeon_maps", "bis_weights"):
+    for field in ("instances", "dungeon_maps"):
         if field in data and not isinstance(data[field], (dict, list)):
             raise ValueError(f"{field} must be an object or array")
 

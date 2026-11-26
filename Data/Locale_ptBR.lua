@@ -14565,6 +14565,8 @@ LJ.Locales.ptBR = function()
             [2652] = "Shen'dralas",
         },
         ui = {
+            ["Live dungeon finder rows at player level %s (%d LFD, %d browser):"] = "Entradas do Localizador de Masmorras no nível %s (%d LFD, %d navegador):",
+            ["Browser activity %s | %s | minimum %s | suggested levels %s-%s | map %s"] = "Atividade do navegador %s | %s | mínimo %s | níveis sugeridos %s-%s | mapa %s",
             ["  Built into the addon: %d items, %d without server data (game %s)"] = "  Incluídos no addon: %d itens, %d sem dados do servidor (jogo %s)",
             ["  Saved: %d items (%d with stats), %d marked missing; loaded from the last session: %d"] = "  Salvos: %d itens (%d com atributos), %d marcados como ausentes; carregados da última sessão: %d",
             ["  Server this session: %d requests (%d repeated), %d answers, %d answers without data"] = "  Servidor nesta sessão: %d consultas (%d repetidas), %d respostas, %d respostas sem dados",

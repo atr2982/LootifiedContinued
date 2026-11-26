@@ -286,7 +286,7 @@ local S = {
     },
     { 2440 },
     { 2284 },
-    { kind = "npc", id = 6986, name = "Dran Droffers", w = { 1, 1932.3, -4516.3 } },
+    { kind = "npc", id = 6986, name = "Dran Droffers", map = 1454, x = 59.5, y = 36.6, zone = "Orgrimmar", w = { 1, 1932.3, -4516.3 } },
     {
         { "Orgrimmar", 150 },
     },

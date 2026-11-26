@@ -1,5 +1,5 @@
--- Standalone Lootified scoring based on the PawnForever 1.5.0 scales and
--- upgrade rules. This module deliberately reads no PawnForever globals.
+-- Standalone Lootified scoring based on the installed PawnForever defaults
+-- and upgrade rules. This module deliberately reads no PawnForever globals.
 local _, LJ = ...
 
 local Integration = {}
@@ -21,12 +21,16 @@ local WEIGHT_KEYS = {
     STRENGTH = "Strength", AGILITY = "Agility", STAMINA = "Stamina", INTELLECT = "Intellect", SPIRIT = "Spirit",
     ATTACK_POWER = "AttackPower", RANGED_AP = "RangedAttackPower", FERAL_AP = "FeralAttackPower",
     HIT = "Hit", CRIT = "Crit", EXPERTISE = "Expertise", WEAPON_SKILL = "WeaponSkill", HASTE = "Haste",
-    MELEE_DPS = "WeaponDPS", MELEE_HIT = "WeaponHitDamage", OFFHAND_DPS = "OffHandWeaponDPS",
-    RANGED_DPS = "RangedWeaponDPS", RANGED_HIT = "RangedHitDamage", SPELL_DAMAGE = "SpellPower",
+    MELEE_DPS = "WeaponDPS", MELEE_HIT = "WeaponHitDamage", MELEE_SPEED = "WeaponSpeedWeight",
+    OFFHAND_DPS = "OffHandWeaponDPS", OFFHAND_SPEED = "OffHandSpeedWeight",
+    RANGED_DPS = "RangedWeaponDPS", RANGED_HIT = "RangedHitDamage", RANGED_SPEED = "RangedSpeedWeight",
+    SPELL_DAMAGE = "SpellPower",
     HEALING = "Healing", ARCANE_DAMAGE = "ArcanePower", FIRE_DAMAGE = "FirePower", FROST_DAMAGE = "FrostPower",
     NATURE_DAMAGE = "NaturePower", SHADOW_DAMAGE = "ShadowPower", HOLY_DAMAGE = "HolyPower", MP5 = "MP5",
-    SPELL_PEN = "SpellPenetration", ARMOR = "Armor", DEFENSE = "Defense", DODGE = "Dodge", PARRY = "Parry",
+    SPELL_PEN = "SpellPenetration", SPELL_PIERCE = "SpellPiercing", ARMOR = "Armor", DEFENSE = "Defense", DODGE = "Dodge", PARRY = "Parry",
     BLOCK = "Block", BLOCK_VALUE = "BlockValue", HP5 = "HP5",
+    ARCANE_RES = "ArcaneResistance", FIRE_RES = "FireResistance", FROST_RES = "FrostResistance",
+    NATURE_RES = "NatureResistance", SHADOW_RES = "ShadowResistance",
 }
 
 local function FindScale(spec)

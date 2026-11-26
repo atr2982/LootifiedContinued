@@ -14838,6 +14838,8 @@ LJ.Locales.zhTW = function()
             [2652] = "申德拉斯",
         },
         ui = {
+            ["Live dungeon finder rows at player level %s (%d LFD, %d browser):"] = "玩家等級 %s 的地城搜尋器項目（LFD：%d，瀏覽器：%d）：",
+            ["Browser activity %s | %s | minimum %s | suggested levels %s-%s | map %s"] = "瀏覽器活動 %s | %s | 最低等級 %s | 建議等級 %s-%s | 地圖 %s",
             ["  Built into the addon: %d items, %d without server data (game %s)"] = "  插件內建：%d 件物品，%d 件無伺服器資料（遊戲 %s）",
             ["  Saved: %d items (%d with stats), %d marked missing; loaded from the last session: %d"] = "  已儲存：%d 件物品（%d 件含屬性），%d 件標記為缺失；從上次登入載入：%d",
             ["  Server this session: %d requests (%d repeated), %d answers, %d answers without data"] = "  本次伺服器：%d 次查詢（%d 次重複），%d 次回應，%d 次回應無資料",

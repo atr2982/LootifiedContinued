@@ -96,23 +96,56 @@ local function IsGear(equipLoc)
     return equipLoc == "INVTYPE_WEAPON" or Scoring.EQUIPLOC_SLOTS[equipLoc] ~= nil
 end
 
--- The score by a spec's stat weights of what is worn in a sheet slot (its link's stats: a random suffix counts); 0 for
--- an empty slot, nil while the game has no data of it yet.
-local function WornScore(spec, slot)
-    return (Scoring.EquippedScore(SimBiS.INV_SLOT[slot], spec, slot, true))
+-- Score a complete loadout with the same PawnForever hit-cap rule as an item
+-- comparison. Individual item scores are assembled by Scoring.Score, then
+-- their linear hit terms are replaced by the capped total hit value.
+local function ScoreLoadout(spec, itemForSlot, linkForSlot)
+    local total, totalHit, dualWielding = 0, 0, false
+    local mainID = itemForSlot("MAINHAND")
+    local twoHand = mainID and LJ.BiS.IsTwoHand(mainID)
+    for _, sheetSlot in ipairs(LJ.BiS.SLOTS) do
+        local itemID = itemForSlot(sheetSlot)
+        if itemID and not (sheetSlot == "OFFHAND" and twoHand) then
+            local link = linkForSlot and linkForSlot(sheetSlot)
+            local stats = link and Scoring.GetStatsForLink(link)
+            if not (stats and next(stats)) then stats = Scoring.GetStats(itemID) end
+            if not stats then return nil end
+            local _, _, _, equipLoc, _, classID = C_Item.GetItemInfoInstant(itemID)
+            local dataSlot
+            if sheetSlot == "MAINHAND" then
+                dataSlot = LJ.BiS.IsTwoHand(itemID) and "TWOHAND" or "MAINHAND"
+            elseif sheetSlot == "OFFHAND" then
+                dataSlot = "OFFHAND"
+            elseif sheetSlot == "RANGED" then
+                dataSlot = LJ.BiS.ResolveDataSlot(spec, sheetSlot) or Scoring.EQUIPLOC_SLOTS[equipLoc]
+            else
+                dataSlot = LJ.BiS.ResolveDataSlot(spec, sheetSlot) or sheetSlot
+            end
+            local score = Scoring.Score(itemID, spec, dataSlot, true, stats)
+            if score == nil then return nil end
+            total = total + score
+            totalHit = totalHit + Scoring.HitStatPercent(stats, spec)
+            if sheetSlot == "OFFHAND" and classID == 2 then dualWielding = true end
+        end
+    end
+
+    local equippedSlots = {}
+    for slotID = 1, 18 do equippedSlots[#equippedSlots + 1] = slotID end
+    local baseHit = Scoring.HitContext(spec, equippedSlots, dualWielding)
+    if baseHit == nil then return nil end
+    local hitWeight = LJ.UpgradeScoring.Weights(spec).Hit or 0
+    local beyond = dualWielding and 0.4 or 0
+    local hitValue = Scoring.HitWorth(baseHit + totalHit, Scoring.HitCap(spec), beyond)
+        - Scoring.HitWorth(baseHit, Scoring.HitCap(spec), beyond)
+    return total - totalHit * hitWeight + hitValue * hitWeight
 end
 
--- The score of everything worn (every sheet slot): the base of the shares in percent, so a share is what an item adds
--- to the whole gear (also in an empty slot; a slot's weak item does not make it thousands of percent); nil while the
--- game has no data of a worn item yet.
+-- The score of everything worn (every sheet slot), used as the empty-slot
+-- percentage base and the baseline for a full Best in Slot loadout.
 local function WornTotal(spec)
-    local total = 0
-    for _, slot in ipairs(LJ.BiS.SLOTS) do
-        local base = WornScore(spec, slot)
-        if not base then return nil end
-        total = total + base
-    end
-    return total
+    return ScoreLoadout(spec,
+        function(slot) return Player:GetEquippedItemID(SimBiS.INV_SLOT[slot]) end,
+        function(slot) return Player:GetEquippedLink(SimBiS.INV_SLOT[slot]) end)
 end
 ItemCheck.WornTotal = WornTotal
 
@@ -122,12 +155,39 @@ ItemCheck.WornTotal = WornTotal
 -- the stats of the item or of what is worn there are not known yet.
 local function Estimate(spec, id, link, facts)
     local stats = Scoring.GetStatsForLink(link)
-    if not stats then return nil end
+    local _, _, hasSuffix = Parse(link)
+    if (not stats or not next(stats)) and not hasSuffix then
+        if Items.IsShipped(id) then
+            stats = Scoring.GetStats(id)
+        else
+            stats = Scoring.GetCachedStats(id) or Items.GetKnownStats(id, {})
+        end
+    end
+    if not (stats and next(stats)) then return nil end
+
+    local loc = facts.equipLoc
+    local isPairItem = facts.classID == 2 and (loc == "INVTYPE_2HWEAPON" or loc == "INVTYPE_WEAPON"
+        or loc == "INVTYPE_WEAPONMAINHAND" or loc == "INVTYPE_WEAPONOFFHAND")
+        or loc == "INVTYPE_SHIELD" or loc == "INVTYPE_HOLDABLE"
+    if isPairItem then
+        local pair = Scoring.CompareWeapon(id, spec, stats, loc)
+        if not pair then return nil end
+        local total = WornTotal(spec)
+        local replacesSlot = pair.slot == "OFFHAND" and 17 or 16
+        local replaces = Player:GetEquippedItemID(replacesSlot)
+        local replacesLink = Player:GetEquippedLink(replacesSlot)
+        local pct = pair.current > 0 and pair.delta / pair.current * 100
+            or total and total > 0 and pair.delta / total * 100 or nil
+        return pair.delta > 0, replaces, pct,
+            pair.delta, pair.candidate, pair.current, pair.slot, replacesLink
+    end
+
     local best, replaces, replacesLink, bestScore, bestWorn, bestSlot
     for _, dataSlot in ipairs(Scoring.GetItemSlots(facts, spec.class)) do
-        local worn, wornID, wornLink = Scoring.GetEquippedScore(spec, dataSlot, true)
+        local worn, wornID, wornLink, hitBase, dualWielding = Scoring.GetReplacementScore(spec, dataSlot)
         if worn == nil then return nil end
-        local score = Scoring.Score(id, spec, dataSlot, true, stats)
+        if hitBase == nil then return nil end
+        local score = Scoring.Score(id, spec, dataSlot, true, stats, hitBase, dualWielding)
         if not score then return nil end
         local margin = score - worn
         if not best or margin > best then
@@ -136,7 +196,9 @@ local function Estimate(spec, id, link, facts)
     end
     if not best then return nil end
     local total = WornTotal(spec)
-    return best > 0, replaces, total and total > 0 and best / total * 100 or nil,
+    local pct = bestWorn > 0 and best / bestWorn * 100
+        or total and total > 0 and best / total * 100 or nil
+    return best > 0, replaces, pct,
         best, bestScore, bestWorn, bestSlot, replacesLink
 end
 
@@ -159,40 +221,18 @@ end
 -- the slot's current score is zero. 0 for what is worn there, nil when the stats are not known yet.
 function ItemCheck.SlotShare(spec, slot, id)
     if id == GetInventoryItemID("player", SimBiS.INV_SLOT[slot]) then return 0 end
-    local base = WornScore(spec, slot)
-    if base and slot == "MAINHAND" and LJ.BiS.IsTwoHand(id) then
-        local off = WornScore(spec, "OFFHAND")
-        base = off and base + off
-    end
-    local score = Scoring.Score(id, spec, slot, true)
-    local total = WornTotal(spec)
-    if not (base and score) then return nil end
-    if base > 0 then return (score - base) / base * 100 end
-    if total and total > 0 then return score / total * 100 end
-    return nil
+    local share = ItemCheck.Share(spec, Items.GetLink(id))
+    return share and share.pct or nil
 end
 
 -- A set by a spec's stat weights against what is worn, in percent (Percent: the Best in Slot sheet; the
 -- weights add up, so it is the set's own share, no estimate): pick(slot) gives its item of a sheet slot (none beside a
 -- two-hander in its main hand); nil while the stats of an item are not known yet or nothing worn scores.
 function ItemCheck.SetShare(spec, pick)
-    local twoHand = LJ.BiS.IsTwoHand(pick("MAINHAND"))
-    local worn, set = 0, 0
-    for _, slot in ipairs(LJ.BiS.SLOTS) do
-        local base = WornScore(spec, slot)
-        if not base then return nil end
-        worn = worn + base
-        local id = pick(slot)
-        if slot == "OFFHAND" and twoHand then id = nil end
-        if id == GetInventoryItemID("player", SimBiS.INV_SLOT[slot]) then
-            set = set + base
-        elseif id then
-            local score = Scoring.Score(id, spec, slot, true)
-            if not score then return nil end
-            set = set + score
-        end
-    end
-    if worn <= 0 then return nil end
+    local worn = WornTotal(spec)
+    if not worn or worn <= 0 then return nil end
+    local set = ScoreLoadout(spec, pick)
+    if set == nil then return nil end
     return (set - worn) / worn * 100
 end
 

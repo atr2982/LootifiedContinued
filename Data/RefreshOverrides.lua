@@ -94,9 +94,8 @@ if input and input.web then
     end
     mergeMap(LJ.Data.WorldDrops, web.world_drops)
     if type(web.instances) == "table" and #web.instances > 0 then LJ.Data.Instances = web.instances end
-    if type(web.bis_weights) == "table" and next(web.bis_weights) then LJ.Data.BiS = web.bis_weights end
     LJ.DATA_BUILD = LJ.COLLECT_BUILD or (LJ.Data.ForeverDB and LJ.Data.ForeverDB.build) or web.build
-    LJ.DATA_CHECKED = "2026-11-16"
+    LJ.DATA_CHECKED = "2026-11-25"
     LJ.DATA_STATUS = "current Forever client collection and ForeverDB catalog installed; curated overrides retained"
     LJ.DATA_SOURCES = "Forever client collection; reviewed Wowhead and Bind on Forever records"
 end

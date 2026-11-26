@@ -1,4 +1,4 @@
--- Generated from ForeverDB.net dungeon details.
+-- Generated from ForeverDB.net dungeon details, build 1.60.1.71091.
 local _, LJ = ...
 LJ.Data = LJ.Data or {}
 LJ.Data.ForeverDBDungeons = {
@@ -39,10 +39,10 @@ LJ.Data.ForeverDBDungeons = {
                 }
             },
             {
-                itemId = 6392,
-                name = "Belt of Arugal",
+                itemId = 1121,
+                name = "Feet of the Lynx",
                 why = {
-                    "top pick for Affliction Warlock and 7 more specs at level 30"
+                    "top pick for Arms Warrior and 8 more specs at level 20/30"
                 }
             }
         },
@@ -114,18 +114,18 @@ LJ.Data.ForeverDBDungeons = {
         },
         notableLoot = {
             {
-                itemId = 1156,
-                name = "Lavishly Jeweled Ring",
-                why = {
-                    "top pick for Balance Druid and 9 more specs at level 20"
-                }
-            },
-            {
                 itemId = 10403,
                 name = "Blackened Defias Belt",
                 why = {
                     "Defias Leather set",
-                    "top pick for Arms Warrior and 7 more specs at level 20"
+                    "top pick for Arms Warrior and 9 more specs at level 20"
+                }
+            },
+            {
+                itemId = 1156,
+                name = "Lavishly Jeweled Ring",
+                why = {
+                    "top pick for Balance Druid and 9 more specs at level 20"
                 }
             },
             {
@@ -253,6 +253,13 @@ LJ.Data.ForeverDBDungeons = {
         },
         notableLoot = {
             {
+                itemId = 2567,
+                name = "Evocator's Blade",
+                why = {
+                    "top pick for Arcane Mage and 6 more specs at level 20/30"
+                }
+            },
+            {
                 itemId = 888,
                 name = "Naga Battle Gloves",
                 why = {
@@ -264,13 +271,6 @@ LJ.Data.ForeverDBDungeons = {
                 name = "Glowing Thresher Cape",
                 why = {
                     "top pick for Discipline Priest and 2 more specs at level 30"
-                }
-            },
-            {
-                itemId = 6911,
-                name = "Moss Cinch",
-                why = {
-                    "top pick for Balance Druid and 1 more spec at level 30"
                 }
             }
         },
@@ -299,13 +299,6 @@ LJ.Data.ForeverDBDungeons = {
         },
         notableLoot = {
             {
-                itemId = 9398,
-                name = "Worn Running Boots",
-                why = {
-                    "top pick for Beast Mastery Hunter and 2 more specs at level 40"
-                }
-            },
-            {
                 itemId = 9407,
                 name = "Stoneweaver Leggings",
                 why = {
@@ -317,6 +310,13 @@ LJ.Data.ForeverDBDungeons = {
                 name = "White Obsidian Wand",
                 why = {
                     "top pick for Demonology Warlock and 2 more specs at level 40"
+                }
+            },
+            {
+                itemId = 8142,
+                name = "Chromite Barbute",
+                why = {
+                    "top pick for Arms Warrior and 2 more specs at level 40"
                 }
             }
         },
@@ -388,6 +388,13 @@ LJ.Data.ForeverDBDungeons = {
         },
         notableLoot = {
             {
+                itemId = 12465,
+                name = "Nightfall Drape",
+                why = {
+                    "top pick for Affliction Warlock and 2 more specs at level 50"
+                }
+            },
+            {
                 itemId = 10838,
                 name = "Might of Hakkar",
                 why = {
@@ -399,13 +406,6 @@ LJ.Data.ForeverDBDungeons = {
                 name = "Warrior's Embrace",
                 why = {
                     "top pick for Protection Paladin and 1 more spec at level 50"
-                }
-            },
-            {
-                itemId = 12465,
-                name = "Nightfall Drape",
-                why = {
-                    "top pick for Affliction Warlock and 1 more spec at level 50"
                 }
             }
         },
@@ -439,17 +439,17 @@ LJ.Data.ForeverDBDungeons = {
                 }
             },
             {
+                itemId = 274385,
+                name = "Abomination Chain",
+                why = {
+                    "top pick for Feral Combat Druid and 2 more specs at level 40"
+                }
+            },
+            {
                 itemId = 10764,
                 name = "Deathchill Armor",
                 why = {
                     "top pick for Holy Paladin and 1 more spec at level 40"
-                }
-            },
-            {
-                itemId = 10766,
-                name = "Plaguerot Sprig",
-                why = {
-                    "top pick for Demonology Warlock and 1 more spec at level 40"
                 }
             }
         },
@@ -535,15 +535,15 @@ LJ.Data.ForeverDBDungeons = {
         },
         notableLoot = {
             {
-                itemId = 12471,
-                name = "Desertwalker Cane",
+                itemId = 274641,
+                name = "Theka's Last Breath",
                 why = {
-                    "top pick for Discipline Priest and 4 more specs at level 50"
+                    "top pick for Arcane Mage and 8 more specs at level 50"
                 }
             },
             {
-                itemId = 274641,
-                name = "Theka's Last Breath",
+                itemId = 12471,
+                name = "Desertwalker Cane",
                 why = {
                     "top pick for Discipline Priest and 4 more specs at level 50"
                 }
@@ -590,7 +590,7 @@ LJ.Data.ForeverDBDungeons = {
                 itemId = 13213,
                 name = "Smolderweb's Eye",
                 why = {
-                    "top pick for Affliction Warlock and 18 more specs at level 60"
+                    "top pick for Affliction Warlock and 9 more specs at level 60"
                 }
             },
             {
@@ -604,7 +604,7 @@ LJ.Data.ForeverDBDungeons = {
                 itemId = 12927,
                 name = "Truestrike Shoulders",
                 why = {
-                    "top pick for Arms Warrior and 2 more specs at level 60"
+                    "top pick for Arms Warrior and 3 more specs at level 60"
                 }
             }
         },
@@ -688,14 +688,7 @@ LJ.Data.ForeverDBDungeons = {
                 itemId = 11302,
                 name = "Uther's Strength",
                 why = {
-                    "top pick for Discipline Priest and 4 more specs at level 50/60"
-                }
-            },
-            {
-                itemId = 13120,
-                name = "Deepfury Bracers",
-                why = {
-                    "top pick for Beast Mastery Hunter and 2 more specs at level 50"
+                    "top pick for Discipline Priest and 5 more specs at level 50/60"
                 }
             },
             {
@@ -703,6 +696,13 @@ LJ.Data.ForeverDBDungeons = {
                 name = "Guttbuster",
                 why = {
                     "top pick for Assassination Rogue and 2 more specs at level 50"
+                }
+            },
+            {
+                itemId = 1203,
+                name = "Aegis of Stormwind",
+                why = {
+                    "top pick for Protection Paladin and 1 more spec at level 50"
                 }
             }
         },
@@ -756,18 +756,18 @@ LJ.Data.ForeverDBDungeons = {
                 }
             },
             {
+                itemId = 13967,
+                name = "Windreaver Greaves",
+                why = {
+                    "top pick for Beast Mastery Hunter and 3 more specs at level 60"
+                }
+            },
+            {
                 itemId = 14616,
                 name = "Bloodmail Boots",
                 why = {
                     "Bloodmail Regalia set",
-                    "top pick for Arms Warrior and 3 more specs at level 60"
-                }
-            },
-            {
-                itemId = 18681,
-                name = "Burial Shawl",
-                why = {
-                    "top pick for Arcane Mage and 5 more specs at level 60"
+                    "top pick for Enhancement Shaman and 1 more spec at level 60"
                 }
             }
         },
@@ -833,6 +833,13 @@ LJ.Data.ForeverDBDungeons = {
         },
         notableLoot = {
             {
+                itemId = 13340,
+                name = "Cape of the Black Baron",
+                why = {
+                    "top pick for Arms Warrior and 8 more specs at level 60"
+                }
+            },
+            {
                 itemId = 22403,
                 name = "Nacreous Shell Necklace",
                 why = {
@@ -840,17 +847,10 @@ LJ.Data.ForeverDBDungeons = {
                 }
             },
             {
-                itemId = 280065,
-                name = "Behemoth Bones",
+                itemId = 18727,
+                name = "Crimson Felt Hat",
                 why = {
-                    "top pick for Arms Warrior and 7 more specs at level 60"
-                }
-            },
-            {
-                itemId = 13404,
-                name = "Mask of the Unforgiven",
-                why = {
-                    "top pick for Assassination Rogue and 6 more specs at level 60"
+                    "top pick for Affliction Warlock and 6 more specs at level 60"
                 }
             }
         },
@@ -959,14 +959,7 @@ LJ.Data.ForeverDBDungeons = {
                 itemId = 11302,
                 name = "Uther's Strength",
                 why = {
-                    "top pick for Discipline Priest and 4 more specs at level 50/60"
-                }
-            },
-            {
-                itemId = 13120,
-                name = "Deepfury Bracers",
-                why = {
-                    "top pick for Beast Mastery Hunter and 2 more specs at level 50"
+                    "top pick for Discipline Priest and 5 more specs at level 50/60"
                 }
             },
             {
@@ -974,6 +967,13 @@ LJ.Data.ForeverDBDungeons = {
                 name = "Guttbuster",
                 why = {
                     "top pick for Assassination Rogue and 2 more specs at level 50"
+                }
+            },
+            {
+                itemId = 1203,
+                name = "Aegis of Stormwind",
+                why = {
+                    "top pick for Protection Paladin and 1 more spec at level 50"
                 }
             }
         },
@@ -1020,17 +1020,17 @@ LJ.Data.ForeverDBDungeons = {
                 }
             },
             {
+                itemId = 18375,
+                name = "Bracers of the Eclipse",
+                why = {
+                    "top pick for Assassination Rogue and 4 more specs at level 60"
+                }
+            },
+            {
                 itemId = 18386,
                 name = "Padre's Trousers",
                 why = {
                     "top pick for Discipline Priest and 4 more specs at level 60"
-                }
-            },
-            {
-                itemId = 18375,
-                name = "Bracers of the Eclipse",
-                why = {
-                    "top pick for Assassination Rogue and 3 more specs at level 60"
                 }
             }
         },
@@ -1062,14 +1062,7 @@ LJ.Data.ForeverDBDungeons = {
                 itemId = 11302,
                 name = "Uther's Strength",
                 why = {
-                    "top pick for Discipline Priest and 4 more specs at level 50/60"
-                }
-            },
-            {
-                itemId = 13120,
-                name = "Deepfury Bracers",
-                why = {
-                    "top pick for Beast Mastery Hunter and 2 more specs at level 50"
+                    "top pick for Discipline Priest and 5 more specs at level 50/60"
                 }
             },
             {
@@ -1077,6 +1070,13 @@ LJ.Data.ForeverDBDungeons = {
                 name = "Guttbuster",
                 why = {
                     "top pick for Assassination Rogue and 2 more specs at level 50"
+                }
+            },
+            {
+                itemId = 1203,
+                name = "Aegis of Stormwind",
+                why = {
+                    "top pick for Protection Paladin and 1 more spec at level 50"
                 }
             }
         },
@@ -1454,10 +1454,10 @@ LJ.Data.ForeverDBDungeons = {
                 }
             },
             {
-                itemId = 286994,
-                name = "Tattered Kirin Tor Cloak",
+                itemId = 286995,
+                name = "Guardian's Emblem",
                 why = {
-                    "top pick for Affliction Warlock and 14 more specs at level 30/40"
+                    "top pick for Affliction Warlock and 14 more specs at level 30"
                 }
             }
         },
@@ -1542,10 +1542,11 @@ LJ.Data.ForeverDBDungeons = {
                 }
             },
             {
-                itemId = 271202,
-                name = "Witherbite Bracers",
+                itemId = 286978,
+                name = "Rotmender's Garb",
                 why = {
-                    "top pick for Balance Druid and 8 more specs at level 20"
+                    "Rotmender's Raiment set",
+                    "top pick for Arcane Mage and 5 more specs at level 20"
                 }
             }
         },
@@ -1606,13 +1607,15 @@ LJ.Data.ForeverDBDungeons = {
         url = "https://foreverdb.net/dungeon/3109-manor-mistmantle"
     }
 }
+LJ.Data.ForeverDBDungeonsBuild = "1.60.1.71091"
 local function FDBName(s) return tostring(s or ""):lower():gsub("^the%s+", ""):gsub("[^a-z0-9]", "") end
 for _, inst in ipairs(LJ.Data.Instances or {}) do
     local ik = FDBName(inst.name)
     for _, d in pairs(LJ.Data.ForeverDBDungeons) do
         if FDBName(d.name) == ik then
             inst.foreverDB = d
-            if d.range then inst.minLevel, inst.maxLevel = d.range[1], d.range[2] end
+            -- Keep the addon's active level range separate from ForeverDB's guide range. Queue eligibility must be
+            -- verified from the live Forever dungeon finder before changing inst.minLevel/maxLevel.
             inst.foreverDBStatus = d.status
             inst.foreverDBURL = d.url
             inst.notableLoot = d.notableLoot

@@ -15108,6 +15108,8 @@ LJ.Locales.ruRU = function()
             [2652] = "Шен'дралас",
         },
         ui = {
+            ["Live dungeon finder rows at player level %s (%d LFD, %d browser):"] = "Записи поиска подземелий для уровня %s (LFD: %d, в браузере: %d):",
+            ["Browser activity %s | %s | minimum %s | suggested levels %s-%s | map %s"] = "Активность браузера %s | %s | минимальный уровень %s | рекомендуемые уровни %s–%s | карта %s",
             ["  Built into the addon: %d items, %d without server data (game %s)"] = "  Встроено в аддон: предметов — %d, без данных сервера — %d (игра %s)",
             ["  Saved: %d items (%d with stats), %d marked missing; loaded from the last session: %d"] = "  Сохранено предметов: %d (с характеристиками: %d), отмечено отсутствующими: %d; загружено из прошлого сеанса: %d",
             ["  Server this session: %d requests (%d repeated), %d answers, %d answers without data"] = "  Сервер в этом сеансе: запросов — %d (повторных — %d), ответов — %d, ответов без данных — %d",

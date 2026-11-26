@@ -95,18 +95,18 @@ ns.defaultScales = {
             key = "ARMS", name = "Arms", tab = 1, match = "arms", leveling = true,
             note = GUIDES .. "; sizes from the foreverdb.net level 30 sim. Assumes a two-hander.",
             weights = {
-                STRENGTH = 1, AGILITY = 0.5, STAMINA = 0.15, ATTACK_POWER = 0.5,
-                HIT = 13, CRIT = 12, EXPERTISE = 12, WEAPON_SKILL = 3, HASTE = 10,
-                MELEE_DPS = 4.2, MELEE_HIT = 0.83, OFFHAND_DPS = 2.5,
+                STRENGTH = 1, AGILITY = 0.6, STAMINA = 0.15, ATTACK_POWER = 0.5,
+                HIT = 11.5, CRIT = 10.5, EXPERTISE = 12, WEAPON_SKILL = 3, HASTE = 4.5,
+                MELEE_DPS = 4.2, MELEE_HIT = 0.83, OFFHAND_DPS = 1.5,
             },
         },
         {
             key = "FURY", name = "Fury", tab = 2, match = "fury",
             note = GUIDES .. "; sizes from the foreverdb.net level 30 sim, which predates the Oct 1 talent changes.",
             weights = {
-                STRENGTH = 1, AGILITY = 0.5, STAMINA = 0.15, ATTACK_POWER = 0.5,
-                HIT = 11, CRIT = 11, EXPERTISE = 11, WEAPON_SKILL = 3, HASTE = 8,
-                MELEE_DPS = 6, MELEE_HIT = 0.6, OFFHAND_DPS = 3.75,
+                STRENGTH = 1, AGILITY = 0.65, STAMINA = 0.15, ATTACK_POWER = 0.5,
+                HIT = 9, CRIT = 12, EXPERTISE = 11, WEAPON_SKILL = 3, HASTE = 6,
+                MELEE_DPS = 3.4, MELEE_HIT = 0.3, OFFHAND_DPS = 2,
             },
         },
         {
@@ -115,8 +115,9 @@ ns.defaultScales = {
             note = "Survival stats come from an effective-health model sized to your own health and armor, not from a "
                 .. "sim; threat stats follow the guides, which disagree. See Defaults.lua.",
             weights = {
-                STAMINA = 1, STRENGTH = 0.7, AGILITY = 0.5, ATTACK_POWER = 0.3,
-                HIT = 8, CRIT = 3, EXPERTISE = 8, WEAPON_SKILL = 1.5, MELEE_DPS = 4,
+                -- the launch guides (Icy Veins, wow.gg) put expertise first for threat, and agility above strength
+                STAMINA = 1, STRENGTH = 0.6, AGILITY = 0.65, ATTACK_POWER = 0.3,
+                HIT = 8, CRIT = 3, EXPERTISE = 9, WEAPON_SKILL = 1.5, MELEE_DPS = 4,
                 ARMOR = 0.05, DEFENSE = 1.2, DODGE = 7.5, PARRY = 7.5, BLOCK = 4, BLOCK_VALUE = 0.3, HP5 = 0.3,
             },
         },
@@ -128,27 +129,27 @@ ns.defaultScales = {
             note = GUIDES .. "; sizes from the foreverdb.net level 30 sim (run with a non-dagger setup). Hit damage "
                 .. "assumes Sinister Strike - lower it for a dagger build.",
             weights = {
-                AGILITY = 1, STRENGTH = 0.67, STAMINA = 0.25, ATTACK_POWER = 0.67,
-                HIT = 11, CRIT = 11, EXPERTISE = 10, WEAPON_SKILL = 3, HASTE = 4,
-                MELEE_DPS = 5.4, MELEE_HIT = 1.2, OFFHAND_DPS = 4,
+                AGILITY = 1, STRENGTH = 0.6, STAMINA = 0.25, ATTACK_POWER = 0.57,
+                HIT = 11, CRIT = 11, EXPERTISE = 11, WEAPON_SKILL = 3, HASTE = 6.5,
+                MELEE_DPS = 3.6, MELEE_HIT = 0.9, OFFHAND_DPS = 2.8,
             },
         },
         {
             key = "COMBAT", name = "Combat", tab = 2, match = "combat", leveling = true,
             note = GUIDES .. "; sizes from the foreverdb.net level 30 sim.",
             weights = {
-                AGILITY = 1, STRENGTH = 0.67, STAMINA = 0.25, ATTACK_POWER = 0.67,
-                HIT = 11, CRIT = 10, EXPERTISE = 10, WEAPON_SKILL = 3, HASTE = 6,
-                MELEE_DPS = 5.5, MELEE_HIT = 1.25, OFFHAND_DPS = 4.25,
+                AGILITY = 1, STRENGTH = 0.6, STAMINA = 0.25, ATTACK_POWER = 0.57,
+                HIT = 9, CRIT = 10.5, EXPERTISE = 10, WEAPON_SKILL = 3, HASTE = 5,
+                MELEE_DPS = 3.6, MELEE_HIT = 0.75, OFFHAND_DPS = 2.9,
             },
         },
         {
             key = "SUBTLETY", name = "Subtlety", tab = 3, match = "subtlety",
             note = GUIDES .. "; sizes from the foreverdb.net level 30 sim (run with a non-dagger setup).",
             weights = {
-                AGILITY = 1, STRENGTH = 0.67, STAMINA = 0.25, ATTACK_POWER = 0.67,
-                HIT = 11, CRIT = 10, EXPERTISE = 10, WEAPON_SKILL = 3, HASTE = 6,
-                MELEE_DPS = 5.5, MELEE_HIT = 1.25, OFFHAND_DPS = 4,
+                AGILITY = 1, STRENGTH = 0.6, STAMINA = 0.25, ATTACK_POWER = 0.57,
+                HIT = 9, CRIT = 10.5, EXPERTISE = 10, WEAPON_SKILL = 3, HASTE = 4,
+                MELEE_DPS = 3.6, MELEE_HIT = 0.9, OFFHAND_DPS = 2.5,
             },
         },
     },
@@ -158,27 +159,27 @@ ns.defaultScales = {
             key = "BEAST_MASTERY", name = "Beast Mastery", tab = 1, match = "beast", leveling = true,
             note = GUIDES .. "; sizes from the foreverdb.net level 30 sim. The ranged weapon comes first.",
             weights = {
-                AGILITY = 1, INTELLECT = 0.25, STAMINA = 0.05, SPIRIT = 0.1,
-                ATTACK_POWER = 0.42, RANGED_AP = 0.42, HIT = 12, CRIT = 8, HASTE = 5.5,
-                RANGED_DPS = 3.4, RANGED_HIT = 0.9, MELEE_DPS = 0.3, OFFHAND_DPS = 0.15,
+                AGILITY = 1, INTELLECT = 0.3, STAMINA = 0.05, SPIRIT = 0.1,
+                ATTACK_POWER = 0.38, RANGED_AP = 0.38, HIT = 12, CRIT = 8, HASTE = 8,
+                RANGED_DPS = 3.8, RANGED_HIT = 0.5, MELEE_DPS = 0.3, OFFHAND_DPS = 0.15,
             },
         },
         {
             key = "MARKSMANSHIP", name = "Marksmanship", tab = 2, match = "marksman",
             note = GUIDES .. "; sizes from the foreverdb.net level 30 sim. Intellect rises with Careful Aim.",
             weights = {
-                AGILITY = 1, INTELLECT = 0.25, STAMINA = 0.05, SPIRIT = 0.1,
-                ATTACK_POWER = 0.42, RANGED_AP = 0.42, HIT = 12, CRIT = 10, HASTE = 3,
-                RANGED_DPS = 3.4, RANGED_HIT = 0.9, MELEE_DPS = 0.3, OFFHAND_DPS = 0.15,
+                AGILITY = 1, INTELLECT = 0.3, STAMINA = 0.05, SPIRIT = 0.1,
+                ATTACK_POWER = 0.36, RANGED_AP = 0.36, HIT = 12, CRIT = 10, HASTE = 4.5,
+                RANGED_DPS = 3.4, RANGED_HIT = 0.55, MELEE_DPS = 0.3, OFFHAND_DPS = 0.15,
             },
         },
         {
             key = "SURVIVAL", name = "Survival (melee)", tab = 3, match = "survival",
             note = GUIDES .. "; sizes from the foreverdb.net level 30 sim. Two-hander versus dual wield is unsettled.",
             weights = {
-                AGILITY = 1, STRENGTH = 0.77, INTELLECT = 0.15, STAMINA = 0.1,
-                ATTACK_POWER = 0.77, RANGED_AP = 0.1, HIT = 12, CRIT = 11, EXPERTISE = 11, WEAPON_SKILL = 3, HASTE = 4,
-                MELEE_DPS = 7.7, MELEE_HIT = 0.75, OFFHAND_DPS = 5, RANGED_DPS = 2,
+                AGILITY = 1, STRENGTH = 0.58, INTELLECT = 0.15, STAMINA = 0.1,
+                ATTACK_POWER = 0.55, RANGED_AP = 0.1, HIT = 12, CRIT = 11, EXPERTISE = 11, WEAPON_SKILL = 3, HASTE = 7,
+                MELEE_DPS = 6, MELEE_HIT = 0.45, OFFHAND_DPS = 2.5, RANGED_DPS = 1,
             },
         },
     },
@@ -188,9 +189,9 @@ ns.defaultScales = {
             key = "ARCANE", name = "Arcane", tab = 1, match = "arcane",
             note = GUIDES .. "; sizes from the Forever Mage Lab level 60 sim. Intellect rises with Arcane Blast.",
             weights = {
-                -- Icy Veins: value arcane damage equally to spell damage
-                SPELL_DAMAGE = 1, ARCANE_DAMAGE = 1, HIT = 9.5, CRIT = 8, HASTE = 8,
-                INTELLECT = 0.35, SPIRIT = 0.2, MP5 = 0.4, STAMINA = 0.1, SPELL_PEN = 0.1, RANGED_DPS = 1,
+                -- the guides' level 60 Arcane build does a little over a third of its damage with Fire spells
+                SPELL_DAMAGE = 1, ARCANE_DAMAGE = 0.6, FIRE_DAMAGE = 0.4, HIT = 15, CRIT = 10.5, HASTE = 6.5,
+                INTELLECT = 0.45, SPIRIT = 0.25, MP5 = 0.4, STAMINA = 0.1, SPELL_PEN = 0.1, SPELL_PIERCE = 1.5, RANGED_DPS = 1,
             },
         },
         {
@@ -198,16 +199,16 @@ ns.defaultScales = {
             note = GUIDES .. "; sizes from the Forever Mage Lab level 60 sim. Fire is the mana-hungry spec, so regen "
                 .. "counts for more.",
             weights = {
-                SPELL_DAMAGE = 1, FIRE_DAMAGE = 0.95, HIT = 9.5, CRIT = 11, HASTE = 8,
-                INTELLECT = 0.4, SPIRIT = 0.3, MP5 = 0.45, STAMINA = 0.1, SPELL_PEN = 0.1, RANGED_DPS = 1,
+                SPELL_DAMAGE = 1, FIRE_DAMAGE = 0.9, ARCANE_DAMAGE = 0.1, HIT = 14, CRIT = 11, HASTE = 5,
+                INTELLECT = 0.4, SPIRIT = 0.2, MP5 = 0.35, STAMINA = 0.1, SPELL_PEN = 0.1, SPELL_PIERCE = 1.5, RANGED_DPS = 1,
             },
         },
         {
             key = "FROST", name = "Frost", tab = 3, match = "frost", leveling = true,
             note = GUIDES .. "; sizes from the Forever Mage Lab level 60 sim.",
             weights = {
-                SPELL_DAMAGE = 1, FROST_DAMAGE = 0.95, HIT = 9.5, CRIT = 8, HASTE = 8,
-                INTELLECT = 0.4, SPIRIT = 0.25, MP5 = 0.4, STAMINA = 0.15, SPELL_PEN = 0.1, RANGED_DPS = 1,
+                SPELL_DAMAGE = 1, FROST_DAMAGE = 0.9, ARCANE_DAMAGE = 0.1, HIT = 15, CRIT = 9, HASTE = 10,
+                INTELLECT = 0.3, SPIRIT = 0.15, MP5 = 0.3, STAMINA = 0.15, SPELL_PEN = 0.1, SPELL_PIERCE = 1.5, RANGED_DPS = 1,
             },
         },
     },
@@ -217,16 +218,18 @@ ns.defaultScales = {
             key = "AFFLICTION", name = "Affliction", tab = 1, match = "affliction", leveling = true,
             note = GUIDES .. "; hit and crit from the Forever Warlock Lab level 60 sim. Spirit feeds Life Tap.",
             weights = {
-                SPELL_DAMAGE = 1, SHADOW_DAMAGE = 0.9, FIRE_DAMAGE = 0.1, HIT = 9.5, CRIT = 6.5, HASTE = 7,
-                INTELLECT = 0.3, SPIRIT = 0.25, STAMINA = 0.35, MP5 = 0.25, HP5 = 0.25, SPELL_PEN = 0.1, RANGED_DPS = 0.8,
+                SPELL_DAMAGE = 1, SHADOW_DAMAGE = 1, HIT = 7, CRIT = 10, HASTE = 2.5,
+                INTELLECT = 0.25, SPIRIT = 0.25, STAMINA = 0.35, MP5 = 0.15, HP5 = 0.15, SPELL_PEN = 0.1, SPELL_PIERCE = 0.5,
+                RANGED_DPS = 0.8,
             },
         },
         {
             key = "DEMONOLOGY", name = "Demonology", tab = 2, match = "demonology",
             note = GUIDES .. "; hit and crit from the Forever Warlock Lab level 60 sim. Pet scaling is unpublished.",
             weights = {
-                SPELL_DAMAGE = 1, SHADOW_DAMAGE = 0.85, FIRE_DAMAGE = 0.15, HIT = 9.5, CRIT = 8, HASTE = 7,
-                INTELLECT = 0.3, SPIRIT = 0.2, STAMINA = 0.4, MP5 = 0.25, HP5 = 0.25, SPELL_PEN = 0.1, RANGED_DPS = 0.8,
+                SPELL_DAMAGE = 1, SHADOW_DAMAGE = 0.8, FIRE_DAMAGE = 0.2, HIT = 12.5, CRIT = 9.5, HASTE = 7,
+                INTELLECT = 0.4, SPIRIT = 0.2, STAMINA = 0.3, MP5 = 0.25, HP5 = 0.25, SPELL_PEN = 0.1, SPELL_PIERCE = 1.5,
+                RANGED_DPS = 0.8,
             },
         },
         {
@@ -234,8 +237,9 @@ ns.defaultScales = {
             note = GUIDES .. "; hit and crit from the Forever Warlock Lab level 60 sim. Shadow and fire damage are "
                 .. "split evenly - shift them to match your build.",
             weights = {
-                SPELL_DAMAGE = 1, SHADOW_DAMAGE = 0.5, FIRE_DAMAGE = 0.5, HIT = 9.5, CRIT = 8, HASTE = 8,
-                INTELLECT = 0.3, SPIRIT = 0.15, STAMINA = 0.3, MP5 = 0.25, HP5 = 0.25, SPELL_PEN = 0.1, RANGED_DPS = 0.8,
+                SPELL_DAMAGE = 1, SHADOW_DAMAGE = 0.5, FIRE_DAMAGE = 0.5, HIT = 12, CRIT = 9, HASTE = 8.5,
+                INTELLECT = 0.35, SPIRIT = 0.15, STAMINA = 0.3, MP5 = 0.25, HP5 = 0.25, SPELL_PEN = 0.1, SPELL_PIERCE = 1.5,
+                RANGED_DPS = 0.8,
             },
         },
     },
@@ -261,8 +265,8 @@ ns.defaultScales = {
             key = "SHADOW", name = "Shadow", tab = 3, match = "shadow", leveling = true,
             note = GUIDES .. ". No sim publishes priest numbers; hit and crit are sized like the other casters.",
             weights = {
-                SPELL_DAMAGE = 1, SHADOW_DAMAGE = 1, HIT = 9.5, CRIT = 8, HASTE = 7,
-                INTELLECT = 0.35, SPIRIT = 0.2, MP5 = 0.5, STAMINA = 0.15, SPELL_PEN = 0.1, RANGED_DPS = 1,
+                SPELL_DAMAGE = 1, SHADOW_DAMAGE = 1, HIT = 12, CRIT = 11, HASTE = 6,
+                INTELLECT = 0.3, SPIRIT = 0.15, MP5 = 0.3, STAMINA = 0.15, SPELL_PEN = 0.1, SPELL_PIERCE = 1.5, RANGED_DPS = 1,
             },
         },
         {
@@ -270,8 +274,8 @@ ns.defaultScales = {
             note = "Low confidence: one source (Warcraft Tavern) and an unproven build. Holy Precision should cover "
                 .. "most of the hit.",
             weights = {
-                SPELL_DAMAGE = 1, HOLY_DAMAGE = 1, HIT = 3, CRIT = 8, HASTE = 7,
-                INTELLECT = 0.5, SPIRIT = 0.3, MP5 = 0.5, STAMINA = 0.15, RANGED_DPS = 1,
+                SPELL_DAMAGE = 1, HOLY_DAMAGE = 0.85, SHADOW_DAMAGE = 0.15, HIT = 3, CRIT = 6, HASTE = 9,
+                INTELLECT = 0.35, SPIRIT = 0.2, MP5 = 0.35, STAMINA = 0.15, SPELL_PIERCE = 1.5, RANGED_DPS = 1,
             },
         },
     },
@@ -281,7 +285,7 @@ ns.defaultScales = {
             key = "HOLY", name = "Holy", tab = 1, match = "holy",
             note = GUIDES .. ". Sizes from a mana model (a 3 minute fight; see Defaults.lua), not a sim; crit counts Illumination.",
             weights = {
-                HEALING = 1, INTELLECT = 1.2, MP5 = 3, CRIT = 13, HASTE = 8, SPIRIT = 0.5, STAMINA = 0.2,
+                HEALING = 1, INTELLECT = 1.2, MP5 = 3, CRIT = 11, HASTE = 8, SPIRIT = 0.5, STAMINA = 0.2,
             },
         },
         {
@@ -291,7 +295,7 @@ ns.defaultScales = {
                 .. "sim; threat stats follow the guides, which disagree. See Defaults.lua.",
             weights = {
                 STAMINA = 1, STRENGTH = 0.5, AGILITY = 0.4, INTELLECT = 0.2, ATTACK_POWER = 0.2,
-                SPELL_DAMAGE = 0.6, HOLY_DAMAGE = 0.5, HIT = 8, CRIT = 3, EXPERTISE = 7, MELEE_DPS = 3,
+                SPELL_DAMAGE = 0.5, HOLY_DAMAGE = 0.5, HIT = 8, CRIT = 3, EXPERTISE = 7, MELEE_DPS = 3,
                 ARMOR = 0.05, DEFENSE = 1.2, DODGE = 7.5, PARRY = 7.5, BLOCK = 5, BLOCK_VALUE = 0.4, MP5 = 0.5, HP5 = 0.3,
             },
         },
@@ -300,8 +304,8 @@ ns.defaultScales = {
             note = GUIDES .. ". The guides disagree on spell power versus strength; both count here. Assumes a two-hander; "
                 .. "intellect rises with Champion of the Light.",
             weights = {
-                STRENGTH = 1, AGILITY = 0.45, INTELLECT = 0.2, STAMINA = 0.15, SPIRIT = 0.05, ATTACK_POWER = 0.45,
-                SPELL_DAMAGE = 0.7, HOLY_DAMAGE = 0.6, HIT = 13, CRIT = 12, EXPERTISE = 12, WEAPON_SKILL = 3, HASTE = 8,
+                STRENGTH = 1, AGILITY = 0.6, INTELLECT = 0.2, STAMINA = 0.15, SPIRIT = 0.05, ATTACK_POWER = 0.45,
+                SPELL_DAMAGE = 0.5, HOLY_DAMAGE = 0.45, HIT = 13, CRIT = 12, EXPERTISE = 12, WEAPON_SKILL = 3, HASTE = 8,
                 MELEE_DPS = 4.7, MELEE_HIT = 0.4, MP5 = 0.3,
             },
         },
@@ -313,14 +317,14 @@ ns.defaultScales = {
             note = GUIDES .. ". The guides disagree on where crit sits. No sim publishes shaman numbers.",
             weights = {
                 SPELL_DAMAGE = 1, NATURE_DAMAGE = 0.9, FIRE_DAMAGE = 0.1, HIT = 9.5, CRIT = 8, HASTE = 8,
-                INTELLECT = 0.4, SPIRIT = 0.2, MP5 = 0.5, STAMINA = 0.15, SPELL_PEN = 0.1,
+                INTELLECT = 0.4, SPIRIT = 0.2, MP5 = 0.5, STAMINA = 0.15, SPELL_PEN = 0.1, SPELL_PIERCE = 1.8,
             },
         },
         {
             key = "ENHANCEMENT", name = "Enhancement", tab = 2, match = "enhancement", leveling = true,
             note = GUIDES .. ". Two-handed (no dual wield in Forever); intellect rises with Mental Dexterity.",
             weights = {
-                STRENGTH = 1, INTELLECT = 0.2, AGILITY = 0.45, STAMINA = 0.15, SPIRIT = 0.1, ATTACK_POWER = 0.5,
+                STRENGTH = 1, INTELLECT = 0.25, AGILITY = 0.6, STAMINA = 0.15, SPIRIT = 0.1, ATTACK_POWER = 0.5,
                 SPELL_DAMAGE = 0.35, HIT = 13, CRIT = 12, EXPERTISE = 12, WEAPON_SKILL = 3, HASTE = 8,
                 MELEE_DPS = 4.6, MELEE_HIT = 0.55, MP5 = 0.3,
             },
@@ -339,26 +343,28 @@ ns.defaultScales = {
             key = "BALANCE", name = "Balance", tab = 1, match = "balance",
             note = GUIDES .. ". Crit versus haste is unsolved. No sim publishes druid numbers.",
             weights = {
-                SPELL_DAMAGE = 1, ARCANE_DAMAGE = 0.6, NATURE_DAMAGE = 0.4, HIT = 9.5, CRIT = 8, HASTE = 7,
-                INTELLECT = 0.4, SPIRIT = 0.25, MP5 = 0.5, STAMINA = 0.15, SPELL_PEN = 0.1,
+                SPELL_DAMAGE = 1, ARCANE_DAMAGE = 0.7, NATURE_DAMAGE = 0.3, HIT = 9.5, CRIT = 8, HASTE = 7,
+                INTELLECT = 0.3, SPIRIT = 0.25, MP5 = 0.5, STAMINA = 0.15, SPELL_PEN = 0.1, SPELL_PIERCE = 2,
             },
         },
         {
             key = "FERAL_CAT", name = "Feral (Cat)", tab = 2, match = "feral", leveling = true,
+            swing = 1,
             note = GUIDES .. ". Weapon damage now carries into forms, so the weapon counts.",
             weights = {
-                STRENGTH = 1, AGILITY = 0.8, STAMINA = 0.15, SPIRIT = 0.1, INTELLECT = 0.1,
-                ATTACK_POWER = 0.5, FERAL_AP = 0.5, HIT = 13, CRIT = 12, EXPERTISE = 12, HASTE = 5,
-                MELEE_DPS = 6.5,
+                STRENGTH = 1, AGILITY = 1.1, STAMINA = 0.15, SPIRIT = 0.1, INTELLECT = 0.1,
+                ATTACK_POWER = 0.42, FERAL_AP = 0.42, HIT = 11, CRIT = 12, EXPERTISE = 9, HASTE = 6.5,
+                MELEE_DPS = 4,
             },
         },
         {
             key = "FERAL_BEAR", name = "Feral (Bear)", -- shares the Feral tree with Cat: picked by hand
+            swing = 2.5,
             note = "Low confidence: no strong source publishes an ordered bear list. Survival first, then threat.",
             weights = {
-                STAMINA = 1, AGILITY = 0.7, STRENGTH = 0.5, ATTACK_POWER = 0.25, FERAL_AP = 0.25,
-                HIT = 8, CRIT = 4, EXPERTISE = 8, MELEE_DPS = 3.5,
-                ARMOR = 0.12, DEFENSE = 1, DODGE = 9, HP5 = 0.3,
+                STAMINA = 1, AGILITY = 0.5, STRENGTH = 0.5, ATTACK_POWER = 0.25, FERAL_AP = 0.25,
+                HIT = 8, CRIT = 4, EXPERTISE = 12, MELEE_DPS = 3.1,
+                ARMOR = 0.15, DEFENSE = 1, DODGE = 6, HP5 = 0.3,
             },
         },
         {
@@ -380,10 +386,13 @@ ns.talentWeights = {
         -- each cast gives 12% of intellect as spell damage, stacking to 48%
         -- for 18 sec (Icy Veins); held near full stacks, less the ramp up
         { talent = "arcane blast", ranks = 1, add = { ARCANE = { INTELLECT = 0.45 } } },
+        -- 10% more intellect at 5/5, on top of what intellect is worth to Arcane with the above
+        { talent = "arcane mind", ranks = 5, add = { ARCANE = { INTELLECT = 0.09 } } },
     },
     SHAMAN = {
-        -- attack power equal to 33/66/100% of intellect: 1 AP is half a strength
-        { talent = "mental dexterity", ranks = 3, add = { ENHANCEMENT = { INTELLECT = 0.45 } } },
+        -- attack power equal to 33/66/100% of intellect (Nov 10; 50/100/150% for the week after launch):
+        -- 1 AP is half a strength, and both sims put intellect near 0.85 of a strength with it
+        { talent = "mental dexterity", ranks = 3, add = { ENHANCEMENT = { INTELLECT = 0.5 } } },
         -- spell damage and healing equal to 15/30% of intellect
         { talent = "mental quickness", ranks = 2, add = {
             ELEMENTAL = { INTELLECT = 0.3 }, RESTORATION = { INTELLECT = 0.3 }, ENHANCEMENT = { INTELLECT = 0.1 },
@@ -392,24 +401,35 @@ ns.talentWeights = {
     HUNTER = {
         -- attack power equal to 20-100% of intellect, at each scale's attack power weight
         { talent = "careful aim", ranks = 5, add = {
-            BEAST_MASTERY = { INTELLECT = 0.42 }, MARKSMANSHIP = { INTELLECT = 0.42 }, SURVIVAL = { INTELLECT = 0.77 },
+            BEAST_MASTERY = { INTELLECT = 0.38 }, MARKSMANSHIP = { INTELLECT = 0.36 }, SURVIVAL = { INTELLECT = 0.55 },
         } },
     },
     PALADIN = {
-        -- spell damage equal to 20/40/60% of intellect (not healing), at each scale's spell damage weight
-        { talent = "champion of the light", ranks = 3, add = {
-            RETRIBUTION = { INTELLECT = 0.42 }, PROTECTION = { INTELLECT = 0.36 },
+        -- spell damage equal to 12/24/36/48/60% of intellect (not healing), at each scale's spell damage weight
+        { talent = "champion of the light", ranks = 5, add = {
+            RETRIBUTION = { INTELLECT = 0.3 }, PROTECTION = { INTELLECT = 0.3 },
         } },
+        -- the critical healing bonus of Holy spells up by 10-50%: at 5/5 a crit heals for 225% rather than 150%,
+        -- which more than doubles what one percent of crit adds
+        { talent = "holy power", ranks = 5, add = { HOLY = { CRIT = 12 } } },
     },
     PRIEST = {
         -- healing equal to 25% of spirit at 5/5, and a third of that as damage
         { talent = "spiritual guidance", ranks = 5, add = {
             HOLY = { SPIRIT = 0.25 }, DISCIPLINE = { SPIRIT = 0.25 }, SHADOW = { SPIRIT = 0.08 }, SMITE = { SPIRIT = 0.08 },
         } },
+        -- 10% more intellect at 5/5 (second row of Discipline since Oct 15), at each scale's intellect weight
+        { talent = "mental strength", ranks = 5, add = {
+            DISCIPLINE = { INTELLECT = 0.11 }, HOLY = { INTELLECT = 0.1 }, SHADOW = { INTELLECT = 0.03 }, SMITE = { INTELLECT = 0.03 },
+        } },
     },
     DRUID = {
         -- 15% more spirit at 3/3
         { talent = "living spirit", ranks = 3, add = { RESTORATION = { SPIRIT = 0.15 } } },
+        -- an expiring Rejuvenation or Regrowth heals for 100% of spirit: a judgement of how much of that lands
+        { talent = "bloom", ranks = 1, add = { RESTORATION = { SPIRIT = 0.3 } } },
+        -- healing equal to 25% of intellect, at 2/2 (a Feral talent: hybrids only)
+        { talent = "natural instinct", ranks = 2, add = { RESTORATION = { INTELLECT = 0.25 } } },
     },
 }
 
@@ -448,5 +468,5 @@ for class, list in pairs(ns.defaultScales) do
     end
 end
 
--- Embedded in Lootified from PawnForever 1.5.0 so scoring works without PawnForever installed.
+-- Embedded from the installed PawnForever 1.7.1 defaults. Lootified owns this copy and has no PawnForever runtime dependency.
 LJ.EmbeddedPawnWeights = { scales = ns.defaultScales, talentWeights = ns.talentWeights }

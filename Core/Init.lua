@@ -441,6 +441,7 @@ local HELP = {
     "|cffffd200/lf memory|r - memory Lootified uses, with and without garbage the game has not cleaned up yet",
     "|cffffd200/lf debug|r - toggle debug output",
     "|cffffd200/lf status|r - show client and Lootified data versions",
+    "|cffffd200/lf levels|r - show and save the live dungeon-finder level fields",
 }
 
 function LJ:HandleSlash(msg)
@@ -523,6 +524,8 @@ function LJ:HandleSlash(msg)
         self:Print("Data: %s; checked %s; %s", tostring(self.DATA_BUILD or "unknown"),
             tostring(self.DATA_CHECKED or "unknown"), tostring(self.DATA_STATUS or "unknown"))
         self:Print("Sources: %s", tostring(self.DATA_SOURCES or "not recorded"))
+    elseif cmd == "levels" then
+        self.Locale.Collect.PrintDungeonFinder()
     elseif cmd == "collect" then
         -- developer tool: collects what the game client knows about the addon's data (Core/Locale.lua)
         local sub = rest:lower()

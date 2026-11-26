@@ -301,7 +301,7 @@ LJ.Data.Instances = {
     },
     {
         key = "DROWNED", name = "The Drowned City", kind = "dungeon", era = "forever",
-        minLevel = 35, maxLevel = 40, size = 5, zone = "Stranglethorn Vale",
+        minLevel = 35, maxLevel = 42, size = 5, zone = "Stranglethorn Vale",
         status = "live",
         desc = "Sunken troll ruins have risen from the sea off Stranglethorn Vale, and trolls, naga and pirates fight over what lies within.",
         art = { loading = "camelot160\\main\\loadscreen_camelot_easternkingdom" },
@@ -375,7 +375,7 @@ LJ.Data.Instances = {
     },
     {
         key = "KROLDOK", name = "Krol'dok Stronghold", kind = "dungeon", era = "forever",
-        minLevel = 40, maxLevel = 45, size = 5, zone = "Riverglades",
+        minLevel = 40, maxLevel = 47, size = 5, zone = "Riverglades",
         status = "live",
         desc = "An enormous ogre stronghold whose raiders take prisoners, and whose night-time chanting hints at the Twilight's Hammer.",
         art = { loading = "camelot160\\main\\loadscreen_camelot_easternkingdom" },
@@ -469,7 +469,7 @@ LJ.Data.Instances = {
     },
     {
         key = "ALCAZ", name = "Alcaz Prison", kind = "dungeon", era = "forever",
-        minLevel = 48, maxLevel = 53, size = 5, zone = "Dustwallow Marsh",
+        minLevel = 48, maxLevel = 55, size = 5, zone = "Dustwallow Marsh",
         status = "live",
         desc = "A Defias prison on Alcaz Island that once held nobles for ransom, now besieged by the naga.",
         art = { loading = "LoadScreenKalimdor" },

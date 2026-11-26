@@ -1,3 +1,13 @@
+## 1.2.0.28 — 2026-11-25
+
+- Use one consistent percent-based gear scorer across Best in Slot, For You, Journal, item lists, and tooltips, with correct replacement-slot and paired-weapon comparisons.
+- Keep Best in Slot items and the character preview synchronized with the selected spec, equipped set, armor filters, loot sources, and drop-chance filter.
+- Fix upgrade results and counts across Journal and For You, and stop background item-data events and mouseovers from repeatedly rebuilding or reordering those pages.
+- Apply class and equipment eligibility consistently so suggestions do not include gear the character cannot use.
+- Add `/lf levels` to capture the live dungeon-finder ranges, and correct dungeon level ranges from the captured Forever client data.
+- Refresh the packaged Forever item, quest, NPC, and dungeon data from client build 1.60.1.71139 and the ForeverDB 1.60.1.71091 snapshot; update enabled locale packs for new strings.
+- Remove the unused external Best in Slot feed from the addon and refresh utilities.
+
 ## 1.2.0.27 — 2026-11-23
 
 - Refresh dungeon Journal upgrade badges and item rows when Forever item data finishes loading, and clear stale comparison results when Lootified closes.

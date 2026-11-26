@@ -329,14 +329,16 @@ end
 
 function Page:Show()
     Player:Refresh()
+    -- On the first show, let the frame finish layout before building the page.
+    -- The former immediate + deferred refresh built and rescored the full page twice.
+    if not self.laidOut then
+        self.laidOut = true
+        C_Timer.After(0, function()
+            if self.root:IsShown() then self:Refresh() end
+        end)
+        return
+    end
     self:Refresh()
-    -- the first show: the sizes of the new frames are only known after the first layout pass, the page is laid out
-    -- again then (later shows have them; a look switch makes the page new)
-    if self.laidOut then return end
-    self.laidOut = true
-    C_Timer.After(0, function()
-        if self.root:IsShown() then self:Refresh() end
-    end)
 end
 
 -- the experience bar follows kills and quests while the page is open
