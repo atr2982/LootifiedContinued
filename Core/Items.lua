@@ -319,6 +319,7 @@ end
 -- Item info (asynchronous)
 ---------------------------------------------------------------------------
 local cache = {}
+local bakedLevelCache = {}  -- [itemID] = { minLevel, itemLevel }, parsed once from the shipped string
 local searchKeys = {}       -- [itemID] = search key of the item name (Items.GetSearchKey)
 local requested = {}
 local waiting = {}
@@ -353,22 +354,12 @@ local function ParseStats(st)
     return stats
 end
 
--- Number in field n ("|"-separated, 1 = first) of a shipped string, read without creating strings.
-local function NumField(text, n)
-    local p = 0
-    for _ = 1, n - 1 do
-        p = text:find("|", p + 1, true)
-        if not p then return nil end
-    end
-    local v, i = 0, p + 1
-    local b = text:byte(i)
-    if not b or b < 48 or b > 57 then return nil end
-    while b and b >= 48 and b <= 57 do
-        v = v * 10 + b - 48
-        i = i + 1
-        b = text:byte(i)
-    end
-    return v
+-- Item level and required level are the third and fourth fields. Match both in
+-- the string library instead of walking each digit in Lua during large rankings.
+local function BakedLevels(text)
+    local itemLevel, minLevel = text:match("^[^|]*|[^|]*|(%d+)|(%d+)|")
+    if not itemLevel then return nil end
+    return tonumber(itemLevel), tonumber(minLevel)
 end
 
 -- Fills t (emptied first) from a shipped stat text ("Stat=value,...", starting at position i of st). The values
@@ -677,8 +668,13 @@ function Items.GetKnownLevels(itemID)
     if e then return e[4] or 0, e[3] or 0 end
     local text = bakedItems and bakedItems[itemID]
     if text then
-        local il, ml = NumField(text, 3), NumField(text, 4)
-        if il and ml then return ml, il end
+        local cached = bakedLevelCache[itemID]
+        if cached then return cached[1], cached[2] end
+        local il, ml = BakedLevels(text)
+        if il and ml then
+            bakedLevelCache[itemID] = { ml, il }
+            return ml, il
+        end
     end
     local forever = LJ.Data.ForeverDB and LJ.Data.ForeverDB.items and LJ.Data.ForeverDB.items[itemID]
     if forever then return forever.min or 0, forever.level or 0 end

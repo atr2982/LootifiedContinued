@@ -892,7 +892,6 @@ function Scoring.RankAll(spec, opts)
                 local score = hitBase ~= nil and Scoring.Score(id, spec, slot, opts.current, stats, hitBase, dualWielding) or nil
                 if score and (score > 0 or (sourceFallback and score == 0)) then
                     local list = bySlot[slot]
-                    local _, itemLevel = Items.GetKnownLevels(id)
                     list[#list + 1] = { id = id, score = score, fallback = sourceFallback, itemLevel = itemLevel or 0 }
                 end
             end

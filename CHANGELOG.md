@@ -1,3 +1,7 @@
+## 1.2.0.31 — 2026-11-25
+
+- Prevent item-level parsing from timing out during Best in Slot rankings by caching baked levels and avoiding duplicate lookups.
+
 ## 1.2.0.30 — 2026-11-25
 
 - Remove beta and Classic loot-status notes from dungeon Journal hover cards.
