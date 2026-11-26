@@ -29,7 +29,9 @@ function Tooltip.ShowInstance(row, inst)
     GameTooltip:SetText(inst.name, a[1], a[2], a[3])
     local levelText = inst.kind == "raid" and L("Level 60") or F("Level %s", Util.LevelRange(inst.minLevel, inst.maxLevel))
     GameTooltip:AddLine(Theme.DotSafe(F("%s  ·  %s  ·  %d players", levelText, inst.zone or "", inst.size or 5)), 1, 1, 1)
-    GameTooltip:AddLine(inst.statusText, 0.75, 0.78, 0.82, true)
+    if inst.kind ~= "dungeon" and inst.statusText and inst.statusText ~= "" then
+        GameTooltip:AddLine(inst.statusText, 0.75, 0.78, 0.82, true)
+    end
     GameTooltip:AddLine(" ")
     GameTooltip:AddLine(inst.desc, 0.85, 0.86, 0.88, true)
     GameTooltip:AddLine(" ")

@@ -1,3 +1,7 @@
+## 1.2.0.30 — 2026-11-25
+
+- Remove beta and Classic loot-status notes from dungeon Journal hover cards.
+
 ## 1.2.0.29 — 2026-11-25
 
 - Avoid calculating a loot-roll upgrade verdict twice when a group-loot prompt appears, reducing synchronous scoring work on the popup.
