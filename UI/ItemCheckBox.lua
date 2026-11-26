@@ -155,11 +155,12 @@ end
 
 -- Fills a box from its item (f.link) as it stands: the verdict, the number or a line of text, Sim, what it would
 -- replace and (beside a roll) the tip.
-local function Refresh(f)
-    local v = ItemCheck.Get(f.link)
+local function Refresh(f, verdict, hasVerdict)
+    local v
+    if hasVerdict then v = verdict else v = ItemCheck.Get(f.link) end
     if not v then
         f:Hide()
-        return
+        return false
     end
     local id, key = ItemCheck.Parse(f.link)
     -- no verdict while the game has no data of the item: asked through the addon's item loader, whose answer
@@ -283,6 +284,7 @@ local function Refresh(f)
     else
         f.instead:SetPoint("TOPRIGHT", -PAD, -row)
     end
+    return true
 end
 
 -- Every box that shows (the rolls' and the window).
@@ -311,7 +313,7 @@ local function ShowRoll(frame)
     -- (the game hides a roll frame whose item it cannot show during its own OnShow)
     if not (On() and frame:IsShown()) then return end
     local link = GetLootRollItemLink(frame.rollID)
-    if not (link and ItemCheck.Get(link)) then return end
+    if not link then return end
     if not (f and f.skin == Theme.skin) then
         f = Create(false)
         Box.rolls[frame] = f
@@ -324,8 +326,7 @@ local function ShowRoll(frame)
     else
         f:SetPoint("TOPRIGHT", frame, "TOPLEFT", -12, 5)
     end
-    Refresh(f)
-    f:Show()
+    if Refresh(f, ItemCheck.Get(link), true) then f:Show() end
 end
 
 ---------------------------------------------------------------------------

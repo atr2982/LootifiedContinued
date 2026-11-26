@@ -1,3 +1,7 @@
+## 1.2.0.29 — 2026-11-25
+
+- Avoid calculating a loot-roll upgrade verdict twice when a group-loot prompt appears, reducing synchronous scoring work on the popup.
+
 ## 1.2.0.28 — 2026-11-25
 
 - Use one consistent percent-based gear scorer across Best in Slot, For You, Journal, item lists, and tooltips, with correct replacement-slot and paired-weapon comparisons.
