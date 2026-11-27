@@ -750,7 +750,6 @@ LJ:Listen("PLAYER_CHANGED", Changed)
 -- check), the window reads them again when it opens
 LJ:Listen("WINDOW_CLOSED", Quests.InvalidateCache)
 
-BuildIndexes()
 LJ:Listen("DB_READY", function()
     BuildIndexes()
     OrderIndexes()

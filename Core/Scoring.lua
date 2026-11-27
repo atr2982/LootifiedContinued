@@ -187,7 +187,7 @@ function Scoring.GetStatsForLink(link)
     local stats = {}
     for key, value in pairs(raw) do
         local stat = STAT_KEYS[key]
-        if stat and type(value) == "number" then
+        if stat and type(value) == "number" and not LJ.Util.IsSecret(value) then
             stats[stat] = (stats[stat] or 0) + value
         end
     end
@@ -214,7 +214,7 @@ function Scoring.ClientStats(itemID)
     if raw then
         for key, value in pairs(raw) do
             local stat = STAT_KEYS[key]
-            if stat and type(value) == "number" then
+            if stat and type(value) == "number" and not LJ.Util.IsSecret(value) then
                 stats[stat] = (stats[stat] or 0) + value
             end
         end
@@ -788,6 +788,11 @@ end
 local rankingCache, rankingCount = {}, 0
 local RANKINGS_KEPT = 6     -- specs and level options switched between; older rankings are made again
 
+local function RankingCacheKey(spec, opts)
+    return table.concat({ spec.class, spec.key, tostring(opts.maxLevel or 0), tostring(opts.current and 1 or 0),
+        Items.ListKey(), Items.AvailabilityKey(), LJ.UpgradeScoring.CacheKey(spec) }, ":")
+end
+
 function Scoring.InvalidateCache()
     rankingCache, rankingCount = {}, 0
 end
@@ -817,16 +822,15 @@ end
 -- Thousands of candidates are looked at without an item record each: slot and type come from the client
 -- (C_Item.GetItemInfoInstant), levels and stats from the shipped or saved data. Only items neither knows (outside the
 -- shipped data and not known as without server data) get a record, which asks the server for them.
-local facts = {}            -- equipLoc, classID, subclassID of the candidate being ranked (Player:CanClassUse)
-local scratchStats = {}     -- shipped stats of that candidate, parsed for its score only
 function Scoring.RankAll(spec, opts)
     opts = opts or {}
-    local cacheKey = table.concat({ spec.class, spec.key, tostring(opts.maxLevel or 0), tostring(opts.current and 1 or 0),
-        Items.ListKey(), Items.AvailabilityKey(), LJ.UpgradeScoring.CacheKey(spec) }, ":")
+    local cacheKey = RankingCacheKey(spec, opts)
     if rankingCache[cacheKey] then return rankingCache[cacheKey] end
     local started = debugprofilestop()
     local bySlot = {}
     for _, slot in ipairs(Scoring.SLOTS) do bySlot[slot] = {} end
+    local facts = {}        -- reused for item eligibility checks within this ranking
+    local scratchStats = {} -- shipped stats parsed for this ranking only
     -- the candidates whose data the game has not sent yet (asked for once: Items.Request)
     local waiting = {}
     local rankedItems = {}
@@ -897,8 +901,12 @@ function Scoring.RankAll(spec, opts)
             end
         end
     end
-    for _, id in ipairs(Scoring.GetBaseCandidateIDs()) do Rank(id, false) end
-    for _, id in ipairs(Scoring.GetWorldCandidateIDs()) do Rank(id, true) end
+    for _, id in ipairs(Scoring.GetBaseCandidateIDs()) do
+        Rank(id, false)
+    end
+    for _, id in ipairs(Scoring.GetWorldCandidateIDs()) do
+        Rank(id, true)
+    end
     -- If selected sources have no scored option for a slot, search the full known item catalog while preserving class,
     -- level, faction, profession, and armor-filter rules. This is deliberately a fallback: normal source-filtered picks
     -- always win, but a slot does not stay empty just because its source table or stat cache is incomplete.
@@ -907,7 +915,9 @@ function Scoring.RankAll(spec, opts)
         if #list == 0 then fallbackSlots[slot] = true end
     end
     if next(fallbackSlots) then
-        for _, id in ipairs(Scoring.GetCatalogGearIDs()) do Rank(id, true, true, fallbackSlots) end
+        for _, id in ipairs(Scoring.GetCatalogGearIDs()) do
+            Rank(id, true, true, fallbackSlots)
+        end
     end
     for _, list in pairs(bySlot) do
         table.sort(list, function(a, b)
@@ -1039,7 +1049,7 @@ end
 -- PawnForever compares weapon replacements as a two-hand loadout, including
 -- the different off-hand weights and a usable bag partner when replacing a
 -- two-hander. The result is still built only from Scoring.Score.
-function Scoring.CompareWeapon(itemID, spec, candidateStats, equipLoc)
+function Scoring.CompareWeapon(itemID, spec, candidateStats, equipLoc, allowBagPartner)
     local mainID, offID = Player:GetEquippedItemID(16), Player:GetEquippedItemID(17)
     local mainLoc = mainID and select(4, C_Item.GetItemInfoInstant(mainID))
     local mainStats = mainID and EquippedStats(16)
@@ -1101,7 +1111,7 @@ function Scoring.CompareWeapon(itemID, spec, candidateStats, equipLoc)
         local asOff = canDual and Scoring.IsSpecEligible(itemID, spec, "OFFHAND", candidateStats)
             and CandidateScore("OFFHAND") or nil
         shown, candidate, chosenSlot = asMain, (asMain or 0) + currentOff, "MAINHAND"
-        if mainTwoHand then
+        if mainTwoHand and allowBagPartner ~= false then
             local partner = BestBagPartner("OFFHAND")
             if partner then candidate = (asMain or 0) + partner.score end
         elseif mainID and canDual and mainLoc == "INVTYPE_WEAPON" then
@@ -1115,8 +1125,12 @@ function Scoring.CompareWeapon(itemID, spec, candidateStats, equipLoc)
         shown = CandidateScore("OFFHAND")
         chosenSlot = "OFFHAND"
         if mainTwoHand then
-            local partner = BestBagPartner("MAINHAND")
-            candidate = (partner and partner.score or 0) + (shown or 0)
+            if allowBagPartner ~= false then
+                local partner = BestBagPartner("MAINHAND")
+                candidate = (partner and partner.score or 0) + (shown or 0)
+            else
+                candidate = shown or 0
+            end
         else
             candidate = currentMain + (shown or 0)
         end

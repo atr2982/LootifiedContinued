@@ -1,3 +1,11 @@
+## 1.2.0.32 — 2026-11-27
+
+- Remove the separate group-loot upgrade panel and its automatic roll-time scoring; item upgrade details remain on the normal item tooltip when hovered.
+- Cache per-item comparisons against the current character state and improve compatible-slot and paired-weapon replacement results.
+- Improve item-stat parsing for weapon damage, speed, weapon-specific skill bonuses, and client values that are unavailable during combat.
+- Keep Best in Slot, For You, and Journal results aligned as their data refreshes; add the missing Zum'rah's Head quest map action and correct verified quest locations and chain details.
+- Update the enabled locale packs for the revised quest names and locations.
+
 ## 1.2.0.31 — 2026-11-25
 
 - Prevent item-level parsing from timing out during Best in Slot rankings by caching baked levels and avoiding duplicate lookups.

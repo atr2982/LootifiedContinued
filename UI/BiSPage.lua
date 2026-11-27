@@ -886,6 +886,8 @@ function Page:Refresh()
     Theme.SetAccent(Theme.ClassAccent(class))
     local spec = self:GetViewSpec()
     if not spec then return end
+    local ranking = BiS.Ranking(spec)
+    if not ranking then return end
     local level = BiS.ListLevel(spec)
     -- the simulator plays every spec of the character's class: the header opens it (with Sim it also runs the Best in
     -- Slot sim), a click on a slot picks another item for an own set; with Percent (shares) the share by the stat
@@ -895,7 +897,7 @@ function Page:Refresh()
 
     -- what the sheet shows: the Best in Slot list, what is worn or an own set (only its items; an empty one: its empty
     -- slots, a click on one puts an item in it)
-    self.ranking = BiS.Ranking(spec)
+    self.ranking = ranking
     local view = self.view
     local function ListOf(slot) return BiS.ResolveSlot(spec, slot, self.ranking) end
     local function WornOf(slot) return GetInventoryItemID("player", LJ.SimBiS.INV_SLOT[slot]) end

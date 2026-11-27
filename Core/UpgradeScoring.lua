@@ -171,9 +171,9 @@ end
 
 -- This returns Lootified's own stat-weight verdict. Its item and character data
 -- come from Lootified's Forever-aware stat reader, never PawnForever's runtime API.
-function Integration.Check(link, spec)
+function Integration.Check(link, spec, comparisonOptions)
     if not (LJ.ItemCheck and LJ.ItemCheck.Share) then return nil end
-    local share = LJ.ItemCheck.Share(spec, link)
+    local share = LJ.ItemCheck.Share(spec, link, comparisonOptions)
     if not share then return nil end
     local points = share.points
     local empty = share.empty == true
@@ -182,8 +182,9 @@ function Integration.Check(link, spec)
     local gain = share.current and share.current > 0 and points and points / share.current * 100 or share.pct
     -- Any positive weighted score gain is an upgrade; don't hide small wins
     -- behind a minimum percent or point threshold.
-    local upgrade = share.better and gain ~= nil and gain > 0
-    return { upgrade = upgrade, gain = upgrade and gain or nil, points = points,
+    local upgrade = share.better and ((gain ~= nil and gain > 0)
+        or (comparisonOptions and comparisonOptions.equippedOnly and points ~= nil and points > 0))
+    return { upgrade = upgrade, gain = (upgrade or (comparisonOptions and comparisonOptions.equippedOnly)) and gain or nil, points = points,
         empty = empty, slot = share.slot, score = share.score }
 end
 

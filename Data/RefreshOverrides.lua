@@ -119,9 +119,34 @@ local newInstanceQuestFixes = {
     [96770] = { side = "A" }, -- The Witch Doctor's Head
     [96773] = { side = "A" }, -- The Coldbringer's Eye
     [96800] = { side = "A" }, -- Past Due
-    [96775] = { side = "H", next = { 96776 } }, -- Zum'rah's Head -> An'she's Radiance
+    [96775] = {
+        side = "H",
+        next = { 96776 },
+        start = { kind = "npc", id = 264074, zone = "Mulgore", map = 1412, x = 32.5, y = 20.7 },
+        finish = { kind = "npc", id = 264074, zone = "Mulgore", map = 1412, x = 32.5, y = 20.7 },
+    }, -- Zum'rah's Head -> An'she's Radiance; Mazu'kon at Skywatcher Plateau
     [96776] = { side = "H", pre = { 96775 }, next = { 97197 } }, -- An'she's Radiance -> Fragment of the Firelands
-    [97196] = { side = "H" }, -- The Coldbringer's Eye
+    [97196] = {
+        side = "H",
+        start = {
+            kind = "npc",
+            id = 264078,
+            name = "Sutara Plainstalker",
+            zone = "Mulgore",
+            map = 1412,
+            x = 34.6,
+            y = 23.0,
+        },
+        finish = {
+            kind = "npc",
+            id = 264078,
+            name = "Sutara Plainstalker",
+            zone = "Mulgore",
+            map = 1412,
+            x = 34.6,
+            y = 23.0,
+        },
+    }, -- The Coldbringer's Eye
     [97197] = { side = "H", pre = { 96776 } }, -- Fragment of the Firelands
     [93404] = { side = "BOTH" }, -- Rot and Regret
     [98830] = { side = "BOTH" }, -- The Broken Glaive
@@ -277,6 +302,8 @@ for id, fix in pairs(newInstanceQuestFixes) do
     local q = LJ.Data.Quests and LJ.Data.Quests[id]
     if q then
         q.side = fix.side
+        if fix.start then q.start = fix.start end
+        if fix.finish then q.finish = fix.finish end
         AddQuestLinks(q, "pre", fix.pre)
         AddQuestLinks(q, "next", fix.next)
         if type(fix.preAny) == "table" then

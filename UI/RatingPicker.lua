@@ -111,7 +111,7 @@ local function Create()
     f.text:SetPoint("TOPLEFT", PAD, -PAD - 34)
     f.text:SetWidth(WIDTH - PAD * 2)
     f.text:SetWordWrap(true)
-    f.text:SetText(L("This decides how this character's upgrades show in tooltips, loot rolls, For you and its Best in Slot list."))
+    f.text:SetText(L("This decides how this character's upgrades show in tooltips, For you and its Best in Slot list."))
     local top = PAD + 34 + f.text:GetStringHeight() + 14
     f.ways = {}
     local tall = 0

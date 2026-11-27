@@ -374,7 +374,7 @@ local TOOLTIP_KEYS = { "tooltipUpgrade", "tooltipSource" }
 local function BuildMap(page)
     page:Heading("Map & alerts", "Dungeon entrances on the world map and what Lootified does by itself.")
     DbSwitch(page, "worldMapEntrances", "Dungeon entrances on the world map", "A pin at every entrance; a click opens the dungeon.")
-    DbSwitch(page, "upgradeCheck", "Upgrade check for loot", "Beside every loot roll, and in a window on Alt+Click on any item: is it an upgrade for you?",
+    DbSwitch(page, "upgradeCheck", "Upgrade check for loot", "Alt+Click any item to open its upgrade check.",
         { enabled = function() return Modules.On("bis") end, why = "The Best in Slot module is off (Modules)." })
     DbSwitch(page, "autoOpenInstance", "Open the current dungeon", "Inside a dungeon, Lootified opens on it.",
         { enabled = function() return Modules.On("journal") end, why = "The Journal module is off (Modules)." })

@@ -142,7 +142,7 @@ end
 ---------------------------------------------------------------------------
 -- Refresh
 ---------------------------------------------------------------------------
-function Page:RefreshCharacter()
+function Page:RefreshCharacter(picks)
     local spec, zone = self.spec, self.zone
     local level = Player.level or 1
     local face = self.face
@@ -176,7 +176,7 @@ function Page:RefreshCharacter()
     local bis = LJ.Modules.On("bis")
     self.setTitle:SetShown(bis)
     self.setCount:SetShown(bis)
-    local picks = bis and spec and LJ.BiS.GetPicks(spec) or {}
+    picks = picks or (bis and spec and LJ.BiS.GetPicks(spec) or {})
     local owned = 0
     for i, p in ipairs(picks) do
         local icon = self:SetIcon(i)
@@ -308,10 +308,16 @@ function Page:RefreshDungeons(instances, upcoming)
 end
 
 function Page:Refresh()
+    local level = Player.level or 1
+    local instances, upcoming = Lists.InstancesFor(level)
+    self:Render(instances, upcoming)
+end
+
+function Page:Render(instances, upcoming)
     Theme.SetAccent(Theme.ClassAccent(Player.class or "WARRIOR"))
     local level = Player.level or 1
     self.spec = Player:GetActiveSpec()
-    local instances, upcoming = Lists.InstancesFor(level)
+    instances = instances or {}
     -- the zone the character stands in (when it has open world data)
     local map = Lists.CurrentZoneMap()
     self.zone = map and Items.GetWorldZone(map)
@@ -343,7 +349,9 @@ end
 
 -- the experience bar follows kills and quests while the page is open
 LJ:On("PLAYER_XP_UPDATE", function()
-    if Page.root and Page.root:IsVisible() and Page.face then Page:RefreshCharacter() end
+    if Page.root and Page.root:IsVisible() and Page.face then
+        Page:RefreshCharacter()
+    end
 end)
 
 UI:RegisterPage("foryou", Page, { "modern", "classic" })

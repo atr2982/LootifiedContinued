@@ -20,6 +20,24 @@ local Scoring = LJ.Scoring
 local ItemCheck = {}
 LJ.ItemCheck = ItemCheck
 
+-- Loot-roll frames and item tooltips can ask for the same verdict several
+-- times. Keep the equipped baseline and completed item verdicts while the
+-- character's scoring state is unchanged; a new drop only needs its own score.
+local shareCache, shareCacheCount = {}, 0
+local wornTotalCache = {}
+local comparisonGeneration = 0
+local SHARE_CACHE_LIMIT = 2048
+
+local function ComparisonState(spec)
+    return table.concat({ comparisonGeneration, spec.class or "", spec.key or "",
+        Player.level or UnitLevel("player") or 1 }, ":")
+end
+
+local function ClearComparisonCaches()
+    comparisonGeneration = comparisonGeneration + 1
+    shareCache, shareCacheCount, wornTotalCache = {}, 0, {}
+end
+
 -- The item of a link: its ID, the key of its numbers (the ID; with a random suffix "ID:suffix") and whether it has a
 -- random suffix (the item string's seventh field, as Scoring.GetStatsForLink reads it).
 local function Parse(link)
@@ -143,9 +161,15 @@ end
 -- The score of everything worn (every sheet slot), used as the empty-slot
 -- percentage base and the baseline for a full Best in Slot loadout.
 local function WornTotal(spec)
-    return ScoreLoadout(spec,
+    if not spec then return nil end
+    local state = ComparisonState(spec)
+    local cached = wornTotalCache[state]
+    if cached ~= nil then return cached end
+    local total = ScoreLoadout(spec,
         function(slot) return Player:GetEquippedItemID(SimBiS.INV_SLOT[slot]) end,
         function(slot) return Player:GetEquippedLink(SimBiS.INV_SLOT[slot]) end)
+    if total ~= nil then wornTotalCache[state] = total end
+    return total
 end
 ItemCheck.WornTotal = WornTotal
 
@@ -153,7 +177,7 @@ ItemCheck.WornTotal = WornTotal
 -- (true when it scores above what is worn in one of its slots), the item worn there (the slot where it scores the
 -- most above it) and what it adds to the whole gear in percent (WornTotal; nil when nothing worn scores); nil while
 -- the stats of the item or of what is worn there are not known yet.
-local function Estimate(spec, id, link, facts)
+local function Estimate(spec, id, link, facts, comparisonOptions)
     local stats = Scoring.GetStatsForLink(link)
     local _, _, hasSuffix = Parse(link)
     if (not stats or not next(stats)) and not hasSuffix then
@@ -170,14 +194,17 @@ local function Estimate(spec, id, link, facts)
         or loc == "INVTYPE_WEAPONMAINHAND" or loc == "INVTYPE_WEAPONOFFHAND")
         or loc == "INVTYPE_SHIELD" or loc == "INVTYPE_HOLDABLE"
     if isPairItem then
-        local pair = Scoring.CompareWeapon(id, spec, stats, loc)
+        local equippedOnly = comparisonOptions and comparisonOptions.equippedOnly
+        local pair = Scoring.CompareWeapon(id, spec, stats, loc, not equippedOnly)
         if not pair then return nil end
-        local total = WornTotal(spec)
         local replacesSlot = pair.slot == "OFFHAND" and 17 or 16
         local replaces = Player:GetEquippedItemID(replacesSlot)
         local replacesLink = Player:GetEquippedLink(replacesSlot)
         local pct = pair.current > 0 and pair.delta / pair.current * 100
-            or total and total > 0 and pair.delta / total * 100 or nil
+        if not pct and not equippedOnly then
+            local total = WornTotal(spec)
+            pct = total and total > 0 and pair.delta / total * 100 or nil
+        end
         return pair.delta > 0, replaces, pct,
             pair.delta, pair.candidate, pair.current, pair.slot, replacesLink
     end
@@ -195,26 +222,69 @@ local function Estimate(spec, id, link, facts)
         end
     end
     if not best then return nil end
-    local total = WornTotal(spec)
-    local pct = bestWorn > 0 and best / bestWorn * 100
-        or total and total > 0 and best / total * 100 or nil
+    local pct
+    if bestWorn > 0 then
+        pct = best / bestWorn * 100
+    else
+        local total = not (comparisonOptions and comparisonOptions.equippedOnly) and WornTotal(spec)
+        pct = total and total > 0 and best / total * 100 or nil
+    end
     return best > 0, replaces, pct,
         best, bestScore, bestWorn, bestSlot, replacesLink
 end
 
 -- An item by the stat weights of a spec (Percent: the tooltips and the boxes):
 -- { better, pct, replaces } as Estimate gives them; nil while its stats or those of what is worn there are not known.
-function ItemCheck.Share(spec, link)
-    if not spec then return nil end
+function ItemCheck.Share(spec, link, comparisonOptions)
+    if not spec or type(link) ~= "string" or LJ.Util.IsSecret(link) then return nil end
+    local state = ComparisonState(spec)
+    local byLink = shareCache[state]
+    local cacheLink = comparisonOptions and comparisonOptions.equippedOnly and ("roll:" .. link) or link
+    local cached = byLink and byLink[cacheLink]
+    if cached ~= nil then return cached end
     local _, _, _, equipLoc, _, classID, subclassID = C_Item.GetItemInfoInstant(link)
     local id = Parse(link)
     local facts = { id = id, equipLoc = equipLoc, classID = classID, subclassID = subclassID }
     if not Player:CanClassUse(facts, spec.class) then return nil end
-    local better, replaces, pct, points, score, current, slot, replacesLink = Estimate(spec, id, link, facts)
+    local better, replaces, pct, points, score, current, slot, replacesLink = Estimate(spec, id, link, facts, comparisonOptions)
     if better == nil then return nil end
-    return { better = better, pct = pct, points = points, score = score, current = current,
+    local result = { better = better, pct = pct, points = points, score = score, current = current,
         empty = replaces == nil, replaces = replaces, replacesLink = replacesLink, slot = slot }
+    byLink = byLink or {}
+    shareCache[state] = byLink
+    byLink[cacheLink] = result
+    shareCacheCount = shareCacheCount + 1
+    if shareCacheCount > SHARE_CACHE_LIMIT then
+        shareCache, shareCacheCount = {}, 0
+    end
+    return result
 end
+
+-- Warm the small equipped baseline before loot popups can arrive. If a scoring
+-- input changes, invalidate immediately and rebuild outside combat when possible.
+local function ContextChanged()
+    ClearComparisonCaches()
+end
+
+for _, message in ipairs({ "EQUIPMENT_CHANGED", "PLAYER_CHANGED", "SPEC_CHANGED",
+    "CONTENT_AVAILABILITY_CHANGED" }) do
+    LJ:Listen(message, ContextChanged)
+end
+for _, event in ipairs({ "PLAYER_EQUIPMENT_CHANGED", "PLAYER_TALENT_UPDATE", "TRAIT_CONFIG_UPDATED",
+    "TRAIT_CONFIG_LIST_UPDATED" }) do
+    LJ:On(event, ContextChanged)
+end
+LJ:On("PLAYER_ENTERING_WORLD", ContextChanged)
+LJ:Listen("ITEM_DATA_UPDATED", function(_, itemID)
+    if not itemID then return end
+    InvalidateItemComparison(itemID)
+    for slotID = 1, 18 do
+        if Player:GetEquippedItemID(slotID) == itemID then
+            ClearComparisonCaches()
+            break
+        end
+    end
+end)
 
 -- An item in a sheet slot by a spec's stat weights against what is worn in that slot (a two-hander in the main hand:
 -- against both hands): its gain relative to the replaced item, matching item tooltips; use whole-gear share only when
@@ -248,7 +318,7 @@ end
 --   "unknown": not simmed and no estimate yet (the game has not all data of the item or of what is worn there).
 -- sim, estimate, stats and unknown also have replaces (the item worn where it goes, nil: that slot is empty); all but
 -- stats canSim (the simulator plays the spec and has a slot to fight it in; never with Percent).
-function ItemCheck.Get(link)
+function ItemCheck.Get(link, comparisonOptions)
     local spec = Player:GetActiveSpec()
     if not spec then return nil end
     local id = Parse(link)
@@ -256,15 +326,16 @@ function ItemCheck.Get(link)
     if not IsGear(equipLoc) then return nil end
     if C_Item.IsEquippedItem(id) then return { kind = "worn" } end
     local facts = { id = id, equipLoc = equipLoc, classID = classID, subclassID = subclassID }
-    if not Scoring.IsSpecEligible(id, spec, Scoring.EQUIPLOC_SLOTS[equipLoc], Scoring.GetStatsForLink(link)) then
-        return { kind = "cannot", why = L("This item has caster effects that Feral form cannot use.") }
-    end
     if not Player:CanClassUse(facts, spec.class) then
         if not Items.IsClassAllowed(id, spec.class) then return { kind = "cannot", why = L("Only other classes can use it.") } end
         if equipLoc == "INVTYPE_WEAPONOFFHAND" and not Player:CanDualWield(spec.class) then
             return { kind = "cannot", why = L("You cannot dual wield.") }
         end
         return { kind = "cannot", why = F(L("%s: your class cannot use it."), subType) }
+    end
+    local linkStats = Scoring.GetStatsForLink(link)
+    if not Scoring.IsSpecEligible(id, spec, Scoring.EQUIPLOC_SLOTS[equipLoc], linkStats) then
+        return { kind = "cannot", why = L("This item has caster effects that Feral form cannot use.") }
     end
     local skill = Scoring.MissingSkill(id)
     if skill then return { kind = "cannot", why = skill } end
@@ -277,14 +348,16 @@ function ItemCheck.Get(link)
     end
 
     local slots = FightSlots(id)
-    if not LJ.UI.Sim.RanksItems(spec) then
-        local verdict = LJ.UpgradeScoring.Check(link, spec)
+    if (comparisonOptions and comparisonOptions.equippedOnly) or not LJ.UI.Sim.RanksItems(spec) then
+        local verdict = LJ.UpgradeScoring.Check(link, spec, comparisonOptions)
         if verdict == nil or verdict == false then
             return { kind = "unknown", canSim = false,
                 replaces = slots[1] and GetInventoryItemID("player", SimBiS.INV_SLOT[slots[1]]) }
         end
-        return { kind = "stats", better = verdict.upgrade, pct = verdict.upgrade and verdict.gain or nil,
-            gainText = verdict.upgrade and LJ.UpgradeScoring.GainText(verdict) or nil,
+        local showRollGain = comparisonOptions and comparisonOptions.equippedOnly
+        return { kind = "stats", better = verdict.upgrade,
+            pct = (verdict.upgrade or showRollGain) and verdict.gain or nil,
+            gainText = (verdict.upgrade or showRollGain) and LJ.UpgradeScoring.GainText(verdict) or nil,
             replaces = verdict.slot and GetInventoryItemID("player", verdict.slot), verdict = verdict }
     end
     local canSim = LJ.UI.Sim.Model(spec) ~= nil and #slots > 0
@@ -297,6 +370,18 @@ function ItemCheck.Get(link)
     if better ~= nil then return { kind = "estimate", better = better, replaces = replaces, canSim = canSim } end
     return { kind = "unknown", canSim = canSim,
         replaces = slots[1] and GetInventoryItemID("player", SimBiS.INV_SLOT[slots[1]]) }
+end
+
+local function InvalidateItemComparison(itemID)
+    local wanted = tostring(itemID)
+    for _, byLink in pairs(shareCache) do
+        for link in pairs(byLink) do
+            if link:match("item:(%d+)") == wanted then
+                byLink[link] = nil
+                shareCacheCount = math.max(0, shareCacheCount - 1)
+            end
+        end
+    end
 end
 
 ---------------------------------------------------------------------------

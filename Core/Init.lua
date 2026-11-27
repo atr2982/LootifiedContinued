@@ -246,7 +246,7 @@ LJ.defaults = {
     tooltipWishlist = true,
     tooltipUpgrade = true,      -- "+3.1 DPS for <spec>" on the tooltips of the Best in Slot list's items
     wishlistAlerts = true,
-    upgradeCheck = true,        -- the box beside every loot roll and Alt+Click on an item: an upgrade for me? (UI/ItemCheckBox.lua)
+    upgradeCheck = true,        -- the Alt+Click upgrade-check window for an item (UI/ItemCheckBox.lua)
     autoOpenInstance = true,
     worldMapEntrances = true,   -- dungeon entrances on the game's world map (UI/WorldMapPins.lua)
     modules = { foryou = true, journal = true, world = true, bis = true, wishlist = true },   -- the pages that are on

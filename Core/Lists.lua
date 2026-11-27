@@ -85,6 +85,7 @@ end
 -- The upgrades of an instance for the character, counted once per boss/trash drop row just like the badges in the
 -- instance sidebar. Quest rewards are shown only on the Quests tab.
 function Lists.CountFor(inst)
+    if not LJ.Modules.On("bis") then return 0 end
     local upgrades = 0
     for _, g in ipairs(Lists.BuildGroups(inst)) do
         for _, e in ipairs(g.entries) do

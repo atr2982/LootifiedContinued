@@ -551,14 +551,25 @@ function Page:RefreshHome()
     local nearOnly = LJ.db.journal.filter == "NEAR"
     self.nearToggle:SetChecked(nearOnly)
     local level = Player.level or 1
+    local rows = {}
+    for _, inst in ipairs(LJ.instancesByKind[kind] or {}) do
+        local row = { inst = inst }
+        if inst.status ~= "announced" then
+            row.quests = Lists.CardQuestCount(inst)
+            row.upgrades = Lists.CountFor(inst)
+        end
+        rows[#rows + 1] = row
+    end
+    self:RenderHome(kind, nearOnly, level, rows)
+end
+
+function Page:RenderHome(kind, nearOnly, level, rows)
+    local isRaid = kind == "raid"
     local near, coming, others = {}, {}, {}
     local open = function(d) UI:Open("instance", d.inst.key) end
-    for _, inst in ipairs(LJ.instancesByKind[kind] or {}) do
-        local d = { inst = inst, onClick = open }
-        if inst.status ~= "announced" then
-            d.quests = Lists.CardQuestCount(inst)
-            d.upgrades = Lists.CountFor(inst)
-        end
+    for _, row in ipairs(rows or {}) do
+        local inst = row.inst
+        local d = { inst = inst, onClick = open, quests = row.quests, upgrades = row.upgrades }
         if Lists.IsNear(inst) and inst.status ~= "announced" then
             near[#near + 1] = d
         elseif nearOnly then
@@ -626,19 +637,13 @@ function Page:OpenInstance(key, tab, group, quest)
         self.right:ScrollToTop()
     end
     if group ~= nil then self.group = group end
+    self.pendingRevealGroup = group
     if self.group == nil then self.group = (#inst.bosses > 0) and 1 or 0 end
     if quest then self.quest, self.questRow = quest, quest end
     self.home:Hide()
     self.view:Show()
     self:RefreshHead()
     self:SetTab(tab or self.tab or "loot")
-    -- a boss picked from elsewhere (a link, the search) is in view in the list
-    local y = group ~= nil and self.groupY and self.groupY[group]
-    if y then
-        local view = self.left.scroll:GetHeight() or 0
-        local top = self.left.scroll:GetVerticalScroll()
-        if y < top or y + BOSS_HEIGHT > top + view then self.left:Reveal(y, math.floor(view / 3)) end
-    end
 end
 
 -- The header: picture, the link back, name, level, zone, group size, the map and entrance buttons.
@@ -666,13 +671,30 @@ function Page:SetTab(key)
     self.tab = key
     LJ.db.journal.tab = key
     self.switch:Select(key)
+    self:RenderInstance()
+end
+
+function Page:RenderInstance()
     self:RefreshLeft()
     self:RefreshRight()
+    if self.tab == "loot" and self.pendingRevealGroup ~= nil and self.groupY then
+        local y = self.groupY[self.pendingRevealGroup]
+        self.pendingRevealGroup = nil
+        if y then
+            local view = self.left.scroll:GetHeight() or 0
+            local top = self.left.scroll:GetVerticalScroll()
+            if y < top or y + BOSS_HEIGHT > top + view then self.left:Reveal(y, math.floor(view / 3)) end
+        end
+    elseif self.tab == "quests" and self.questRow and self.questRowY then
+        local y = self.questRowY[self.questRow]
+        if y then self.left:Reveal(y, 60) end
+    end
 end
 
 -- Picks a boss: its loot on the right.
 function Page:SelectGroup(group)
     self.group = group
+    self.pendingRevealGroup = nil
     self.tab = "loot"
     self.switch:Select("loot")
     self.right:ScrollToTop()
@@ -923,8 +945,7 @@ function Page:Refresh()
     if self.mode == "instance" and self.inst then
         Theme.SetAccent(Theme.InstanceAccent(self.inst))
         self:RefreshHead()
-        self:RefreshLeft()
-        self:RefreshRight()
+        self:RenderInstance()
     else
         self:RefreshHome()
     end

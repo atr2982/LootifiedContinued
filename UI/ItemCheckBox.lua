@@ -1,12 +1,7 @@
--- Lootified - the upgrade check's box (Sim/ItemCheck.lua): beside every loot roll of the game (GroupLootFrame1-4)
--- and, for an item clicked with Alt (bags, the loot window, chat links, vendors: the game's HandleModifiedItemClick; the
--- lists of Lootified: Items.HandleClick), as a small window of its own. It says whether the item is an upgrade for the active spec (what the sim found with what
--- is worn now, else the hidden ranking's estimate; Percent: the stat weights, with the share it adds in percent,
--- nothing fights), what it would replace, a tip for the roll (the game's own Need,
--- Greed and Pass) and Sim: the item fights against what is worn (a few seconds; again with a number too, e.g. after an
--- enchant or a talent: a number counts until the gear or the level changes; Alt+Click sims at once, the click is the
--- press, as do the item menu's "Simulate" and a click on the Best in Slot sheet: Box:Check). The boxes and Alt+Click
--- are on with the setting "Upgrade check" (LJ.db.upgradeCheck) and the Best in Slot module.
+-- Lootified - the upgrade check's window (Sim/ItemCheck.lua) for an item clicked with Alt (bags, the loot window, chat
+-- links, vendors: the game's HandleModifiedItemClick; the lists of Lootified: Items.HandleClick). It says whether the item
+-- is an upgrade for the active spec, what it would replace, and can simulate it against what is worn. The setting
+-- "Upgrade check" (LJ.db.upgradeCheck) and the Best in Slot module control the window and Alt+Click.
 local _, LJ = ...
 local L, F = LJ.L, LJ.F
 
@@ -22,13 +17,9 @@ UI.ItemCheckBox = Box
 
 local WIDTH, PAD = 300, 12
 local HEAD = 28 + 9 + 10              -- the window's item line above the verdict (icon, gap, line, gap)
-local ROLL_FRAMES = 4                 -- GroupLootFrame1-4 (Blizzard_UIPanels_Game GroupLootFrame.xml)
 local NAME = "LootifiedItemCheck"     -- the Alt+Click window: Escape closes it (UISpecialFrames)
--- the art of the game's own roll buttons (GroupLootFrame.xml)
-local NEED_ICON, GREED_ICON = "lootroll-toast-icon-need-up", "lootroll-toast-icon-greed-up"
 
--- The box in the active look; window: the Alt+Click window (the item's icon and name on top, a close button,
--- draggable), else the box beside a roll.
+-- The Alt+Click window in the active look (item icon and name, close button, draggable).
 local function Create(window)
     local f = CreateFrame("Frame", window and NAME or nil, UIParent)
     f.window = window
@@ -92,12 +83,8 @@ local function Create(window)
         local link = f.link
         UI.SimSpeed:Then(function() ItemCheck.Start(link) end)
     end)
-    -- what it would replace; the tip for the roll (their row and the box's height: Refresh)
+    -- what the item would replace
     f.instead = Widgets.Text(f, "small", C.text3)
-    f.tipIcon = f:CreateTexture(nil, "ARTWORK")
-    f.tipIcon:SetSize(18, 18)
-    f.tip = Widgets.Text(f, "pill", C.text2, nil, "RIGHT")
-    f.tipIcon:SetPoint("RIGHT", f.tip, "LEFT", -4, 0)
     f.top = top
     f.skin = Theme.skin
     f:Hide()
@@ -153,11 +140,9 @@ local function ShowProgress(f, running)
     f.bar:SetProgress(running.progress)
 end
 
--- Fills a box from its item (f.link) as it stands: the verdict, the number or a line of text, Sim, what it would
--- replace and (beside a roll) the tip.
-local function Refresh(f, verdict, hasVerdict)
-    local v
-    if hasVerdict then v = verdict else v = ItemCheck.Get(f.link) end
+-- Fills the Alt+Click window for its item (f.link): verdict, comparison and Sim.
+local function Refresh(f)
+    local v = ItemCheck.Get(f.link)
     if not v then
         f:Hide()
         return false
@@ -165,7 +150,9 @@ local function Refresh(f, verdict, hasVerdict)
     local id, key = ItemCheck.Parse(f.link)
     -- no verdict while the game has no data of the item: asked through the addon's item loader, whose answer
     -- (ITEMS_UPDATED) fills the box again (the game's own answers to other requests are not followed)
-    if v.kind == "unknown" and not C_Item.IsItemDataCachedByID(id) then LJ.Items.Request(id) end
+    if v.kind == "unknown" and not v.pending and not C_Item.IsItemDataCachedByID(id) then
+        LJ.Items.Request(id)
+    end
     local top = f.top
     if f.window then
         -- the name as the link has it (a random suffix too), in the color of its quality
@@ -241,17 +228,16 @@ local function Refresh(f, verdict, hasVerdict)
         f.note:SetText(note or "")
         Widgets.SetTextColor(f.note, C.text2)
     end
-    -- the row of what it would replace and the tip: a third line of the note (a long text in German or Russian beside
-    -- Sim) moves it and the bottom of the box down by a line
+    -- what it would replace follows the note, which may wrap in translated text
     local row = top + 54
     local lines = f.note:IsShown() and f.note:GetNumLines() or 0
     if lines > 2 then row = row + math.ceil(f.note:GetStringHeight() / lines) end
     f.instead:SetPoint("TOPLEFT", PAD, -row)
-    f.tip:SetPoint("RIGHT", f, "TOPRIGHT", -PAD, -(row + 6))
+    f.instead:SetPoint("TOPRIGHT", -PAD, -row)
     f:SetHeight(row + 14 + PAD)
 
     -- what it would replace
-    local replacing = v.kind == "sim" or v.kind == "estimate" or v.kind == "stats" or v.kind == "unknown"
+    local replacing = not v.pending and (v.kind == "sim" or v.kind == "estimate" or v.kind == "stats" or v.kind == "unknown")
     f.instead:SetShown(replacing)
     if replacing then
         if v.replaces then
@@ -261,72 +247,18 @@ local function Refresh(f, verdict, hasVerdict)
             f.instead:SetText(L("into an empty slot"))
         end
     end
-    -- beside a roll: Need for an upgrade the game lets the player need, Greed or Pass for what is none; the damage the
-    -- sim found decides with Sim only (Percent rates by the weights)
-    local tip
-    if f.rollID then
-        local dir = v.kind == "sim" and UI.Sim.RanksItems(LJ.Player:GetActiveSpec()) and ItemCheck.Direction(v)
-        if dir == "up" and f.canNeed then
-            tip = { NEED_ICON, NEED }
-        elseif (dir and dir ~= "up") or v.kind == "cannot" then
-            tip = { GREED_ICON, F(L("%s or %s"), GREED, PASS) }
-        end
-    end
-    f.tip:SetShown(tip ~= nil)
-    f.tipIcon:SetShown(tip ~= nil)
-    if tip then
-        f.tipIcon:SetAtlas(tip[1])
-        f.tip:SetText(Theme.Case(tip[2]))
-    end
-    -- (the icon of the tip is 3 higher than this line)
-    if tip then
-        f.instead:SetPoint("TOPRIGHT", f.tipIcon, "TOPLEFT", -8, -3)
-    else
-        f.instead:SetPoint("TOPRIGHT", -PAD, -row)
-    end
     return true
 end
 
--- Every box that shows (the rolls' and the window).
+-- The window, when open.
 local function Shown()
     local list = {}
-    for _, f in pairs(Box.rolls) do
-        if f:IsShown() then list[#list + 1] = f end
-    end
     if Box.window and Box.window:IsShown() then list[#list + 1] = Box.window end
     return list
 end
 
 local function On()
     return LJ.db.upgradeCheck and LJ.Modules.On("bis")
-end
-
----------------------------------------------------------------------------
--- Beside the loot rolls
----------------------------------------------------------------------------
-Box.rolls = {}   -- [roll frame] = its box
-
--- A roll frame showed: its box beside it (on the side with more room) for gear of the character's slots.
-local function ShowRoll(frame)
-    local f = Box.rolls[frame]
-    if f then f:Hide() end
-    -- (the game hides a roll frame whose item it cannot show during its own OnShow)
-    if not (On() and frame:IsShown()) then return end
-    local link = GetLootRollItemLink(frame.rollID)
-    if not link then return end
-    if not (f and f.skin == Theme.skin) then
-        f = Create(false)
-        Box.rolls[frame] = f
-    end
-    f.link, f.rollID = link, frame.rollID
-    f.canNeed = select(6, GetLootRollItemInfo(frame.rollID))
-    f:ClearAllPoints()
-    if Widgets.TooltipAnchor(frame) == "ANCHOR_RIGHT" then
-        f:SetPoint("TOPLEFT", frame, "TOPRIGHT", 12, 5)
-    else
-        f:SetPoint("TOPRIGHT", frame, "TOPLEFT", -12, 5)
-    end
-    if Refresh(f, ItemCheck.Get(link), true) then f:Show() end
 end
 
 ---------------------------------------------------------------------------
@@ -371,25 +303,25 @@ function Box:AltClick(link)
 end
 
 LJ:Listen("LOGIN", function()
-    for i = 1, ROLL_FRAMES do
-        local frame = assert(_G["GroupLootFrame" .. i], "no GroupLootFrame" .. i)
-        frame:HookScript("OnShow", function(self) LJ:SafeCall(ShowRoll, self) end)
-        frame:HookScript("OnHide", function(self)
-            if Box.rolls[self] then Box.rolls[self]:Hide() end
-        end)
-    end
     hooksecurefunc("HandleModifiedItemClick", function(link) LJ:SafeCall(Box.AltClick, Box, link) end)
 end)
 
 -- New numbers, a fight's progress, other gear, level, spec, filter (the list, the stat priority) or item data: the
 -- boxes that show say it again.
 local function RefreshShown()
-    for _, f in ipairs(Shown()) do Refresh(f) end
+    for _, f in ipairs(Shown()) do
+        Refresh(f)
+    end
 end
 for _, message in ipairs({ "ITEM_CHECK_CHANGED", "SIM_BIS_CHANGED", "EQUIPMENT_CHANGED", "PLAYER_CHANGED",
-    "SPEC_CHANGED", "ITEMS_UPDATED", "WISHLIST_CHANGED", "LIST_CHANGED" }) do
+    "SPEC_CHANGED", "WISHLIST_CHANGED", "LIST_CHANGED" }) do
     LJ:Listen(message, RefreshShown)
 end
+LJ:Listen("ITEM_DATA_UPDATED", function(_, itemID)
+    local f = Box.window
+    local id = f and f.link and tonumber(f.link:match("item:(%d+)"))
+    if f and f:IsShown() and id == itemID then Refresh(f) end
+end)
 -- the fights going on (paused in combat): only the share done of the boxes of that item
 local function Progress()
     local running = ItemCheck.running
